@@ -1,0 +1,37 @@
+Schnellfeuernde Waffen												
+Plattform	Waffe	Anzahl Ladungen	Salvenfeuer pro Salve (0 = keine Salven)	Nachladezeit	Feuerpause	Einschlagsschaden	Reichweite	Flächenschadenradius (0 = kein Flächenschaden)	Flächenschadensstärke (0 = kein Flächenschaden)	Durchschlagend?	Zielsuchend?	Zieltypen
+Cyborg/Gebäude	MG	0	0	0	kurz	gering	kurz bis mittel	0	0	0	0	Boden, Luft
+Panzer/VTOL	MG	0	8 bis 10	mittel	kurz	gering	kurz bis mittel	0	0	0	0	Boden, Luft
+Panzer/Gebäude	Hurricane AA Turret	0	0	0	kurz	gering	mittel	0	0	0	0	Boden, Luft
+												
+Langsamfeuernde Waffen												
+Plattform	Waffe	Anzahl Ladungen	Salvenfeuer pro Salve (0 = keine Salven)	Nachladezeit	Feuerpause	Einschlagsschaden	Reichweite	Flächenschadenradius (0 = kein Flächenschaden)	Flächenschadensstärke (0 = kein Flächenschaden)	Durchschlagend?	Zielsuchend?	Zieltypen
+Cyborg/Gebäude	Geschütz	0	0	0	lang	hoch	mittel	klein	gering	0	0	Boden, Luft
+VTOL	Schwere Bombem	wenige	0	0	mittel	hoch	gering	klein bis mittel	mittel	0	0	Boden
+Panzer	Rail Gun	0	0	0	lang	hoch	mittel bis hoch	0	0	ja (Upgrade?)	0	Boden, Luft
+Panzer/Gebäude	Cyclone AA Turret	0	0	0	lang	hoch	mittel bis hoch	mittel	mittel	0	0	Boden, Luft
+												
+Raketen												
+Plattform	Waffe	Anzahl Ladungen	Salvenfeuer pro Salve (0 = keine Salven)	Nachladezeit	Feuerpause	Einschlagsschaden	Reichweite	Flächenschadenradius (0 = kein Flächenschaden)	Flächenschadensstärke (0 = kein Flächenschaden)	Durchschlagend?	Zielsuchend?	Zieltypen
+Panzer	Scourge MIssile	0	2	hoch	kurz	hoch	hoch	0	0	0	ja (Upgrade?)	Boden
+Cyborg/VTOL	Lancer	0	2	hoch	kurz	hoch	mittel	0	0	0	0	Boden, Luft
+Gebäude	Avenger SAM	0	2	mittel bis hoch	kurz	hoch	hoch	klein	gering	0	ja (Upgrade?)	Luft
+												
+Artillerie												
+Plattform	Waffe	Anzahl Ladungen	Salvenfeuer pro Salve (0 = keine Salven)	Nachladezeit	Feuerpause	Einschlagsschaden	Reichweite	Flächenschadenradius (0 = kein Flächenschaden)	Flächenschadensstärke (0 = kein Flächenschaden)	Durchschlagend?	Zielsuchend?	Zieltypen
+Gebäude	Haubitze	0	0	0	lang	mittel	sehr hoch	klein bis mittel	gering	0	0	Boden
+Gebäude	Raketenbatterie	0	6	hoch	kurz	hoch	sehr hoch	sehr klein	gering	ß	ja (Upgrade?)	Boden
+												
+Thermalwaffen												
+Plattform	Waffe	Anzahl Ladungen	Salvenfeuer pro Salve (0 = keine Salven)	Nachladezeit	Feuerpause	Einschlagsschaden	Reichweite	Brandradius (0 = kein Brandschaden)	Brandschadensstärke (0 = kein Brandschaden)	Durchschlagend?	Zielsuchend?	Zieltypen
+Gebäude	Brandartillerie	0	0	0	lang	sehr gering	sehr hoch	hoch	hoch	0	0	Boden
+Cyborg	Flammenwerfer	0	0	0	mittel	sehr gering	gering	klein	hoch	ja	0	Boden, Luft
+VTOL	Brandbombe	wenige	0	0	mittel	sehr gering	gering	hoch	hoch	0	0	Boden
+Panzer	Laser	0	0	0	mittel	mittel	mittel bis hoch	sehr klein	gering	0	0	Boden, Luft
+Gebäude/Panzer	Stormbringer AA Laser	0	0	0	mittel	mittel	mittel bis hoch	sehr klein	gering	0	0	Boden, Luft
+												
+Flächenschadenwaffen												
+Plattform	Waffe	Anzahl Ladungen	Salvenfeuer pro Salve (0 = keine Salven)	Nachladezeit	Feuerpause	Einschlagsschaden	Reichweite	Flächenschadenradius (0 = kein Flächenschaden)	Flächenschadensstärke (0 = kein Flächenschaden)	Durchschlagend?	Zielsuchend?	Zieltypen
+Gebäude/Panzer/Cyborg	Granatenwerfer	0	0	0	lang	gering	mittel bis hoch	hoch	hoch	0	0	Boden
+VTOL	Streubomben	wenige	0	0	mittel	gering	gering	sehr hoch	hoch	0	0	Boden
+
