@@ -1,0 +1,5 @@
+Propulsions
+===========
+Ground units: Tracks, Hover, Cyborg/Legs (fixed)
+Aerial units: VTOL
+
