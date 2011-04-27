@@ -1,5 +1,6 @@
-Propulsions
-===========
-Ground units: Tracks, Hover, Cyborg/Legs (fixed)
-Aerial units: VTOL
-
+Propulsions					
+Propulsion	Cost	Body Points	Mass	Speed	Propulsion Type
+Tracks	high	high	high	low	ground
+Hover	medium	medium	medium	high	ground+water
+Cyborg/Legs	low	low	low	medium	ground
+VTOL	high	low	low	very high	air
