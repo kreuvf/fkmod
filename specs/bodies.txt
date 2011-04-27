@@ -1,8 +1,6 @@
-Bodies
-======
-Body	Cost	Thermal Armour	Kinetic Armour	Engine Output
-Start Body	low	low	low	low
-HiTherm	high	high	low	low
-HiKin	high	low	high	low
-HiSpeed	high	low	low	high
-
+Bodies									
+Body	Cost	Thermal Armour	Kinetic Armour	Engine Output	Mass
+Start Body	low	low	low	low	low
+HiTherm	high	high	low	low	high
+HiKin	high	low	high	low	high
+HiSpeed	high	low	low	high	medium
