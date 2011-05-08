@@ -1,3 +1,34 @@
 Structures
-==========
-Test
+- two classes:
+	- base structures
+	- defensive structures
+
+Base Structures
+- HQ
+	- equipped with sensor
+- Power Generator (no modules; model of power generator with module)
+- Research Facility (no modules; model of research facility with module)
+- Factory (no modules; model of factory with modules)
+- Cyborg Factory
+- VTOL Factory (no modules; model of factory with modules)
+- Rearming Pad
+- Oil Derrick
+- Command Relay Center
+
+Defensive Structures
+- Concrete Towers
+	- only for sensors
+- Hardpoints
+	- for all weapons except AA and artillery
+- Bunkers
+	- for all weapons except AA and artillery
+- Sites
+	- only for AA and artillery
+
+The idea is that bunkers cannot shoot over/through other bunkers and they cannot shoot over walls. Hardpoints can shoot over bunkers and walls, if the distance and the localisation of the target allow for this.
+
+Unfortunately, Warzone 2100 master (2011-05-08) allows bunkers to shoot over/through other bunkers.
+
+Structure types are cut down from SOFT, MEDIUM, HARD, BUNKER to MEDIUM (base structures), HARD (every non-bunker defensive structure) and BUNKER (all bunkers).
+
+No Fortresses.
