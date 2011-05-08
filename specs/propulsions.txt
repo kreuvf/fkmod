@@ -4,3 +4,8 @@ Tracks	high	high	high	low	ground
 Hover	medium	medium	medium	high	ground+water
 Cyborg/Legs	low	low	low	medium	ground
 VTOL	high	low	low	very high	air
+
+- Maximum speed is set to a very high value for all propulsions.
+- Balancing is achieved by using other parameters to reduce unit maximum achievable speed such as masses or the % engine output in propulsiontypes.txt.
+- By doing this we reduce the number of parameters that need to be balanced.
+
