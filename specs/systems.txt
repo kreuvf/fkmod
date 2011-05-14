@@ -7,5 +7,14 @@ Sensors
 - no other sensors
 - Note (to be deleted when research is specified): scout sensor --> normal sensor --> all other sensors
 
+Commander
+- one commander turret for tanks
+- Commander Cyborg (probably use unused Super Cyborg body)
 
+Repair
+- Autorepair enabled by default (it's 2100!!111), but very slow
+- Repair facility repair speed ~= 3-4 * Tank repair speed
+- Tank repair speed ~= 2 * Cyborg repair speed
+- Cyborg repair speed >> Autorepair repair speed
+- upgradable through research
 
