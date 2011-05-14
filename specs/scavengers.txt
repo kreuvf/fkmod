@@ -1,0 +1,3 @@
+Scavengers
+- remain untouched/unchanged to keep compatibility with main game
+
