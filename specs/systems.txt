@@ -18,3 +18,6 @@ Repair
 - Cyborg repair speed >> Autorepair repair speed
 - upgradable through research
 
+Constructors
+- Tank Constructor construction speed ~= 2 * Cyborg Constructor construction speed
+- Cyborg Constructor
