@@ -1,3 +1,53 @@
 Research
 - generally: fewer research topics, longer research times --> more time, more energy, more attention for building base/units
+- general guidelines:
+	- approx. 15 min to get to any one weapon
+	- weapon upgrades generally aim to strengthen the weapon characteristics (more ROF upgrades for MG, more damage upgrades for cannons etc. pp.)
+	- research time calculations are based on the arithmetic mean of the min. and max. research speed
 
+Weapon research
+- Weapon upgrades do not magically transform a weapon into an uberweapon
+- Three weapon upgrade categories: damage, ROF, accuracy
+- for every upgrade values should become 10% better than they were previously (Be careful: First upgrade: +10% of base value, second upgrade: +21% of base value, third upgrade: +33,1% of base value etc. pp.)
+- each weapon has one major and two minor weapon upgrade categories
+- the major weapon upgrade category has 7 upgrades
+	- cumulated research time: approx. 45 min
+	- research time for upgrades depend on the time of the first upgrade x; for research time this means: x + 1,1 * x + 1,1^2 * x + 1,1^3 * x + 1,1^4 * x + 1,1^5 * x + 1,1^6 * x = 45 ==> x approx. 4 min 45 s
+- the minor weapon upgrade categories have 5 upgrades each
+	- cumulated research time per category: approx. 45 min
+	- also 45 min because it's harder to research something that's not part of the weapon's core characteristics (or in other words: the researches responsible are 
+	- research time for upgrades depend on the time of the first upgrade x; for research time this means: x + 1,1 * x + 1,1^2 * x + 1,1^3 * x + 1,1^4 * x = 45 ==> x approx. 7 min 20 s
+- upgrades are for each weapon individually, so that every research affects only one weapon
+- Weapon groups and main weapon upgrade category:
+Weapon group	Main Weapon Upgrade Category
+Fast-Fire Weapons	ROF
+Slow-Fire Weapons	Damage
+Rockets	Accuracy
+Howitzers	Damage
+Rocket Battery	Accuracy
+Thermal Weapons	Damage
+Splash Weapons	Damage
+- Chance to get splash damage is always 100 %
+- additional special upgrades for certain weapons such as increases in shots per salvo, enabling penetration etc. pp.
+- Weapons and special upgrades
+Weapon	Special Upgrade(s)
+MG for Cyborgs/Structures	Higher projectile speed and improved turret pitches (min. and max.)
+MG for VTOLs/Tanks	2 x increase of load per salvo
+Hurricane AA		2 x lowering min. pitch
+Heavy Cannon for Cyborgs		enable partial fire while moving, enable full fire while moving
+Heavy Cannon for Structures	Addition of small/low splash damage, extension of long range
+Heavy Bombs	2 x mass reduction
+Rail Gun	Enable penetration
+Cyclone AA	2 x lowering min. pitch
+Scourge	homing
+Lancer	Usable vs. aerial targets (for Cyborgs only)
+Avenger SAM	homing
+Howitzer	2 x range extension
+Rocket Battery	range, homing
+Incenediary Artillery	range, burn effect radius
+Flamer	2 x range
+Incenediary Bomb	Burn effect radius, mass
+Laser	penetration
+Stormbringer AA	penetration
+Grenade Launcher	2 x splash radius
+Cluster Bombs	Splash radius, mass
