@@ -64,6 +64,12 @@ Body research
 - for every other upgrade values should become 10% better than they were previously (Be careful: First upgrade: +10% of base value, second upgrade: +21% of base value, third upgrade: +33,1% of base value etc. pp.)
 - 5 upgrades for each upgrade category
 	- cumulated research time: approx. 60 min
-	- research time for engine outpout upgrades depends on the time of the first upgrade x; for research time this means: x + 1,05 * x + 1,05^2 * x + 1,05^3 * x + 1,05^4 * x = 60 ==> x approx. 10 min 50 s
+	- research time for engine output upgrades depends on the time of the first upgrade x; for research time this means: x + 1,05 * x + 1,05^2 * x + 1,05^3 * x + 1,05^4 * x = 60 ==> x approx. 10 min 50 s
 	- research time for every other upgrade depends on the time of the first upgrade x; for research time this means: x + 1,1 * x + 1,1^2 * x + 1,1^3 * x + 1,1^4 * x = 60 ==> x approx. 9 min 50 s
+
+Research research
+- 5 upgrades
+- for every upgrade values should become 10% better than they were previously (Be careful: First upgrade: +10% of base value, second upgrade: +21% of base value, third upgrade: +33,1% of base value etc. pp.)
+	- cumulated research time: approx. 60 min
+	- research time depends on the time of the first upgrade x; since with every upgrade research speed is increased by 10% and thereby research time is multiplied with 0,909 this factor needs to be cancelled out by another +10%: x + 1,1 * 0,909 * 1,1 * x + (1,1 * 0,909)^2 * 1,1^2 * x + (1,1 * 0,909)^3 * 1,1^3 * x + (1,1 * 0,909)^4 * 1,1^4 * x  = 60 ==> x approx. 9 min 50 s; this has an impact on upgrade prices! price of first upgrade x: x + 1,1^2 * x + 1,1^4 * x + 1,1^6 * x + 1,1^8 * x = PRICE
 
