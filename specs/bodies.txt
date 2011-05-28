@@ -5,3 +5,5 @@ HiTherm	high	high	low	low	high
 HiKin	high	low	high	low	high
 HiSpeed	high	low	low	high	medium
 Cyborg Transport	high	medium	medium	high	high
+Cyborg Body
+
