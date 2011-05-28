@@ -1,0 +1,3 @@
+General specifications
+- average game duration: 90 min ± 30 min (arithmetic mean ± 2 standard deviations)
+
