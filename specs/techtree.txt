@@ -1,0 +1,29 @@
+Technology Tree
+- general layout: early branching, then linear
+
+Technology List
+Type	Description	In-game name	Internal name
+Weapon	MGs for tank/VTOL and for cyborgs/structures	Machinegun	R-W-FF-Machinegun
+Weapon	Hurricane AA for tanks/structures	Hurricane AA Turret	R-W-FF-AAHurricane
+Weapon	Cannon for cyborgs/structures	Cannon	R-W-SF-Cannon
+Weapon	Heavy bombs for VTOLs	Heavy Bombs	R-W-SF-BombHeavy
+Weapon	Rail gun for tanks	Rail Gun	R-W-SF-RailGun
+Weapon	Cyclone AA for tanks/structures	Cyclone AA Turret	R-W-SF-AACyclone
+Weapon	Scourge Missile for tanks	Scourge Missile	R-W-MIS-ScourgeMissile
+Weapon	Lancer for cyborgs/VTOL	Lancer	R-W-MIS-Lancer
+Weapon	Avenger SAM for tanks/structures	Avenger SAM	R-W-MIS-AAAvengerSAM
+Weapon	Howitzer for structures	Howitzer	R-W-ART-Howitzer
+Weapon	Rocket Battery for structures	Rocket Battery	R-W-ART-RocketBattery
+Weapon	Incendiary Howitzer for structures	Incendiary Howitzer	R-W-HOT-HowitzerIncendiary
+Weapon	Flamethrower for cyborgs	Flamethrower	R-W-HOT-Flamethrower
+Weapon	Thermite Bomb for VTOLs	Thermite Bomb	R-W-HOT-BombThermite
+Weapon	Laser for tanks	Laser	R-W-HOT-Laser
+Weapon	Stormbringer AA for tanks/structures	Stormbringer AA	R-W-HOT-StormbringerAA
+Weapon	Grenade Launcher for cyborgs/tanks/structures	Grenade Launcher	R-W-SPL-GrenadeLauncher
+Weapon	Cluster Bombs for VTOLs	Cluster Bombs	R-W-SPL-BombCluster
+
+Starting Technologies
+- 
+
+
+
