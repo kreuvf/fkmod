@@ -15,7 +15,7 @@ Raketen
 Plattform	Waffe	Anzahl Ladungen	Salvenfeuer pro Salve (0 = keine Salven)	Nachladezeit	Feuerpause	Einschlagsschaden	Reichweite	Flächenschadenradius (0 = kein Flächenschaden)	Flächenschadensstärke (0 = kein Flächenschaden)	Durchschlagend?	Zielsuchend?	Zieltypen	Neigung	Masse
 Panzer	Scourge Missile	0	2	hoch	kurz	hoch	hoch	0	0	0	ja (Upgrade?)	Boden	-15°/30°	hoch
 Cyborg/VTOL	Lancer	0/wenige	2	hoch	kurz	hoch	mittel	0	0	0	0	Boden, Luft (nach Upgrade)	-15°/60°;-60°/15°	mittel
-Gebäude	Avenger SAM	0	2	mittel bis hoch	kurz	hoch	hoch	klein	gering	0	ja (Upgrade?)	Luft	15°/80°	hoch
+Panzer/Gebäude	Avenger SAM	0	2	mittel bis hoch	kurz	hoch	hoch	klein	gering	0	ja (Upgrade?)	Luft	15°/80°	hoch
 														
 Artillerie														
 Plattform	Waffe	Anzahl Ladungen	Salvenfeuer pro Salve (0 = keine Salven)	Nachladezeit	Feuerpause	Einschlagsschaden	Reichweite	Flächenschadenradius (0 = kein Flächenschaden)	Flächenschadensstärke (0 = kein Flächenschaden)	Durchschlagend?	Zielsuchend?	Zieltypen	Neigung	Masse
