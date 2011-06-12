@@ -21,6 +21,83 @@ Weapon	Laser for tanks	Laser	R-W-HOT-Laser
 Weapon	Stormbringer AA for tanks/structures	Stormbringer AA	R-W-HOT-StormbringerAA
 Weapon	Grenade Launcher for cyborgs/tanks/structures	Grenade Launcher	R-W-SPL-GrenadeLauncher
 Weapon	Cluster Bombs for VTOLs	Cluster Bombs	R-W-SPL-BombCluster
+Weapon Upgrade	Machinegun Damage	-	R-WU-Machinegun-DMG[1-5]
+Weapon Upgrade	Machinegun ROF	-	R-WU-Machinegun-ROF[1-7]
+Weapon Upgrade Machinegun Accuracy	-	R-WU-Machinegun-ACC[1-5]
+Weapon Upgrade Cyborg/Structure Machinegun Specials - R-WU-Machinegun-CybStruc-SPE[12]
+Weapon Upgrade Tank/VTOL Machinegun Specials - R-WU-Machinegun-TankVTOL-SPE[12]
+Weapon Upgrade	Hurricane AA Damage	-	R-WU-AAHurricane-DMG[1-5]
+Weapon Upgrade	Hurricane AA ROF	-	R-WU-AAHurricane-ROF[1-7]
+Weapon Upgrade	Hurricane AA Accuracy	-	R-WU-AAHurricane-ACC[1-5]
+Weapon Upgrade	Hurricane AA Specials	-	R-WU-AAHurricane-SPE[12]
+Weapon Upgrade	Cannon Damage	-	R-WU-Cannon-DMG[1-7]
+Weapon Upgrade	Cannon ROF	-	R-WU-Cannon-ROF[1-5]
+Weapon Upgrade	Cannon Accuracy	-	R-WU-Cannon-ACC[1-5]
+Weapon Upgrade	Cyborg Cannon Specials	-	R-WU-Cannon-Cyb-SPE[12]
+Weapon Upgrade	Structure Cannon Specials	-	R-WU-Cannon-Struc-SPE[12]
+Weapon Upgrade	Heavy Bombs Damage	-	R-WU-BombHeavy-DMG[1-7]
+Weapon Upgrade	Heavy Bombs ROF	-	R-WU-BombHeavy-ROF[1-5]
+Weapon Upgrade	Heavy Bombs Accuracy	-	R-WU-BombHeavy-ACC[1-5]
+Weapon Upgrade	Heavy Bombs Specials	-	R-WU-BombHeavy-SPE[12]
+Weapon Upgrade	Rail Gun Damage	-	R-WU-RailGun-DMG[1-7]
+Weapon Upgrade	Rail Gun ROF	-	R-WU-RailGun-ROF[1-5]
+Weapon Upgrade	Rail Gun Accuracy	-	R-WU-RailGun-ACC[1-5]
+Weapon Upgrade	Rail Gun Special	-	R-WU-RailGun-SPE1
+Weapon Upgrade	Cyclone AA Damage	-	R-WU-AACyclone-DMG[1-7]
+Weapon Upgrade	Cyclone AA ROF	-	R-WU-AACyclone-ROF[1-5]
+Weapon Upgrade	Cyclone AA Accuracy	-	R-WU-AACyclone-ACC[1-5]
+Weapon Upgrade	Cyclone AA Specials	-	R-WU-AACyclone-SPE[12]
+Weapon Upgrade	Scourge Damage	-	R-WU-ScourgeMissile-DMG[1-5]
+Weapon Upgrade	Scourge ROF	-	R-WU-ScourgeMissile-ROF[1-5]
+Weapon Upgrade	Scourge Accuracy	-	R-WU-ScourgeMissile-ACC[1-7]
+Weapon Upgrade	Scourge Special	-	R-WU-ScourgeMissile-SPE1
+Weapon Upgrade	Lancer Damage	-	R-WU-Lancer-DMG[1-5]
+Weapon Upgrade	Lancer ROF	-	R-WU-Lancer-ROF[1-5]
+Weapon Upgrade	Lancer Accuracy	-	R-WU-Lancer-ACC[1-7]
+Weapon Upgrade	Cyborg Lancer Special	-	R-WU-Lancer-SPE1
+Weapon Upgrade	Avenger SAM Damage	-	R-WU-AAAvengerSAM-DMG[1-5]
+Weapon Upgrade	Avenger SAM ROF	-	R-WU-AAAvengerSAM-ROF[1-5]
+Weapon Upgrade Avenger SAM Accuracy	-	R-WU-AAAvengerSAM-ACC[1-7]
+Weapon Upgrade Avenger SAM Special	-	R-WU-AAAvengerSAM-SPE1
+Weapon Upgrade	Howitzer Damage	-	R-WU-Howitzer-DMG[1-7]
+Weapon Upgrade	Howitzer ROF	-	R-WU-Howitzer-ROF[1-5]
+Weapon Upgrade	Howitzer Accuracy	-	R-WU-Howitzer-ACC[1-5]
+Weapon Upgrade	Howitzer Specials	-	R-WU-Howitzer-SPE[12]
+Weapon Upgrade	Rocket Battery Damage	-	R-WU-RocketBattery-DMG[1-5]
+Weapon Upgrade	Rocket Battery ROF	-	R-WU-RocketBattery-ROF[1-5]
+Weapon Upgrade	Rocket Battery Accuracy	-	R-WU-RocketBattery-ACC[1-7]
+Weapon Upgrade	Rocket Battery Specials	-	R-WU-RocketBattery-SPE[12]
+Weapon Upgrade	Incendiary Howitzer Damage	-	R-WU-HowitzerIncendiary-DMG[1-7]
+Weapon Upgrade	Incendiary Howitzer ROF	-	R-WU-HowitzerIncendiary-ROF[1-5]
+Weapon Upgrade	Incendiary Howitzer Accuracy	-	R-WU-HowitzerIncendiary-ACC[1-5]
+Weapon Upgrade	Incendiary Howitzer Specials	-	R-WU-HowitzerIncendiary-SPE[12]
+Weapon Upgrade	Flamethrower Damage	-	R-WU-Flamethrower-DMG[1-7]
+Weapon Upgrade	Flamethrower ROF	-	R-WU-Flamethrower-ROF[1-5]
+Weapon Upgrade	Flamethrower Accuracy	-	R-WU-Flamethrower-ACC[1-5]
+Weapon Upgrade	Flamethrower Specials	-	R-WU-Flamethrower-SPE[12]
+Weapon Upgrade	Thermite Bomb Damage	-	R-WU-BombThermite-DMG[1-7]
+Weapon Upgrade	Thermite Bomb ROF	-	R-WU-BombThermite-ROF[1-5]
+Weapon Upgrade	Thermite Bomb Accuracy	-	R-WU-BombThermite-ACC[1-5]
+Weapon Upgrade	Thermite Bomb Specials	-	R-WU-BombThermite-SPE[12]
+Weapon Upgrade	Laser Damage	-	R-WU-Laser-DMG[1-7]
+Weapon Upgrade	Laser ROF	-	R-WU-Laser-ROF[1-5]
+Weapon Upgrade	Laser Accuracy	-	R-WU-Laser-ACC[1-5]
+Weapon Upgrade	Laser Special	-	R-WU-Laser-SPE1
+Weapon Upgrade	Stormbringer AA Damage	-	R-WU-AAStormbringer-DMG[1-7]
+Weapon Upgrade	Stormbringer AA ROF	-	R-WU-AAStormbringer-ROF[1-5]
+Weapon Upgrade	Stormbringer AA Accuracy	-	R-WU-AAStormbringer-ACC[1-5]
+Weapon Upgrade	Stormbringer AA Special	-	R-WU-AAStormbringer-SPE1
+Weapon Upgrade	Grenade Launcher Damage	-	R-WU-GrenadeLauncher-DMG[1-7]
+Weapon Upgrade	Grenade Launcher ROF	-	R-WU-GrenadeLauncher-ROF[1-5]
+Weapon Upgrade	Grenade Launcher Accuracy	-	R-WU-GrenadeLauncher-ACC[1-5]
+Weapon Upgrade	Grenade Launcher Specials	-	R-WU-GrenadeLauncher-SPE[12]
+Weapon Upgrade	Cluster Bombs Damage	-	R-WU-BombCluster-DMG[1-7]
+Weapon Upgrade	Cluster Bombs ROF	-	R-WU-BombCluster-ROF[1-5]
+Weapon Upgrade	Cluster Bombs Accuracy	-	R-WU-BombCluster-ACC[1-5]
+Weapon Upgrade	Cluster Bombs Specials	-	R-WU-BombCluster-SPE[12]
+
+
+
 
 Starting Technologies
 - 
