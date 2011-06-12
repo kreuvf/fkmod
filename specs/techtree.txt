@@ -95,12 +95,27 @@ Weapon Upgrade	Cluster Bombs Damage	-	R-WU-BombCluster-DMG[1-7]
 Weapon Upgrade	Cluster Bombs ROF	-	R-WU-BombCluster-ROF[1-5]
 Weapon Upgrade	Cluster Bombs Accuracy	-	R-WU-BombCluster-ACC[1-5]
 Weapon Upgrade	Cluster Bombs Specials	-	R-WU-BombCluster-SPE[12]
+Body	HiTherm	-	R-B-HiTherm
+Body	HiKin	-	R-B-HiKin
+Body	HiSpeed	-	R-B-HiSpeed
+Body Upgrade	Engine Output (vehicles only = no cyborgs)	-	R-BU-Engine[1-5]
+Body Upgrade	Body Points	-	R-BU-BodyPoints[1-5]
+Body Upgrade	Kinetic Armour	-	R-BU-KineticArmour[1-5]
+Body Upgrade	Thermal Armour	-	R-BU-ThermalArmour[1-5]
+Unit	Cyborg Transport	-	R-U-CyborgTransport (body + propulsion...)
+Propulsion	Hover	Hover	R-P-Hover
+Propulsion	VTOL	VTOL	R-P-VTOL
 
+Starting Technologies (= first technologies you can research)
+- R-W-FF-Machinegun
+- R-W-SF-Railgun
+- R-W-MIS-ScourgeMissile
 
-
-
-Starting Technologies
-- 
-
-
-
+Basic Technologies (= technologies you start with = you researched before game start)
+- basic technologies are NOT listed in the above listing since you never really research them and having them as a research prerequisite is pointless as well; thus, the names given here are the names these technologies _would_ have, if they were researchable
+- R-B-Start (Start Body)
+- R-B-Cyborg (Cyborg Body)
+- R-C-Tank (Tank Constructor)
+- R-C-Cyborg (Cyborg Constructor)
+- R-P-Tracks
+- R-P-Cyborg (Cyborg legs...)
