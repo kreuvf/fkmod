@@ -44,9 +44,9 @@ Lancer	Usable vs. aerial targets (for Cyborgs only)
 Avenger SAM	homing
 Howitzer	2 x range extension
 Rocket Battery	range, homing
-Incenediary Artillery	range, burn effect radius
+Incendiary Artillery	range, burn effect radius
 Flamer	2 x range
-Incenediary Bomb	Burn effect radius, mass
+Incendiary Bomb	Burn effect radius, mass
 Laser	penetration
 Stormbringer AA	penetration
 Grenade Launcher	2 x splash radius
