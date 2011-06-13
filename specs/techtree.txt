@@ -127,6 +127,19 @@ Sensor	CB Sensor	CB Sensor	R-SensorCB
 Sensor	VTOL Strike Sensor	VTOL Strike Sensor	R-SensorVTOLStrike
 Commander	Commander Turret (enables tank version and commander cyborg)	Commander Turret	R-Commander
 Repair	Repair Turret (enables tank version and cyborg version)	Repair Turret	R-Repair
+Defense Structure	MG Bunker	Machinegun Bunker	R-HACK-Bunker-Machinegun
+Defense Structure	MG Hardpoint	Machinegun Hardpoint	R-HACK-Hardpoint-Machinegun
+Defense Structure	Hurricane AA Site	Hurricane AA Site	R-HACK-Site-AAHurricane
+Defense Structure	Cannon Bunker	Cannon Bunker	R-HACK-Bunker-Cannon
+Defense Structure	Cannon Hardpoint	Cannon Hardpoint	R-HACK-Hardpoint-Cannon
+Defense Structure Cyclone AA Site	Cyclone AA Site	R-HACK-Site-AACyclone
+Defense Structure	Avenger SAM Site	Avenger SAM Site	R-HACK-Site-AAAvengerSAM
+Defense Structure	Howitzer Emplacement	Howitzer Emplacement	R-HACK-Site-Howitzer
+Defense Structure	Rocket Battery Emplacement	Rocket Battery Emplacement	R-HACK-Site-RocketBattery
+Defense Structure	Incendiary Howitzer Emplacement	Incendiary Howitzer Emplacement	R-HACK-Site-HowitzerIncendiary
+Defense Structure	Stormbringer AA Site	Stormbringer AA Site	R-HACK-Site-AAStormbringer
+Defense Structure	Grenade Launcher Bunker	Grenade Launcher Bunker	R-HACK-Bunker-GrenadeLauncher
+Defense Structure	Grenade Launcher Hardpoint	Grenade Launcher Hardpoint	R-HACK-Hardpoint-GrenadeLauncher
 
 Starting Technologies (= first technologies you can research)
 - R-W-FF-Machinegun
