@@ -116,3 +116,9 @@ Repair research
 - cumulated research time: approx. 30 min
 - research time for every other upgrade depends on the time of the first upgrade x; for research time this means: x + 1,1 * x + 1,1^2 * x = 30 ==> x approx. 9 min 5 s
 
+VTOL Rearming Pad research
+- 3 upgrades
+- for every upgrade values should become 10% better than they were previously (Be careful: First upgrade: +10% of base value, second upgrade: +21% of base value, third upgrade: +33,1% of base value)
+- cumulated research time: approx. 20 min
+- research time for every other upgrade depends on the time of the first upgrade x; for research time this means: x + 1,1 * x + 1,1^2 * x = 20 ==> x approx. 6 min
+
