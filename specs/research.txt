@@ -103,6 +103,8 @@ Defense structure research
 	- cumulated research time: approx. 60 min
 	- research time for every other upgrade depends on the time of the first upgrade x; for research time this means: x + 1,1 * x + 1,1^2 * x + 1,1^3 * x + 1,1^4 * x = 60 ==> x approx. 9 min 50 s
 - defense structures need to be researched only once; with every new weapon the new bunkers, hardpoints etc. become available automatically
+	- Problem here: resultstructure.txt does not allow you to define more than one research topic which is necessary for enabling the structure
+	- Workaround: use ultrafast and ultracheap dummy research topics that require defense structure type + weapon research, researching this topic will result in the new structure
 
 Sensor research
 - no research

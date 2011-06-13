@@ -111,11 +111,30 @@ Structure Upgrade	Body Points	-	R-StU-BodyPoints[1-5]
 Structure Upgrade	Armours	-	R-StU-Armours[1-5]
 WallDefence Upgrade	Defense Structure Body Points	-	R-DfU-BodyPoints[1-5]
 WallDefence Upgrade	Defense Structure Armours	-	R-DfU-Armours[1-5]
+Repair Upgrade	Repair Upgrades	-	R-RpU[1-3]
+ReArm Upgrade	VTOL Rearming Pad Upgrades	-	R-RAU[1-3]
+Structure	VTOL Factory (resultstructure.txt!)	VTOL Factory	R-St-VTOLFactory
+Structure	Rearming Pad (resultstructure.txt!)	VTOL Rearming Pad	R-St-RearmPad
+Structure	Command Relay (resultstructure.txt!)	Command Relay Center	R-St-CmdRelayCentre
+Structure	Repair Facility (resultstructure.txt!)	Repair Facility	R-St-RepairFacility
+Structure	Generic Hardpoint (for all weapons except AA and artillery; see structures.txt)	Hardpoint	R-Def-Hardpoint
+Structure	Generic Bunker (for all weapons except AA and artillery; see structures.txt)	Bunker	R-Def-Bunker
+Structure	Generic Site (only for AA and artillery; see structures.txt)	Site	R-Def-Site
+Wall Function	Wall	Wall	R-Def-Wall
+Sensor	Special sensor for surveillance only (tower version + unit version) 	Surveillance Sensor	R-SensorSurveillance
+Sensor	Normal sensor	Artillery Sensor	R-SensorArtillery
+Sensor	CB Sensor	CB Sensor	R-SensorCB
+Sensor	VTOL Strike Sensor	VTOL Strike Sensor	R-SensorVTOLStrike
+Commander	Commander Turret (enables tank version and commander cyborg)	Commander Turret	R-Commander
+Repair	Repair Turret (enables tank version and cyborg version)	Repair Turret	R-Repair
 
 Starting Technologies (= first technologies you can research)
 - R-W-FF-Machinegun
 - R-W-SF-Railgun
 - R-W-MIS-ScourgeMissile
+- R-Res1
+- R-NRG1
+- R-SensorSurveillance
 
 Basic Technologies (= technologies you start with = you researched before game start)
 - basic technologies are NOT listed in the above listing since you never really research them and having them as a research prerequisite is pointless as well; thus, the names given here are the names these technologies _would_ have, if they were researchable
@@ -130,3 +149,4 @@ Basic Technologies (= technologies you start with = you researched before game s
 - R-St-ResearchFacility
 - R-St-TankFactory
 - R-St-CyborgFactory
+- R-Rep-Autorepair

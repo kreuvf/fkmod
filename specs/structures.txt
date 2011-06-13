@@ -11,6 +11,7 @@ Base Structures
 - Factory (no modules; model of factory with modules)
 - Cyborg Factory
 - VTOL Factory (no modules; model of factory with modules)
+- Repair Facility
 - Rearming Pad
 - Oil Derrick
 - Command Relay Center
@@ -24,6 +25,7 @@ Defensive Structures
 	- for all weapons except AA and artillery
 - Sites
 	- only for AA and artillery
+- Walls
 
 The idea is that bunkers cannot shoot over/through other bunkers and they cannot shoot over walls. Hardpoints can shoot over bunkers and walls, if the distance and the localisation of the target allow for this.
 
