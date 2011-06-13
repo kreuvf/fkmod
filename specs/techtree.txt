@@ -105,6 +105,12 @@ Body Upgrade	Thermal Armour	-	R-BU-ThermalArmour[1-5]
 Unit	Cyborg Transport	-	R-U-CyborgTransport (body + propulsion...)
 Propulsion	Hover	Hover	R-P-Hover
 Propulsion	VTOL	VTOL	R-P-VTOL
+Research Upgrade	Research Upgrades	-	R-Res[1-5]
+Power Upgrade	Energy Research	-	R-NRG[1-10]
+Structure Upgrade	Body Points	-	R-StU-BodyPoints[1-5]
+Structure Upgrade	Armours	-	R-StU-Armours[1-5]
+WallDefence Upgrade	Defense Structure Body Points	-	R-DfU-BodyPoints[1-5]
+WallDefence Upgrade	Defense Structure Armours	-	R-DfU-Armours[1-5]
 
 Starting Technologies (= first technologies you can research)
 - R-W-FF-Machinegun

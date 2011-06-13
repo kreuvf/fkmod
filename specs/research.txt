@@ -86,20 +86,18 @@ Construction research
 - no research
 
 Structure research
-- 3 upgrade categories
+- 2 upgrade categories
 	- Body points
-	- Kinetic armour
-	- Thermal armour
+	- Kinetic/Thermal armour
 - for every other upgrade values should become 10% better than they were previously (Be careful: First upgrade: +10% of base value, second upgrade: +21% of base value, third upgrade: +33,1% of base value etc. pp.)
 - 5 upgrades for each upgrade category
 	- cumulated research time: approx. 60 min
 	- research time for every other upgrade depends on the time of the first upgrade x; for research time this means: x + 1,1 * x + 1,1^2 * x + 1,1^3 * x + 1,1^4 * x = 60 ==> x approx. 9 min 50 s
 
 Defense structure research
-- 3 upgrade categories
+- 2 upgrade categories
 	- Body points
-	- Kinetic armour
-	- Thermal armour
+	- Kinetic/Thermal armour
 - for every upgrade values should become 10% better than they were previously (Be careful: First upgrade: +10% of base value, second upgrade: +21% of base value, third upgrade: +33,1% of base value etc. pp.)
 - 5 upgrades for each upgrade category
 	- cumulated research time: approx. 60 min
