@@ -119,3 +119,8 @@ Basic Technologies (= technologies you start with = you researched before game s
 - R-C-Cyborg (Cyborg Constructor)
 - R-P-Tracks
 - R-P-Cyborg (Cyborg legs...)
+- R-St-Headquarter
+- R-St-PowerGenerator
+- R-St-ResearchFacility
+- R-St-TankFactory
+- R-St-CyborgFactory
