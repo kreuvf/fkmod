@@ -7,7 +7,7 @@ Panzer/Gebäude	Hurricane AA Turret	0	0	0	kurz	gering	mittel	0	0	0	0	Boden, Luft
 Langsamfeuernde Waffen														
 Plattform	Waffe	Anzahl Ladungen	Salvenfeuer pro Salve (0 = keine Salven)	Nachladezeit	Feuerpause	Einschlagsschaden	Reichweite	Flächenschadenradius (0 = kein Flächenschaden)	Flächenschadensstärke (0 = kein Flächenschaden)	Durchschlagend?	Zielsuchend?	Zieltypen	Neigung	Masse
 Cyborg/Gebäude	Geschütz	0	0	0	lang	hoch	mittel	klein	gering	0	0	Boden, Luft	-15°/15°	hoch
-VTOL	Schwere Bombem	wenige	0	0	mittel	hoch	gering	klein bis mittel	mittel	0	0	Boden	-60°/-30°	hoch
+VTOL	Schwere Bomben	wenige	0	0	mittel	hoch	gering	klein bis mittel	mittel	0	0	Boden	-60°/-30°	hoch
 Panzer	Rail Gun	0	0	0	lang	hoch	mittel bis hoch	0	0	ja (Upgrade?)	0	Boden, Luft	-15°/15°	hoch
 Panzer/Gebäude	Cyclone AA Turret	0	0	0	lang	hoch	mittel bis hoch	mittel	mittel	0	0	Boden, Luft	30°/80°	hoch
 														
