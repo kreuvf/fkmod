@@ -5,7 +5,6 @@ Sensors
 - special sensor for scouting without any normal (i. e. targetting for artillery, assigned units etc. pp.) sensor ability; for tanks, VTOLs and as a Cyborg
 - normal sensor, CB, VTOL Strike for normal buildings
 - no other sensors
-- Note (to be deleted when research is specified): scout sensor --> normal sensor --> all other sensors
 
 Commander
 - one commander turret for tanks
