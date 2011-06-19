@@ -5,7 +5,7 @@ Structures
 
 Base Structures
 - HQ
-	- equipped with sensor
+	- equipped with surveillance sensor
 - Power Generator (no modules; model of power generator with module)
 - Research Facility (no modules; model of research facility with module)
 - Factory (no modules; model of factory with modules)
