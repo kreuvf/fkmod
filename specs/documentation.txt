@@ -1,0 +1,21 @@
+Documentation
+- HTML/CSS only
+- several pages
+
+Structure
+1. Overview
+- like an abstract, not more than one DIN A4 page, preferably only half
+
+2. Mod Usage
+- Installation
+- Updating
+- known issues
+- contact (+ flattr links ;X)
+
+3. Technology Overview
+- mainly specifications: which weapon has how many upgrades, which weapon is good/bad against, weapon values, structure values (only relevant stuff) ...
+
+4. Technology Tree
+- list of every single research topic (incl. prerequisites, price, research time)
+- automated
+
