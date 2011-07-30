@@ -17,6 +17,7 @@ Weapon research
 	- cumulated research time per category: approx. 45 min
 	- also 45 min because it's harder to research something that's not part of the weapon's core characteristics (or in other words: the researches responsible are 
 	- research time for upgrades depends on the time of the first upgrade x; for research time this means: x + 1,1 * x + 1,1^2 * x + 1,1^3 * x + 1,1^4 * x = 45 ==> x approx. 7 min 20 s
+- calculations for accuracy: 10% of (1 - hit%) = increase in hit% with last upgrade
 - upgrades are for each weapon individually, so that every research affects only one weapon
 - Weapon groups and main weapon upgrade category:
 Weapon group	Main Weapon Upgrade Category
