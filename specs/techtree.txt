@@ -165,7 +165,7 @@ Basic Technologies (= technologies you start with = you researched before game s
 - R-Rep-Autorepair
 
 Technology Tree Branches
-- Weapon upgrades Mk1 require the weapon, further upgrades require the previous upgrade; special upgrades appear at the end (with exactly one upgrade) or at 5/3/3 and at the end (with exactly two upgrades)
+- Weapon upgrades Mk1 require the weapon, further upgrades require the previous upgrade; special upgrades appear at the end (with exactly one upgrade) or at 5/3/3 and at the end (with exactly two upgrades; second upgrade depends on first)
 - Weapon + Defense structure type --> Dummy Research
 - Research upgrades require only the previous research upgrade
 - Scout Sensor --> Artillery Sensor --> other sensors

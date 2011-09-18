@@ -3,4 +3,5 @@ General specifications
 - 1 energy per oil well per second (without upgrades)
 - trucks can build HQs in 60 s
 - starting energy: 1337
+- build points: production time in ms (based on production speed of 1000 build points per second)
 
