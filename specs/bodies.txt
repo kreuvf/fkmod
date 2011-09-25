@@ -7,5 +7,5 @@ HiSpeed	high	low	low	high	medium
 Cyborg Transport	high	medium	medium	high	high
 Cyborg Body
 
-- Cyborg transport costs determined by body alone!
+- Cyborg transport costs, body points and mass determined by body alone!
 

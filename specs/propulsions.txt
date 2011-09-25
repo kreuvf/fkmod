@@ -11,6 +11,6 @@ Cyborg Transport	high	high	high	medium	air
 - By doing this we reduce the number of parameters that need to be balanced.
 - No tank transport. Tanks have hover instead.
 - Cyborg Transport uses original Tank Transport.
-- Cyborg Transport costs and body points determined by body alone --> 0.
+- Cyborg Transport costs, body points and mass determined by body alone --> 0.
 - For now do not make use of different speed modifiers on different grounds.
 
