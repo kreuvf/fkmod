@@ -27,6 +27,8 @@ Defensive Structures
 	- only for AA and artillery
 - Walls
 
+- costs for hardpoints: 200 + round(cost(tank-weapon), nearest 50)
+
 The idea is that bunkers cannot shoot over/through other bunkers and they cannot shoot over walls. Hardpoints can shoot over bunkers and walls, if the distance and the localisation of the target allow for this.
 
 Unfortunately, Warzone 2100 master (2011-05-08) allows bunkers to shoot over/through other bunkers.
