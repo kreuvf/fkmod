@@ -11,6 +11,7 @@ THAT'S WHY IT'S NOT ENCRYPTED AND STUFF :X
 * Body "Shark"
 * Pirate Party Weapon
 * Termite Bomb
+* Super GAUss Fortress
 
 * One weapon with ultrahigh recoilValue
 
