@@ -143,6 +143,7 @@ Starting Technologies (= first technologies you can research)
 - R-W-SF-Railgun
 - R-W-MIS-ScourgeMissile
 - R-W-HOT-Flamethrower
+- R-W-HOT-Laser
 - R-Res1
 - R-NRG1
 - R-SensorSurveillance
