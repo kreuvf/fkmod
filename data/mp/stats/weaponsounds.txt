@@ -42,8 +42,8 @@ FK-HOT-HowitzerIncendiary2,lrgcan.ogg,lrgexpl.ogg,1337
 FK-HOT-HowitzerIncendiary3,lrgcan.ogg,lrgexpl.ogg,1337
 FK-HOT-Laser,plslsr.ogg,lsrexpl.ogg,1337
 FK-HOT-Laser2,plslsr.ogg,lsrexpl.ogg,1337
-FK-HOT-StormbringerAA,plslsr.ogg,lsrexpl.ogg,1337
-FK-HOT-StormbringerAA2,plslsr.ogg,lsrexpl.ogg,1337
+FK-HOT-AAStormbringer,plslsr.ogg,lsrexpl.ogg,1337
+FK-HOT-AAStormbringer2,plslsr.ogg,lsrexpl.ogg,1337
 FK-MIS-AAAvengerSAM,rocket.ogg,smlexpl.ogg,1337
 FK-MIS-AAAvengerSAM2,rocket.ogg,smlexpl.ogg,1337
 FK-MIS-Lancer-Cyborg,rocket.ogg,smlexpl.ogg,1337

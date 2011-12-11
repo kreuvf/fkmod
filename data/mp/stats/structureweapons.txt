@@ -9,7 +9,7 @@ A0CannonTower,BaBaCannon,NULL,NULL,NULL,31
 FKAASiteAvengerSAM,FK-MIS-AAAvengerSAM,NULL,NULL,NULL,1337
 FKAASiteCyclone,FK-SF-AACyclone,NULL,NULL,NULL,1337
 FKAASiteHurricane,FK-FF-AAHurricane,NULL,NULL,NULL,1337
-FKAASiteStormbringer,FK-HOT-StormbringerAA,NULL,NULL,NULL,1337
+FKAASiteStormbringer,FK-HOT-AAStormbringer,NULL,NULL,NULL,1337
 FKBunkerCannon,FK-SF-Cannon-Structure,NULL,NULL,NULL,1337
 FKBunkerMG,FK-FF-Machinegun-Structure,NULL,NULL,NULL,1337
 FKHardpointCannon,FK-SF-Cannon-Structure,NULL,NULL,NULL,1337
