@@ -147,6 +147,7 @@ Starting Technologies (= first technologies you can research)
 - R-B-HiTherm
 - R-B-HiKin
 - R-B-HiSpeed
+- R-Def-Wall
 
 Basic Technologies (= technologies you start with = you researched before game start)
 - basic technologies are NOT listed in the above listing since you never really research them and having them as a research prerequisite is pointless as well; thus, the names given here are the names these technologies _would_ have, if they were researchable
@@ -167,5 +168,5 @@ Technology Tree Branches
 - Weapon upgrades Mk1 require the weapon, further upgrades require the previous upgrade; special upgrades appear at the end (with exactly one upgrade) or at 5/3/3 and at the end (with exactly two upgrades; second upgrade depends on first)
 - Weapon + Defense structure type --> Dummy Research
 - Research upgrades require only the previous research upgrade
-- Scout Sensor --> Artillery Sensor --> other sensors
+- Scout/Surveillance Sensor --> Artillery Sensor --> other sensors
 

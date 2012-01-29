@@ -857,7 +857,7 @@ R-StU-BodyPoints3,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,icmolql.p
 R-StU-BodyPoints4,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,icmolql.pie,0,,0,0,0,,0,1 StU-BP3,1,0,0,0,0,0
 R-StU-BodyPoints5,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,icmolql.pie,0,,0,0,0,,0,1 StU-BP4,1,0,0,0,0,0
 R-StU-Armours1,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,icmolql.pie,0,,0,0,0,,0,0,1,0,0,0,0,0
-R-StU-Armours3,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,icmolql.pie,0,,0,0,0,,0,1 StU-Armour1,1,0,0,0,0,0
+R-StU-Armours2,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,icmolql.pie,0,,0,0,0,,0,1 StU-Armour1,1,0,0,0,0,0
 R-StU-Armours3,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,icmolql.pie,0,,0,0,0,,0,1 StU-Armour2,1,0,0,0,0,0
 R-StU-Armours4,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,icmolql.pie,0,,0,0,0,,0,1 StU-Armour3,1,0,0,0,0,0
 R-StU-Armours5,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,icmolql.pie,0,,0,0,0,,0,1 StU-Armour4,1,0,0,0,0,0
@@ -878,4 +878,13 @@ R-RAU1,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,0,0,0,FK-RearmPad,0,
 R-RAU2,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,0,0,0,FK-RearmPad,0,0,,0,1 RAU-1,1,0,0,0,0,0
 R-RAU3,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,0,0,0,FK-RearmPad,0,0,,0,1 RAU-2,1,0,0,0,0,0
 R-St-CmdRelayCentre,Level One,0,0,IMAGE_RES_STRUCTURETECH,0,0,,FK-CmdRelayCentre,0,0,,0,1 Surveillance Sensor,0,0,0,1,0,1
+R-St-RepairFacility,Level One,0,0,IMAGE_RES_STRUCTURETECH,0,0,,FK-RepairFacility,0,0,,0,1 Repair Turret,0,0,0,1,0,0
+R-Def-Hardpoint,Level One,0,0,IMAGE_RES_DEFENCE,BLHARDPT.pie,0,,0,0,0,,0,1 Wall,0,0,0,0,0,0
+R-Def-Bunker,Level One,0,0,IMAGE_RES_DEFENCE,blpilbox.pie,0,,0,0,0,,0,1 Wall,0,0,0,0,0,0
+R-Def-Site,Level One,0,0,IMAGE_RES_DEFENCE,Blaamnt2.pie,0,,0,0,0,,0,1 Wall,0,0,0,0,0,0
+R-Def-Wall,Level One,0,0,IMAGE_RES_DEFENCE,0,0,,FKWall,0,0,,0,0,0,0,0,2,0,0
+R-SensorSurveillance,Level One,0,0,IMAGE_RES_SYSTEMTECH,0,0,,0,FK-SurveillanceSensor,0,,0,0,0,0,0,1,0,1
+R-SensorArtillery,Level One,0,0,IMAGE_RES_SYSTEMTECH,0,0,0,0,FK-ArtillerySensor,0,,0,1 Surveillance Sensor,0,0,0,1,0,0
+R-SensorCB,Level One,0,0,IMAGE_RES_SYSTEMTECH,0,0,0,0,FK-CBSensor,0,,0,1 Artillery Sensor,0,0,0,1,0,0
+R-SensorVTOL,Level One,0,0,IMAGE_RES_SYSTEMTECH,0,0,0,0,FK-VTOLSensor,0,,0,1 Artillery Sensor,0,0,0,1,0,0
 
