@@ -871,20 +871,30 @@ R-DfU-Armours2,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_DEFENCE,BLWALLH.PIE,0,,0,0
 R-DfU-Armours3,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_DEFENCE,BLWALLH.PIE,0,,0,0,0,,0,1 DfU-Armours2,1,0,0,0,0,0
 R-DfU-Armours4,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_DEFENCE,BLWALLH.PIE,0,,0,0,0,,0,1 DfU-Armours3,1,0,0,0,0,0
 R-DfU-Armours5,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_DEFENCE,BLWALLH.PIE,0,,0,0,0,,0,1 DfU-Armours4,1,0,0,0,0,0
-R-RpU1,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_SYSTEMTECH,0,0,,FK-RepairFacility,0,0,,0,1 RepairTurret,1,0,0,0,0,0
-R-RpU2,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_SYSTEMTECH,0,0,,FK-RepairFacility,0,0,,0,1 Rep1,1,0,0,0,0,0
-R-RpU3,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_SYSTEMTECH,0,0,,FK-RepairFacility,0,0,,0,1 Rep2,1,0,0,0,0,0
-R-RAU1,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,0,0,0,FK-RearmPad,0,0,,0,1 VTOL,1,0,0,0,0,0
-R-RAU2,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,0,0,0,FK-RearmPad,0,0,,0,1 RAU-1,1,0,0,0,0,0
-R-RAU3,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,0,0,0,FK-RearmPad,0,0,,0,1 RAU-2,1,0,0,0,0,0
-R-St-CmdRelayCentre,Level One,0,0,IMAGE_RES_STRUCTURETECH,0,0,,FK-CmdRelayCentre,0,0,,0,1 Surveillance Sensor,0,0,0,1,0,1
-R-St-RepairFacility,Level One,0,0,IMAGE_RES_STRUCTURETECH,0,0,,FK-RepairFacility,0,0,,0,1 Repair Turret,0,0,0,1,0,0
+R-RpU1,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_SYSTEMTECH,0,0,,FKRepairFacility,0,0,,0,1 RepairTurret,1,0,0,0,0,0
+R-RpU2,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_SYSTEMTECH,0,0,,FKRepairFacility,0,0,,0,1 Rep1,1,0,0,0,0,0
+R-RpU3,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_SYSTEMTECH,0,0,,FKRepairFacility,0,0,,0,1 Rep2,1,0,0,0,0,0
+R-RAU1,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,0,0,0,FKRearmPad,0,0,,0,1 VTOL,1,0,0,0,0,0
+R-RAU2,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,0,0,0,FKRearmPad,0,0,,0,1 RAU-1,1,0,0,0,0,0
+R-RAU3,Level One,IMAGE_RES_GRPUPG,0,IMAGE_RES_STRUCTURETECH,0,0,0,FKRearmPad,0,0,,0,1 RAU-2,1,0,0,0,0,0
+R-St-CmdRelayCentre,Level One,0,0,IMAGE_RES_STRUCTURETECH,0,0,,FKCmdRelayCentre,0,0,,0,1 Surveillance Sensor,0,0,0,1,0,1
+R-St-RepairFacility,Level One,0,0,IMAGE_RES_STRUCTURETECH,0,0,,FKRepairFacility,0,0,,0,1 Repair Turret,0,0,0,1,0,0
 R-Def-Hardpoint,Level One,0,0,IMAGE_RES_DEFENCE,BLHARDPT.pie,0,,0,0,0,,0,1 Wall,0,0,0,0,0,0
 R-Def-Bunker,Level One,0,0,IMAGE_RES_DEFENCE,blpilbox.pie,0,,0,0,0,,0,1 Wall,0,0,0,0,0,0
 R-Def-Site,Level One,0,0,IMAGE_RES_DEFENCE,Blaamnt2.pie,0,,0,0,0,,0,1 Wall,0,0,0,0,0,0
 R-Def-Wall,Level One,0,0,IMAGE_RES_DEFENCE,0,0,,FKWall,0,0,,0,0,0,0,0,2,0,0
-R-SensorSurveillance,Level One,0,0,IMAGE_RES_SYSTEMTECH,0,0,,0,FK-SurveillanceSensor,0,,0,0,0,0,0,1,0,1
-R-SensorArtillery,Level One,0,0,IMAGE_RES_SYSTEMTECH,0,0,0,0,FK-ArtillerySensor,0,,0,1 Surveillance Sensor,0,0,0,1,0,0
-R-SensorCB,Level One,0,0,IMAGE_RES_SYSTEMTECH,0,0,0,0,FK-CBSensor,0,,0,1 Artillery Sensor,0,0,0,1,0,0
-R-SensorVTOL,Level One,0,0,IMAGE_RES_SYSTEMTECH,0,0,0,0,FK-VTOLSensor,0,,0,1 Artillery Sensor,0,0,0,1,0,0
+R-SensorSurveillance,Level One,0,0,IMAGE_RES_SYSTEMTECH,0,0,,0,FKSurveillanceSensor,0,,0,0,0,0,0,1,0,1
+R-SensorArtillery,Level One,0,0,IMAGE_RES_SYSTEMTECH,0,0,0,0,FKArtillerySensor,0,,0,1 Surveillance Sensor,0,0,0,1,0,0
+R-SensorCB,Level One,0,0,IMAGE_RES_SYSTEMTECH,0,0,0,0,FKCBSensor,0,,0,1 Artillery Sensor,0,0,0,1,0,0
+R-SensorVTOL,Level One,0,0,IMAGE_RES_SYSTEMTECH,0,0,0,0,FKVTOLSensor,0,,0,1 Artillery Sensor,0,0,0,1,0,0
+R-Repair,Level One,0,0,IMAGE_RES_SYSTEMTECH,0,0,0,0,FKTankRepair,REPAIR,,0,0,0,0,0,0,0,2
+R-HACK-Bunker-Machinegun,Level One,0,0,IMAGE_RES_DEFENCE,0,0,0,FKBunkerMG,0,0,,0,2 MG + Bunker,0,0,0,1,0,0
+R-HACK-Hardpoint-Machinegun,Level One,0,0,IMAGE_RES_DEFENCE,0,0,0,FKHardpointMG,0,0,,0,2 MG + Hardpoint,0,0,0,1,0,0
+R-HACK-Site-AAHurricane,Level One,0,0,IMAGE_RES_DEFENCE,0,0,0,FKAASiteHurricane,0,0,,0,2 AAHurricane + Site,0,0,0,1,0,0
+R-HACK-Bunker-Cannon,Level One,0,0,IMAGE_RES_DEFENCE,0,0,0,FKBunkerCannon,0,0,,0,2 Cannon + Bunker,0,0,0,1,0,0
+R-HACK-Hardpoint-Cannon,Level One,0,0,IMAGE_RES_DEFENCE,0,0,0,FKHardpointCannon,0,0,,0,2 Cannon + Hardpoint,0,0,0,1,0,0
+R-HACK-Site-AACyclone,Level One,0,0,IMAGE_RES_DEFENCE,0,0,0,FKAASiteCyclone,0,0,,0,2 AACyclone + Site,0,0,0,1,0,0
+R-HACK-Site-AAAvengerSAM,Level One,0,0,IMAGE_RES_DEFENCE,0,0,0,FKAASiteAvengerSAM,0,0,,0,2 AAAvengerSAM + Site,0,0,0,1,0,0
+R-HACK-Site-AAStormbringer,Level One,0,0,IMAGE_RES_DEFENCE,0,0,0,FKAASiteStormbringer,0,0,,0,2 AAStormbringer + Site,0,0,0,1,0,0
+R-HACK-Bunker-GrenadeLauncher,Level One,0,0,IMAGE_RES_DEFENCE,0,0,0,FKPitGrenadeLauncher,0,0,,0,2 MG + Bunker,0,0,0,1,0,0
 

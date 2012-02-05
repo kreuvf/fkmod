@@ -132,8 +132,7 @@ Defense Structure	Cannon Hardpoint	Cannon Hardpoint	R-HACK-Hardpoint-Cannon
 Defense Structure Cyclone AA Site	Cyclone AA Site	R-HACK-Site-AACyclone
 Defense Structure	Avenger SAM Site	Avenger SAM Site	R-HACK-Site-AAAvengerSAM
 Defense Structure	Stormbringer AA Site	Stormbringer AA Site	R-HACK-Site-AAStormbringer
-Defense Structure	Grenade Launcher Bunker	Grenade Launcher Bunker	R-HACK-Bunker-GrenadeLauncher
-Defense Structure	Grenade Launcher Hardpoint	Grenade Launcher Hardpoint	R-HACK-Hardpoint-GrenadeLauncher
+Defense Structure	Grenade Launcher Pit	Grenade Launcher Pit	R-HACK-Site-GrenadeLauncher
 
 Starting Technologies (= first technologies you can research)
 - R-W-FF-Machinegun
@@ -144,6 +143,7 @@ Starting Technologies (= first technologies you can research)
 - R-Res1
 - R-NRG1
 - R-SensorSurveillance
+- R-Repair
 - R-B-HiTherm
 - R-B-HiKin
 - R-B-HiSpeed
@@ -167,6 +167,8 @@ Basic Technologies (= technologies you start with = you researched before game s
 Technology Tree Branches
 - Weapon upgrades Mk1 require the weapon, further upgrades require the previous upgrade; special upgrades appear at the end (with exactly one upgrade) or at 5/3/3 and at the end (with exactly two upgrades; second upgrade depends on first)
 - Weapon + Defense structure type --> Dummy Research
+	- Three categories: Bunker (MG, Cannon), Hardpoint (MG, Cannon), Site (Hurricane, Cyclone, Avenger SAM, Stormbringer, Grenade Launcher)
+	- Artillery uses mortar pits naturally (i. e. without further research since artillery cannot be built on units)
 - Research upgrades require only the previous research upgrade
 - Scout/Surveillance Sensor --> Artillery Sensor --> other sensors
 
