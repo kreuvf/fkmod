@@ -144,9 +144,10 @@ Starting Technologies (= first technologies you can research)
 - R-NRG1
 - R-SensorSurveillance
 - R-Repair
-- R-B-HiTherm
-- R-B-HiKin
-- R-B-HiSpeed
+- R-BU-BodyPoints1
+- R-BU-Engine1
+- R-BU-KineticArmour1
+- R-BU-ThermalArmour1
 - R-Def-Wall
 
 Basic Technologies (= technologies you start with = you researched before game start)
