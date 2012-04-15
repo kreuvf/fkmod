@@ -123,3 +123,6 @@ VTOL Rearming Pad research
 - cumulated research time: approx. 20 min
 - research time for every other upgrade depends on the time of the first upgrade x; for research time this means: x + 1,1 * x + 1,1^2 * x = 20 ==> x approx. 6 min
 
+Command Turret research
+- automatically via command relay centre research
+

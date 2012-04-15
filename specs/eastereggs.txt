@@ -1,6 +1,8 @@
 *** TOP SECRET FILE *** :X
 THAT'S WHY IT'S NOT ENCRYPTED AND STUFF :X
 
+Easteregg weaponry only via debug mode.
+
 * burning scavenger shooting weapon
 * normal scavenger shooting weapon
 * th-y weapon
@@ -18,4 +20,10 @@ THAT'S WHY IT'S NOT ENCRYPTED AND STUFF :X
 * Gay Bomb
 
 * One weapon with ultrahigh recoilValue
+
+* Artifact Rush
+	* No research possible
+	* Artifacts are dropped every n time units
+	* Artifact positions and contents are announced to all players
+	* Player picking up artifacts is announced to all players; artifact get = research researched
 

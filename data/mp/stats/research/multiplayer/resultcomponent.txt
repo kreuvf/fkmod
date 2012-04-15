@@ -6,6 +6,7 @@ R-P-VTOL,V-Tol,PROPULSION,0,0,1337
 R-Repair,FKTankRepair,REPAIR,0,0,1337
 R-Repair,,BODY,0,0,1337
 R-SensorSurveillance,FKSurveillanceSensor,SENSOR,0,0,1337
+R-St-CmdRelayCentre,CommandTurret,BRAIN,0,0,1337
 R-U-CyborgTransport,,BODY,,,1337
 R-W-ART-Howitzer,FK-ART-Howitzer,WEAPON,0,0,1337
 R-W-ART-RocketBattery,FK-ART-RocketBattery,WEAPON,0,0,1337
