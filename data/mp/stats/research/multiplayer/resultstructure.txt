@@ -1,13 +1,15 @@
-R-St-CmdRelayCentre,FKCmdRelayCentre,0,1337
-R-St-RepairFacility,FKRepairFacility,0,1338
-R-Def-Wall,FKWall,0,1339
-R-HACK-Bunker-Machinegun,FKBunkerMG,0,1340
-R-HACK-Hardpoint-Machinegun,FKHardpointMG,0,1341
-R-HACK-Site-AAHurricane,FKAASiteHurricane,0,1342
-R-HACK-Bunker-Cannon,FKBunkerCannon,0,1343
-R-HACK-Hardpoint-Cannon,FKHardpointCannon,0,1344
-R-HACK-Site-AACyclone,FKAASiteCyclone,0,1345
-R-HACK-Site-AAAvengerSAM,FKAASiteAvengerSAM,0,1346
-R-HACK-Site-AAStormbringer,FKAASiteStormbringer,0,1347
-R-HACK-Bunker-GrenadeLauncher,FKPitGrenadeLauncher,0,1348
+R-P-VTOL,FKVTOLFactory,0,1337
+R-P-VTOL,FKRearmPad,0,1338
+R-St-CmdRelayCentre,FKCmdRelayCentre,0,1339
+R-St-RepairFacility,FKRepairFacility,0,1340
+R-Def-Wall,FKWall,0,1341
+R-HACK-Bunker-Machinegun,FKBunkerMG,0,1342
+R-HACK-Hardpoint-Machinegun,FKHardpointMG,0,1343
+R-HACK-Site-AAHurricane,FKAASiteHurricane,0,1344
+R-HACK-Bunker-Cannon,FKBunkerCannon,0,1345
+R-HACK-Hardpoint-Cannon,FKHardpointCannon,0,1346
+R-HACK-Site-AACyclone,FKAASiteCyclone,0,1347
+R-HACK-Site-AAAvengerSAM,FKAASiteAvengerSAM,0,1348
+R-HACK-Site-AAStormbringer,FKAASiteStormbringer,0,1349
+R-HACK-Bunker-GrenadeLauncher,FKPitGrenadeLauncher,0,1350
 

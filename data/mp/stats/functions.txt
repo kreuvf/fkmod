@@ -20,7 +20,7 @@ Repair Droid,FKRepairFunction,40
 Repair Upgrade,FKRepairFacilityUpgrade0,10
 Repair Upgrade,FKRepairFacilityUpgrade1,21
 Repair Upgrade,FKRepairFacilityUpgrade2,33
-Research,FKResearchFunction,1000
+Research,FKResearchFunction,14
 Research Upgrade,FKResearchUpgrade0,10
 Research Upgrade,FKResearchUpgrade1,21
 Research Upgrade,FKResearchUpgrade2,33
