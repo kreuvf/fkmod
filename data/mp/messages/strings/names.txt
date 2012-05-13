@@ -2019,3 +2019,86 @@ Wall                "Wall"
 WallCorner          "Wallcorner"
 WallSmashed         "Smashedwall"
 WallCornerSmashed   "Smashedcornerwall"
+
+
+/*
+ FK Mod Entries
+*/
+// body.txt
+FKTankStart	"Cobra"
+FKTankHiThermal "Scorpion"
+FKTankHiKinetic "Panther"
+FKTankHiSpeed "Retribution"
+FKCyborg "*Cyborg*"
+FKTransportBody "*Transport*"
+
+// construction.txt
+FKTruck "Truck"
+FKCyborg "Engineer"
+
+// repair.txt
+// FKCyborgRepair
+FKTankRepair "Repair Turret"
+// FKRepFacRepair 
+
+// sensor.txt
+FKSurveillanceSensor	"Surveillance Sensor"
+FKArtillerySensor "Artillery Sensor"
+FKCBSensor "CB Sensor"
+FKVTOLSensor "VTOL Sensor"
+FKScoutSensor "Scout Sensor"
+
+// structures.txt
+FKCmdRelayCentre "Command Relay Centre"
+FKHeadquarter "Command Centre"
+FKCyborgFactory "Cyborg Factory"
+FKWallCorner "Wall"
+FKWallGate "Gate"
+FKWall "Wall"
+FKTankFactory "Tank Factory"
+FKPowerGenerator "Power Generator"
+FKRepairFacility "Repair Facility"
+FKResearchFacility "Research Facility"
+FKVTOLFactory "VTOL Factory"
+FKRearmPad "Rearming Pad"
+FKTowerSurveillance "Surveillance Tower"
+FKTowerArtillery "Sensor Tower"
+FKTowerCB "CB Tower"
+FKTowerVTOL "VTOL Tower"
+FKHardpointMG "Machinegun Hardpoint"
+FKHardpointCannon "Cannon Hardpoint"
+FKBunkerMG "Machinegun Bunker"
+FKBunkerCannon "Cannon Bunker"
+FKAASiteHurricane "Hurricane AA Site"
+FKAASiteCyclone "Cyclone AA Site"
+FKAASiteAvengerSAM "Avenger SAM Site"
+FKAASiteStormbringer "Stormbringer AA Site"
+FKPitHowitzer "Howitzer Pit"
+FKPitRockets "Ripple Rockets Pit"
+FKPitIncendiaryHowitzer "Incendiary Howitzer Pit"
+FKPitGrenadeLauncher "Grenade Launcher Pit"
+FKHardpointMG2 "Machinegun Hardpoint"
+FKHardpointCannon2 "Cannon Hardpoint"
+FKBunkerMG2 "Machinegun Bunker"
+FKBunkerCannon2 "Cannon Bunker"
+FKAASiteHurricane2 "Hurricane AA Site"
+FKAASiteCyclone2 "Cyclone AA Site"
+FKAASiteAvengerSAM2 "Avenger SAM Site"
+FKAASiteStormbringer2 "Stormbringer AA Site"
+FKPitHowitzer2 "Howitzer Pit"
+FKPitRockets2 "Ripple Rockets Pit"
+FKPitIncendiaryHowitzer2 "Incendiary Howitzer Pit"
+FKPitGrenadeLauncher2 "Grenade Launcher Pit"
+FKHardpointMG3 "Machinegun Hardpoint"
+FKHardpointCannon3 "Cannon Hardpoint"
+FKBunkerMG3 "Machinegun Bunker"
+FKBunkerCannon3 "Cannon Bunker"
+FKAASiteHurricane3 "Hurricane AA Site"
+FKAASiteCyclone3 "Cyclone AA Site"
+FKAASiteAvengerSAM3 "Avenger SAM Site"
+FKAASiteStormbringer3 "Stormbringer AA Site"
+FKPitHowitzer3 "Howitzer Site"
+FKPitRockets3 "Ripple Rockets Site"
+FKPitIncendiaryHowitzer3 "Incendiary Howitzer Site"
+FKPitGrenadeLauncher3 "Grenade Launcher Site"
+
