@@ -19,6 +19,7 @@ Easteregg weaponry only via debug mode.
 * Sandbag walls :D
 * Gay Bomb
 * Canon Cannon (schießt nur Bilder/mit Bildern)
+* Flamethrower Thrower (Cannon, die Flammenwerfer feuert :D)
 
 * One weapon with ultrahigh recoilValue
 
