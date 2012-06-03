@@ -1,0 +1,214 @@
+diff -ur src_alt/oprint.cpp src_neu/oprint.cpp
+--- src_alt/oprint.cpp	2012-05-04 22:00:25.000000000 +0200
++++ src_neu/oprint.cpp	2012-06-03 15:46:27.000000000 +0200
+@@ -152,6 +152,56 @@
+ 	case WSC_EMP:
+ 		pWSC = "WSC_EMP";
+ 		break;
++	/* New weapon subclasses for FK mod and some generic subclasses for other projects */
++	/* Added by Kreuvf 2012-06-03 */
++	case WSC_AACANNON:
++		pWSC = "WSC_AACANNON";
++		break;
++	case WSC_CLUSTERBOMB:
++		pWSC = "WSC_CLUSTERBOMB";
++		break;
++	case WSC_HEAVYBOMB:
++		pWSC = "WSC_HEAVYBOMB";
++		break;
++	case WSC_HOTBOMB:
++		pWSC = "WSC_HOTBOMB";
++		break;
++	case WSC_HOTHOWITZER:
++		pWSC = "WSC_HOTHOWITZER";
++		break;
++	case WSC_LASER:
++		pWSC = "WSC_LASER";
++		break;
++	case WSC_AALASER:
++		pWSC = "WSC_AALASER";
++		break;
++	case WSC_GEN0:
++		pWSC = "WSC_GEN0";
++		break;
++	case WSC_GEN1:
++		pWSC = "WSC_GEN1";
++		break;
++	case WSC_GEN2:
++		pWSC = "WSC_GEN2";
++		break;
++	case WSC_GEN3:
++		pWSC = "WSC_GEN3";
++		break;
++	case WSC_GEN4:
++		pWSC = "WSC_GEN4";
++		break;
++	case WSC_GEN5:
++		pWSC = "WSC_GEN5";
++		break;
++	case WSC_GEN6:
++		pWSC = "WSC_GEN6";
++		break;
++	case WSC_GEN7:
++		pWSC = "WSC_GEN7";
++		break;
++	case WSC_GEN8:
++		pWSC = "WSC_GEN8";
++		break;
+ 	default:
+ 		pWSC = "UNKNOWN SUB CLASS";
+ 		break;
+diff -ur src_alt/projectile.cpp src_neu/projectile.cpp
+--- src_alt/projectile.cpp	2012-05-04 22:00:25.000000000 +0200
++++ src_neu/projectile.cpp	2012-06-03 15:58:58.000000000 +0200
+@@ -538,7 +538,8 @@
+ 				/* firing sound emitted from source */
+ 				audio_PlayObjDynamicTrack(psProj->psSource, psStats->iAudioFireID, NULL);
+ 				/* GJ HACK: move howitzer sound with shell */
+-				if ( psStats->weaponSubClass == WSC_HOWITZERS )
++				/* Kreuvf: Added HOTHOWITZER */
++				if ( (psStats->weaponSubClass == WSC_HOWITZERS) || (psStats->weaponSubClass = WSC_HOTHOWITZER) )
+ 				{
+ 					audio_PlayObjDynamicTrack(psProj, ID_SOUND_HOWITZ_FLIGHT, NULL);
+ 				}
+@@ -697,14 +698,28 @@
+ 			break;
+ 		case WSC_CANNON:
+ 		case WSC_BOMB:
++		case WSC_CLUSTERBOMB:
++		case WSC_HOTBOMB:
++		case WSC_HEAVYBOMB:
+ 		case WSC_ELECTRONIC:
+ 		case WSC_EMP:
+ 		case WSC_FLAME:
++		case WSC_LASER:
++		case WSC_AALASER:
+ 		case WSC_ENERGY:
+ 		case WSC_GAUSS:
+ 			distanceExtensionFactor = 150;
+ 			break;
+ 		case WSC_AAGUN: // No extended distance
++		case WSC_GEN0:
++		case WSC_GEN1:
++		case WSC_GEN2:
++		case WSC_GEN3:
++		case WSC_GEN4:
++		case WSC_GEN5:
++		case WSC_GEN6:
++		case WSC_GEN7:
++		case WSC_GEN8:
+ 			distanceExtensionFactor = 100;
+ 			break;
+ 		case WSC_ROCKET:
+@@ -715,6 +730,7 @@
+ 		case WSC_COUNTER:
+ 		case WSC_MORTARS:
+ 		case WSC_HOWITZERS:
++		case WSC_HOTHOWITZER:
+ 		case WSC_LAS_SAT:
+ 			distanceExtensionFactor = 150;
+ 			break;
+diff -ur src_alt/stats.cpp src_neu/stats.cpp
+--- src_alt/stats.cpp	2012-05-04 22:00:25.000000000 +0200
++++ src_neu/stats.cpp	2012-06-03 15:41:55.000000000 +0200
+@@ -2876,6 +2876,72 @@
+ 	{
+ 		*wclass = WSC_EMP;
+ 	}
++	/* New weapon subclasses for FK mod and some generic subclasses for other projects */
++	/* Added by Kreuvf 2012-06-03 */
++	else if (strcmp(subClass, "A-A CANNON") == 0)
++	{
++		*wclass = WSC_AACANNON;
++	}
++	else if (strcmp(subClass, "CLUSTER BOMB") == 0)
++	{
++		*wclass = WSC_CLUSTERBOMB;
++	}
++	else if (strcmp(subClass, "HEAVY BOMB") == 0)
++	{
++		*wclass = WSC_HEAVYBOMB;
++	}
++	else if (strcmp(subClass, "HOT BOMB") == 0)
++	{
++		*wclass = WSC_HOTBOMB;
++	}
++	else if (strcmp(subClass, "HOT HOWITZER") == 0)
++	{
++		*wclass = WSC_HOTHOWITZER;
++	}
++	else if (strcmp(subClass, "LASER") == 0)
++	{
++		*wclass = WSC_LASER;
++	}
++	else if (strcmp(subClass, "A-A LASER") == 0)
++	{
++		*wclass = WSC_AALASER;
++	}
++	else if (strcmp(subClass, "GENERIC 0") == 0)
++	{
++		*wclass = WSC_GEN0;
++	}
++	else if (strcmp(subClass, "GENERIC 1") == 0)
++	{
++		*wclass = WSC_GEN1;
++	}
++	else if (strcmp(subClass, "GENERIC 2") == 0)
++	{
++		*wclass = WSC_GEN2;
++	}
++	else if (strcmp(subClass, "GENERIC 3") == 0)
++	{
++		*wclass = WSC_GEN3;
++	}
++	else if (strcmp(subClass, "GENERIC 4") == 0)
++	{
++		*wclass = WSC_GEN4;
++	}
++	else if (strcmp(subClass, "GENERIC 5") == 0)
++	{
++		*wclass = WSC_GEN5;
++	}
++	else if (strcmp(subClass, "GENERIC 6") == 0)
++	{
++		*wclass = WSC_GEN6;
++	}
++	else if (strcmp(subClass, "GENERIC 7") == 0)
++	{
++		*wclass = WSC_GEN7;
++	}
++	else if (strcmp(subClass, "GENERIC 8") == 0)
++	{
++		*wclass = WSC_GEN8;
++	}
+         else
+         {
+ 	    ASSERT(!"Invalid weapon sub class", "Invalid weapon sub class: %s", subClass);
+diff -ur src_alt/statsdef.h src_neu/statsdef.h
+--- src_alt/statsdef.h	2012-05-04 22:00:25.000000000 +0200
++++ src_neu/statsdef.h	2012-06-03 15:41:59.000000000 +0200
+@@ -278,6 +278,24 @@
+ 	WSC_BOMB,
+ 	WSC_COMMAND,
+ 	WSC_EMP,
++	/* New weapon subclasses for FK mod and some generic subclasses for other projects */
++	/* Added by Kreuvf 2012-06-03 */
++	WSC_AACANNON,
++	WSC_CLUSTERBOMB,
++	WSC_HEAVYBOMB,
++	WSC_HOTBOMB,
++	WSC_HOTHOWITZER,
++	WSC_LASER,
++	WSC_AALASER,
++	WSC_GEN0,
++	WSC_GEN1,
++	WSC_GEN2,
++	WSC_GEN3,
++	WSC_GEN4,
++	WSC_GEN5,
++	WSC_GEN6,
++	WSC_GEN7,
++	WSC_GEN8,
+ 	WSC_COUNTER,				// Counter missile
+ 	WSC_NUM_WEAPON_SUBCLASSES,	/** The number of enumerators in this enum.	 */
+ };
