@@ -2034,12 +2034,13 @@ FKTransportBody "*Transport*"
 
 // construction.txt
 FKTruck "Truck"
-FKCyborg "Engineer"
+FKCyborgEngineer "Engineer"
 
 // repair.txt
-// FKCyborgRepair
+FKAutoRepair "*Auto Repair*"
+FKCyborgRepair "*Cyborg Repair*"
 FKTankRepair "Repair Turret"
-// FKRepFacRepair 
+FKRepFacRepair "*Repair Facility Repair*"
 
 // sensor.txt
 FKSurveillanceSensor	"Surveillance Sensor"

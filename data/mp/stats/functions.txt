@@ -379,4 +379,3 @@ Weapon Upgrade,FKWeaponUpgradeMORAccuracy1,MORTARS,0,21,21,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeMORAccuracy2,MORTARS,0,33,33,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeMORAccuracy3,MORTARS,0,46,46,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeMORAccuracy4,MORTARS,0,61,61,0,0,0,0
-

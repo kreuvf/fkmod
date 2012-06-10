@@ -75,4 +75,3 @@ FK-SPL-GrenadeLauncher-Cyborg3,cybgrnd.ogg,smlexpl.ogg,1337
 FK-SPL-GrenadeLauncher-TankStructure,cybgrnd.ogg,smlexpl.ogg,1337
 FK-SPL-GrenadeLauncher-TankStructure2,cybgrnd.ogg,smlexpl.ogg,1337
 FK-SPL-GrenadeLauncher-TankStructure3,cybgrnd.ogg,smlexpl.ogg,1337
-
