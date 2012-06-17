@@ -1,8 +1,7 @@
 // technology auto enabler.
 
-public	int		numCamTech, numCamTechB;
-public	RESEARCHSTAT	camTech[254];
-public	RESEARCHSTAT	camTechB[17];
+public	int		numCamTech;
+public	RESEARCHSTAT	camTech[897];
 
 event setTechPower(CALL_GAMEINIT)
 {
@@ -15,12 +14,6 @@ event setTechPower(CALL_GAMEINIT)
 		while (count <= numCamTech)
 		{
 			completeResearch(camTech[count], playnum);
-			count = count + 1;
-		}
-		count = 0;
-		while (count < numCamTechB)
-		{
-			completeResearch(camTechB[count], playnum);
 			count = count + 1;
 		}
 		playnum = playnum + 1;		

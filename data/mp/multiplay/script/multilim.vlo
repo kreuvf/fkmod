@@ -10,14 +10,13 @@ run
 
 //structures
 
-factory			STRUCTURESTAT		"A0LightFactory"
+factory			STRUCTURESTAT		"FKTankFactory"
 oilDerrick		STRUCTURESTAT		"A0ResourceExtractor"
-powerGen		STRUCTURESTAT		"A0PowerGenerator"
-research		STRUCTURESTAT		"A0ResearchFacility"
-comdroid		STRUCTURESTAT		"A0ComDroidControl"
-cybfac			STRUCTURESTAT		"A0CyborgFactory"
-repair			STRUCTURESTAT		"A0RepairCentre3"
-vtolfact		STRUCTURESTAT		"A0VTolFactory1"
-vtolpad			STRUCTURESTAT		"A0VtolPad"	
-lassat		STRUCTURESTAT		"A0LasSatCommand"
+powerGen		STRUCTURESTAT		"FKPowerGenerator"
+research		STRUCTURESTAT		"FKResearchFacility"
+comdroid		STRUCTURESTAT		"CmdRelayCentre"
+cybfac			STRUCTURESTAT		"FKCyborgFactory"
+repair			STRUCTURESTAT		"FKRepairFacility"
+vtolfact		STRUCTURESTAT		"FKVTOLFactory"
+vtolpad			STRUCTURESTAT		"FKRearmPad"
 }
