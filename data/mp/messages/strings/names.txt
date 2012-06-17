@@ -2036,6 +2036,9 @@ FKTransportBody "*Transport*"
 FKTruck "Truck"
 FKCyborgEngineer "Engineer"
 
+// propulsion.txt
+V-Tol-CybTrans "Cyborg Transport Propulsion"
+
 // repair.txt
 FKAutoRepair "*Auto Repair*"
 FKCyborgRepair "*Cyborg Repair*"
