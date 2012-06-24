@@ -61,7 +61,7 @@ VehicleRepair Upgrade,FKAutorepairUpgrade0,10
 VehicleRepair Upgrade,FKAutorepairUpgrade1,21
 VehicleRepair Upgrade,FKAutorepairUpgrade2,33
 Wall Function,Basic Wall Function,A0BabaCornerWall,31
-Wall Function,Hardcrete Wall1,A0HardcreteMk1CWall,69
+Wall Function,Hardcrete Wall1,FKWallCorner,69
 Wall Function,baba Wall Function,A0BabaCornerWall,73
 WallDefence Upgrade,FKDefenseStructureUpgradeBP0,0,10
 WallDefence Upgrade,FKDefenseStructureUpgradeBP1,0,21
@@ -209,23 +209,23 @@ Weapon Upgrade,FKWeaponUpgradeLASAccuracy1,LASER,0,21,21,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeLASAccuracy2,LASER,0,33,33,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeLASAccuracy3,LASER,0,46,46,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeLASAccuracy4,LASER,0,61,61,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLAADamage0,LASER AA,0,0,0,10,0,10,0
-Weapon Upgrade,FKWeaponUpgradeLAADamage1,LASER AA,0,0,0,21,0,21,0
-Weapon Upgrade,FKWeaponUpgradeLAADamage2,LASER AA,0,0,0,33,0,33,0
-Weapon Upgrade,FKWeaponUpgradeLAADamage3,LASER AA,0,0,0,46,0,46,0
-Weapon Upgrade,FKWeaponUpgradeLAADamage4,LASER AA,0,0,0,61,0,61,0
-Weapon Upgrade,FKWeaponUpgradeLAADamage5,LASER AA,0,0,0,77,0,77,0
-Weapon Upgrade,FKWeaponUpgradeLAADamage6,LASER AA,0,0,0,95,0,95,0
-Weapon Upgrade,FKWeaponUpgradeLAAROF0,LASER AA,10,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLAAROF1,LASER AA,21,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLAAROF2,LASER AA,33,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLAAROF3,LASER AA,46,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLAAROF4,LASER AA,61,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLAAAccuracy0,LASER AA,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLAAAccuracy1,LASER AA,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLAAAccuracy2,LASER AA,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLAAAccuracy3,LASER AA,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLAAAccuracy4,LASER AA,0,61,61,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLAADamage0,A-A LASER,0,0,0,10,0,10,0
+Weapon Upgrade,FKWeaponUpgradeLAADamage1,A-A LASER,0,0,0,21,0,21,0
+Weapon Upgrade,FKWeaponUpgradeLAADamage2,A-A LASER,0,0,0,33,0,33,0
+Weapon Upgrade,FKWeaponUpgradeLAADamage3,A-A LASER,0,0,0,46,0,46,0
+Weapon Upgrade,FKWeaponUpgradeLAADamage4,A-A LASER,0,0,0,61,0,61,0
+Weapon Upgrade,FKWeaponUpgradeLAADamage5,A-A LASER,0,0,0,77,0,77,0
+Weapon Upgrade,FKWeaponUpgradeLAADamage6,A-A LASER,0,0,0,95,0,95,0
+Weapon Upgrade,FKWeaponUpgradeLAAROF0,A-A LASER,10,0,0,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLAAROF1,A-A LASER,21,0,0,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLAAROF2,A-A LASER,33,0,0,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLAAROF3,A-A LASER,46,0,0,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLAAROF4,A-A LASER,61,0,0,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLAAAccuracy0,A-A LASER,0,10,10,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLAAAccuracy1,A-A LASER,0,21,21,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLAAAccuracy2,A-A LASER,0,33,33,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLAAAccuracy3,A-A LASER,0,46,46,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLAAAccuracy4,A-A LASER,0,61,61,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeSMIAccuracy0,SLOW MISSILE,0,10,10,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeSMIAccuracy1,SLOW MISSILE,0,21,21,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeSMIAccuracy2,SLOW MISSILE,0,33,33,0,0,0,0
