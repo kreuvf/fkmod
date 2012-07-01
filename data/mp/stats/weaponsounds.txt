@@ -64,8 +64,8 @@ FK-SF-Cannon-Cyborg3,medcan.ogg,lrgexpl.ogg,1337
 FK-SF-Cannon-Structure,medcan.ogg,lrgexpl.ogg,1337
 FK-SF-Cannon-Structure2,medcan.ogg,lrgexpl.ogg,1337
 FK-SF-Cannon-Structure3,medcan.ogg,lrgexpl.ogg,1337
-FK-SF-RailGun,gaussgun.ogg,lrgexpl.ogg,1337
-FK-SF-RailGun2,gaussgun.ogg,lrgexpl.ogg,1337
+FK-SF-Railgun,gaussgun.ogg,lrgexpl.ogg,1337
+FK-SF-Railgun2,gaussgun.ogg,lrgexpl.ogg,1337
 FK-SPL-BombCluster,hwtzflgt.ogg,lrgexpl.ogg,1337
 FK-SPL-BombCluster2,hwtzflgt.ogg,lrgexpl.ogg,1337
 FK-SPL-BombCluster3,hwtzflgt.ogg,lrgexpl.ogg,1337

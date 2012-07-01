@@ -26,7 +26,7 @@ R-W-MIS-ScourgeMissile,FK-MIS-ScourgeMissile,WEAPON,0,0,1337
 R-W-SF-AACyclone,FK-SF-AACyclone,WEAPON,0,0,1337
 R-W-SF-BombHeavy,FK-SF-BombHeavy,WEAPON,0,0,1337
 R-W-SF-Cannon,,BODY,0,0,1337
-R-W-SF-RailGun,FK-SF-Railgun,WEAPON,0,0,1337
+R-W-SF-Railgun,FK-SF-Railgun,WEAPON,0,0,1337
 R-W-SPL-BombCluster,FK-SPL-BombCluster,WEAPON,0,0,1337
 R-W-SPL-GrenadeLauncher,FK-SPL-GrenadeLauncher-TankStructure,WEAPON,0,0,1337
 R-W-SPL-GrenadeLauncher,,BODY,0,0,1337
@@ -59,7 +59,6 @@ R-WU-Machinegun-CybStruc-SPE1,,BODY,,,1337
 R-WU-Machinegun-CybStruc-SPE2,,BODY,,,1337
 R-WU-Machinegun-TankVTOL-SPE1,FK-FF-Machinegun-Tank2,WEAPON,0,0,1337
 R-WU-Machinegun-TankVTOL-SPE2,FK-FF-Machinegun-Tank3,WEAPON,0,0,1337
-R-WU-RailGun-SPE1,FK-SF-Railgun2,WEAPON,0,0,1337
+R-WU-Railgun-SPE1,FK-SF-Railgun2,WEAPON,0,0,1337
 R-WU-ScourgeMissile-SPE1,FK-MIS-ScourgeMissile2,WEAPON,0,0,1337
 R-WU-ScourgeMissile-SPE2,FK-MIS-ScourgeMissile3,WEAPON,0,0,1337
-

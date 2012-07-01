@@ -20,6 +20,7 @@ Easteregg weaponry only via debug mode.
 * Gay Bomb
 * Canon Cannon (schießt nur Bilder/mit Bildern)
 * Flamethrower Thrower (Cannon, die Flammenwerfer feuert :D)
+* Needlich Gun (in Anlehnung an die Needle Gun, halt nur total niedlich höhö 8[)
 
 * One weapon with ultrahigh recoilValue
 
