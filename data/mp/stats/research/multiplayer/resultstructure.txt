@@ -12,4 +12,3 @@ R-HACK-Site-AACyclone,FKAASiteCyclone,0,1347
 R-HACK-Site-AAAvengerSAM,FKAASiteAvengerSAM,0,1348
 R-HACK-Site-AAStormbringer,FKAASiteStormbringer,0,1349
 R-HACK-Bunker-GrenadeLauncher,FKPitGrenadeLauncher,0,1350
-

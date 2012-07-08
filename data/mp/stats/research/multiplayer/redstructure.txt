@@ -36,4 +36,3 @@ R-WU-GrenadeLauncher-SPE1,FKPitGrenadeLauncher,1357
 R-HACK-Bunker-GrenadeLauncher,FKPitGrenadeLauncher,1357
 R-WU-GrenadeLauncher-SPE2,FKPitGrenadeLauncher2,1358
 R-HACK-Bunker-GrenadeLauncher,FKPitGrenadeLauncher2,1358
-

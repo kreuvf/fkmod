@@ -508,6 +508,3 @@ R-WU-ScourgeMissile-ROF5,R-WU-ScourgeMissile-ROF4,1844
 R-WU-ScourgeMissile-SPE1,R-WU-ScourgeMissile-ACC5,1845
 R-WU-ScourgeMissile-SPE1,R-WU-ScourgeMissile-DMG3,1846
 R-WU-ScourgeMissile-SPE1,R-WU-ScourgeMissile-ROF3,1847
-R-WU-ScourgeMissile-SPE2,R-WU-ScourgeMissile-ACC7,1848
-R-WU-ScourgeMissile-SPE2,R-WU-ScourgeMissile-DMG5,1849
-R-WU-ScourgeMissile-SPE2,R-WU-ScourgeMissile-ROF5,1850
