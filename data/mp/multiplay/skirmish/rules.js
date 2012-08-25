@@ -13,13 +13,23 @@ function eventGameInit()
 	hackNetOff();
 	for (var playnum = 0; playnum < maxPlayers; playnum++)
 	{
-		enableStructure("A0CommandCentre", playnum);		// make structures available to build
-		enableStructure("A0LightFactory", playnum);
+		enableStructure("FKHeadquarter", playnum);		// make structures available to build
 		enableStructure("A0ResourceExtractor", playnum);
-		enableStructure("A0PowerGenerator", playnum);
-		enableStructure("A0ResearchFacility", playnum);
+		enableStructure("FKPowerGenerator", playnum);
+		enableStructure("FKResearchFacility", playnum);
+		enableStructure("FKTankFactory", playnum);
+		enableStructure("FKCyborgFactory", playnum);
 
 		// We need to enable these in order for scripts to be able to generate their templates.
+		makeComponentAvailable("FKTankStart", playnum);
+		makeComponentAvailable("FKTruck", playnum);
+		makeComponentAvailable("FKCyborgEngineer", playnum);
+		makeComponentAvailable("tracked01", playnum);
+		makeComponentAvailable("FKAutoRepair", playnum);
+	 	//makeComponentAvailable("", playnum);
+
+		setPower(1337, playnum);
+
 		makeComponentAvailable("CyborgLegs", playnum);
 		makeComponentAvailable("Cyb-Wpn-Atmiss", playnum);
 		makeComponentAvailable("CyborgCannon", playnum);
