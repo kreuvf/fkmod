@@ -28,6 +28,21 @@ function eventGameInit()
 		makeComponentAvailable("FKAutoRepair", playnum);
 	 	//makeComponentAvailable("", playnum);
 
+		enableResearch("R-W-FF-Machinegun", playnum);
+		enableResearch("R-W-SF-Railgun", playnum);
+		enableResearch("R-W-MIS-ScourgeMissile", playnum);
+		enableResearch("R-W-HOT-Flamethrower", playnum);
+		enableResearch("R-W-HOT-Laser", playnum);
+		enableResearch("R-Res1", playnum);
+		enableResearch("R-NRG1", playnum);
+		enableResearch("R-SensorSurveillance", playnum);
+		enableResearch("R-Repair", playnum);
+		enableResearch("R-BU-BodyPoints1", playnum);
+		enableResearch("R-BU-Engine1", playnum);
+		enableResearch("R-BU-KineticArmour1", playnum);
+		enableResearch("R-BU-ThermalArmour1", playnum);
+		enableResearch("R-Def-Wall", playnum);
+
 		setPower(1337, playnum);
 
 		makeComponentAvailable("CyborgLegs", playnum);
