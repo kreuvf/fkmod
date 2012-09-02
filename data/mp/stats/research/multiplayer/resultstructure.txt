@@ -12,3 +12,7 @@ R-HACK-Site-AACyclone,FKAASiteCyclone,0,1347
 R-HACK-Site-AAAvengerSAM,FKAASiteAvengerSAM,0,1348
 R-HACK-Site-AAStormbringer,FKAASiteStormbringer,0,1349
 R-HACK-Bunker-GrenadeLauncher,FKPitGrenadeLauncher,0,1350
+R-SensorSurveillance,FKTowerSurveillance,0,1351
+R-SensorArtillery,FKTowerArtillery,0,1352
+R-SensorCB,FKTowerCB,0,1353
+R-SensorVTOL,FKTowerVTOL,0,1354
