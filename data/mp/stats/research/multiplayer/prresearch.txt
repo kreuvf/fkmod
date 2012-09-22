@@ -175,6 +175,7 @@ R-WU-AACyclone-SPE1,R-WU-AACyclone-ROF3,1479
 R-WU-AACyclone-SPE2,R-WU-AACyclone-ACC5,1480
 R-WU-AACyclone-SPE2,R-WU-AACyclone-DMG7,1481
 R-WU-AACyclone-SPE2,R-WU-AACyclone-ROF5,1482
+R-WU-AACyclone-SPE2,R-WU-AACyclone-SPE1,1848
 R-WU-AAHurricane-ACC1,R-W-FF-AAHurricane,1483
 R-WU-AAHurricane-ACC2,R-WU-AAHurricane-ACC1,1484
 R-WU-AAHurricane-ACC3,R-WU-AAHurricane-ACC2,1485
@@ -198,6 +199,7 @@ R-WU-AAHurricane-SPE1,R-WU-AAHurricane-ROF5,1502
 R-WU-AAHurricane-SPE2,R-WU-AAHurricane-ACC5,1503
 R-WU-AAHurricane-SPE2,R-WU-AAHurricane-DMG5,1504
 R-WU-AAHurricane-SPE2,R-WU-AAHurricane-ROF7,1505
+R-WU-AAHurricane-SPE2,R-WU-AAHurricane-SPE1,1849
 R-WU-AAStormbringer-ACC1,R-W-HOT-AAStormbringer,1506
 R-WU-AAStormbringer-ACC2,R-WU-AAStormbringer-ACC1,1507
 R-WU-AAStormbringer-ACC3,R-WU-AAStormbringer-ACC2,1508
@@ -241,6 +243,7 @@ R-WU-BombCluster-SPE1,R-WU-BombCluster-ACC3,1545
 R-WU-BombCluster-SPE2,R-WU-BombCluster-ACC5,1546
 R-WU-BombCluster-SPE2,R-WU-BombCluster-DMG7,1547
 R-WU-BombCluster-SPE2,R-WU-BombCluster-ROF5,1548
+R-WU-BombCluster-SPE2,R-WU-BombCluster-SPE1,1850
 R-WU-BombHeavy-ACC1,R-W-SF-BombHeavy,1549
 R-WU-BombHeavy-ACC2,R-WU-BombHeavy-ACC1,1550
 R-WU-BombHeavy-ACC3,R-WU-BombHeavy-ACC2,1551
@@ -264,6 +267,7 @@ R-WU-BombHeavy-SPE1,R-WU-BombHeavy-ROF3,1568
 R-WU-BombHeavy-SPE2,R-WU-BombHeavy-ACC5,1569
 R-WU-BombHeavy-SPE2,R-WU-BombHeavy-DMG7,1570
 R-WU-BombHeavy-SPE2,R-WU-BombHeavy-ROF5,1571
+R-WU-BombHeavy-SPE2,R-WU-BombHeavy-SPE1,1851
 R-WU-BombThermite-ACC1,R-W-HOT-BombThermite,1572
 R-WU-BombThermite-ACC2,R-WU-BombThermite-ACC1,1573
 R-WU-BombThermite-ACC3,R-WU-BombThermite-ACC2,1574
@@ -287,6 +291,7 @@ R-WU-BombThermite-SPE1,R-WU-BombThermite-ROF3,1591
 R-WU-BombThermite-SPE2,R-WU-BombThermite-ACC5,1592
 R-WU-BombThermite-SPE2,R-WU-BombThermite-DMG7,1593
 R-WU-BombThermite-SPE2,R-WU-BombThermite-ROF5,1594
+R-WU-BombThermite-SPE2,R-WU-BombThermite-SPE1,1852
 R-WU-Cannon-ACC1,R-W-SF-Cannon,1595
 R-WU-Cannon-ACC2,R-WU-Cannon-ACC1,1596
 R-WU-Cannon-ACC3,R-WU-Cannon-ACC2,1597
@@ -298,6 +303,7 @@ R-WU-Cannon-Cyb-SPE1,R-WU-Cannon-ACC3,1602
 R-WU-Cannon-Cyb-SPE2,R-WU-Cannon-ROF5,1603
 R-WU-Cannon-Cyb-SPE2,R-WU-Cannon-DMG7,1604
 R-WU-Cannon-Cyb-SPE2,R-WU-Cannon-ACC5,1605
+R-WU-Cannon-Cyb-SPE2,R-WU-Cannon-Cyb-SPE1,1853
 R-WU-Cannon-DMG1,R-W-SF-Cannon,1606
 R-WU-Cannon-DMG2,R-WU-Cannon-DMG1,1607
 R-WU-Cannon-DMG3,R-WU-Cannon-DMG2,1608
@@ -316,6 +322,7 @@ R-WU-Cannon-Struc-SPE1,R-WU-Cannon-ACC3,1620
 R-WU-Cannon-Struc-SPE2,R-WU-Cannon-ROF5,1621
 R-WU-Cannon-Struc-SPE2,R-WU-Cannon-DMG7,1622
 R-WU-Cannon-Struc-SPE2,R-WU-Cannon-ACC5,1623
+R-WU-Cannon-Struc-SPE2,R-WU-Cannon-Struc-SPE1,1854
 R-WU-Flamethrower-ACC1,R-W-HOT-Flamethrower,1624
 R-WU-Flamethrower-ACC2,R-WU-Flamethrower-ACC1,1625
 R-WU-Flamethrower-ACC3,R-WU-Flamethrower-ACC2,1626
@@ -339,6 +346,7 @@ R-WU-Flamethrower-SPE1,R-WU-Flamethrower-ROF3,1643
 R-WU-Flamethrower-SPE2,R-WU-Flamethrower-ACC5,1644
 R-WU-Flamethrower-SPE2,R-WU-Flamethrower-DMG7,1645
 R-WU-Flamethrower-SPE2,R-WU-Flamethrower-ROF5,1646
+R-WU-Flamethrower-SPE2,R-WU-Flamethrower-SPE1,1855
 R-WU-GrenadeLauncher-ACC1,R-W-SPL-GrenadeLauncher,1647
 R-WU-GrenadeLauncher-ACC2,R-WU-GrenadeLauncher-ACC1,1648
 R-WU-GrenadeLauncher-ACC3,R-WU-GrenadeLauncher-ACC2,1649
@@ -362,6 +370,7 @@ R-WU-GrenadeLauncher-SPE1,R-WU-GrenadeLauncher-ROF3,1666
 R-WU-GrenadeLauncher-SPE2,R-WU-GrenadeLauncher-ACC5,1667
 R-WU-GrenadeLauncher-SPE2,R-WU-GrenadeLauncher-DMG7,1668
 R-WU-GrenadeLauncher-SPE2,R-WU-GrenadeLauncher-ROF5,1669
+R-WU-GrenadeLauncher-SPE2,R-WU-GrenadeLauncher-SPE1,1856
 R-WU-Howitzer-ACC1,R-W-ART-Howitzer,1670
 R-WU-Howitzer-ACC2,R-WU-Howitzer-ACC1,1671
 R-WU-Howitzer-ACC3,R-WU-Howitzer-ACC2,1672
@@ -385,6 +394,7 @@ R-WU-Howitzer-SPE1,R-WU-Howitzer-ROF3,1689
 R-WU-Howitzer-SPE2,R-WU-Howitzer-ACC5,1690
 R-WU-Howitzer-SPE2,R-WU-Howitzer-DMG7,1691
 R-WU-Howitzer-SPE2,R-WU-Howitzer-ROF5,1692
+R-WU-Howitzer-SPE2,R-WU-Howitzer-SPE1,1857
 R-WU-HowitzerIncendiary-ACC1,R-W-HOT-HowitzerIncendiary,1693
 R-WU-HowitzerIncendiary-ACC2,R-WU-HowitzerIncendiary-ACC1,1694
 R-WU-HowitzerIncendiary-ACC3,R-WU-HowitzerIncendiary-ACC2,1695
@@ -408,6 +418,7 @@ R-WU-HowitzerIncendiary-SPE1,R-WU-HowitzerIncendiary-ROF3,1712
 R-WU-HowitzerIncendiary-SPE2,R-WU-HowitzerIncendiary-ACC5,1713
 R-WU-HowitzerIncendiary-SPE2,R-WU-HowitzerIncendiary-DMG7,1714
 R-WU-HowitzerIncendiary-SPE2,R-WU-HowitzerIncendiary-ROF5,1715
+R-WU-HowitzerIncendiary-SPE2,R-WU-HowitzerIncendiary-SPE1,1858
 R-WU-Lancer-ACC1,R-W-MIS-Lancer,1716
 R-WU-Lancer-ACC2,R-WU-Lancer-ACC1,1717
 R-WU-Lancer-ACC3,R-WU-Lancer-ACC2,1718
@@ -459,6 +470,7 @@ R-WU-Machinegun-CybStruc-SPE1,R-WU-Machinegun-ACC3,1763
 R-WU-Machinegun-CybStruc-SPE2,R-WU-Machinegun-ROF7,1764
 R-WU-Machinegun-CybStruc-SPE2,R-WU-Machinegun-DMG5,1765
 R-WU-Machinegun-CybStruc-SPE2,R-WU-Machinegun-ACC5,1766
+R-WU-Machinegun-CybStruc-SPE2,R-WU-Machinegun-CybStruc-SPE1,1859
 R-WU-Machinegun-DMG1,R-W-FF-Machinegun,1767
 R-WU-Machinegun-DMG2,R-WU-Machinegun-DMG1,1768
 R-WU-Machinegun-DMG3,R-WU-Machinegun-DMG2,1769
@@ -477,6 +489,7 @@ R-WU-Machinegun-TankVTOL-SPE1,R-WU-Machinegun-ACC3,1781
 R-WU-Machinegun-TankVTOL-SPE2,R-WU-Machinegun-ROF7,1782
 R-WU-Machinegun-TankVTOL-SPE2,R-WU-Machinegun-DMG5,1783
 R-WU-Machinegun-TankVTOL-SPE2,R-WU-Machinegun-ACC5,1784
+R-WU-Machinegun-TankVTOL-SPE2,R-WU-Machinegun-TankVTOL-SPE1,1860
 R-WU-Railgun-ACC1,R-W-SF-Railgun,1785
 R-WU-Railgun-ACC2,R-WU-Railgun-ACC1,1786
 R-WU-Railgun-ACC3,R-WU-Railgun-ACC2,1787
@@ -520,6 +533,7 @@ R-WU-RocketBattery-SPE1,R-WU-RocketBattery-ROF3,1824
 R-WU-RocketBattery-SPE2,R-WU-RocketBattery-ACC7,1825
 R-WU-RocketBattery-SPE2,R-WU-RocketBattery-DMG5,1826
 R-WU-RocketBattery-SPE2,R-WU-RocketBattery-ROF5,1827
+R-WU-RocketBattery-SPE2,R-WU-RocketBattery-SPE1,1861
 R-WU-ScourgeMissile-ACC1,R-W-MIS-ScourgeMissile,1828
 R-WU-ScourgeMissile-ACC2,R-WU-ScourgeMissile-ACC1,1829
 R-WU-ScourgeMissile-ACC3,R-WU-ScourgeMissile-ACC2,1830

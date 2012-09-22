@@ -7,6 +7,15 @@ R-SensorSurveillance,FKTowerSurveillance,0,1342
 R-SensorArtillery,FKTowerArtillery,0,1343
 R-SensorCB,FKTowerCB,0,1344
 R-SensorVTOL,FKTowerVTOL,0,1345
+R-W-ART-Howitzer,FKPitHowitzer,0,1371
+R-W-ART-RocketBattery,FKPitRockets,0,1372
+R-W-HOT-HowitzerIncendiary,FKPitHowitzerIncendiary,0,1373
+R-WU-Howitzer-SPE1,FKPitHowitzer2,0,1374
+R-WU-RocketBattery-SPE1,FKPitRockets2,0,1375
+R-WU-HowitzerIncendiary-SPE1,FKPitHowitzerIncendiary2,0,1376
+R-WU-Howitzer-SPE2,FKPitHowitzer3,0,1377
+R-WU-RocketBattery-SPE2,FKPitRockets3,0,1378
+R-WU-HowitzerIncendiary-SPE2,FKPitHowitzerIncendiary3,0,1379
 R-HACK-Bunker-Machinegun,FKBunkerMG,0,1346
 R-HACK-Hardpoint-Machinegun,FKHardpointMG,0,1347
 R-HACK-Site-AAHurricane,FKAASiteHurricane,0,1348
