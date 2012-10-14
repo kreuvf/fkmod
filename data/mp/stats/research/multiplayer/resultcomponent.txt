@@ -57,5 +57,7 @@ R-WU-Machinegun-CybStruc-SPE1,FK-FF-Machinegun-Cyborg2,WEAPON,0,0,1337
 R-WU-Machinegun-CybStruc-SPE2,FK-FF-Machinegun-Cyborg3,WEAPON,0,0,1337
 R-WU-Machinegun-TankVTOL-SPE1,FK-FF-Machinegun-Tank2,WEAPON,0,0,1337
 R-WU-Machinegun-TankVTOL-SPE2,FK-FF-Machinegun-Tank3,WEAPON,0,0,1337
+R-WU-Machinegun-TankVTOL-SPE1,FK-FF-Machinegun-VTOL2,WEAPON,0,0,1337
+R-WU-Machinegun-TankVTOL-SPE2,FK-FF-Machinegun-VTOL3,WEAPON,0,0,1337
 R-WU-Railgun-SPE1,FK-SF-Railgun2,WEAPON,0,0,1337
 R-WU-ScourgeMissile-SPE1,FK-MIS-ScourgeMissile2,WEAPON,0,0,1337
