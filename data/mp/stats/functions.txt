@@ -10,7 +10,7 @@ Power Upgrade,FKPowerUpgrade6,41
 Power Upgrade,FKPowerUpgrade7,48
 Power Upgrade,FKPowerUpgrade8,55
 Power Upgrade,FKPowerUpgrade9,63
-Production,FKProductionFunction,LIGHT,1000
+Production,FKProductionFunction,LIGHT,4000
 Production,BaBaFacProd,LIGHT,10
 ReArm,FKRearmFunction,10
 ReArm Upgrade,FKRearmUpgrade0,10
@@ -20,7 +20,7 @@ Repair Droid,FKRepairFunction,40
 Repair Upgrade,FKRepairFacilityUpgrade0,10
 Repair Upgrade,FKRepairFacilityUpgrade1,21
 Repair Upgrade,FKRepairFacilityUpgrade2,33
-Research,FKResearchFunction,14
+Research,FKResearchFunction,28
 Research Upgrade,FKResearchUpgrade0,10
 Research Upgrade,FKResearchUpgrade1,21
 Research Upgrade,FKResearchUpgrade2,33

@@ -1,0 +1,7 @@
+Production
+
+* Default truck needs 30 s to produce
+* Tanks should take around 1 min to produce
+* VTOLs should take around 1 min to produce, but a bit longer than tanks
+* Cyborgs should take around 30 s to produce
+
