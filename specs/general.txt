@@ -1,5 +1,5 @@
 General specifications
-- average game duration: 90 min ± 30 min (arithmetic mean ± 2 standard deviations)
+- average game duration: 45 min ± 15 min (arithmetic mean ± 2 standard deviations)
 - 1 energy per oil well per second (without upgrades)
 - trucks can build HQs in 60 s
 - starting energy: 1337
