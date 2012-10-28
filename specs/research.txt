@@ -135,7 +135,6 @@ Repair research
 - Repair Turret: 2 min
 - 3 upgrades for all repair turrets (auto-repair, mobile turret, repair facility)
 - for every upgrade values should become 10% better than they were previously (Be careful: First upgrade: +10% of base value, second upgrade: +21% of base value, third upgrade: +33,1% of base value etc. pp.)
-- research topics do not only depend on the previous research topic (become available upon finishing researching other stuff)
 - cumulated research time: approx. 15 min
 - research time for every other upgrade depends on the time of the first upgrade x; for research time this means: x + 1,1 * x + 1,1^2 * x = 15 ==> x approx. 4 min 30 s
 
