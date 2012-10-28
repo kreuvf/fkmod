@@ -2650,3 +2650,6 @@ R-HACK-Site-AAAvengerSAM3	"Avenger SAM Site (HACK)"
 R-HACK-Site-AAStormbringer3	"Stormbringer AA Site (HACK)"
 R-HACK-Bunker-GrenadeLauncher3	"Grenade Launcher Pit (HACK)"
 
+R-HACK-Autorepair	"Autorepair (HACK, YOU SHOULD NOT SEE THIS)"
+
+

@@ -460,3 +460,4 @@ R-HACK-Bunker-Cannon3,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKBunkerCa
 R-HACK-Hardpoint-Cannon3,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKHardpointCannon3,0,0,0,0,2,0,0,0,1,0,0
 R-HACK-Site-AACyclone3,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKAASiteCyclone3,0,0,0,0,2,0,0,0,1,0,0
 R-HACK-Bunker-GrenadeLauncher3,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKPitGrenadeLauncher3,0,0,0,0,2,0,0,0,1,0,0
+R-HACK-Autorepair,Level One,0,0,IMAGE_RES_SYSTEMTECH,0,0,RES_DF_HCW1,FKRepairFacility,0,0,0,0,0,0,0,0,0,1,1

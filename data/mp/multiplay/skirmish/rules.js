@@ -25,7 +25,6 @@ function eventGameInit()
 		makeComponentAvailable("FKTruck", playnum);
 		makeComponentAvailable("FKCyborgEngineer", playnum);
 		makeComponentAvailable("tracked01", playnum);
-		makeComponentAvailable("FKAutoRepair", playnum);
 	 	//makeComponentAvailable("", playnum);
 
 		enableResearch("R-W-FF-Machinegun", playnum);
@@ -42,6 +41,12 @@ function eventGameInit()
 		enableResearch("R-BU-KineticArmour1", playnum);
 		enableResearch("R-BU-ThermalArmour1", playnum);
 		enableResearch("R-Def-Wall", playnum);
+
+		// Needed for Autorepair from the start
+		// Autorepair is defined in repair.txt
+		// Autorepair is a research topic
+		// Autorepair research results in the replacement of ZNULLREPAIR with autorepair
+		completeResearch("R-HACK-Autorepair", playnum);
 
 		setPower(1337, playnum);
 
