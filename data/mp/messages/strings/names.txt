@@ -2029,7 +2029,11 @@ FKTankStart	"Cobra"
 FKTankHiThermal "Scorpion"
 FKTankHiKinetic "Panther"
 FKTankHiSpeed "Retribution"
-FKCyborg "*Cyborg*"
+FKCyborg-Cannon "*Cyborg*"
+FKCyborg-Flamethrower "*Cyborg*"
+FKCyborg-GrenadeLauncher "*Cyborg*"
+FKCyborg-Lancer "*Cyborg*"
+FKCyborg-MG "*Cyborg*"
 FKTransportBody "*Transport*"
 
 // construction.txt

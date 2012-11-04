@@ -11,6 +11,7 @@ BarbarianBuggy,BuggyMG,NULL,NULL,7
 BarbarianRKBuggy,BabaRocket,NULL,NULL,7
 BarbarianTrike,bTrikeMG,NULL,NULL,7
 FK-Cyb-Cannon,FK-SF-Cannon-Cyborg,NULL,NULL,0
+FK-Cyb-Flamethrower,FK-HOT-Flamethrower,NULL,NULL,0
 FK-Cyb-GrenadeLauncher,FK-SPL-GrenadeLauncher-Cyborg,NULL,NULL,0
 FK-Cyb-Lancer,FK-MIS-Lancer-Cyborg,NULL,NULL,0
 FK-Cyb-MG,FK-FF-Machinegun-Cyborg,NULL,NULL,0
