@@ -1,0 +1,121 @@
+diff -ur src_orig/function.cpp src/function.cpp
+--- src_orig/function.cpp	2012-08-21 00:33:08.000000000 +0200
++++ src/function.cpp	2012-11-18 16:19:55.000000000 +0100
+@@ -145,7 +145,7 @@
+ {
+ 	PRODUCTION_FUNCTION	*psFunction;
+ 	char					functionName[MAX_STR_LENGTH], bodySize[MAX_STR_LENGTH];
+-	UDWORD					productionOutput;
++	uint32_t					productionOutput;
+ 
+ 	psFunction = (PRODUCTION_FUNCTION *)malloc(sizeof(PRODUCTION_FUNCTION));
+ 	memset(psFunction, 0, sizeof(PRODUCTION_FUNCTION));
+@@ -162,7 +162,7 @@
+ 	//read the data in
+ 	functionName[0] = '\0';
+ 	bodySize[0] = '\0';
+-	sscanf(pData, "%255[^,'\r\n],%255[^,'\r\n],%d", functionName, bodySize,
++	sscanf(pData, "%255[^,'\r\n],%255[^,'\r\n],%u", functionName, bodySize,
+ 	       &productionOutput);
+ 
+ 	//allocate storage for the name
+@@ -174,15 +174,14 @@
+ 		return false;
+ 	}
+ 
+-	//check prod output < UWORD_MAX
+-	if (productionOutput < UWORD_MAX)
++	//check prod output <= UINT32_MAX
++	if (productionOutput <= UINT32_MAX)
+ 	{
+-		psFunction->productionOutput = (UWORD)productionOutput;
++		psFunction->productionOutput = (uint32_t)productionOutput;
+ 	}
+ 	else
+ 	{
+-		ASSERT(false, "loadProduction: production Output too big for %s", psFunction->pName);
+-
++		ASSERT(false, "loadProduction: production Output too big for %s, production Output set to 0", psFunction->pName);
+ 		psFunction->productionOutput = 0;
+ 	}
+ 
+@@ -960,7 +959,7 @@
+ {
+ 	FACTORY						*pFact;
+ 	PRODUCTION_FUNCTION			*pFactFunc;
+-	UDWORD						type, baseOutput, i;
++	uint32_t						type, baseOutput, i;
+ 	STRUCTURE_STATS             *psStat;
+ 
+ 	switch (psBuilding->pStructureType->type)
+@@ -999,7 +998,7 @@
+ 		}
+ 	}
+ 
+-	pFact->productionOutput = (UBYTE)(baseOutput + (pFactFunc->productionOutput *
++	pFact->productionOutput = (uint32_t)(baseOutput + (pFactFunc->productionOutput *
+ 	        asProductionUpgrade[psBuilding->player][type].modifier) / 100);
+ }
+ 
+diff -ur src_orig/functiondef.h src/functiondef.h
+--- src_orig/functiondef.h	2012-08-21 00:33:08.000000000 +0200
++++ src/functiondef.h	2012-11-11 16:03:26.000000000 +0100
+@@ -112,7 +112,7 @@
+ struct PRODUCTION_FUNCTION : public FUNCTION
+ {
+ 	BODY_SIZE capacity;      // The max size of body the factory can produce
+-	UWORD productionOutput;	 // Droid Build Points Produced Per Build Cycle
++	uint32_t productionOutput;	 // Droid Build Points Produced Per Build Cycle
+ };
+ 
+ /*To research topics available*/
+diff -ur src_orig/intdisplay.cpp src/intdisplay.cpp
+--- src_orig/intdisplay.cpp	2012-08-21 00:33:08.000000000 +0200
++++ src/intdisplay.cpp	2012-11-11 16:45:25.000000000 +0100
+@@ -271,7 +271,7 @@
+ 				{
+ 					// Started production. Set the colour of the bar to yellow.
+ 					int buildPointsTotal = FactoryGetTemplate(Manufacture)->buildPoints;
+-					int buildRate = Manufacture->timeStartHold == 0? Manufacture->productionOutput : 0;
++					uint32_t buildRate = Manufacture->timeStartHold == 0? Manufacture->productionOutput : 0;
+ 					formatTime(BarGraph, buildPointsTotal - Manufacture->buildPointsRemaining, buildPointsTotal, buildRate, _("Construction Progress"));
+ 				}
+ 				else
+diff -ur src_orig/structure.cpp src/structure.cpp
+--- src_orig/structure.cpp	2012-09-30 15:58:09.000000000 +0200
++++ src/structure.cpp	2012-11-18 15:56:18.000000000 +0100
+@@ -1700,12 +1700,11 @@
+ 
+ 				//quick check not trying to add too much
+ 				ASSERT_OR_RETURN(NULL, psBuilding->pFunctionality->factory.productionOutput +
+-					((PRODUCTION_FUNCTION*)pStructureType->asFuncList[0])->productionOutput < UBYTE_MAX,
++					((PRODUCTION_FUNCTION*)pStructureType->asFuncList[0])->productionOutput <= UINT32_MAX,
+ 					"building factory module - production Output is too big");
+ 
+ 				psBuilding->pFunctionality->factory.productionOutput += ((
+ 					PRODUCTION_FUNCTION*)pStructureType->asFuncList[0])->productionOutput;
+-
+ 				capacity = psBuilding->pFunctionality->factory.capacity;
+ 			}
+ 		}
+@@ -1928,7 +1927,7 @@
+ 			unsigned int x, y;
+ 
+ 			psFactory->capacity = (UBYTE) ((PRODUCTION_FUNCTION*)psBuilding->pStructureType->asFuncList[0])->capacity;
+-			psFactory->productionOutput = (UBYTE) ((PRODUCTION_FUNCTION*)psBuilding->pStructureType->asFuncList[0])->productionOutput;
++			psFactory->productionOutput = ((PRODUCTION_FUNCTION*)psBuilding->pStructureType->asFuncList[0])->productionOutput;
+ 			psFactory->psSubject = NULL;
+ 
+ 			// Default the secondary order - AB 22/04/99
+diff -ur src_orig/structuredef.h src/structuredef.h
+--- src_orig/structuredef.h	2012-09-30 15:58:09.000000000 +0200
++++ src/structuredef.h	2012-11-11 16:04:31.000000000 +0100
+@@ -179,7 +179,7 @@
+ 											   can produce*/
+ 	uint8_t                         productionLoops;        ///< Number of loops to perform. Not synchronised, and only meaningful for selectedPlayer.
+ 	UBYTE				loopsPerformed;		/* how many times the loop has been performed*/
+-	UBYTE				productionOutput;	/* Droid Build Points Produced Per
++	uint32_t				productionOutput;	/* Droid Build Points Produced Per
+ 											   Build Cycle*/
+ 	DROID_TEMPLATE *                psSubject;              ///< The subject the structure is working on.
+ 	DROID_TEMPLATE *                psSubjectPending;       ///< The subject the structure is going to working on. (Pending = not yet synchronised.)
