@@ -54,17 +54,17 @@ function eventGameInit()
 		
 		setPower(1337, playnum);
 		
-		setStructureLimits("A0LightFactory", 5, playnum);	// set structure limits
-		setStructureLimits("A0PowerGenerator", 8, playnum);
-		setStructureLimits("A0ResearchFacility", 5, playnum);
-		setStructureLimits("A0CommandCentre", 1, playnum);
-		setStructureLimits("A0ComDroidControl", 1, playnum);
-		setStructureLimits("A0CyborgFactory", 5, playnum);
-		setStructureLimits("A0VTolFactory1", 5, playnum);
+		setStructureLimits("FKTankFactory", 5, playnum);	// set structure limits
+		setStructureLimits("FKPowerGenerator", 8, playnum);
+		setStructureLimits("FKResearchFacility", 5, playnum);
+		setStructureLimits("FKHeadquarter", 1, playnum);
+		setStructureLimits("FKCmdRelayCentre", 1, playnum);
+		setStructureLimits("FKCyborgFactory", 5, playnum);
+		setStructureLimits("FKVTOLFactory", 5, playnum);
 	}
 	applyLimitSet();	// set limit options
 
-	const numCleanTech = 4;	// do x for clean	
+	/*const numCleanTech = 4;	// do x for clean	
 	const numBaseTech = 18; // do x for base
 	var techlist = new Array(
 		"R-Vehicle-Prop-Wheels",
@@ -167,9 +167,9 @@ function eventGameInit()
 
 	// Disabled by default
 	setMiniMap(false);
-	setDesign(false);
+	setDesign(false);*/
 	// This is the only template that should be enabled before design is allowed
-	enableTemplate("ConstructionDroid");
+	enableTemplate("ConstructorDroid");
 
 	var structlist = enumStruct(me, HQ);
 	for (var i = 0; i < structlist.length; i++)
