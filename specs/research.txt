@@ -6,10 +6,10 @@ Research
 	- research time calculations are based on the arithmetic mean of the min. and max. research speed
 
 Pricing, Research Speeds and Research Points
-- longest research duration: engine upgrades, last upgrade: 5 min 25 s * 1,05^4 = 395 s
+- longest research duration: engine upgrades, last upgrade: 5 min 25 s * 1,05^4 = 395 s; this value is not correct anymore, see below for real engine upgrades values; not removed here to allow for traceability of calculations
 - max. research cost = 450
 - research points for longest duration: 14400
-- this means: research speed is approx. 36,46 1/s for average research speed
+- this means: research speed is (14400 / 395 s) approx. 36,46 1/s for average research speed
 - r = research speed at the beginning
 - (r + r * 1,1^5) / 2 = 36,46 1/s ==> r approx. 27,93 1/s approx 28 1/s
 
@@ -76,9 +76,9 @@ Body research
 - for engine output upgrade values should become 5% better than they were previously (Be careful: First upgrade: +5% of base value, second upgrade: +10% of base value, third upgrade: +15,8% of base value etc. pp.)
 - for every other upgrade values should become 10% better than they were previously (Be careful: First upgrade: +10% of base value, second upgrade: +21% of base value, third upgrade: +33,1% of base value etc. pp.)
 - 5 upgrades for each upgrade category
-	- cumulated research time: approx. 30 min for engine upgrades, approx. 27 min for everything else
-	- research time for engine output upgrades depends on the time of the first upgrade x; for research time this means: x + 1,05 * x + 1,05^2 * x + 1,05^3 * x + 1,05^4 * x = 30 ==> x approx. 5 min 25 s
-	- research time for every other upgrade depends on the time of the first upgrade x; for research time this means: x + 1,1 * x + 1,1^2 * x + 1,1^3 * x + 1,1^4 * x = 27 ==> x approx. 4 min 25 s
+	- cumulated research time: approx. 20 min for engine upgrades, approx. 15 min for everything else
+	- research time for engine output upgrades depends on the time of the first upgrade x; for research time this means: x + 1,05 * x + 1,05^2 * x + 1,05^3 * x + 1,05^4 * x = 20 ==> x approx. 3 min 35 s
+	- research time for every other upgrade depends on the time of the first upgrade x; for research time this means: x + 1,1 * x + 1,1^2 * x + 1,1^3 * x + 1,1^4 * x = 15 ==> x approx. 2 min 25 s
 
 Research research
 - 5 upgrades
@@ -98,7 +98,7 @@ Production research
 Construction research
 - no research
 
-Structure research
+Defense Structure and Structure research
 - Command Relay Centre: 3 min
 - Repair Facility: 2,5 min
 - 2 upgrade categories
@@ -108,8 +108,6 @@ Structure research
 - 5 upgrades for each upgrade category
 	- cumulated research time: approx. 27 min
 	- research time for every other upgrade depends on the time of the first upgrade x; for research time this means: x + 1,1 * x + 1,1^2 * x + 1,1^3 * x + 1,1^4 * x = 27 ==> x approx. 4 min 25 s
-
-Defense structure research
 - Wall: 2 min
 - Bunker: 3,5 min
 - Site: 3,5 min
