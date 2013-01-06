@@ -1,0 +1,31 @@
+TODO for FKmod
+##############
+
+Stats
+-----
+* Higher production speed for certain units
+* Shorter research time for some research topics
+* Repair Cyborg is missing
+* faster repair at repair facility
+* faster repair/rearm at rearm pads
+* weaken defensive structures
+* make structure upgrades researchable
+
+Code
+----
+* (Re)implement weapon angle check
+* Artillery uses non-artillery sensors --> add different sensor types
+* Re-implement incendiary effect
+* Fix howitzer weapon sound played for every weapon
+* Debug switch to turn off data checking
+* Re-implement old way of shooting of flamethrowers
+
+Miscellaneous
+-------------
+* Transport does not work
+
+
+Last author: $Author$
+Last change: $Date$
+Revision: $Rev$
+
