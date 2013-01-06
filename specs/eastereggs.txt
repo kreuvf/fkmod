@@ -29,4 +29,6 @@ Easteregg weaponry only via debug mode.
 	* Artifacts are dropped every n time units
 	* Artifact positions and contents are announced to all players
 	* Player picking up artifacts is announced to all players; artifact get = research researched
+* Sudden Death
+	* Misuse auto-repair to make every unit which is damaged "auto-repair"; but this auto-repair will damage (-10 every 1/10 s) the unit over until it's @100% damage. MUAHAHAHAHAHAHA
 
