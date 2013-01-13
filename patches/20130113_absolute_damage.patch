@@ -1,0 +1,136 @@
+diff '--unified=3' -r src/display.cpp src_new/display.cpp
+--- src/display.cpp	2012-10-08 15:21:10.000000000 +0200
++++ src_new/display.cpp	2013-01-13 17:25:14.000000000 +0100
+@@ -1750,9 +1750,10 @@
+ 			if(!psDroid->selected)
+ 			{
+ 				CONPRINTF(ConsoleString, (ConsoleString,
+-					_("%s - Damage %d%% - Experience %.1f, %s"),
++					_("%s - Body Points: %d of %d - Experience %.1f, %s"),
+ 					droidGetName(psDroid),
+-					100 - clip(PERCENT(psDroid->body,psDroid->originalBody), 0, 100),
++					psDroid->body,
++					psDroid->originalBody,
+ 					psDroid->experience/65536.f, _(getDroidLevelName(psDroid))));
+ 
+ 				FeedbackOrderGiven();
+@@ -1766,9 +1767,10 @@
+ 	else // Clicked on allied unit with no other possible actions
+ 	{
+ 		CONPRINTF(ConsoleString, (ConsoleString,
+-								  _("%s - Allied - Damage %d%% - Experience %d, %s"),
++								  _("%s - Allied - Body Points: %d of %d - Experience %d, %s"),
+ 								  droidGetName(psDroid),
+-								  100 - clip(PERCENT(psDroid->body,psDroid->originalBody), 0, 100),
++								  psDroid->body,
++								  psDroid->originalBody,
+ 								  psDroid->experience/65536, getDroidLevelName(psDroid)));
+ 
+ 		FeedbackOrderGiven();
+@@ -2247,9 +2249,10 @@
+ 							if(!psDroid->selected)
+ 							{
+ 								CONPRINTF(ConsoleString, (ConsoleString,
+-									_("%s - Damage %d%% - Experience %.1f, %s"),
++									_("%s - Body Points: %d of %d - Experience %.1f, %s"),
+ 									droidGetName(psDroid),
+-									100 - clip(PERCENT(psDroid->body,psDroid->originalBody), 0, 100),
++									psDroid->body,
++									psDroid->originalBody,
+ 									psDroid->experience/65536.f, _(getDroidLevelName(psDroid))));
+ 
+ 								FeedbackOrderGiven();
+diff '--unified=3' -r src/structure.cpp src_new/structure.cpp
+--- src/structure.cpp	2012-10-08 15:21:12.000000000 +0200
++++ src_new/structure.cpp	2013-01-13 17:46:46.000000000 +0100
+@@ -5622,8 +5621,8 @@
+ 		{
+ 			unsigned int assigned_droids = countAssignedDroids(psStructure);
+ 
+-			CONPRINTF(ConsoleString, (ConsoleString, ngettext("%s - %u Unit assigned - Damage %3.0f%%", "%s - %u Units assigned - Damage %3.0f%%", assigned_droids),
+-					  getStatName(psStructure->pStructureType), assigned_droids, getStructureDamage(psStructure) * (100.f/65536.f)));
++			CONPRINTF(ConsoleString, (ConsoleString, ngettext("%s - %u Unit assigned - Body Points: %d of %d", "%s - %u Units assigned - Body Points: %d of %d", assigned_droids),
++					  getStatName(psStructure->pStructureType), assigned_droids, psStructure->body, structureBodyBuilt(psStructure)));
+ 		}
+ 		break;
+ 	case REF_DEFENSE:
+@@ -5647,13 +5646,13 @@
+ 		{
+ 			unsigned int assigned_droids = countAssignedDroids(psStructure);
+ 
+-			CONPRINTF(ConsoleString, (ConsoleString, ngettext("%s - %u Unit assigned - Damage %3.0f%%", "%s - %u Units assigned - Damage %3.0f%%", assigned_droids),
+-				getStatName(psStructure->pStructureType), assigned_droids, getStructureDamage(psStructure) * (100.f/65536.f)));
++			CONPRINTF(ConsoleString, (ConsoleString, ngettext("%s - %u Unit assigned - Body Points: %d of %d", "%s - %u Units assigned - Body Points: %d of %d", assigned_droids),
++				getStatName(psStructure->pStructureType), assigned_droids, psStructure->body, structureBodyBuilt(psStructure)));
+ 		}
+ 		else
+ 		{
+-			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Damage %3.0f%%"),
+-									  getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f/65536.f)));
++			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Body Points: %d of %d"),
++									  getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
+ 		}
+ 		break;
+ 	case REF_REPAIR_FACILITY:
+@@ -5666,7 +5665,7 @@
+ 		else
+ #endif
+ 		{
+-			CONPRINTF(ConsoleString, (ConsoleString, "%s - Damage %3.0f%%", getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f/65536.f)));
++			CONPRINTF(ConsoleString, (ConsoleString, "%s - Body Points: %d of %d", getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
+ 		}
+ 		break;
+ 	case REF_RESOURCE_EXTRACTOR:
+@@ -5679,7 +5678,7 @@
+ 		else
+ #endif
+ 		{
+-			CONPRINTF(ConsoleString, (ConsoleString, "%s - Damage %3.0f%%", getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f/65536.f)));
++			CONPRINTF(ConsoleString, (ConsoleString, "%s - Body Points: %d of %d", getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
+ 		}
+ 		break;
+ 	case REF_POWER_GEN:
+@@ -5702,8 +5701,8 @@
+ 		else
+ #endif
+ 		{
+-			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Connected %u of %u - Damage %3.0f%%"),
+-					  getStatName(psStructure->pStructureType), numConnected, NUM_POWER_MODULES, getStructureDamage(psStructure) * (100.f/65536.f)));
++			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Connected %u of %u - Body Points: %d of %d"),
++					  getStatName(psStructure->pStructureType), numConnected, NUM_POWER_MODULES, psStructure->body, structureBodyBuilt(psStructure)));
+ 		}
+ 		break;
+ 	case REF_CYBORG_FACTORY:
+@@ -5720,8 +5719,8 @@
+ 		else
+ #endif
+ 		{
+-			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Damage %3.0f%%"),
+-					  getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f/65536.f)));
++			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Body Points: %d of %d"),
++					  getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
+ 		}
+ 		break;
+ 	case REF_RESEARCH:
+@@ -5735,8 +5734,8 @@
+ 		else
+ #endif
+ 		{
+-			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Damage %3.0f%%"),
+-					  getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f/65536.f)));
++			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Body Points: %d of %d"),
++					  getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
+ 		}
+ 		break;
+ 	default:
+@@ -5749,8 +5748,8 @@
+ 		else
+ #endif
+ 		{
+-			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Damage %3.0f%%"),
+-					  getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f/65536.f)));
++			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Body Points: %d of %d"),
++					  getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
+ 		}
+ 		break;
+ 	}
