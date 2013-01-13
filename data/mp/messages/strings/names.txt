@@ -2034,6 +2034,8 @@ FKCyborg-Flamethrower "*Cyborg*"
 FKCyborg-GrenadeLauncher "*Cyborg*"
 FKCyborg-Lancer "*Cyborg*"
 FKCyborg-MG "*Cyborg*"
+FKCyborg-Engineer "*Cyborg*"
+FKCyborg-Repair "*Cyborg*"
 FKTransportBody "*Transport*"
 
 // construction.txt
@@ -2047,7 +2049,6 @@ V-Tol-CybTrans "Cyborg Transport Propulsion"
 FKAutoRepair "*Auto Repair*"
 FKCyborgRepair "*Cyborg Repair*"
 FKTankRepair "Repair Turret"
-FKRepFacRepair "*Repair Facility Repair*"
 
 // sensor.txt
 FKSurveillanceSensor	"Surveillance Sensor"
@@ -2116,6 +2117,8 @@ FK-Cyb-GrenadeLauncher "Grenadier"
 FK-Cyb-Lancer "Lancer"
 FK-Cyb-MG "Machinegunner"
 FK-Cyb-Flamethrower	"Flamer"
+FK-Cyb-Engineer "Engineer"
+FK-Cyb-Repair "Mechanic"
 
 // weapons.txt
 FK-ART-Howitzer	"Howitzer"
