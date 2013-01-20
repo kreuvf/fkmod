@@ -40,6 +40,8 @@ function eventGameInit()
 		enableResearch("R-BU-Engine1", playnum);
 		enableResearch("R-BU-KineticArmour1", playnum);
 		enableResearch("R-BU-ThermalArmour1", playnum);
+		enableResearch("R-StU-Armours1", playnum);
+		enableResearch("R-StU-BodyPoints1", playnum);
 		enableResearch("R-Def-Wall", playnum);
 
 		// Needed for Autorepair from the start

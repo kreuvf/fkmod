@@ -7,7 +7,6 @@ Stats
 * Shorter research time for some research topics
 * faster repair/rearm at rearm pads
 * weaken defensive structures
-* make structure upgrades researchable
 * Construction cyborg neither available at start nor researchable
 * Repair cyborg not available through research
 * Bombs throw infos when research is displayed:
