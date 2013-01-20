@@ -16,6 +16,7 @@ Stats
 	info    |07:58:11: [displayComponentButton:419] No ComponentIMD
 * Remove one of two truck templates available from start
 * Adapt weaponmodifier.txt to our needs
+* Adapt structuremodifier.txt to our needs
 
 Code
 ----
