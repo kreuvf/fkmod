@@ -17,6 +17,8 @@ Stats
 * Remove one of two truck templates available from start
 * Adapt weaponmodifier.txt to our needs
 * Adapt structuremodifier.txt to our needs
+* Effect of structure armour and bodypoint upgrades swapped?
+* Lancer upgrade names for accuracy/damage swapped?
 
 Code
 ----
