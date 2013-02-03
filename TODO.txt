@@ -5,7 +5,7 @@ Stats
 -----
 * Higher production speed for certain units
 * Shorter research time for some research topics
-* faster repair/rearm at rearm pads: needs fix for use of REARM_FACTOR and VTOL_REPAIR_FACTOR in structure.cpp
+* faster repair
 * weaken defensive structures
 * Construction cyborg neither available at start nor researchable
 * Repair cyborg not available through research
