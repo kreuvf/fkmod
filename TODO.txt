@@ -5,7 +5,7 @@ Stats
 -----
 * Higher production speed for certain units
 * Shorter research time for some research topics
-* faster repair
+* faster repair at rearming stations: needs fix in structure.cpp:aiUpdateStructure (lines 2629 to 3518) and probably lots of other places; rearming speed is not taken into consideration (lines 3489 to 3492)!
 * weaken defensive structures
 * Construction cyborg neither available at start nor researchable
 * Repair cyborg not available through research
