@@ -148,6 +148,8 @@ Starting Technologies (= first technologies you can research)
 - R-BU-Engine1
 - R-BU-KineticArmour1
 - R-BU-ThermalArmour1
+- R-StU-Armours1
+- R-StU-BodyPoints1
 - R-Def-Wall
 
 Basic Technologies (= technologies you start with = you researched before game start)
