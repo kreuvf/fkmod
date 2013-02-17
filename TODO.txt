@@ -23,7 +23,6 @@ Code
 * (Re)implement weapon angle check
 * Artillery uses non-artillery sensors --> add different sensor types
 * Re-implement incendiary effect
-* Fix howitzer weapon sound played for every weapon
 * Debug switch to turn off data checking
 * Re-implement old way of shooting of flamethrowers
 * faster repair at rearming stations: needs fix in structure.cpp:aiUpdateStructure (lines 2629 to 3518) and probably lots of other places; rearming speed is not taken into consideration (lines 3489 to 3492)!
