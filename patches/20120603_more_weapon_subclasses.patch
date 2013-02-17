@@ -67,7 +67,7 @@ diff -ur src_alt/projectile.cpp src_neu/projectile.cpp
  				/* GJ HACK: move howitzer sound with shell */
 -				if ( psStats->weaponSubClass == WSC_HOWITZERS )
 +				/* Kreuvf: Added HOTHOWITZER */
-+				if ( (psStats->weaponSubClass == WSC_HOWITZERS) || (psStats->weaponSubClass = WSC_HOTHOWITZER) )
++				if ( (psStats->weaponSubClass == WSC_HOWITZERS) || (psStats->weaponSubClass == WSC_HOTHOWITZER) )
  				{
  					audio_PlayObjDynamicTrack(psProj, ID_SOUND_HOWITZ_FLIGHT, NULL);
  				}
