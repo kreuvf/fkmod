@@ -1,4 +1,4 @@
-Research ID,-0,Left icon,Major tech,Right icon,IMD,-0,MsgName,StructName,CompName,CompType,ResearchPoints,keyTopic,Prereqs,Function results,Structure prereqs,Redundant structures,Structure results,Redundant components,Component results
+Research ID,-,Left icon,Major tech,Right icon,IMD,-,MsgName,StructName,CompName,CompType,ResearchPoints,keyTopic,Prereqs,Function results,Structure prereqs,Redundant structures,Structure results,Redundant components,Component results
 R-B-HiKin,Level One,0,0,IMAGE_RES_DROIDTECH,0,0,RES_DF_HCW1,0,FKTankHiKinetic,BODY,5469,0,1,0,0,0,0,0,1
 R-B-HiSpeed,Level One,0,0,IMAGE_RES_DROIDTECH,0,0,RES_DF_HCW1,0,FKTankHiSpeed,BODY,5469,0,1,0,0,0,0,0,1
 R-B-HiTherm,Level One,0,0,IMAGE_RES_DROIDTECH,0,0,RES_DF_HCW1,0,FKTankHiThermal,BODY,5469,0,1,0,0,0,0,0,1
