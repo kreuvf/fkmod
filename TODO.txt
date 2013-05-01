@@ -13,7 +13,6 @@ Stats
 	info    |07:58:11: [getComponentRadius:128] No ComponentIMD!
 	info    |07:58:11: [getComponentRadius:128] Assert in Warzone: component.cpp:128 (ComponentIMD), last script event: '<none>'
 	info    |07:58:11: [displayComponentButton:419] No ComponentIMD
-* Remove one of two truck templates available from start
 
 Code
 ----
