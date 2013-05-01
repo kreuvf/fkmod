@@ -11,6 +11,7 @@ Stats
 	info    |07:58:11: [getComponentRadius:128] No ComponentIMD!
 	info    |07:58:11: [getComponentRadius:128] Assert in Warzone: component.cpp:128 (ComponentIMD), last script event: '<none>'
 	info    |07:58:11: [displayComponentButton:419] No ComponentIMD
+	* Fix needs to include changes to more weapon subclasses patch since in component.cpp an exception is made for WSC_BOMB (we use WSC_HOTBOMB, WSC_HEAVYBOMB, WSC_CLUSTERBOMB only!) --> exception not applied --> warning message
 
 Code
 ----
