@@ -4,6 +4,7 @@ R-B-HiTherm,FKTankHiThermal,BODY,0,0,1337
 R-P-Hover,hover01,PROPULSION,0,0,1337
 R-P-VTOL,V-Tol,PROPULSION,0,0,1337
 R-Repair,FKTankRepair,REPAIR,0,0,1337
+R-Repair,FKCyborg-Repair,BODY,0,0,1337
 R-SensorSurveillance,FKSurveillanceSensor,SENSOR,0,0,1337
 R-St-CmdRelayCentre,CommandBrain01,BRAIN,0,0,1337
 R-U-CyborgTransport,TransporterBody,BODY,0,0,1337

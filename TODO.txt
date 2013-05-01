@@ -6,8 +6,6 @@ Stats
 * Higher production speed for certain units
 * Shorter research time for some research topics
 * weaken defensive structures
-* Construction cyborg neither available at start nor researchable
-* Repair cyborg not available through research
 * Bombs throw infos when research is displayed:
 	info    |07:58:11: [displayComponentButton:419] Assert in Warzone: component.cpp:419 (ComponentIMD), last script event: '<none>'
 	info    |07:58:11: [getComponentRadius:128] No ComponentIMD!

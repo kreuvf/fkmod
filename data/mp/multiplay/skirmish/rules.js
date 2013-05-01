@@ -23,7 +23,7 @@ function eventGameInit()
 		// We need to enable these in order for scripts to be able to generate their templates.
 		makeComponentAvailable("FKTankStart", playnum);
 		makeComponentAvailable("FKTruck", playnum);
-		makeComponentAvailable("FKCyborgEngineer", playnum);
+		makeComponentAvailable("FKCyborg-Engineer", playnum);
 		makeComponentAvailable("tracked01", playnum);
 	 	//makeComponentAvailable("", playnum);
 
