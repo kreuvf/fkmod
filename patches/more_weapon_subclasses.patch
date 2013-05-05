@@ -1,6 +1,29 @@
-diff -ur src_alt/oprint.cpp src_neu/oprint.cpp
---- src_alt/oprint.cpp	2012-05-04 22:00:25.000000000 +0200
-+++ src_neu/oprint.cpp	2012-06-03 15:46:27.000000000 +0200
+diff '--unified=3' src_orig/component.cpp src_mod/component.cpp
+--- src_orig/component.cpp	2013-01-15 00:54:07.000000000 +0100
++++ src_mod/component.cpp	2013-05-05 15:17:44.778482310 +0200
+@@ -123,6 +123,9 @@
+ 	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
+ 	if (StatIsComponent(psComponent) != COMP_WEAPON
+ 		|| (((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_BOMB
++			&& ((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_CLUSTERBOMB
++			&& ((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_HEAVYBOMB
++			&& ((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_HOTBOMB
+ 			&& ((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_EMP))
+ 	{
+ 		ASSERT(ComponentIMD, "No ComponentIMD!");
+@@ -414,6 +417,9 @@
+ 	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
+ 	if (StatIsComponent(Stat) != COMP_WEAPON
+ 		|| (((WEAPON_STATS *)Stat)->weaponSubClass != WSC_BOMB
++			&& ((WEAPON_STATS *)Stat)->weaponSubClass != WSC_CLUSTERBOMB
++			&& ((WEAPON_STATS *)Stat)->weaponSubClass != WSC_HEAVYBOMB
++			&& ((WEAPON_STATS *)Stat)->weaponSubClass != WSC_HOTBOMB
+ 			&& ((WEAPON_STATS *)Stat)->weaponSubClass != WSC_EMP))
+ 	{
+ 		ASSERT(ComponentIMD, "No ComponentIMD");
+diff '--unified=3' src_orig/oprint.cpp src_mod/oprint.cpp
+--- src_orig/oprint.cpp	2013-01-15 00:54:07.000000000 +0100
++++ src_mod/oprint.cpp	2013-05-05 15:18:01.382482527 +0200
 @@ -152,6 +152,56 @@
  	case WSC_EMP:
  		pWSC = "WSC_EMP";
@@ -58,9 +81,9 @@ diff -ur src_alt/oprint.cpp src_neu/oprint.cpp
  	default:
  		pWSC = "UNKNOWN SUB CLASS";
  		break;
-diff -ur src_alt/projectile.cpp src_neu/projectile.cpp
---- src_alt/projectile.cpp	2012-05-04 22:00:25.000000000 +0200
-+++ src_neu/projectile.cpp	2012-06-03 15:58:58.000000000 +0200
+diff '--unified=3' src_orig/projectile.cpp src_mod/projectile.cpp
+--- src_orig/projectile.cpp	2013-01-15 00:54:07.000000000 +0100
++++ src_mod/projectile.cpp	2013-05-05 15:18:01.386482527 +0200
 @@ -538,7 +538,8 @@
  				/* firing sound emitted from source */
  				audio_PlayObjDynamicTrack(psProj->psSource, psStats->iAudioFireID, NULL);
@@ -108,9 +131,9 @@ diff -ur src_alt/projectile.cpp src_neu/projectile.cpp
  		case WSC_LAS_SAT:
  			distanceExtensionFactor = 150;
  			break;
-diff -ur src_alt/stats.cpp src_neu/stats.cpp
---- src_alt/stats.cpp	2012-05-04 22:00:25.000000000 +0200
-+++ src_neu/stats.cpp	2012-06-03 15:41:55.000000000 +0200
+diff '--unified=3' src_orig/stats.cpp src_mod/stats.cpp
+--- src_orig/stats.cpp	2013-01-15 00:54:07.000000000 +0100
++++ src_mod/stats.cpp	2013-05-05 15:18:01.386482527 +0200
 @@ -2876,6 +2876,72 @@
  	{
  		*wclass = WSC_EMP;
@@ -184,9 +207,9 @@ diff -ur src_alt/stats.cpp src_neu/stats.cpp
          else
          {
  	    ASSERT(!"Invalid weapon sub class", "Invalid weapon sub class: %s", subClass);
-diff -ur src_alt/statsdef.h src_neu/statsdef.h
---- src_alt/statsdef.h	2012-05-04 22:00:25.000000000 +0200
-+++ src_neu/statsdef.h	2012-06-03 15:41:59.000000000 +0200
+diff '--unified=3' src_orig/statsdef.h src_mod/statsdef.h
+--- src_orig/statsdef.h	2013-01-15 00:54:07.000000000 +0100
++++ src_mod/statsdef.h	2013-05-05 15:18:01.386482527 +0200
 @@ -278,6 +278,24 @@
  	WSC_BOMB,
  	WSC_COMMAND,
