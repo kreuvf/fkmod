@@ -3,9 +3,14 @@ TODO for FKmod
 
 Stats
 -----
-* Higher production speed for certain units
+* Higher production speed for certain units, especially cyborgs
 * Shorter research time for some research topics
 * weaken defensive structures
+* HP bug with HP > HP_max?
+* Scourge Missile upgrade names swapped?
+* Rocket Battery upgrade names swapped?
+* Cannon cyborg WAY too slow
+* Artilery: more damage vs. walls, less damage vs. cyborgs
 
 Code
 ----
