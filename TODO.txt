@@ -8,6 +8,8 @@ Stats
 * weaken defensive structures
 * HP bug with HP > HP_max?
 * Fix truck template in all original maps to the cool new way of doing it and rename our truck template accordingly
+* Engineer slow
+* Use T2, T3 for debug purposes: T2: everything which adds a new component, T3: everything!
 
 Code
 ----
