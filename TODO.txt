@@ -8,7 +8,6 @@ Stats
 * weaken defensive structures
 * HP bug with HP > HP_max?
 * Artilery: more damage vs. walls, less damage vs. cyborgs
-* Ripple Rockets Pit is called Ripple Rockets Site
 
 Code
 ----
