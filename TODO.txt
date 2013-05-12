@@ -7,7 +7,6 @@ Stats
 * Shorter research time for some research topics
 * weaken defensive structures
 * HP bug with HP > HP_max?
-* Artilery: more damage vs. walls, less damage vs. cyborgs
 
 Code
 ----
