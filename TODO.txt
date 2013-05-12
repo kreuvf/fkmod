@@ -7,8 +7,6 @@ Stats
 * Shorter research time for some research topics
 * weaken defensive structures
 * HP bug with HP > HP_max?
-* Scourge Missile upgrade names swapped?
-* Rocket Battery upgrade names swapped?
 * Artilery: more damage vs. walls, less damage vs. cyborgs
 * Ripple Rockets Pit is called Ripple Rockets Site
 
