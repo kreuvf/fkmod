@@ -7,6 +7,7 @@ Stats
 * Shorter research time for some research topics
 * weaken defensive structures
 * HP bug with HP > HP_max?
+* Fix truck template in all original maps to the cool new way of doing it and rename our truck template accordingly
 
 Code
 ----
