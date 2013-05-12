@@ -9,7 +9,6 @@ Stats
 * HP bug with HP > HP_max?
 * Scourge Missile upgrade names swapped?
 * Rocket Battery upgrade names swapped?
-* Cannon cyborg WAY too slow
 * Artilery: more damage vs. walls, less damage vs. cyborgs
 * Ripple Rockets Pit is called Ripple Rockets Site
 
