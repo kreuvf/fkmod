@@ -1,7 +1,7 @@
 // technology auto enabler.
 
 public	int		numCamTech;
-public	RESEARCHSTAT	camTech[897];
+public	RESEARCHSTAT	camTech[462];
 
 event setTechPower(CALL_GAMEINIT)
 {

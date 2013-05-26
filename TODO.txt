@@ -6,7 +6,7 @@ Stats
 * Higher production speed for certain units, especially cyborgs
 * Shorter research time for some research topics
 * weaken defensive structures
-* Use T2, T3 for debug purposes: T2: everything which adds a new component, T3: everything!
+* Use base, advanced base for debug purposes: base: everything which adds a new component, advanced base: everything!
 
 Code
 ----
