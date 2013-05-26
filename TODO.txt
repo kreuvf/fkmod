@@ -6,7 +6,6 @@ Stats
 * Higher production speed for certain units, especially cyborgs
 * Shorter research time for some research topics
 * weaken defensive structures
-* HP bug with HP > HP_max?
 * Fix truck template in all original maps to the cool new way of doing it and rename our truck template accordingly
 * Engineer slow
 * Use T2, T3 for debug purposes: T2: everything which adds a new component, T3: everything!
@@ -18,6 +17,7 @@ Code
 * Re-implement incendiary effect
 * Debug switch to turn off data checking
 * faster repair at rearming stations: needs fix in structure.cpp:aiUpdateStructure (lines 2629 to 3518) and probably lots of other places; rearming speed is not taken into consideration (lines 3489 to 3492)!
+* HP bug with HP > HP_max?
 
 Miscellaneous
 -------------
