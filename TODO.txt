@@ -6,7 +6,6 @@ Stats
 * Higher production speed for certain units, especially cyborgs
 * Shorter research time for some research topics
 * weaken defensive structures
-* Use base, advanced base for debug purposes: base: everything which adds a new component, advanced base: everything!
 * Add function checkEndConditions to rules.js
 
 Code
