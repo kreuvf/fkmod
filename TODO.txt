@@ -5,7 +5,6 @@ Stats
 -----
 * Higher production speed for certain units, especially cyborgs
 * Shorter research time for some research topics
-* weaken defensive structures: increase Anti-Tank weapon modifier vs. Hard from 75 to 100
 * Cyborg MG overpowered: increase firepause from 10 to 15, decrease Anti-Personnel vs. Tracked from 75 to 50
 * no corner walls
 * Add function checkEndConditions to rules.js
