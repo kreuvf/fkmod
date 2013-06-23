@@ -7,6 +7,12 @@ Stats
 * Shorter research time for some research topics
 * no corner walls
 * Add function checkEndConditions to rules.js
+* Message when VTOL MG is firing:
+info    |04:29:06: [proj_InFlightFunc:739] Bad WSC_NUM_WEAPON_SUBCLASS.
+info    |04:29:06: [proj_InFlightFunc:739] Assert in Warzone: projectile.cpp:739 (false), last script event: '<none>'
+* Anti-Air weapons need to be stronger (at least Cyclone)
+* Heavy Bombs need to be a bit stronger
+* Armour of defensive structures still a little bit too high
 
 Code
 ----
