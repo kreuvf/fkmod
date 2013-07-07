@@ -111,6 +111,7 @@ diff '--unified=3' src_orig/projectile.cpp src_mod/projectile.cpp
  			distanceExtensionFactor = 150;
  			break;
  		case WSC_AAGUN: // No extended distance
++		case WSC_AACANNON:
 +		case WSC_GEN0:
 +		case WSC_GEN1:
 +		case WSC_GEN2:
