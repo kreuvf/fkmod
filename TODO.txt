@@ -12,7 +12,6 @@ Stats
 * Armour of defensive structures still a little bit too high
 * js_enableTemplate: Template ConstructorDroid not found; maybe due to rules.js line
 * AA weapon warhead types need to be checked
-* Anti Tank modifier vs. Lift too low
 
 Code
 ----
