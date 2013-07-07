@@ -11,7 +11,6 @@ Stats
 * Heavy Bombs need to be a bit stronger
 * Armour of defensive structures still a little bit too high
 * js_enableTemplate: Template ConstructorDroid not found; maybe due to rules.js line
-* AA weapon warhead types need to be checked
 
 Code
 ----
