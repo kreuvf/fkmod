@@ -8,7 +8,6 @@ Stats
 * no corner walls
 * Add function checkEndConditions to rules.js
 * Anti-Air weapons need to be stronger (at least Cyclone)
-* Heavy Bombs need to be a bit stronger
 * js_enableTemplate: Template ConstructorDroid not found; maybe due to rules.js line
 
 Code
