@@ -574,7 +574,7 @@ function eventGameInit()
 // END CONDITIONS
 function checkEndConditions()
 {
-	var factories = enumStruct(me, "A0LightFactory").length + enumStruct(me, "A0CyborgFactory").length;
+	var factories = enumStruct(me, "FKTankFactory").length + enumStruct(me, "FKCyborgFactory").length + enumStruct(me, "FKVTOLFactory").length;
 	var droids = enumDroid(me).length;
 
 	// Losing Conditions
@@ -589,7 +589,7 @@ function checkEndConditions()
 			{
 				if (playnum != me && allianceExistsBetween(me, playnum))
 				{
-					factories = enumStruct(playnum, "A0LightFactory").length + enumStruct(playnum, "A0CyborgFactory").length;
+					factories = enumStruct(playnum, "FKTankFactory").length + enumStruct(playnum, "FKCyborgFactory").length + enumStruct(playnum, "FKVTOLFactory").length;
 					droids = enumDroid(playnum).length;
 					if (droids > 0 || factories > 0)
 					{
@@ -616,7 +616,7 @@ function checkEndConditions()
 	{
 		if (playnum != me && !allianceExistsBetween(me, playnum))	// checking enemy player
 		{
-			factories = enumStruct(playnum, "A0LightFactory").length + enumStruct(playnum, "A0CyborgFactory").length; // nope
+			factories = enumStruct(playnum, "FKTankFactory").length + enumStruct(playnum, "FKCyborgFactory").length + enumStruct(playnum, "FKVTOLFactory").length; // nope
 			droids = enumDroid(playnum).length;
 			if (droids > 0 || factories > 0)
 			{
