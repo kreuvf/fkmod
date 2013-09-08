@@ -5,7 +5,6 @@ Stats
 -----
 * Higher production speed for certain units, especially cyborgs
 * Shorter research time for some research topics
-* js_enableTemplate: Template ConstructorDroid not found; maybe due to rules.js line
 
 Code
 ----

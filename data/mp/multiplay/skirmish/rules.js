@@ -556,9 +556,6 @@ function eventGameInit()
 		}
 	}
 
-	// This is the only template that should be enabled before design is allowed
-	enableTemplate("ConstructorDroid");
-
 	var structlist = enumStruct(me, HQ);
 	for (var i = 0; i < structlist.length; i++)
 	{
