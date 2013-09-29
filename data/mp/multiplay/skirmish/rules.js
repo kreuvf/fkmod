@@ -13,8 +13,7 @@ function eventGameInit()
 	hackNetOff();
 	for (var playnum = 0; playnum < maxPlayers; playnum++)
 	{
-		enableStructure("FKHeadquarter", playnum);		// make structures available to build
-		enableStructure("A0ResourceExtractor", playnum);
+		enableStructure("A0ResourceExtractor", playnum);		// make structures available to build
 		enableStructure("FKPowerGenerator", playnum);
 		enableStructure("FKResearchFacility", playnum);
 		enableStructure("FKTankFactory", playnum);
@@ -59,8 +58,6 @@ function eventGameInit()
 		setStructureLimits("FKTankFactory", 5, playnum);	// set structure limits
 		setStructureLimits("FKPowerGenerator", 8, playnum);
 		setStructureLimits("FKResearchFacility", 5, playnum);
-		setStructureLimits("FKHeadquarter", 1, playnum);
-		setStructureLimits("FKCmdRelayCentre", 1, playnum);
 		setStructureLimits("FKCyborgFactory", 5, playnum);
 		setStructureLimits("FKVTOLFactory", 5, playnum);
 	}
@@ -90,7 +87,7 @@ function eventGameInit()
 		"R-SensorCB",
 		"R-SensorSurveillance",
 		"R-SensorVTOL",
-		"R-St-CmdRelayCentre",
+		"R-Commander",
 		"R-St-RepairFacility",
 		"R-U-CyborgTransport",
 		"R-W-ART-Howitzer",

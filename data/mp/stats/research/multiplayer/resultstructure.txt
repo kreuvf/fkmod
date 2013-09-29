@@ -1,6 +1,5 @@
 R-P-VTOL,FKVTOLFactory,0,1337
 R-P-VTOL,FKRearmPad,0,1338
-R-St-CmdRelayCentre,FKCmdRelayCentre,0,1339
 R-St-RepairFacility,FKRepairFacility,0,1340
 R-Def-Wall,FKWall,0,1341
 R-Def-Wall,FKWallCorner,0,1342

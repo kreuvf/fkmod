@@ -5,7 +5,6 @@ Stats
 -----
 * Higher production speed for certain units, especially cyborgs
 * Shorter research time for some research topics
-* HQ = new command building (kick out ugly command building)
 * Mini-map and design always active
 
 Code
