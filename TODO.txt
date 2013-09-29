@@ -5,7 +5,6 @@ Stats
 -----
 * Higher production speed for certain units, especially cyborgs
 * Shorter research time for some research topics
-* Mini-map and design always active
 
 Code
 ----

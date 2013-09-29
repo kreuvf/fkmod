@@ -646,20 +646,3 @@ function eventAttacked(victimObj, attackerObj)
 	}
 }
 
-function eventStructureBuilt(struct)
-{
-	if (struct.player == selectedPlayer && struct.type == STRUCTURE && struct.stattype == HQ)
-	{
-		setMiniMap(true); // show minimap
-		setDesign(true); // permit designs
-	}
-}
-
-function eventDestroyed(victim)
-{
-	if (victim.player == selectedPlayer && victim.type == STRUCTURE && victim.stattype == HQ)
-	{
-		setMiniMap(false); // hide minimap if HQ is destroyed
-		setDesign(false); // and disallow design
-	}
-}
