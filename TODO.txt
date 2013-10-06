@@ -5,6 +5,9 @@ Stats
 -----
 * Higher production speed for certain units, especially cyborgs
 * Shorter research time for some research topics
+* Cyborg Cannon replacement/new template not working
+* Indicate special version of weapons in Cyborg name
+* Increase Cannon Cyborg price from 69 to 79
 
 Code
 ----
