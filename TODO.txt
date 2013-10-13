@@ -7,7 +7,6 @@ Stats
 * Shorter research time for some research topics
 * Cyborg Cannon replacement/new template not working
 * Indicate special version of weapons in Cyborg name
-* Increase Cannon Cyborg price from 69 to 79
 
 Code
 ----
@@ -23,6 +22,7 @@ Miscellaneous
 -------------
 * Transport does not work
 * Add CITATION file (http://www.software.ac.uk/blog/2013-09-02-encouraging-citation-software-introducing-citation-files)
+* Surveillance Tower: Sensor is floating on top of tower
 
 
 Last author: $Author$
