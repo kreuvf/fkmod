@@ -7,6 +7,9 @@ Stats
 * Shorter research time for some research topics
 * Cyborg Cannon replacement/new template not working
 * Indicate special version of weapons in Cyborg name
+* Designable cyborgs for debug purposes
+* Combine structure and defensive structure researches 
+* Fix ROF research effects: implemented effect = reduction of reload time; wanted effect = increase in shots per time
 
 Code
 ----
@@ -17,6 +20,7 @@ Code
 * faster repair at rearming stations: needs fix in structure.cpp:aiUpdateStructure (lines 2629 to 3518) and probably lots of other places; rearming speed is not taken into consideration (lines 3489 to 3492)!
 * HP bug with HP > HP_max?
 * Disable bungee effect when changing viewport via mini-map
+* Update physics such that hover tanks with high speeds use brakes before curves
 
 Miscellaneous
 -------------
