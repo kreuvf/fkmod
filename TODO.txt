@@ -10,6 +10,8 @@ Stats
 * Designable cyborgs for debug purposes
 * Combine structure and defensive structure researches 
 * Fix ROF research effects: implemented effect = reduction of reload time; wanted effect = increase in shots per time
+* Cluster Bombs: damage too low
+* Grenade Launcher: increase Mk 1 splash radius from 192 to 256, Mk 2 splash radius from 256 to 288, leave Mk 3 splash radius at 320
 
 Code
 ----
@@ -21,12 +23,18 @@ Code
 * HP bug with HP > HP_max?
 * Disable bungee effect when changing viewport via mini-map
 * Update physics such that hover tanks with high speeds use brakes before curves
+* VTOL Strike Tower Micro AI is stupid
+	* sends VTOLs back, when the target is down, although other targets still exist
+	* does not pick target with highest possible damage, e. g. not center points in groups, if splash damage is available
+* Unit micro AI is stupid
+	* Walls are not attacked at will
 
 Miscellaneous
 -------------
 * Transport does not work
 * Add CITATION file (http://www.software.ac.uk/blog/2013-09-02-encouraging-citation-software-introducing-citation-files)
 * Surveillance Tower: Sensor is floating on top of tower
+* Propulsion changing: Changing the propulsion of an existing design does not change until weapon is changed afterwards
 
 
 Last author: $Author$
