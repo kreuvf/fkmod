@@ -54,7 +54,7 @@ R-WU-Howitzer-SPE1,FK-ART-Howitzer2,WEAPON,0,0,1337
 R-WU-Howitzer-SPE2,FK-ART-Howitzer3,WEAPON,0,0,1337
 R-WU-Lancer-SPE1,FK-MIS-Lancer-VTOL2,WEAPON,0,0,1337
 R-WU-Lancer-SPE1,FK-MIS-Lancer-Cyborg2,WEAPON,0,0,1337
-R-WU-Laser-SPE1,FK-HOT-Laser,WEAPON,0,0,1337
+R-WU-Laser-SPE1,FK-HOT-Laser2,WEAPON,0,0,1337
 R-WU-Machinegun-CybStruc-SPE1,FK-FF-Machinegun-Cyborg2,WEAPON,0,0,1337
 R-WU-Machinegun-CybStruc-SPE2,FK-FF-Machinegun-Cyborg3,WEAPON,0,0,1337
 R-WU-Machinegun-TankVTOL-SPE1,FK-FF-Machinegun-Tank2,WEAPON,0,0,1337
