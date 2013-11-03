@@ -61,7 +61,7 @@ Incendiary Bomb	Burn effect radius, mass
 Laser	penetration
 Stormbringer AA	penetration
 Grenade Launcher	2 x splash radius
-Cluster Bombs	Splash radius, mass
+Cluster Bombs	Splash radius, number of attack runs
 
 Body research
 - body: 2,5 min
