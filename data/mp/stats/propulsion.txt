@@ -3,6 +3,6 @@ V-Tol-CybTrans,Level All,0,0,0,0,1,0,DPVTOL.PIE,Lift,1337,0
 V-Tol,Level All,130,100,50,0,1,50,DPVTOL.PIE,Lift,1337,1
 tracked01,Level All,130,100,130,1,1,130,PRLRTRK1.PIE,Tracked,1337,1
 hover01,Level All,100,100,70,1,1,100,PRLHOV1.PIE,Hover,1337,1
-CyborgLegs,Level All,0,30,30,1,1,30,0,Legged,1337,0
+CyborgLegs,Level All,0,30,30,1,1,30,0,Legged,1337,1
 BaBaProp,Level All,0,15,10,1,5,1,0,Wheeled,200,0
 BaBaLegs,Level All,0,15,10,1,5,1,0,Legged,200,0

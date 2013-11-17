@@ -7,7 +7,6 @@ Stats
 * Shorter research time for some research topics
 * Cyborg Cannon replacement/new template not working
 * Indicate special version of weapons in Cyborg name
-* Designable cyborgs for debug purposes
 * Combine structure and defensive structure researches 
 * Fix ROF research effects: implemented effect = reduction of reload time; wanted effect = increase in shots per time
 
