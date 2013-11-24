@@ -11,8 +11,17 @@ BarbarianBuggy,BuggyMG,NULL,NULL,7
 BarbarianRKBuggy,BabaRocket,NULL,NULL,7
 BarbarianTrike,bTrikeMG,NULL,NULL,7
 FK-Cyb-Cannon,FK-SF-Cannon-Cyborg,NULL,NULL,0
+FK-Cyb-Cannon2,FK-SF-Cannon-Cyborg2,NULL,NULL,0
+FK-Cyb-Cannon3,FK-SF-Cannon-Cyborg3,NULL,NULL,0
 FK-Cyb-Flamethrower,FK-HOT-Flamethrower,NULL,NULL,0
+FK-Cyb-Flamethrower2,FK-HOT-Flamethrower2,NULL,NULL,0
+FK-Cyb-Flamethrower3,FK-HOT-Flamethrower3,NULL,NULL,0
 FK-Cyb-GrenadeLauncher,FK-SPL-GrenadeLauncher-Cyborg,NULL,NULL,0
+FK-Cyb-GrenadeLauncher2,FK-SPL-GrenadeLauncher-Cyborg2,NULL,NULL,0
+FK-Cyb-GrenadeLauncher3,FK-SPL-GrenadeLauncher-Cyborg3,NULL,NULL,0
 FK-Cyb-Lancer,FK-MIS-Lancer-Cyborg,NULL,NULL,0
+FK-Cyb-Lancer2,FK-MIS-Lancer-Cyborg2,NULL,NULL,0
 FK-Cyb-MG,FK-FF-Machinegun-Cyborg,NULL,NULL,0
+FK-Cyb-MG2,FK-FF-Machinegun-Cyborg2,NULL,NULL,0
+FK-Cyb-MG3,FK-FF-Machinegun-Cyborg3,NULL,NULL,0
 ZNULLDESIGN,ZNULLWEAPON,ZNULLWEAPON,ZNULLWEAPON,0
