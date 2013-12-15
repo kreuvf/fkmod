@@ -8,7 +8,6 @@ Stats
 * Obsolete cyborg templates are not removed
 * Combine structure and defensive structure researches 
 * Fix ROF research effects: implemented effect = reduction of reload time; wanted effect = increase in shots per time
-* Look at Rocket Battery damage vs. defensive structures
 * Make incendiary effect work (like in 3.1.x)
 
 Code
