@@ -10,12 +10,12 @@ Stats
 * Fix ROF research effects: implemented effect = reduction of reload time; wanted effect = increase in shots per time
 * Look at Lancer research requirements
 * Look at Rocket Battery damage vs. defensive structures
+* Make incendiary effect work (like in 3.1.x)
 
 Code
 ----
 * (Re)implement weapon angle check
 * Artillery uses non-artillery sensors --> add different sensor types
-* Re-implement incendiary effect
 * Debug switch to turn off data checking
 * faster repair at rearming stations: needs fix in structure.cpp:aiUpdateStructure (lines 2629 to 3518) and probably lots of other places; rearming speed is not taken into consideration (lines 3489 to 3492)!
 * HP bug with HP > HP_max?
