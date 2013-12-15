@@ -128,7 +128,6 @@ R-W-MIS-AAAvengerSAM,R-W-MIS-ScourgeMissile,1430
 R-W-SF-AACyclone,R-W-SF-Railgun,1433
 R-W-SF-BombHeavy,R-W-SF-Railgun,1434
 R-W-SF-BombHeavy,R-P-VTOL,1435
-R-W-SF-Cannon,R-W-SF-Railgun,1436
 R-W-SPL-BombCluster,R-P-VTOL,1437
 R-W-SPL-BombCluster,R-W-SF-Cannon,1438
 R-W-SPL-GrenadeLauncher,R-W-SF-Cannon,1439
