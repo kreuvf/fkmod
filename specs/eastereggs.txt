@@ -7,6 +7,7 @@ Easteregg weaponry only via debug mode.
 * normal scavenger shooting weapon
 * th-y weapon
 * Scorch Missile ;X
+* Source Missile
 * Atomic Bomb
 * Fingolfin Weapon
 * Kreuvf Weapon
