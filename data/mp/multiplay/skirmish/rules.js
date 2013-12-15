@@ -30,6 +30,7 @@ function eventGameInit()
 		enableResearch("R-W-FF-Machinegun", playnum);
 		enableResearch("R-W-SF-Railgun", playnum);
 		enableResearch("R-W-MIS-ScourgeMissile", playnum);
+		enableResearch("R-W-MIS-Lancer", playnum);
 		enableResearch("R-W-HOT-Flamethrower", playnum);
 		enableResearch("R-W-HOT-Laser", playnum);
 		enableResearch("R-Res1", playnum);

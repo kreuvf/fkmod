@@ -125,8 +125,6 @@ R-W-HOT-BombThermite,R-P-VTOL,1427
 R-W-HOT-HowitzerIncendiary,R-W-ART-Howitzer,1428
 R-W-HOT-HowitzerIncendiary,R-W-HOT-Flamethrower,1429
 R-W-MIS-AAAvengerSAM,R-W-MIS-ScourgeMissile,1430
-R-W-MIS-Lancer,R-W-MIS-ScourgeMissile,1431
-R-W-MIS-Lancer,R-P-VTOL,1432
 R-W-SF-AACyclone,R-W-SF-Railgun,1433
 R-W-SF-BombHeavy,R-W-SF-Railgun,1434
 R-W-SF-BombHeavy,R-P-VTOL,1435
