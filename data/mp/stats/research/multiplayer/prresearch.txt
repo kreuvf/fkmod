@@ -20,16 +20,6 @@ R-BU-ThermalArmour5,R-BU-ThermalArmour4,1356
 R-Def-Bunker,R-Def-Wall,1357
 R-Def-Hardpoint,R-Def-Wall,1358
 R-Def-Site,R-Def-Wall,1359
-R-DfU-Armours1,R-Def-Wall,1848
-R-DfU-Armours2,R-DfU-Armours1,1360
-R-DfU-Armours3,R-DfU-Armours2,1361
-R-DfU-Armours4,R-DfU-Armours3,1362
-R-DfU-Armours5,R-DfU-Armours4,1363
-R-DfU-BodyPoints1,R-Def-Wall,1849
-R-DfU-BodyPoints2,R-DfU-BodyPoints1,1364
-R-DfU-BodyPoints3,R-DfU-BodyPoints2,1365
-R-DfU-BodyPoints4,R-DfU-BodyPoints3,1366
-R-DfU-BodyPoints5,R-DfU-BodyPoints4,1367
 R-HACK-Bunker-Cannon,R-Def-Bunker,1368
 R-HACK-Bunker-Cannon,R-W-SF-Cannon,1369
 R-HACK-Bunker-GrenadeLauncher,R-Def-Bunker,1370
