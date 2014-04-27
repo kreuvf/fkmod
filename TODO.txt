@@ -5,7 +5,6 @@ Stats
 -----
 * Higher production speed for certain units, especially cyborgs
 * Shorter research time for some research topics
-* Fix ROF research effects: implemented effect = reduction of reload time; wanted effect = increase in shots per time
 * Make incendiary effect work (like in 3.1.x)
 
 Code
