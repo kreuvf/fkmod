@@ -5,7 +5,6 @@ Stats
 -----
 * Higher production speed for certain units, especially cyborgs
 * Shorter research time for some research topics
-* Make incendiary effect work (like in 3.1.x)
 
 Code
 ----
@@ -21,6 +20,7 @@ Code
 	* does not pick target with highest possible damage, e. g. not center points in groups, if splash damage is available
 * Unit micro AI is stupid
 	* Walls are not attacked at will
+* Make incendiary effects apply to units
 
 Miscellaneous
 -------------
