@@ -4,7 +4,6 @@ TODO for FKmod
 Stats
 -----
 * Higher production speed for certain units, especially cyborgs
-* Heavy Bomb useless
 * VTOLs are too expensive
 
 Code
