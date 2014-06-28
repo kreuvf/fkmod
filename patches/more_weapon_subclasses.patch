@@ -94,7 +94,7 @@ diff '--unified=3' src_orig/projectile.cpp src_mod/projectile.cpp
  				{
  					audio_PlayObjDynamicTrack(psProj, ID_SOUND_HOWITZ_FLIGHT, NULL);
  				}
-@@ -697,14 +698,28 @@
+@@ -697,14 +698,29 @@
  			break;
  		case WSC_CANNON:
  		case WSC_BOMB:
@@ -124,7 +124,7 @@ diff '--unified=3' src_orig/projectile.cpp src_mod/projectile.cpp
  			distanceExtensionFactor = 100;
  			break;
  		case WSC_ROCKET:
-@@ -715,6 +730,7 @@
+@@ -715,6 +731,7 @@
  		case WSC_COUNTER:
  		case WSC_MORTARS:
  		case WSC_HOWITZERS:
