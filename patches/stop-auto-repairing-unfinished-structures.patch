@@ -1,17 +1,17 @@
---- src/structure.cpp	2014-05-24 21:19:29.827443465 +0200
-+++ src/structure_old.cpp	2014-05-24 21:17:38.223442003 +0200
-@@ -3789,12 +3789,11 @@
+--- src/structure_old.cpp	2014-05-24 21:17:38.223442003 +0200
++++ src/structure.cpp	2014-05-24 21:19:29.827443465 +0200
+@@ -3789,11 +3789,12 @@
  	}
  	else
  	{
--		//if selfrepair has been researched and the structure is not currently built
--		//on then check the health level of the
-+		//if selfrepair has been researched then check the health level of the
++		//if selfrepair has been researched and the structure is not currently built
++		//on then check the health level of the
+-		//if selfrepair has been researched then check the health level of the
  		//structure once resistance is fully up
  		iPointsRequired = structureBody(psBuilding);
  		if (selfRepairEnabled(psBuilding->player) && (psBuilding->body < (SWORD)
--			iPointsRequired) && (psBuilding->status != SS_BEING_BUILT))
-+			iPointsRequired))
++			iPointsRequired) && (psBuilding->status != SS_BEING_BUILT))
+-			iPointsRequired))
  		{
  			//start the self repair off
  			if (psBuilding->lastResistance == ACTION_START_TIME)
