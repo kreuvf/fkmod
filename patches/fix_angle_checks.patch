@@ -1,0 +1,87 @@
+diff --git a/src/action.cpp b/src/action.cpp
+index 7941530..0218e6d 100644
+--- a/src/action.cpp
++++ b/src/action.cpp
+@@ -43,6 +43,8 @@
+ #include "scripttabs.h"
+ #include "transporter.h"
+ #include "mapgrid.h"
++#include <math.h>
++#include "console.h"
+ 
+ /* attack run distance */
+ #define	VTOL_ATTACK_LENGTH		1000
+@@ -157,7 +159,7 @@ const char* getDroidActionName(DROID_ACTION action)
+ /* Check if a target is at correct range to attack */
+ static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
+ {
+-	SDWORD			dx, dy, radSq, rangeSq, longRange;
++    SDWORD			dx, dy, dz, radSq, rangeSq, longRange, angle, minEle, maxEle;
+ 	WEAPON_STATS	*psStats;
+ 	int compIndex;
+ 
+@@ -220,10 +222,19 @@ static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_s
+ 		rangeSq = psStats->minRange * psStats->minRange;
+ 		if ( radSq >= rangeSq || !proj_Direct( psStats ) )
+ 		{
+-			return true;
++            /*check angle */
++            dz = (SDWORD)psDroid->pos.z - (SDWORD)psObj->pos.z;
++            angle = atan(dz*dz/radSq) * 180 / M_PI;
++            minEle = psStats->minElevation;
++            maxEle = psStats->maxElevation;
++            if(minEle <= angle && angle <= maxEle) {
++                return true;
++            }
+ 		}
+ 	}
+ 
++
++
+ 	return false;
+ }
+ 
+@@ -231,7 +242,8 @@ static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_s
+ // check if a target is within weapon range
+ bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
+ {
+-	SDWORD			dx, dy, radSq, rangeSq, longRange;
++    SDWORD			dx, dy, dz, radSq, rangeSq, longRange, minEle, maxEle;
++    double angle;
+ 	WEAPON_STATS	*psStats;
+ 	int compIndex;
+ 
+@@ -261,7 +273,14 @@ bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
+ 		rangeSq = psStats->minRange * psStats->minRange;
+ 		if ( radSq >= rangeSq || !proj_Direct( psStats ) )
+ 		{
+-			return true;
++            /*check angle */
++            dz = (SDWORD)psObj->pos.z - (SDWORD)psDroid->pos.z;
++            angle = atan(dz/sqrt(radSq)) * 180 / M_PI;
++            minEle = psStats->minElevation;
++            maxEle = psStats->maxElevation;
++            if(minEle <= angle && angle <= maxEle) {
++                return true;
++            }
+ 		}
+ 	}
+ 
+@@ -1042,7 +1061,7 @@ void actionUpdateDroid(DROID *psDroid)
+ 					{
+ 						BASE_OBJECT* psActionTarget = psDroid->psActionTarget[i];
+ 						// is the turret aligned with the target?
+-						if (actionTargetTurret(psDroid, psActionTarget, &psDroid->asWeaps[i]))
++                        if (actionTargetTurret(psDroid, psActionTarget, &psDroid->asWeaps[i]) && actionInAttackRange(psDroid, psActionTarget, i))
+ 						{
+ 							// In range - fire !!!
+ 							combFire(&psDroid->asWeaps[i], psDroid, psActionTarget, i);
+@@ -1477,7 +1496,7 @@ void actionUpdateDroid(DROID *psDroid)
+ 				//unless its a module!
+ 				if (IsStatExpansionModule(psStructStats))
+ 				{
+-					syncDebug("Reached build target: module");
++                    syncDebug("Reached build target: module");
+ 					debug( LOG_NEVER, "DACTION_MOVETOBUILD: setUpBuildModule");
+ 					setUpBuildModule(psDroid);
+ 				}
