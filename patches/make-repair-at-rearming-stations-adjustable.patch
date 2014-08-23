@@ -1,0 +1,459 @@
+From aea67caec0b28c6d73399d4df4178630dae4cf20 Mon Sep 17 00:00:00 2001
+From: Kreuvf <kreuvf@warzone2100.de>
+Date: Sat, 19 Jul 2014 20:56:36 +0200
+Subject: [PATCH 01/10] * Add new field 'power' for repair abilities to rearm
+ pads (analogous to repair facility)
+
+---
+ src/structuredef.h |    1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/structuredef.h b/src/structuredef.h
+index 6c971d9..4cc24d7 100644
+--- a/src/structuredef.h
++++ b/src/structuredef.h
+@@ -222,6 +222,7 @@ struct REPAIR_FACILITY
+ 
+ struct REARM_PAD
+ {
++	UDWORD                          power;                  // Repair rate. Nothing to do with power.
+ 	UDWORD                          reArmPoints;            /* rearm points per cycle */
+ 	UDWORD                          timeStarted;            /* Time reArm started on current object */
+ 	BASE_OBJECT                     *psObj;                 /* Object being rearmed */
+-- 
+1.7.9.5
+
+
+From a9d4662fee73b7b18e40929fda0e934ca6928b17 Mon Sep 17 00:00:00 2001
+From: Kreuvf <kreuvf@warzone2100.de>
+Date: Sat, 26 Jul 2014 21:08:12 +0200
+Subject: [PATCH 02/10] * Decouple rearm pad repair speed from rearming * Use
+ repair facility like approach * Note: Uses hardcoded
+ value to be replaced by value read in from text file
+ in later commits
+
+---
+ src/structure.cpp |   38 +++++++++++++++++++++++++++++---------
+ 1 file changed, 29 insertions(+), 9 deletions(-)
+
+diff --git a/src/structure.cpp b/src/structure.cpp
+index 876c55f..acdae80 100644
+--- a/src/structure.cpp
++++ b/src/structure.cpp
+@@ -3412,6 +3412,9 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
+ 		{
+ 			REARM_PAD	*psReArmPad = &psStructure->pFunctionality->rearmPad;
+ 			UDWORD pointsAlreadyAdded;
++			
++			//Tentatively hardcoded value
++			psReArmPad->power = 100;
+ 
+ 			psDroid = (DROID *)psChosenObj;
+ 			ASSERT_OR_RETURN( , psDroid != NULL, "invalid droid pointer");
+@@ -3481,20 +3484,37 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
+ 						}
+ 					}
+ 				}
++								
+ 				/* do repairing */
+ 				if (psDroid->body < psDroid->originalBody)
+ 				{
+-					// Do not "simplify" this formula.
+-					// It is written this way to prevent rounding errors.
+-					pointsToAdd =  VTOL_REPAIR_FACTOR * (100+asReArmUpgrade[psStructure->player].modifier) * (gameTime -
+-					               psReArmPad->timeStarted) / (GAME_TICKS_PER_SEC * 100);
+-					pointsAlreadyAdded =  VTOL_REPAIR_FACTOR * (100+asReArmUpgrade[psStructure->player].modifier) * (psReArmPad->timeLastUpdated -
+-					               psReArmPad->timeStarted) / (GAME_TICKS_PER_SEC * 100);
+-
+-					if ((pointsToAdd - pointsAlreadyAdded) > 0)
++				
++					//if in multiPlayer, and a Transporter - make sure its on the ground before repairing
++					if (bMultiPlayer && (psDroid->droidType == DROID_TRANSPORTER || psDroid->droidType == DROID_SUPERTRANSPORTER))
++					{
++						if (!(psDroid->sMove.Status == MOVEINACTIVE &&
++							psDroid->sMove.iVertSpeed == 0))
++						{
++							objTrace(psStructure->id, "Waiting for transporter to land");
++							return;
++						}
++					}
++
++					//don't do anything if the resistance is low in multiplayer
++					if (bMultiPlayer)
+ 					{
+-						psDroid->body += (pointsToAdd - pointsAlreadyAdded);
++						if (psStructure->resistance < (SWORD)structureResistance(psStructure->
++							pStructureType, psStructure->player))
++						{
++							objTrace(psStructure->id, "Resistance too low for repair");
++							return;
++						}
+ 					}
++
++					// FIXME: duplicate code, make repairing cost power again
++					/* do repairing */
++					psDroid->body += gameTimeAdjustedAverage(psReArmPad->power);
++
+ 					if (psDroid->body >= psDroid->originalBody)
+ 					{
+ 						/* set droid points to max */
+-- 
+1.7.9.5
+
+
+From 583903b4ac629ea3e3358174aee04c44e65d400d Mon Sep 17 00:00:00 2001
+From: Kreuvf <kreuvf@warzone2100.de>
+Date: Sun, 3 Aug 2014 20:25:44 +0200
+Subject: [PATCH 03/10] * Rename 'power' for rearm pad repair points to
+ 'repairPoints', we do not need to carry over the
+ weird naming scheme of our ancestors * Make
+ repairPoints uint32_t throughout its usage
+
+---
+ src/functiondef.h  |    1 +
+ src/structure.cpp  |    4 ++--
+ src/structuredef.h |    2 +-
+ 3 files changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/src/functiondef.h b/src/functiondef.h
+index 244b661..f5058b6 100644
+--- a/src/functiondef.h
++++ b/src/functiondef.h
+@@ -125,6 +125,7 @@ struct RESEARCH_FUNCTION : public FUNCTION
+ /*To rearm VTOLs*/
+ struct REARM_FUNCTION : public FUNCTION
+ {
++	uint32_t		repairPoints;	/*The number of repair points added per cycle*/
+ 	UDWORD			reArmPoints;	/*The number of reArm points added per cycle*/
+ };
+ 
+diff --git a/src/structure.cpp b/src/structure.cpp
+index acdae80..da2cf3b 100644
+--- a/src/structure.cpp
++++ b/src/structure.cpp
+@@ -3414,7 +3414,7 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
+ 			UDWORD pointsAlreadyAdded;
+ 			
+ 			//Tentatively hardcoded value
+-			psReArmPad->power = 100;
++			psReArmPad->repairPoints = 100;
+ 
+ 			psDroid = (DROID *)psChosenObj;
+ 			ASSERT_OR_RETURN( , psDroid != NULL, "invalid droid pointer");
+@@ -3513,7 +3513,7 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
+ 
+ 					// FIXME: duplicate code, make repairing cost power again
+ 					/* do repairing */
+-					psDroid->body += gameTimeAdjustedAverage(psReArmPad->power);
++					psDroid->body += gameTimeAdjustedAverage(psReArmPad->repairPoints);
+ 
+ 					if (psDroid->body >= psDroid->originalBody)
+ 					{
+diff --git a/src/structuredef.h b/src/structuredef.h
+index 4cc24d7..67d36f7 100644
+--- a/src/structuredef.h
++++ b/src/structuredef.h
+@@ -222,7 +222,7 @@ struct REPAIR_FACILITY
+ 
+ struct REARM_PAD
+ {
+-	UDWORD                          power;                  // Repair rate. Nothing to do with power.
++	uint32_t                        repairPoints;           /* repair points per cycle */
+ 	UDWORD                          reArmPoints;            /* rearm points per cycle */
+ 	UDWORD                          timeStarted;            /* Time reArm started on current object */
+ 	BASE_OBJECT                     *psObj;                 /* Object being rearmed */
+-- 
+1.7.9.5
+
+
+From fd822eea827ab5e1b3aafaa74b6950017e839a3f Mon Sep 17 00:00:00 2001
+From: Kreuvf <kreuvf@warzone2100.de>
+Date: Sun, 3 Aug 2014 22:30:36 +0200
+Subject: [PATCH 04/10] * Add value for repairPoints to stats file and read it
+ in
+
+---
+ src/function.cpp            |    1 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/function.cpp b/src/function.cpp
+index 74ed9e0..169f095 100644
+--- a/src/function.cpp
++++ b/src/function.cpp
+@@ -294,7 +294,7 @@ static bool loadReArmFunction(const char *pData)
+ 
+ 	//read the data in
+ 	functionName[0] = '\0';
+-	sscanf(pData, "%255[^,'\r\n],%d", functionName, &psFunction->reArmPoints);
++	sscanf(pData, "%255[^,'\r\n],%d,%d", functionName, &psFunction->reArmPoints, &psFunction->repairPoints);
+ 
+ 	//allocate storage for the name
+ 	storeName((FUNCTION *)psFunction, functionName);
+-- 
+1.7.9.5
+
+
+From 63794486ba448926f95c4c0d05e1951711f1a546 Mon Sep 17 00:00:00 2001
+From: Kreuvf <kreuvf@warzone2100.de>
+Date: Sun, 3 Aug 2014 22:38:36 +0200
+Subject: [PATCH 05/10] * Add missing link to use the value in the stats file
+ for the in-game repair points value * Fixed an old
+ bug due to wrong casting
+
+---
+ src/structure.cpp |    7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+
+diff --git a/src/structure.cpp b/src/structure.cpp
+index da2cf3b..e39bbb7 100644
+--- a/src/structure.cpp
++++ b/src/structure.cpp
+@@ -2051,8 +2051,8 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
+ 		{
+ 			REARM_PAD* psReArmPad = &psBuilding->pFunctionality->rearmPad;
+ 
+-			psReArmPad->reArmPoints = ((REARM_PAD *)psBuilding->pStructureType->asFuncList[0])->reArmPoints;
+-
++			psReArmPad->reArmPoints = ((REARM_FUNCTION *)psBuilding->pStructureType->asFuncList[0])->reArmPoints;
++			psReArmPad->repairPoints = ((REARM_FUNCTION *)psBuilding->pStructureType->asFuncList[0])->repairPoints;
+ 			// Take advantage of upgrades
+ 			structureReArmUpgrade(psBuilding);
+ 			break;
+@@ -3413,9 +3413,6 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
+ 			REARM_PAD	*psReArmPad = &psStructure->pFunctionality->rearmPad;
+ 			UDWORD pointsAlreadyAdded;
+ 			
+-			//Tentatively hardcoded value
+-			psReArmPad->repairPoints = 100;
+-
+ 			psDroid = (DROID *)psChosenObj;
+ 			ASSERT_OR_RETURN( , psDroid != NULL, "invalid droid pointer");
+ 			ASSERT_OR_RETURN( , isVtolDroid(psDroid), "invalid droid type");
+-- 
+1.7.9.5
+
+
+From 1451f8aac554eb05fa762fb047020e540274047f Mon Sep 17 00:00:00 2001
+From: Kreuvf <kreuvf@warzone2100.de>
+Date: Sun, 3 Aug 2014 22:55:31 +0200
+Subject: [PATCH 06/10] * Add ini stuff for rearm pad repair ability
+
+---
+ src/game.cpp |    2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/game.cpp b/src/game.cpp
+index 85e1cae..7dbb1f5 100644
+--- a/src/game.cpp
++++ b/src/game.cpp
+@@ -4904,6 +4904,7 @@ static bool loadSaveStructure2(const char *pFileName, STRUCTURE **ppList)
+ 			break;
+ 		case REF_REARM_PAD:
+ 			psReArmPad = ((REARM_PAD *)psStructure->pFunctionality);
++			psReArmPad->repairPoints = ini.value("Rearm/repairPoints", psReArmPad->repairPoints).toInt();
+ 			psReArmPad->reArmPoints = ini.value("Rearm/reArmPoints", psReArmPad->reArmPoints).toInt();
+ 			psReArmPad->timeStarted = ini.value("Rearm/timeStarted", psReArmPad->timeStarted).toInt();
+ 			psReArmPad->timeLastUpdated = ini.value("Rearm/timeLastUpdated", psReArmPad->timeLastUpdated).toInt();
+@@ -5145,6 +5146,7 @@ bool writeStructFile(const char *pFileName)
+ 				else if (psCurr->pStructureType->type == REF_REARM_PAD)
+ 				{
+ 					REARM_PAD *psReArmPad = ((REARM_PAD *)psCurr->pFunctionality);
++					ini.setValue("Rearm/repairPoints", psReArmPad->repairPoints);
+ 					ini.setValue("Rearm/reArmPoints", psReArmPad->reArmPoints);
+ 					ini.setValue("Rearm/timeStarted", psReArmPad->timeStarted);
+ 					ini.setValue("Rearm/timeLastUpdated", psReArmPad->timeLastUpdated);
+-- 
+1.7.9.5
+
+
+From bfa9c66d52285cf337d2ca7cdb634bcbbe8a62f5 Mon Sep 17 00:00:00 2001
+From: Kreuvf <kreuvf@warzone2100.de>
+Date: Sat, 9 Aug 2014 22:26:05 +0200
+Subject: [PATCH 07/10] * Repair VTOLs standing on a rearm pad without
+ additional player interaction
+
+---
+ src/structure.cpp |   14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+diff --git a/src/structure.cpp b/src/structure.cpp
+index e39bbb7..6bdfd6f 100644
+--- a/src/structure.cpp
++++ b/src/structure.cpp
+@@ -3066,7 +3066,21 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
+ 					{
+ 						psChosenObj = psDroid;
+ 					}
++					if (isVtolDroid(psDroid))
++					{
++						// for VTOLs just sitting on rearm pads, we repair them if they are damaged
++						// Check if the units is on the pad or not (within coordinates of center ± 64)
++						// Note: This is NOT the same as 'distance to center is <= 64'!
++						xdiff = abs((SDWORD)psDroid->pos.x - (SDWORD)psStructure->pos.x);
++						ydiff = abs((SDWORD)psDroid->pos.y - (SDWORD)psStructure->pos.y);
++						if (xdiff <= 64 && ydiff <= 64 && psDroid->body < psDroid->originalBody)
++						{
++							psChosenObj = psDroid;
++						}
++					}
+ 				}
++			
++				
+ 				if (!psChosenObj) // None available? Try allies.
+ 				{
+ 					for (i=0; i<MAX_PLAYERS; i++)
+-- 
+1.7.9.5
+
+
+From 9fa7de4ed3f5a4d1816bbed62bb178349a98dd8b Mon Sep 17 00:00:00 2001
+From: Kreuvf <kreuvf@warzone2100.de>
+Date: Sat, 23 Aug 2014 21:40:40 +0200
+Subject: [PATCH 08/10] * Make rearm pad's repair speed benefit from repair
+ facility upgrades
+
+---
+ src/function.cpp  |   16 ++++++++++++++++
+ src/function.h    |    1 +
+ src/research.cpp  |   10 ++++++++++
+ src/structure.cpp |    1 +
+ 4 files changed, 28 insertions(+)
+
+diff --git a/src/function.cpp b/src/function.cpp
+index 169f095..c86fda7 100644
+--- a/src/function.cpp
++++ b/src/function.cpp
+@@ -1046,6 +1046,22 @@ void structureReArmUpgrade(STRUCTURE *psBuilding)
+ 	        asReArmUpgrade[psBuilding->player].modifier) / 100;
+ }
+ 
++void structureReArmRepairUpgrade(STRUCTURE *psBuilding)
++{
++	REARM_PAD					*pPad = &psBuilding->pFunctionality->rearmPad;
++	REPAIR_DROID_FUNCTION				*pRepairFunc;
++
++	//upgrade the repair points of a rearm pad
++	ASSERT(pPad != NULL, "structureReArmUpgrade: invalid ReArm pointer");
++
++	pRepairFunc = (REPAIR_DROID_FUNCTION *)psBuilding->pStructureType->asFuncList[0];
++	ASSERT(pRepairFunc != NULL,
++	       "structureRepairUpgrade: invalid Function pointer");
++	
++	pPad->repairPoints = pRepairFunc->repairPoints + (pRepairFunc->repairPoints *
++	        asRepairFacUpgrade[psBuilding->player].modifier) / 100;
++}
++
+ void structurePowerUpgrade(STRUCTURE *psBuilding)
+ {
+ 	POWER_GEN		*pPowerGen = &psBuilding->pFunctionality->powerGenerator;
+diff --git a/src/function.h b/src/function.h
+index 977b73d..ab26691 100644
+--- a/src/function.h
++++ b/src/function.h
+@@ -49,6 +49,7 @@ extern void structurePowerUpgrade(STRUCTURE *psBuilding);
+ extern void structureRepairUpgrade(STRUCTURE *psBuilding);
+ extern void structureSensorUpgrade(STRUCTURE *psBuilding);
+ extern void structureReArmUpgrade(STRUCTURE *psBuilding);
++extern void structureReArmRepairUpgrade(STRUCTURE *psBuilding);
+ extern void structureECMUpgrade(STRUCTURE *psBuilding);
+ extern void sensorUpgrade(FUNCTION *pFunction, UBYTE player);
+ extern void repairUpgrade(FUNCTION *pFunction, UBYTE player);
+diff --git a/src/research.cpp b/src/research.cpp
+index 4a6327e..651232e 100644
+--- a/src/research.cpp
++++ b/src/research.cpp
+@@ -938,6 +938,11 @@ void researchResult(UDWORD researchIndex, UBYTE player, bool bDisplay, STRUCTURE
+ 						// upgrade the repair points
+ 						structureRepairUpgrade(psCurr);
+ 					}
++					if (psCurr->pStructureType->type == REF_REARM_PAD)
++					{
++						// upgrade the repair points of a rearm pad
++						structureReArmRepairUpgrade(psCurr);
++					}
+ 				}
+ 				// and the mission structure
+ 				for (psCurr = mission.apsStructLists[player]; psCurr != NULL; psCurr = psCurr->psNext)
+@@ -947,6 +952,11 @@ void researchResult(UDWORD researchIndex, UBYTE player, bool bDisplay, STRUCTURE
+ 						// upgrade the repair points
+ 						structureRepairUpgrade(psCurr);
+ 					}
++					if (psCurr->pStructureType->type == REF_REARM_PAD)
++					{
++						// upgrade the repair points of a rearm pad
++						structureReArmRepairUpgrade(psCurr);
++					}
+ 				}
+ 				break;
+ 			case(WEAPON_UPGRADE_TYPE):
+diff --git a/src/structure.cpp b/src/structure.cpp
+index 6bdfd6f..fec1231 100644
+--- a/src/structure.cpp
++++ b/src/structure.cpp
+@@ -2055,6 +2055,7 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
+ 			psReArmPad->repairPoints = ((REARM_FUNCTION *)psBuilding->pStructureType->asFuncList[0])->repairPoints;
+ 			// Take advantage of upgrades
+ 			structureReArmUpgrade(psBuilding);
++			structureReArmRepairUpgrade(psBuilding);
+ 			break;
+ 		}
+ 
+-- 
+1.7.9.5
+
+
+From a266dfad70ea41242feac3d7e26b13235d922a34 Mon Sep 17 00:00:00 2001
+From: Kreuvf <kreuvf@warzone2100.de>
+Date: Sat, 23 Aug 2014 21:47:13 +0200
+Subject: [PATCH 09/10] * Fix bug introduced in
+ bfa9c66d52285cf337d2ca7cdb634bcbbe8a62f5 	*
+ Damaged VTOLs above a rearm pad got their orders
+ changed to "repair here" 	* Additional check for
+ z coordinate fixes this behaviour
+
+---
+ src/structure.cpp |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/structure.cpp b/src/structure.cpp
+index fec1231..e0f5870 100644
+--- a/src/structure.cpp
++++ b/src/structure.cpp
+@@ -3074,7 +3074,7 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
+ 						// Note: This is NOT the same as 'distance to center is <= 64'!
+ 						xdiff = abs((SDWORD)psDroid->pos.x - (SDWORD)psStructure->pos.x);
+ 						ydiff = abs((SDWORD)psDroid->pos.y - (SDWORD)psStructure->pos.y);
+-						if (xdiff <= 64 && ydiff <= 64 && psDroid->body < psDroid->originalBody)
++						if (xdiff <= 64 && ydiff <= 64 && psDroid->pos.z == psStructure->pos.z && psDroid->body < psDroid->originalBody)
+ 						{
+ 							psChosenObj = psDroid;
+ 						}
+-- 
+1.7.9.5
+
+
+From 77b9c18751094c248fd485224a000826ed3c59cc Mon Sep 17 00:00:00 2001
+From: Kreuvf <kreuvf@warzone2100.de>
+Date: Sat, 23 Aug 2014 22:00:57 +0200
+Subject: [PATCH 10/10] * Remove no longer needed constant VTOL_REPAIR_FACTOR
+
+---
+ src/structure.cpp |    2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/src/structure.cpp b/src/structure.cpp
+index e0f5870..691a624 100644
+--- a/src/structure.cpp
++++ b/src/structure.cpp
+@@ -104,8 +104,6 @@
+ 
+ //used to calculate the time required for rearming
+ #define REARM_FACTOR                10
+-//used to calculate the time  required for repairing
+-#define VTOL_REPAIR_FACTOR          10
+ 
+ //Value is stored for easy access to this structure stat
+ UDWORD			factoryModuleStat;
+-- 
+1.7.9.5
+
