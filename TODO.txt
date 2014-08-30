@@ -17,6 +17,7 @@ Code
 * Unit micro AI is stupid
 	* Walls are not attacked at will
 * Make incendiary effects apply to units
+* Enable auto-repair for VTOLs
 
 Miscellaneous
 -------------
