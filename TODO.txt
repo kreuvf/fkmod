@@ -18,6 +18,8 @@ Code
 	* Walls are not attacked at will
 * Make incendiary effects apply to units
 * Enable auto-repair for VTOLs
+* VTOLs must be repaired and rearmed at the same time
+* Fix angle fixing patch
 
 Miscellaneous
 -------------
