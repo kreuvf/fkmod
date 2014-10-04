@@ -1,5 +1,5 @@
 diff --git a/src/action.cpp b/src/action.cpp
-index 7941530..295b4be 100644
+index 7941530..42cfd6b 100644
 --- a/src/action.cpp
 +++ b/src/action.cpp
 @@ -43,6 +43,8 @@
@@ -42,7 +42,7 @@ index 7941530..295b4be 100644
 +            maxEle = psStats->maxElevation;
 +            if(minEle <= angle && angle <= maxEle) {
 +                if(psStats->movementModel != MM_INDIRECT) {
-+                    return false;
++                    return true;
 +                }
 +            }
 +        }
@@ -53,17 +53,16 @@ index 7941530..295b4be 100644
  	return false;
  }
  
-@@ -231,7 +245,8 @@ static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_s
+@@ -231,7 +245,7 @@ static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_s
  // check if a target is within weapon range
  bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
  {
 -	SDWORD			dx, dy, radSq, rangeSq, longRange;
-+    SDWORD			dx, dy, dz, radSq, rangeSq, longRange, minEle, maxEle;
-+    double angle;
++    SDWORD			dx, dy, dz, radSq, rangeSq, longRange, angle, minEle, maxEle;
  	WEAPON_STATS	*psStats;
  	int compIndex;
  
-@@ -261,7 +276,17 @@ bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
+@@ -261,7 +275,17 @@ bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
  		rangeSq = psStats->minRange * psStats->minRange;
  		if ( radSq >= rangeSq || !proj_Direct( psStats ) )
  		{
@@ -76,13 +75,13 @@ index 7941530..295b4be 100644
 +            maxEle = psStats->maxElevation;
 +            if(minEle <= angle && angle <= maxEle) {
 +                if(psStats->movementModel != MM_INDIRECT) {
-+                    return false;
++                    return true;
 +                }
 +            }
  		}
  	}
  
-@@ -1042,7 +1067,7 @@ void actionUpdateDroid(DROID *psDroid)
+@@ -1042,7 +1066,7 @@ void actionUpdateDroid(DROID *psDroid)
  					{
  						BASE_OBJECT* psActionTarget = psDroid->psActionTarget[i];
  						// is the turret aligned with the target?
@@ -91,7 +90,7 @@ index 7941530..295b4be 100644
  						{
  							// In range - fire !!!
  							combFire(&psDroid->asWeaps[i], psDroid, psActionTarget, i);
-@@ -1477,7 +1502,7 @@ void actionUpdateDroid(DROID *psDroid)
+@@ -1477,7 +1501,7 @@ void actionUpdateDroid(DROID *psDroid)
  				//unless its a module!
  				if (IsStatExpansionModule(psStructStats))
  				{
@@ -101,7 +100,7 @@ index 7941530..295b4be 100644
  					setUpBuildModule(psDroid);
  				}
 diff --git a/src/ai.cpp b/src/ai.cpp
-index e46b921..a7ab44f 100644
+index e46b921..21f732a 100644
 --- a/src/ai.cpp
 +++ b/src/ai.cpp
 @@ -33,6 +33,8 @@
@@ -113,7 +112,7 @@ index e46b921..a7ab44f 100644
  
  /* Weights used for target selection code,
   * target distance is used as 'common currency'
-@@ -107,12 +109,39 @@ static bool aiStructHasRange(STRUCTURE *psStruct, BASE_OBJECT *psTarget, int wea
+@@ -107,12 +109,37 @@ static bool aiStructHasRange(STRUCTURE *psStruct, BASE_OBJECT *psTarget, int wea
  	WEAPON_STATS *psWStats = psStruct->asWeaps[weapon_slot].nStat + asWeaponStats;
  
  	int longRange = proj_GetLongRange(psWStats);
@@ -124,8 +123,7 @@ index e46b921..a7ab44f 100644
 +    angle = atan(dz/sqrt(objPosDiffSq(psStruct, psTarget))) * 180 / M_PI;
 +    minEle = psWStats->minElevation;
 +    maxEle = psWStats->maxElevation;
-+    //CONPRINTF(ConsoleString, (ConsoleString, _("Winkel: %d min, %d max, %d actual"),minEle,maxEle,angle));
-+    if(!(minEle <= angle) || !(angle <= maxEle)) {
++    if(minEle > angle || angle > maxEle) {
 +        if(psWStats->movementModel != MM_INDIRECT) {
 +            return false;
 +        }
@@ -145,8 +143,7 @@ index e46b921..a7ab44f 100644
 +    angle = atan(dz/sqrt(objPosDiffSq(psDroid, psTarget))) * 180 / M_PI;
 +    minEle = psWStats->minElevation;
 +    maxEle = psWStats->maxElevation;
-+    //CONPRINTF(ConsoleString, (ConsoleString, _("Winkel: %d min, %d max, %d actual"),minEle,maxEle,angle));
-+    if(!(minEle <= angle) || !(angle <= maxEle)) {
++    if(minEle > angle || angle > maxEle) {
 +        if(psWStats->movementModel != MM_INDIRECT) {
 +            return false;
 +        }
