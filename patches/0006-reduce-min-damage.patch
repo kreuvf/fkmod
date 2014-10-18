@@ -1,0 +1,18 @@
+diff --git a/src/combat.cpp b/src/combat.cpp
+index eae106f..86515ca 100644
+--- a/src/combat.cpp
++++ b/src/combat.cpp
+@@ -477,10 +477,10 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+ 	// Reduce damage taken by EXP_REDUCE_DAMAGE % for each experience level
+ 	actualDamage = (damage * (100 - EXP_REDUCE_DAMAGE * level)) / 100;
+ 
+-	// You always do at least a third of the experience modified damage
+-	actualDamage = MAX(actualDamage - armour, actualDamage / 3);
++    // Reduce damage taken by armour
++    actualDamage = actualDamage - armour;
+ 
+-	// And at least MIN_WEAPON_DAMAGE points
++    // You always do at least MIN_WEAPON_DAMAGE points
+ 	actualDamage = MAX(actualDamage, MIN_WEAPON_DAMAGE);
+ 
+ 	if (isDamagePerSecond)
