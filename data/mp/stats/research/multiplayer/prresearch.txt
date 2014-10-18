@@ -92,8 +92,8 @@ R-RpU1,R-Repair,1404
 R-RpU2,R-RpU1,1405
 R-RpU3,R-RpU2,1406
 R-SensorArtillery,R-SensorSurveillance,1407
-R-SensorCB,R-SensorArtillery,1408
-R-SensorVTOL,R-SensorArtillery,1409
+R-SensorCB,R-SensorSurveillance,1408
+R-SensorVTOL,R-SensorSurveillance,1409
 R-Commander,R-SensorSurveillance,1410
 R-St-RepairFacility,R-Repair,1411
 R-StU-Armours2,R-StU-Armours1,1412

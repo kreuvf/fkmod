@@ -8,7 +8,6 @@ Stats
 * Fast Cyborg Transport
 * Longer reload time for cyborg lancer
 * Higher base damage for VTOL lancer
-* Make all sensor research topics available after surveillance sensor
 
 Code
 ----
