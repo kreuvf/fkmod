@@ -6,8 +6,6 @@ Stats
 * Higher production speed for certain units, especially cyborgs
 * Balance rearming pad repair speed
 * Fast Cyborg Transport
-* Longer reload time for cyborg lancer
-* Higher base damage for VTOL lancer
 
 Code
 ----
