@@ -6,10 +6,12 @@ Stats
 * Higher production speed for certain units, especially cyborgs
 * Balance rearming pad repair speed
 * Fast Cyborg Transport
+* Add scout sensor
 
 Code
 ----
 * Artillery uses non-artillery sensors --> add different sensor types
+* Scout sensor needs implementation?
 * Debug switch to turn off data checking
 * Disable bungee effect when changing viewport via mini-map
 * Update physics such that hover tanks with high speeds use brakes before curves
