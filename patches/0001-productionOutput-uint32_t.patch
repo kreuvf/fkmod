@@ -1,7 +1,8 @@
-diff -ur src_orig/function.cpp src/function.cpp
---- src_orig/function.cpp	2012-08-21 00:33:08.000000000 +0200
-+++ src/function.cpp	2012-11-18 16:19:55.000000000 +0100
-@@ -145,7 +145,7 @@
+diff --git a/src/function.cpp b/src/function.cpp
+index 92fde81..74ed9e0 100644
+--- a/src/function.cpp
++++ b/src/function.cpp
+@@ -145,7 +145,7 @@ static bool loadProduction(const char *pData)
  {
  	PRODUCTION_FUNCTION	*psFunction;
  	char					functionName[MAX_STR_LENGTH], bodySize[MAX_STR_LENGTH];
@@ -10,7 +11,7 @@ diff -ur src_orig/function.cpp src/function.cpp
  
  	psFunction = (PRODUCTION_FUNCTION *)malloc(sizeof(PRODUCTION_FUNCTION));
  	memset(psFunction, 0, sizeof(PRODUCTION_FUNCTION));
-@@ -162,7 +162,7 @@
+@@ -162,7 +162,7 @@ static bool loadProduction(const char *pData)
  	//read the data in
  	functionName[0] = '\0';
  	bodySize[0] = '\0';
@@ -19,7 +20,7 @@ diff -ur src_orig/function.cpp src/function.cpp
  	       &productionOutput);
  
  	//allocate storage for the name
-@@ -174,15 +174,14 @@
+@@ -174,15 +174,14 @@ static bool loadProduction(const char *pData)
  		return false;
  	}
  
@@ -39,7 +40,7 @@ diff -ur src_orig/function.cpp src/function.cpp
  		psFunction->productionOutput = 0;
  	}
  
-@@ -960,7 +959,7 @@
+@@ -960,7 +959,7 @@ void structureProductionUpgrade(STRUCTURE *psBuilding)
  {
  	FACTORY						*pFact;
  	PRODUCTION_FUNCTION			*pFactFunc;
@@ -48,7 +49,7 @@ diff -ur src_orig/function.cpp src/function.cpp
  	STRUCTURE_STATS             *psStat;
  
  	switch (psBuilding->pStructureType->type)
-@@ -999,7 +998,7 @@
+@@ -999,7 +998,7 @@ void structureProductionUpgrade(STRUCTURE *psBuilding)
  		}
  	}
  
@@ -57,10 +58,11 @@ diff -ur src_orig/function.cpp src/function.cpp
  	        asProductionUpgrade[psBuilding->player][type].modifier) / 100);
  }
  
-diff -ur src_orig/functiondef.h src/functiondef.h
---- src_orig/functiondef.h	2012-08-21 00:33:08.000000000 +0200
-+++ src/functiondef.h	2012-11-11 16:03:26.000000000 +0100
-@@ -112,7 +112,7 @@
+diff --git a/src/functiondef.h b/src/functiondef.h
+index eb87abb..244b661 100644
+--- a/src/functiondef.h
++++ b/src/functiondef.h
+@@ -112,7 +112,7 @@ struct PRODUCTION_UPGRADE_FUNCTION : public FUNCTION
  struct PRODUCTION_FUNCTION : public FUNCTION
  {
  	BODY_SIZE capacity;      // The max size of body the factory can produce
@@ -69,10 +71,11 @@ diff -ur src_orig/functiondef.h src/functiondef.h
  };
  
  /*To research topics available*/
-diff -ur src_orig/intdisplay.cpp src/intdisplay.cpp
---- src_orig/intdisplay.cpp	2012-08-21 00:33:08.000000000 +0200
-+++ src/intdisplay.cpp	2012-11-11 16:45:25.000000000 +0100
-@@ -271,7 +271,7 @@
+diff --git a/src/intdisplay.cpp b/src/intdisplay.cpp
+index 995978e..2cabd71 100644
+--- a/src/intdisplay.cpp
++++ b/src/intdisplay.cpp
+@@ -267,7 +267,7 @@ void intUpdateProgressBar(WIDGET *psWidget, W_CONTEXT *psContext)
  				{
  					// Started production. Set the colour of the bar to yellow.
  					int buildPointsTotal = FactoryGetTemplate(Manufacture)->buildPoints;
@@ -81,10 +84,11 @@ diff -ur src_orig/intdisplay.cpp src/intdisplay.cpp
  					formatTime(BarGraph, buildPointsTotal - Manufacture->buildPointsRemaining, buildPointsTotal, buildRate, _("Construction Progress"));
  				}
  				else
-diff -ur src_orig/structure.cpp src/structure.cpp
---- src_orig/structure.cpp	2012-09-30 15:58:09.000000000 +0200
-+++ src/structure.cpp	2012-11-18 15:56:18.000000000 +0100
-@@ -1700,12 +1700,11 @@
+diff --git a/src/structure.cpp b/src/structure.cpp
+index 82ac814..d83b574 100644
+--- a/src/structure.cpp
++++ b/src/structure.cpp
+@@ -1708,12 +1708,11 @@ STRUCTURE* buildStructureDir(STRUCTURE_STATS *pStructureType, UDWORD x, UDWORD y
  
  				//quick check not trying to add too much
  				ASSERT_OR_RETURN(NULL, psBuilding->pFunctionality->factory.productionOutput +
@@ -98,7 +102,7 @@ diff -ur src_orig/structure.cpp src/structure.cpp
  				capacity = psBuilding->pFunctionality->factory.capacity;
  			}
  		}
-@@ -1928,7 +1927,7 @@
+@@ -1936,7 +1935,7 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
  			unsigned int x, y;
  
  			psFactory->capacity = (UBYTE) ((PRODUCTION_FUNCTION*)psBuilding->pStructureType->asFuncList[0])->capacity;
@@ -107,10 +111,11 @@ diff -ur src_orig/structure.cpp src/structure.cpp
  			psFactory->psSubject = NULL;
  
  			// Default the secondary order - AB 22/04/99
-diff -ur src_orig/structuredef.h src/structuredef.h
---- src_orig/structuredef.h	2012-09-30 15:58:09.000000000 +0200
-+++ src/structuredef.h	2012-11-11 16:04:31.000000000 +0100
-@@ -179,7 +179,7 @@
+diff --git a/src/structuredef.h b/src/structuredef.h
+index eeee1da..6c971d9 100644
+--- a/src/structuredef.h
++++ b/src/structuredef.h
+@@ -179,7 +179,7 @@ struct FACTORY
  											   can produce*/
  	uint8_t                         productionLoops;        ///< Number of loops to perform. Not synchronised, and only meaningful for selectedPlayer.
  	UBYTE				loopsPerformed;		/* how many times the loop has been performed*/

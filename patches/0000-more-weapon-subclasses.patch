@@ -1,7 +1,8 @@
-diff '--unified=3' src_orig/component.cpp src_mod/component.cpp
---- src_orig/component.cpp	2013-01-15 00:54:07.000000000 +0100
-+++ src_mod/component.cpp	2013-05-05 15:17:44.778482310 +0200
-@@ -123,6 +123,9 @@
+diff --git a/src/component.cpp b/src/component.cpp
+index d8ba40b..65e7411 100644
+--- a/src/component.cpp
++++ b/src/component.cpp
+@@ -123,6 +123,9 @@ UDWORD getComponentRadius(BASE_STATS *psComponent)
  	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
  	if (StatIsComponent(psComponent) != COMP_WEAPON
  		|| (((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_BOMB
@@ -11,7 +12,7 @@ diff '--unified=3' src_orig/component.cpp src_mod/component.cpp
  			&& ((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_EMP))
  	{
  		ASSERT(ComponentIMD, "No ComponentIMD!");
-@@ -414,6 +417,9 @@
+@@ -414,6 +417,9 @@ void displayComponentButton(BASE_STATS *Stat, Vector3i *Rotation, Vector3i *Posi
  	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
  	if (StatIsComponent(Stat) != COMP_WEAPON
  		|| (((WEAPON_STATS *)Stat)->weaponSubClass != WSC_BOMB
@@ -21,10 +22,11 @@ diff '--unified=3' src_orig/component.cpp src_mod/component.cpp
  			&& ((WEAPON_STATS *)Stat)->weaponSubClass != WSC_EMP))
  	{
  		ASSERT(ComponentIMD, "No ComponentIMD");
-diff '--unified=3' src_orig/oprint.cpp src_mod/oprint.cpp
---- src_orig/oprint.cpp	2013-01-15 00:54:07.000000000 +0100
-+++ src_mod/oprint.cpp	2013-05-05 15:18:01.382482527 +0200
-@@ -152,6 +152,56 @@
+diff --git a/src/oprint.cpp b/src/oprint.cpp
+index ee0e0ab..387af57 100644
+--- a/src/oprint.cpp
++++ b/src/oprint.cpp
+@@ -152,6 +152,56 @@ static void printWeaponInfo(const WEAPON_STATS* psStats)
  	case WSC_EMP:
  		pWSC = "WSC_EMP";
  		break;
@@ -81,10 +83,11 @@ diff '--unified=3' src_orig/oprint.cpp src_mod/oprint.cpp
  	default:
  		pWSC = "UNKNOWN SUB CLASS";
  		break;
-diff '--unified=3' src_orig/projectile.cpp src_mod/projectile.cpp
---- src_orig/projectile.cpp	2013-01-15 00:54:07.000000000 +0100
-+++ src_mod/projectile.cpp	2013-05-05 15:18:01.386482527 +0200
-@@ -538,7 +538,8 @@
+diff --git a/src/projectile.cpp b/src/projectile.cpp
+index 9877ba5..065b0df 100644
+--- a/src/projectile.cpp
++++ b/src/projectile.cpp
+@@ -538,7 +538,8 @@ bool proj_SendProjectileAngled(WEAPON *psWeap, SIMPLE_OBJECT *psAttacker, int pl
  				/* firing sound emitted from source */
  				audio_PlayObjDynamicTrack(psProj->psSource, psStats->iAudioFireID, NULL);
  				/* GJ HACK: move howitzer sound with shell */
@@ -94,7 +97,7 @@ diff '--unified=3' src_orig/projectile.cpp src_mod/projectile.cpp
  				{
  					audio_PlayObjDynamicTrack(psProj, ID_SOUND_HOWITZ_FLIGHT, NULL);
  				}
-@@ -697,14 +698,29 @@
+@@ -697,14 +698,29 @@ static void proj_InFlightFunc(PROJECTILE *psProj)
  			break;
  		case WSC_CANNON:
  		case WSC_BOMB:
@@ -124,7 +127,7 @@ diff '--unified=3' src_orig/projectile.cpp src_mod/projectile.cpp
  			distanceExtensionFactor = 100;
  			break;
  		case WSC_ROCKET:
-@@ -715,6 +731,7 @@
+@@ -715,6 +731,7 @@ static void proj_InFlightFunc(PROJECTILE *psProj)
  		case WSC_COUNTER:
  		case WSC_MORTARS:
  		case WSC_HOWITZERS:
@@ -132,10 +135,11 @@ diff '--unified=3' src_orig/projectile.cpp src_mod/projectile.cpp
  		case WSC_LAS_SAT:
  			distanceExtensionFactor = 150;
  			break;
-diff '--unified=3' src_orig/stats.cpp src_mod/stats.cpp
---- src_orig/stats.cpp	2013-01-15 00:54:07.000000000 +0100
-+++ src_mod/stats.cpp	2013-05-05 15:18:01.386482527 +0200
-@@ -2876,6 +2876,72 @@
+diff --git a/src/stats.cpp b/src/stats.cpp
+index b396e81..26f3837 100644
+--- a/src/stats.cpp
++++ b/src/stats.cpp
+@@ -2876,6 +2876,72 @@ bool getWeaponSubClass(const char* subClass, WEAPON_SUBCLASS* wclass)
  	{
  		*wclass = WSC_EMP;
  	}
@@ -208,10 +212,11 @@ diff '--unified=3' src_orig/stats.cpp src_mod/stats.cpp
          else
          {
  	    ASSERT(!"Invalid weapon sub class", "Invalid weapon sub class: %s", subClass);
-diff '--unified=3' src_orig/statsdef.h src_mod/statsdef.h
---- src_orig/statsdef.h	2013-01-15 00:54:07.000000000 +0100
-+++ src_mod/statsdef.h	2013-05-05 15:18:01.386482527 +0200
-@@ -278,6 +278,24 @@
+diff --git a/src/statsdef.h b/src/statsdef.h
+index 3b0b4b3..4bfd2c2 100644
+--- a/src/statsdef.h
++++ b/src/statsdef.h
+@@ -278,6 +278,24 @@ enum WEAPON_SUBCLASS
  	WSC_BOMB,
  	WSC_COMMAND,
  	WSC_EMP,

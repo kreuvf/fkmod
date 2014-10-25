@@ -1,7 +1,8 @@
-diff '--unified=3' -r src/display.cpp src_new/display.cpp
---- src/display.cpp	2012-10-08 15:21:10.000000000 +0200
-+++ src_new/display.cpp	2013-01-13 17:25:14.000000000 +0100
-@@ -1750,9 +1750,10 @@
+diff --git a/src/display.cpp b/src/display.cpp
+index 52b89a4..02c9693 100644
+--- a/src/display.cpp
++++ b/src/display.cpp
+@@ -1750,9 +1750,10 @@ static void dealWithLMBDroid(DROID* psDroid, SELECTION_TYPE selection)
  			if(!psDroid->selected)
  			{
  				CONPRINTF(ConsoleString, (ConsoleString,
@@ -14,7 +15,7 @@ diff '--unified=3' -r src/display.cpp src_new/display.cpp
  					psDroid->experience/65536.f, _(getDroidLevelName(psDroid))));
  
  				FeedbackOrderGiven();
-@@ -1766,9 +1767,10 @@
+@@ -1766,9 +1767,10 @@ static void dealWithLMBDroid(DROID* psDroid, SELECTION_TYPE selection)
  	else // Clicked on allied unit with no other possible actions
  	{
  		CONPRINTF(ConsoleString, (ConsoleString,
@@ -27,7 +28,7 @@ diff '--unified=3' -r src/display.cpp src_new/display.cpp
  								  psDroid->experience/65536, getDroidLevelName(psDroid)));
  
  		FeedbackOrderGiven();
-@@ -2247,9 +2249,10 @@
+@@ -2247,9 +2249,10 @@ static void dealWithRMB( void )
  							if(!psDroid->selected)
  							{
  								CONPRINTF(ConsoleString, (ConsoleString,
@@ -40,10 +41,11 @@ diff '--unified=3' -r src/display.cpp src_new/display.cpp
  									psDroid->experience/65536.f, _(getDroidLevelName(psDroid))));
  
  								FeedbackOrderGiven();
-diff '--unified=3' -r src/structure.cpp src_new/structure.cpp
---- src/structure.cpp	2012-10-08 15:21:12.000000000 +0200
-+++ src_new/structure.cpp	2013-01-13 17:46:46.000000000 +0100
-@@ -5622,8 +5621,8 @@
+diff --git a/src/structure.cpp b/src/structure.cpp
+index d83b574..6030bb1 100644
+--- a/src/structure.cpp
++++ b/src/structure.cpp
+@@ -5609,8 +5609,8 @@ void printStructureInfo(STRUCTURE *psStructure)
  		{
  			unsigned int assigned_droids = countAssignedDroids(psStructure);
  
@@ -54,7 +56,7 @@ diff '--unified=3' -r src/structure.cpp src_new/structure.cpp
  		}
  		break;
  	case REF_DEFENSE:
-@@ -5647,13 +5646,13 @@
+@@ -5634,13 +5634,13 @@ void printStructureInfo(STRUCTURE *psStructure)
  		{
  			unsigned int assigned_droids = countAssignedDroids(psStructure);
  
@@ -72,7 +74,7 @@ diff '--unified=3' -r src/structure.cpp src_new/structure.cpp
  		}
  		break;
  	case REF_REPAIR_FACILITY:
-@@ -5666,7 +5665,7 @@
+@@ -5653,7 +5653,7 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
@@ -81,7 +83,7 @@ diff '--unified=3' -r src/structure.cpp src_new/structure.cpp
  		}
  		break;
  	case REF_RESOURCE_EXTRACTOR:
-@@ -5679,7 +5678,7 @@
+@@ -5666,7 +5666,7 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
@@ -90,7 +92,7 @@ diff '--unified=3' -r src/structure.cpp src_new/structure.cpp
  		}
  		break;
  	case REF_POWER_GEN:
-@@ -5702,8 +5701,8 @@
+@@ -5689,8 +5689,8 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
@@ -101,7 +103,7 @@ diff '--unified=3' -r src/structure.cpp src_new/structure.cpp
  		}
  		break;
  	case REF_CYBORG_FACTORY:
-@@ -5720,8 +5719,8 @@
+@@ -5707,8 +5707,8 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
@@ -112,7 +114,7 @@ diff '--unified=3' -r src/structure.cpp src_new/structure.cpp
  		}
  		break;
  	case REF_RESEARCH:
-@@ -5735,8 +5734,8 @@
+@@ -5722,8 +5722,8 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
@@ -123,7 +125,7 @@ diff '--unified=3' -r src/structure.cpp src_new/structure.cpp
  		}
  		break;
  	default:
-@@ -5749,8 +5748,8 @@
+@@ -5736,8 +5736,8 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
