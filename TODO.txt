@@ -4,7 +4,6 @@ TODO for FKmod
 Stats
 -----
 * Higher production speed for certain units, especially cyborgs
-* Balance rearming pad repair speed
 * Fast Cyborg Transport
 * Add scout sensor
 
