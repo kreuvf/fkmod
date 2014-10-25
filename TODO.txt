@@ -3,7 +3,6 @@ TODO for FKmod
 
 Stats
 -----
-* Higher production speed for certain units, especially cyborgs
 * Add scout sensor
 
 Code
