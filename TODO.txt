@@ -19,6 +19,7 @@ Code
 	* Walls are not attacked at will
 * Make incendiary effects apply to units
 * Enable auto-repair for VTOLs
+* action.cpp: look at VTOL_ATTACK_LENGTH & co. defines
 
 Miscellaneous
 -------------
