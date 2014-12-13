@@ -1,6 +1,8 @@
 TODO for FKmod
 ==============
 
+Requirements for Final Version
+------------------------------
 Stats
 -----
 * Add scout sensor
@@ -9,17 +11,22 @@ Code
 ----
 * Artillery uses non-artillery sensors --> add different sensor types
 * Scout sensor needs implementation?
+* Make incendiary effects apply to units
+* action.cpp: look at VTOL_ATTACK_LENGTH & co. defines
+
+
+Nice to Have for Final Version
+------------------------------
+Code
+----
 * Debug switch to turn off data checking
-* Disable bungee effect when changing viewport via mini-map
 * Update physics such that hover tanks with high speeds use brakes before curves
 * VTOL Strike Tower Micro AI is stupid
 	* sends VTOLs back, when the target is down, although other targets still exist
 	* does not pick target with highest possible damage, e. g. not center points in groups, if splash damage is available
 * Unit micro AI is stupid
 	* Walls are not attacked at will
-* Make incendiary effects apply to units
 * Enable auto-repair for VTOLs
-* action.cpp: look at VTOL_ATTACK_LENGTH & co. defines
 
 Miscellaneous
 -------------
