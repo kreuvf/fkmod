@@ -1,0 +1,238 @@
+diff --git a/src/projectile.cpp b/src/projectile.cpp
+index e8eb7db..2e5db05 100644
+--- a/src/projectile.cpp
++++ b/src/projectile.cpp
+@@ -435,6 +435,7 @@ bool proj_SendProjectileAngled(WEAPON *psWeap, SIMPLE_OBJECT *psAttacker, int pl
+ 
+ 	// Must set ->psDest and ->expectedDamageCaused before first call to setProjectileDestination().
+ 	psProj->psDest = NULL;
++	psProj->burnVictims = NULL;
+ 	psProj->expectedDamageCaused = objGuessFutureDamage(psStats, player, psTarget);
+ 	setProjectileDestination(psProj, psTarget);  // Updates expected damage of psProj->psDest, using psProj->expectedDamageCaused.
+ 
+@@ -1405,11 +1406,73 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+ 
+ 	WEAPON_STATS *psStats = psProj->psWStats;
+ 
++	BASE_OBJECT* psCurr;
++
++	// Before fiddling with the burn victims, check for dropouts
++	// There are several cases to think about again:
++	// Case 1: Victim #1 dropped out
++	// Case 2: Victim not #1 dropped out
++	// After removing all dropouts the list could be completely empty.
++	debug(LOG_WZ, "= = = DEATHS :D = = =");
++	if (psProj->burnVictims != NULL)
++	{
++		psProj->burnVictims->curr = psProj->burnVictims->first;
++
++		while (psProj->burnVictims->curr != NULL)
++		{
++			psCurr = psProj->burnVictims->curr->victim;
++			debug(LOG_WZ, "%p: curr: %p curr->victim: %p, curr->next: %p", psCurr, psProj->burnVictims->curr, psProj->burnVictims->curr->victim, psProj->burnVictims->curr->next);
++			if (isDead(psCurr))
++			{
++				debug(LOG_WZ, "%p: dead", psCurr);
++				// Remove from the list and free the occupied space
++				// Case 1: Victim #1 dropped out
++				if (psProj->burnVictims->curr == psProj->burnVictims->first)
++				{
++					debug(LOG_WZ, "%p: curr: %p, curr->victim: %p, first->victim: %p", psCurr, psProj->burnVictims->curr, psProj->burnVictims->curr->victim, psProj->burnVictims->first->victim);
++					debug(LOG_WZ, "%p: #1 of the list", psCurr);
++					debug(LOG_WZ, "%p: old next of #1 is %p", psCurr, psProj->burnVictims->first->next);
++					BURN_VICTIM* successor = psProj->burnVictims->first->next;
++					free(psProj->burnVictims->first);
++					psProj->burnVictims->first = successor;
++					debug(LOG_WZ, "%p: new burnVictims->first is %p", psCurr, psProj->burnVictims->first);
++					if (psProj->burnVictims->first != NULL)
++					{
++						debug(LOG_WZ, "%p: new next of #1 is %p", psCurr, psProj->burnVictims->first->next);
++					}
++				}
++				// Case 2: Victim not #1 dropped out
++				else 
++				{
++					debug(LOG_WZ, "%p: not #1", psCurr);
++					BURN_VICTIM* successor = psProj->burnVictims->curr->next;
++					psProj->burnVictims->curr = psProj->burnVictims->first;
++					while (psProj->burnVictims->curr != NULL)
++					{
++						ASSERT(psProj->burnVictims->curr->next != NULL, "proj_checkBurnDamage: psProj->burnVictims->curr->next is NULL!");
++						if (psProj->burnVictims->curr->next->victim == psCurr)
++						{
++							debug(LOG_WZ, "%p: previous is %p, old next of previous is %p", psCurr, psProj->burnVictims->curr, psProj->burnVictims->curr->next);
++							free(psProj->burnVictims->curr->next);
++							psProj->burnVictims->curr->next = successor;
++							debug(LOG_WZ, "%p: previous is %p, new next of previous is %p", psCurr, psProj->burnVictims->curr, psProj->burnVictims->curr->next);
++							break;
++						}
++						psProj->burnVictims->curr = psProj->burnVictims->curr->next;
++					}
++				}				
++			} else {
++				debug(LOG_WZ, "%p: alive", psCurr);
++			}
++			psProj->burnVictims->curr = psProj->burnVictims->curr->next;
++		}
++	}
++
+ 	static GridList gridList;  // static to avoid allocations.
+ 	gridList = gridStartIterate(psProj->pos.x, psProj->pos.y, psStats->incenRadius);
+ 	for (GridIterator gi = gridList.begin(); gi != gridList.end(); ++gi)
+ 	{
+-		BASE_OBJECT *psCurr = *gi;
++		psCurr = *gi;
+ 		if (psCurr->died)
+ 		{
+ 			continue;  // Do not damage dead objects further.
+@@ -1437,11 +1500,116 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+ 			psCurr->burnStart = gameTime;
+ 			psCurr->burnDamage = 0;  // Reset burn damage done this tick.
+ 		}
+-		unsigned damageRate = weaponIncenDamage(psStats,psProj->player);
+-		debug(LOG_NEVER, "Burn damage of %d per second to object %d, player %d\n", damageRate, psCurr->id, psCurr->player);
+ 
+-		int relativeDamage = objectDamage(psCurr, damageRate, psStats->weaponClass, psStats->weaponSubClass, gameTime - deltaGameTime/2 + 1, true);
++		// We want to add the current unit to the burn list.
++		// Only add, if the unit is not already on the list.
++
++		// Several cases need to be treated
++		// Case 1: No victim on the list (first is NULL)
++		// Case 2: Exactly one victim is on the list (first is not NULL, next is NULL)
++		// Case 3: More than one victim is on the list (first is not NULL, next is not NULL)
++
++		debug(LOG_WZ, "= = = = = = =");
++		debug(LOG_WZ, "%p: Checking ...", psCurr);
++		// Case 1: No victim on the list
++		if (psProj->burnVictims == NULL)
++		{
++			//debug(LOG_WZ, "burnVictims->first->victim = NULL.");
++			debug(LOG_WZ, "%p: Case 1 triggered (0  victims)", psCurr);
++			psProj->burnVictims = (struct BURN_VICTIMS*) malloc(sizeof(struct BURN_VICTIMS));
++			psProj->burnVictims->first = (struct BURN_VICTIM*) malloc(sizeof(struct BURN_VICTIM));
++			psProj->burnVictims->curr = (struct BURN_VICTIM*) malloc(sizeof(struct BURN_VICTIM));
++			psProj->burnVictims->first->victim = psCurr;
++			//debug(LOG_WZ, "burnVictims->first->victim = %p.", psProj->burnVictims->first->victim);
++			psProj->burnVictims->first->next = NULL;
++		} else
++
++		// Case 2: Exactly one victim is on the list
++		if (psProj->burnVictims->first->victim != NULL && psProj->burnVictims->first->next == NULL)
++		{
++			//debug(LOG_WZ, "burnVictims->first->next = NULL.");
++			debug(LOG_WZ, "%p: Case 2 triggered (1  victim)", psCurr);
++			if (psCurr == psProj->burnVictims->first->victim)
++			{
++				debug(LOG_WZ, "%p:     on the list (as first victim)", psProj->burnVictims->first->victim);
++			} else {
++				debug(LOG_WZ, "%p: not on the list (as first victim)", psCurr);
++				psProj->burnVictims->first->next = (struct BURN_VICTIM*) malloc(sizeof(struct BURN_VICTIM));
++				psProj->burnVictims->curr = psProj->burnVictims->first;
++				psProj->burnVictims->curr = psProj->burnVictims->curr->next;
++				psProj->burnVictims->curr->victim = psCurr;
++				psProj->burnVictims->curr->next = NULL;
++				//debug(LOG_WZ, "1. Victim: %p; 2. Victim: %p", psProj->burnVictims->first->victim, psProj->burnVictims->curr->victim);
++			}
++		} else
++
++		// Case 3: More than one victim is on the list
++		if (psProj->burnVictims->first->victim != NULL && psProj->burnVictims->first->next != NULL)
++		{
++			//debug(LOG_WZ, "burnVictims->first->victim != NULL && burnVictims->first->next != NULL.");
++			debug(LOG_WZ, "%p: Case 3 triggered (2+ victims)", psCurr);
++
++			if (psCurr != psProj->burnVictims->first->victim
++			 && psCurr != psProj->burnVictims->first->next->victim)
++			{
++				debug(LOG_WZ, "%p: != first (%p) && != second (%p).", psCurr, psProj->burnVictims->first->victim, psProj->burnVictims->first->next->victim);
++				psProj->burnVictims->curr = psProj->burnVictims->first->next;
++				int i = 2;
++				// Strategy: Brute Force
++				// Search through all victims
++				// If one victim == psCurr, we are done for that victim.
++				// If no victim == psCurr, add as last.
++				while (psProj->burnVictims->curr != NULL)
++				{
++					debug(LOG_WZ, "%p: curr->victim: %p, curr->next: %p", psCurr, psProj->burnVictims->curr->victim, psProj->burnVictims->curr->next);
++
++					if (psProj->burnVictims->curr->victim == psCurr)
++					{
++						debug(LOG_WZ, "%p: is already victim #%i", psCurr, i);
++						break;
++					} else {
++						i++;
++						if (psProj->burnVictims->curr->next == NULL)
++						{
++							psProj->burnVictims->curr->next = (struct BURN_VICTIM*) malloc(sizeof(struct BURN_VICTIM));
++							psProj->burnVictims->curr = psProj->burnVictims->curr->next;
++							psProj->burnVictims->curr->victim = psCurr;
++							psProj->burnVictims->curr->next = NULL;
++							debug(LOG_WZ, "%p: Added as last/%ith victim.", psProj->burnVictims->curr->victim, i);
++							break;
++						} else {
++							psProj->burnVictims->curr = psProj->burnVictims->curr->next;
++						}
++					}
++				}
++				// If we arrive here, this may mean that the victim as not been added yet; do so now
++				if (psProj->burnVictims->curr == NULL)
++				{
++					psProj->burnVictims->curr = (struct BURN_VICTIM*) malloc(sizeof(struct BURN_VICTIM));
++					psProj->burnVictims->curr = psProj->burnVictims->curr->next;
++					psProj->burnVictims->curr->victim = psCurr;
++					psProj->burnVictims->curr->next = NULL;
++					debug(LOG_WZ, "%p: Added as last/%ith victim.", psProj->burnVictims->curr->victim, i);
++				}
++			}
++		}
++	}
++	unsigned damageRate = weaponIncenDamage(psStats,psProj->player);
++	//debug(LOG_WZ, "Burn damage of %d per second to object %d, player %d\n", damageRate, psCurr->id, psCurr->player);
++
++	int relativeDamage;
++	
++	psProj->burnVictims->curr = psProj->burnVictims->first;
++	debug(LOG_WZ, "= = = BURNING :) = = =");
++	while (psProj->burnVictims->curr != NULL)
++	{
++		psCurr = psProj->burnVictims->curr->victim;
++		debug(LOG_WZ, "%p: curr->victim: %p, curr->next: %p", psCurr, psProj->burnVictims->curr->victim, psProj->burnVictims->curr->next);
++
++		relativeDamage = objectDamage(psCurr, damageRate, psStats->weaponClass, psStats->weaponSubClass, gameTime - deltaGameTime/2 + 1, true);
+ 		proj_UpdateKills(psProj, relativeDamage);
++
++		psProj->burnVictims->curr = psProj->burnVictims->curr->next;
+ 	}
+ }
+ 
+diff --git a/src/projectiledef.h b/src/projectiledef.h
+index b57c3b6..4a312bd 100644
+--- a/src/projectiledef.h
++++ b/src/projectiledef.h
+@@ -38,6 +38,18 @@ enum PROJ_STATE
+ 	PROJ_INACTIVE,
+ };
+ 
++struct BURN_VICTIM
++{
++	BASE_OBJECT*	victim;
++	struct BURN_VICTIM*	next;
++};
++
++struct BURN_VICTIMS
++{
++	struct BURN_VICTIM* first;
++	struct BURN_VICTIM*	curr;
++};
++
+ struct PROJECTILE : public SIMPLE_OBJECT
+ {
+ 	PROJECTILE(uint32_t id, unsigned player) : SIMPLE_OBJECT(OBJ_PROJECTILE, id, player) {}
+@@ -52,6 +64,7 @@ struct PROJECTILE : public SIMPLE_OBJECT
+ 	BASE_OBJECT*    psSource;               ///< what fired the projectile
+ 	BASE_OBJECT*    psDest;                 ///< target of this projectile
+ 	std::vector<BASE_OBJECT *> psDamaged;   ///< the targets that have already been dealt damage to (don't damage the same target twice)
++	struct BURN_VICTIMS*	burnVictims;		///< Linked list with burn victims of the projectile
+ 
+ 	Vector3i        src;                    ///< Where projectile started
+ 	Vector3i        dst;                    ///< The target coordinates
