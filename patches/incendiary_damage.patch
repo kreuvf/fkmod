@@ -1,5 +1,5 @@
 diff --git a/src/projectile.cpp b/src/projectile.cpp
-index e8eb7db..2e5db05 100644
+index e8eb7db..e30c472 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
 @@ -435,6 +435,7 @@ bool proj_SendProjectileAngled(WEAPON *psWeap, SIMPLE_OBJECT *psAttacker, int pl
@@ -10,7 +10,7 @@ index e8eb7db..2e5db05 100644
  	psProj->expectedDamageCaused = objGuessFutureDamage(psStats, player, psTarget);
  	setProjectileDestination(psProj, psTarget);  // Updates expected damage of psProj->psDest, using psProj->expectedDamageCaused.
  
-@@ -1405,11 +1406,73 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+@@ -1405,11 +1406,79 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
  
  	WEAPON_STATS *psStats = psProj->psWStats;
  
@@ -74,6 +74,12 @@ index e8eb7db..2e5db05 100644
 +			}
 +			psProj->burnVictims->curr = psProj->burnVictims->curr->next;
 +		}
++		// If no victims are left, reset burnVictims
++		if(psProj->burnVictims->first == NULL)
++		{
++			psProj->burnVictims = NULL;
++			debug(LOG_WZ, "Cleared burnVictims: %p)", psProj->burnVictims);
++		}
 +	}
 +
  	static GridList gridList;  // static to avoid allocations.
@@ -85,7 +91,7 @@ index e8eb7db..2e5db05 100644
  		if (psCurr->died)
  		{
  			continue;  // Do not damage dead objects further.
-@@ -1437,11 +1500,116 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+@@ -1437,11 +1506,120 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
  			psCurr->burnStart = gameTime;
  			psCurr->burnDamage = 0;  // Reset burn damage done this tick.
  		}
@@ -93,6 +99,7 @@ index e8eb7db..2e5db05 100644
 -		debug(LOG_NEVER, "Burn damage of %d per second to object %d, player %d\n", damageRate, psCurr->id, psCurr->player);
  
 -		int relativeDamage = objectDamage(psCurr, damageRate, psStats->weaponClass, psStats->weaponSubClass, gameTime - deltaGameTime/2 + 1, true);
+-		proj_UpdateKills(psProj, relativeDamage);
 +		// We want to add the current unit to the burn list.
 +		// Only add, if the unit is not already on the list.
 +
@@ -191,17 +198,21 @@ index e8eb7db..2e5db05 100644
 +
 +	int relativeDamage;
 +	
-+	psProj->burnVictims->curr = psProj->burnVictims->first;
++	// At this point there might be no victims on the list, so check!
 +	debug(LOG_WZ, "= = = BURNING :) = = =");
-+	while (psProj->burnVictims->curr != NULL)
++	if (psProj->burnVictims != NULL)
 +	{
-+		psCurr = psProj->burnVictims->curr->victim;
-+		debug(LOG_WZ, "%p: curr->victim: %p, curr->next: %p", psCurr, psProj->burnVictims->curr->victim, psProj->burnVictims->curr->next);
++		psProj->burnVictims->curr = psProj->burnVictims->first;
++		while (psProj->burnVictims->curr != NULL)
++		{
++			psCurr = psProj->burnVictims->curr->victim;
++			debug(LOG_WZ, "%p: curr->victim: %p, curr->next: %p", psCurr, psProj->burnVictims->curr->victim, psProj->burnVictims->curr->next);
 +
-+		relativeDamage = objectDamage(psCurr, damageRate, psStats->weaponClass, psStats->weaponSubClass, gameTime - deltaGameTime/2 + 1, true);
- 		proj_UpdateKills(psProj, relativeDamage);
++			relativeDamage = objectDamage(psCurr, damageRate, psStats->weaponClass, psStats->weaponSubClass, gameTime - deltaGameTime/2 + 1, true);
++			proj_UpdateKills(psProj, relativeDamage);
 +
-+		psProj->burnVictims->curr = psProj->burnVictims->curr->next;
++			psProj->burnVictims->curr = psProj->burnVictims->curr->next;
++		}
  	}
  }
  
