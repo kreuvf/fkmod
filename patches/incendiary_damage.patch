@@ -1,5 +1,33 @@
+diff --git a/src/droid.cpp b/src/droid.cpp
+index 755cb30..7cbca8a 100644
+--- a/src/droid.cpp
++++ b/src/droid.cpp
+@@ -842,23 +842,6 @@ void droidUpdate(DROID *psDroid)
+ 		droidUpdateDroidSelfRepair(psDroid);
+ 	}
+ 
+-	/* Update the fire damage data */
+-	if (psDroid->burnStart != 0 && psDroid->burnStart != gameTime - deltaGameTime)  // -deltaGameTime, since projectiles are updated after droids.
+-	{
+-		// The burnStart has been set, but is not from the previous tick, so we must be out of the fire.
+-		psDroid->burnDamage = 0;  // Reset burn damage done this tick.
+-		if (psDroid->burnStart + BURN_TIME < gameTime)
+-		{
+-			// Finished burning.
+-			psDroid->burnStart = 0;
+-		}
+-		else
+-		{
+-			// do burn damage
+-			droidDamage(psDroid, BURN_DAMAGE, WC_HEAT, WSC_FLAME, gameTime - deltaGameTime/2 + 1, true);
+-		}
+-	}
+-
+ 	// At this point, the droid may be dead due to burn damage.
+ 	if (isDead((BASE_OBJECT *)psDroid))
+ 	{
 diff --git a/src/projectile.cpp b/src/projectile.cpp
-index e8eb7db..e30c472 100644
+index e8eb7db..02f799a 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
 @@ -435,6 +435,7 @@ bool proj_SendProjectileAngled(WEAPON *psWeap, SIMPLE_OBJECT *psAttacker, int pl
@@ -10,7 +38,31 @@ index e8eb7db..e30c472 100644
  	psProj->expectedDamageCaused = objGuessFutureDamage(psStats, player, psTarget);
  	setProjectileDestination(psProj, psTarget);  // Updates expected damage of psProj->psDest, using psProj->expectedDamageCaused.
  
-@@ -1405,11 +1406,79 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+@@ -1374,6 +1375,23 @@ void PROJECTILE::update()
+ 
+ 		case PROJ_INACTIVE:
+ 			psObj->died = psObj->time;
++			// End all burning caused by this projectile
++			BURN_VICTIM* psCurr = NULL;
++			if (psObj->burnVictims != NULL)
++			{
++				if (psObj->burnVictims->first != NULL)
++				{
++					psObj->burnVictims->curr = psObj->burnVictims->first;
++					while (psObj->burnVictims->curr != NULL)
++					{
++						psCurr = psObj->burnVictims->curr;
++						psCurr->victim->burnStart = 0;
++						psObj->burnVictims->curr = psObj->burnVictims->curr->next;
++						free(psCurr);
++					}
++					free(psObj->burnVictims);
++				}
++			}
+ 			break;
+ 	}
+ 
+@@ -1405,11 +1423,79 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
  
  	WEAPON_STATS *psStats = psProj->psWStats;
  
@@ -91,7 +143,7 @@ index e8eb7db..e30c472 100644
  		if (psCurr->died)
  		{
  			continue;  // Do not damage dead objects further.
-@@ -1437,11 +1506,120 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+@@ -1437,11 +1523,121 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
  			psCurr->burnStart = gameTime;
  			psCurr->burnDamage = 0;  // Reset burn damage done this tick.
  		}
@@ -110,6 +162,7 @@ index e8eb7db..e30c472 100644
 +
 +		debug(LOG_WZ, "= = = = = = =");
 +		debug(LOG_WZ, "%p: Checking ...", psCurr);
++		debug(LOG_WZ, "%p: burnStart: %d, burnDamage: %d", psCurr, psCurr->burnStart, psCurr->burnDamage);
 +		// Case 1: No victim on the list
 +		if (psProj->burnVictims == NULL)
 +		{
@@ -216,6 +269,19 @@ index e8eb7db..e30c472 100644
  	}
  }
  
+diff --git a/src/projectile.h b/src/projectile.h
+index 2eec477..4a7e1ad 100644
+--- a/src/projectile.h
++++ b/src/projectile.h
+@@ -38,8 +38,6 @@ extern	BASE_OBJECT	*g_pProjLastAttacker;	///< The last unit that did damage - us
+ #define PROJ_MAX_PITCH  45
+ #define PROJ_ULTIMATE_PITCH  80
+ 
+-#define BURN_TIME	10000	///< How long an object burns for after leaving a fire.
+-#define BURN_DAMAGE	15	///< How much damaga a second an object takes when it is burning.
+ #define ACC_GRAVITY	1000	///< Downward force against projectiles.
+ 
+ /** How long to display a single electronic warfare shimmmer. */
 diff --git a/src/projectiledef.h b/src/projectiledef.h
 index b57c3b6..4a312bd 100644
 --- a/src/projectiledef.h
