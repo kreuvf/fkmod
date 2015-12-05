@@ -12,7 +12,6 @@ Code
 ----
 * Artillery uses non-artillery sensors --> add different sensor types
 * Scout sensor needs implementation?
-* Make incendiary effects apply to units
 * action.cpp: look at VTOL_ATTACK_LENGTH & co. defines
 
 
