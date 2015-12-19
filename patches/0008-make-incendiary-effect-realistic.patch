@@ -27,7 +27,7 @@ index 755cb30..7cbca8a 100644
  	if (isDead((BASE_OBJECT *)psDroid))
  	{
 diff --git a/src/projectile.cpp b/src/projectile.cpp
-index e8eb7db..de5bcb5 100644
+index e8eb7db..1164142 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
 @@ -1374,6 +1374,13 @@ void PROJECTILE::update()
@@ -72,7 +72,7 @@ index e8eb7db..de5bcb5 100644
  		if (psCurr->died)
  		{
  			continue;  // Do not damage dead objects further.
-@@ -1437,11 +1459,39 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+@@ -1437,11 +1459,35 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
  			psCurr->burnStart = gameTime;
  			psCurr->burnDamage = 0;  // Reset burn damage done this tick.
  		}
@@ -83,9 +83,7 @@ index e8eb7db..de5bcb5 100644
 -		proj_UpdateKills(psProj, relativeDamage);
 +		if (psProj->burnVictims.empty())
 +		{
-+			debug(LOG_WZ, "Adding cppVictim: %p", psCurr);
 +			psProj->burnVictims.push_front(psCurr);
-+			debug(LOG_WZ, "cppVictim added: %p", psCurr);
 +		} else {
 +			for (std::list<BASE_OBJECT *>::iterator it = psProj->burnVictims.begin(); it != psProj->burnVictims.end(); it++)
 +			{
@@ -93,9 +91,7 @@ index e8eb7db..de5bcb5 100644
 +				{
 +					break;
 +				} else if (it == psProj->burnVictims.end()) {
-+					debug(LOG_WZ, "Adding cppVictim: %p", psCurr);
 +					psProj->burnVictims.push_back(psCurr);
-+					debug(LOG_WZ, "cppVictim added: %p", psCurr);
 +					break;
 +				}
 +			}
