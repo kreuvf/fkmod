@@ -19,7 +19,6 @@ Nice to Have for Final Version
 Code
 ----
 * Debug switch to turn off data checking
-* Update physics such that hover tanks with high speeds use brakes before curves
 * VTOL Strike Tower Micro AI is stupid
 	* sends VTOLs back, when the target is down, although other targets still exist
 	* does not pick target with highest possible damage, e. g. not center points in groups, if splash damage is available
