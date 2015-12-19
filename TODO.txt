@@ -12,7 +12,6 @@ Code
 ----
 * Artillery uses non-artillery sensors --> add different sensor types
 * Scout sensor needs implementation?
-* action.cpp: look at VTOL_ATTACK_LENGTH & co. defines
 
 
 Nice to Have for Final Version
