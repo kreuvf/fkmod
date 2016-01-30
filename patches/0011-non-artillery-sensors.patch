@@ -1,0 +1,381 @@
+diff --git a/src/action.cpp b/src/action.cpp
+index faf5f40..6af4465 100644
+--- a/src/action.cpp
++++ b/src/action.cpp
+@@ -179,7 +179,7 @@ static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_s
+ 	psStats = asWeaponStats + compIndex;
+ 
+ 	if (psDroid->order.type == DORDER_ATTACKTARGET
+-		&& secondaryGetState(psDroid, DSO_HALTTYPE) == DSS_HALT_HOLD)
++			&& secondaryGetState(psDroid, DSO_HALTTYPE) == DSS_HALT_HOLD)
+ 	{
+ 		longRange = proj_GetLongRange(psStats);
+ 		rangeSq = longRange * longRange;
+@@ -222,28 +222,19 @@ static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_s
+ 		rangeSq = psStats->minRange * psStats->minRange;
+ 		if ( radSq >= rangeSq || !proj_Direct( psStats ) )
+ 		{
+-			/* Check angle, if the weapon is NOT firing indirectly */
+-			if(psStats->movementModel == MM_INDIRECT)
+-			{
+-				return true;
+-			}
+-			else
+-			{
+-				dz = (SDWORD)psObj->pos.z - (SDWORD)psDroid->pos.z;
+-				dz = dz*2;
+-				angle = atan(dz/sqrt(radSq)) * 180 / M_PI;
+-				minEle = psStats->minElevation;
+-				maxEle = psStats->maxElevation;
+-				if(minEle <= angle && angle <= maxEle)
+-				{
++			/*check angle */
++			dz = (SDWORD)psObj->pos.z - (SDWORD)psDroid->pos.z;
++			dz = dz*2;
++			angle = atan(dz/sqrt(radSq)) * 180 / M_PI;
++			minEle = psStats->minElevation;
++			maxEle = psStats->maxElevation;
++			if(minEle <= angle && angle <= maxEle) {
++				if(psStats->movementModel != MM_INDIRECT) {
+ 					return true;
+ 				}
+ 			}
+ 		}
+ 	}
+-
+-
+-
+ 	return false;
+ }
+ 
+@@ -281,26 +272,19 @@ bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
+ 		rangeSq = psStats->minRange * psStats->minRange;
+ 		if ( radSq >= rangeSq || !proj_Direct( psStats ) )
+ 		{
+-			/* Check angle, if the weapon is NOT indirectly firing */
+-			if(psStats->movementModel == MM_INDIRECT)
+-			{
+-				return true;
+-			}
+-			else
+-			{
+-				dz = (SDWORD)psObj->pos.z - (SDWORD)psDroid->pos.z;
+-				dz = dz*2;
+-				angle = atan(dz/sqrt(radSq)) * 180 / M_PI;
+-				minEle = psStats->minElevation;
+-				maxEle = psStats->maxElevation;
+-				if(minEle <= angle && angle <= maxEle)
+-				{
++			/*check angle */
++			dz = (SDWORD)psObj->pos.z - (SDWORD)psDroid->pos.z;
++			dz = dz*2;
++			angle = atan(dz/sqrt(radSq)) * 180 / M_PI;
++			minEle = psStats->minElevation;
++			maxEle = psStats->maxElevation;
++			if(minEle <= angle && angle <= maxEle) {
++				if(psStats->movementModel != MM_INDIRECT) {
+ 					return true;
+ 				}
+ 			}
+ 		}
+ 	}
+-
+ 	return false;
+ }
+ 
+diff --git a/src/ai.cpp b/src/ai.cpp
+index e802bdf..085301a 100644
+--- a/src/ai.cpp
++++ b/src/ai.cpp
+@@ -208,6 +208,9 @@ static BASE_OBJECT *aiSearchSensorTargets(BASE_OBJECT *psObj, int weapon_slot, W
+ 		{
+ 			continue;
+ 		}
++		if(objSurveillanceSensor(psSensor)) {
++			continue;
++		}
+ 		else if (psSensor->type == OBJ_DROID)
+ 		{
+ 			DROID		*psDroid = (DROID *)psSensor;
+@@ -221,6 +224,7 @@ static BASE_OBJECT *aiSearchSensorTargets(BASE_OBJECT *psObj, int weapon_slot, W
+ 			psTemp = psDroid->psActionTarget[0];
+ 			isCB = cbSensorDroid(psDroid);
+ 			isRD = objRadarDetector((BASE_OBJECT *)psDroid);
++			SENSOR_STATS *psSensorStats = getSensorStats(psDroid);
+ 		}
+ 		else if (psSensor->type == OBJ_STRUCTURE)
+ 		{
+@@ -956,6 +960,12 @@ bool aiChooseSensorTarget(BASE_OBJECT *psObj, BASE_OBJECT **ppsTarget)
+ 		ASSERT(false, "Only to be used for sensor turrets!");
+ 		return false;
+ 	}
++	DROID *psDroid = (DROID *)psObj;
++	SENSOR_STATS *psSensor = getSensorStats(psDroid);
++
++	if(psSensor->type == SURVEILLANCE_SENSOR) {
++		return false;
++	}
+ 
+ 	/* See if there is something in range */
+ 	if (psObj->type == OBJ_DROID)
+@@ -1306,3 +1316,60 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot)
+ 	return bValidTarget;
+ }
+ 
++bool targetInSensorRange(BASE_OBJECT *psTarget) {
++	BASE_OBJECT	*psSensor;
++	for (psSensor = apsSensorList[0]; psSensor; psSensor = psSensor->psNextFunc) {
++		if (objSurveillanceSensor(psSensor) || objVTOLSensor(psSensor) || objVTOLCBSensor(psSensor)) {
++			continue;
++		}
++		else if (objRadarDetector(psSensor)) {
++			if (objActiveRadar(psTarget) != NULL) {
++				SDWORD dx, dy, radSq, rangeSq;
++				dx = (SDWORD)psSensor->pos.x - (SDWORD)psTarget->pos.x;
++				dy = (SDWORD)psSensor->pos.y - (SDWORD)psTarget->pos.y;
++
++				radSq = dx*dx + dy*dy;
++				rangeSq = psSensor->sensorRange * psSensor->sensorRange;
++				if (radSq <= rangeSq) {
++					return true;
++				}
++
++				return false;
++			}
++		}
++		else if (objCBSensor(psSensor)) {
++			if (psSensor->type == OBJ_STRUCTURE) {
++				STRUCTURE *psStruct = (STRUCTURE *)psSensor;
++				if (psStruct->psTarget[0] == psTarget) {
++					return true;
++				}
++			}
++			else if (psSensor->type == OBJ_DROID) //untested
++			{
++				DROID *psDroid = (DROID *)psSensor;
++				if (psDroid->psActionTarget[0] == psTarget) {
++					return true;
++				}
++			}
++		}
++		else if (objStandardSensor(psSensor) && visibleObject(psSensor, psTarget, true)) {
++			SDWORD dx, dy, radSq, rangeSq;
++			dx = (SDWORD)psSensor->pos.x - (SDWORD)psTarget->pos.x;
++			dy = (SDWORD)psSensor->pos.y - (SDWORD)psTarget->pos.y;
++
++			radSq = dx*dx + dy*dy;
++			rangeSq = psSensor->sensorRange * psSensor->sensorRange;
++			if (radSq <= rangeSq) {
++				return true;
++			}
++
++		}
++
++	}
++	return false;
++
++
++	//TODO: VTOL-Tower funktioniert wie der Radar Detector
++	/* in ai.cpp, combat.cpp visibility.cpp */
++}
++
+diff --git a/src/ai.h b/src/ai.h
+index 155e1ff..a0b6aec 100644
+--- a/src/ai.h
++++ b/src/ai.h
+@@ -83,3 +83,4 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot);
+ // Check if any of the weapons can target the target
+ bool checkAnyWeaponsTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget);
+ #endif // __INCLUDED_SRC_AI_H__
++bool targetInSensorRange(BASE_OBJECT *psTarget);
+diff --git a/src/combat.cpp b/src/combat.cpp
+index 86515ca..9f32d96 100644
+--- a/src/combat.cpp
++++ b/src/combat.cpp
+@@ -28,6 +28,7 @@
+ #include "lib/netplay/netplay.h"
+ 
+ #include "action.h"
++#include "ai.h"
+ #include "cluster.h"
+ #include "combat.h"
+ #include "difficulty.h"
+@@ -147,6 +148,12 @@ bool combFire(WEAPON *psWeap, BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, in
+ 		}
+ 	}
+ 
++	if(psStats->targeting == 1) {
++		if(!targetInSensorRange(psTarget)) {
++			return false;
++		}
++	}
++
+ 	Vector3i deltaPos = psTarget->pos - psAttacker->pos;
+ 
+ 	// if the turret doesn't turn, check if the attacker is in alignment with the target
+diff --git a/src/stats.cpp b/src/stats.cpp
+index 26f3837..ecaf2a0 100644
+--- a/src/stats.cpp
++++ b/src/stats.cpp
+@@ -625,7 +625,7 @@ bool loadWeaponStats(const char *pWeaponData, UDWORD bufferSize)
+ 			%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%d,\
+ 			%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%255[^,'\r\n],\
+ 			%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%d,%d,%d,%255[^,'\r\n],%255[^,'\r\n],%d,%d,\
+-			%255[^,'\r\n],%d,%d,%d,%d,%d",
++			%255[^,'\r\n],%d,%d,%d,%d,%d,%d",
+ 			WeaponName, dummy, &psStats->buildPower,&psStats->buildPoints,
+ 			&psStats->weight, &weaponsize, &dummyVal,
+ 			&psStats->body, GfxFile, mountGfx, muzzleGfx, flightGfx,
+@@ -639,7 +639,7 @@ bool loadWeaponStats(const char *pWeaponData, UDWORD bufferSize)
+ 			fireOnMove, weaponClass, weaponSubClass, movement, weaponEffect,
+ 			&rotate, &maxElevation, &minElevation, facePlayer, faceInFlight,
+ 			&psStats->recoilValue, &psStats->minRange, lightWorld,
+-			&effectSize, &surfaceToAir, &numAttackRuns, &designable, &penetrate);
++			&effectSize, &surfaceToAir, &numAttackRuns, &designable, &penetrate, &psStats->targeting);
+ 
+ 			psStats->numRounds = (UBYTE)numRounds;
+ 
+@@ -1417,10 +1417,14 @@ bool loadSensorStats(const char *pSensorData, UDWORD bufferSize)
+ 		{
+ 			psStats->type = SUPER_SENSOR;
+ 		}
+-		else if (!strcmp(type, "RADAR DETECTOR"))
++		else if(!strcmp(type, "RADAR DETECTOR"))
+ 		{
+ 			psStats->type = RADAR_DETECTOR_SENSOR;
+ 		}
++		else if(!strcmp(type, "SURVEILLANCE"))
++		{
++			psStats->type = SURVEILLANCE_SENSOR;
++		}
+ 		else
+ 		{
+ 			ASSERT( false, "Invalid Sensor type" );
+@@ -3577,3 +3581,88 @@ bool objRadarDetector(const BASE_OBJECT *psObj)
+ 	}
+ 	return false;
+ }
++
++bool objSurveillanceSensor(const BASE_OBJECT *psObj) {
++	if (psObj->type == OBJ_STRUCTURE)
++	{
++		STRUCTURE *psStruct = (STRUCTURE *)psObj;
++
++		return (psStruct->status == SS_BUILT && psStruct->pStructureType->pSensor && psStruct->pStructureType->pSensor->type == SURVEILLANCE_SENSOR);
++	}
++	else if (psObj->type == OBJ_DROID)
++	{
++		DROID *psDroid = (DROID *)psObj;
++		SENSOR_STATS *psSensor = getSensorStats(psDroid);
++
++		return (psSensor && psSensor->type == SURVEILLANCE_SENSOR);
++	}
++	return false;
++}
++
++bool objVTOLSensor(const BASE_OBJECT *psObj) {
++	if (psObj->type == OBJ_STRUCTURE)
++	{
++		STRUCTURE *psStruct = (STRUCTURE *)psObj;
++
++		return (psStruct->status == SS_BUILT && psStruct->pStructureType->pSensor && psStruct->pStructureType->pSensor->type == VTOL_INTERCEPT_SENSOR);
++	}
++	else if (psObj->type == OBJ_DROID)
++	{
++		DROID *psDroid = (DROID *)psObj;
++		SENSOR_STATS *psSensor = getSensorStats(psDroid);
++
++		return (psSensor && psSensor->type == VTOL_INTERCEPT_SENSOR);
++	}
++	return false;
++}
++
++bool objVTOLCBSensor(const BASE_OBJECT *psObj) {
++	if (psObj->type == OBJ_STRUCTURE)
++	{
++		STRUCTURE *psStruct = (STRUCTURE *)psObj;
++
++		return (psStruct->status == SS_BUILT && psStruct->pStructureType->pSensor && psStruct->pStructureType->pSensor->type == VTOL_CB_SENSOR);
++	}
++	else if (psObj->type == OBJ_DROID)
++	{
++		DROID *psDroid = (DROID *)psObj;
++		SENSOR_STATS *psSensor = getSensorStats(psDroid);
++
++		return (psSensor && psSensor->type == VTOL_CB_SENSOR);
++	}
++	return false;
++}
++
++bool objCBSensor(const BASE_OBJECT *psObj) {
++	if (psObj->type == OBJ_STRUCTURE)
++	{
++		STRUCTURE *psStruct = (STRUCTURE *)psObj;
++
++		return (psStruct->status == SS_BUILT && psStruct->pStructureType->pSensor && psStruct->pStructureType->pSensor->type == INDIRECT_CB_SENSOR);
++	}
++	else if (psObj->type == OBJ_DROID)
++	{
++		DROID *psDroid = (DROID *)psObj;
++		SENSOR_STATS *psSensor = getSensorStats(psDroid);
++
++		return (psSensor && psSensor->type == INDIRECT_CB_SENSOR);
++	}
++	return false;
++}
++
++bool objStandardSensor(const BASE_OBJECT *psObj) {
++	if (psObj->type == OBJ_STRUCTURE)
++	{
++		STRUCTURE *psStruct = (STRUCTURE *)psObj;
++
++		return (psStruct->status == SS_BUILT && psStruct->pStructureType->pSensor && psStruct->pStructureType->pSensor->type == STANDARD_SENSOR);
++	}
++	else if (psObj->type == OBJ_DROID)
++	{
++		DROID *psDroid = (DROID *)psObj;
++		SENSOR_STATS *psSensor = getSensorStats(psDroid);
++
++		return (psSensor && psSensor->type == STANDARD_SENSOR);
++	}
++	return false;
++}
+diff --git a/src/stats.h b/src/stats.h
+index 88bce3a..c0a770b 100644
+--- a/src/stats.h
++++ b/src/stats.h
+@@ -364,4 +364,14 @@ SENSOR_STATS *objActiveRadar(const BASE_OBJECT *psObj);
+ /** Returns whether object has a radar detector sensor. */
+ bool objRadarDetector(const BASE_OBJECT *psObj);
+ 
++bool objSurveillanceSensor(const BASE_OBJECT *psObj);
++
++bool objVTOLSensor(const BASE_OBJECT *psObj);
++
++bool objVTOLCBSensor(const BASE_OBJECT *psObj);
++
++bool objCBSensor(const BASE_OBJECT *psObj);
++
++bool objStandardSensor(const BASE_OBJECT *psObj);
++
+ #endif // __INCLUDED_SRC_STATS_H__
+diff --git a/src/statsdef.h b/src/statsdef.h
+index 4bfd2c2..67ff82d 100644
+--- a/src/statsdef.h
++++ b/src/statsdef.h
+@@ -361,6 +361,7 @@ enum SENSOR_TYPE
+ 	VTOL_INTERCEPT_SENSOR,
+ 	SUPER_SENSOR,			///< works as all of the above together! - new for updates
+ 	RADAR_DETECTOR_SENSOR,
++	SURVEILLANCE_SENSOR,
+ };
+ 
+ enum FIREONMOVE
+@@ -475,6 +476,7 @@ struct WEAPON_STATS : public COMPONENT_STATS
+ 	UBYTE			surfaceToAir;			///< indicates how good in the air - SHOOT_ON_GROUND, SHOOT_IN_AIR or both
+ 	UBYTE			vtolAttackRuns;			///< number of attack runs a VTOL droid can	do with this weapon
+ 	bool			penetrate;				///< flag to indicate whether pentrate droid or not
++	UDWORD			targeting;				///< indicates if weapon needs sensor for targeting
+ 
+ 	/* Graphics control stats */
+ 	UDWORD			directLife;				///< How long a direct fire weapon is visible. Measured in 1/100 sec.
