@@ -2,7 +2,7 @@ diff --git a/src/structure.cpp b/src/structure.cpp
 index 6030bb1..876c55f 100644
 --- a/src/structure.cpp
 +++ b/src/structure.cpp
-@@ -3789,11 +3789,12 @@ void structureUpdate(STRUCTURE *psBuilding, bool mission)
+@@ -3798,11 +3798,12 @@ void structureUpdate(STRUCTURE *psBuilding, bool mission)
  	}
  	else
  	{
