@@ -22,6 +22,7 @@ Easteregg weaponry only via debug mode.
 * Canon Cannon (schießt nur Bilder/mit Bildern)
 * Flamethrower Thrower (Cannon, die Flammenwerfer feuert :D)
 * Needlich Gun (in Anlehnung an die Needle Gun, halt nur total niedlich höhö 8[)
+* OpenData Sensor (like Satellite Uplink, but for everyone)
 
 * One weapon with ultrahigh recoilValue
 
