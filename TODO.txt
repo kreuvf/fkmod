@@ -7,11 +7,11 @@ Stats
 -----
 * Add scout sensor
 * Increase surveillance sensor range
+* Rocket Battery: Homing + angles problematic?
 
 Code
 ----
-* Artillery uses non-artillery sensors --> add different sensor types
-* Scout sensor needs implementation?
+* Fix: sensors work for everybody (= against you)
 
 
 Nice to Have for Final Version
