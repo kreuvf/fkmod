@@ -5,7 +5,6 @@ Requirements for Final Version
 ------------------------------
 Stats
 -----
-* Add scout sensor
 * Increase surveillance sensor range
 * Rocket Battery: Homing + angles problematic?
 

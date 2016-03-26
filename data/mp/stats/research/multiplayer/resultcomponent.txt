@@ -7,6 +7,7 @@ R-Repair,FKTankRepair,REPAIR,0,0,1337
 R-Repair,FKCyborg-Repair,BODY,0,0,1337
 R-Repair,FKCyborgRepair,REPAIR,0,0,1337
 R-SensorSurveillance,FKSurveillanceSensor,SENSOR,0,0,1337
+R-SensorSurveillance,FKScoutSensor,SENSOR,0,0,1337
 R-Commander,CommandBrain01,BRAIN,0,0,1337
 R-U-CyborgTransport,FKTransportBody,BODY,0,0,1337
 R-W-ART-Howitzer,FK-ART-Howitzer,WEAPON,0,0,1337
