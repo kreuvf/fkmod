@@ -92,7 +92,7 @@ index 2b9a50c..cb8c1ba 100644
  							// In range - fire !!!
  							combFire(&psDroid->asWeaps[i], psDroid, psActionTarget, i);
 diff --git a/src/ai.cpp b/src/ai.cpp
-index 876ec8e..a64309f 100644
+index 876ec8e..c9e6f92 100644
 --- a/src/ai.cpp
 +++ b/src/ai.cpp
 @@ -33,6 +33,8 @@
@@ -173,13 +173,14 @@ index 876ec8e..a64309f 100644
  
  	/* See if there is something in range */
  	if (psObj->type == OBJ_DROID)
-@@ -1279,3 +1316,60 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot)
+@@ -1279,3 +1316,58 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot)
  	return bValidTarget;
  }
  
-+bool targetInSensorRange(BASE_OBJECT *psTarget) {
++bool targetInSensorRange(BASE_OBJECT *psTarget, BASE_OBJECT *psOrigin) {
 +	BASE_OBJECT	*psSensor;
 +	for (psSensor = apsSensorList[0]; psSensor; psSensor = psSensor->psNextFunc) {
++		if(psSensor->player != psOrigin->player) continue;
 +		if (objSurveillanceSensor(psSensor) || objVTOLSensor(psSensor) || objVTOLCBSensor(psSensor)) {
 +			continue;
 +		}
@@ -229,22 +230,19 @@ index 876ec8e..a64309f 100644
 +	}
 +	return false;
 +
-+
-+	//TODO: VTOL-Tower funktioniert wie der Radar Detector
-+	/* in ai.cpp, combat.cpp visibility.cpp */
 +}
 +
 diff --git a/src/ai.h b/src/ai.h
-index 155e1ff..a0b6aec 100644
+index 155e1ff..22725eb 100644
 --- a/src/ai.h
 +++ b/src/ai.h
 @@ -83,3 +83,4 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot);
  // Check if any of the weapons can target the target
  bool checkAnyWeaponsTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget);
  #endif // __INCLUDED_SRC_AI_H__
-+bool targetInSensorRange(BASE_OBJECT *psTarget);
++bool targetInSensorRange(BASE_OBJECT *psTarget, BASE_OBJECT *psOrigin);
 diff --git a/src/combat.cpp b/src/combat.cpp
-index eae106f..9f32d96 100644
+index eae106f..b323b99 100644
 --- a/src/combat.cpp
 +++ b/src/combat.cpp
 @@ -28,6 +28,7 @@
@@ -260,7 +258,7 @@ index eae106f..9f32d96 100644
  	}
  
 +	if(psStats->targeting == 1) {
-+		if(!targetInSensorRange(psTarget)) {
++		if(!targetInSensorRange(psTarget, psAttacker)) {
 +			return false;
 +		}
 +	}
