@@ -26,7 +26,7 @@ index 7941530..faf5f40 100644
  		{
 -			return true;
 +			/* Check angle, if the weapon is NOT firing indirectly */
-+			if(psStats->movementModel == MM_INDIRECT)
++			if(psStats->movementModel == MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT)
 +			{
 +				return true;
 +			}
@@ -65,7 +65,7 @@ index 7941530..faf5f40 100644
  		{
 -			return true;
 +			/* Check angle, if the weapon is NOT indirectly firing */
-+			if(psStats->movementModel == MM_INDIRECT)
++			if(psStats->movementModel == MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT)
 +			{
 +				return true;
 +			}
@@ -118,7 +118,7 @@ index e46b921..e802bdf 100644
 +	minEle = psWStats->minElevation;
 +	maxEle = psWStats->maxElevation;
 +	if(minEle > angle || angle > maxEle) {
-+		if(psWStats->movementModel != MM_INDIRECT) {
++		if(psWStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
 +			return false;
 +		}
 +	}
@@ -137,7 +137,7 @@ index e46b921..e802bdf 100644
 +	minEle = psWStats->minElevation;
 +	maxEle = psWStats->maxElevation;
 +	if(minEle > angle || angle > maxEle) {
-+		if(psWStats->movementModel != MM_INDIRECT) {
++		if(psWStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
 +			return false;
 +		}
 +	}

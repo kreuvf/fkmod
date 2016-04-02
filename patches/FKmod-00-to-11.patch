@@ -41,7 +41,7 @@ index 2b9a50c..cb8c1ba 100644
 +			minEle = psStats->minElevation;
 +			maxEle = psStats->maxElevation;
 +			if(minEle <= angle && angle <= maxEle) {
-+				if(psStats->movementModel != MM_INDIRECT) {
++				if(psStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
 +					return true;
 +				}
 +			}
@@ -72,7 +72,7 @@ index 2b9a50c..cb8c1ba 100644
 +			minEle = psStats->minElevation;
 +			maxEle = psStats->maxElevation;
 +			if(minEle <= angle && angle <= maxEle) {
-+				if(psStats->movementModel != MM_INDIRECT) {
++				if(psStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
 +					return true;
 +				}
 +			}
@@ -116,7 +116,7 @@ index 876ec8e..c9e6f92 100644
 +	minEle = psWStats->minElevation;
 +	maxEle = psWStats->maxElevation;
 +	if(minEle > angle || angle > maxEle) {
-+		if(psWStats->movementModel != MM_INDIRECT) {
++		if(psWStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
 +			return false;
 +		}
 +	}
@@ -135,7 +135,7 @@ index 876ec8e..c9e6f92 100644
 +	minEle = psWStats->minElevation;
 +	maxEle = psWStats->maxElevation;
 +	if(minEle > angle || angle > maxEle) {
-+		if(psWStats->movementModel != MM_INDIRECT) {
++		if(psWStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
 +			return false;
 +		}
 +	}
