@@ -118,7 +118,7 @@ index e46b921..e802bdf 100644
 +	minEle = psWStats->minElevation;
 +	maxEle = psWStats->maxElevation;
 +	if(minEle > angle || angle > maxEle) {
-+		if(psWStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
++		if(psWStats->movementModel != MM_INDIRECT && psWStats->movementModel != MM_HOMINGINDIRECT) {
 +			return false;
 +		}
 +	}
@@ -137,7 +137,7 @@ index e46b921..e802bdf 100644
 +	minEle = psWStats->minElevation;
 +	maxEle = psWStats->maxElevation;
 +	if(minEle > angle || angle > maxEle) {
-+		if(psWStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
++		if(psWStats->movementModel != MM_INDIRECT && psWStats->movementModel != MM_HOMINGINDIRECT) {
 +			return false;
 +		}
 +	}
