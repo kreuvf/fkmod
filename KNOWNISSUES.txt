@@ -1,3 +1,2 @@
-Noticed in 48d8572a5c2d790af6fabcf6fd73dceb76a333fa of FKmod with Warzone 2100 3.1.2:
-* In multiplayer games, sometimes units do not lose their burn effect and appear to continue burning all the time. The problem appears to be purely cosmetic.
+Currently, there are no known issues.
 

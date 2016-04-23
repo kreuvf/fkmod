@@ -737,7 +737,7 @@ index 9877ba5..1164142 100644
 +				if (psCurr == *it)
 +				{
 +					break;
-+				} else if (it == psProj->burnVictims.end()) {
++				} else if (*it == psProj->burnVictims.back()) {
 +					psProj->burnVictims.push_back(psCurr);
 +					break;
 +				}

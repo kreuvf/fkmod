@@ -10,10 +10,6 @@ Stats
 	* Cannon: -25
 	* MG: -35
 
-Code
-----
-* Incendiary effect: damage against units entering burning area later wrong/burning effect stays
-
 
 Nice to Have for Final Version
 ------------------------------

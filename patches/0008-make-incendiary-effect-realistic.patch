@@ -90,7 +90,7 @@ index e8eb7db..1164142 100644
 +				if (psCurr == *it)
 +				{
 +					break;
-+				} else if (it == psProj->burnVictims.end()) {
++				} else if (*it == psProj->burnVictims.back()) {
 +					psProj->burnVictims.push_back(psCurr);
 +					break;
 +				}
