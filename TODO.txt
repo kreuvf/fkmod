@@ -3,12 +3,15 @@ TODO for FKmod
 
 Requirements for Final Version
 ------------------------------
+Code
+----
+* Make commander sight count as artillery sensor for support fire
+* Fix artillery units unable to attack
+
 Stats
 -----
 * Cyborg Transport: more armor when landed
-* Hardpoint weapon negative angles need to be decreased
-	* Cannon: -25
-	* MG: -35
+* Reduce structure armor considerably (most weapons do literally no damage!!!11oneoneeleven)
 
 
 Nice to Have for Final Version

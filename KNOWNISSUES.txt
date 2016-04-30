@@ -1,2 +1,2 @@
-Currently, there are no known issues.
+Currently, there are no known issues. Items in TODO.txt do not count.
 
