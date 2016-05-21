@@ -10,7 +10,6 @@ Code
 
 Stats
 -----
-* Cyborg Transport: more armor when landed
 * Reduce structure armor considerably (most weapons do literally no damage!!!11oneoneeleven)
 
 

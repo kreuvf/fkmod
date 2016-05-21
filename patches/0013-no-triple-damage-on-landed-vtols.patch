@@ -1,0 +1,16 @@
+diff --git a/src/droid.cpp b/src/droid.cpp
+index ae138b1..1c58abb 100644
+--- a/src/droid.cpp
++++ b/src/droid.cpp
+@@ -162,10 +162,7 @@ int32_t droidDamage(DROID *psDroid, unsigned damage, WEAPON_CLASS weaponClass, W
+ 	CHECK_DROID(psDroid);
+ 
+ 	// VTOLs (and transporters in MP) on the ground take triple damage
+-	if ((isVtolDroid(psDroid) || (isTransporter(psDroid) && bMultiPlayer)) && (psDroid->sMove.Status == MOVEINACTIVE))
+-	{
+-		damage *= 3;
+-	}
++	// NOT
+ 
+ 	relativeDamage = objDamage(psDroid, damage, psDroid->originalBody, weaponClass, weaponSubClass, isDamagePerSecond);
+ 
