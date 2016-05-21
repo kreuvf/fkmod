@@ -5,7 +5,6 @@ Requirements for Final Version
 ------------------------------
 Code
 ----
-* Remove extra damage reduction for structures
 * Make commander sight count as artillery sensor for support fire
 * Fix artillery units unable to attack
 
