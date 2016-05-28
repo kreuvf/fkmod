@@ -23,7 +23,6 @@ Code
 	* does not pick target with highest possible damage, e. g. not center points in groups, if splash damage is available
 * Unit micro AI is stupid
 	* Walls are not attacked at will
-* Enable auto-repair for VTOLs
 * VTOL Strike Tower menu to select target classes (aerial, ground, mobile)
 
 Miscellaneous
