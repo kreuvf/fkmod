@@ -1,0 +1,50 @@
+diff --git a/src/action.cpp b/src/action.cpp
+index 344e6ba..75463d5 100644
+--- a/src/action.cpp
++++ b/src/action.cpp
+@@ -229,6 +229,8 @@ static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_s
+ 			minEle = psStats->minElevation;
+ 			maxEle = psStats->maxElevation;
+ 			if(minEle <= angle && angle <= maxEle) {
++				return true;
++			} else {
+ 				if(psStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
+ 					return true;
+ 				}
+@@ -279,6 +281,8 @@ bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
+ 			minEle = psStats->minElevation;
+ 			maxEle = psStats->maxElevation;
+ 			if(minEle <= angle && angle <= maxEle) {
++				return true;
++			} else {
+ 				if(psStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
+ 					return true;
+ 				}
+diff --git a/src/ai.cpp b/src/ai.cpp
+index 93b6c74..2da4aa1 100644
+--- a/src/ai.cpp
++++ b/src/ai.cpp
+@@ -1334,8 +1334,6 @@ bool targetInSensorRange(BASE_OBJECT *psTarget, BASE_OBJECT *psOrigin) {
+ 				if (radSq <= rangeSq) {
+ 					return true;
+ 				}
+-
+-				return false;
+ 			}
+ 		}
+ 		else if (objCBSensor(psSensor)) {
+@@ -1367,6 +1365,14 @@ bool targetInSensorRange(BASE_OBJECT *psTarget, BASE_OBJECT *psOrigin) {
+ 		}
+ 
+ 	}
++	DROID *psCommander = cmdDroidGetDesignator(psOrigin->player);
++	if(psCommander != NULL) {
++		if(psCommander->psActionTarget[0] == psTarget)
++		{
++			return true;
++		}
++	}
++
+ 	return false;
+ 
+ }

@@ -3,10 +3,6 @@ TODO for FKmod
 
 Requirements for Final Version
 ------------------------------
-Code
-----
-* Make commander sight count as artillery sensor for support fire
-* Fix artillery units unable to attack
 
 Stats
 -----
