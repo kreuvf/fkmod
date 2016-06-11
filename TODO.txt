@@ -6,8 +6,10 @@ Requirements for Final Version
 
 Stats
 -----
-* Reduce structure armor considerably (most weapons do literally no damage!!!11oneoneeleven)
-
+* Improve AA
+* Lower railgun angles and/or ranges (max = Cannon)
+* MGs, especially Tank MGs too weak against non-cyborgs (tanks, structures)
+* Rocket Artillery: salvo reload
 
 Nice to Have for Final Version
 ------------------------------
