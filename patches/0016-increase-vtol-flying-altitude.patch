@@ -1,0 +1,17 @@
+diff --git a/src/move.cpp b/src/move.cpp
+index b310ee5..d4793a9 100644
+--- a/src/move.cpp
++++ b/src/move.cpp
+@@ -60,9 +60,9 @@
+ #include "drive.h"
+ 
+ /* max and min vtol heights above terrain */
+-#define	VTOL_HEIGHT_MIN				250
+-#define	VTOL_HEIGHT_LEVEL			300
+-#define	VTOL_HEIGHT_MAX				350
++#define	VTOL_HEIGHT_MIN				400
++#define	VTOL_HEIGHT_LEVEL			450
++#define	VTOL_HEIGHT_MAX				500
+ 
+ /* minimum distance for cyborgs to jump */
+ #define	CYBORG_MIN_JUMP_DISTANCE	500
