@@ -25,9 +25,9 @@ FK-FF-Machinegun-Cyborg3,mgheavy.ogg,-1,1337
 FK-FF-Machinegun-Structure,mgheavy.ogg,-1,1337
 FK-FF-Machinegun-Structure2,mgheavy.ogg,-1,1337
 FK-FF-Machinegun-Structure3,mgheavy.ogg,-1,1337
-FK-FF-Machinegun-Tank,mgtower.ogg,-1,1337
-FK-FF-Machinegun-Tank2,mgtower.ogg,-1,1337
-FK-FF-Machinegun-Tank3,mgtower.ogg,-1,1337
+FK-FF-Machinegun-Tank,rapdcan.ogg,smlexpl.ogg,1337
+FK-FF-Machinegun-Tank2,rapdcan.ogg,smlexpl.ogg,1337
+FK-FF-Machinegun-Tank3,rapdcan.ogg,smlexpl.ogg,1337
 FK-FF-Machinegun-VTOL,mgtower.ogg,-1,1337
 FK-FF-Machinegun-VTOL2,mgtower.ogg,-1,1337
 FK-FF-Machinegun-VTOL3,mgtower.ogg,-1,1337
