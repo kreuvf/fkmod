@@ -6,7 +6,7 @@ Requirements for Final Version
 
 Stats
 -----
-* Rocket Artillery: salvo reload
+* General: Splash damage sucks
 
 Nice to Have for Final Version
 ------------------------------
