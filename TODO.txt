@@ -6,7 +6,6 @@ Requirements for Final Version
 
 Stats
 -----
-* General: Splash damage sucks
 
 Nice to Have for Final Version
 ------------------------------
