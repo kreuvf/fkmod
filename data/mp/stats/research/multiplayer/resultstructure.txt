@@ -1,8 +1,9 @@
 R-P-VTOL,FKVTOLFactory,0,1337
 R-P-VTOL,FKRearmPad,0,1338
-R-St-RepairFacility,FKRepairFacility,0,1340
-R-Def-Wall,FKWall,0,1341
-R-Def-Wall,FKWallCorner,0,1342
+R-St-RepairFacility,FKRepairFacility,0,1339
+R-Def-Wall,FKWall,0,1340
+R-Def-Wall,FKWallCorner,0,1341
+R-Def-Wall,FKWallGate,0,1342
 R-SensorSurveillance,FKTowerSurveillance,0,1343
 R-SensorArtillery,FKTowerArtillery,0,1344
 R-SensorCB,FKTowerCB,0,1345
