@@ -3,9 +3,7 @@ TODO for FKmod
 
 Requirements for Final Version
 ------------------------------
-
-Stats
------
+* none
 
 Nice to Have for Final Version
 ------------------------------
