@@ -3,7 +3,17 @@ TODO for FKmod
 
 Requirements for Final Version
 ------------------------------
-* none
+* Stormbringer AA damage too low (incl. incendiary damage which is non-existent)
+* Flamer
+	* Change special upgrades away from range
+	* Add penetrate
+	* Set range to 768
+	* Micro salvoes
+* Cyborg production time
+	* Increase to make less zergy
+	* Maybe use Super cyborg models for easier selection
+* VTOL bomb research
+	* Make available all bomb researches after VTOL research
 
 Nice to Have for Final Version
 ------------------------------
