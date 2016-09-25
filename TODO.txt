@@ -8,9 +8,7 @@ Requirements for Final Version
 	* Change special upgrades away from range
 	* Add penetrate
 	* Set range to 768
-	* Micro salvoes? Continuous fire?	
-* VTOL bomb research
-	* Make available all bomb researches after VTOL research
+	* Micro salvoes? Continuous fire?
 
 Nice to Have for Final Version
 ------------------------------

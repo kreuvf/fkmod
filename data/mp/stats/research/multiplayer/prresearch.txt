@@ -110,16 +110,13 @@ R-W-ART-Howitzer,R-W-SF-Cannon,1422
 R-W-ART-RocketBattery,R-W-MIS-ScourgeMissile,1423
 R-W-FF-AAHurricane,R-W-FF-Machinegun,1424
 R-W-HOT-AAStormbringer,R-W-HOT-Laser,1425
-R-W-HOT-BombThermite,R-W-HOT-Flamethrower,1426
 R-W-HOT-BombThermite,R-P-VTOL,1427
 R-W-HOT-HowitzerIncendiary,R-W-ART-Howitzer,1428
 R-W-HOT-HowitzerIncendiary,R-W-HOT-Flamethrower,1429
 R-W-MIS-AAAvengerSAM,R-W-MIS-ScourgeMissile,1430
 R-W-SF-AACyclone,R-W-SF-Railgun,1433
-R-W-SF-BombHeavy,R-W-SF-Railgun,1434
 R-W-SF-BombHeavy,R-P-VTOL,1435
 R-W-SPL-BombCluster,R-P-VTOL,1437
-R-W-SPL-BombCluster,R-W-SF-Cannon,1438
 R-W-SPL-GrenadeLauncher,R-W-SF-Cannon,1439
 R-WU-AAAvengerSAM-ACC1,R-W-MIS-AAAvengerSAM,1440
 R-WU-AAAvengerSAM-ACC2,R-WU-AAAvengerSAM-ACC1,1441
