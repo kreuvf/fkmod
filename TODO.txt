@@ -8,10 +8,7 @@ Requirements for Final Version
 	* Change special upgrades away from range
 	* Add penetrate
 	* Set range to 768
-	* Micro salvoes
-* Cyborg production time
-	* Increase to make less zergy
-	* Maybe use Super cyborg models for easier selection
+	* Micro salvoes? Continuous fire?	
 * VTOL bomb research
 	* Make available all bomb researches after VTOL research
 
@@ -31,4 +28,5 @@ Miscellaneous
 -------------
 * Surveillance Tower: Sensor is floating on top of tower
 * Propulsion changing: Changing the propulsion of an existing design does not change until weapon is changed afterwards
+* Maybe use Super cyborg models for easier selection
 
