@@ -4,11 +4,7 @@ TODO for FKmod
 Requirements for Final Version
 ------------------------------
 * Stormbringer AA damage too low (incl. incendiary damage which is non-existent)
-* Flamer
-	* Change special upgrades away from range
-	* Add penetrate
-	* Set range to 768
-	* Micro salvoes? Continuous fire?
+* Bug: incendiary effect does not stack
 
 Nice to Have for Final Version
 ------------------------------
