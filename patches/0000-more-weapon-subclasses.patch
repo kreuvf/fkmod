@@ -1,8 +1,8 @@
 diff --git a/src/component.cpp b/src/component.cpp
-index d8ba40b..65e7411 100644
+index 57ef098..666ba54 100644
 --- a/src/component.cpp
 +++ b/src/component.cpp
-@@ -123,6 +123,9 @@ UDWORD getComponentRadius(BASE_STATS *psComponent)
+@@ -128,6 +128,9 @@ UDWORD getComponentRadius(BASE_STATS *psComponent)
  	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
  	if (StatIsComponent(psComponent) != COMP_WEAPON
  		|| (((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_BOMB
@@ -12,7 +12,7 @@ index d8ba40b..65e7411 100644
  			&& ((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_EMP))
  	{
  		ASSERT(ComponentIMD, "No ComponentIMD!");
-@@ -414,6 +417,9 @@ void displayComponentButton(BASE_STATS *Stat, Vector3i *Rotation, Vector3i *Posi
+@@ -419,6 +422,9 @@ void displayComponentButton(BASE_STATS *Stat, Vector3i *Rotation, Vector3i *Posi
  	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
  	if (StatIsComponent(Stat) != COMP_WEAPON
  		|| (((WEAPON_STATS *)Stat)->weaponSubClass != WSC_BOMB

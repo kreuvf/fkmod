@@ -1,5 +1,5 @@
 diff --git a/src/function.cpp b/src/function.cpp
-index 92fde81..74ed9e0 100644
+index 85ca446..3255c56 100644
 --- a/src/function.cpp
 +++ b/src/function.cpp
 @@ -145,7 +145,7 @@ static bool loadProduction(const char *pData)
@@ -72,7 +72,7 @@ index eb87abb..244b661 100644
  
  /*To research topics available*/
 diff --git a/src/intdisplay.cpp b/src/intdisplay.cpp
-index 995978e..2cabd71 100644
+index 49c77ef..adb2186 100644
 --- a/src/intdisplay.cpp
 +++ b/src/intdisplay.cpp
 @@ -267,7 +267,7 @@ void intUpdateProgressBar(WIDGET *psWidget, W_CONTEXT *psContext)
@@ -85,10 +85,10 @@ index 995978e..2cabd71 100644
  				}
  				else
 diff --git a/src/structure.cpp b/src/structure.cpp
-index 82ac814..d83b574 100644
+index 09952e8..ed0159d 100644
 --- a/src/structure.cpp
 +++ b/src/structure.cpp
-@@ -1708,12 +1708,11 @@ STRUCTURE* buildStructureDir(STRUCTURE_STATS *pStructureType, UDWORD x, UDWORD y
+@@ -1709,12 +1709,11 @@ STRUCTURE* buildStructureDir(STRUCTURE_STATS *pStructureType, UDWORD x, UDWORD y
  
  				//quick check not trying to add too much
  				ASSERT_OR_RETURN(NULL, psBuilding->pFunctionality->factory.productionOutput +
@@ -102,7 +102,7 @@ index 82ac814..d83b574 100644
  				capacity = psBuilding->pFunctionality->factory.capacity;
  			}
  		}
-@@ -1936,7 +1935,7 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
+@@ -1937,7 +1936,7 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
  			unsigned int x, y;
  
  			psFactory->capacity = (UBYTE) ((PRODUCTION_FUNCTION*)psBuilding->pStructureType->asFuncList[0])->capacity;

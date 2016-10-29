@@ -1,5 +1,5 @@
 diff --git a/src/display.cpp b/src/display.cpp
-index 52b89a4..02c9693 100644
+index 4d57132..cd9b486 100644
 --- a/src/display.cpp
 +++ b/src/display.cpp
 @@ -1750,9 +1750,10 @@ static void dealWithLMBDroid(DROID* psDroid, SELECTION_TYPE selection)
@@ -42,10 +42,10 @@ index 52b89a4..02c9693 100644
  
  								FeedbackOrderGiven();
 diff --git a/src/structure.cpp b/src/structure.cpp
-index d83b574..6030bb1 100644
+index ed0159d..d79fef9 100644
 --- a/src/structure.cpp
 +++ b/src/structure.cpp
-@@ -5609,8 +5609,8 @@ void printStructureInfo(STRUCTURE *psStructure)
+@@ -5617,8 +5617,8 @@ void printStructureInfo(STRUCTURE *psStructure)
  		{
  			unsigned int assigned_droids = countAssignedDroids(psStructure);
  
@@ -56,7 +56,7 @@ index d83b574..6030bb1 100644
  		}
  		break;
  	case REF_DEFENSE:
-@@ -5634,13 +5634,13 @@ void printStructureInfo(STRUCTURE *psStructure)
+@@ -5642,13 +5642,13 @@ void printStructureInfo(STRUCTURE *psStructure)
  		{
  			unsigned int assigned_droids = countAssignedDroids(psStructure);
  
@@ -74,7 +74,7 @@ index d83b574..6030bb1 100644
  		}
  		break;
  	case REF_REPAIR_FACILITY:
-@@ -5653,7 +5653,7 @@ void printStructureInfo(STRUCTURE *psStructure)
+@@ -5661,7 +5661,7 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
@@ -83,7 +83,7 @@ index d83b574..6030bb1 100644
  		}
  		break;
  	case REF_RESOURCE_EXTRACTOR:
-@@ -5666,7 +5666,7 @@ void printStructureInfo(STRUCTURE *psStructure)
+@@ -5674,7 +5674,7 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
@@ -92,7 +92,7 @@ index d83b574..6030bb1 100644
  		}
  		break;
  	case REF_POWER_GEN:
-@@ -5689,8 +5689,8 @@ void printStructureInfo(STRUCTURE *psStructure)
+@@ -5697,8 +5697,8 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
@@ -103,7 +103,7 @@ index d83b574..6030bb1 100644
  		}
  		break;
  	case REF_CYBORG_FACTORY:
-@@ -5707,8 +5707,8 @@ void printStructureInfo(STRUCTURE *psStructure)
+@@ -5715,8 +5715,8 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
@@ -114,7 +114,7 @@ index d83b574..6030bb1 100644
  		}
  		break;
  	case REF_RESEARCH:
-@@ -5722,8 +5722,8 @@ void printStructureInfo(STRUCTURE *psStructure)
+@@ -5730,8 +5730,8 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
@@ -125,7 +125,7 @@ index d83b574..6030bb1 100644
  		}
  		break;
  	default:
-@@ -5736,8 +5736,8 @@ void printStructureInfo(STRUCTURE *psStructure)
+@@ -5744,8 +5744,8 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{

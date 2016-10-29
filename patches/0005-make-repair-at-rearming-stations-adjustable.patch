@@ -1,5 +1,5 @@
 diff --git a/src/function.cpp b/src/function.cpp
-index 74ed9e0..c86fda7 100644
+index 3255c56..bbe7968 100644
 --- a/src/function.cpp
 +++ b/src/function.cpp
 @@ -294,7 +294,7 @@ static bool loadReArmFunction(const char *pData)
@@ -59,10 +59,10 @@ index 244b661..f5058b6 100644
  };
  
 diff --git a/src/game.cpp b/src/game.cpp
-index 85e1cae..7dbb1f5 100644
+index da4d82f..accbaf1 100644
 --- a/src/game.cpp
 +++ b/src/game.cpp
-@@ -4904,6 +4904,7 @@ static bool loadSaveStructure2(const char *pFileName, STRUCTURE **ppList)
+@@ -4903,6 +4903,7 @@ static bool loadSaveStructure2(const char *pFileName, STRUCTURE **ppList)
  			break;
  		case REF_REARM_PAD:
  			psReArmPad = ((REARM_PAD *)psStructure->pFunctionality);
@@ -70,7 +70,7 @@ index 85e1cae..7dbb1f5 100644
  			psReArmPad->reArmPoints = ini.value("Rearm/reArmPoints", psReArmPad->reArmPoints).toInt();
  			psReArmPad->timeStarted = ini.value("Rearm/timeStarted", psReArmPad->timeStarted).toInt();
  			psReArmPad->timeLastUpdated = ini.value("Rearm/timeLastUpdated", psReArmPad->timeLastUpdated).toInt();
-@@ -5145,6 +5146,7 @@ bool writeStructFile(const char *pFileName)
+@@ -5144,6 +5145,7 @@ bool writeStructFile(const char *pFileName)
  				else if (psCurr->pStructureType->type == REF_REARM_PAD)
  				{
  					REARM_PAD *psReArmPad = ((REARM_PAD *)psCurr->pFunctionality);
@@ -79,7 +79,7 @@ index 85e1cae..7dbb1f5 100644
  					ini.setValue("Rearm/timeStarted", psReArmPad->timeStarted);
  					ini.setValue("Rearm/timeLastUpdated", psReArmPad->timeLastUpdated);
 diff --git a/src/research.cpp b/src/research.cpp
-index 4a6327e..651232e 100644
+index 28c755b..b8541fc 100644
 --- a/src/research.cpp
 +++ b/src/research.cpp
 @@ -938,6 +938,11 @@ void researchResult(UDWORD researchIndex, UBYTE player, bool bDisplay, STRUCTURE
@@ -107,10 +107,10 @@ index 4a6327e..651232e 100644
  				break;
  			case(WEAPON_UPGRADE_TYPE):
 diff --git a/src/structure.cpp b/src/structure.cpp
-index 876c55f..691a624 100644
+index d79fef9..364c0aa 100644
 --- a/src/structure.cpp
 +++ b/src/structure.cpp
-@@ -104,8 +104,6 @@
+@@ -105,8 +105,6 @@
  
  //used to calculate the time required for rearming
  #define REARM_FACTOR                10
@@ -119,7 +119,7 @@ index 876c55f..691a624 100644
  
  //Value is stored for easy access to this structure stat
  UDWORD			factoryModuleStat;
-@@ -2051,10 +2049,11 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
+@@ -2052,10 +2050,11 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
  		{
  			REARM_PAD* psReArmPad = &psBuilding->pFunctionality->rearmPad;
  
@@ -133,7 +133,7 @@ index 876c55f..691a624 100644
  			break;
  		}
  
-@@ -3066,7 +3065,21 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
+@@ -3075,7 +3074,21 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
  					{
  						psChosenObj = psDroid;
  					}
@@ -155,7 +155,7 @@ index 876c55f..691a624 100644
  				if (!psChosenObj) // None available? Try allies.
  				{
  					for (i=0; i<MAX_PLAYERS; i++)
-@@ -3412,7 +3425,7 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
+@@ -3421,7 +3434,7 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
  		{
  			REARM_PAD	*psReArmPad = &psStructure->pFunctionality->rearmPad;
  			UDWORD pointsAlreadyAdded;
@@ -164,7 +164,7 @@ index 876c55f..691a624 100644
  			psDroid = (DROID *)psChosenObj;
  			ASSERT_OR_RETURN( , psDroid != NULL, "invalid droid pointer");
  			ASSERT_OR_RETURN( , isVtolDroid(psDroid), "invalid droid type");
-@@ -3481,20 +3494,37 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
+@@ -3490,20 +3503,37 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
  						}
  					}
  				}
@@ -183,26 +183,26 @@ index 876c55f..691a624 100644
 +				
 +					//if in multiPlayer, and a Transporter - make sure its on the ground before repairing
 +					if (bMultiPlayer && (psDroid->droidType == DROID_TRANSPORTER || psDroid->droidType == DROID_SUPERTRANSPORTER))
-+					{
+ 					{
+-						psDroid->body += (pointsToAdd - pointsAlreadyAdded);
 +						if (!(psDroid->sMove.Status == MOVEINACTIVE &&
 +							psDroid->sMove.iVertSpeed == 0))
 +						{
 +							objTrace(psStructure->id, "Waiting for transporter to land");
 +							return;
 +						}
-+					}
+ 					}
 +
 +					//don't do anything if the resistance is low in multiplayer
 +					if (bMultiPlayer)
- 					{
--						psDroid->body += (pointsToAdd - pointsAlreadyAdded);
++					{
 +						if (psStructure->resistance < (SWORD)structureResistance(psStructure->
 +							pStructureType, psStructure->player))
 +						{
 +							objTrace(psStructure->id, "Resistance too low for repair");
 +							return;
 +						}
- 					}
++					}
 +
 +					// FIXME: duplicate code, make repairing cost power again
 +					/* do repairing */
