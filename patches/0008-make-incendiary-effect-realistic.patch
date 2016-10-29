@@ -1,3 +1,22 @@
+diff --git a/src/combat.cpp b/src/combat.cpp
+index 86515ca..4959aa9 100644
+--- a/src/combat.cpp
++++ b/src/combat.cpp
+@@ -485,13 +485,7 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+ 
+ 	if (isDamagePerSecond)
+ 	{
+-		int deltaDamageRate = actualDamage - psObj->burnDamage;
+-		if (deltaDamageRate <= 0)
+-		{
+-			return 0;  // Did this much damage already, this tick, so don't do more.
+-		}
+-		actualDamage = gameTimeAdjustedAverage(deltaDamageRate);
+-		psObj->burnDamage += deltaDamageRate;
++		actualDamage = gameTimeAdjustedAverage(actualDamage);
+ 	}
+ 
+ 	objTrace(psObj->id, "objDamage: Penetrated %d", actualDamage);
 diff --git a/src/droid.cpp b/src/droid.cpp
 index 755cb30..7cbca8a 100644
 --- a/src/droid.cpp
@@ -27,7 +46,7 @@ index 755cb30..7cbca8a 100644
  	if (isDead((BASE_OBJECT *)psDroid))
  	{
 diff --git a/src/projectile.cpp b/src/projectile.cpp
-index e8eb7db..1164142 100644
+index e8eb7db..b2d8b4d 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
 @@ -1374,6 +1374,13 @@ void PROJECTILE::update()
