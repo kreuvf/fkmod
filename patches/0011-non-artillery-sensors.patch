@@ -16,7 +16,7 @@ index a81fc92..cb8c1ba 100644
  		if ( radSq >= rangeSq || !proj_Direct( psStats ) )
  		{
 -			/* Check angle, if the weapon is NOT firing indirectly */
--			if(psStats->movementModel == MM_INDIRECT)
+-			if(psStats->movementModel == MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT)
 -			{
 -				return true;
 -			}
@@ -36,7 +36,7 @@ index a81fc92..cb8c1ba 100644
 +			minEle = psStats->minElevation;
 +			maxEle = psStats->maxElevation;
 +			if(minEle <= angle && angle <= maxEle) {
-+				if(psStats->movementModel != MM_INDIRECT) {
++				if(psStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
  					return true;
  				}
  			}
@@ -53,7 +53,7 @@ index a81fc92..cb8c1ba 100644
  		if ( radSq >= rangeSq || !proj_Direct( psStats ) )
  		{
 -			/* Check angle, if the weapon is NOT indirectly firing */
--			if(psStats->movementModel == MM_INDIRECT)
+-			if(psStats->movementModel == MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT)
 -			{
 -				return true;
 -			}
@@ -73,7 +73,7 @@ index a81fc92..cb8c1ba 100644
 +			minEle = psStats->minElevation;
 +			maxEle = psStats->maxElevation;
 +			if(minEle <= angle && angle <= maxEle) {
-+				if(psStats->movementModel != MM_INDIRECT) {
++				if(psStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
  					return true;
  				}
  			}
