@@ -10,7 +10,6 @@ Requirements for Final Version
 	* MG damage vs. ground units too high
 	* VTOL MG too strong
 	* FLAMER structure modifier bit too low
-* Code: Check angle checking code
 
 Nice to Have for Final Version
 ------------------------------

@@ -40,7 +40,7 @@ unchanged:
 +			minEle = psStats->minElevation;
 +			maxEle = psStats->maxElevation;
 +			if(minEle <= angle && angle <= maxEle) {
-+				if(psStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
++				if(psStats->movementModel == MM_INDIRECT || psStats->movementModel == MM_HOMINGINDIRECT) {
 +					return true;
 +				}
 +			}
@@ -71,7 +71,7 @@ unchanged:
 +			minEle = psStats->minElevation;
 +			maxEle = psStats->maxElevation;
 +			if(minEle <= angle && angle <= maxEle) {
-+				if(psStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
++				if(psStats->movementModel == MM_INDIRECT || psStats->movementModel == MM_HOMINGINDIRECT) {
 +					return true;
 +				}
 +			}
