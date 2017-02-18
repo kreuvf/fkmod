@@ -1,0 +1,175 @@
+diff --git a/src/combat.cpp b/src/combat.cpp
+index eae106f..f16b5dc 100644
+--- a/src/combat.cpp
++++ b/src/combat.cpp
+@@ -475,14 +475,16 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+ 	}
+ 
+ 	// Reduce damage taken by EXP_REDUCE_DAMAGE % for each experience level
++	//debug(LOG_WZ, "Step 1:       damage = %d", damage);
+ 	actualDamage = (damage * (100 - EXP_REDUCE_DAMAGE * level)) / 100;
++	//debug(LOG_WZ, "Step 2: actualDamage = %d", actualDamage);
+ 
+ 	// You always do at least a third of the experience modified damage
+ 	actualDamage = MAX(actualDamage - armour, actualDamage / 3);
+-
++	//debug(LOG_WZ, "Step 3: actualDamage = %d", actualDamage);
+ 	// And at least MIN_WEAPON_DAMAGE points
+ 	actualDamage = MAX(actualDamage, MIN_WEAPON_DAMAGE);
+-
++	//debug(LOG_WZ, "Step 4: actualDamage = %d", actualDamage);
+ 	if (isDamagePerSecond)
+ 	{
+ 		int deltaDamageRate = actualDamage - psObj->burnDamage;
+@@ -512,6 +514,7 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+ 
+ 	// Subtract the dealt damage from the droid's remaining body points
+ 	psObj->body -= actualDamage;
++	//debug(LOG_WZ, "Step 5: body points: %d; actualDamage: %d; new bodypoints: %d", oldbody, actualDamage, psObj->body);
+ 
+ 	syncDebugObject(psObj, 'D');
+ 
+@@ -528,13 +531,14 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BASE_OBJECT *psTarget)
+ {
+ 	unsigned int damage;
++	unsigned int kreuvfDamage;
+ 	int	actualDamage, armour = 0, level = 1;
+ 
+ 	if (psTarget == NULL)
+ 		return 0;  // Hard to destroy the ground. The armour on the mud is very strong and blocks all damage.
+-
++	// Location for new calcDamage --> calcDamage here used for prediction --> needs to be changed to account for armour as well; armour calculation later needs to be adapted as well
+ 	damage = calcDamage(weaponDamage(psStats, player), psStats->weaponEffect, psTarget);
+-
++	kreuvfDamage = calcKreuvfDamage(weaponDamage(psStats, player), psStats, psTarget);
+ 	// EMP cannons do no damage, if we are one return now
+ 	if (psStats->weaponSubClass == WSC_EMP)
+ 	{
+diff --git a/src/projectile.cpp b/src/projectile.cpp
+index 9877ba5..071b1eb 100644
+--- a/src/projectile.cpp
++++ b/src/projectile.cpp
+@@ -1132,6 +1132,7 @@ static void proj_ImpactFunc( PROJECTILE *psObj )
+ 		 && psObj->psSource)
+ 		{
+ 			// If we did enough `damage' to capture the target
++			// Location for new calcDamage --> electronicDamage directly subtracts calcDamage from resistance --> planned change more sensible anyway
+ 			if (electronicDamage(psObj->psDest,
+ 			                     calcDamage(weaponDamage(psStats, psObj->player), psStats->weaponEffect, psObj->psDest),
+ 			                     psObj->player))
+@@ -1158,7 +1159,9 @@ static void proj_ImpactFunc( PROJECTILE *psObj )
+ 		else
+ 		{
+ 			// Calculate the damage the weapon does to its target
++			// Location for new calcDamage --> needs to take armour into account?
+ 			unsigned int damage = calcDamage(weaponDamage(psStats, psObj->player), psStats->weaponEffect, psObj->psDest);
++			unsigned int kreuvfDamage = calcKreuvfDamage(weaponDamage(psStats, psObj->player), psStats, psObj->psDest);
+ 
+ 			// If we are in a multi-player game and the attacker is our responsibility
+ 			if (bMultiPlayer && psObj->psSource)
+@@ -1253,7 +1256,9 @@ static void proj_ImpactFunc( PROJECTILE *psObj )
+ 				continue;  // Target was lucky, and the tank or structure somehow managed to dodge the explosion.
+ 			}
+ 			// The psCurr will get damaged, at this point.
++			// Location for new calcDamage --> needs to take armour into account?
+ 			unsigned damage = calcDamage(weaponRadDamage(psStats, psObj->player), psStats->weaponEffect, psCurr);
++			unsigned kreuvfDamage = calcKreuvfDamage(weaponRadDamage(psStats, psObj->player), psStats, psCurr);
+ 			debug(LOG_ATTACK, "Damage to object %d, player %d : %u", psCurr->id, psCurr->player, damage);
+ 			if (bMultiPlayer && psObj->psSource != NULL && psCurr->type != OBJ_FEATURE)
+ 			{
+@@ -1516,17 +1521,25 @@ structure strength*/
+ UDWORD	calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *psTarget)
+ {
+ 	UDWORD	damage = baseDamage * 100;
+-
+ 	if (psTarget->type == OBJ_STRUCTURE)
+ 	{
++		/*debug(LOG_WZ, "Old step 1 (structure): damage %d", damage);*/
+ 		damage += baseDamage * (asStructStrengthModifier[weaponEffect][((STRUCTURE *)psTarget)->pStructureType->strength] - 100);
++		/*debug(LOG_WZ, "Old step 2 (structure): (type %i, mod %i)): damage %d", 
++			((STRUCTURE *)psTarget)->pStructureType->type, 
++			asStructStrengthModifier[weaponEffect][((STRUCTURE *)psTarget)->pStructureType->strength] - 100,
++			damage);*/
+ 	}
+ 	else if (psTarget->type == OBJ_DROID)
+ 	{
++		debug(LOG_WZ, "Old step 1 (droid): damage %d", damage);
+ 		const int propulsion = (asPropulsionStats + ((DROID *)psTarget)->asBits[COMP_PROPULSION].nStat)->propulsionType;
+ 		const int body = (asBodyStats + ((DROID *)psTarget)->asBits[COMP_BODY].nStat)->size;
+ 		damage += baseDamage * (asWeaponModifier[weaponEffect][propulsion] - 100);
++		debug(LOG_WZ, "Old step 2 (droid): damage %d, baseDamage %d, propmod %d, propmod - 100 %d, baseDamage * (propMod - 100) %d", damage, baseDamage, asWeaponModifier[weaponEffect][propulsion], asWeaponModifier[weaponEffect][propulsion] - 100, baseDamage * (asWeaponModifier[weaponEffect][propulsion] - 100));
+ 		damage += baseDamage * (asWeaponModifierBody[weaponEffect][body] - 100);
++		debug(LOG_WZ, "Old step 3 (droid): damage %d, baseDamage %d, bodymod %d, bodymod - 100 %d, baseDamage * (bodyMod - 100) %d", damage, baseDamage, asWeaponModifierBody[weaponEffect][body], asWeaponModifierBody[weaponEffect][body] - 100, baseDamage * (asWeaponModifierBody[weaponEffect][body] - 100));
++		debug(LOG_WZ, "Old step 4 (droid): damage %d", damage);
+ 	}
+ 
+ 	// A little fail safe!
+@@ -1538,6 +1551,55 @@ UDWORD	calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *ps
+ 	return damage / 100;
+ }
+ 
++/* For debug purposes only patch-mod-after-armour */
++UDWORD calcKreuvfDamage(UDWORD baseDamage, WEAPON_STATS *psStats, BASE_OBJECT *psTarget)
++{
++	double damage = (double) baseDamage;
++	/* double debugDamage = damage; */
++	const WEAPON_EFFECT weaponEffect = psStats->weaponEffect;
++	const WEAPON_CLASS weaponClass = psStats->weaponClass;
++	
++	if (psTarget->type == OBJ_STRUCTURE)
++	{		
++		const STRUCTURE *target = (STRUCTURE *)psTarget;
++		const UDWORD armour = target->armour[weaponClass];
++		const STRUCTSTRENGTH_MODIFIER structMod = target->pStructureType->strength;
++		const double modifier = asStructStrengthModifier[weaponEffect][structMod]/100.0;
++		
++		/*debug(LOG_WZ, "Target type: structure. Structure type: %i", target->pStructureType->type);
++		debug(LOG_WZ, "Armour: %i kinetic, %i thermal", target->armour[WC_KINETIC], target->armour[WC_HEAT]);
++		debug(LOG_WZ, "Weapon effect: %i", weaponEffect);*/
++		
++		/* Step 1: Reduce damage by armour */
++		damage < armour ? 0 : damage -= armour;
++		/* debug(LOG_WZ, "\nNew Step 1: Reduce damage by armour\nWeapon damage: %i, Relevant armour: %i, Damage after armour: %e", baseDamage, armour, damage);*/
++		
++		/* Step 2: Reduce damage by target type modifier */
++		/* debugDamage = damage; */
++		damage = floor(damage * modifier);
++		/* debug(LOG_WZ, "\nNew Step 2: Reduce damage by target type modifier\nDamage before: %e, Modifier: %e, Damage after: %e", debugDamage, modifier, damage);	*/
++	}
++	else if (psTarget->type == OBJ_DROID)
++	{
++		const DROID *target = (DROID *)psTarget;
++		const UDWORD armour = target->armour[weaponClass];
++		const int propulsion = (asPropulsionStats + ((DROID *)psTarget)->asBits[COMP_PROPULSION].nStat)->propulsionType;
++		const double modifier = asWeaponModifier[weaponEffect][propulsion]/100.0;
++		/* Hint: Do not care about asWeaponModifierBody[weaponEffect][body] as
++		probably zarel killed the correct parsing of these modifiers in 2009-05
++		and they were just a constant factor of 1 anyway! */
++		
++		/* Step 1: Reduce damage by armour */
++		damage < armour ? 0 : damage -= armour;
++		/* debug(LOG_WZ, "\nNew Step 1: Reduce damage by armour\nWeapon damage: %i, Relevant armour: %i, Damage after armour: %e", baseDamage, armour, damage); */
++		
++		/* Step 2: Reduce damage by propulsion type modifier */
++		damage = floor(damage * modifier);
++		/* debug(LOG_WZ, "\nNew Step 2: Reduce damage by target type modifier\nDamage before: %e, Modifier: %e, Damage after: %e", debugDamage, modifier, damage); */
++	}
++	return (int) round(damage);
++}
++
+ /*
+  * A quick explanation about hown this function works:
+  *  - It returns an integer between 0 and 100 (see note for exceptions);
+diff --git a/src/projectile.h b/src/projectile.h
+index 2eec477..3dc49ad 100644
+--- a/src/projectile.h
++++ b/src/projectile.h
+@@ -71,6 +71,7 @@ bool proj_Direct(const WEAPON_STATS* psStats);
+ SDWORD	proj_GetLongRange(const WEAPON_STATS* psStats);
+ 
+ extern UDWORD calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *psTarget);
++extern UDWORD calcKreuvfDamage(UDWORD baseDamage, WEAPON_STATS *psStats, BASE_OBJECT *psTarget);
+ extern bool gfxVisible(PROJECTILE *psObj);
+ 
+ /***************************************************************************/
