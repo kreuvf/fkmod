@@ -1141,15 +1141,6 @@ unchanged:
  	WEAPON_STATS	*psStats;
  	int compIndex;
  
-@@ -177,7 +179,7 @@
- 	psStats = asWeaponStats + compIndex;
- 
- 	if (psDroid->order.type == DORDER_ATTACKTARGET
--		&& secondaryGetState(psDroid, DSO_HALTTYPE) == DSS_HALT_HOLD)
-+			&& secondaryGetState(psDroid, DSO_HALTTYPE) == DSS_HALT_HOLD)
- 	{
- 		longRange = proj_GetLongRange(psStats);
- 		rangeSq = longRange * longRange;
 @@ -220,10 +222,19 @@
  		rangeSq = psStats->minRange * psStats->minRange;
  		if ( radSq >= rangeSq || !proj_Direct( psStats ) )
@@ -1388,7 +1379,7 @@ unchanged:
  			if(minEle <= angle && angle <= maxEle) {
 +				return true;
 +			} else {
- 				if(psStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
+ 				if(psStats->movementModel == MM_INDIRECT || psStats->movementModel == MM_HOMINGINDIRECT) {
  					return true;
  				}
 @@ -279,6 +281,8 @@ bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
@@ -1397,7 +1388,7 @@ unchanged:
  			if(minEle <= angle && angle <= maxEle) {
 +				return true;
 +			} else {
- 				if(psStats->movementModel != MM_INDIRECT && psStats->movementModel != MM_HOMINGINDIRECT) {
+ 				if(psStats->movementModel == MM_INDIRECT || psStats->movementModel == MM_HOMINGINDIRECT) {
  					return true;
  				}
 only in patch2:
