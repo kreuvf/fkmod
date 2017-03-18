@@ -221,7 +221,7 @@ index c197f9f..b93b87c 100644
  extern void     featureInitVars(void);
  
 diff --git a/src/projectile.cpp b/src/projectile.cpp
-index b2d8b4d..34670b5 100644
+index b2d8b4d..2256e1c 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
 @@ -110,8 +110,7 @@ static void	proj_ImpactFunc( PROJECTILE *psObj );
@@ -281,16 +281,27 @@ index b2d8b4d..34670b5 100644
  			proj_UpdateKills(psObj, relativeDamage);
  		}
  	}
-@@ -1485,7 +1487,7 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+@@ -1476,7 +1478,7 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+ 			}
+ 		}
+ 	}
+-	unsigned damageRate = weaponIncenDamage(psStats,psProj->player);
++	unsigned damageRate;
+ 
+ 	int relativeDamage;
+ 	
+@@ -1485,7 +1487,9 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
  		for (std::list<BASE_OBJECT *>::iterator it = psProj->burnVictims.begin(); it != psProj->burnVictims.end(); it++)
  		{
  			psCurr = *it;
 -			relativeDamage = objectDamage(psCurr, damageRate, psStats->weaponClass, psStats->weaponSubClass, gameTime - deltaGameTime/2 + 1, true);
++			damageRate = weaponIncenDamage(psCurr, psStats, psProj->player);
 +			relativeDamage = objectDamage(psCurr, damageRate, psStats, gameTime - deltaGameTime/2 + 1, true);
++			debug(LOG_WZ, "relDmg: %i, dmgRate: %i", relativeDamage, damageRate);
  			proj_UpdateKills(psProj, relativeDamage);
  		}
  	}
-@@ -1579,17 +1581,25 @@ structure strength*/
+@@ -1579,17 +1583,25 @@ structure strength*/
  UDWORD	calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *psTarget)
  {
  	UDWORD	damage = baseDamage * 100;
@@ -317,7 +328,7 @@ index b2d8b4d..34670b5 100644
  	}
  
  	// A little fail safe!
-@@ -1601,6 +1611,55 @@ UDWORD	calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *ps
+@@ -1601,6 +1613,55 @@ UDWORD	calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *ps
  	return damage / 100;
  }
  
@@ -373,7 +384,7 @@ index b2d8b4d..34670b5 100644
  /*
   * A quick explanation about hown this function works:
   *  - It returns an integer between 0 and 100 (see note for exceptions);
-@@ -1616,20 +1675,20 @@ UDWORD	calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *ps
+@@ -1616,20 +1677,20 @@ UDWORD	calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *ps
   *    multiplied by -1, resulting in a negative number. Killed features do not
   *    result in negative numbers.
   */
@@ -410,6 +421,45 @@ index 4a7e1ad..797c881 100644
  extern bool gfxVisible(PROJECTILE *psObj);
  
  /***************************************************************************/
+diff --git a/src/stats.cpp b/src/stats.cpp
+index ecaf2a0..e515f80 100644
+--- a/src/stats.cpp
++++ b/src/stats.cpp
+@@ -3115,10 +3115,17 @@ UDWORD	weaponRadDamage(WEAPON_STATS *psStats, UBYTE player)
+ 		psStats->weaponSubClass].radiusDamage)/100);
+ }
+ 
+-UDWORD	weaponIncenDamage(WEAPON_STATS *psStats, UBYTE player)
+-{
+-	return (psStats->incenDamage + (psStats->incenDamage * asWeaponUpgrade[player][
+-		psStats->weaponSubClass].incenDamage)/100);
++UDWORD	weaponIncenDamage(BASE_OBJECT *psObj, WEAPON_STATS *psStats, UBYTE player)
++{
++	double damage = (double) psStats->incenDamage;
++	const WEAPON_CLASS weaponClass = psStats->weaponClass;
++	const WEAPON_SUBCLASS weaponSubClass = psStats->weaponSubClass;
++	const DROID *target = (DROID *)psObj;
++	const UDWORD armour = target->armour[weaponClass];
++	const double upgrade = (100.0 + asWeaponUpgrade[player][weaponSubClass].incenDamage)/100.0;
++	damage = floor(damage * upgrade);
++	damage < armour ? 0 : damage -= armour;
++	return (UDWORD) round(damage);
+ }
+ 
+ UDWORD	weaponRadiusHit(WEAPON_STATS *psStats, UBYTE player)
+diff --git a/src/stats.h b/src/stats.h
+index c0a770b..4d568e4 100644
+--- a/src/stats.h
++++ b/src/stats.h
+@@ -318,7 +318,7 @@ extern UDWORD	weaponShortHit(const WEAPON_STATS* psStats, UBYTE player);
+ extern UDWORD	weaponLongHit(const WEAPON_STATS* psStats, UBYTE player);
+ extern UDWORD	weaponDamage(const WEAPON_STATS* psStats, UBYTE player);
+ extern UDWORD	weaponRadDamage(WEAPON_STATS *psStats, UBYTE player);
+-extern UDWORD	weaponIncenDamage(WEAPON_STATS *psStats, UBYTE player);
++extern UDWORD	weaponIncenDamage(BASE_OBJECT *psObj, WEAPON_STATS *psStats, UBYTE player);
+ extern UDWORD	weaponRadiusHit(WEAPON_STATS *psStats, UBYTE player);
+ /*Access functions for the upgradeable stats of a sensor*/
+ extern UDWORD	sensorRange(SENSOR_STATS *psStats, UBYTE player);
 diff --git a/src/structure.cpp b/src/structure.cpp
 index 364c0aa..5c85f3b 100644
 --- a/src/structure.cpp
