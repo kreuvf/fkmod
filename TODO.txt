@@ -16,6 +16,10 @@ Nice to Have for Final Version
 Code
 ----
 * Debug switch to turn off data checking
+* Flamer incendiary damage can burn the same target multiple times, when penetrate is on
+	* Penetrate = on impact, spawn new projectile
+	* new projectile lands somewhere, sets fire to the area -> burn effect from new projectile
+	* Solution: Add information on parent and child projectiles to every projectile; when adding new projectile's effect, add current projectile if and only if the parent projectile and no child projectile already affects the target
 * VTOL Strike Tower Micro AI is stupid
 	* sends VTOLs back, when the target is down, although other targets still exist
 	* does not pick target with highest possible damage, e. g. not center points in groups, if splash damage is available
