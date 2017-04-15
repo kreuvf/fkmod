@@ -3,8 +3,6 @@ TODO for FKmod
 
 Requirements for Final Version
 ------------------------------
-* Code: Flamer damage over time vs. armour
-* Code: Change damage calculation: apply weapon/structure modifier after armour, not before to make balancing easier
 * Code: EMP weapons should do some damage
 * Balancing
 	* MG damage vs. ground units too high
