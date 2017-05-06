@@ -12,7 +12,7 @@ index 3255c56..bbe7968 100644
  	//allocate storage for the name
  	storeName((FUNCTION *)psFunction, functionName);
 @@ -1046,6 +1046,22 @@ void structureReArmUpgrade(STRUCTURE *psBuilding)
- 	        asReArmUpgrade[psBuilding->player].modifier) / 100;
+ 	                    asReArmUpgrade[psBuilding->player].modifier) / 100;
  }
  
 +void structureReArmRepairUpgrade(STRUCTURE *psBuilding)
@@ -62,7 +62,7 @@ diff --git a/src/game.cpp b/src/game.cpp
 index da4d82f..accbaf1 100644
 --- a/src/game.cpp
 +++ b/src/game.cpp
-@@ -4903,6 +4903,7 @@ static bool loadSaveStructure2(const char *pFileName, STRUCTURE **ppList)
+@@ -5089,6 +5089,7 @@ static bool loadSaveStructure2(const char *pFileName, STRUCTURE **ppList)
  			break;
  		case REF_REARM_PAD:
  			psReArmPad = ((REARM_PAD *)psStructure->pFunctionality);
@@ -70,7 +70,7 @@ index da4d82f..accbaf1 100644
  			psReArmPad->reArmPoints = ini.value("Rearm/reArmPoints", psReArmPad->reArmPoints).toInt();
  			psReArmPad->timeStarted = ini.value("Rearm/timeStarted", psReArmPad->timeStarted).toInt();
  			psReArmPad->timeLastUpdated = ini.value("Rearm/timeLastUpdated", psReArmPad->timeLastUpdated).toInt();
-@@ -5144,6 +5145,7 @@ bool writeStructFile(const char *pFileName)
+@@ -5363,6 +5364,7 @@ bool writeStructFile(const char *pFileName)
  				else if (psCurr->pStructureType->type == REF_REARM_PAD)
  				{
  					REARM_PAD *psReArmPad = ((REARM_PAD *)psCurr->pFunctionality);
@@ -83,29 +83,29 @@ index 28c755b..b8541fc 100644
 --- a/src/research.cpp
 +++ b/src/research.cpp
 @@ -938,6 +938,11 @@ void researchResult(UDWORD researchIndex, UBYTE player, bool bDisplay, STRUCTURE
- 						// upgrade the repair points
- 						structureRepairUpgrade(psCurr);
- 					}
-+					if (psCurr->pStructureType->type == REF_REARM_PAD)
-+					{
-+						// upgrade the repair points of a rearm pad
-+						structureReArmRepairUpgrade(psCurr);
-+					}
+ 					// upgrade the repair points
+ 					structureRepairUpgrade(psCurr);
  				}
- 				// and the mission structure
- 				for (psCurr = mission.apsStructLists[player]; psCurr != NULL; psCurr = psCurr->psNext)
++				if (psCurr->pStructureType->type == REF_REARM_PAD)
++				{
++					// upgrade the repair points of a rearm pad
++					structureReArmRepairUpgrade(psCurr);
++				}
+ 			}
+ 			// and the mission structure
+ 			for (psCurr = mission.apsStructLists[player]; psCurr != NULL; psCurr = psCurr->psNext)
 @@ -947,6 +952,11 @@ void researchResult(UDWORD researchIndex, UBYTE player, bool bDisplay, STRUCTURE
- 						// upgrade the repair points
- 						structureRepairUpgrade(psCurr);
- 					}
-+					if (psCurr->pStructureType->type == REF_REARM_PAD)
-+					{
-+						// upgrade the repair points of a rearm pad
-+						structureReArmRepairUpgrade(psCurr);
-+					}
+ 					// upgrade the repair points
+ 					structureRepairUpgrade(psCurr);
  				}
- 				break;
- 			case(WEAPON_UPGRADE_TYPE):
++				if (psCurr->pStructureType->type == REF_REARM_PAD)
++				{
++					// upgrade the repair points of a rearm pad
++					structureReArmRepairUpgrade(psCurr);
++				}
+ 			}
+ 			break;
+ 		case (WEAPON_UPGRADE_TYPE):
 diff --git a/src/structure.cpp b/src/structure.cpp
 index d79fef9..364c0aa 100644
 --- a/src/structure.cpp
@@ -119,9 +119,9 @@ index d79fef9..364c0aa 100644
  
  //Value is stored for easy access to this structure stat
  UDWORD			factoryModuleStat;
-@@ -2052,10 +2050,11 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
+@@ -2053,10 +2051,11 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
  		{
- 			REARM_PAD* psReArmPad = &psBuilding->pFunctionality->rearmPad;
+ 			REARM_PAD *psReArmPad = &psBuilding->pFunctionality->rearmPad;
  
 -			psReArmPad->reArmPoints = ((REARM_PAD *)psBuilding->pStructureType->asFuncList[0])->reArmPoints;
 -
@@ -133,7 +133,7 @@ index d79fef9..364c0aa 100644
  			break;
  		}
  
-@@ -3075,7 +3074,21 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
+@@ -3088,7 +3087,21 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
  					{
  						psChosenObj = psDroid;
  					}
@@ -154,33 +154,20 @@ index d79fef9..364c0aa 100644
 +				
  				if (!psChosenObj) // None available? Try allies.
  				{
- 					for (i=0; i<MAX_PLAYERS; i++)
-@@ -3421,7 +3434,7 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
- 		{
- 			REARM_PAD	*psReArmPad = &psStructure->pFunctionality->rearmPad;
- 			UDWORD pointsAlreadyAdded;
--
-+			
- 			psDroid = (DROID *)psChosenObj;
- 			ASSERT_OR_RETURN( , psDroid != NULL, "invalid droid pointer");
- 			ASSERT_OR_RETURN( , isVtolDroid(psDroid), "invalid droid type");
-@@ -3490,20 +3503,37 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
- 						}
- 					}
- 				}
-+								
+ 					for (i = 0; i < MAX_PLAYERS; i++)
+@@ -3507,17 +3520,33 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
  				/* do repairing */
  				if (psDroid->body < psDroid->originalBody)
  				{
 -					// Do not "simplify" this formula.
 -					// It is written this way to prevent rounding errors.
--					pointsToAdd =  VTOL_REPAIR_FACTOR * (100+asReArmUpgrade[psStructure->player].modifier) * (gameTime -
+-					pointsToAdd =  VTOL_REPAIR_FACTOR * (100 + asReArmUpgrade[psStructure->player].modifier) * (gameTime -
 -					               psReArmPad->timeStarted) / (GAME_TICKS_PER_SEC * 100);
--					pointsAlreadyAdded =  VTOL_REPAIR_FACTOR * (100+asReArmUpgrade[psStructure->player].modifier) * (psReArmPad->timeLastUpdated -
--					               psReArmPad->timeStarted) / (GAME_TICKS_PER_SEC * 100);
+-					pointsAlreadyAdded =  VTOL_REPAIR_FACTOR * (100 + asReArmUpgrade[psStructure->player].modifier) * (psReArmPad->timeLastUpdated -
+-					                      psReArmPad->timeStarted) / (GAME_TICKS_PER_SEC * 100);
 -
 -					if ((pointsToAdd - pointsAlreadyAdded) > 0)
-+				
++
 +					//if in multiPlayer, and a Transporter - make sure its on the ground before repairing
 +					if (bMultiPlayer && (psDroid->droidType == DROID_TRANSPORTER || psDroid->droidType == DROID_SUPERTRANSPORTER))
  					{
