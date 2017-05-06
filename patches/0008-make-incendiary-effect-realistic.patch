@@ -21,7 +21,7 @@ diff --git a/src/droid.cpp b/src/droid.cpp
 index 755cb30..7cbca8a 100644
 --- a/src/droid.cpp
 +++ b/src/droid.cpp
-@@ -842,23 +842,6 @@ void droidUpdate(DROID *psDroid)
+@@ -845,23 +845,6 @@ void droidUpdate(DROID *psDroid)
  		droidUpdateDroidSelfRepair(psDroid);
  	}
  
@@ -38,7 +38,7 @@ index 755cb30..7cbca8a 100644
 -		else
 -		{
 -			// do burn damage
--			droidDamage(psDroid, BURN_DAMAGE, WC_HEAT, WSC_FLAME, gameTime - deltaGameTime/2 + 1, true);
+-			droidDamage(psDroid, BURN_DAMAGE, WC_HEAT, WSC_FLAME, gameTime - deltaGameTime / 2 + 1, true);
 -		}
 -	}
 -
@@ -49,21 +49,21 @@ diff --git a/src/projectile.cpp b/src/projectile.cpp
 index e8eb7db..b2d8b4d 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
-@@ -1374,6 +1374,13 @@ void PROJECTILE::update()
+@@ -1363,6 +1363,13 @@ void PROJECTILE::update()
  
- 		case PROJ_INACTIVE:
- 			psObj->died = psObj->time;
-+			if (!psObj->burnVictims.empty())
+ 	case PROJ_INACTIVE:
+ 		psObj->died = psObj->time;
++		if (!psObj->burnVictims.empty())
++		{
++			for(std::list<BASE_OBJECT *>::iterator it = psObj->burnVictims.begin(); it != psObj->burnVictims.end(); it++)
 +			{
-+				for(std::list<BASE_OBJECT *>::iterator it = psObj->burnVictims.begin(); it != psObj->burnVictims.end(); it++)
-+				{
-+					(*it)->burnStart = 0;
-+				}
++				(*it)->burnStart = 0;
 +			}
- 			break;
++		}
+ 		break;
  	}
  
-@@ -1405,11 +1412,26 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+@@ -1394,11 +1401,26 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
  
  	WEAPON_STATS *psStats = psProj->psWStats;
  
@@ -91,14 +91,14 @@ index e8eb7db..b2d8b4d 100644
  		if (psCurr->died)
  		{
  			continue;  // Do not damage dead objects further.
-@@ -1437,11 +1459,35 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+@@ -1426,11 +1448,35 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
  			psCurr->burnStart = gameTime;
  			psCurr->burnDamage = 0;  // Reset burn damage done this tick.
  		}
--		unsigned damageRate = weaponIncenDamage(psStats,psProj->player);
+-		unsigned damageRate = weaponIncenDamage(psStats, psProj->player);
 -		debug(LOG_NEVER, "Burn damage of %d per second to object %d, player %d\n", damageRate, psCurr->id, psCurr->player);
  
--		int relativeDamage = objectDamage(psCurr, damageRate, psStats->weaponClass, psStats->weaponSubClass, gameTime - deltaGameTime/2 + 1, true);
+-		int relativeDamage = objectDamage(psCurr, damageRate, psStats->weaponClass, psStats->weaponSubClass, gameTime - deltaGameTime / 2 + 1, true);
 -		proj_UpdateKills(psProj, relativeDamage);
 +		if (psProj->burnVictims.empty())
 +		{
@@ -156,9 +156,9 @@ index b57c3b6..0cce46e 100644
  
  
  enum PROJ_STATE
-@@ -52,6 +53,7 @@ struct PROJECTILE : public SIMPLE_OBJECT
- 	BASE_OBJECT*    psSource;               ///< what fired the projectile
- 	BASE_OBJECT*    psDest;                 ///< target of this projectile
+@@ -59,6 +60,7 @@ struct PROJECTILE : public SIMPLE_OBJECT
+ 	BASE_OBJECT    *psSource;               ///< what fired the projectile
+ 	BASE_OBJECT    *psDest;                 ///< target of this projectile
  	std::vector<BASE_OBJECT *> psDamaged;   ///< the targets that have already been dealt damage to (don't damage the same target twice)
 +	std::list<BASE_OBJECT *> burnVictims; ///< CPP linked list with the projectile's burn victims
  
