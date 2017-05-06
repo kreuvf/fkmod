@@ -55,7 +55,7 @@ index 85ca446..3255c56 100644
  
 -	pFact->productionOutput = (UBYTE)(baseOutput + (pFactFunc->productionOutput *
 +	pFact->productionOutput = (uint32_t)(baseOutput + (pFactFunc->productionOutput *
- 	        asProductionUpgrade[psBuilding->player][type].modifier) / 100);
+ 	                                  asProductionUpgrade[psBuilding->player][type].modifier) / 100);
  }
  
 diff --git a/src/functiondef.h b/src/functiondef.h
@@ -76,14 +76,14 @@ index 49c77ef..adb2186 100644
 --- a/src/intdisplay.cpp
 +++ b/src/intdisplay.cpp
 @@ -267,7 +267,7 @@ void intUpdateProgressBar(WIDGET *psWidget, W_CONTEXT *psContext)
- 				{
- 					// Started production. Set the colour of the bar to yellow.
- 					int buildPointsTotal = FactoryGetTemplate(Manufacture)->buildPoints;
--					int buildRate = Manufacture->timeStartHold == 0? Manufacture->productionOutput : 0;
-+					uint32_t buildRate = Manufacture->timeStartHold == 0? Manufacture->productionOutput : 0;
- 					formatTime(BarGraph, buildPointsTotal - Manufacture->buildPointsRemaining, buildPointsTotal, buildRate, _("Construction Progress"));
- 				}
- 				else
+ 			{
+ 				// Started production. Set the colour of the bar to yellow.
+ 				int buildPointsTotal = FactoryGetTemplate(Manufacture)->buildPoints;
+-				int buildRate = Manufacture->timeStartHold == 0 ? Manufacture->productionOutput : 0;
++				uint32_t buildRate = Manufacture->timeStartHold == 0? Manufacture->productionOutput : 0;
+ 				formatTime(BarGraph, buildPointsTotal - Manufacture->buildPointsRemaining, buildPointsTotal, buildRate, _("Construction Progress"));
+ 			}
+ 			else
 diff --git a/src/structure.cpp b/src/structure.cpp
 index 09952e8..ed0159d 100644
 --- a/src/structure.cpp
@@ -92,35 +92,22 @@ index 09952e8..ed0159d 100644
  
  				//quick check not trying to add too much
  				ASSERT_OR_RETURN(NULL, psBuilding->pFunctionality->factory.productionOutput +
--					((PRODUCTION_FUNCTION*)pStructureType->asFuncList[0])->productionOutput < UBYTE_MAX,
+-				                 ((PRODUCTION_FUNCTION *)pStructureType->asFuncList[0])->productionOutput < UBYTE_MAX,
 +					((PRODUCTION_FUNCTION*)pStructureType->asFuncList[0])->productionOutput <= UINT32_MAX,
- 					"building factory module - production Output is too big");
+				                 "building factory module - production Output is too big");
  
  				psBuilding->pFunctionality->factory.productionOutput += ((
- 					PRODUCTION_FUNCTION*)pStructureType->asFuncList[0])->productionOutput;
+ 				            PRODUCTION_FUNCTION *)pStructureType->asFuncList[0])->productionOutput;
 -
  				capacity = psBuilding->pFunctionality->factory.capacity;
  			}
  		}
-@@ -1937,7 +1936,7 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
+@@ -1938,7 +1937,7 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
  			unsigned int x, y;
  
- 			psFactory->capacity = (UBYTE) ((PRODUCTION_FUNCTION*)psBuilding->pStructureType->asFuncList[0])->capacity;
--			psFactory->productionOutput = (UBYTE) ((PRODUCTION_FUNCTION*)psBuilding->pStructureType->asFuncList[0])->productionOutput;
+ 			psFactory->capacity = (UBYTE)((PRODUCTION_FUNCTION *)psBuilding->pStructureType->asFuncList[0])->capacity;
+-			psFactory->productionOutput = (UBYTE)((PRODUCTION_FUNCTION *)psBuilding->pStructureType->asFuncList[0])->productionOutput;
 +			psFactory->productionOutput = ((PRODUCTION_FUNCTION*)psBuilding->pStructureType->asFuncList[0])->productionOutput;
  			psFactory->psSubject = NULL;
  
  			// Default the secondary order - AB 22/04/99
-diff --git a/src/structuredef.h b/src/structuredef.h
-index eeee1da..6c971d9 100644
---- a/src/structuredef.h
-+++ b/src/structuredef.h
-@@ -179,7 +179,7 @@ struct FACTORY
- 											   can produce*/
- 	uint8_t                         productionLoops;        ///< Number of loops to perform. Not synchronised, and only meaningful for selectedPlayer.
- 	UBYTE				loopsPerformed;		/* how many times the loop has been performed*/
--	UBYTE				productionOutput;	/* Droid Build Points Produced Per
-+	uint32_t				productionOutput;	/* Droid Build Points Produced Per
- 											   Build Cycle*/
- 	DROID_TEMPLATE *                psSubject;              ///< The subject the structure is working on.
- 	DROID_TEMPLATE *                psSubjectPending;       ///< The subject the structure is going to working on. (Pending = not yet synchronised.)
