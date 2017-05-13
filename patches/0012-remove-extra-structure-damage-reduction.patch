@@ -1,5 +1,5 @@
 diff --git a/src/combat.cpp b/src/combat.cpp
-index 4959aa9..cdd20ce 100644
+index 3be05f2..9db9a2d 100644
 --- a/src/combat.cpp
 +++ b/src/combat.cpp
 @@ -429,7 +429,7 @@ void counterBatteryFire(BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget)
@@ -11,7 +11,7 @@ index 4959aa9..cdd20ce 100644
  
  	// If the previous hit was by an EMP cannon and this one is not:
  	// don't reset the weapon class and hit time
-@@ -522,7 +522,7 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+@@ -528,7 +528,7 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
  unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BASE_OBJECT *psTarget)
  {
  	unsigned int damage;
@@ -19,4 +19,4 @@ index 4959aa9..cdd20ce 100644
 +	int	actualDamage, armour = 0, level = 0;
  
  	if (psTarget == NULL)
- 		return 0;  // Hard to destroy the ground. The armour on the mud is very strong and blocks all damage.
+ 	{
