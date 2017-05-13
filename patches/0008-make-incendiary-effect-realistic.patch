@@ -1,5 +1,5 @@
 diff --git a/src/combat.cpp b/src/combat.cpp
-index 86515ca..4959aa9 100644
+index 3be05f2..b718926 100644
 --- a/src/combat.cpp
 +++ b/src/combat.cpp
 @@ -485,13 +485,7 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
@@ -18,7 +18,7 @@ index 86515ca..4959aa9 100644
  
  	objTrace(psObj->id, "objDamage: Penetrated %d", actualDamage);
 diff --git a/src/droid.cpp b/src/droid.cpp
-index 755cb30..7cbca8a 100644
+index 62de3d8..247622c 100644
 --- a/src/droid.cpp
 +++ b/src/droid.cpp
 @@ -845,23 +845,6 @@ void droidUpdate(DROID *psDroid)
@@ -46,10 +46,10 @@ index 755cb30..7cbca8a 100644
  	if (isDead((BASE_OBJECT *)psDroid))
  	{
 diff --git a/src/projectile.cpp b/src/projectile.cpp
-index e8eb7db..b2d8b4d 100644
+index bbd173e..aa5a3b2 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
-@@ -1363,6 +1363,13 @@ void PROJECTILE::update()
+@@ -1380,6 +1380,13 @@ void PROJECTILE::update()
  
  	case PROJ_INACTIVE:
  		psObj->died = psObj->time;
@@ -63,7 +63,7 @@ index e8eb7db..b2d8b4d 100644
  		break;
  	}
  
-@@ -1394,11 +1401,26 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+@@ -1411,11 +1418,26 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
  
  	WEAPON_STATS *psStats = psProj->psWStats;
  
@@ -91,7 +91,7 @@ index e8eb7db..b2d8b4d 100644
  		if (psCurr->died)
  		{
  			continue;  // Do not damage dead objects further.
-@@ -1426,11 +1448,35 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+@@ -1443,11 +1465,35 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
  			psCurr->burnStart = gameTime;
  			psCurr->burnDamage = 0;  // Reset burn damage done this tick.
  		}
@@ -132,7 +132,7 @@ index e8eb7db..b2d8b4d 100644
  }
  
 diff --git a/src/projectile.h b/src/projectile.h
-index 2eec477..4a7e1ad 100644
+index 79fe36d..ee49a6b 100644
 --- a/src/projectile.h
 +++ b/src/projectile.h
 @@ -38,8 +38,6 @@ extern	BASE_OBJECT	*g_pProjLastAttacker;	///< The last unit that did damage - us
@@ -145,7 +145,7 @@ index 2eec477..4a7e1ad 100644
  
  /** How long to display a single electronic warfare shimmmer. */
 diff --git a/src/projectiledef.h b/src/projectiledef.h
-index b57c3b6..0cce46e 100644
+index 8026df9..99732d5 100644
 --- a/src/projectiledef.h
 +++ b/src/projectiledef.h
 @@ -28,6 +28,7 @@
