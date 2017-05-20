@@ -1,98 +1,5 @@
-diff --git a/lib/ivis_opengl/screen.cpp b/lib/ivis_opengl/screen.cpp
-index d240a63..dd1b8d8 100644
---- a/lib/ivis_opengl/screen.cpp
-+++ b/lib/ivis_opengl/screen.cpp
-@@ -175,7 +175,6 @@ bool screenInitialise()
- 
- 	if (canRunShaders)
- 	{
--		screen_EnableMissingFunctions();  // We need to do this before pie_LoadShaders(), but the effect of this call will be undone later by iV_TextInit(), so we will need to call it again.
- 		if (pie_LoadShaders())
- 		{
- 			pie_SetShaderAvailability(true);
-@@ -218,67 +217,7 @@ bool screen_IsVBOAvailable()
- 	return GLEW_VERSION_1_5 || GLEW_ARB_vertex_buffer_object;
- }
- 
--// Make OpenGL's VBO functions available under the core names for drivers that support OpenGL 1.4 only but have the VBO extension
--void screen_EnableMissingFunctions()
--{
--	if (!GLEW_VERSION_1_3 && GLEW_ARB_multitexture)
--	{
--		debug(LOG_WARNING, "Pre-OpenGL 1.3: Fixing ARB_multitexture extension function names.");
--
--		__glewActiveTexture = __glewActiveTextureARB;
--		__glewMultiTexCoord2fv = __glewMultiTexCoord2fvARB;
--	}
--
--	if (!GLEW_VERSION_1_5 && GLEW_ARB_vertex_buffer_object)
--	{
--		debug(LOG_WARNING, "Pre-OpenGL 1.5: Fixing ARB_vertex_buffer_object extension function names.");
--
--		__glewBindBuffer = __glewBindBufferARB;
--		__glewBufferData = __glewBufferDataARB;
--		__glewBufferSubData = __glewBufferSubDataARB;
--		__glewDeleteBuffers = __glewDeleteBuffersARB;
--		__glewGenBuffers = __glewGenBuffersARB;
--		__glewGetBufferParameteriv = __glewGetBufferParameterivARB;
--		__glewGetBufferPointerv = __glewGetBufferPointervARB;
--		__glewGetBufferSubData = __glewGetBufferSubDataARB;
--		__glewIsBuffer = __glewIsBufferARB;
--		__glewMapBuffer = __glewMapBufferARB;
--		__glewUnmapBuffer = __glewUnmapBufferARB;
--	}
--
--	if (!GLEW_VERSION_2_0 && GLEW_ARB_shader_objects)
--	{
--		debug(LOG_WARNING, "Pre-OpenGL 2.0: Fixing ARB_shader_objects extension function names.");
--
--		__glewGetUniformLocation = __glewGetUniformLocationARB;
--		__glewAttachShader = __glewAttachObjectARB;
--		__glewCompileShader = __glewCompileShaderARB;
--		__glewCreateProgram = __glewCreateProgramObjectARB;
--		__glewCreateShader = __glewCreateShaderObjectARB;
--		__glewGetProgramInfoLog = __glewGetInfoLogARB;
--		__glewGetShaderInfoLog = __glewGetInfoLogARB;  // Same as previous.
--		__glewGetProgramiv = __glewGetObjectParameterivARB;
--		__glewUseProgram = __glewUseProgramObjectARB;
--		__glewGetShaderiv = __glewGetObjectParameterivARB;
--		__glewLinkProgram = __glewLinkProgramARB;
--		__glewShaderSource = __glewShaderSourceARB;
--		__glewUniform1f = __glewUniform1fARB;
--		__glewUniform1i = __glewUniform1iARB;
--		__glewUniform4fv = __glewUniform4fvARB;
--	}
--
--	if ((GLEW_ARB_imaging || GLEW_EXT_blend_color) && __glewBlendColor == NULL)
--	{
--		__glewBlendColor = __glewBlendColorEXT;  // Shouldn't be needed if GLEW_ARB_imaging is true, but apparently is needed even in that case, with some drivers..?
--		if (__glewBlendColor == NULL)
--		{
--			debug(LOG_ERROR, "Your graphics driver is broken, and claims to support ARB_imaging or EXT_blend_color without exporting glBlendColor[EXT].");
--			__GLEW_ARB_imaging = __GLEW_EXT_blend_color = 0;
--		}
--	}
--}
--
--void screen_SetBackDropFromFile(const char* filename)
-+void screen_SetBackDropFromFile(const char *filename)
- {
- 	// HACK : We should use a resource handler here!
- 	const char *extension = strrchr(filename, '.');// determine the filetype
-diff --git a/lib/ivis_opengl/screen.h b/lib/ivis_opengl/screen.h
-index 0e2ccca..018d51b 100644
---- a/lib/ivis_opengl/screen.h
-+++ b/lib/ivis_opengl/screen.h
-@@ -63,7 +63,6 @@ extern void screenDoDumpToDiskIfRequired(void);
- void screen_enableMapPreview(char *name, int width, int height, Vector2i *playerpositions);
- void screen_disableMapPreview(void);
- bool screen_getMapPreview(void);
--void screen_EnableMissingFunctions();
- 
- bool screen_IsVBOAvailable();
- struct OPENGL_DATA
 diff --git a/src/action.cpp b/src/action.cpp
-index 2b9a50c..67c2403 100644
+index c30e920..f646629 100644
 --- a/src/action.cpp
 +++ b/src/action.cpp
 @@ -43,6 +43,8 @@
@@ -104,7 +11,7 @@ index 2b9a50c..67c2403 100644
  
  /* attack run distance */
  #define	VTOL_ATTACK_LENGTH		1000
-@@ -157,7 +159,7 @@ const char* getDroidActionName(DROID_ACTION action)
+@@ -157,7 +159,7 @@ const char *getDroidActionName(DROID_ACTION action)
  /* Check if a target is at correct range to attack */
  static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
  {
@@ -115,7 +22,7 @@ index 2b9a50c..67c2403 100644
  
 @@ -220,10 +222,21 @@ static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_s
  		rangeSq = psStats->minRange * psStats->minRange;
- 		if ( radSq >= rangeSq || !proj_Direct( psStats ) )
+ 		if (radSq >= rangeSq || !proj_Direct(psStats))
  		{
 -			return true;
 +			/*check angle */
@@ -148,7 +55,7 @@ index 2b9a50c..67c2403 100644
  
 @@ -261,10 +274,21 @@ bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
  		rangeSq = psStats->minRange * psStats->minRange;
- 		if ( radSq >= rangeSq || !proj_Direct( psStats ) )
+ 		if (radSq >= rangeSq || !proj_Direct(psStats))
  		{
 -			return true;
 +			/*check angle */
@@ -170,9 +77,9 @@ index 2b9a50c..67c2403 100644
  	return false;
  }
  
-@@ -1042,7 +1066,7 @@ void actionUpdateDroid(DROID *psDroid)
+@@ -1044,7 +1068,7 @@ void actionUpdateDroid(DROID *psDroid)
  					{
- 						BASE_OBJECT* psActionTarget = psDroid->psActionTarget[i];
+ 						BASE_OBJECT *psActionTarget = psDroid->psActionTarget[i];
  						// is the turret aligned with the target?
 -						if (actionTargetTurret(psDroid, psActionTarget, &psDroid->asWeaps[i]))
 +						if (actionTargetTurret(psDroid, psActionTarget, &psDroid->asWeaps[i]) && actionInAttackRange(psDroid, psActionTarget, i))
@@ -180,7 +87,7 @@ index 2b9a50c..67c2403 100644
  							// In range - fire !!!
  							combFire(&psDroid->asWeaps[i], psDroid, psActionTarget, i);
 diff --git a/src/ai.cpp b/src/ai.cpp
-index 876ec8e..2da4aa1 100644
+index 1ba1806..d4487d7 100644
 --- a/src/ai.cpp
 +++ b/src/ai.cpp
 @@ -33,6 +33,8 @@
@@ -208,7 +115,7 @@ index 876ec8e..2da4aa1 100644
 +			return false;
 +		}
 +	}
- 	return objPosDiffSq(psStruct, psTarget) < longRange*longRange && lineOfFire(psStruct, psTarget, weapon_slot, true);
+ 	return objPosDiffSq(psStruct, psTarget) < longRange * longRange && lineOfFire(psStruct, psTarget, weapon_slot, true);
  }
  
  static bool aiDroidHasRange(DROID *psDroid, BASE_OBJECT *psTarget, int weapon_slot)
@@ -228,7 +135,7 @@ index 876ec8e..2da4aa1 100644
 +		}
 +	}
  
- 	return objPosDiffSq(psDroid, psTarget) < longRange*longRange;
+ 	return objPosDiffSq(psDroid, psTarget) < longRange * longRange;
  }
 @@ -181,6 +208,9 @@ static BASE_OBJECT *aiSearchSensorTargets(BASE_OBJECT *psObj, int weapon_slot, W
  		{
@@ -248,7 +155,7 @@ index 876ec8e..2da4aa1 100644
  		}
  		else if (psSensor->type == OBJ_STRUCTURE)
  		{
-@@ -929,6 +960,12 @@ bool aiChooseSensorTarget(BASE_OBJECT *psObj, BASE_OBJECT **ppsTarget)
+@@ -933,6 +964,12 @@ bool aiChooseSensorTarget(BASE_OBJECT *psObj, BASE_OBJECT **ppsTarget)
  		ASSERT(false, "Only to be used for sensor turrets!");
  		return false;
  	}
@@ -261,10 +168,10 @@ index 876ec8e..2da4aa1 100644
  
  	/* See if there is something in range */
  	if (psObj->type == OBJ_DROID)
-@@ -1279,3 +1316,64 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot)
+@@ -1283,4 +1320,64 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot)
+ 
  	return bValidTarget;
  }
- 
 +bool targetInSensorRange(BASE_OBJECT *psTarget, BASE_OBJECT *psOrigin) {
 +	BASE_OBJECT	*psSensor;
 +	for (psSensor = apsSensorList[0]; psSensor; psSensor = psSensor->psNextFunc) {
@@ -321,13 +228,13 @@ index 876ec8e..2da4aa1 100644
 +			return true;
 +		}
 +	}
-+
 +	return false;
 +
 +}
 +
+ 
 diff --git a/src/ai.h b/src/ai.h
-index 155e1ff..22725eb 100644
+index 7a31507..f9a6e20 100644
 --- a/src/ai.h
 +++ b/src/ai.h
 @@ -83,3 +83,4 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot);
@@ -336,7 +243,7 @@ index 155e1ff..22725eb 100644
  #endif // __INCLUDED_SRC_AI_H__
 +bool targetInSensorRange(BASE_OBJECT *psTarget, BASE_OBJECT *psOrigin);
 diff --git a/src/combat.cpp b/src/combat.cpp
-index eae106f..d120788 100644
+index 3be05f2..a335f9d 100644
 --- a/src/combat.cpp
 +++ b/src/combat.cpp
 @@ -28,6 +28,7 @@
@@ -419,7 +326,7 @@ index eae106f..d120788 100644
  
  	// for some odd reason, we have 0 hitpoints.
  	if (!originalhp)
-@@ -519,21 +515,19 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+@@ -519,23 +515,21 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
  }
  
  /* Guesses how damage a shot might do.
@@ -439,14 +346,16 @@ index eae106f..d120788 100644
 +	int	actualDamage, level = 0;
  
  	if (psTarget == NULL)
- 		return 0;  // Hard to destroy the ground. The armour on the mud is very strong and blocks all damage.
+ 	{
+ 		return 0;    // Hard to destroy the ground. The armour on the mud is very strong and blocks all damage.
+ 	}
 -
 -	damage = calcDamage(weaponDamage(psStats, player), psStats->weaponEffect, psTarget);
 +	damage = calcDamage(weaponDamage(psStats, player), psStats, psTarget);
  
  	// EMP cannons do no damage, if we are one return now
  	if (psStats->weaponSubClass == WSC_EMP)
-@@ -545,8 +539,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
+@@ -547,8 +541,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
  	// apply game difficulty setting
  	damage = modifyForDifficultyLevel(damage, psTarget->player != selectedPlayer);
  
@@ -455,7 +364,7 @@ index eae106f..d120788 100644
  	//debug(LOG_ATTACK, "objGuessFutureDamage(%d): body %d armour %d damage: %d", psObj->id, psObj->body, armour, damage);
  
  	if (psTarget->type == OBJ_DROID)
-@@ -560,9 +552,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
+@@ -562,9 +554,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
  	// Reduce damage taken by EXP_REDUCE_DAMAGE % for each experience level
  	actualDamage = (damage * (100 - EXP_REDUCE_DAMAGE * level)) / 100;
  
@@ -479,74 +388,83 @@ index cabb354..9f68d87 100644
  unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BASE_OBJECT *psTarget);
  
 diff --git a/src/component.cpp b/src/component.cpp
-index 57ef098..666ba54 100644
+index 024bc3e..a9ed019 100644
 --- a/src/component.cpp
 +++ b/src/component.cpp
-@@ -128,6 +128,9 @@ UDWORD getComponentRadius(BASE_STATS *psComponent)
+@@ -131,6 +131,9 @@ UDWORD getComponentRadius(BASE_STATS *psComponent)
  	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
  	if (StatIsComponent(psComponent) != COMP_WEAPON
- 		|| (((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_BOMB
+ 	    || (((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_BOMB
 +			&& ((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_CLUSTERBOMB
 +			&& ((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_HEAVYBOMB
 +			&& ((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_HOTBOMB
- 			&& ((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_EMP))
+ 	        && ((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_EMP))
  	{
  		ASSERT(ComponentIMD, "No ComponentIMD!");
-@@ -419,6 +422,9 @@ void displayComponentButton(BASE_STATS *Stat, Vector3i *Rotation, Vector3i *Posi
+@@ -424,6 +427,9 @@ void displayComponentButton(BASE_STATS *Stat, Vector3i *Rotation, Vector3i *Posi
  	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
  	if (StatIsComponent(Stat) != COMP_WEAPON
- 		|| (((WEAPON_STATS *)Stat)->weaponSubClass != WSC_BOMB
+ 	    || (((WEAPON_STATS *)Stat)->weaponSubClass != WSC_BOMB
 +			&& ((WEAPON_STATS *)Stat)->weaponSubClass != WSC_CLUSTERBOMB
 +			&& ((WEAPON_STATS *)Stat)->weaponSubClass != WSC_HEAVYBOMB
 +			&& ((WEAPON_STATS *)Stat)->weaponSubClass != WSC_HOTBOMB
- 			&& ((WEAPON_STATS *)Stat)->weaponSubClass != WSC_EMP))
+ 	        && ((WEAPON_STATS *)Stat)->weaponSubClass != WSC_EMP))
  	{
  		ASSERT(ComponentIMD, "No ComponentIMD");
 diff --git a/src/display.cpp b/src/display.cpp
-index 4d57132..cd9b486 100644
+index 4ac4ec1..d40d655 100644
 --- a/src/display.cpp
 +++ b/src/display.cpp
-@@ -1750,9 +1750,10 @@ static void dealWithLMBDroid(DROID* psDroid, SELECTION_TYPE selection)
- 			if(!psDroid->selected)
- 			{
- 				CONPRINTF(ConsoleString, (ConsoleString,
--					_("%s - Damage %d%% - Experience %.1f, %s"),
-+					_("%s - Body Points: %d of %d - Experience %.1f, %s"),
- 					droidGetName(psDroid),
--					100 - clip(PERCENT(psDroid->body,psDroid->originalBody), 0, 100),
-+					psDroid->body,
-+					psDroid->originalBody,
- 					psDroid->experience/65536.f, _(getDroidLevelName(psDroid))));
+@@ -1776,10 +1776,11 @@ static void dealWithLMBDroid(DROID *psDroid, SELECTION_TYPE selection)
+ 				if (!psDroid->selected)
+ 				{
+ 					CONPRINTF(ConsoleString, (ConsoleString,
+-					                          _("%s - Damage %d%% - Experience %.1f, %s"),
+-					                          droidGetName(psDroid),
+-					                          100 - clip(PERCENT(psDroid->body, psDroid->originalBody), 0, 100),
+-					                          psDroid->experience / 65536.f, _(getDroidLevelName(psDroid))));
++								_("%s - Body Points: %d of %d - Experience %.1f, %s"),
++								droidGetName(psDroid),
++								psDroid->body,
++								psDroid->originalBody,
++								psDroid->experience / 65536.f, _(getDroidLevelName(psDroid))));
  
- 				FeedbackOrderGiven();
-@@ -1766,9 +1767,10 @@ static void dealWithLMBDroid(DROID* psDroid, SELECTION_TYPE selection)
+ 					FeedbackOrderGiven();
+ 				}
+@@ -1792,10 +1793,11 @@ static void dealWithLMBDroid(DROID *psDroid, SELECTION_TYPE selection)
  	else // Clicked on allied unit with no other possible actions
  	{
  		CONPRINTF(ConsoleString, (ConsoleString,
--								  _("%s - Allied - Damage %d%% - Experience %d, %s"),
-+								  _("%s - Allied - Body Points: %d of %d - Experience %d, %s"),
- 								  droidGetName(psDroid),
--								  100 - clip(PERCENT(psDroid->body,psDroid->originalBody), 0, 100),
-+								  psDroid->body,
-+								  psDroid->originalBody,
- 								  psDroid->experience/65536, getDroidLevelName(psDroid)));
+-		                          _("%s - Allied - Damage %d%% - Experience %d, %s"),
+-		                          droidGetName(psDroid),
+-		                          100 - clip(PERCENT(psDroid->body, psDroid->originalBody), 0, 100),
+-		                          psDroid->experience / 65536, getDroidLevelName(psDroid)));
++					_("%s - Allied - Body Points: %d of %d - Experience %d, %s"),
++					droidGetName(psDroid),
++					psDroid->body,
++					psDroid->originalBody,
++					psDroid->experience / 65536, getDroidLevelName(psDroid)));
  
  		FeedbackOrderGiven();
-@@ -2247,9 +2249,10 @@ static void dealWithRMB( void )
- 							if(!psDroid->selected)
- 							{
- 								CONPRINTF(ConsoleString, (ConsoleString,
--									_("%s - Damage %d%% - Experience %.1f, %s"),
-+									_("%s - Body Points: %d of %d - Experience %.1f, %s"),
- 									droidGetName(psDroid),
--									100 - clip(PERCENT(psDroid->body,psDroid->originalBody), 0, 100),
-+									psDroid->body,
-+									psDroid->originalBody,
- 									psDroid->experience/65536.f, _(getDroidLevelName(psDroid))));
+ 	}
+@@ -2276,10 +2278,11 @@ static void dealWithRMB(void)
+ 								if (!psDroid->selected)
+ 								{
+ 									CONPRINTF(ConsoleString, (ConsoleString,
+-									                          _("%s - Damage %d%% - Experience %.1f, %s"),
+-									                          droidGetName(psDroid),
+-									                          100 - clip(PERCENT(psDroid->body, psDroid->originalBody), 0, 100),
+-									                          psDroid->experience / 65536.f, _(getDroidLevelName(psDroid))));
++												_("%s - Body Points: %d of %d - Experience %.1f, %s"),
++												droidGetName(psDroid),
++												psDroid->body,
++												psDroid->originalBody,
++												psDroid->experience/65536.f, _(getDroidLevelName(psDroid))));
  
- 								FeedbackOrderGiven();
+ 									FeedbackOrderGiven();
+ 								}
 diff --git a/src/droid.cpp b/src/droid.cpp
-index 87504b8..3a49d81 100644
+index 62de3d8..e76a7f1 100644
 --- a/src/droid.cpp
 +++ b/src/droid.cpp
 @@ -148,26 +148,23 @@ bool droidInit(void)
@@ -581,7 +499,7 @@ index 87504b8..3a49d81 100644
  
  	if (relativeDamage > 0)
  	{
-@@ -837,28 +834,11 @@ void droidUpdate(DROID *psDroid)
+@@ -840,28 +837,11 @@ void droidUpdate(DROID *psDroid)
  	// -----------------
  
  	// See if we can and need to self repair.
@@ -604,24 +522,24 @@ index 87504b8..3a49d81 100644
 -		else
 -		{
 -			// do burn damage
--			droidDamage(psDroid, BURN_DAMAGE, WC_HEAT, WSC_FLAME, gameTime - deltaGameTime/2 + 1, true);
+-			droidDamage(psDroid, BURN_DAMAGE, WC_HEAT, WSC_FLAME, gameTime - deltaGameTime / 2 + 1, true);
 -		}
 -	}
 -
  	// At this point, the droid may be dead due to burn damage.
  	if (isDead((BASE_OBJECT *)psDroid))
  	{
-@@ -1235,7 +1215,7 @@ bool droidUpdateRestore( DROID *psDroid )
+@@ -1240,7 +1220,7 @@ bool droidUpdateRestore(DROID *psDroid)
  	ASSERT_OR_RETURN(false, psStats->weaponSubClass == WSC_ELECTRONIC, "unit's weapon is not EW");
  
  	restorePoints = calcDamage(weaponDamage(psStats, psDroid->player),
--		psStats->weaponEffect,(BASE_OBJECT *)psStruct);
-+		psStats,(BASE_OBJECT *)psStruct);
+-	                           psStats->weaponEffect, (BASE_OBJECT *)psStruct);
++	                           psStats,(BASE_OBJECT *)psStruct);
  
  	pointsToAdd = restorePoints * (gameTime - psDroid->actionStarted) /
- 		GAME_TICKS_PER_SEC;
+ 	              GAME_TICKS_PER_SEC;
 diff --git a/src/droid.h b/src/droid.h
-index 61d120c..7a16dde 100644
+index 23ec8b5..31ce66b 100644
 --- a/src/droid.h
 +++ b/src/droid.h
 @@ -128,7 +128,7 @@ extern UDWORD	calcTemplatePower(DROID_TEMPLATE *psTemplate);
@@ -634,7 +552,7 @@ index 61d120c..7a16dde 100644
  /* The main update routine for all droids */
  extern void droidUpdate(DROID *psDroid);
 diff --git a/src/feature.cpp b/src/feature.cpp
-index 21f22d9..50ba1c8 100644
+index 8992ef9..4676c43 100644
 --- a/src/feature.cpp
 +++ b/src/feature.cpp
 @@ -155,16 +155,16 @@ void featureStatsShutDown(void)
@@ -658,7 +576,7 @@ index 21f22d9..50ba1c8 100644
  	// If the shell did sufficient damage to destroy the feature
  	if (relativeDamage < 0)
 diff --git a/src/feature.h b/src/feature.h
-index c197f9f..b93b87c 100644
+index 81896d6..4c45d09 100644
 --- a/src/feature.h
 +++ b/src/feature.h
 @@ -54,7 +54,7 @@ bool destroyFeature(FEATURE *psDel, unsigned impactTime);
@@ -671,7 +589,7 @@ index c197f9f..b93b87c 100644
  extern void     featureInitVars(void);
  
 diff --git a/src/function.cpp b/src/function.cpp
-index 85ca446..bbe7968 100644
+index 555c02a..0d38550 100644
 --- a/src/function.cpp
 +++ b/src/function.cpp
 @@ -145,7 +145,7 @@ static bool loadProduction(const char *pData)
@@ -736,11 +654,11 @@ index 85ca446..bbe7968 100644
  
 -	pFact->productionOutput = (UBYTE)(baseOutput + (pFactFunc->productionOutput *
 +	pFact->productionOutput = (uint32_t)(baseOutput + (pFactFunc->productionOutput *
- 	        asProductionUpgrade[psBuilding->player][type].modifier) / 100);
+ 	                                  asProductionUpgrade[psBuilding->player][type].modifier) / 100);
  }
  
 @@ -1047,6 +1046,22 @@ void structureReArmUpgrade(STRUCTURE *psBuilding)
- 	        asReArmUpgrade[psBuilding->player].modifier) / 100;
+ 	                    asReArmUpgrade[psBuilding->player].modifier) / 100;
  }
  
 +void structureReArmRepairUpgrade(STRUCTURE *psBuilding)
@@ -763,7 +681,7 @@ index 85ca446..bbe7968 100644
  {
  	POWER_GEN		*pPowerGen = &psBuilding->pFunctionality->powerGenerator;
 diff --git a/src/function.h b/src/function.h
-index 977b73d..ab26691 100644
+index 4501d27..9c1063f 100644
 --- a/src/function.h
 +++ b/src/function.h
 @@ -49,6 +49,7 @@ extern void structurePowerUpgrade(STRUCTURE *psBuilding);
@@ -775,7 +693,7 @@ index 977b73d..ab26691 100644
  extern void sensorUpgrade(FUNCTION *pFunction, UBYTE player);
  extern void repairUpgrade(FUNCTION *pFunction, UBYTE player);
 diff --git a/src/functiondef.h b/src/functiondef.h
-index eb87abb..f5058b6 100644
+index 9e73855..f4a5ef5 100644
 --- a/src/functiondef.h
 +++ b/src/functiondef.h
 @@ -112,7 +112,7 @@ struct PRODUCTION_UPGRADE_FUNCTION : public FUNCTION
@@ -796,10 +714,10 @@ index eb87abb..f5058b6 100644
  };
  
 diff --git a/src/game.cpp b/src/game.cpp
-index da4d82f..accbaf1 100644
+index 9940ab5..bba6b42 100644
 --- a/src/game.cpp
 +++ b/src/game.cpp
-@@ -4903,6 +4903,7 @@ static bool loadSaveStructure2(const char *pFileName, STRUCTURE **ppList)
+@@ -5089,6 +5089,7 @@ static bool loadSaveStructure2(const char *pFileName, STRUCTURE **ppList)
  			break;
  		case REF_REARM_PAD:
  			psReArmPad = ((REARM_PAD *)psStructure->pFunctionality);
@@ -807,7 +725,7 @@ index da4d82f..accbaf1 100644
  			psReArmPad->reArmPoints = ini.value("Rearm/reArmPoints", psReArmPad->reArmPoints).toInt();
  			psReArmPad->timeStarted = ini.value("Rearm/timeStarted", psReArmPad->timeStarted).toInt();
  			psReArmPad->timeLastUpdated = ini.value("Rearm/timeLastUpdated", psReArmPad->timeLastUpdated).toInt();
-@@ -5144,6 +5145,7 @@ bool writeStructFile(const char *pFileName)
+@@ -5363,6 +5364,7 @@ bool writeStructFile(const char *pFileName)
  				else if (psCurr->pStructureType->type == REF_REARM_PAD)
  				{
  					REARM_PAD *psReArmPad = ((REARM_PAD *)psCurr->pFunctionality);
@@ -815,35 +733,21 @@ index da4d82f..accbaf1 100644
  					ini.setValue("Rearm/reArmPoints", psReArmPad->reArmPoints);
  					ini.setValue("Rearm/timeStarted", psReArmPad->timeStarted);
  					ini.setValue("Rearm/timeLastUpdated", psReArmPad->timeLastUpdated);
-diff --git a/src/init.cpp b/src/init.cpp
-index b6d4454..70d3826 100644
---- a/src/init.cpp
-+++ b/src/init.cpp
-@@ -693,9 +693,6 @@ bool systemInitialise(void)
- 	// Initialize the iVis text rendering module
- 	iV_TextInit();
- 
--	// Fix badly named OpenGL functions. Must be done after iV_TextInit, to avoid the renames being clobbered by an extra glewInit() call.
--	screen_EnableMissingFunctions();
--
- 	iV_Reset();								// Reset the IV library.
- 
- 	return true;
 diff --git a/src/intdisplay.cpp b/src/intdisplay.cpp
-index 49c77ef..adb2186 100644
+index c5bad2d..d3fbf48 100644
 --- a/src/intdisplay.cpp
 +++ b/src/intdisplay.cpp
 @@ -267,7 +267,7 @@ void intUpdateProgressBar(WIDGET *psWidget, W_CONTEXT *psContext)
- 				{
- 					// Started production. Set the colour of the bar to yellow.
- 					int buildPointsTotal = FactoryGetTemplate(Manufacture)->buildPoints;
--					int buildRate = Manufacture->timeStartHold == 0? Manufacture->productionOutput : 0;
-+					uint32_t buildRate = Manufacture->timeStartHold == 0? Manufacture->productionOutput : 0;
- 					formatTime(BarGraph, buildPointsTotal - Manufacture->buildPointsRemaining, buildPointsTotal, buildRate, _("Construction Progress"));
- 				}
- 				else
+ 			{
+ 				// Started production. Set the colour of the bar to yellow.
+ 				int buildPointsTotal = FactoryGetTemplate(Manufacture)->buildPoints;
+-				int buildRate = Manufacture->timeStartHold == 0 ? Manufacture->productionOutput : 0;
++				uint32_t buildRate = Manufacture->timeStartHold == 0? Manufacture->productionOutput : 0;
+ 				formatTime(BarGraph, buildPointsTotal - Manufacture->buildPointsRemaining, buildPointsTotal, buildRate, _("Construction Progress"));
+ 			}
+ 			else
 diff --git a/src/move.cpp b/src/move.cpp
-index c80c699..d4793a9 100644
+index 0178db2..62ee1cf 100644
 --- a/src/move.cpp
 +++ b/src/move.cpp
 @@ -60,9 +60,9 @@
@@ -878,10 +782,10 @@ index c80c699..d4793a9 100644
  /// Extra precision added to movement calculations.
  #define EXTRA_BITS                              8
 diff --git a/src/oprint.cpp b/src/oprint.cpp
-index ee0e0ab..387af57 100644
+index 63b52c0..f8fcb48 100644
 --- a/src/oprint.cpp
 +++ b/src/oprint.cpp
-@@ -152,6 +152,56 @@ static void printWeaponInfo(const WEAPON_STATS* psStats)
+@@ -152,6 +152,56 @@ static void printWeaponInfo(const WEAPON_STATS *psStats)
  	case WSC_EMP:
  		pWSC = "WSC_EMP";
  		break;
@@ -939,11 +843,11 @@ index ee0e0ab..387af57 100644
  		pWSC = "UNKNOWN SUB CLASS";
  		break;
 diff --git a/src/projectile.cpp b/src/projectile.cpp
-index 9877ba5..89dba0e 100644
+index 0701981..d5bed8c 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
-@@ -110,8 +110,7 @@ static void	proj_ImpactFunc( PROJECTILE *psObj );
- static void	proj_PostImpactFunc( PROJECTILE *psObj );
+@@ -113,8 +113,7 @@ static void	proj_ImpactFunc(PROJECTILE *psObj);
+ static void	proj_PostImpactFunc(PROJECTILE *psObj);
  static void proj_checkBurnDamage(PROJECTILE *psProj);
  
 -static int32_t objectDamage(BASE_OBJECT *psObj, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond);
@@ -952,55 +856,55 @@ index 9877ba5..89dba0e 100644
  
  static inline void setProjectileDestination(PROJECTILE *psProj, BASE_OBJECT *psObj)
  {
-@@ -538,7 +537,8 @@ bool proj_SendProjectileAngled(WEAPON *psWeap, SIMPLE_OBJECT *psAttacker, int pl
+@@ -541,7 +540,8 @@ bool proj_SendProjectileAngled(WEAPON *psWeap, SIMPLE_OBJECT *psAttacker, int pl
  				/* firing sound emitted from source */
  				audio_PlayObjDynamicTrack(psProj->psSource, psStats->iAudioFireID, NULL);
  				/* GJ HACK: move howitzer sound with shell */
--				if ( psStats->weaponSubClass == WSC_HOWITZERS )
+-				if (psStats->weaponSubClass == WSC_HOWITZERS)
 +				/* Kreuvf: Added HOTHOWITZER */
 +				if ( (psStats->weaponSubClass == WSC_HOWITZERS) || (psStats->weaponSubClass == WSC_HOTHOWITZER) )
  				{
  					audio_PlayObjDynamicTrack(psProj, ID_SOUND_HOWITZ_FLIGHT, NULL);
  				}
-@@ -697,14 +697,29 @@ static void proj_InFlightFunc(PROJECTILE *psProj)
- 			break;
- 		case WSC_CANNON:
- 		case WSC_BOMB:
-+		case WSC_CLUSTERBOMB:
-+		case WSC_HOTBOMB:
-+		case WSC_HEAVYBOMB:
- 		case WSC_ELECTRONIC:
- 		case WSC_EMP:
- 		case WSC_FLAME:
-+		case WSC_LASER:
-+		case WSC_AALASER:
- 		case WSC_ENERGY:
- 		case WSC_GAUSS:
- 			distanceExtensionFactor = 150;
- 			break;
- 		case WSC_AAGUN: // No extended distance
-+		case WSC_AACANNON:
-+		case WSC_GEN0:
-+		case WSC_GEN1:
-+		case WSC_GEN2:
-+		case WSC_GEN3:
-+		case WSC_GEN4:
-+		case WSC_GEN5:
-+		case WSC_GEN6:
-+		case WSC_GEN7:
-+		case WSC_GEN8:
- 			distanceExtensionFactor = 100;
- 			break;
- 		case WSC_ROCKET:
-@@ -715,6 +730,7 @@ static void proj_InFlightFunc(PROJECTILE *psProj)
- 		case WSC_COUNTER:
- 		case WSC_MORTARS:
- 		case WSC_HOWITZERS:
-+		case WSC_HOTHOWITZER:
- 		case WSC_LAS_SAT:
- 			distanceExtensionFactor = 150;
- 			break;
-@@ -1133,7 +1149,7 @@ static void proj_ImpactFunc( PROJECTILE *psObj )
+@@ -702,14 +702,29 @@ static void proj_InFlightFunc(PROJECTILE *psProj)
+ 		break;
+ 	case WSC_CANNON:
+ 	case WSC_BOMB:
++	case WSC_CLUSTERBOMB:
++	case WSC_HOTBOMB:
++	case WSC_HEAVYBOMB:
+ 	case WSC_ELECTRONIC:
+ 	case WSC_EMP:
+ 	case WSC_FLAME:
++	case WSC_LASER:
++	case WSC_AALASER:
+ 	case WSC_ENERGY:
+ 	case WSC_GAUSS:
+ 		distanceExtensionFactor = 150;
+ 		break;
+ 	case WSC_AAGUN: // No extended distance
++	case WSC_AACANNON:
++	case WSC_GEN0:
++	case WSC_GEN1:
++	case WSC_GEN2:
++	case WSC_GEN3:
++	case WSC_GEN4:
++	case WSC_GEN5:
++	case WSC_GEN6:
++	case WSC_GEN7:
++	case WSC_GEN8:
+ 		distanceExtensionFactor = 100;
+ 		break;
+ 	case WSC_ROCKET:
+@@ -720,6 +735,7 @@ static void proj_InFlightFunc(PROJECTILE *psProj)
+ 	case WSC_COUNTER:
+ 	case WSC_MORTARS:
+ 	case WSC_HOWITZERS:
++	case WSC_HOTHOWITZER:
+ 	case WSC_LAS_SAT:
+ 		distanceExtensionFactor = 150;
+ 		break;
+@@ -1139,7 +1155,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
  		{
  			// If we did enough `damage' to capture the target
  			if (electronicDamage(psObj->psDest,
@@ -1009,7 +913,7 @@ index 9877ba5..89dba0e 100644
  			                     psObj->player))
  			{
  				switch (psObj->psSource->type)
-@@ -1158,7 +1174,7 @@ static void proj_ImpactFunc( PROJECTILE *psObj )
+@@ -1164,7 +1180,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
  		else
  		{
  			// Calculate the damage the weapon does to its target
@@ -1018,7 +922,7 @@ index 9877ba5..89dba0e 100644
  
  			// If we are in a multi-player game and the attacker is our responsibility
  			if (bMultiPlayer && psObj->psSource)
-@@ -1170,7 +1186,7 @@ static void proj_ImpactFunc( PROJECTILE *psObj )
+@@ -1176,7 +1192,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
  			      psObj->psDest->id, psObj->psDest->player);
  
  			// Damage the object
@@ -1027,7 +931,7 @@ index 9877ba5..89dba0e 100644
  
  			proj_UpdateKills(psObj, relativeDamage);
  
-@@ -1253,13 +1269,13 @@ static void proj_ImpactFunc( PROJECTILE *psObj )
+@@ -1259,13 +1275,13 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
  				continue;  // Target was lucky, and the tank or structure somehow managed to dodge the explosion.
  			}
  			// The psCurr will get damaged, at this point.
@@ -1043,7 +947,7 @@ index 9877ba5..89dba0e 100644
  			proj_UpdateKills(psObj, relativeDamage);
  		}
  	}
-@@ -1288,7 +1304,7 @@ static void proj_PostImpactFunc( PROJECTILE *psObj )
+@@ -1294,7 +1310,7 @@ static void proj_PostImpactFunc(PROJECTILE *psObj)
  	int age = gameTime - psObj->born;
  
  	/* Time to finish postimpact effect? */
@@ -1052,21 +956,21 @@ index 9877ba5..89dba0e 100644
  	{
  		psObj->state = PROJ_INACTIVE;
  		return;
-@@ -1357,6 +1373,13 @@ void PROJECTILE::update()
+@@ -1363,6 +1379,13 @@ void PROJECTILE::update()
  
- 		case PROJ_INACTIVE:
- 			psObj->died = psObj->time;
-+			if (!psObj->burnVictims.empty())
+ 	case PROJ_INACTIVE:
+ 		psObj->died = psObj->time;
++		if (!psObj->burnVictims.empty())
++		{
++			for(std::list<BASE_OBJECT *>::iterator it = psObj->burnVictims.begin(); it != psObj->burnVictims.end(); it++)
 +			{
-+				for(std::list<BASE_OBJECT *>::iterator it = psObj->burnVictims.begin(); it != psObj->burnVictims.end(); it++)
-+				{
-+					(*it)->burnStart = 0;
-+				}
++				(*it)->burnStart = 0;
 +			}
- 			break;
++		}
+ 		break;
  	}
  
-@@ -1388,11 +1411,25 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+@@ -1394,11 +1417,25 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
  
  	WEAPON_STATS *psStats = psProj->psWStats;
  
@@ -1093,14 +997,14 @@ index 9877ba5..89dba0e 100644
  		if (psCurr->died)
  		{
  			continue;  // Do not damage dead objects further.
-@@ -1420,11 +1457,36 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+@@ -1426,11 +1463,36 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
  			psCurr->burnStart = gameTime;
  			psCurr->burnDamage = 0;  // Reset burn damage done this tick.
  		}
--		unsigned damageRate = weaponIncenDamage(psStats,psProj->player);
+-		unsigned damageRate = weaponIncenDamage(psStats, psProj->player);
 -		debug(LOG_NEVER, "Burn damage of %d per second to object %d, player %d\n", damageRate, psCurr->id, psCurr->player);
  
--		int relativeDamage = objectDamage(psCurr, damageRate, psStats->weaponClass, psStats->weaponSubClass, gameTime - deltaGameTime/2 + 1, true);
+-		int relativeDamage = objectDamage(psCurr, damageRate, psStats->weaponClass, psStats->weaponSubClass, gameTime - deltaGameTime / 2 + 1, true);
 -		proj_UpdateKills(psProj, relativeDamage);
 +		if (psProj->burnVictims.empty())
 +		{
@@ -1134,7 +1038,7 @@ index 9877ba5..89dba0e 100644
  	}
  }
  
-@@ -1513,29 +1575,42 @@ static ObjectShape establishTargetShape(BASE_OBJECT *psTarget)
+@@ -1519,29 +1581,42 @@ static ObjectShape establishTargetShape(BASE_OBJECT *psTarget)
  
  /*the damage depends on the weapon effect and the target propulsion type or
  structure strength*/
@@ -1176,6 +1080,9 @@ index 9877ba5..89dba0e 100644
 -	if (damage == 0 && baseDamage != 0)
 -	{
 -		return 1;
+-	}
+-
+-	return damage / 100;
 +		const double modifier = asWeaponModifier[weaponEffect][propulsion]/100.0;
 +		/* Hint: Do not care about asWeaponModifierBody[weaponEffect][body] as
 +		probably zarel killed the correct parsing of these modifiers in 2009-05
@@ -1186,14 +1093,12 @@ index 9877ba5..89dba0e 100644
 +		
 +		/* Step 2: Reduce damage by propulsion type modifier */
 +		damage = floor(damage * modifier);
- 	}
--
--	return damage / 100;
++	}
 +	return (int) round(damage);
  }
  
  /*
-@@ -1553,20 +1628,20 @@ UDWORD	calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *ps
+@@ -1559,20 +1634,20 @@ UDWORD	calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *ps
   *    multiplied by -1, resulting in a negative number. Killed features do not
   *    result in negative numbers.
   */
@@ -1202,24 +1107,24 @@ index 9877ba5..89dba0e 100644
  {
  	switch (psObj->type)
  	{
- 		case OBJ_DROID:
--			return droidDamage((DROID *)psObj, damage, weaponClass, weaponSubClass, impactTime, isDamagePerSecond);
-+			return droidDamage((DROID *)psObj, damage, psStats, impactTime, isDamagePerSecond);
- 			break;
+ 	case OBJ_DROID:
+-		return droidDamage((DROID *)psObj, damage, weaponClass, weaponSubClass, impactTime, isDamagePerSecond);
++		return droidDamage((DROID *)psObj, damage, psStats, impactTime, isDamagePerSecond);
+ 		break;
  
- 		case OBJ_STRUCTURE:
--			return structureDamage((STRUCTURE *)psObj, damage, weaponClass, weaponSubClass, impactTime, isDamagePerSecond);
-+			return structureDamage((STRUCTURE *)psObj, damage, psStats, impactTime, isDamagePerSecond);
- 			break;
+ 	case OBJ_STRUCTURE:
+-		return structureDamage((STRUCTURE *)psObj, damage, weaponClass, weaponSubClass, impactTime, isDamagePerSecond);
++		return structureDamage((STRUCTURE *)psObj, damage, psStats, impactTime, isDamagePerSecond);
+ 		break;
  
- 		case OBJ_FEATURE:
--			return featureDamage((FEATURE *)psObj, damage, weaponClass, weaponSubClass, impactTime, isDamagePerSecond);
-+			return featureDamage((FEATURE *)psObj, damage, psStats, impactTime, isDamagePerSecond);
- 			break;
+ 	case OBJ_FEATURE:
+-		return featureDamage((FEATURE *)psObj, damage, weaponClass, weaponSubClass, impactTime, isDamagePerSecond);
++		return featureDamage((FEATURE *)psObj, damage, psStats, impactTime, isDamagePerSecond);
+ 		break;
  
- 		case OBJ_PROJECTILE:
+ 	case OBJ_PROJECTILE:
 diff --git a/src/projectile.h b/src/projectile.h
-index 2eec477..b9a8c20 100644
+index 79fe36d..a59a9f6 100644
 --- a/src/projectile.h
 +++ b/src/projectile.h
 @@ -38,8 +38,6 @@ extern	BASE_OBJECT	*g_pProjLastAttacker;	///< The last unit that did damage - us
@@ -1231,9 +1136,9 @@ index 2eec477..b9a8c20 100644
  #define ACC_GRAVITY	1000	///< Downward force against projectiles.
  
  /** How long to display a single electronic warfare shimmmer. */
-@@ -70,7 +68,7 @@ bool proj_Direct(const WEAPON_STATS* psStats);
+@@ -70,7 +68,7 @@ bool proj_Direct(const WEAPON_STATS *psStats);
  /** Return the maximum range for a weapon. */
- SDWORD	proj_GetLongRange(const WEAPON_STATS* psStats);
+ SDWORD	proj_GetLongRange(const WEAPON_STATS *psStats);
  
 -extern UDWORD calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *psTarget);
 +extern UDWORD calcDamage(UDWORD baseDamage, WEAPON_STATS *psStats, BASE_OBJECT *psTarget);
@@ -1241,7 +1146,7 @@ index 2eec477..b9a8c20 100644
  
  /***************************************************************************/
 diff --git a/src/projectiledef.h b/src/projectiledef.h
-index b57c3b6..0cce46e 100644
+index 8026df9..99732d5 100644
 --- a/src/projectiledef.h
 +++ b/src/projectiledef.h
 @@ -28,6 +28,7 @@
@@ -1252,65 +1157,65 @@ index b57c3b6..0cce46e 100644
  
  
  enum PROJ_STATE
-@@ -52,6 +53,7 @@ struct PROJECTILE : public SIMPLE_OBJECT
- 	BASE_OBJECT*    psSource;               ///< what fired the projectile
- 	BASE_OBJECT*    psDest;                 ///< target of this projectile
+@@ -59,6 +60,7 @@ struct PROJECTILE : public SIMPLE_OBJECT
+ 	BASE_OBJECT    *psSource;               ///< what fired the projectile
+ 	BASE_OBJECT    *psDest;                 ///< target of this projectile
  	std::vector<BASE_OBJECT *> psDamaged;   ///< the targets that have already been dealt damage to (don't damage the same target twice)
 +	std::list<BASE_OBJECT *> burnVictims; ///< CPP linked list with the projectile's burn victims
  
  	Vector3i        src;                    ///< Where projectile started
  	Vector3i        dst;                    ///< The target coordinates
 diff --git a/src/research.cpp b/src/research.cpp
-index 28c755b..b8541fc 100644
+index 6993414..d38a493 100644
 --- a/src/research.cpp
 +++ b/src/research.cpp
 @@ -938,6 +938,11 @@ void researchResult(UDWORD researchIndex, UBYTE player, bool bDisplay, STRUCTURE
- 						// upgrade the repair points
- 						structureRepairUpgrade(psCurr);
- 					}
-+					if (psCurr->pStructureType->type == REF_REARM_PAD)
-+					{
-+						// upgrade the repair points of a rearm pad
-+						structureReArmRepairUpgrade(psCurr);
-+					}
+ 					// upgrade the repair points
+ 					structureRepairUpgrade(psCurr);
  				}
- 				// and the mission structure
- 				for (psCurr = mission.apsStructLists[player]; psCurr != NULL; psCurr = psCurr->psNext)
++				if (psCurr->pStructureType->type == REF_REARM_PAD)
++				{
++					// upgrade the repair points of a rearm pad
++					structureReArmRepairUpgrade(psCurr);
++				}
+ 			}
+ 			// and the mission structure
+ 			for (psCurr = mission.apsStructLists[player]; psCurr != NULL; psCurr = psCurr->psNext)
 @@ -947,6 +952,11 @@ void researchResult(UDWORD researchIndex, UBYTE player, bool bDisplay, STRUCTURE
- 						// upgrade the repair points
- 						structureRepairUpgrade(psCurr);
- 					}
-+					if (psCurr->pStructureType->type == REF_REARM_PAD)
-+					{
-+						// upgrade the repair points of a rearm pad
-+						structureReArmRepairUpgrade(psCurr);
-+					}
+ 					// upgrade the repair points
+ 					structureRepairUpgrade(psCurr);
  				}
- 				break;
- 			case(WEAPON_UPGRADE_TYPE):
++				if (psCurr->pStructureType->type == REF_REARM_PAD)
++				{
++					// upgrade the repair points of a rearm pad
++					structureReArmRepairUpgrade(psCurr);
++				}
+ 			}
+ 			break;
+ 		case (WEAPON_UPGRADE_TYPE):
 diff --git a/src/stats.cpp b/src/stats.cpp
-index b396e81..e515f80 100644
+index afb4a53..b2bd5af 100644
 --- a/src/stats.cpp
 +++ b/src/stats.cpp
-@@ -625,7 +625,7 @@ bool loadWeaponStats(const char *pWeaponData, UDWORD bufferSize)
+@@ -626,7 +626,7 @@ bool loadWeaponStats(const char *pWeaponData, UDWORD bufferSize)
  			%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%d,\
  			%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%255[^,'\r\n],\
  			%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%d,%d,%d,%255[^,'\r\n],%255[^,'\r\n],%d,%d,\
 -			%255[^,'\r\n],%d,%d,%d,%d,%d",
 +			%255[^,'\r\n],%d,%d,%d,%d,%d,%d",
- 			WeaponName, dummy, &psStats->buildPower,&psStats->buildPoints,
- 			&psStats->weight, &weaponsize, &dummyVal,
- 			&psStats->body, GfxFile, mountGfx, muzzleGfx, flightGfx,
-@@ -639,7 +639,7 @@ bool loadWeaponStats(const char *pWeaponData, UDWORD bufferSize)
- 			fireOnMove, weaponClass, weaponSubClass, movement, weaponEffect,
- 			&rotate, &maxElevation, &minElevation, facePlayer, faceInFlight,
- 			&psStats->recoilValue, &psStats->minRange, lightWorld,
--			&effectSize, &surfaceToAir, &numAttackRuns, &designable, &penetrate);
+ 		       WeaponName, dummy, &psStats->buildPower, &psStats->buildPoints,
+ 		       &psStats->weight, &weaponsize, &dummyVal,
+ 		       &psStats->body, GfxFile, mountGfx, muzzleGfx, flightGfx,
+@@ -640,7 +640,7 @@ bool loadWeaponStats(const char *pWeaponData, UDWORD bufferSize)
+ 		       fireOnMove, weaponClass, weaponSubClass, movement, weaponEffect,
+ 		       &rotate, &maxElevation, &minElevation, facePlayer, faceInFlight,
+ 		       &psStats->recoilValue, &psStats->minRange, lightWorld,
+-		       &effectSize, &surfaceToAir, &numAttackRuns, &designable, &penetrate);
 +			&effectSize, &surfaceToAir, &numAttackRuns, &designable, &penetrate, &psStats->targeting);
  
- 			psStats->numRounds = (UBYTE)numRounds;
+ 		psStats->numRounds = (UBYTE)numRounds;
  
-@@ -1417,10 +1417,14 @@ bool loadSensorStats(const char *pSensorData, UDWORD bufferSize)
+@@ -1418,10 +1418,14 @@ bool loadSensorStats(const char *pSensorData, UDWORD bufferSize)
  		{
  			psStats->type = SUPER_SENSOR;
  		}
@@ -1325,8 +1230,8 @@ index b396e81..e515f80 100644
 +		}
  		else
  		{
- 			ASSERT( false, "Invalid Sensor type" );
-@@ -2876,6 +2880,72 @@ bool getWeaponSubClass(const char* subClass, WEAPON_SUBCLASS* wclass)
+ 			ASSERT(false, "Invalid Sensor type");
+@@ -2877,6 +2881,72 @@ bool getWeaponSubClass(const char *subClass, WEAPON_SUBCLASS *wclass)
  	{
  		*wclass = WSC_EMP;
  	}
@@ -1396,18 +1301,18 @@ index b396e81..e515f80 100644
 +	{
 +		*wclass = WSC_GEN8;
 +	}
-         else
-         {
- 	    ASSERT(!"Invalid weapon sub class", "Invalid weapon sub class: %s", subClass);
-@@ -3045,10 +3115,17 @@ UDWORD	weaponRadDamage(WEAPON_STATS *psStats, UBYTE player)
- 		psStats->weaponSubClass].radiusDamage)/100);
+ 	else
+ 	{
+ 		ASSERT(!"Invalid weapon sub class", "Invalid weapon sub class: %s", subClass);
+@@ -3046,10 +3116,17 @@ UDWORD	weaponRadDamage(WEAPON_STATS *psStats, UBYTE player)
+ 	                                     psStats->weaponSubClass].radiusDamage) / 100);
  }
  
 -UDWORD	weaponIncenDamage(WEAPON_STATS *psStats, UBYTE player)
 +UDWORD	weaponIncenDamage(BASE_OBJECT *psObj, WEAPON_STATS *psStats, UBYTE player)
  {
 -	return (psStats->incenDamage + (psStats->incenDamage * asWeaponUpgrade[player][
--		psStats->weaponSubClass].incenDamage)/100);
+-	                                    psStats->weaponSubClass].incenDamage) / 100);
 +	double damage = (double) psStats->incenDamage;
 +	const WEAPON_CLASS weaponClass = psStats->weaponClass;
 +	const WEAPON_SUBCLASS weaponSubClass = psStats->weaponSubClass;
@@ -1420,7 +1325,7 @@ index b396e81..e515f80 100644
  }
  
  UDWORD	weaponRadiusHit(WEAPON_STATS *psStats, UBYTE player)
-@@ -3511,3 +3588,88 @@ bool objRadarDetector(const BASE_OBJECT *psObj)
+@@ -3512,3 +3589,88 @@ bool objRadarDetector(const BASE_OBJECT *psObj)
  	}
  	return false;
  }
@@ -1510,12 +1415,12 @@ index b396e81..e515f80 100644
 +	return false;
 +}
 diff --git a/src/stats.h b/src/stats.h
-index 88bce3a..4d568e4 100644
+index faa9af5..2f8cf64 100644
 --- a/src/stats.h
 +++ b/src/stats.h
-@@ -318,7 +318,7 @@ extern UDWORD	weaponShortHit(const WEAPON_STATS* psStats, UBYTE player);
- extern UDWORD	weaponLongHit(const WEAPON_STATS* psStats, UBYTE player);
- extern UDWORD	weaponDamage(const WEAPON_STATS* psStats, UBYTE player);
+@@ -318,7 +318,7 @@ extern UDWORD	weaponShortHit(const WEAPON_STATS *psStats, UBYTE player);
+ extern UDWORD	weaponLongHit(const WEAPON_STATS *psStats, UBYTE player);
+ extern UDWORD	weaponDamage(const WEAPON_STATS *psStats, UBYTE player);
  extern UDWORD	weaponRadDamage(WEAPON_STATS *psStats, UBYTE player);
 -extern UDWORD	weaponIncenDamage(WEAPON_STATS *psStats, UBYTE player);
 +extern UDWORD	weaponIncenDamage(BASE_OBJECT *psObj, WEAPON_STATS *psStats, UBYTE player);
@@ -1538,10 +1443,10 @@ index 88bce3a..4d568e4 100644
 +
  #endif // __INCLUDED_SRC_STATS_H__
 diff --git a/src/statsdef.h b/src/statsdef.h
-index 3b0b4b3..67ff82d 100644
+index 49557bc..5dabe15 100644
 --- a/src/statsdef.h
 +++ b/src/statsdef.h
-@@ -278,6 +278,24 @@ enum WEAPON_SUBCLASS
+@@ -332,6 +332,24 @@ enum WEAPON_SUBCLASS
  	WSC_BOMB,
  	WSC_COMMAND,
  	WSC_EMP,
@@ -1566,7 +1471,7 @@ index 3b0b4b3..67ff82d 100644
  	WSC_COUNTER,				// Counter missile
  	WSC_NUM_WEAPON_SUBCLASSES,	/** The number of enumerators in this enum.	 */
  };
-@@ -343,6 +361,7 @@ enum SENSOR_TYPE
+@@ -397,6 +415,7 @@ enum SENSOR_TYPE
  	VTOL_INTERCEPT_SENSOR,
  	SUPER_SENSOR,			///< works as all of the above together! - new for updates
  	RADAR_DETECTOR_SENSOR,
@@ -1574,7 +1479,7 @@ index 3b0b4b3..67ff82d 100644
  };
  
  enum FIREONMOVE
-@@ -457,6 +476,7 @@ struct WEAPON_STATS : public COMPONENT_STATS
+@@ -511,6 +530,7 @@ struct WEAPON_STATS : public COMPONENT_STATS
  	UBYTE			surfaceToAir;			///< indicates how good in the air - SHOOT_ON_GROUND, SHOOT_IN_AIR or both
  	UBYTE			vtolAttackRuns;			///< number of attack runs a VTOL droid can	do with this weapon
  	bool			penetrate;				///< flag to indicate whether pentrate droid or not
@@ -1583,7 +1488,7 @@ index 3b0b4b3..67ff82d 100644
  	/* Graphics control stats */
  	UDWORD			directLife;				///< How long a direct fire weapon is visible. Measured in 1/100 sec.
 diff --git a/src/structure.cpp b/src/structure.cpp
-index 09952e8..5c85f3b 100644
+index 321050f..46ff6b5 100644
 --- a/src/structure.cpp
 +++ b/src/structure.cpp
 @@ -105,8 +105,6 @@
@@ -1608,39 +1513,39 @@ index 09952e8..5c85f3b 100644
  	CHECK_STRUCTURE(psStructure);
  
  	debug(LOG_ATTACK, "structure id %d, body %d, armour %d, damage: %d",
- 		  psStructure->id, psStructure->body, psStructure->armour[weaponClass], damage);
+ 	      psStructure->id, psStructure->body, psStructure->armour[weaponClass], damage);
  
 -	relativeDamage = objDamage(psStructure, damage, structureBody(psStructure), weaponClass, weaponSubClass, isDamagePerSecond);
 +	relativeDamage = objDamage(psStructure, damage, structureBody(psStructure), psStats, isDamagePerSecond);
  
  	// If the shell did sufficient damage to destroy the structure
  	if (relativeDamage < 0)
-@@ -1709,12 +1708,11 @@ STRUCTURE* buildStructureDir(STRUCTURE_STATS *pStructureType, UDWORD x, UDWORD y
+@@ -1709,12 +1708,11 @@ STRUCTURE *buildStructureDir(STRUCTURE_STATS *pStructureType, UDWORD x, UDWORD y
  
  				//quick check not trying to add too much
  				ASSERT_OR_RETURN(NULL, psBuilding->pFunctionality->factory.productionOutput +
--					((PRODUCTION_FUNCTION*)pStructureType->asFuncList[0])->productionOutput < UBYTE_MAX,
+-				                 ((PRODUCTION_FUNCTION *)pStructureType->asFuncList[0])->productionOutput < UBYTE_MAX,
 +					((PRODUCTION_FUNCTION*)pStructureType->asFuncList[0])->productionOutput <= UINT32_MAX,
- 					"building factory module - production Output is too big");
+ 				                 "building factory module - production Output is too big");
  
  				psBuilding->pFunctionality->factory.productionOutput += ((
- 					PRODUCTION_FUNCTION*)pStructureType->asFuncList[0])->productionOutput;
+ 				            PRODUCTION_FUNCTION *)pStructureType->asFuncList[0])->productionOutput;
 -
  				capacity = psBuilding->pFunctionality->factory.capacity;
  			}
  		}
-@@ -1937,7 +1935,7 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
+@@ -1938,7 +1936,7 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
  			unsigned int x, y;
  
- 			psFactory->capacity = (UBYTE) ((PRODUCTION_FUNCTION*)psBuilding->pStructureType->asFuncList[0])->capacity;
--			psFactory->productionOutput = (UBYTE) ((PRODUCTION_FUNCTION*)psBuilding->pStructureType->asFuncList[0])->productionOutput;
+ 			psFactory->capacity = (UBYTE)((PRODUCTION_FUNCTION *)psBuilding->pStructureType->asFuncList[0])->capacity;
+-			psFactory->productionOutput = (UBYTE)((PRODUCTION_FUNCTION *)psBuilding->pStructureType->asFuncList[0])->productionOutput;
 +			psFactory->productionOutput = ((PRODUCTION_FUNCTION*)psBuilding->pStructureType->asFuncList[0])->productionOutput;
  			psFactory->psSubject = NULL;
  
  			// Default the secondary order - AB 22/04/99
-@@ -2053,10 +2051,11 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
+@@ -2054,10 +2052,11 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
  		{
- 			REARM_PAD* psReArmPad = &psBuilding->pFunctionality->rearmPad;
+ 			REARM_PAD *psReArmPad = &psBuilding->pFunctionality->rearmPad;
  
 -			psReArmPad->reArmPoints = ((REARM_PAD *)psBuilding->pStructureType->asFuncList[0])->reArmPoints;
 -
@@ -1652,7 +1557,7 @@ index 09952e8..5c85f3b 100644
  			break;
  		}
  
-@@ -3076,7 +3075,21 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
+@@ -3089,7 +3088,21 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
  					{
  						psChosenObj = psDroid;
  					}
@@ -1673,33 +1578,20 @@ index 09952e8..5c85f3b 100644
 +				
  				if (!psChosenObj) // None available? Try allies.
  				{
- 					for (i=0; i<MAX_PLAYERS; i++)
-@@ -3422,7 +3435,7 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
- 		{
- 			REARM_PAD	*psReArmPad = &psStructure->pFunctionality->rearmPad;
- 			UDWORD pointsAlreadyAdded;
--
-+			
- 			psDroid = (DROID *)psChosenObj;
- 			ASSERT_OR_RETURN( , psDroid != NULL, "invalid droid pointer");
- 			ASSERT_OR_RETURN( , isVtolDroid(psDroid), "invalid droid type");
-@@ -3491,20 +3504,37 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
- 						}
- 					}
- 				}
-+								
+ 					for (i = 0; i < MAX_PLAYERS; i++)
+@@ -3508,17 +3521,33 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
  				/* do repairing */
  				if (psDroid->body < psDroid->originalBody)
  				{
 -					// Do not "simplify" this formula.
 -					// It is written this way to prevent rounding errors.
--					pointsToAdd =  VTOL_REPAIR_FACTOR * (100+asReArmUpgrade[psStructure->player].modifier) * (gameTime -
+-					pointsToAdd =  VTOL_REPAIR_FACTOR * (100 + asReArmUpgrade[psStructure->player].modifier) * (gameTime -
 -					               psReArmPad->timeStarted) / (GAME_TICKS_PER_SEC * 100);
--					pointsAlreadyAdded =  VTOL_REPAIR_FACTOR * (100+asReArmUpgrade[psStructure->player].modifier) * (psReArmPad->timeLastUpdated -
--					               psReArmPad->timeStarted) / (GAME_TICKS_PER_SEC * 100);
+-					pointsAlreadyAdded =  VTOL_REPAIR_FACTOR * (100 + asReArmUpgrade[psStructure->player].modifier) * (psReArmPad->timeLastUpdated -
+-					                      psReArmPad->timeStarted) / (GAME_TICKS_PER_SEC * 100);
 -
 -					if ((pointsToAdd - pointsAlreadyAdded) > 0)
-+				
++
 +					//if in multiPlayer, and a Transporter - make sure its on the ground before repairing
 +					if (bMultiPlayer && (psDroid->droidType == DROID_TRANSPORTER || psDroid->droidType == DROID_SUPERTRANSPORTER))
 +					{
@@ -1730,99 +1622,99 @@ index 09952e8..5c85f3b 100644
  					if (psDroid->body >= psDroid->originalBody)
  					{
  						/* set droid points to max */
-@@ -5618,8 +5648,8 @@ void printStructureInfo(STRUCTURE *psStructure)
+@@ -5639,8 +5668,8 @@ void printStructureInfo(STRUCTURE *psStructure)
  		{
  			unsigned int assigned_droids = countAssignedDroids(psStructure);
  
 -			CONPRINTF(ConsoleString, (ConsoleString, ngettext("%s - %u Unit assigned - Damage %3.0f%%", "%s - %u Units assigned - Damage %3.0f%%", assigned_droids),
--					  getStatName(psStructure->pStructureType), assigned_droids, getStructureDamage(psStructure) * (100.f/65536.f)));
+-			                          getStatName(psStructure->pStructureType), assigned_droids, getStructureDamage(psStructure) * (100.f / 65536.f)));
 +			CONPRINTF(ConsoleString, (ConsoleString, ngettext("%s - %u Unit assigned - Body Points: %d of %d", "%s - %u Units assigned - Body Points: %d of %d", assigned_droids),
 +					  getStatName(psStructure->pStructureType), assigned_droids, psStructure->body, structureBodyBuilt(psStructure)));
  		}
  		break;
  	case REF_DEFENSE:
-@@ -5643,13 +5673,13 @@ void printStructureInfo(STRUCTURE *psStructure)
- 		{
- 			unsigned int assigned_droids = countAssignedDroids(psStructure);
+@@ -5665,13 +5694,13 @@ void printStructureInfo(STRUCTURE *psStructure)
+ 			{
+ 				unsigned int assigned_droids = countAssignedDroids(psStructure);
  
--			CONPRINTF(ConsoleString, (ConsoleString, ngettext("%s - %u Unit assigned - Damage %3.0f%%", "%s - %u Units assigned - Damage %3.0f%%", assigned_droids),
--				getStatName(psStructure->pStructureType), assigned_droids, getStructureDamage(psStructure) * (100.f/65536.f)));
+-				CONPRINTF(ConsoleString, (ConsoleString, ngettext("%s - %u Unit assigned - Damage %3.0f%%", "%s - %u Units assigned - Damage %3.0f%%", assigned_droids),
+-				                          getStatName(psStructure->pStructureType), assigned_droids, getStructureDamage(psStructure) * (100.f / 65536.f)));
 +			CONPRINTF(ConsoleString, (ConsoleString, ngettext("%s - %u Unit assigned - Body Points: %d of %d", "%s - %u Units assigned - Body Points: %d of %d", assigned_droids),
-+				getStatName(psStructure->pStructureType), assigned_droids, psStructure->body, structureBodyBuilt(psStructure)));
- 		}
- 		else
- 		{
--			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Damage %3.0f%%"),
--									  getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f/65536.f)));
++									getStatName(psStructure->pStructureType), assigned_droids, psStructure->body, structureBodyBuilt(psStructure)));
+ 			}
+ 			else
+ 			{
+-				CONPRINTF(ConsoleString, (ConsoleString, _("%s - Damage %3.0f%%"),
+-				                          getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f / 65536.f)));
 +			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Body Points: %d of %d"),
-+									  getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
- 		}
++									getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
+ 			}
  		break;
  	case REF_REPAIR_FACILITY:
-@@ -5662,7 +5692,7 @@ void printStructureInfo(STRUCTURE *psStructure)
+@@ -5684,7 +5713,7 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
--			CONPRINTF(ConsoleString, (ConsoleString, "%s - Damage %3.0f%%", getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f/65536.f)));
+-			CONPRINTF(ConsoleString, (ConsoleString, "%s - Damage %3.0f%%", getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f / 65536.f)));
 +			CONPRINTF(ConsoleString, (ConsoleString, "%s - Body Points: %d of %d", getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
  		}
  		break;
  	case REF_RESOURCE_EXTRACTOR:
-@@ -5675,7 +5705,7 @@ void printStructureInfo(STRUCTURE *psStructure)
+@@ -5697,7 +5726,7 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
--			CONPRINTF(ConsoleString, (ConsoleString, "%s - Damage %3.0f%%", getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f/65536.f)));
+-			CONPRINTF(ConsoleString, (ConsoleString, "%s - Damage %3.0f%%", getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f / 65536.f)));
 +			CONPRINTF(ConsoleString, (ConsoleString, "%s - Body Points: %d of %d", getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
  		}
  		break;
  	case REF_POWER_GEN:
-@@ -5698,8 +5728,8 @@ void printStructureInfo(STRUCTURE *psStructure)
+@@ -5720,8 +5749,8 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
 -			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Connected %u of %u - Damage %3.0f%%"),
--					  getStatName(psStructure->pStructureType), numConnected, NUM_POWER_MODULES, getStructureDamage(psStructure) * (100.f/65536.f)));
+-			                          getStatName(psStructure->pStructureType), numConnected, NUM_POWER_MODULES, getStructureDamage(psStructure) * (100.f / 65536.f)));
 +			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Connected %u of %u - Body Points: %d of %d"),
-+					  getStatName(psStructure->pStructureType), numConnected, NUM_POWER_MODULES, psStructure->body, structureBodyBuilt(psStructure)));
++									getStatName(psStructure->pStructureType), numConnected, NUM_POWER_MODULES, psStructure->body, structureBodyBuilt(psStructure)));
  		}
  		break;
  	case REF_CYBORG_FACTORY:
-@@ -5716,8 +5746,8 @@ void printStructureInfo(STRUCTURE *psStructure)
+@@ -5738,8 +5767,8 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
 -			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Damage %3.0f%%"),
--					  getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f/65536.f)));
+-			                          getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f / 65536.f)));
 +			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Body Points: %d of %d"),
-+					  getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
++									getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
  		}
  		break;
  	case REF_RESEARCH:
-@@ -5731,8 +5761,8 @@ void printStructureInfo(STRUCTURE *psStructure)
+@@ -5753,8 +5782,8 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
 -			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Damage %3.0f%%"),
--					  getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f/65536.f)));
+-			                          getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f / 65536.f)));
 +			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Body Points: %d of %d"),
-+					  getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
++									getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
  		}
  		break;
  	default:
-@@ -5745,8 +5775,8 @@ void printStructureInfo(STRUCTURE *psStructure)
+@@ -5767,8 +5796,8 @@ void printStructureInfo(STRUCTURE *psStructure)
  		else
  #endif
  		{
 -			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Damage %3.0f%%"),
--					  getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f/65536.f)));
+-			                          getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f / 65536.f)));
 +			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Body Points: %d of %d"),
-+					  getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
++									getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
  		}
  		break;
  	}
 diff --git a/src/structure.h b/src/structure.h
-index 586dc6e..6585a4e 100644
+index 3da521f..b511f58 100644
 --- a/src/structure.h
 +++ b/src/structure.h
 @@ -103,7 +103,7 @@ extern bool	structureStatsShutDown(void);
@@ -1835,18 +1727,9 @@ index 586dc6e..6585a4e 100644
  extern void structureDemolish(STRUCTURE *psStructure, DROID *psDroid, int buildPoints);
  void structureRepair(STRUCTURE *psStruct, DROID *psDroid, int buildRate);
 diff --git a/src/structuredef.h b/src/structuredef.h
-index eeee1da..67d36f7 100644
+index 903e856..1daab0c 100644
 --- a/src/structuredef.h
 +++ b/src/structuredef.h
-@@ -179,7 +179,7 @@ struct FACTORY
- 											   can produce*/
- 	uint8_t                         productionLoops;        ///< Number of loops to perform. Not synchronised, and only meaningful for selectedPlayer.
- 	UBYTE				loopsPerformed;		/* how many times the loop has been performed*/
--	UBYTE				productionOutput;	/* Droid Build Points Produced Per
-+	uint32_t				productionOutput;	/* Droid Build Points Produced Per
- 											   Build Cycle*/
- 	DROID_TEMPLATE *                psSubject;              ///< The subject the structure is working on.
- 	DROID_TEMPLATE *                psSubjectPending;       ///< The subject the structure is going to working on. (Pending = not yet synchronised.)
 @@ -222,6 +222,7 @@ struct REPAIR_FACILITY
  
  struct REARM_PAD
