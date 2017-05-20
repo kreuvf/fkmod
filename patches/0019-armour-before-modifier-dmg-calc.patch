@@ -1,8 +1,8 @@
 diff --git a/src/combat.cpp b/src/combat.cpp
-index 40c8649..75f9d14 100644
+index 41943c4..a335f9d 100644
 --- a/src/combat.cpp
 +++ b/src/combat.cpp
-@@ -423,13 +423,14 @@ void counterBatteryFire(BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget)
+@@ -430,13 +430,14 @@ void counterBatteryFire(BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget)
  /* Deals damage to an object
   * \param psObj object to deal damage to
   * \param damage amount of damage to deal
@@ -21,7 +21,7 @@ index 40c8649..75f9d14 100644
  
  	// If the previous hit was by an EMP cannon and this one is not:
  	// don't reset the weapon class and hit time
-@@ -450,9 +451,7 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+@@ -457,9 +458,7 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
  	// apply game difficulty setting
  	damage = modifyForDifficultyLevel(damage, psObj->player != selectedPlayer);
  
@@ -32,7 +32,7 @@ index 40c8649..75f9d14 100644
  
  	if (psObj->type == OBJ_STRUCTURE || psObj->type == OBJ_DROID)
  	{
-@@ -477,19 +476,15 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+@@ -484,19 +483,15 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
  	// Reduce damage taken by EXP_REDUCE_DAMAGE % for each experience level
  	actualDamage = (damage * (100 - EXP_REDUCE_DAMAGE * level)) / 100;
  
@@ -53,7 +53,7 @@ index 40c8649..75f9d14 100644
  
  	// for some odd reason, we have 0 hitpoints.
  	if (!originalhp)
-@@ -513,23 +508,21 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+@@ -520,23 +515,21 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
  }
  
  /* Guesses how damage a shot might do.
@@ -82,7 +82,7 @@ index 40c8649..75f9d14 100644
  
  	// EMP cannons do no damage, if we are one return now
  	if (psStats->weaponSubClass == WSC_EMP)
-@@ -541,8 +534,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
+@@ -548,8 +541,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
  	// apply game difficulty setting
  	damage = modifyForDifficultyLevel(damage, psTarget->player != selectedPlayer);
  
@@ -91,7 +91,7 @@ index 40c8649..75f9d14 100644
  	//debug(LOG_ATTACK, "objGuessFutureDamage(%d): body %d armour %d damage: %d", psObj->id, psObj->body, armour, damage);
  
  	if (psTarget->type == OBJ_DROID)
-@@ -556,9 +547,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
+@@ -563,9 +554,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
  	// Reduce damage taken by EXP_REDUCE_DAMAGE % for each experience level
  	actualDamage = (damage * (100 - EXP_REDUCE_DAMAGE * level)) / 100;
  
@@ -380,10 +380,10 @@ index ee49a6b..a59a9f6 100644
  
  /***************************************************************************/
 diff --git a/src/stats.cpp b/src/stats.cpp
-index e1d813f..5dccf6d 100644
+index 83fc106..b2bd5af 100644
 --- a/src/stats.cpp
 +++ b/src/stats.cpp
-@@ -3112,10 +3112,17 @@ UDWORD	weaponRadDamage(WEAPON_STATS *psStats, UBYTE player)
+@@ -3116,10 +3116,17 @@ UDWORD	weaponRadDamage(WEAPON_STATS *psStats, UBYTE player)
  	                                     psStats->weaponSubClass].radiusDamage) / 100);
  }
  
@@ -406,7 +406,7 @@ index e1d813f..5dccf6d 100644
  
  UDWORD	weaponRadiusHit(WEAPON_STATS *psStats, UBYTE player)
 diff --git a/src/stats.h b/src/stats.h
-index faa9af5..d3bcb8c 100644
+index b14b855..2f8cf64 100644
 --- a/src/stats.h
 +++ b/src/stats.h
 @@ -318,7 +318,7 @@ extern UDWORD	weaponShortHit(const WEAPON_STATS *psStats, UBYTE player);
