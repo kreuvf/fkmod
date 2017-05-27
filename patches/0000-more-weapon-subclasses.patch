@@ -1,8 +1,8 @@
 diff --git a/src/component.cpp b/src/component.cpp
-index 57ef098..666ba54 100644
+index 1a465a2..32dd183 100644
 --- a/src/component.cpp
 +++ b/src/component.cpp
-@@ -131,6 +131,9 @@ UDWORD getComponentRadius(BASE_STATS *psComponent)
+@@ -119,6 +119,9 @@ UDWORD getComponentRadius(BASE_STATS *psComponent)
  	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
  	if (StatIsComponent(psComponent) != COMP_WEAPON
  	    || (((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_BOMB
@@ -12,7 +12,7 @@ index 57ef098..666ba54 100644
  	        && ((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_EMP))
  	{
  		ASSERT(ComponentIMD, "No ComponentIMD!");
-@@ -424,6 +429,9 @@ void displayComponentButton(BASE_STATS *Stat, Vector3i *Rotation, Vector3i *Posi
+@@ -294,6 +297,9 @@ void displayComponentButton(BASE_STATS *Stat, const Vector3i *Rotation, const Ve
  	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
  	if (StatIsComponent(Stat) != COMP_WEAPON
  	    || (((WEAPON_STATS *)Stat)->weaponSubClass != WSC_BOMB
@@ -23,10 +23,10 @@ index 57ef098..666ba54 100644
  	{
  		ASSERT(ComponentIMD, "No ComponentIMD");
 diff --git a/src/oprint.cpp b/src/oprint.cpp
-index ee0e0ab..387af57 100644
+index ee3e6d6..24d6ec7 100644
 --- a/src/oprint.cpp
 +++ b/src/oprint.cpp
-@@ -152,6 +152,56 @@ static void printWeaponInfo(const WEAPON_STATS* psStats)
+@@ -137,6 +137,56 @@ static void printWeaponInfo(const WEAPON_STATS *psStats)
  	case WSC_EMP:
  		pWSC = "WSC_EMP";
  		break;
@@ -84,10 +84,10 @@ index ee0e0ab..387af57 100644
  		pWSC = "UNKNOWN SUB CLASS";
  		break;
 diff --git a/src/projectile.cpp b/src/projectile.cpp
-index 9877ba5..065b0df 100644
+index 1d38191..972681a 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
-@@ -541,7 +541,8 @@ bool proj_SendProjectileAngled(WEAPON *psWeap, SIMPLE_OBJECT *psAttacker, int pl
+@@ -556,7 +556,8 @@ bool proj_SendProjectileAngled(WEAPON *psWeap, SIMPLE_OBJECT *psAttacker, int pl
  				/* firing sound emitted from source */
  				audio_PlayObjDynamicTrack(psProj->psSource, psStats->iAudioFireID, NULL);
  				/* GJ HACK: move howitzer sound with shell */
@@ -97,54 +97,24 @@ index 9877ba5..065b0df 100644
  				{
  					audio_PlayObjDynamicTrack(psProj, ID_SOUND_HOWITZ_FLIGHT, NULL);
  				}
-@@ -702,14 +703,29 @@ static void proj_InFlightFunc(PROJECTILE *psProj)
- 		break;
- 	case WSC_CANNON:
- 	case WSC_BOMB:
-+	case WSC_CLUSTERBOMB:
-+	case WSC_HOTBOMB:
-+	case WSC_HEAVYBOMB:
- 	case WSC_ELECTRONIC:
- 	case WSC_EMP:
- 	case WSC_FLAME:
-+	case WSC_LASER:
-+	case WSC_AALASER:
- 	case WSC_ENERGY:
- 	case WSC_GAUSS:
- 		distanceExtensionFactor = 150;
- 		break;
- 	case WSC_AAGUN: // No extended distance
-+	case WSC_AACANNON:
-+	case WSC_GEN0:
-+	case WSC_GEN1:
-+	case WSC_GEN2:
-+	case WSC_GEN3:
-+	case WSC_GEN4:
-+	case WSC_GEN5:
-+	case WSC_GEN6:
-+	case WSC_GEN7:
-+	case WSC_GEN8:
- 		distanceExtensionFactor = 100;
- 		break;
- 	case WSC_ROCKET:
-@@ -720,6 +736,7 @@ static void proj_InFlightFunc(PROJECTILE *psProj)
- 	case WSC_COUNTER:
- 	case WSC_MORTARS:
- 	case WSC_HOWITZERS:
-+	case WSC_HOTHOWITZER:
- 	case WSC_LAS_SAT:
- 		distanceExtensionFactor = 150;
- 		break;
 diff --git a/src/stats.cpp b/src/stats.cpp
-index b396e81..26f3837 100644
+index ec3412f..010399d 100644
 --- a/src/stats.cpp
 +++ b/src/stats.cpp
-@@ -2877,6 +2877,72 @@ bool getWeaponSubClass(const char* subClass, WEAPON_SUBCLASS* wclass)
+@@ -397,7 +397,7 @@ bool loadWeaponStats(const char *pFileName)
+ 		{
+ 			psStats->distanceExtensionFactor = 120;
+ 		}
+-		else if (psStats->weaponSubClass == WSC_AAGUN)
++		else if (psStats->weaponSubClass == WSC_AAGUN || psStats->weaponSubClass == WSC_AACANNON)
+ 		{
+ 			psStats->distanceExtensionFactor = 100;
+ 		}
+@@ -1517,6 +1517,71 @@ bool getWeaponSubClass(const char *subClass, WEAPON_SUBCLASS *wclass)
  	{
  		*wclass = WSC_EMP;
  	}
 +	/* New weapon subclasses for FK mod and some generic subclasses for other projects */
-+	/* Added by Kreuvf 2012-06-03 */
 +	else if (strcmp(subClass, "A-A CANNON") == 0)
 +	{
 +		*wclass = WSC_AACANNON;
@@ -212,16 +182,38 @@ index b396e81..26f3837 100644
  	else
  	{
  		ASSERT(!"Invalid weapon sub class", "Invalid weapon sub class: %s", subClass);
+@@ -1548,6 +1613,22 @@ const char *getWeaponSubClass(WEAPON_SUBCLASS wclass)
+ 	case WSC_BOMB: return "BOMB";
+ 	case WSC_COMMAND: return "COMMAND";
+ 	case WSC_EMP: return "EMP";
++	case WSC_AACANNON: return "A-A CANNON";
++	case WSC_CLUSTERBOMB: return "CLUSTER BOMB";
++	case WSC_HEAVYBOMB: return "HEAVY BOMB";
++	case WSC_HOTBOMB: return "HOT BOMB";
++	case WSC_HOTHOWITZER: return "HOT HOWITZER";
++	case WSC_LASER: return "LASER";
++	case WSC_AALASER: return "A-A LASER";
++	case WSC_GEN0: return "GENERIC 0";
++	case WSC_GEN1: return "GENERIC 1";
++	case WSC_GEN2: return "GENERIC 2";
++	case WSC_GEN3: return "GENERIC 3";
++	case WSC_GEN4: return "GENERIC 4";
++	case WSC_GEN5: return "GENERIC 5";
++	case WSC_GEN6: return "GENERIC 6";
++	case WSC_GEN7: return "GENERIC 7";
++	case WSC_GEN8: return "GENERIC 8";
+ 	case WSC_NUM_WEAPON_SUBCLASSES: break;
+ 	}
+ 	ASSERT(false, "No such weapon subclass");
 diff --git a/src/statsdef.h b/src/statsdef.h
-index 3b0b4b3..4bfd2c2 100644
+index 922f2ac..9582c68 100644
 --- a/src/statsdef.h
 +++ b/src/statsdef.h
-@@ -332,6 +332,24 @@ enum WEAPON_SUBCLASS
+@@ -169,6 +169,23 @@ enum WEAPON_SUBCLASS
  	WSC_BOMB,
  	WSC_COMMAND,
  	WSC_EMP,
 +	/* New weapon subclasses for FK mod and some generic subclasses for other projects */
-+	/* Added by Kreuvf 2012-06-03 */
 +	WSC_AACANNON,
 +	WSC_CLUSTERBOMB,
 +	WSC_HEAVYBOMB,
@@ -238,6 +230,6 @@ index 3b0b4b3..4bfd2c2 100644
 +	WSC_GEN6,
 +	WSC_GEN7,
 +	WSC_GEN8,
- 	WSC_COUNTER,				// Counter missile
  	WSC_NUM_WEAPON_SUBCLASSES,	/** The number of enumerators in this enum.	 */
  };
+ 
