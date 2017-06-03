@@ -8,6 +8,8 @@ Requirements for Final Version
 	* MG damage vs. ground units too high
 	* VTOL MG too strong
 	* FLAMER structure modifier bit too low
+* Convert data files to new format
+    * weapons require %min. damage value
 
 Nice to Have for Final Version
 ------------------------------
