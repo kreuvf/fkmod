@@ -2,11 +2,11 @@ diff --git a/src/droid.cpp b/src/droid.cpp
 index 1c58abb..bbe8dd2 100644
 --- a/src/droid.cpp
 +++ b/src/droid.cpp
-@@ -837,7 +837,7 @@ void droidUpdate(DROID *psDroid)
+@@ -882,7 +882,7 @@ void droidUpdate(DROID *psDroid)
  	// -----------------
  
  	// See if we can and need to self repair.
--	if (!isVtolDroid(psDroid) && psDroid->body < psDroid->originalBody && psDroid->asBits[COMP_REPAIRUNIT].nStat != 0 && selfRepairEnabled(psDroid->player))
+-	if (!isVtolDroid(psDroid) && psDroid->body < psDroid->originalBody && psDroid->asBits[COMP_REPAIRUNIT] != 0 && selfRepairEnabled(psDroid->player))
 +	if (psDroid->body < psDroid->originalBody && psDroid->asBits[COMP_REPAIRUNIT].nStat != 0 && selfRepairEnabled(psDroid->player))
  	{
  		droidUpdateDroidSelfRepair(psDroid);
