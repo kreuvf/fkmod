@@ -7,7 +7,7 @@ index 1c58abb..bbe8dd2 100644
  
  	// See if we can and need to self repair.
 -	if (!isVtolDroid(psDroid) && psDroid->body < psDroid->originalBody && psDroid->asBits[COMP_REPAIRUNIT] != 0 && selfRepairEnabled(psDroid->player))
-+	if (psDroid->body < psDroid->originalBody && psDroid->asBits[COMP_REPAIRUNIT].nStat != 0 && selfRepairEnabled(psDroid->player))
++	if (psDroid->body < psDroid->originalBody && psDroid->asBits[COMP_REPAIRUNIT] != 0 && selfRepairEnabled(psDroid->player))
  	{
  		droidUpdateDroidSelfRepair(psDroid);
  	}
