@@ -10,6 +10,7 @@ Requirements for Final Version
 	* FLAMER structure modifier bit too low
 * Convert data files to new format
     * weapons require %min. damage value
+    * propulsion require deceleration or skidDeceleration
 
 Nice to Have for Final Version
 ------------------------------
