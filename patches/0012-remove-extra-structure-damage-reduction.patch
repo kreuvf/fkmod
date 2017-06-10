@@ -7,7 +7,7 @@ index b227d1b..40c8649 100644
  int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, bool isDamagePerSecond, int minDamage)
  {
 -	int	actualDamage, level = 1, lastHit = psObj->timeLastHit;
-+	int	actualDamage, level = 0, lastHit = psObj->timeLastHit;;
++	int	actualDamage, level = 0, lastHit = psObj->timeLastHit;
  	int armour = objArmour(psObj, weaponClass);
  
  	// If the previous hit was by an EMP cannon and this one is not:
