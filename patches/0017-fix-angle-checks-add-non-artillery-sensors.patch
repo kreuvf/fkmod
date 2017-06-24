@@ -11,26 +11,17 @@ index c30e920..f646629 100644
  
  /* attack run distance */
  #define	VTOL_ATTACK_LENGTH		1000
-@@ -157,7 +159,7 @@ const char *getDroidActionName(DROID_ACTION action)
- /* Check if a target is at correct range to attack */
- static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
- {
--	SDWORD			dx, dy, radSq, rangeSq, longRange;
-+	SDWORD			dx, dy, dz, radSq, rangeSq, longRange, angle, minEle, maxEle;
- 	WEAPON_STATS	*psStats;
- 	int compIndex;
- 
-@@ -220,10 +222,21 @@ static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_s
- 		rangeSq = psStats->minRange * psStats->minRange;
- 		if (radSq >= rangeSq || !proj_Direct(psStats))
+@@ -179,10 +192,21 @@ bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
+ 		const int minrange = psStats->upgrade[psDroid->player].minRange;
+ 		if (radSq >= minrange * minrange || !proj_Direct(psStats))
  		{
 -			return true;
 +			/*check angle */
-+			dz = (SDWORD)psObj->pos.z - (SDWORD)psDroid->pos.z;
++			int dz = (SDWORD)psObj->pos.z - (SDWORD)psDroid->pos.z;
 +			dz = dz*2;
-+			angle = atan(dz/sqrt(radSq)) * 180 / M_PI;
-+			minEle = psStats->minElevation;
-+			maxEle = psStats->maxElevation;
++			int angle = atan(dz/sqrt(radSq)) * 180 / M_PI;
++			int minEle = psStats->minElevation;
++			int maxEle = psStats->maxElevation;
 +			if(minEle <= angle && angle <= maxEle) {
 +				return true;
 +			} else {
@@ -44,45 +35,12 @@ index c30e920..f646629 100644
  	return false;
  }
  
-@@ -231,7 +244,7 @@ static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_s
- // check if a target is within weapon range
- bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
- {
--	SDWORD			dx, dy, radSq, rangeSq, longRange;
-+	SDWORD			dx, dy, dz, radSq, rangeSq, longRange, angle, minEle, maxEle;
- 	WEAPON_STATS	*psStats;
- 	int compIndex;
- 
-@@ -261,10 +274,21 @@ bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
- 		rangeSq = psStats->minRange * psStats->minRange;
- 		if (radSq >= rangeSq || !proj_Direct(psStats))
- 		{
--			return true;
-+			/*check angle */
-+			dz = (SDWORD)psObj->pos.z - (SDWORD)psDroid->pos.z;
-+			dz = dz*2;
-+			angle = atan(dz/sqrt(radSq)) * 180 / M_PI;
-+			minEle = psStats->minElevation;
-+			maxEle = psStats->maxElevation;
-+			if(minEle <= angle && angle <= maxEle) {
-+				return true;
-+			} else {
-+				if(psStats->movementModel == MM_INDIRECT || psStats->movementModel == MM_HOMINGINDIRECT) {
-+					return true;
-+				}
-+			}
- 		}
- 	}
--
- 	return false;
- }
- 
-@@ -1044,7 +1068,7 @@ void actionUpdateDroid(DROID *psDroid)
+@@ -895,7 +919,7 @@ void actionUpdateDroid(DROID *psDroid)
  					{
  						BASE_OBJECT *psActionTarget = psDroid->psActionTarget[i];
  						// is the turret aligned with the target?
 -						if (actionTargetTurret(psDroid, psActionTarget, &psDroid->asWeaps[i]))
-+						if (actionTargetTurret(psDroid, psActionTarget, &psDroid->asWeaps[i]) && actionInAttackRange(psDroid, psActionTarget, i))
++						if (actionTargetTurret(psDroid, psActionTarget, &psDroid->asWeaps[i]) && actionInRange(psDroid, psActionTarget, i))
  						{
  							// In range - fire !!!
  							combFire(&psDroid->asWeaps[i], psDroid, psActionTarget, i);
@@ -99,10 +57,10 @@ index 1ba1806..d4487d7 100644
  
  /* Weights used for target selection code,
   * target distance is used as 'common currency'
-@@ -107,12 +109,37 @@ static bool aiStructHasRange(STRUCTURE *psStruct, BASE_OBJECT *psTarget, int wea
+@@ -110,12 +112,37 @@ static bool aiStructHasRange(STRUCTURE *psStruct, BASE_OBJECT *psTarget, int wea
  	WEAPON_STATS *psWStats = psStruct->asWeaps[weapon_slot].nStat + asWeaponStats;
  
- 	int longRange = proj_GetLongRange(psWStats);
+ 	int longRange = proj_GetLongRange(psWStats, psStruct->player);
 +	/*check angle */
 +	SDWORD dz, angle, minEle, maxEle;
 +	dz = (SDWORD)psTarget->pos.z - (SDWORD)psStruct->pos.z;
@@ -115,13 +73,13 @@ index 1ba1806..d4487d7 100644
 +			return false;
 +		}
 +	}
- 	return objPosDiffSq(psStruct, psTarget) < longRange * longRange && lineOfFire(psStruct, psTarget, weapon_slot, true);
+	return objPosDiffSq(psStruct, psTarget) < longRange * longRange && lineOfFire(psStruct, psTarget, weapon_slot, true);
  }
  
  static bool aiDroidHasRange(DROID *psDroid, BASE_OBJECT *psTarget, int weapon_slot)
  {
 +	WEAPON_STATS *psWStats = psDroid->asWeaps[weapon_slot].nStat + asWeaponStats;
- 	int32_t longRange = aiObjRange(psDroid, weapon_slot);
+ 	int32_t longRange = aiDroidRange(psDroid, weapon_slot);
 +	/*check angle */
 +	SDWORD dz, angle, minEle, maxEle;
 +	dz = (SDWORD)psTarget->pos.z - (SDWORD)psDroid->pos.z;
@@ -137,7 +95,7 @@ index 1ba1806..d4487d7 100644
  
  	return objPosDiffSq(psDroid, psTarget) < longRange * longRange;
  }
-@@ -181,6 +208,9 @@ static BASE_OBJECT *aiSearchSensorTargets(BASE_OBJECT *psObj, int weapon_slot, W
+@@ -184,6 +211,9 @@ static BASE_OBJECT *aiSearchSensorTargets(BASE_OBJECT *psObj, int weapon_slot, W
  		{
  			continue;
  		}
@@ -147,15 +105,7 @@ index 1ba1806..d4487d7 100644
  		else if (psSensor->type == OBJ_DROID)
  		{
  			DROID		*psDroid = (DROID *)psSensor;
-@@ -194,6 +224,7 @@ static BASE_OBJECT *aiSearchSensorTargets(BASE_OBJECT *psObj, int weapon_slot, W
- 			psTemp = psDroid->psActionTarget[0];
- 			isCB = cbSensorDroid(psDroid);
- 			isRD = objRadarDetector((BASE_OBJECT *)psDroid);
-+			SENSOR_STATS *psSensorStats = getSensorStats(psDroid);
- 		}
- 		else if (psSensor->type == OBJ_STRUCTURE)
- 		{
-@@ -933,6 +964,12 @@ bool aiChooseSensorTarget(BASE_OBJECT *psObj, BASE_OBJECT **ppsTarget)
+@@ -978,6 +1009,12 @@ bool aiChooseSensorTarget(BASE_OBJECT *psObj, BASE_OBJECT **ppsTarget)
  		ASSERT(false, "Only to be used for sensor turrets!");
  		return false;
  	}
@@ -168,10 +118,11 @@ index 1ba1806..d4487d7 100644
  
  	/* See if there is something in range */
  	if (psObj->type == OBJ_DROID)
-@@ -1283,4 +1320,64 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot)
+@@ -1314,3 +1351,65 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot)
  
  	return bValidTarget;
  }
++
 +bool targetInSensorRange(BASE_OBJECT *psTarget, BASE_OBJECT *psOrigin) {
 +	BASE_OBJECT	*psSensor;
 +	for (psSensor = apsSensorList[0]; psSensor; psSensor = psSensor->psNextFunc) {
@@ -181,12 +132,13 @@ index 1ba1806..d4487d7 100644
 +		}
 +		else if (objRadarDetector(psSensor)) {
 +			if (objActiveRadar(psTarget) != NULL) {
-+				SDWORD dx, dy, radSq, rangeSq;
++				int dx, dy, radSq, range, rangeSq;
 +				dx = (SDWORD)psSensor->pos.x - (SDWORD)psTarget->pos.x;
 +				dy = (SDWORD)psSensor->pos.y - (SDWORD)psTarget->pos.y;
 +
 +				radSq = dx*dx + dy*dy;
-+				rangeSq = psSensor->sensorRange * psSensor->sensorRange;
++				range = objSensorRange(psSensor);
++				rangeSq = range * range;
 +				if (radSq <= rangeSq) {
 +					return true;
 +				}
@@ -208,12 +160,13 @@ index 1ba1806..d4487d7 100644
 +			}
 +		}
 +		else if (objStandardSensor(psSensor) && visibleObject(psSensor, psTarget, true)) {
-+			SDWORD dx, dy, radSq, rangeSq;
++			int dx, dy, radSq, range, rangeSq;
 +			dx = (SDWORD)psSensor->pos.x - (SDWORD)psTarget->pos.x;
 +			dy = (SDWORD)psSensor->pos.y - (SDWORD)psTarget->pos.y;
 +
 +			radSq = dx*dx + dy*dy;
-+			rangeSq = psSensor->sensorRange * psSensor->sensorRange;
++			range = objSensorRange(psSensor);
++			rangeSq = range * range;
 +			if (radSq <= rangeSq) {
 +				return true;
 +			}
@@ -231,17 +184,17 @@ index 1ba1806..d4487d7 100644
 +	return false;
 +
 +}
-+
- 
 diff --git a/src/ai.h b/src/ai.h
 index 7a31507..f9a6e20 100644
 --- a/src/ai.h
 +++ b/src/ai.h
-@@ -83,3 +83,4 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot);
- // Check if any of the weapons can target the target
- bool checkAnyWeaponsTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget);
- #endif // __INCLUDED_SRC_AI_H__
+@@ -110,5 +110,6 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot);
+ {
+ 	return t != NO_ALLIANCES;
+ }
 +bool targetInSensorRange(BASE_OBJECT *psTarget, BASE_OBJECT *psOrigin);
+ 
+ #endif // __INCLUDED_SRC_AI_H__
 diff --git a/src/combat.cpp b/src/combat.cpp
 index 40c8649..41943c4 100644
 --- a/src/combat.cpp
@@ -254,10 +207,11 @@ index 40c8649..41943c4 100644
  #include "cluster.h"
  #include "combat.h"
  #include "difficulty.h"
-@@ -147,6 +148,12 @@ bool combFire(WEAPON *psWeap, BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, in
- 		}
+@@ -120,6 +121,13 @@ bool combFire(WEAPON *psWeap, BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, in
+ 		return false;
  	}
  
++	//if weapon needs sensor support, check if target is in sensor range
 +	if(psStats->targeting == 1) {
 +		if(!targetInSensorRange(psTarget, psAttacker)) {
 +			return false;
@@ -271,41 +225,26 @@ diff --git a/src/stats.cpp b/src/stats.cpp
 index e1d813f..83fc106 100644
 --- a/src/stats.cpp
 +++ b/src/stats.cpp
-@@ -626,7 +626,7 @@ bool loadWeaponStats(const char *pWeaponData, UDWORD bufferSize)
- 			%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%d,\
- 			%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%255[^,'\r\n],\
- 			%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%d,%d,%d,%255[^,'\r\n],%255[^,'\r\n],%d,%d,\
--			%255[^,'\r\n],%d,%d,%d,%d,%d",
-+			%255[^,'\r\n],%d,%d,%d,%d,%d,%d",
- 		       WeaponName, dummy, &psStats->buildPower, &psStats->buildPoints,
- 		       &psStats->weight, &weaponsize, &dummyVal,
- 		       &psStats->body, GfxFile, mountGfx, muzzleGfx, flightGfx,
-@@ -640,7 +640,7 @@ bool loadWeaponStats(const char *pWeaponData, UDWORD bufferSize)
- 		       fireOnMove, weaponClass, weaponSubClass, movement, weaponEffect,
- 		       &rotate, &maxElevation, &minElevation, facePlayer, faceInFlight,
- 		       &psStats->recoilValue, &psStats->minRange, lightWorld,
--		       &effectSize, &surfaceToAir, &numAttackRuns, &designable, &penetrate);
-+			&effectSize, &surfaceToAir, &numAttackRuns, &designable, &penetrate, &psStats->targeting);
- 
- 		psStats->numRounds = (UBYTE)numRounds;
- 
-@@ -1418,10 +1418,14 @@ bool loadSensorStats(const char *pSensorData, UDWORD bufferSize)
- 		{
- 			psStats->type = SUPER_SENSOR;
- 		}
--		else if (!strcmp(type, "RADAR DETECTOR"))
-+		else if(!strcmp(type, "RADAR DETECTOR"))
+@@ -356,6 +356,7 @@ bool loadWeaponStats(const char *pWeaponData, UDWORD bufferSize)
+ 		psStats->vtolAttackRuns = ini.value("numAttackRuns", 0).toUInt();
+ 		psStats->designable = ini.value("designable").toBool();
+ 		psStats->penetrate = ini.value("penetrate", false).toBool();
++		psStats->targeting = ini.value("targeting", false).toBool();
+ 		// weapon size limitation
+ 		int weaponSize = ini.value("weaponSize", WEAPON_SIZE_ANY).toInt();
+ 		ASSERT(weaponSize <= WEAPON_SIZE_ANY, "Bad weapon size for %s", list[i].toUtf8().constData());
+@@ -869,6 +869,10 @@ bool loadSensorStats(const char *pSensorData, UDWORD bufferSize)
  		{
  			psStats->type = RADAR_DETECTOR_SENSOR;
  		}
-+		else if(!strcmp(type, "SURVEILLANCE"))
++		else if (type.compare("SURVEILLANCE") == 0)
 +		{
 +			psStats->type = SURVEILLANCE_SENSOR;
 +		}
  		else
  		{
  			ASSERT(false, "Invalid Sensor type");
-@@ -3578,3 +3582,88 @@ bool objRadarDetector(const BASE_OBJECT *psObj)
+@@ -2176,3 +2180,88 @@ bool objRadarDetector(const BASE_OBJECT *psObj)
  	}
  	return false;
  }
@@ -398,38 +337,38 @@ diff --git a/src/stats.h b/src/stats.h
 index faa9af5..b14b855 100644
 --- a/src/stats.h
 +++ b/src/stats.h
-@@ -364,4 +364,14 @@ SENSOR_STATS *objActiveRadar(const BASE_OBJECT *psObj);
+@@ -272,4 +272,14 @@ SENSOR_STATS *objActiveRadar(const BASE_OBJECT *psObj);
  /** Returns whether object has a radar detector sensor. */
- bool objRadarDetector(const BASE_OBJECT *psObj);
+ WZ_DECL_PURE bool objRadarDetector(const BASE_OBJECT *psObj);
  
-+bool objSurveillanceSensor(const BASE_OBJECT *psObj);
++WZ_DECL_PURE bool objSurveillanceSensor(const BASE_OBJECT *psObj);
 +
-+bool objVTOLSensor(const BASE_OBJECT *psObj);
++WZ_DECL_PURE bool objVTOLSensor(const BASE_OBJECT *psObj);
 +
-+bool objVTOLCBSensor(const BASE_OBJECT *psObj);
++WZ_DECL_PURE bool objVTOLCBSensor(const BASE_OBJECT *psObj);
 +
-+bool objCBSensor(const BASE_OBJECT *psObj);
++WZ_DECL_PURE bool objCBSensor(const BASE_OBJECT *psObj);
 +
-+bool objStandardSensor(const BASE_OBJECT *psObj);
++WZ_DECL_PURE bool objStandardSensor(const BASE_OBJECT *psObj);
 +
  #endif // __INCLUDED_SRC_STATS_H__
 diff --git a/src/statsdef.h b/src/statsdef.h
 index 6f5db23..5dabe15 100644
 --- a/src/statsdef.h
 +++ b/src/statsdef.h
-@@ -415,6 +415,7 @@ enum SENSOR_TYPE
+@@ -245,6 +245,7 @@ enum SENSOR_TYPE
  	VTOL_INTERCEPT_SENSOR,
  	SUPER_SENSOR,			///< works as all of the above together! - new for updates
  	RADAR_DETECTOR_SENSOR,
 +	SURVEILLANCE_SENSOR,
  };
  
- enum FIREONMOVE
-@@ -529,6 +530,7 @@ struct WEAPON_STATS : public COMPONENT_STATS
- 	UBYTE			surfaceToAir;			///< indicates how good in the air - SHOOT_ON_GROUND, SHOOT_IN_AIR or both
- 	UBYTE			vtolAttackRuns;			///< number of attack runs a VTOL droid can	do with this weapon
+ enum TRAVEL_MEDIUM
+@@ -407,6 +408,7 @@ struct WEAPON_STATS : public COMPONENT_STATS
+ 	short			vtolAttackRuns;			///< number of attack runs a VTOL droid can	do with this weapon
  	bool			penetrate;				///< flag to indicate whether pentrate droid or not
-+	UDWORD			targeting;				///< indicates if weapon needs sensor for targeting
+ 	int			distanceExtensionFactor;	///< max extra distance a projectile can travel if misses target
++	bool		targeting;				///< indicates if weapon needs sensor for targeting
  
  	/* Graphics control stats */
- 	UDWORD			directLife;				///< How long a direct fire weapon is visible. Measured in 1/100 sec.
+ 	UDWORD			radiusLife;				///< How long a blast radius is visible
