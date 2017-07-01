@@ -1,8 +1,8 @@
 diff --git a/src/combat.cpp b/src/combat.cpp
-index cc565d3..66bc6e4 100644
+index cfeb9f3..396e78d 100644
 --- a/src/combat.cpp
 +++ b/src/combat.cpp
-@@ -365,13 +365,14 @@ int objArmour(BASE_OBJECT *psObj, WEAPON_CLASS weaponClass)
+@@ -373,13 +373,14 @@ int objArmour(BASE_OBJECT *psObj, WEAPON_CLASS weaponClass)
  /* Deals damage to an object
   * \param psObj object to deal damage to
   * \param damage amount of damage to deal
@@ -20,7 +20,7 @@ index cc565d3..66bc6e4 100644
  	int armour = objArmour(psObj, weaponClass);
  
  	// If the previous hit was by an EMP cannon and this one is not:
-@@ -416,9 +417,6 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+@@ -424,9 +425,6 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
  	// Reduce damage taken by EXP_REDUCE_DAMAGE % for each experience level
  	actualDamage = (damage * (100 - EXP_REDUCE_DAMAGE * level)) / 100;
  
@@ -30,7 +30,7 @@ index cc565d3..66bc6e4 100644
  	// And at least MIN_WEAPON_DAMAGE points
  	actualDamage = MAX(actualDamage, MIN_WEAPON_DAMAGE);
  
-@@ -452,23 +450,21 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+@@ -460,23 +458,21 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
  }
  
  /* Guesses how damage a shot might do.
@@ -59,7 +59,7 @@ index cc565d3..66bc6e4 100644
  
  	// EMP cannons do no damage, if we are one return now
  	if (psStats->weaponSubClass == WSC_EMP)
-@@ -478,8 +474,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
+@@ -486,8 +482,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
  
  	// apply game difficulty setting
  	damage = modifyForDifficultyLevel(damage, psTarget->player != selectedPlayer);
@@ -68,7 +68,7 @@ index cc565d3..66bc6e4 100644
  	if (psTarget->type == OBJ_DROID)
  	{
  		DROID *psDroid = (DROID *)psTarget;
-@@ -492,9 +486,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
+@@ -500,9 +494,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
  	// Reduce damage taken by EXP_REDUCE_DAMAGE % for each experience level
  	actualDamage = (damage * (100 - EXP_REDUCE_DAMAGE * level)) / 100;
  
@@ -359,7 +359,7 @@ index b7e1d9b..4e12894 100644
  
  /***************************************************************************/
 diff --git a/src/stats.cpp b/src/stats.cpp
-index 010399d..747b233 100644
+index f42ed99..c163df2 100644
 --- a/src/stats.cpp
 +++ b/src/stats.cpp
 @@ -38,6 +38,7 @@
@@ -370,7 +370,7 @@ index 010399d..747b233 100644
  
  #define WEAPON_TIME		100
  
-@@ -1756,9 +1757,16 @@ int weaponRadDamage(const WEAPON_STATS *psStats, int player)
+@@ -1761,9 +1762,16 @@ int weaponRadDamage(const WEAPON_STATS *psStats, int player)
  	return psStats->upgrade[player].radiusDamage;
  }
  
@@ -390,7 +390,7 @@ index 010399d..747b233 100644
  
  int sensorRange(const SENSOR_STATS *psStats, int player)
 diff --git a/src/stats.h b/src/stats.h
-index 789804b..7f99d9c 100644
+index 0d4a3c8..cd39c8f 100644
 --- a/src/stats.h
 +++ b/src/stats.h
 @@ -233,7 +233,7 @@ WZ_DECL_PURE int weaponShortHit(const WEAPON_STATS *psStats, int player);
