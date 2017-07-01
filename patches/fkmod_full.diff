@@ -1,5 +1,5 @@
 diff --git a/src/action.cpp b/src/action.cpp
-index c30e920..f646629 100644
+index ca55e48..295f209 100644
 --- a/src/action.cpp
 +++ b/src/action.cpp
 @@ -43,6 +43,8 @@
@@ -11,26 +11,17 @@ index c30e920..f646629 100644
  
  /* attack run distance */
  #define	VTOL_ATTACK_LENGTH		1000
-@@ -157,7 +159,7 @@ const char *getDroidActionName(DROID_ACTION action)
- /* Check if a target is at correct range to attack */
- static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
- {
--	SDWORD			dx, dy, radSq, rangeSq, longRange;
-+	SDWORD			dx, dy, dz, radSq, rangeSq, longRange, angle, minEle, maxEle;
- 	WEAPON_STATS	*psStats;
- 	int compIndex;
- 
-@@ -220,10 +222,21 @@ static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_s
- 		rangeSq = psStats->minRange * psStats->minRange;
- 		if (radSq >= rangeSq || !proj_Direct(psStats))
+@@ -179,10 +181,21 @@ bool actionInRange(const DROID *psDroid, const BASE_OBJECT *psObj, int weapon_sl
+ 		const int minrange = psStats->upgrade[psDroid->player].minRange;
+ 		if (radSq >= minrange * minrange || !proj_Direct(psStats))
  		{
 -			return true;
 +			/*check angle */
-+			dz = (SDWORD)psObj->pos.z - (SDWORD)psDroid->pos.z;
++			int dz = (SDWORD)psObj->pos.z - (SDWORD)psDroid->pos.z;
 +			dz = dz*2;
-+			angle = atan(dz/sqrt(radSq)) * 180 / M_PI;
-+			minEle = psStats->minElevation;
-+			maxEle = psStats->maxElevation;
++			int angle = atan(dz/sqrt(radSq)) * 180 / M_PI;
++			int minEle = psStats->minElevation;
++			int maxEle = psStats->maxElevation;
 +			if(minEle <= angle && angle <= maxEle) {
 +				return true;
 +			} else {
@@ -44,50 +35,17 @@ index c30e920..f646629 100644
  	return false;
  }
  
-@@ -231,7 +244,7 @@ static bool actionInAttackRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_s
- // check if a target is within weapon range
- bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
- {
--	SDWORD			dx, dy, radSq, rangeSq, longRange;
-+	SDWORD			dx, dy, dz, radSq, rangeSq, longRange, angle, minEle, maxEle;
- 	WEAPON_STATS	*psStats;
- 	int compIndex;
- 
-@@ -261,10 +274,21 @@ bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
- 		rangeSq = psStats->minRange * psStats->minRange;
- 		if (radSq >= rangeSq || !proj_Direct(psStats))
- 		{
--			return true;
-+			/*check angle */
-+			dz = (SDWORD)psObj->pos.z - (SDWORD)psDroid->pos.z;
-+			dz = dz*2;
-+			angle = atan(dz/sqrt(radSq)) * 180 / M_PI;
-+			minEle = psStats->minElevation;
-+			maxEle = psStats->maxElevation;
-+			if(minEle <= angle && angle <= maxEle) {
-+				return true;
-+			} else {
-+				if(psStats->movementModel == MM_INDIRECT || psStats->movementModel == MM_HOMINGINDIRECT) {
-+					return true;
-+				}
-+			}
- 		}
- 	}
--
- 	return false;
- }
- 
-@@ -1044,7 +1068,7 @@ void actionUpdateDroid(DROID *psDroid)
+@@ -895,7 +908,7 @@ void actionUpdateDroid(DROID *psDroid)
  					{
  						BASE_OBJECT *psActionTarget = psDroid->psActionTarget[i];
  						// is the turret aligned with the target?
 -						if (actionTargetTurret(psDroid, psActionTarget, &psDroid->asWeaps[i]))
-+						if (actionTargetTurret(psDroid, psActionTarget, &psDroid->asWeaps[i]) && actionInAttackRange(psDroid, psActionTarget, i))
++						if (actionTargetTurret(psDroid, psActionTarget, &psDroid->asWeaps[i]) && actionInRange(psDroid, psActionTarget, i))
  						{
  							// In range - fire !!!
  							combFire(&psDroid->asWeaps[i], psDroid, psActionTarget, i);
 diff --git a/src/ai.cpp b/src/ai.cpp
-index 1ba1806..d4487d7 100644
+index f4e57b7..a871fd2 100644
 --- a/src/ai.cpp
 +++ b/src/ai.cpp
 @@ -33,6 +33,8 @@
@@ -99,10 +57,10 @@ index 1ba1806..d4487d7 100644
  
  /* Weights used for target selection code,
   * target distance is used as 'common currency'
-@@ -107,12 +109,37 @@ static bool aiStructHasRange(STRUCTURE *psStruct, BASE_OBJECT *psTarget, int wea
+@@ -110,12 +112,37 @@ static bool aiStructHasRange(STRUCTURE *psStruct, BASE_OBJECT *psTarget, int wea
  	WEAPON_STATS *psWStats = psStruct->asWeaps[weapon_slot].nStat + asWeaponStats;
  
- 	int longRange = proj_GetLongRange(psWStats);
+ 	int longRange = proj_GetLongRange(psWStats, psStruct->player);
 +	/*check angle */
 +	SDWORD dz, angle, minEle, maxEle;
 +	dz = (SDWORD)psTarget->pos.z - (SDWORD)psStruct->pos.z;
@@ -121,7 +79,7 @@ index 1ba1806..d4487d7 100644
  static bool aiDroidHasRange(DROID *psDroid, BASE_OBJECT *psTarget, int weapon_slot)
  {
 +	WEAPON_STATS *psWStats = psDroid->asWeaps[weapon_slot].nStat + asWeaponStats;
- 	int32_t longRange = aiObjRange(psDroid, weapon_slot);
+ 	int32_t longRange = aiDroidRange(psDroid, weapon_slot);
 +	/*check angle */
 +	SDWORD dz, angle, minEle, maxEle;
 +	dz = (SDWORD)psTarget->pos.z - (SDWORD)psDroid->pos.z;
@@ -137,7 +95,7 @@ index 1ba1806..d4487d7 100644
  
  	return objPosDiffSq(psDroid, psTarget) < longRange * longRange;
  }
-@@ -181,6 +208,9 @@ static BASE_OBJECT *aiSearchSensorTargets(BASE_OBJECT *psObj, int weapon_slot, W
+@@ -184,6 +211,9 @@ static BASE_OBJECT *aiSearchSensorTargets(BASE_OBJECT *psObj, int weapon_slot, W
  		{
  			continue;
  		}
@@ -147,15 +105,7 @@ index 1ba1806..d4487d7 100644
  		else if (psSensor->type == OBJ_DROID)
  		{
  			DROID		*psDroid = (DROID *)psSensor;
-@@ -194,6 +224,7 @@ static BASE_OBJECT *aiSearchSensorTargets(BASE_OBJECT *psObj, int weapon_slot, W
- 			psTemp = psDroid->psActionTarget[0];
- 			isCB = cbSensorDroid(psDroid);
- 			isRD = objRadarDetector((BASE_OBJECT *)psDroid);
-+			SENSOR_STATS *psSensorStats = getSensorStats(psDroid);
- 		}
- 		else if (psSensor->type == OBJ_STRUCTURE)
- 		{
-@@ -933,6 +964,12 @@ bool aiChooseSensorTarget(BASE_OBJECT *psObj, BASE_OBJECT **ppsTarget)
+@@ -978,6 +1008,12 @@ bool aiChooseSensorTarget(BASE_OBJECT *psObj, BASE_OBJECT **ppsTarget)
  		ASSERT(false, "Only to be used for sensor turrets!");
  		return false;
  	}
@@ -168,10 +118,11 @@ index 1ba1806..d4487d7 100644
  
  	/* See if there is something in range */
  	if (psObj->type == OBJ_DROID)
-@@ -1283,4 +1320,64 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot)
+@@ -1314,3 +1350,65 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot)
  
  	return bValidTarget;
  }
++
 +bool targetInSensorRange(BASE_OBJECT *psTarget, BASE_OBJECT *psOrigin) {
 +	BASE_OBJECT	*psSensor;
 +	for (psSensor = apsSensorList[0]; psSensor; psSensor = psSensor->psNextFunc) {
@@ -181,12 +132,13 @@ index 1ba1806..d4487d7 100644
 +		}
 +		else if (objRadarDetector(psSensor)) {
 +			if (objActiveRadar(psTarget) != NULL) {
-+				SDWORD dx, dy, radSq, rangeSq;
++				int dx, dy, radSq, range, rangeSq;
 +				dx = (SDWORD)psSensor->pos.x - (SDWORD)psTarget->pos.x;
 +				dy = (SDWORD)psSensor->pos.y - (SDWORD)psTarget->pos.y;
 +
 +				radSq = dx*dx + dy*dy;
-+				rangeSq = psSensor->sensorRange * psSensor->sensorRange;
++				range = objSensorRange(psSensor);
++				rangeSq = range * range;
 +				if (radSq <= rangeSq) {
 +					return true;
 +				}
@@ -208,12 +160,13 @@ index 1ba1806..d4487d7 100644
 +			}
 +		}
 +		else if (objStandardSensor(psSensor) && visibleObject(psSensor, psTarget, true)) {
-+			SDWORD dx, dy, radSq, rangeSq;
++			int dx, dy, radSq, range, rangeSq;
 +			dx = (SDWORD)psSensor->pos.x - (SDWORD)psTarget->pos.x;
 +			dy = (SDWORD)psSensor->pos.y - (SDWORD)psTarget->pos.y;
 +
 +			radSq = dx*dx + dy*dy;
-+			rangeSq = psSensor->sensorRange * psSensor->sensorRange;
++			range = objSensorRange(psSensor);
++			rangeSq = range * range;
 +			if (radSq <= rangeSq) {
 +				return true;
 +			}
@@ -231,19 +184,19 @@ index 1ba1806..d4487d7 100644
 +	return false;
 +
 +}
-+
- 
 diff --git a/src/ai.h b/src/ai.h
-index 7a31507..f9a6e20 100644
+index 67e7939..d9f9f00 100644
 --- a/src/ai.h
 +++ b/src/ai.h
-@@ -83,3 +83,4 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot);
- // Check if any of the weapons can target the target
- bool checkAnyWeaponsTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget);
- #endif // __INCLUDED_SRC_AI_H__
+@@ -110,5 +110,6 @@ static inline bool alliancesCanGiveAnything(int t)
+ {
+ 	return t != NO_ALLIANCES;
+ }
 +bool targetInSensorRange(BASE_OBJECT *psTarget, BASE_OBJECT *psOrigin);
+ 
+ #endif // __INCLUDED_SRC_AI_H__
 diff --git a/src/combat.cpp b/src/combat.cpp
-index 3be05f2..a335f9d 100644
+index 83e29e7..396e78d 100644
 --- a/src/combat.cpp
 +++ b/src/combat.cpp
 @@ -28,6 +28,7 @@
@@ -254,10 +207,11 @@ index 3be05f2..a335f9d 100644
  #include "cluster.h"
  #include "combat.h"
  #include "difficulty.h"
-@@ -147,6 +148,12 @@ bool combFire(WEAPON *psWeap, BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, in
- 		}
+@@ -120,6 +121,13 @@ bool combFire(WEAPON *psWeap, BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, in
+ 		return false;
  	}
  
++	//if weapon needs sensor support, check if target is in sensor range
 +	if(psStats->targeting == 1) {
 +		if(!targetInSensorRange(psTarget, psAttacker)) {
 +			return false;
@@ -267,7 +221,7 @@ index 3be05f2..a335f9d 100644
  	Vector3i deltaPos = psTarget->pos - psAttacker->pos;
  
  	// if the turret doesn't turn, check if the attacker is in alignment with the target
-@@ -423,13 +430,14 @@ void counterBatteryFire(BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget)
+@@ -365,13 +373,14 @@ int objArmour(BASE_OBJECT *psObj, WEAPON_CLASS weaponClass)
  /* Deals damage to an object
   * \param psObj object to deal damage to
   * \param damage amount of damage to deal
@@ -276,57 +230,40 @@ index 3be05f2..a335f9d 100644
 + * \param psStats the stats of the weapon
   * \return < 0 when the dealt damage destroys the object, > 0 when the object survives
   */
--int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, bool isDamagePerSecond)
-+int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAPON_STATS *psStats, bool isDamagePerSecond)
+-int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, bool isDamagePerSecond, int minDamage)
++int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAPON_STATS *psStats, bool isDamagePerSecond, int minDamage)
  {
--	int	actualDamage, armour, level = 1;
-+	int	actualDamage, level = 0;
+-	int	actualDamage, level = 1, lastHit = psObj->timeLastHit;
++	int	actualDamage, level = 0, lastHit = psObj->timeLastHit;
 +	const WEAPON_CLASS weaponClass = psStats->weaponClass;
 +	const WEAPON_SUBCLASS weaponSubClass = psStats->weaponSubClass;
+ 	int armour = objArmour(psObj, weaponClass);
  
  	// If the previous hit was by an EMP cannon and this one is not:
- 	// don't reset the weapon class and hit time
-@@ -450,9 +458,7 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
- 	// apply game difficulty setting
- 	damage = modifyForDifficultyLevel(damage, psObj->player != selectedPlayer);
- 
--	armour = psObj->armour[weaponClass];
--
--	debug(LOG_ATTACK, "objDamage(%d): body %d armour %d damage: %d", psObj->id, psObj->body, armour, damage);
-+	debug(LOG_ATTACK, "objDamage(%d): body %d armour %d damage: %d", psObj->id, psObj->body, psObj->armour[weaponClass], damage);
- 
- 	if (psObj->type == OBJ_STRUCTURE || psObj->type == OBJ_DROID)
- 	{
-@@ -477,25 +483,15 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+@@ -416,21 +425,12 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
  	// Reduce damage taken by EXP_REDUCE_DAMAGE % for each experience level
  	actualDamage = (damage * (100 - EXP_REDUCE_DAMAGE * level)) / 100;
  
--	// You always do at least a third of the experience modified damage
--	actualDamage = MAX(actualDamage - armour, actualDamage / 3);
+-	// Apply at least the minimum damage amount
+-	actualDamage = MAX(actualDamage - armour, actualDamage * minDamage / 100);
 -
--	// And at least MIN_WEAPON_DAMAGE points
-+    // You always do at least MIN_WEAPON_DAMAGE points
+ 	// And at least MIN_WEAPON_DAMAGE points
  	actualDamage = MAX(actualDamage, MIN_WEAPON_DAMAGE);
--
+ 
  	if (isDamagePerSecond)
  	{
--		int deltaDamageRate = actualDamage - psObj->burnDamage;
+-		int deltaDamageRate = actualDamage - psObj->periodicalDamage;
 -		if (deltaDamageRate <= 0)
 -		{
 -			return 0;  // Did this much damage already, this tick, so don't do more.
 -		}
 -		actualDamage = gameTimeAdjustedAverage(deltaDamageRate);
--		psObj->burnDamage += deltaDamageRate;
+-		psObj->periodicalDamage += deltaDamageRate;
 +		actualDamage = gameTimeAdjustedAverage(actualDamage);
  	}
  
  	objTrace(psObj->id, "objDamage: Penetrated %d", actualDamage);
--	syncDebug("damage%u dam%u,o%u,wc%d.%d,ar%d,lev%d,aDam%d,isDps%d", psObj->id, damage, originalhp, weaponClass, weaponSubClass, armour, level, actualDamage, isDamagePerSecond);
-+	syncDebug("damage%u dam%u,o%u,wc%d.%d,ar%d,lev%d,aDam%d,isDps%d", psObj->id, damage, originalhp, weaponClass, weaponSubClass, psObj->armour[weaponClass], level, actualDamage, isDamagePerSecond);
- 
- 	// for some odd reason, we have 0 hitpoints.
- 	if (!originalhp)
-@@ -519,23 +515,21 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+@@ -458,23 +458,21 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
  }
  
  /* Guesses how damage a shot might do.
@@ -342,7 +279,7 @@ index 3be05f2..a335f9d 100644
  unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BASE_OBJECT *psTarget)
  {
  	unsigned int damage;
--	int	actualDamage, armour = 0, level = 1;
+-	int actualDamage, armour, level = 1;
 +	int	actualDamage, level = 0;
  
  	if (psTarget == NULL)
@@ -355,43 +292,43 @@ index 3be05f2..a335f9d 100644
  
  	// EMP cannons do no damage, if we are one return now
  	if (psStats->weaponSubClass == WSC_EMP)
-@@ -547,8 +541,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
+@@ -484,8 +482,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
+ 
  	// apply game difficulty setting
  	damage = modifyForDifficultyLevel(damage, psTarget->player != selectedPlayer);
- 
--	armour = MAX(armour, psTarget->armour[psStats->weaponClass]);
+-	armour = objArmour(psTarget, psStats->weaponClass);
 -
- 	//debug(LOG_ATTACK, "objGuessFutureDamage(%d): body %d armour %d damage: %d", psObj->id, psObj->body, armour, damage);
- 
  	if (psTarget->type == OBJ_DROID)
-@@ -562,9 +554,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
+ 	{
+ 		DROID *psDroid = (DROID *)psTarget;
+@@ -498,9 +494,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
  	// Reduce damage taken by EXP_REDUCE_DAMAGE % for each experience level
  	actualDamage = (damage * (100 - EXP_REDUCE_DAMAGE * level)) / 100;
  
 -	// You always do at least a third of the experience modified damage
--	actualDamage = MAX(actualDamage - armour, actualDamage / 3);
+-	actualDamage = MAX(actualDamage - armour, actualDamage * psStats->upgrade[player].minimumDamage / 100);
 -
  	// And at least MIN_WEAPON_DAMAGE points
  	actualDamage = MAX(actualDamage, MIN_WEAPON_DAMAGE);
  
 diff --git a/src/combat.h b/src/combat.h
-index cabb354..9f68d87 100644
+index 9dc51bc..9ad28d6 100644
 --- a/src/combat.h
 +++ b/src/combat.h
-@@ -48,7 +48,7 @@ bool combFire(WEAPON *psWeap, BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, in
+@@ -33,7 +33,7 @@ bool combFire(WEAPON *psWeap, BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, in
  if any support a counter battery sensor*/
  void counterBatteryFire(BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget);
  
--int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, bool isDamagePerSecond);
-+int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAPON_STATS *psStats, bool isDamagePerSecond);
+-int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, bool isDamagePerSecond, int minDamage);
++int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAPON_STATS *psStats, bool isDamagePerSecond, int minDamage);
  
  unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BASE_OBJECT *psTarget);
  
 diff --git a/src/component.cpp b/src/component.cpp
-index 024bc3e..a9ed019 100644
+index 1a465a2..32dd183 100644
 --- a/src/component.cpp
 +++ b/src/component.cpp
-@@ -131,6 +131,9 @@ UDWORD getComponentRadius(BASE_STATS *psComponent)
+@@ -119,6 +119,9 @@ UDWORD getComponentRadius(BASE_STATS *psComponent)
  	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
  	if (StatIsComponent(psComponent) != COMP_WEAPON
  	    || (((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_BOMB
@@ -401,7 +338,7 @@ index 024bc3e..a9ed019 100644
  	        && ((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_EMP))
  	{
  		ASSERT(ComponentIMD, "No ComponentIMD!");
-@@ -424,6 +427,9 @@ void displayComponentButton(BASE_STATS *Stat, Vector3i *Rotation, Vector3i *Posi
+@@ -294,6 +297,9 @@ void displayComponentButton(BASE_STATS *Stat, const Vector3i *Rotation, const Ve
  	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
  	if (StatIsComponent(Stat) != COMP_WEAPON
  	    || (((WEAPON_STATS *)Stat)->weaponSubClass != WSC_BOMB
@@ -411,63 +348,11 @@ index 024bc3e..a9ed019 100644
  	        && ((WEAPON_STATS *)Stat)->weaponSubClass != WSC_EMP))
  	{
  		ASSERT(ComponentIMD, "No ComponentIMD");
-diff --git a/src/display.cpp b/src/display.cpp
-index 4ac4ec1..d40d655 100644
---- a/src/display.cpp
-+++ b/src/display.cpp
-@@ -1776,10 +1776,11 @@ static void dealWithLMBDroid(DROID *psDroid, SELECTION_TYPE selection)
- 				if (!psDroid->selected)
- 				{
- 					CONPRINTF(ConsoleString, (ConsoleString,
--					                          _("%s - Damage %d%% - Experience %.1f, %s"),
--					                          droidGetName(psDroid),
--					                          100 - clip(PERCENT(psDroid->body, psDroid->originalBody), 0, 100),
--					                          psDroid->experience / 65536.f, _(getDroidLevelName(psDroid))));
-+								_("%s - Body Points: %d of %d - Experience %.1f, %s"),
-+								droidGetName(psDroid),
-+								psDroid->body,
-+								psDroid->originalBody,
-+								psDroid->experience / 65536.f, _(getDroidLevelName(psDroid))));
- 
- 					FeedbackOrderGiven();
- 				}
-@@ -1792,10 +1793,11 @@ static void dealWithLMBDroid(DROID *psDroid, SELECTION_TYPE selection)
- 	else // Clicked on allied unit with no other possible actions
- 	{
- 		CONPRINTF(ConsoleString, (ConsoleString,
--		                          _("%s - Allied - Damage %d%% - Experience %d, %s"),
--		                          droidGetName(psDroid),
--		                          100 - clip(PERCENT(psDroid->body, psDroid->originalBody), 0, 100),
--		                          psDroid->experience / 65536, getDroidLevelName(psDroid)));
-+					_("%s - Allied - Body Points: %d of %d - Experience %d, %s"),
-+					droidGetName(psDroid),
-+					psDroid->body,
-+					psDroid->originalBody,
-+					psDroid->experience / 65536, getDroidLevelName(psDroid)));
- 
- 		FeedbackOrderGiven();
- 	}
-@@ -2276,10 +2278,11 @@ static void dealWithRMB(void)
- 								if (!psDroid->selected)
- 								{
- 									CONPRINTF(ConsoleString, (ConsoleString,
--									                          _("%s - Damage %d%% - Experience %.1f, %s"),
--									                          droidGetName(psDroid),
--									                          100 - clip(PERCENT(psDroid->body, psDroid->originalBody), 0, 100),
--									                          psDroid->experience / 65536.f, _(getDroidLevelName(psDroid))));
-+												_("%s - Body Points: %d of %d - Experience %.1f, %s"),
-+												droidGetName(psDroid),
-+												psDroid->body,
-+												psDroid->originalBody,
-+												psDroid->experience/65536.f, _(getDroidLevelName(psDroid))));
- 
- 									FeedbackOrderGiven();
- 								}
 diff --git a/src/droid.cpp b/src/droid.cpp
-index 62de3d8..e76a7f1 100644
+index 359bdcb..2814444 100644
 --- a/src/droid.cpp
 +++ b/src/droid.cpp
-@@ -148,26 +148,23 @@ bool droidInit(void)
+@@ -209,26 +209,23 @@ int droidReloadBar(BASE_OBJECT *psObj, WEAPON *psWeap, int weapon_slot)
  /* Deals damage to a droid
   * \param psDroid droid to deal damage to
   * \param damage amount of damage to deal
@@ -479,8 +364,8 @@ index 62de3d8..e76a7f1 100644
   *
   * NOTE: This function will damage but _never_ destroy transports when in single player (campaign) mode
   */
--int32_t droidDamage(DROID *psDroid, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond)
-+int32_t droidDamage(DROID *psDroid, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond)
+-int32_t droidDamage(DROID *psDroid, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond, int minDamage)
++int32_t droidDamage(DROID *psDroid, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond, int minDamage)
  {
  	int32_t relativeDamage;
 +	const WEAPON_CLASS weaponClass = psStats->weaponClass;
@@ -494,42 +379,42 @@ index 62de3d8..e76a7f1 100644
 -	}
 +	// NOT
  
--	relativeDamage = objDamage(psDroid, damage, psDroid->originalBody, weaponClass, weaponSubClass, isDamagePerSecond);
-+	relativeDamage = objDamage(psDroid, damage, psDroid->originalBody, psStats, isDamagePerSecond);
+-	relativeDamage = objDamage(psDroid, damage, psDroid->originalBody, weaponClass, weaponSubClass, isDamagePerSecond, minDamage);
++	relativeDamage = objDamage(psDroid, damage, psDroid->originalBody, psStats, isDamagePerSecond, minDamage);
  
  	if (relativeDamage > 0)
  	{
-@@ -840,28 +837,11 @@ void droidUpdate(DROID *psDroid)
+@@ -885,28 +882,11 @@ void droidUpdate(DROID *psDroid)
  	// -----------------
  
  	// See if we can and need to self repair.
--	if (!isVtolDroid(psDroid) && psDroid->body < psDroid->originalBody && psDroid->asBits[COMP_REPAIRUNIT].nStat != 0 && selfRepairEnabled(psDroid->player))
-+	if (psDroid->body < psDroid->originalBody && psDroid->asBits[COMP_REPAIRUNIT].nStat != 0 && selfRepairEnabled(psDroid->player))
+-	if (!isVtolDroid(psDroid) && psDroid->body < psDroid->originalBody && psDroid->asBits[COMP_REPAIRUNIT] != 0 && selfRepairEnabled(psDroid->player))
++	if (psDroid->body < psDroid->originalBody && psDroid->asBits[COMP_REPAIRUNIT] != 0 && selfRepairEnabled(psDroid->player))
  	{
  		droidUpdateDroidSelfRepair(psDroid);
  	}
  
 -	/* Update the fire damage data */
--	if (psDroid->burnStart != 0 && psDroid->burnStart != gameTime - deltaGameTime)  // -deltaGameTime, since projectiles are updated after droids.
+-	if (psDroid->periodicalDamageStart != 0 && psDroid->periodicalDamageStart != gameTime - deltaGameTime)  // -deltaGameTime, since projectiles are updated after droids.
 -	{
--		// The burnStart has been set, but is not from the previous tick, so we must be out of the fire.
--		psDroid->burnDamage = 0;  // Reset burn damage done this tick.
--		if (psDroid->burnStart + BURN_TIME < gameTime)
+-		// The periodicalDamageStart has been set, but is not from the previous tick, so we must be out of the fire.
+-		psDroid->periodicalDamage = 0;  // Reset periodical damage done this tick.
+-		if (psDroid->periodicalDamageStart + BURN_TIME < gameTime)
 -		{
--			// Finished burning.
--			psDroid->burnStart = 0;
+-			// Finished periodical damaging.
+-			psDroid->periodicalDamageStart = 0;
 -		}
 -		else
 -		{
--			// do burn damage
--			droidDamage(psDroid, BURN_DAMAGE, WC_HEAT, WSC_FLAME, gameTime - deltaGameTime / 2 + 1, true);
+-			// do hardcoded burn damage (this damage automatically applied after periodical damage finished)
+-			droidDamage(psDroid, BURN_DAMAGE, WC_HEAT, WSC_FLAME, gameTime - deltaGameTime / 2 + 1, true, BURN_MIN_DAMAGE);
 -		}
 -	}
 -
- 	// At this point, the droid may be dead due to burn damage.
+ 	// At this point, the droid may be dead due to periodical damage or hardcoded burn damage.
  	if (isDead((BASE_OBJECT *)psDroid))
  	{
-@@ -1240,7 +1220,7 @@ bool droidUpdateRestore(DROID *psDroid)
+@@ -1253,7 +1233,7 @@ bool droidUpdateRestore(DROID *psDroid)
  	ASSERT_OR_RETURN(false, psStats->weaponSubClass == WSC_ELECTRONIC, "unit's weapon is not EW");
  
  	restorePoints = calcDamage(weaponDamage(psStats, psDroid->player),
@@ -539,219 +424,59 @@ index 62de3d8..e76a7f1 100644
  	pointsToAdd = restorePoints * (gameTime - psDroid->actionStarted) /
  	              GAME_TICKS_PER_SEC;
 diff --git a/src/droid.h b/src/droid.h
-index 23ec8b5..31ce66b 100644
+index d4c339a..cecd152 100644
 --- a/src/droid.h
 +++ b/src/droid.h
-@@ -128,7 +128,7 @@ extern UDWORD	calcTemplatePower(DROID_TEMPLATE *psTemplate);
+@@ -110,7 +110,7 @@ extern UDWORD	calcTemplatePower(DROID_TEMPLATE *psTemplate);
  bool idfDroid(DROID *psDroid);
  
  /* Do damage to a droid */
--int32_t droidDamage(DROID *psDroid, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond);
-+int32_t droidDamage(DROID *psDroid, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond);
+-int32_t droidDamage(DROID *psDroid, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond, int minDamage);
++int32_t droidDamage(DROID *psDroid, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond, int minDamage);
  
  /* The main update routine for all droids */
  extern void droidUpdate(DROID *psDroid);
 diff --git a/src/feature.cpp b/src/feature.cpp
-index 8992ef9..4676c43 100644
+index 86b2322..2d0f078 100644
 --- a/src/feature.cpp
 +++ b/src/feature.cpp
-@@ -155,16 +155,16 @@ void featureStatsShutDown(void)
+@@ -160,7 +160,7 @@ void featureStatsShutDown(void)
   *  \param weaponClass,weaponSubClass the class and subclass of the weapon that deals the damage
   *  \return < 0 never, >= 0 always
   */
--int32_t featureDamage(FEATURE *psFeature, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond)
-+int32_t featureDamage(FEATURE *psFeature, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond)
+-int32_t featureDamage(FEATURE *psFeature, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond, int minDamage)
++int32_t featureDamage(FEATURE *psFeature, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond, int minDamage)
  {
  	int32_t relativeDamage;
  
- 	ASSERT_OR_RETURN(0, psFeature != NULL, "Invalid feature pointer");
- 
+@@ -169,7 +169,7 @@ int32_t featureDamage(FEATURE *psFeature, unsigned damage, WEAPON_CLASS weaponCl
  	debug(LOG_ATTACK, "feature (id %d): body %d armour %d damage: %d",
--	      psFeature->id, psFeature->body, psFeature->armour[weaponClass], damage);
-+	      psFeature->id, psFeature->body, psFeature->armour[psStats->weaponClass], damage);
+ 	      psFeature->id, psFeature->body, psFeature->psStats->armourValue, damage);
  
--	relativeDamage = objDamage(psFeature, damage, psFeature->psStats->body, weaponClass, weaponSubClass, isDamagePerSecond);
-+	relativeDamage = objDamage(psFeature, damage, psFeature->psStats->body, psStats, isDamagePerSecond);
+-	relativeDamage = objDamage(psFeature, damage, psFeature->psStats->body, weaponClass, weaponSubClass, isDamagePerSecond, minDamage);
++	relativeDamage = objDamage(psFeature, damage, psFeature->psStats->body, psStats, isDamagePerSecond, minDamage);
  
  	// If the shell did sufficient damage to destroy the feature
  	if (relativeDamage < 0)
 diff --git a/src/feature.h b/src/feature.h
-index 81896d6..4c45d09 100644
+index 9818eda..ef7071a 100644
 --- a/src/feature.h
 +++ b/src/feature.h
 @@ -54,7 +54,7 @@ bool destroyFeature(FEATURE *psDel, unsigned impactTime);
  /* get a feature stat id from its name */
  extern SDWORD getFeatureStatFromName(const char *pName);
  
--int32_t featureDamage(FEATURE *psFeature, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond);
-+int32_t featureDamage(FEATURE *psFeature, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond);
+-int32_t featureDamage(FEATURE *psFeature, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond, int minDamage);
++int32_t featureDamage(FEATURE *psFeature, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond, int minDamage);
  
  extern void     featureInitVars(void);
  
-diff --git a/src/function.cpp b/src/function.cpp
-index 555c02a..0d38550 100644
---- a/src/function.cpp
-+++ b/src/function.cpp
-@@ -145,7 +145,7 @@ static bool loadProduction(const char *pData)
- {
- 	PRODUCTION_FUNCTION	*psFunction;
- 	char					functionName[MAX_STR_LENGTH], bodySize[MAX_STR_LENGTH];
--	UDWORD					productionOutput;
-+	uint32_t					productionOutput;
- 
- 	psFunction = (PRODUCTION_FUNCTION *)malloc(sizeof(PRODUCTION_FUNCTION));
- 	memset(psFunction, 0, sizeof(PRODUCTION_FUNCTION));
-@@ -162,7 +162,7 @@ static bool loadProduction(const char *pData)
- 	//read the data in
- 	functionName[0] = '\0';
- 	bodySize[0] = '\0';
--	sscanf(pData, "%255[^,'\r\n],%255[^,'\r\n],%d", functionName, bodySize,
-+	sscanf(pData, "%255[^,'\r\n],%255[^,'\r\n],%u", functionName, bodySize,
- 	       &productionOutput);
- 
- 	//allocate storage for the name
-@@ -174,15 +174,14 @@ static bool loadProduction(const char *pData)
- 		return false;
- 	}
- 
--	//check prod output < UWORD_MAX
--	if (productionOutput < UWORD_MAX)
-+	//check prod output <= UINT32_MAX
-+	if (productionOutput <= UINT32_MAX)
- 	{
--		psFunction->productionOutput = (UWORD)productionOutput;
-+		psFunction->productionOutput = (uint32_t)productionOutput;
- 	}
- 	else
- 	{
--		ASSERT(false, "loadProduction: production Output too big for %s", psFunction->pName);
--
-+		ASSERT(false, "loadProduction: production Output too big for %s, production Output set to 0", psFunction->pName);
- 		psFunction->productionOutput = 0;
- 	}
- 
-@@ -295,7 +294,7 @@ static bool loadReArmFunction(const char *pData)
- 
- 	//read the data in
- 	functionName[0] = '\0';
--	sscanf(pData, "%255[^,'\r\n],%d", functionName, &psFunction->reArmPoints);
-+	sscanf(pData, "%255[^,'\r\n],%d,%d", functionName, &psFunction->reArmPoints, &psFunction->repairPoints);
- 
- 	//allocate storage for the name
- 	storeName((FUNCTION *)psFunction, functionName);
-@@ -960,7 +959,7 @@ void structureProductionUpgrade(STRUCTURE *psBuilding)
- {
- 	FACTORY						*pFact;
- 	PRODUCTION_FUNCTION			*pFactFunc;
--	UDWORD						type, baseOutput, i;
-+	uint32_t						type, baseOutput, i;
- 	STRUCTURE_STATS             *psStat;
- 
- 	switch (psBuilding->pStructureType->type)
-@@ -999,7 +998,7 @@ void structureProductionUpgrade(STRUCTURE *psBuilding)
- 		}
- 	}
- 
--	pFact->productionOutput = (UBYTE)(baseOutput + (pFactFunc->productionOutput *
-+	pFact->productionOutput = (uint32_t)(baseOutput + (pFactFunc->productionOutput *
- 	                                  asProductionUpgrade[psBuilding->player][type].modifier) / 100);
- }
- 
-@@ -1047,6 +1046,22 @@ void structureReArmUpgrade(STRUCTURE *psBuilding)
- 	                    asReArmUpgrade[psBuilding->player].modifier) / 100;
- }
- 
-+void structureReArmRepairUpgrade(STRUCTURE *psBuilding)
-+{
-+	REARM_PAD					*pPad = &psBuilding->pFunctionality->rearmPad;
-+	REPAIR_DROID_FUNCTION				*pRepairFunc;
-+
-+	//upgrade the repair points of a rearm pad
-+	ASSERT(pPad != NULL, "structureReArmUpgrade: invalid ReArm pointer");
-+
-+	pRepairFunc = (REPAIR_DROID_FUNCTION *)psBuilding->pStructureType->asFuncList[0];
-+	ASSERT(pRepairFunc != NULL,
-+	       "structureRepairUpgrade: invalid Function pointer");
-+	
-+	pPad->repairPoints = pRepairFunc->repairPoints + (pRepairFunc->repairPoints *
-+	        asRepairFacUpgrade[psBuilding->player].modifier) / 100;
-+}
-+
- void structurePowerUpgrade(STRUCTURE *psBuilding)
- {
- 	POWER_GEN		*pPowerGen = &psBuilding->pFunctionality->powerGenerator;
-diff --git a/src/function.h b/src/function.h
-index 4501d27..9c1063f 100644
---- a/src/function.h
-+++ b/src/function.h
-@@ -49,6 +49,7 @@ extern void structurePowerUpgrade(STRUCTURE *psBuilding);
- extern void structureRepairUpgrade(STRUCTURE *psBuilding);
- extern void structureSensorUpgrade(STRUCTURE *psBuilding);
- extern void structureReArmUpgrade(STRUCTURE *psBuilding);
-+extern void structureReArmRepairUpgrade(STRUCTURE *psBuilding);
- extern void structureECMUpgrade(STRUCTURE *psBuilding);
- extern void sensorUpgrade(FUNCTION *pFunction, UBYTE player);
- extern void repairUpgrade(FUNCTION *pFunction, UBYTE player);
-diff --git a/src/functiondef.h b/src/functiondef.h
-index 9e73855..f4a5ef5 100644
---- a/src/functiondef.h
-+++ b/src/functiondef.h
-@@ -112,7 +112,7 @@ struct PRODUCTION_UPGRADE_FUNCTION : public FUNCTION
- struct PRODUCTION_FUNCTION : public FUNCTION
- {
- 	BODY_SIZE capacity;      // The max size of body the factory can produce
--	UWORD productionOutput;	 // Droid Build Points Produced Per Build Cycle
-+	uint32_t productionOutput;	 // Droid Build Points Produced Per Build Cycle
- };
- 
- /*To research topics available*/
-@@ -125,6 +125,7 @@ struct RESEARCH_FUNCTION : public FUNCTION
- /*To rearm VTOLs*/
- struct REARM_FUNCTION : public FUNCTION
- {
-+	uint32_t		repairPoints;	/*The number of repair points added per cycle*/
- 	UDWORD			reArmPoints;	/*The number of reArm points added per cycle*/
- };
- 
-diff --git a/src/game.cpp b/src/game.cpp
-index 9940ab5..bba6b42 100644
---- a/src/game.cpp
-+++ b/src/game.cpp
-@@ -5089,6 +5089,7 @@ static bool loadSaveStructure2(const char *pFileName, STRUCTURE **ppList)
- 			break;
- 		case REF_REARM_PAD:
- 			psReArmPad = ((REARM_PAD *)psStructure->pFunctionality);
-+			psReArmPad->repairPoints = ini.value("Rearm/repairPoints", psReArmPad->repairPoints).toInt();
- 			psReArmPad->reArmPoints = ini.value("Rearm/reArmPoints", psReArmPad->reArmPoints).toInt();
- 			psReArmPad->timeStarted = ini.value("Rearm/timeStarted", psReArmPad->timeStarted).toInt();
- 			psReArmPad->timeLastUpdated = ini.value("Rearm/timeLastUpdated", psReArmPad->timeLastUpdated).toInt();
-@@ -5363,6 +5364,7 @@ bool writeStructFile(const char *pFileName)
- 				else if (psCurr->pStructureType->type == REF_REARM_PAD)
- 				{
- 					REARM_PAD *psReArmPad = ((REARM_PAD *)psCurr->pFunctionality);
-+					ini.setValue("Rearm/repairPoints", psReArmPad->repairPoints);
- 					ini.setValue("Rearm/reArmPoints", psReArmPad->reArmPoints);
- 					ini.setValue("Rearm/timeStarted", psReArmPad->timeStarted);
- 					ini.setValue("Rearm/timeLastUpdated", psReArmPad->timeLastUpdated);
-diff --git a/src/intdisplay.cpp b/src/intdisplay.cpp
-index c5bad2d..d3fbf48 100644
---- a/src/intdisplay.cpp
-+++ b/src/intdisplay.cpp
-@@ -267,7 +267,7 @@ void intUpdateProgressBar(WIDGET *psWidget, W_CONTEXT *psContext)
- 			{
- 				// Started production. Set the colour of the bar to yellow.
- 				int buildPointsTotal = FactoryGetTemplate(Manufacture)->buildPoints;
--				int buildRate = Manufacture->timeStartHold == 0 ? Manufacture->productionOutput : 0;
-+				uint32_t buildRate = Manufacture->timeStartHold == 0? Manufacture->productionOutput : 0;
- 				formatTime(BarGraph, buildPointsTotal - Manufacture->buildPointsRemaining, buildPointsTotal, buildRate, _("Construction Progress"));
- 			}
- 			else
 diff --git a/src/move.cpp b/src/move.cpp
-index 0178db2..62ee1cf 100644
+index 621d03b..cd5491a 100644
 --- a/src/move.cpp
 +++ b/src/move.cpp
-@@ -60,9 +60,9 @@
- #include "drive.h"
+@@ -61,9 +61,9 @@
+ #include "qtscript.h"
  
  /* max and min vtol heights above terrain */
 -#define	VTOL_HEIGHT_MIN				250
@@ -761,31 +486,13 @@ index 0178db2..62ee1cf 100644
 +#define	VTOL_HEIGHT_LEVEL			450
 +#define	VTOL_HEIGHT_MAX				500
  
- /* minimum distance for cyborgs to jump */
- #define	CYBORG_MIN_JUMP_DISTANCE	500
-@@ -116,7 +116,7 @@
- // How fast a wheeled droid decelerates
- #define WHEELED_SKID_DECEL		350
- // How fast a hover droid decelerates
--#define HOVER_SKID_DECEL		120
-+#define HOVER_SKID_DECEL		200
- 
- /************************************************************************************/
- /*             Person model defines                                                 */
-@@ -147,7 +147,7 @@
- // How fast vtols decelerate
- #define VTOL_DECEL				200
- // How fast vtols 'skid'
--#define VTOL_SKID_DECEL			600
-+#define VTOL_SKID_DECEL			1500
- 
- /// Extra precision added to movement calculations.
- #define EXTRA_BITS                              8
+ // Maximum size of an object for collision
+ #define OBJ_MAXRADIUS	(TILE_UNITS * 4)
 diff --git a/src/oprint.cpp b/src/oprint.cpp
-index 63b52c0..f8fcb48 100644
+index ee3e6d6..24d6ec7 100644
 --- a/src/oprint.cpp
 +++ b/src/oprint.cpp
-@@ -152,6 +152,56 @@ static void printWeaponInfo(const WEAPON_STATS *psStats)
+@@ -137,6 +137,56 @@ static void printWeaponInfo(const WEAPON_STATS *psStats)
  	case WSC_EMP:
  		pWSC = "WSC_EMP";
  		break;
@@ -843,20 +550,20 @@ index 63b52c0..f8fcb48 100644
  		pWSC = "UNKNOWN SUB CLASS";
  		break;
 diff --git a/src/projectile.cpp b/src/projectile.cpp
-index 0701981..d5bed8c 100644
+index 1d38191..3464e75 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
-@@ -113,8 +113,7 @@ static void	proj_ImpactFunc(PROJECTILE *psObj);
+@@ -114,8 +114,7 @@ static void	proj_ImpactFunc(PROJECTILE *psObj);
  static void	proj_PostImpactFunc(PROJECTILE *psObj);
- static void proj_checkBurnDamage(PROJECTILE *psProj);
+ static void proj_checkPeriodicalDamage(PROJECTILE *psProj);
  
--static int32_t objectDamage(BASE_OBJECT *psObj, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond);
+-static int32_t objectDamage(BASE_OBJECT *psObj, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond, int minDamage);
 -
-+static int32_t objectDamage(BASE_OBJECT *psObj, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond);
++static int32_t objectDamage(BASE_OBJECT *psObj, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond, int minDamage);
  
  static inline void setProjectileDestination(PROJECTILE *psProj, BASE_OBJECT *psObj)
  {
-@@ -541,7 +540,8 @@ bool proj_SendProjectileAngled(WEAPON *psWeap, SIMPLE_OBJECT *psAttacker, int pl
+@@ -556,7 +555,8 @@ bool proj_SendProjectileAngled(WEAPON *psWeap, SIMPLE_OBJECT *psAttacker, int pl
  				/* firing sound emitted from source */
  				audio_PlayObjDynamicTrack(psProj->psSource, psStats->iAudioFireID, NULL);
  				/* GJ HACK: move howitzer sound with shell */
@@ -866,45 +573,7 @@ index 0701981..d5bed8c 100644
  				{
  					audio_PlayObjDynamicTrack(psProj, ID_SOUND_HOWITZ_FLIGHT, NULL);
  				}
-@@ -702,14 +702,29 @@ static void proj_InFlightFunc(PROJECTILE *psProj)
- 		break;
- 	case WSC_CANNON:
- 	case WSC_BOMB:
-+	case WSC_CLUSTERBOMB:
-+	case WSC_HOTBOMB:
-+	case WSC_HEAVYBOMB:
- 	case WSC_ELECTRONIC:
- 	case WSC_EMP:
- 	case WSC_FLAME:
-+	case WSC_LASER:
-+	case WSC_AALASER:
- 	case WSC_ENERGY:
- 	case WSC_GAUSS:
- 		distanceExtensionFactor = 150;
- 		break;
- 	case WSC_AAGUN: // No extended distance
-+	case WSC_AACANNON:
-+	case WSC_GEN0:
-+	case WSC_GEN1:
-+	case WSC_GEN2:
-+	case WSC_GEN3:
-+	case WSC_GEN4:
-+	case WSC_GEN5:
-+	case WSC_GEN6:
-+	case WSC_GEN7:
-+	case WSC_GEN8:
- 		distanceExtensionFactor = 100;
- 		break;
- 	case WSC_ROCKET:
-@@ -720,6 +735,7 @@ static void proj_InFlightFunc(PROJECTILE *psProj)
- 	case WSC_COUNTER:
- 	case WSC_MORTARS:
- 	case WSC_HOWITZERS:
-+	case WSC_HOTHOWITZER:
- 	case WSC_LAS_SAT:
- 		distanceExtensionFactor = 150;
- 		break;
-@@ -1139,7 +1155,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
+@@ -1095,7 +1095,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
  		{
  			// If we did enough `damage' to capture the target
  			if (electronicDamage(psObj->psDest,
@@ -913,7 +582,7 @@ index 0701981..d5bed8c 100644
  			                     psObj->player))
  			{
  				switch (psObj->psSource->type)
-@@ -1164,7 +1180,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
+@@ -1120,7 +1120,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
  		else
  		{
  			// Calculate the damage the weapon does to its target
@@ -922,17 +591,19 @@ index 0701981..d5bed8c 100644
  
  			// If we are in a multi-player game and the attacker is our responsibility
  			if (bMultiPlayer && psObj->psSource)
-@@ -1176,7 +1192,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
+@@ -1132,8 +1132,8 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
  			      psObj->psDest->id, psObj->psDest->player);
  
  			// Damage the object
--			relativeDamage = objectDamage(psObj->psDest, damage, psStats->weaponClass, psStats->weaponSubClass, psObj->time, false);
-+			relativeDamage = objectDamage(psObj->psDest, damage, psStats, psObj->time, false);
+-			relativeDamage = objectDamage(psObj->psDest, damage, psStats->weaponClass, psStats->weaponSubClass,
+-			                              psObj->time, false, psStats->upgrade[psObj->player].minimumDamage);
++			relativeDamage = objectDamage(psObj->psDest, damage, psStats, psObj->time, false,
++			                              psStats->upgrade[psObj->player].minimumDamage);
  
  			proj_UpdateKills(psObj, relativeDamage);
  
-@@ -1259,13 +1275,13 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
- 				continue;  // Target was lucky, and the tank or structure somehow managed to dodge the explosion.
+@@ -1211,14 +1211,14 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
+ 				continue;  // Target out of range.
  			}
  			// The psCurr will get damaged, at this point.
 -			unsigned damage = calcDamage(weaponRadDamage(psStats, psObj->player), psStats->weaponEffect, psCurr);
@@ -942,21 +613,23 @@ index 0701981..d5bed8c 100644
  			{
  				updateMultiStatsDamage(psObj->psSource->player, psCurr->player, damage);
  			}
--			int relativeDamage = objectDamage(psCurr, damage, psStats->weaponClass, psStats->weaponSubClass, psObj->time, false);
-+			int relativeDamage = objectDamage(psCurr, damage, psStats, psObj->time, false);
+-			int relativeDamage = objectDamage(psCurr, damage, psStats->weaponClass, psStats->weaponSubClass,
+-			                                  psObj->time, false, psStats->upgrade[psObj->player].minimumDamage);
++			int relativeDamage = objectDamage(psCurr, damage, psStats, psObj->time, false,
++			                                  psStats->upgrade[psObj->player].minimumDamage);
  			proj_UpdateKills(psObj, relativeDamage);
  		}
  	}
-@@ -1294,7 +1310,7 @@ static void proj_PostImpactFunc(PROJECTILE *psObj)
+@@ -1247,7 +1247,7 @@ static void proj_PostImpactFunc(PROJECTILE *psObj)
  	int age = gameTime - psObj->born;
  
  	/* Time to finish postimpact effect? */
--	if (age > (SDWORD)psStats->radiusLife && age > (SDWORD)psStats->incenTime)
-+	if (age >= (SDWORD)psStats->radiusLife && age >= (SDWORD)psStats->incenTime)
+-	if (age > psStats->radiusLife && age > psStats->upgrade[psObj->player].periodicalDamageTime)
++	if (age >= psStats->radiusLife && age >= psStats->upgrade[psObj->player].periodicalDamageTime)
  	{
  		psObj->state = PROJ_INACTIVE;
  		return;
-@@ -1363,6 +1379,13 @@ void PROJECTILE::update()
+@@ -1316,6 +1316,13 @@ void PROJECTILE::update()
  
  	case PROJ_INACTIVE:
  		psObj->died = psObj->time;
@@ -964,13 +637,13 @@ index 0701981..d5bed8c 100644
 +		{
 +			for(std::list<BASE_OBJECT *>::iterator it = psObj->burnVictims.begin(); it != psObj->burnVictims.end(); it++)
 +			{
-+				(*it)->burnStart = 0;
++				(*it)->periodicalDamageStart = 0;
 +			}
 +		}
  		break;
  	}
  
-@@ -1394,11 +1417,25 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
+@@ -1347,11 +1354,25 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
  
  	WEAPON_STATS *psStats = psProj->psWStats;
  
@@ -989,7 +662,7 @@ index 0701981..d5bed8c 100644
 +	}
 +
  	static GridList gridList;  // static to avoid allocations.
- 	gridList = gridStartIterate(psProj->pos.x, psProj->pos.y, psStats->incenRadius);
+ 	gridList = gridStartIterate(psProj->pos.x, psProj->pos.y, psStats->upgrade[psProj->player].periodicalDamageRadius);
  	for (GridIterator gi = gridList.begin(); gi != gridList.end(); ++gi)
  	{
 -		BASE_OBJECT *psCurr = *gi;
@@ -997,14 +670,16 @@ index 0701981..d5bed8c 100644
  		if (psCurr->died)
  		{
  			continue;  // Do not damage dead objects further.
-@@ -1426,11 +1463,36 @@ static void proj_checkBurnDamage(PROJECTILE *psProj)
- 			psCurr->burnStart = gameTime;
- 			psCurr->burnDamage = 0;  // Reset burn damage done this tick.
+@@ -1379,13 +1400,36 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
+ 			psCurr->periodicalDamageStart = gameTime;
+ 			psCurr->periodicalDamage = 0;  // Reset periodical damage done this tick.
  		}
--		unsigned damageRate = weaponIncenDamage(psStats, psProj->player);
--		debug(LOG_NEVER, "Burn damage of %d per second to object %d, player %d\n", damageRate, psCurr->id, psCurr->player);
+-		unsigned damageRate = calcDamage(weaponPeriodicalDamage(psStats, psProj->player), psStats->periodicalDamageWeaponEffect, psCurr);
+-		debug(LOG_NEVER, "Periodical damage of %d per second to object %d, player %d\n", damageRate, psCurr->id, psCurr->player);
  
--		int relativeDamage = objectDamage(psCurr, damageRate, psStats->weaponClass, psStats->weaponSubClass, gameTime - deltaGameTime / 2 + 1, true);
+-		int relativeDamage = objectDamage(psCurr, damageRate, psStats->periodicalDamageWeaponClass,
+-		                                  psStats->periodicalDamageWeaponSubClass, gameTime - deltaGameTime / 2 + 1, true,
+-		                                  psStats->upgrade[psProj->player].minimumDamage);
 -		proj_UpdateKills(psProj, relativeDamage);
 +		if (psProj->burnVictims.empty())
 +		{
@@ -1031,14 +706,14 @@ index 0701981..d5bed8c 100644
 +		for (std::list<BASE_OBJECT *>::iterator it = psProj->burnVictims.begin(); it != psProj->burnVictims.end(); it++)
 +		{
 +			psCurr = *it;
-+			damageRate = weaponIncenDamage(psCurr, psStats, psProj->player);
-+			relativeDamage = objectDamage(psCurr, damageRate, psStats, gameTime - deltaGameTime/2 + 1, true);
++			damageRate = weaponPeriodicalDamage(psCurr, psStats, psProj->player);
++			relativeDamage = objectDamage(psCurr, damageRate, psStats, gameTime - deltaGameTime/2 + 1, true, psStats->upgrade[psProj->player].minimumDamage);
 +			proj_UpdateKills(psProj, relativeDamage);
 +		}
  	}
  }
  
-@@ -1519,29 +1581,42 @@ static ObjectShape establishTargetShape(BASE_OBJECT *psTarget)
+@@ -1465,29 +1509,42 @@ static ObjectShape establishTargetShape(BASE_OBJECT *psTarget)
  
  /*the damage depends on the weapon effect and the target propulsion type or
  structure strength*/
@@ -1055,8 +730,8 @@ index 0701981..d5bed8c 100644
 -	{
 -		damage += baseDamage * (asStructStrengthModifier[weaponEffect][((STRUCTURE *)psTarget)->pStructureType->strength] - 100);
 +	{		
-+		const STRUCTURE *target = (STRUCTURE *)psTarget;
-+		const UDWORD armour = target->armour[weaponClass];
++		STRUCTURE *target = (STRUCTURE *)psTarget;
++		const UDWORD armour = objArmour(target, weaponClass);
 +		const STRUCTSTRENGTH_MODIFIER structMod = target->pStructureType->strength;
 +		const double modifier = asStructStrengthModifier[weaponEffect][structMod]/100.0;
 +		
@@ -1068,10 +743,10 @@ index 0701981..d5bed8c 100644
  	}
  	else if (psTarget->type == OBJ_DROID)
  	{
-+		const DROID *target = (DROID *)psTarget;
-+		const UDWORD armour = target->armour[weaponClass];
- 		const int propulsion = (asPropulsionStats + ((DROID *)psTarget)->asBits[COMP_PROPULSION].nStat)->propulsionType;
--		const int body = (asBodyStats + ((DROID *)psTarget)->asBits[COMP_BODY].nStat)->size;
++		DROID *target = (DROID *)psTarget;
++		const UDWORD armour = objArmour(target, weaponClass);
+ 		const int propulsion = (asPropulsionStats + ((DROID *)psTarget)->asBits[COMP_PROPULSION])->propulsionType;
+-		const int body = (asBodyStats + ((DROID *)psTarget)->asBits[COMP_BODY])->size;
 -		damage += baseDamage * (asWeaponModifier[weaponEffect][propulsion] - 100);
 -		damage += baseDamage * (asWeaponModifierBody[weaponEffect][body] - 100);
 -	}
@@ -1098,47 +773,48 @@ index 0701981..d5bed8c 100644
  }
  
  /*
-@@ -1559,20 +1634,20 @@ UDWORD	calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *ps
+@@ -1505,20 +1562,20 @@ UDWORD	calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *ps
   *    multiplied by -1, resulting in a negative number. Killed features do not
   *    result in negative numbers.
   */
--static int32_t objectDamage(BASE_OBJECT *psObj, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond)
-+static int32_t objectDamage(BASE_OBJECT *psObj, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond)
+-static int32_t objectDamage(BASE_OBJECT *psObj, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond, int minDamage)
++static int32_t objectDamage(BASE_OBJECT *psObj, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond, int minDamage)
  {
  	switch (psObj->type)
  	{
  	case OBJ_DROID:
--		return droidDamage((DROID *)psObj, damage, weaponClass, weaponSubClass, impactTime, isDamagePerSecond);
-+		return droidDamage((DROID *)psObj, damage, psStats, impactTime, isDamagePerSecond);
+-		return droidDamage((DROID *)psObj, damage, weaponClass, weaponSubClass, impactTime, isDamagePerSecond, minDamage);
++		return droidDamage((DROID *)psObj, damage, psStats, impactTime, isDamagePerSecond, minDamage);
  		break;
  
  	case OBJ_STRUCTURE:
--		return structureDamage((STRUCTURE *)psObj, damage, weaponClass, weaponSubClass, impactTime, isDamagePerSecond);
-+		return structureDamage((STRUCTURE *)psObj, damage, psStats, impactTime, isDamagePerSecond);
+-		return structureDamage((STRUCTURE *)psObj, damage, weaponClass, weaponSubClass, impactTime, isDamagePerSecond, minDamage);
++		return structureDamage((STRUCTURE *)psObj, damage, psStats, impactTime, isDamagePerSecond, minDamage);
  		break;
  
  	case OBJ_FEATURE:
--		return featureDamage((FEATURE *)psObj, damage, weaponClass, weaponSubClass, impactTime, isDamagePerSecond);
-+		return featureDamage((FEATURE *)psObj, damage, psStats, impactTime, isDamagePerSecond);
+-		return featureDamage((FEATURE *)psObj, damage, weaponClass, weaponSubClass, impactTime, isDamagePerSecond, minDamage);
++		return featureDamage((FEATURE *)psObj, damage, psStats, impactTime, isDamagePerSecond, minDamage);
  		break;
  
  	case OBJ_PROJECTILE:
 diff --git a/src/projectile.h b/src/projectile.h
-index 79fe36d..a59a9f6 100644
+index 3a04ff9..4e12894 100644
 --- a/src/projectile.h
 +++ b/src/projectile.h
-@@ -38,8 +38,6 @@ extern	BASE_OBJECT	*g_pProjLastAttacker;	///< The last unit that did damage - us
+@@ -38,9 +38,6 @@ extern	BASE_OBJECT	*g_pProjLastAttacker;	///< The last unit that did damage - us
  #define PROJ_MAX_PITCH  45
  #define PROJ_ULTIMATE_PITCH  80
  
 -#define BURN_TIME	10000	///< How long an object burns for after leaving a fire.
--#define BURN_DAMAGE	15	///< How much damaga a second an object takes when it is burning.
+-#define BURN_DAMAGE	15	///< How much damage per second an object takes when it is burning.
+-#define BURN_MIN_DAMAGE	30	///< Least percentage of damage an object takes when burning.
  #define ACC_GRAVITY	1000	///< Downward force against projectiles.
  
  /** How long to display a single electronic warfare shimmmer. */
-@@ -70,7 +68,7 @@ bool proj_Direct(const WEAPON_STATS *psStats);
+@@ -74,7 +71,7 @@ bool proj_Direct(const WEAPON_STATS *psStats);
  /** Return the maximum range for a weapon. */
- SDWORD	proj_GetLongRange(const WEAPON_STATS *psStats);
+ int proj_GetLongRange(const WEAPON_STATS *psStats, int player);
  
 -extern UDWORD calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *psTarget);
 +extern UDWORD calcDamage(UDWORD baseDamage, WEAPON_STATS *psStats, BASE_OBJECT *psTarget);
@@ -1146,7 +822,7 @@ index 79fe36d..a59a9f6 100644
  
  /***************************************************************************/
 diff --git a/src/projectiledef.h b/src/projectiledef.h
-index 8026df9..99732d5 100644
+index d2a9477..61dbece 100644
 --- a/src/projectiledef.h
 +++ b/src/projectiledef.h
 @@ -28,6 +28,7 @@
@@ -1165,78 +841,51 @@ index 8026df9..99732d5 100644
  
  	Vector3i        src;                    ///< Where projectile started
  	Vector3i        dst;                    ///< The target coordinates
-diff --git a/src/research.cpp b/src/research.cpp
-index 6993414..d38a493 100644
---- a/src/research.cpp
-+++ b/src/research.cpp
-@@ -938,6 +938,11 @@ void researchResult(UDWORD researchIndex, UBYTE player, bool bDisplay, STRUCTURE
- 					// upgrade the repair points
- 					structureRepairUpgrade(psCurr);
- 				}
-+				if (psCurr->pStructureType->type == REF_REARM_PAD)
-+				{
-+					// upgrade the repair points of a rearm pad
-+					structureReArmRepairUpgrade(psCurr);
-+				}
- 			}
- 			// and the mission structure
- 			for (psCurr = mission.apsStructLists[player]; psCurr != NULL; psCurr = psCurr->psNext)
-@@ -947,6 +952,11 @@ void researchResult(UDWORD researchIndex, UBYTE player, bool bDisplay, STRUCTURE
- 					// upgrade the repair points
- 					structureRepairUpgrade(psCurr);
- 				}
-+				if (psCurr->pStructureType->type == REF_REARM_PAD)
-+				{
-+					// upgrade the repair points of a rearm pad
-+					structureReArmRepairUpgrade(psCurr);
-+				}
- 			}
- 			break;
- 		case (WEAPON_UPGRADE_TYPE):
 diff --git a/src/stats.cpp b/src/stats.cpp
-index afb4a53..b2bd5af 100644
+index ec3412f..c163df2 100644
 --- a/src/stats.cpp
 +++ b/src/stats.cpp
-@@ -626,7 +626,7 @@ bool loadWeaponStats(const char *pWeaponData, UDWORD bufferSize)
- 			%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%d,\
- 			%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%255[^,'\r\n],\
- 			%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%255[^,'\r\n],%d,%d,%d,%255[^,'\r\n],%255[^,'\r\n],%d,%d,\
--			%255[^,'\r\n],%d,%d,%d,%d,%d",
-+			%255[^,'\r\n],%d,%d,%d,%d,%d,%d",
- 		       WeaponName, dummy, &psStats->buildPower, &psStats->buildPoints,
- 		       &psStats->weight, &weaponsize, &dummyVal,
- 		       &psStats->body, GfxFile, mountGfx, muzzleGfx, flightGfx,
-@@ -640,7 +640,7 @@ bool loadWeaponStats(const char *pWeaponData, UDWORD bufferSize)
- 		       fireOnMove, weaponClass, weaponSubClass, movement, weaponEffect,
- 		       &rotate, &maxElevation, &minElevation, facePlayer, faceInFlight,
- 		       &psStats->recoilValue, &psStats->minRange, lightWorld,
--		       &effectSize, &surfaceToAir, &numAttackRuns, &designable, &penetrate);
-+			&effectSize, &surfaceToAir, &numAttackRuns, &designable, &penetrate, &psStats->targeting);
+@@ -38,6 +38,7 @@
+ #include "lib/sound/audio_id.h"
+ #include "projectile.h"
+ #include "text.h"
++#include "combat.h"
  
- 		psStats->numRounds = (UBYTE)numRounds;
+ #define WEAPON_TIME		100
  
-@@ -1418,10 +1418,14 @@ bool loadSensorStats(const char *pSensorData, UDWORD bufferSize)
+@@ -356,6 +357,7 @@ bool loadWeaponStats(const char *pFileName)
+ 		psStats->vtolAttackRuns = ini.value("numAttackRuns", 0).toUInt();
+ 		psStats->designable = ini.value("designable").toBool();
+ 		psStats->penetrate = ini.value("penetrate", false).toBool();
++		psStats->targeting = ini.value("targeting", false).toBool();
+ 		// weapon size limitation
+ 		int weaponSize = ini.value("weaponSize", WEAPON_SIZE_ANY).toInt();
+ 		ASSERT(weaponSize <= WEAPON_SIZE_ANY, "Bad weapon size for %s", list[i].toUtf8().constData());
+@@ -397,7 +399,7 @@ bool loadWeaponStats(const char *pFileName)
  		{
- 			psStats->type = SUPER_SENSOR;
+ 			psStats->distanceExtensionFactor = 120;
  		}
--		else if (!strcmp(type, "RADAR DETECTOR"))
-+		else if(!strcmp(type, "RADAR DETECTOR"))
+-		else if (psStats->weaponSubClass == WSC_AAGUN)
++		else if (psStats->weaponSubClass == WSC_AAGUN || psStats->weaponSubClass == WSC_AACANNON)
+ 		{
+ 			psStats->distanceExtensionFactor = 100;
+ 		}
+@@ -869,6 +871,10 @@ bool loadSensorStats(const char *pFileName)
  		{
  			psStats->type = RADAR_DETECTOR_SENSOR;
  		}
-+		else if(!strcmp(type, "SURVEILLANCE"))
++		else if (type.compare("SURVEILLANCE") == 0)
 +		{
 +			psStats->type = SURVEILLANCE_SENSOR;
 +		}
  		else
  		{
  			ASSERT(false, "Invalid Sensor type");
-@@ -2877,6 +2881,72 @@ bool getWeaponSubClass(const char *subClass, WEAPON_SUBCLASS *wclass)
+@@ -1517,6 +1523,71 @@ bool getWeaponSubClass(const char *subClass, WEAPON_SUBCLASS *wclass)
  	{
  		*wclass = WSC_EMP;
  	}
 +	/* New weapon subclasses for FK mod and some generic subclasses for other projects */
-+	/* Added by Kreuvf 2012-06-03 */
 +	else if (strcmp(subClass, "A-A CANNON") == 0)
 +	{
 +		*wclass = WSC_AACANNON;
@@ -1304,28 +953,49 @@ index afb4a53..b2bd5af 100644
  	else
  	{
  		ASSERT(!"Invalid weapon sub class", "Invalid weapon sub class: %s", subClass);
-@@ -3046,10 +3116,17 @@ UDWORD	weaponRadDamage(WEAPON_STATS *psStats, UBYTE player)
- 	                                     psStats->weaponSubClass].radiusDamage) / 100);
+@@ -1548,6 +1619,22 @@ const char *getWeaponSubClass(WEAPON_SUBCLASS wclass)
+ 	case WSC_BOMB: return "BOMB";
+ 	case WSC_COMMAND: return "COMMAND";
+ 	case WSC_EMP: return "EMP";
++	case WSC_AACANNON: return "A-A CANNON";
++	case WSC_CLUSTERBOMB: return "CLUSTER BOMB";
++	case WSC_HEAVYBOMB: return "HEAVY BOMB";
++	case WSC_HOTBOMB: return "HOT BOMB";
++	case WSC_HOTHOWITZER: return "HOT HOWITZER";
++	case WSC_LASER: return "LASER";
++	case WSC_AALASER: return "A-A LASER";
++	case WSC_GEN0: return "GENERIC 0";
++	case WSC_GEN1: return "GENERIC 1";
++	case WSC_GEN2: return "GENERIC 2";
++	case WSC_GEN3: return "GENERIC 3";
++	case WSC_GEN4: return "GENERIC 4";
++	case WSC_GEN5: return "GENERIC 5";
++	case WSC_GEN6: return "GENERIC 6";
++	case WSC_GEN7: return "GENERIC 7";
++	case WSC_GEN8: return "GENERIC 8";
+ 	case WSC_NUM_WEAPON_SUBCLASSES: break;
+ 	}
+ 	ASSERT(false, "No such weapon subclass");
+@@ -1675,9 +1762,16 @@ int weaponRadDamage(const WEAPON_STATS *psStats, int player)
+ 	return psStats->upgrade[player].radiusDamage;
  }
  
--UDWORD	weaponIncenDamage(WEAPON_STATS *psStats, UBYTE player)
-+UDWORD	weaponIncenDamage(BASE_OBJECT *psObj, WEAPON_STATS *psStats, UBYTE player)
+-int weaponPeriodicalDamage(const WEAPON_STATS *psStats, int player)
++int weaponPeriodicalDamage(BASE_OBJECT *psObj, const WEAPON_STATS *psStats, int player)
  {
--	return (psStats->incenDamage + (psStats->incenDamage * asWeaponUpgrade[player][
--	                                    psStats->weaponSubClass].incenDamage) / 100);
-+	double damage = (double) psStats->incenDamage;
+-	return psStats->upgrade[player].periodicalDamage;
++	double damage = (double) psStats->base.periodicalDamage;
 +	const WEAPON_CLASS weaponClass = psStats->weaponClass;
-+	const WEAPON_SUBCLASS weaponSubClass = psStats->weaponSubClass;
-+	const DROID *target = (DROID *)psObj;
-+	const UDWORD armour = target->armour[weaponClass];
-+	const double upgrade = (100.0 + asWeaponUpgrade[player][weaponSubClass].incenDamage)/100.0;
++	DROID *target = (DROID *)psObj;
++	const UDWORD armour = objArmour(target, weaponClass);
++	const double upgrade = (double) psStats->upgrade[player].periodicalDamage;
 +	damage = floor(damage * upgrade);
 +	damage < armour ? 0 : damage -= armour;
-+	return (UDWORD) round(damage);
++	return (int) round(damage);
  }
  
- UDWORD	weaponRadiusHit(WEAPON_STATS *psStats, UBYTE player)
-@@ -3512,3 +3589,88 @@ bool objRadarDetector(const BASE_OBJECT *psObj)
+ int sensorRange(const SENSOR_STATS *psStats, int player)
+@@ -2095,3 +2189,88 @@ bool objRadarDetector(const BASE_OBJECT *psObj)
  	}
  	return false;
  }
@@ -1415,43 +1085,42 @@ index afb4a53..b2bd5af 100644
 +	return false;
 +}
 diff --git a/src/stats.h b/src/stats.h
-index faa9af5..2f8cf64 100644
+index 789804b..cd39c8f 100644
 --- a/src/stats.h
 +++ b/src/stats.h
-@@ -318,7 +318,7 @@ extern UDWORD	weaponShortHit(const WEAPON_STATS *psStats, UBYTE player);
- extern UDWORD	weaponLongHit(const WEAPON_STATS *psStats, UBYTE player);
- extern UDWORD	weaponDamage(const WEAPON_STATS *psStats, UBYTE player);
- extern UDWORD	weaponRadDamage(WEAPON_STATS *psStats, UBYTE player);
--extern UDWORD	weaponIncenDamage(WEAPON_STATS *psStats, UBYTE player);
-+extern UDWORD	weaponIncenDamage(BASE_OBJECT *psObj, WEAPON_STATS *psStats, UBYTE player);
- extern UDWORD	weaponRadiusHit(WEAPON_STATS *psStats, UBYTE player);
- /*Access functions for the upgradeable stats of a sensor*/
- extern UDWORD	sensorRange(SENSOR_STATS *psStats, UBYTE player);
-@@ -364,4 +364,14 @@ SENSOR_STATS *objActiveRadar(const BASE_OBJECT *psObj);
+@@ -233,7 +233,7 @@ WZ_DECL_PURE int weaponShortHit(const WEAPON_STATS *psStats, int player);
+ WZ_DECL_PURE int weaponLongHit(const WEAPON_STATS *psStats, int player);
+ WZ_DECL_PURE int weaponDamage(const WEAPON_STATS *psStats, int player);
+ WZ_DECL_PURE int weaponRadDamage(const WEAPON_STATS *psStats, int player);
+-WZ_DECL_PURE int weaponPeriodicalDamage(const WEAPON_STATS *psStats, int player);
++WZ_DECL_PURE int weaponPeriodicalDamage(BASE_OBJECT *psObj, const WEAPON_STATS *psStats, int player);
+ WZ_DECL_PURE int sensorRange(const SENSOR_STATS *psStats, int player);
+ WZ_DECL_PURE int ecmRange(const ECM_STATS *psStats, int player);
+ WZ_DECL_PURE int repairPoints(const REPAIR_STATS *psStats, int player);
+@@ -272,4 +272,14 @@ WZ_DECL_PURE SENSOR_STATS *objActiveRadar(const BASE_OBJECT *psObj);
  /** Returns whether object has a radar detector sensor. */
- bool objRadarDetector(const BASE_OBJECT *psObj);
+ WZ_DECL_PURE bool objRadarDetector(const BASE_OBJECT *psObj);
  
-+bool objSurveillanceSensor(const BASE_OBJECT *psObj);
++WZ_DECL_PURE bool objSurveillanceSensor(const BASE_OBJECT *psObj);
 +
-+bool objVTOLSensor(const BASE_OBJECT *psObj);
++WZ_DECL_PURE bool objVTOLSensor(const BASE_OBJECT *psObj);
 +
-+bool objVTOLCBSensor(const BASE_OBJECT *psObj);
++WZ_DECL_PURE bool objVTOLCBSensor(const BASE_OBJECT *psObj);
 +
-+bool objCBSensor(const BASE_OBJECT *psObj);
++WZ_DECL_PURE bool objCBSensor(const BASE_OBJECT *psObj);
 +
-+bool objStandardSensor(const BASE_OBJECT *psObj);
++WZ_DECL_PURE bool objStandardSensor(const BASE_OBJECT *psObj);
 +
  #endif // __INCLUDED_SRC_STATS_H__
 diff --git a/src/statsdef.h b/src/statsdef.h
-index 49557bc..5dabe15 100644
+index 922f2ac..24b30c4 100644
 --- a/src/statsdef.h
 +++ b/src/statsdef.h
-@@ -332,6 +332,24 @@ enum WEAPON_SUBCLASS
+@@ -169,6 +169,23 @@ enum WEAPON_SUBCLASS
  	WSC_BOMB,
  	WSC_COMMAND,
  	WSC_EMP,
 +	/* New weapon subclasses for FK mod and some generic subclasses for other projects */
-+	/* Added by Kreuvf 2012-06-03 */
 +	WSC_AACANNON,
 +	WSC_CLUSTERBOMB,
 +	WSC_HEAVYBOMB,
@@ -1468,44 +1137,35 @@ index 49557bc..5dabe15 100644
 +	WSC_GEN6,
 +	WSC_GEN7,
 +	WSC_GEN8,
- 	WSC_COUNTER,				// Counter missile
  	WSC_NUM_WEAPON_SUBCLASSES,	/** The number of enumerators in this enum.	 */
  };
-@@ -397,6 +415,7 @@ enum SENSOR_TYPE
+ 
+@@ -228,6 +245,7 @@ enum SENSOR_TYPE
  	VTOL_INTERCEPT_SENSOR,
  	SUPER_SENSOR,			///< works as all of the above together! - new for updates
  	RADAR_DETECTOR_SENSOR,
 +	SURVEILLANCE_SENSOR,
  };
  
- enum FIREONMOVE
-@@ -511,6 +530,7 @@ struct WEAPON_STATS : public COMPONENT_STATS
- 	UBYTE			surfaceToAir;			///< indicates how good in the air - SHOOT_ON_GROUND, SHOOT_IN_AIR or both
- 	UBYTE			vtolAttackRuns;			///< number of attack runs a VTOL droid can	do with this weapon
+ enum TRAVEL_MEDIUM
+@@ -390,6 +408,7 @@ struct WEAPON_STATS : public COMPONENT_STATS
+ 	short			vtolAttackRuns;			///< number of attack runs a VTOL droid can	do with this weapon
  	bool			penetrate;				///< flag to indicate whether pentrate droid or not
-+	UDWORD			targeting;				///< indicates if weapon needs sensor for targeting
+ 	int			distanceExtensionFactor;	///< max extra distance a projectile can travel if misses target
++	bool		targeting;				///< indicates if weapon needs sensor for targeting
  
  	/* Graphics control stats */
- 	UDWORD			directLife;				///< How long a direct fire weapon is visible. Measured in 1/100 sec.
+ 	UDWORD			radiusLife;				///< How long a blast radius is visible
 diff --git a/src/structure.cpp b/src/structure.cpp
-index 321050f..46ff6b5 100644
+index 7c3813c..866ddf7 100644
 --- a/src/structure.cpp
 +++ b/src/structure.cpp
-@@ -105,8 +105,6 @@
- 
- //used to calculate the time required for rearming
- #define REARM_FACTOR                10
--//used to calculate the time  required for repairing
--#define VTOL_REPAIR_FACTOR          10
- 
- //Value is stored for easy access to this structure stat
- UDWORD			factoryModuleStat;
-@@ -736,16 +734,17 @@ void handleAbandonedStructures()
+@@ -731,16 +731,17 @@ void handleAbandonedStructures()
   * \param weaponSubClass the subclass of the weapon that deals the damage
   * \return < 0 when the dealt damage destroys the structure, > 0 when the structure survives
   */
--int32_t structureDamage(STRUCTURE *psStructure, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond)
-+int32_t structureDamage(STRUCTURE *psStructure, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond)
+-int32_t structureDamage(STRUCTURE *psStructure, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond, int minDamage)
++int32_t structureDamage(STRUCTURE *psStructure, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond, int minDamage)
  {
  	int32_t relativeDamage;
 +	const WEAPON_CLASS weaponClass = psStats->weaponClass;
@@ -1513,228 +1173,23 @@ index 321050f..46ff6b5 100644
  	CHECK_STRUCTURE(psStructure);
  
  	debug(LOG_ATTACK, "structure id %d, body %d, armour %d, damage: %d",
- 	      psStructure->id, psStructure->body, psStructure->armour[weaponClass], damage);
+ 	      psStructure->id, psStructure->body, objArmour(psStructure, weaponClass), damage);
  
--	relativeDamage = objDamage(psStructure, damage, structureBody(psStructure), weaponClass, weaponSubClass, isDamagePerSecond);
-+	relativeDamage = objDamage(psStructure, damage, structureBody(psStructure), psStats, isDamagePerSecond);
+-	relativeDamage = objDamage(psStructure, damage, structureBody(psStructure), weaponClass, weaponSubClass, isDamagePerSecond, minDamage);
++	relativeDamage = objDamage(psStructure, damage, structureBody(psStructure), psStats, isDamagePerSecond, minDamage);
  
  	// If the shell did sufficient damage to destroy the structure
  	if (relativeDamage < 0)
-@@ -1709,12 +1708,11 @@ STRUCTURE *buildStructureDir(STRUCTURE_STATS *pStructureType, UDWORD x, UDWORD y
- 
- 				//quick check not trying to add too much
- 				ASSERT_OR_RETURN(NULL, psBuilding->pFunctionality->factory.productionOutput +
--				                 ((PRODUCTION_FUNCTION *)pStructureType->asFuncList[0])->productionOutput < UBYTE_MAX,
-+					((PRODUCTION_FUNCTION*)pStructureType->asFuncList[0])->productionOutput <= UINT32_MAX,
- 				                 "building factory module - production Output is too big");
- 
- 				psBuilding->pFunctionality->factory.productionOutput += ((
- 				            PRODUCTION_FUNCTION *)pStructureType->asFuncList[0])->productionOutput;
--
- 				capacity = psBuilding->pFunctionality->factory.capacity;
- 			}
- 		}
-@@ -1938,7 +1936,7 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
- 			unsigned int x, y;
- 
- 			psFactory->capacity = (UBYTE)((PRODUCTION_FUNCTION *)psBuilding->pStructureType->asFuncList[0])->capacity;
--			psFactory->productionOutput = (UBYTE)((PRODUCTION_FUNCTION *)psBuilding->pStructureType->asFuncList[0])->productionOutput;
-+			psFactory->productionOutput = ((PRODUCTION_FUNCTION*)psBuilding->pStructureType->asFuncList[0])->productionOutput;
- 			psFactory->psSubject = NULL;
- 
- 			// Default the secondary order - AB 22/04/99
-@@ -2054,10 +2052,11 @@ static bool setFunctionality(STRUCTURE	*psBuilding, STRUCTURE_TYPE functionType)
- 		{
- 			REARM_PAD *psReArmPad = &psBuilding->pFunctionality->rearmPad;
- 
--			psReArmPad->reArmPoints = ((REARM_PAD *)psBuilding->pStructureType->asFuncList[0])->reArmPoints;
--
-+			psReArmPad->reArmPoints = ((REARM_FUNCTION *)psBuilding->pStructureType->asFuncList[0])->reArmPoints;
-+			psReArmPad->repairPoints = ((REARM_FUNCTION *)psBuilding->pStructureType->asFuncList[0])->repairPoints;
- 			// Take advantage of upgrades
- 			structureReArmUpgrade(psBuilding);
-+			structureReArmRepairUpgrade(psBuilding);
- 			break;
- 		}
- 
-@@ -3089,7 +3088,21 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
- 					{
- 						psChosenObj = psDroid;
- 					}
-+					if (isVtolDroid(psDroid))
-+					{
-+						// for VTOLs just sitting on rearm pads, we repair them if they are damaged
-+						// Check if the units is on the pad or not (within coordinates of center ± 64)
-+						// Note: This is NOT the same as 'distance to center is <= 64'!
-+						xdiff = abs((SDWORD)psDroid->pos.x - (SDWORD)psStructure->pos.x);
-+						ydiff = abs((SDWORD)psDroid->pos.y - (SDWORD)psStructure->pos.y);
-+						if (xdiff <= 64 && ydiff <= 64 && psDroid->pos.z == psStructure->pos.z && psDroid->body < psDroid->originalBody)
-+						{
-+							psChosenObj = psDroid;
-+						}
-+					}
- 				}
-+			
-+				
- 				if (!psChosenObj) // None available? Try allies.
- 				{
- 					for (i = 0; i < MAX_PLAYERS; i++)
-@@ -3508,17 +3521,33 @@ static void aiUpdateStructure(STRUCTURE *psStructure, bool isMission)
- 				/* do repairing */
- 				if (psDroid->body < psDroid->originalBody)
- 				{
--					// Do not "simplify" this formula.
--					// It is written this way to prevent rounding errors.
--					pointsToAdd =  VTOL_REPAIR_FACTOR * (100 + asReArmUpgrade[psStructure->player].modifier) * (gameTime -
--					               psReArmPad->timeStarted) / (GAME_TICKS_PER_SEC * 100);
--					pointsAlreadyAdded =  VTOL_REPAIR_FACTOR * (100 + asReArmUpgrade[psStructure->player].modifier) * (psReArmPad->timeLastUpdated -
--					                      psReArmPad->timeStarted) / (GAME_TICKS_PER_SEC * 100);
--
--					if ((pointsToAdd - pointsAlreadyAdded) > 0)
-+
-+					//if in multiPlayer, and a Transporter - make sure its on the ground before repairing
-+					if (bMultiPlayer && (psDroid->droidType == DROID_TRANSPORTER || psDroid->droidType == DROID_SUPERTRANSPORTER))
-+					{
-+						if (!(psDroid->sMove.Status == MOVEINACTIVE &&
-+							psDroid->sMove.iVertSpeed == 0))
-+						{
-+							objTrace(psStructure->id, "Waiting for transporter to land");
-+							return;
-+						}
-+					}
-+
-+					//don't do anything if the resistance is low in multiplayer
-+					if (bMultiPlayer)
- 					{
--						psDroid->body += (pointsToAdd - pointsAlreadyAdded);
-+						if (psStructure->resistance < (SWORD)structureResistance(psStructure->
-+							pStructureType, psStructure->player))
-+						{
-+							objTrace(psStructure->id, "Resistance too low for repair");
-+							return;
-+						}
- 					}
-+
-+					// FIXME: duplicate code, make repairing cost power again
-+					/* do repairing */
-+					psDroid->body += gameTimeAdjustedAverage(psReArmPad->repairPoints);
-+
- 					if (psDroid->body >= psDroid->originalBody)
- 					{
- 						/* set droid points to max */
-@@ -5639,8 +5668,8 @@ void printStructureInfo(STRUCTURE *psStructure)
- 		{
- 			unsigned int assigned_droids = countAssignedDroids(psStructure);
- 
--			CONPRINTF(ConsoleString, (ConsoleString, ngettext("%s - %u Unit assigned - Damage %3.0f%%", "%s - %u Units assigned - Damage %3.0f%%", assigned_droids),
--			                          getStatName(psStructure->pStructureType), assigned_droids, getStructureDamage(psStructure) * (100.f / 65536.f)));
-+			CONPRINTF(ConsoleString, (ConsoleString, ngettext("%s - %u Unit assigned - Body Points: %d of %d", "%s - %u Units assigned - Body Points: %d of %d", assigned_droids),
-+					  getStatName(psStructure->pStructureType), assigned_droids, psStructure->body, structureBodyBuilt(psStructure)));
- 		}
- 		break;
- 	case REF_DEFENSE:
-@@ -5665,13 +5694,13 @@ void printStructureInfo(STRUCTURE *psStructure)
- 			{
- 				unsigned int assigned_droids = countAssignedDroids(psStructure);
- 
--				CONPRINTF(ConsoleString, (ConsoleString, ngettext("%s - %u Unit assigned - Damage %3.0f%%", "%s - %u Units assigned - Damage %3.0f%%", assigned_droids),
--				                          getStatName(psStructure->pStructureType), assigned_droids, getStructureDamage(psStructure) * (100.f / 65536.f)));
-+			CONPRINTF(ConsoleString, (ConsoleString, ngettext("%s - %u Unit assigned - Body Points: %d of %d", "%s - %u Units assigned - Body Points: %d of %d", assigned_droids),
-+									getStatName(psStructure->pStructureType), assigned_droids, psStructure->body, structureBodyBuilt(psStructure)));
- 			}
- 			else
- 			{
--				CONPRINTF(ConsoleString, (ConsoleString, _("%s - Damage %3.0f%%"),
--				                          getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f / 65536.f)));
-+			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Body Points: %d of %d"),
-+									getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
- 			}
- 		break;
- 	case REF_REPAIR_FACILITY:
-@@ -5684,7 +5713,7 @@ void printStructureInfo(STRUCTURE *psStructure)
- 		else
- #endif
- 		{
--			CONPRINTF(ConsoleString, (ConsoleString, "%s - Damage %3.0f%%", getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f / 65536.f)));
-+			CONPRINTF(ConsoleString, (ConsoleString, "%s - Body Points: %d of %d", getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
- 		}
- 		break;
- 	case REF_RESOURCE_EXTRACTOR:
-@@ -5697,7 +5726,7 @@ void printStructureInfo(STRUCTURE *psStructure)
- 		else
- #endif
- 		{
--			CONPRINTF(ConsoleString, (ConsoleString, "%s - Damage %3.0f%%", getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f / 65536.f)));
-+			CONPRINTF(ConsoleString, (ConsoleString, "%s - Body Points: %d of %d", getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
- 		}
- 		break;
- 	case REF_POWER_GEN:
-@@ -5720,8 +5749,8 @@ void printStructureInfo(STRUCTURE *psStructure)
- 		else
- #endif
- 		{
--			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Connected %u of %u - Damage %3.0f%%"),
--			                          getStatName(psStructure->pStructureType), numConnected, NUM_POWER_MODULES, getStructureDamage(psStructure) * (100.f / 65536.f)));
-+			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Connected %u of %u - Body Points: %d of %d"),
-+									getStatName(psStructure->pStructureType), numConnected, NUM_POWER_MODULES, psStructure->body, structureBodyBuilt(psStructure)));
- 		}
- 		break;
- 	case REF_CYBORG_FACTORY:
-@@ -5738,8 +5767,8 @@ void printStructureInfo(STRUCTURE *psStructure)
- 		else
- #endif
- 		{
--			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Damage %3.0f%%"),
--			                          getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f / 65536.f)));
-+			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Body Points: %d of %d"),
-+									getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
- 		}
- 		break;
- 	case REF_RESEARCH:
-@@ -5753,8 +5782,8 @@ void printStructureInfo(STRUCTURE *psStructure)
- 		else
- #endif
- 		{
--			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Damage %3.0f%%"),
--			                          getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f / 65536.f)));
-+			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Body Points: %d of %d"),
-+									getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
- 		}
- 		break;
- 	default:
-@@ -5767,8 +5796,8 @@ void printStructureInfo(STRUCTURE *psStructure)
- 		else
- #endif
- 		{
--			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Damage %3.0f%%"),
--			                          getStatName(psStructure->pStructureType), getStructureDamage(psStructure) * (100.f / 65536.f)));
-+			CONPRINTF(ConsoleString, (ConsoleString, _("%s - Body Points: %d of %d"),
-+									getStatName(psStructure->pStructureType), psStructure->body, structureBodyBuilt(psStructure)));
- 		}
- 		break;
- 	}
 diff --git a/src/structure.h b/src/structure.h
-index 3da521f..b511f58 100644
+index a84adb5..9bb0604 100644
 --- a/src/structure.h
 +++ b/src/structure.h
-@@ -103,7 +103,7 @@ extern bool	structureStatsShutDown(void);
+@@ -90,7 +90,7 @@ extern bool	structureStatsShutDown(void);
  int requestOpenGate(STRUCTURE *psStructure);
  int gateCurrentOpenHeight(STRUCTURE const *psStructure, uint32_t time, int minimumStub);  ///< Returns how far open the gate is, or 0 if the structure is not a gate.
  
--int32_t structureDamage(STRUCTURE *psStructure, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond);
-+int32_t structureDamage(STRUCTURE *psStructure, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond);
+-int32_t structureDamage(STRUCTURE *psStructure, unsigned damage, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, unsigned impactTime, bool isDamagePerSecond, int minDamage);
++int32_t structureDamage(STRUCTURE *psStructure, unsigned damage, WEAPON_STATS *psStats, unsigned impactTime, bool isDamagePerSecond, int minDamage);
  extern void structureBuild(STRUCTURE *psStructure, DROID *psDroid, int buildPoints, int buildRate = 1);
  extern void structureDemolish(STRUCTURE *psStructure, DROID *psDroid, int buildPoints);
  void structureRepair(STRUCTURE *psStruct, DROID *psDroid, int buildRate);
-diff --git a/src/structuredef.h b/src/structuredef.h
-index 903e856..1daab0c 100644
---- a/src/structuredef.h
-+++ b/src/structuredef.h
-@@ -222,6 +222,7 @@ struct REPAIR_FACILITY
- 
- struct REARM_PAD
- {
-+	uint32_t                        repairPoints;           /* repair points per cycle */
- 	UDWORD                          reArmPoints;            /* rearm points per cycle */
- 	UDWORD                          timeStarted;            /* Time reArm started on current object */
- 	BASE_OBJECT                     *psObj;                 /* Object being rearmed */
