@@ -13,6 +13,22 @@ def id2name(wzid, names):
 			name = re.search('^\S+\s+(?:_\()?"([^"]+)"(?:\))?', result.string)
 			return name.group(1)
 
+# Function to add integers != 0 to a dictionary
+# pairs: list of tuples (string, integer)
+# pot: dictionary for adding new string to integer assignments
+def feedints(pairs, pot):
+	for pair in range(len(pairs)):
+		if pairs[pair][1] != 0:
+			pot[pairs[pair][0]] = pairs[pair][1]
+
+# Function to add strings != "0" to a dictionary
+# pairs: list of tuples (string, string)
+# pot: dictionary for adding new string to string assignments
+def feedstrs(pairs, pot):
+	for pair in range(len(pairs)):
+		if pairs[pair][1] != "0":
+			pot[pairs[pair][0]] = pairs[pair][1]
+
 # Read file to populate construction
 with open("../data/mp/stats/construction.txt", 'r') as f:
 	reader = csv.reader(f, delimiter=",")
@@ -43,28 +59,27 @@ with open("../data/mp/messages/strings/names.txt", 'r') as f:
 constJSON = dict()
 
 for line in range(len(constCSV)):
+	# Prepare list of string to integer tuples
+	intlist = [
+		('buildPower', int(constCSV[line][2])),
+		('buildPoints', int(constCSV[line][3])),
+		('weight', int(constCSV[line][4])),
+		('hitpoints', int(constCSV[line][7])),
+		('constructionPoints', int(constCSV[line][10])),
+		('designable', int(constCSV[line][11]))
+		]
+	# Prepare list of string to string tuples
+	strlist = [
+		('sensorModel', constCSV[line][8]),
+		('mountModel', constCSV[line][9])
+		]
 	# id is used more than once, so give it a special name
 	col_id = constCSV[line][0]
-	constJSON[col_id] = {'id': col_id,
-		'name': id2name(col_id, names)}
-	# Add integers if not 0
-	if int(constCSV[line][2]):
-		constJSON[col_id]['buildPower'] = int(constCSV[line][2])
-	if int(constCSV[line][3]):
-		constJSON[col_id]['buildPoints'] = int(constCSV[line][3])
-	if int(constCSV[line][4]):
-		constJSON[col_id]['weight'] = int(constCSV[line][4])
-	if int(constCSV[line][7]):
-		constJSON[col_id]['hitpoints'] = int(constCSV[line][7])
-	if int(constCSV[line][10]):
-		constJSON[col_id]['constructionPoints'] = int(constCSV[line][10])
-	if int(constCSV[line][11]):
-		constJSON[col_id]['designable'] = int(constCSV[line][11])
-	# Add strings if not "0"
-	if constCSV[line][8] != "0":
-		constJSON[col_id]['sensorModel'] = constCSV[line][8]
-	if constCSV[line][9] != "0":
-		constJSON[col_id]['mountModel'] = constCSV[line][9]
+	# Add standard key value pairs
+	constJSON[col_id] = {'id': col_id, 'name': id2name(col_id, names)}
+	# Add all eligible key value pairs to the dictionary
+	feedints(intlist, constJSON[col_id])
+	feedstrs(strlist, constJSON[col_id])
 
 # Save JSON dump
 with open('../jsondata/mp/stats/construction.json', 'w') as f:
