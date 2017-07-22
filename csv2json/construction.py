@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
-import csv
 import json
-import re
 
 # Make utility functions available
-execfile("util.py")
+exec(compile(open("util.py", "r").read(), "util.py", 'exec'))
 
 # Read file to populate construction
 with open("../data/mp/stats/construction.txt", 'r') as f:
@@ -17,7 +15,7 @@ with open("../data/mp/messages/strings/names.txt", 'r') as f:
 	# Remove trailing \n
 	names = [x.strip() for x in names]
 	# Remove empty elements
-	names = filter(None, names)
+	names = list(filter(None, names))
 
 # Build dictionary for JSON
 # Assignment of index to variable
@@ -60,5 +58,5 @@ for line in range(len(constCSV)):
 
 # Save JSON dump
 with open('../jsondata/mp/stats/construction.json', 'w') as f:
-	print >> f, json.dumps(constJSON, indent=4, sort_keys=True)
+	json.dump(constJSON, indent=4, sort_keys=True)
 
