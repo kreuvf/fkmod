@@ -58,5 +58,5 @@ for line in range(len(constCSV)):
 
 # Save JSON dump
 with open('../jsondata/mp/stats/construction.json', 'w') as f:
-	json.dump(constJSON, indent=4, sort_keys=True)
+	json.dump(constJSON, fp=f, indent=4, sort_keys=True)
 
