@@ -27,7 +27,7 @@ with open("../data/mp/messages/strings/names.txt", 'r') as f:
 	# Remove trailing \n
 	names = [x.strip() for x in names]
 	# Remove empty elements
-	names = filter(None, names)
+	names = list(filter(None, names))
 
 # Build dictionary for JSON
 # Assignment of index to variable
