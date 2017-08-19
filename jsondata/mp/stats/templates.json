@@ -1,0 +1,312 @@
+{
+    "BaBaCivilian": {
+        "body": "B1BaBaPerson01",
+        "id": "BaBaCivilian",
+        "name": "Civilian",
+        "propulsion": "BaBaLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "PERSON"
+    },
+    "BaBaPeople": {
+        "body": "B1BaBaPerson01",
+        "id": "BaBaPeople",
+        "name": "Scavenger",
+        "propulsion": "BaBaLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "PERSON",
+        "weapons": [
+            "BaBaMG"
+        ]
+    },
+    "BabaBusCan": {
+        "body": "BusBody",
+        "id": "BabaBusCan",
+        "name": "School Bus",
+        "propulsion": "BaBaProp",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "DROID",
+        "weapons": [
+            "BusCannon"
+        ]
+    },
+    "BabaFireCan": {
+        "body": "FireBody",
+        "id": "BabaFireCan",
+        "name": "Cannon Fire Truck",
+        "propulsion": "BaBaProp",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "DROID",
+        "weapons": [
+            "BusCannon"
+        ]
+    },
+    "BabaFireTruck": {
+        "body": "FireBody",
+        "id": "BabaFireTruck",
+        "name": "Fire Truck",
+        "propulsion": "BaBaProp",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "DROID",
+        "weapons": [
+            "BabaFlame"
+        ]
+    },
+    "BabaJeep": {
+        "body": "B2JeepBody",
+        "id": "BabaJeep",
+        "name": "Jeep",
+        "propulsion": "BaBaProp",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "DROID",
+        "weapons": [
+            "BJeepMG"
+        ]
+    },
+    "BabaPickUp": {
+        "body": "B2RKJeepBody",
+        "construct": "FKTruck",
+        "id": "BabaPickUp",
+        "name": "Pick-Up Truck",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "DROID"
+    },
+    "BabaRKJeep": {
+        "body": "B2RKJeepBody",
+        "id": "BabaRKJeep",
+        "name": "Rocket Jeep",
+        "propulsion": "BaBaProp",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "DROID",
+        "weapons": [
+            "BabaRocket"
+        ]
+    },
+    "BarbarianBuggy": {
+        "body": "B3body-sml-buggy01",
+        "id": "BarbarianBuggy",
+        "name": "Buggy",
+        "propulsion": "BaBaProp",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "DROID",
+        "weapons": [
+            "BuggyMG"
+        ]
+    },
+    "BarbarianRKBuggy": {
+        "body": "B3bodyRKbuggy01",
+        "id": "BarbarianRKBuggy",
+        "name": "Rocket Buggy",
+        "propulsion": "BaBaProp",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "DROID",
+        "weapons": [
+            "BabaRocket"
+        ]
+    },
+    "BarbarianTrike": {
+        "body": "B4body-sml-trike01",
+        "id": "BarbarianTrike",
+        "name": "Trike",
+        "propulsion": "BaBaProp",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "DROID",
+        "weapons": [
+            "bTrikeMG"
+        ]
+    },
+    "ConstructionDroid": {
+        "body": "FKTankStart",
+        "construct": "FKTruck",
+        "id": "ConstructionDroid",
+        "name": "Truck",
+        "propulsion": "tracked01",
+        "type": "DROID"
+    },
+    "ConstructorDroid": {
+        "body": "FKTankStart",
+        "construct": "FKTruck",
+        "id": "ConstructorDroid",
+        "name": "Truck",
+        "propulsion": "tracked01",
+        "type": "DROID"
+    },
+    "FK-Cyb-Cannon": {
+        "body": "FKCyborg-Cannon",
+        "id": "FK-Cyb-Cannon",
+        "name": "Cannon Cyborg Mk1",
+        "propulsion": "CyborgLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG",
+        "weapons": [
+            "FK-SF-Cannon-Cyborg"
+        ]
+    },
+    "FK-Cyb-Cannon2": {
+        "body": "FKCyborg-Cannon2",
+        "id": "FK-Cyb-Cannon2",
+        "name": "Cannon Cyborg Mk2",
+        "propulsion": "CyborgLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG",
+        "weapons": [
+            "FK-SF-Cannon-Cyborg2"
+        ]
+    },
+    "FK-Cyb-Cannon3": {
+        "body": "FKCyborg-Cannon3",
+        "id": "FK-Cyb-Cannon3",
+        "name": "Cannon Cyborg Mk3",
+        "propulsion": "CyborgLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG",
+        "weapons": [
+            "FK-SF-Cannon-Cyborg3"
+        ]
+    },
+    "FK-Cyb-Engineer": {
+        "body": "FKCyborg-Engineer",
+        "construct": "FKCyborgEngineer",
+        "id": "FK-Cyb-Engineer",
+        "name": "Engineer",
+        "propulsion": "CyborgLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG_CONSTRUCT"
+    },
+    "FK-Cyb-Flamethrower": {
+        "body": "FKCyborg-Flamethrower",
+        "id": "FK-Cyb-Flamethrower",
+        "name": "Flamer Mk1",
+        "propulsion": "CyborgLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG",
+        "weapons": [
+            "FK-HOT-Flamethrower"
+        ]
+    },
+    "FK-Cyb-Flamethrower2": {
+        "body": "FKCyborg-Flamethrower2",
+        "id": "FK-Cyb-Flamethrower2",
+        "name": "Flamer Mk2",
+        "propulsion": "CyborgLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG",
+        "weapons": [
+            "FK-HOT-Flamethrower2"
+        ]
+    },
+    "FK-Cyb-Flamethrower3": {
+        "body": "FKCyborg-Flamethrower3",
+        "id": "FK-Cyb-Flamethrower3",
+        "name": "Flamer Mk3",
+        "propulsion": "CyborgLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG",
+        "weapons": [
+            "FK-HOT-Flamethrower3"
+        ]
+    },
+    "FK-Cyb-GrenadeLauncher": {
+        "body": "FKCyborg-GrenadeLauncher",
+        "id": "FK-Cyb-GrenadeLauncher",
+        "name": "Grenadier Mk1",
+        "propulsion": "CyborgLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG",
+        "weapons": [
+            "FK-SPL-GrenadeLauncher-Cyborg"
+        ]
+    },
+    "FK-Cyb-GrenadeLauncher2": {
+        "body": "FKCyborg-GrenadeLauncher2",
+        "id": "FK-Cyb-GrenadeLauncher2",
+        "name": "Grenadier Mk2",
+        "propulsion": "CyborgLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG",
+        "weapons": [
+            "FK-SPL-GrenadeLauncher-Cyborg2"
+        ]
+    },
+    "FK-Cyb-GrenadeLauncher3": {
+        "body": "FKCyborg-GrenadeLauncher3",
+        "id": "FK-Cyb-GrenadeLauncher3",
+        "name": "Grenadier Mk3",
+        "propulsion": "CyborgLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG",
+        "weapons": [
+            "FK-SPL-GrenadeLauncher-Cyborg3"
+        ]
+    },
+    "FK-Cyb-Lancer": {
+        "body": "FKCyborg-Lancer",
+        "id": "FK-Cyb-Lancer",
+        "name": "Lancer Mk1",
+        "propulsion": "CyborgLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG",
+        "weapons": [
+            "FK-MIS-Lancer-Cyborg"
+        ]
+    },
+    "FK-Cyb-Lancer2": {
+        "body": "FKCyborg-Lancer2",
+        "id": "FK-Cyb-Lancer2",
+        "name": "Lancer Mk2",
+        "propulsion": "CyborgLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG",
+        "weapons": [
+            "FK-MIS-Lancer-Cyborg2"
+        ]
+    },
+    "FK-Cyb-MG": {
+        "body": "FKCyborg-MG",
+        "id": "FK-Cyb-MG",
+        "name": "Machinegunner Mk1",
+        "propulsion": "CyborgLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG",
+        "weapons": [
+            "FK-FF-Machinegun-Cyborg"
+        ]
+    },
+    "FK-Cyb-MG2": {
+        "body": "FKCyborg-MG2",
+        "id": "FK-Cyb-MG2",
+        "name": "Machinegunner Mk2",
+        "propulsion": "CyborgLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG",
+        "weapons": [
+            "FK-FF-Machinegun-Cyborg2"
+        ]
+    },
+    "FK-Cyb-MG3": {
+        "body": "FKCyborg-MG3",
+        "id": "FK-Cyb-MG3",
+        "name": "Machinegunner Mk3",
+        "propulsion": "CyborgLegs",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG",
+        "weapons": [
+            "FK-FF-Machinegun-Cyborg3"
+        ]
+    },
+    "FK-Cyb-Repair": {
+        "body": "FKCyborg-Repair",
+        "id": "FK-Cyb-Repair",
+        "name": "Mechanic",
+        "propulsion": "CyborgLegs",
+        "repair": "FKCyborgRepair",
+        "sensor": "DefaultSensor1Mk1",
+        "type": "CYBORG_REPAIR"
+    },
+    "Transporter": {
+        "body": "FKTransportBody",
+        "id": "Transporter",
+        "name": "Cyborg Transport",
+        "propulsion": "V-Tol",
+        "type": "TRANSPORTER"
+    }
+}
