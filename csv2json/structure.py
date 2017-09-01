@@ -54,6 +54,8 @@ with open("../data/mp/messages/strings/names.txt", 'r') as f:
 # 25 -> repairPoints
 # 26 -> rearmPoints
 # 27 -> researchPoints
+# 28 -> constructionPoints
+# 29 -> powerPoints
 # structureweapons
 # 0 -> id
 # 1 -> Weapon 0
@@ -70,8 +72,10 @@ for line in structure:
 		('breadth', int(line[6])),
 		('buildPoints', int(line[8])),
 		('buildPower', int(line[13])),
+		('constructionPoints', int(line[28])),
 		('height', int(line[9])),
 		('hitpoints', int(line[11])),
+		('powerPoints', int(line[29])),
 		('rearmPoints', int(line[26])),
 		('repairPoints', int(line[25])),
 		('researchPoints', int(line[27])),
