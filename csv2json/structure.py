@@ -51,6 +51,9 @@ with open("../data/mp/messages/strings/names.txt", 'r') as f:
 # 22 -> baseModel
 # 23 -> functions/unused
 # 24 -> weapons/loaded from structureweapons.txt instead
+# 25 -> repairPoints
+# 26 -> rearmPoints
+# 27 -> researchPoints
 # structureweapons
 # 0 -> id
 # 1 -> Weapon 0
@@ -69,6 +72,9 @@ for line in structure:
 		('buildPower', int(line[13])),
 		('height', int(line[9])),
 		('hitpoints', int(line[11])),
+		('rearmPoints', int(line[26])),
+		('repairPoints', int(line[25])),
+		('researchPoints', int(line[27])),
 		('resistance', int(line[15])),
 		('width', int(line[5]))
 		]
