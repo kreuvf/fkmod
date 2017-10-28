@@ -20,9 +20,3 @@ R-WU-HowitzerIncendiary-SPE2,FKPitHowitzerIncendiary2,1355
 R-HACK-Site-AAStormbringer2,FKAASiteStormbringer,1356
 R-HACK-Bunker-GrenadeLauncher2,FKPitGrenadeLauncher,1357
 R-HACK-Bunker-GrenadeLauncher3,FKPitGrenadeLauncher2,1358
-R-WU-Howitzer-SPE1,FKPitHowitzer,0,1362
-R-WU-RocketBattery-SPE1,FKPitRockets,0,1363
-R-WU-HowitzerIncendiary-SPE1,FKPitHowitzerIncendiary,0,1364
-R-WU-Howitzer-SPE2,FKPitHowitzer2,0,1365
-R-WU-RocketBattery-SPE2,FKPitRockets2,0,1366
-R-WU-HowitzerIncendiary-SPE2,FKPitHowitzerIncendiary2,0,1367
