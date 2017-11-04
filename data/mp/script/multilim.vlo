@@ -1,0 +1,21 @@
+// multilim.vlo
+//
+// define maximum limits for structures in limits screen here
+// only stats mentioned here will be added to limits screen.
+
+
+script "multilim.slo"
+run
+{
+
+//structures
+
+factory			STRUCTURESTAT		"FKTankFactory"
+oilDerrick		STRUCTURESTAT		"A0ResourceExtractor"
+powerGen		STRUCTURESTAT		"FKPowerGenerator"
+research		STRUCTURESTAT		"FKResearchFacility"
+cybfac			STRUCTURESTAT		"FKCyborgFactory"
+repair			STRUCTURESTAT		"FKRepairFacility"
+vtolfact		STRUCTURESTAT		"FKVTOLFactory"
+vtolpad			STRUCTURESTAT		"FKRearmPad"
+}
