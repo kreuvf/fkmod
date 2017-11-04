@@ -123,10 +123,8 @@ for line in weapons:
 		('missGfx', line[13]),
 		('model', line[8]),
 		('mountModel', line[9]),
-		('movement', line[38]),
 		('muzzleGfx', line[10]),
 		('waterGfx', line[14]),
-		('weaponClass', line[36]),
 		('weaponEffect', line[39]),
 		('weaponSubClass', line[37]),
 		]
@@ -138,6 +136,15 @@ for line in weapons:
 	if line[35] == "NO":
 		att['fireOnMove'] = 0
 	
+	if line[36] == "MISC":
+		att['weaponClass'] = "KINETIC"
+	else:
+		att['weaponClass'] = line[36]
+		
+	if line[38] == "ERRATIC-DIRECT":
+		att['movement'] = "DIRECT"
+	else:
+		att['movement'] = line[38]
 	
 	if line[43] == "YES":
 		att['facePlayer'] = 1
@@ -150,7 +157,7 @@ for line in weapons:
 		att['flags'] = "ShootAir"
 	if line[49] == "100":
 		att['flags'] = "AirOnly"
-	
+
 	for sound in sounds:
 		if weapid == sound[0]:
 			if sound[1] != "-1":
