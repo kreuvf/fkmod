@@ -103,6 +103,33 @@ function eventGameInit()
 		enableStructure("FKTankFactory", playnum);
 		enableStructure("FKCyborgFactory", playnum);
 
+		// We need to enable these in order for scripts to be able to generate their templates.
+		makeComponentAvailable("FKTankStart", playnum);
+		makeComponentAvailable("FKTruck", playnum);
+		makeComponentAvailable("FKCyborg-Engineer", playnum); // body
+		makeComponentAvailable("FKCyborgEngineer", playnum); // constructor
+		makeComponentAvailable("tracked01", playnum);
+	 	//makeComponentAvailable("", playnum);
+
+		enableResearch("R-W-FF-Machinegun", playnum);
+		enableResearch("R-W-SF-Railgun", playnum);
+		enableResearch("R-W-SF-Cannon", playnum);
+		enableResearch("R-W-MIS-ScourgeMissile", playnum);
+		enableResearch("R-W-MIS-Lancer", playnum);
+		enableResearch("R-W-HOT-Flamethrower", playnum);
+		enableResearch("R-W-HOT-Laser", playnum);
+		enableResearch("R-Res1", playnum);
+		enableResearch("R-NRG1", playnum);
+		enableResearch("R-SensorSurveillance", playnum);
+		enableResearch("R-Repair", playnum);
+		enableResearch("R-BU-BodyPoints1", playnum);
+		enableResearch("R-BU-Engine1", playnum);
+		enableResearch("R-BU-KineticArmour1", playnum);
+		enableResearch("R-BU-ThermalArmour1", playnum);
+		enableResearch("R-StU-Armours1", playnum);
+		enableResearch("R-StU-BodyPoints1", playnum);
+		enableResearch("R-Def-Wall", playnum);
+
 		// Needed for Autorepair from the start
 		// Autorepair is defined in repair.txt
 		// Autorepair is a research topic
