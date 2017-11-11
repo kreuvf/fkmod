@@ -7,10 +7,6 @@
         "flightName": "GROUND",
         "multiplier": 100
     },
-    "Jump": {
-        "flightName": "AIR",
-        "multiplier": 100
-    },
     "Legged": {
         "flightName": "GROUND",
         "multiplier": 100
@@ -20,10 +16,6 @@
         "multiplier": 100
     },
     "Propellor": {
-        "flightName": "GROUND",
-        "multiplier": 100
-    },
-    "Ski": {
         "flightName": "GROUND",
         "multiplier": 100
     },
