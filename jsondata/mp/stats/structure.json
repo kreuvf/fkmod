@@ -1,0 +1,1215 @@
+{
+    "A0ADemolishStructure": {
+        "armour": 6,
+        "breadth": 1,
+        "buildPoints": 10,
+        "height": 1,
+        "hitpoints": 400,
+        "id": "A0ADemolishStructure",
+        "name": "Demolish Structure",
+        "resistance": 150,
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "SOFT",
+        "structureModel": [
+            "icdozer.PIE"
+        ],
+        "type": "DEMOLISH",
+        "width": 1
+    },
+    "A0BaBaBunker": {
+        "armour": 12,
+        "breadth": 1,
+        "buildPoints": 10,
+        "buildPower": 100,
+        "height": 1,
+        "hitpoints": 600,
+        "id": "A0BaBaBunker",
+        "name": "Scavenger Bunker",
+        "resistance": 150,
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "BUNKER",
+        "structureModel": [
+            "blbrbbnk.PIE"
+        ],
+        "type": "DEFENSE",
+        "width": 1
+    },
+    "A0BaBaFactory": {
+        "armour": 5,
+        "breadth": 1,
+        "buildPoints": 1,
+        "buildPower": 20,
+        "height": 2,
+        "hitpoints": 400,
+        "id": "A0BaBaFactory",
+        "name": "Scavenger Factory",
+        "resistance": 150,
+        "sensorID": "ZNULLSENSOR",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "BLBRBFAC.PIE"
+        ],
+        "type": "FACTORY",
+        "width": 2
+    },
+    "A0BaBaFlameTower": {
+        "armour": 7,
+        "breadth": 1,
+        "buildPoints": 10,
+        "buildPower": 100,
+        "height": 2,
+        "hitpoints": 400,
+        "id": "A0BaBaFlameTower",
+        "name": "Scavenger Flame Tower",
+        "resistance": 150,
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "Blbrtowf.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "Flame1Mk1"
+        ],
+        "width": 1
+    },
+    "A0BaBaGunTower": {
+        "armour": 7,
+        "breadth": 1,
+        "buildPoints": 10,
+        "buildPower": 100,
+        "height": 2,
+        "hitpoints": 400,
+        "id": "A0BaBaGunTower",
+        "name": "Scavenger Gun Tower",
+        "resistance": 150,
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "BLBRBTW1.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "BuggyMG"
+        ],
+        "width": 1
+    },
+    "A0BaBaGunTowerEND": {
+        "armour": 7,
+        "breadth": 1,
+        "buildPoints": 10,
+        "buildPower": 20,
+        "height": 2,
+        "hitpoints": 400,
+        "id": "A0BaBaGunTowerEND",
+        "name": "*Scavenger End Tower*",
+        "resistance": 150,
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "Blbrbtw2.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "BuggyMG"
+        ],
+        "width": 1
+    },
+    "A0BaBaHorizontalWall": {
+        "armour": 7,
+        "breadth": 1,
+        "buildPoints": 10,
+        "buildPower": 10,
+        "height": 2,
+        "hitpoints": 300,
+        "id": "A0BaBaHorizontalWall",
+        "name": "Scavenger Horizontal Wall",
+        "sensorID": "BaBaSensor",
+        "strength": "SOFT",
+        "structureModel": [
+            "BLBRBWLH.PIE"
+        ],
+        "type": "WALL",
+        "width": 1
+    },
+    "A0BaBaMortarPit": {
+        "armour": 10,
+        "breadth": 1,
+        "buildPoints": 1,
+        "buildPower": 10,
+        "height": 1,
+        "hitpoints": 500,
+        "id": "A0BaBaMortarPit",
+        "name": "*BaBaMortarPit*",
+        "resistance": 150,
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "BLBRMRTP.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "Mortar1Mk1"
+        ],
+        "width": 1
+    },
+    "A0BaBaPowerGenerator": {
+        "armour": 5,
+        "breadth": 1,
+        "buildPoints": 1,
+        "buildPower": 10,
+        "height": 2,
+        "hitpoints": 400,
+        "id": "A0BaBaPowerGenerator",
+        "name": "Scavenger Power Generator",
+        "resistance": 150,
+        "sensorID": "BaBaSensor",
+        "strength": "SOFT",
+        "structureModel": [
+            "BLBRBGEN.PIE"
+        ],
+        "type": "POWER GENERATOR",
+        "width": 1
+    },
+    "A0BaBaRocketPit": {
+        "armour": 10,
+        "breadth": 1,
+        "buildPoints": 1,
+        "buildPower": 10,
+        "height": 1,
+        "hitpoints": 500,
+        "id": "A0BaBaRocketPit",
+        "name": "Scavenger Rocket Pit",
+        "resistance": 150,
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "EXROCKET.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "BabaPitRocket"
+        ],
+        "width": 1
+    },
+    "A0BaBaRocketPitAT": {
+        "armour": 10,
+        "breadth": 1,
+        "buildPoints": 1,
+        "buildPower": 10,
+        "height": 1,
+        "hitpoints": 500,
+        "id": "A0BaBaRocketPitAT",
+        "name": "Scavenger AT-Rocket Pit",
+        "resistance": 150,
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "EXROCKET.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "BabaPitRocketAT"
+        ],
+        "width": 1
+    },
+    "A0BabaCornerWall": {
+        "armour": 5,
+        "breadth": 1,
+        "buildPoints": 3,
+        "buildPower": 20,
+        "height": 2,
+        "hitpoints": 300,
+        "id": "A0BabaCornerWall",
+        "name": "Scavenger CornerWall",
+        "sensorID": "ZNULLSENSOR",
+        "strength": "SOFT",
+        "structureModel": [
+            "BLBRBCR1.PIE"
+        ],
+        "type": "CORNER WALL",
+        "width": 1
+    },
+    "A0CannonTower": {
+        "armour": 10,
+        "breadth": 1,
+        "buildPoints": 5,
+        "buildPower": 10,
+        "height": 2,
+        "hitpoints": 400,
+        "id": "A0CannonTower",
+        "name": "Cannon Tower",
+        "resistance": 150,
+        "sensorID": "TowerSensor",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "BLBRTOWR.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "BaBaCannon"
+        ],
+        "width": 1
+    },
+    "A0ResourceExtractor": {
+        "armour": 250,
+        "breadth": 1,
+        "buildPoints": 45000,
+        "buildPower": 100,
+        "height": 1,
+        "hitpoints": 2500,
+        "id": "A0ResourceExtractor",
+        "name": "Oil Derrick",
+        "resistance": 150,
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "BLDERIK.PIE"
+        ],
+        "type": "RESOURCE EXTRACTOR",
+        "width": 1
+    },
+    "FKAASiteAvengerSAM": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKAASiteAvengerSAM",
+        "name": "Avenger SAM Site Mk1",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "Blaamnt2.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-MIS-AAAvengerSAM"
+        ],
+        "width": 1
+    },
+    "FKAASiteAvengerSAM2": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKAASiteAvengerSAM2",
+        "name": "Avenger SAM Site Mk2",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "Blaamnt2.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-MIS-AAAvengerSAM2"
+        ],
+        "width": 1
+    },
+    "FKAASiteCyclone": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKAASiteCyclone",
+        "name": "Cyclone AA Site Mk1",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "Blaamnt2.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-SF-AACyclone"
+        ],
+        "width": 1
+    },
+    "FKAASiteCyclone2": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKAASiteCyclone2",
+        "name": "Cyclone AA Site Mk2",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "Blaamnt2.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-SF-AACyclone2"
+        ],
+        "width": 1
+    },
+    "FKAASiteCyclone3": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKAASiteCyclone3",
+        "name": "Cyclone AA Site Mk3",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "Blaamnt2.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-SF-AACyclone3"
+        ],
+        "width": 1
+    },
+    "FKAASiteHurricane": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 300,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKAASiteHurricane",
+        "name": "Hurricane AA Site Mk1",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "Blaamnt2.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-FF-AAHurricane"
+        ],
+        "width": 1
+    },
+    "FKAASiteHurricane2": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 300,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKAASiteHurricane2",
+        "name": "Hurricane AA Site Mk2",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "Blaamnt2.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-FF-AAHurricane2"
+        ],
+        "width": 1
+    },
+    "FKAASiteHurricane3": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 300,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKAASiteHurricane3",
+        "name": "Hurricane AA Site Mk3",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "Blaamnt2.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-FF-AAHurricane3"
+        ],
+        "width": 1
+    },
+    "FKAASiteStormbringer": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKAASiteStormbringer",
+        "name": "Stormbringer AA Site Mk1",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "Blaamnt2.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-HOT-AAStormbringer"
+        ],
+        "width": 1
+    },
+    "FKAASiteStormbringer2": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKAASiteStormbringer2",
+        "name": "Stormbringer AA Site Mk2",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "Blaamnt2.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-HOT-AAStormbringer2"
+        ],
+        "width": 1
+    },
+    "FKBunkerCannon": {
+        "armour": 350,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKBunkerCannon",
+        "name": "Cannon Bunker Mk1",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "BUNKER",
+        "structureModel": [
+            "Blcanpil.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-SF-Cannon-Structure"
+        ],
+        "width": 1
+    },
+    "FKBunkerCannon2": {
+        "armour": 350,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKBunkerCannon2",
+        "name": "Cannon Bunker Mk2",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "BUNKER",
+        "structureModel": [
+            "Blcanpil.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-SF-Cannon-Structure2"
+        ],
+        "width": 1
+    },
+    "FKBunkerCannon3": {
+        "armour": 350,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKBunkerCannon3",
+        "name": "Cannon Bunker Mk3",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "BUNKER",
+        "structureModel": [
+            "Blcanpil.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-SF-Cannon-Structure3"
+        ],
+        "width": 1
+    },
+    "FKBunkerMG": {
+        "armour": 350,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 300,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKBunkerMG",
+        "name": "Machinegun Bunker Mk1",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "BUNKER",
+        "structureModel": [
+            "blpilbox.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-FF-Machinegun-Structure"
+        ],
+        "width": 1
+    },
+    "FKBunkerMG2": {
+        "armour": 350,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 300,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKBunkerMG2",
+        "name": "Machinegun Bunker Mk2",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "BUNKER",
+        "structureModel": [
+            "blpilbox.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-FF-Machinegun-Structure2"
+        ],
+        "width": 1
+    },
+    "FKBunkerMG3": {
+        "armour": 350,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 300,
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKBunkerMG3",
+        "name": "Machinegun Bunker Mk3",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "BUNKER",
+        "structureModel": [
+            "blpilbox.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-FF-Machinegun-Structure3"
+        ],
+        "width": 1
+    },
+    "FKCyborgFactory": {
+        "armour": 250,
+        "baseModel": "blbcfact.pie",
+        "breadth": 2,
+        "buildPoints": 120000,
+        "buildPower": 200,
+        "constructionPoints": 1000,
+        "height": 2,
+        "hitpoints": 3500,
+        "id": "FKCyborgFactory",
+        "name": "Cyborg Factory",
+        "resistance": 150,
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "blcfact1.pie"
+        ],
+        "type": "CYBORG FACTORY",
+        "width": 1
+    },
+    "FKHardpointCannon": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 2,
+        "hitpoints": 10000,
+        "id": "FKHardpointCannon",
+        "name": "Cannon Hardpoint Mk1",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLGUARD1.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-SF-Cannon-Structure"
+        ],
+        "width": 1
+    },
+    "FKHardpointCannon2": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 2,
+        "hitpoints": 10000,
+        "id": "FKHardpointCannon2",
+        "name": "Cannon Hardpoint Mk2",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLGUARD1.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-SF-Cannon-Structure2"
+        ],
+        "width": 1
+    },
+    "FKHardpointCannon3": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 2,
+        "hitpoints": 10000,
+        "id": "FKHardpointCannon3",
+        "name": "Cannon Hardpoint Mk3",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLGUARD1.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-SF-Cannon-Structure3"
+        ],
+        "width": 1
+    },
+    "FKHardpointMG": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 300,
+        "height": 2,
+        "hitpoints": 10000,
+        "id": "FKHardpointMG",
+        "name": "Machinegun Hardpoint Mk1",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLGUARD1.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-FF-Machinegun-Structure"
+        ],
+        "width": 1
+    },
+    "FKHardpointMG2": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 300,
+        "height": 2,
+        "hitpoints": 10000,
+        "id": "FKHardpointMG2",
+        "name": "Machinegun Hardpoint Mk2",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLGUARD1.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-FF-Machinegun-Structure2"
+        ],
+        "width": 1
+    },
+    "FKHardpointMG3": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 300,
+        "height": 2,
+        "hitpoints": 10000,
+        "id": "FKHardpointMG3",
+        "name": "Machinegun Hardpoint Mk3",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLGUARD1.pie"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-FF-Machinegun-Structure3"
+        ],
+        "width": 1
+    },
+    "FKPitGrenadeLauncher": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 1,
+        "hitpoints": 7000,
+        "id": "FKPitGrenadeLauncher",
+        "name": "Grenade Launcher Pit Mk1",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLMRTPIT.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-SPL-GrenadeLauncher-TankStructure"
+        ],
+        "width": 1
+    },
+    "FKPitGrenadeLauncher2": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 1,
+        "hitpoints": 7000,
+        "id": "FKPitGrenadeLauncher2",
+        "name": "Grenade Launcher Pit Mk2",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLMRTPIT.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-SPL-GrenadeLauncher-TankStructure2"
+        ],
+        "width": 1
+    },
+    "FKPitGrenadeLauncher3": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "height": 1,
+        "hitpoints": 7000,
+        "id": "FKPitGrenadeLauncher3",
+        "name": "Grenade Launcher Pit Mk3",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLMRTPIT.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-SPL-GrenadeLauncher-TankStructure3"
+        ],
+        "width": 1
+    },
+    "FKPitHowitzer": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 90000,
+        "buildPower": 500,
+        "height": 1,
+        "hitpoints": 7000,
+        "id": "FKPitHowitzer",
+        "name": "Howitzer Pit Mk1",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLMRTPIT.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-ART-Howitzer"
+        ],
+        "width": 1
+    },
+    "FKPitHowitzer2": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 90000,
+        "buildPower": 500,
+        "height": 1,
+        "hitpoints": 7000,
+        "id": "FKPitHowitzer2",
+        "name": "Howitzer Pit Mk2",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLMRTPIT.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-ART-Howitzer2"
+        ],
+        "width": 1
+    },
+    "FKPitHowitzer3": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 90000,
+        "buildPower": 500,
+        "height": 1,
+        "hitpoints": 7000,
+        "id": "FKPitHowitzer3",
+        "name": "Howitzer Pit Mk3",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLMRTPIT.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-ART-Howitzer3"
+        ],
+        "width": 1
+    },
+    "FKPitHowitzerIncendiary": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 90000,
+        "buildPower": 500,
+        "height": 1,
+        "hitpoints": 7000,
+        "id": "FKPitHowitzerIncendiary",
+        "name": "Incendiary Howitzer Pit Mk1",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLMRTPIT.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-HOT-HowitzerIncendiary"
+        ],
+        "width": 1
+    },
+    "FKPitHowitzerIncendiary2": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 90000,
+        "buildPower": 500,
+        "height": 1,
+        "hitpoints": 7000,
+        "id": "FKPitHowitzerIncendiary2",
+        "name": "Incendiary Howitzer Pit Mk2",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLMRTPIT.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-HOT-HowitzerIncendiary2"
+        ],
+        "width": 1
+    },
+    "FKPitHowitzerIncendiary3": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 90000,
+        "buildPower": 500,
+        "height": 1,
+        "hitpoints": 7000,
+        "id": "FKPitHowitzerIncendiary3",
+        "name": "Incendiary Howitzer Pit Mk3",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLMRTPIT.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-HOT-HowitzerIncendiary3"
+        ],
+        "width": 1
+    },
+    "FKPitRockets": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 90000,
+        "buildPower": 500,
+        "height": 1,
+        "hitpoints": 7000,
+        "id": "FKPitRockets",
+        "name": "Rocket Battery Pit Mk1",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLMRTPIT.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-ART-RocketBattery"
+        ],
+        "width": 1
+    },
+    "FKPitRockets2": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 90000,
+        "buildPower": 500,
+        "height": 1,
+        "hitpoints": 7000,
+        "id": "FKPitRockets2",
+        "name": "Rocket Battery Pit Mk2",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLMRTPIT.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-ART-RocketBattery2"
+        ],
+        "width": 1
+    },
+    "FKPitRockets3": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 90000,
+        "buildPower": 500,
+        "height": 1,
+        "hitpoints": 7000,
+        "id": "FKPitRockets3",
+        "name": "Rocket Battery Pit Mk3",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLMRTPIT.PIE"
+        ],
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-ART-RocketBattery3"
+        ],
+        "width": 1
+    },
+    "FKPowerGenerator": {
+        "armour": 250,
+        "baseModel": "blbpower.pie",
+        "breadth": 2,
+        "buildPoints": 90000,
+        "buildPower": 200,
+        "height": 2,
+        "hitpoints": 5000,
+        "id": "FKPowerGenerator",
+        "name": "Power Generator",
+        "powerPoints": 100,
+        "resistance": 300,
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "BLPOWER4.PIE"
+        ],
+        "type": "POWER GENERATOR",
+        "width": 2
+    },
+    "FKRearmPad": {
+        "armour": 250,
+        "baseModel": "blbgen.pie",
+        "breadth": 1,
+        "buildPoints": 45000,
+        "buildPower": 100,
+        "height": 1,
+        "hitpoints": 2500,
+        "id": "FKRearmPad",
+        "name": "Rearming Pad",
+        "rearmPoints": 10,
+        "repairPoints": 50,
+        "resistance": 150,
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "blvtolpd.pie"
+        ],
+        "type": "REARM PAD",
+        "width": 1
+    },
+    "FKRepairFacility": {
+        "armour": 250,
+        "baseModel": "BLBGEN.PIE",
+        "breadth": 1,
+        "buildPoints": 45000,
+        "buildPower": 100,
+        "height": 2,
+        "hitpoints": 5000,
+        "id": "FKRepairFacility",
+        "name": "Repair Facility",
+        "repairPoints": 200,
+        "resistance": 150,
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "BLRPAIR3.PIE"
+        ],
+        "type": "REPAIR FACILITY",
+        "width": 1
+    },
+    "FKResearchFacility": {
+        "armour": 250,
+        "baseModel": "blbresch.pie",
+        "breadth": 2,
+        "buildPoints": 90000,
+        "buildPower": 400,
+        "height": 2,
+        "hitpoints": 5000,
+        "id": "FKResearchFacility",
+        "name": "Research Facility",
+        "researchPoints": 28,
+        "resistance": 150,
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "BLRESCH4.PIE"
+        ],
+        "type": "RESEARCH",
+        "width": 2
+    },
+    "FKTankFactory": {
+        "armour": 250,
+        "baseModel": "blbfact.pie",
+        "breadth": 3,
+        "buildPoints": 120000,
+        "buildPower": 300,
+        "constructionPoints": 1000,
+        "height": 3,
+        "hitpoints": 7500,
+        "id": "FKTankFactory",
+        "name": "Tank Factory",
+        "resistance": 150,
+        "sensorID": "BaBaSensor",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "BLFACT2.pie"
+        ],
+        "type": "FACTORY",
+        "width": 3
+    },
+    "FKTowerArtillery": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 30000,
+        "buildPower": 100,
+        "height": 3,
+        "hitpoints": 7500,
+        "id": "FKTowerArtillery",
+        "name": "Sensor Tower",
+        "sensorID": "FKArtillerySensor",
+        "strength": "HARD",
+        "structureModel": [
+            "BLGUARDR.pie"
+        ],
+        "type": "DEFENSE",
+        "width": 1
+    },
+    "FKTowerCB": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 30000,
+        "buildPower": 100,
+        "height": 3,
+        "hitpoints": 7500,
+        "id": "FKTowerCB",
+        "name": "CB Tower",
+        "sensorID": "FKCBSensor",
+        "strength": "HARD",
+        "structureModel": [
+            "BLGUARDR.pie"
+        ],
+        "type": "DEFENSE",
+        "width": 1
+    },
+    "FKTowerSurveillance": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 30000,
+        "buildPower": 75,
+        "height": 3,
+        "hitpoints": 7500,
+        "id": "FKTowerSurveillance",
+        "name": "Surveillance Tower",
+        "sensorID": "FKSurveillanceSensor",
+        "strength": "HARD",
+        "structureModel": [
+            "BLGUARDR.pie"
+        ],
+        "type": "DEFENSE",
+        "width": 1
+    },
+    "FKTowerVTOL": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 30000,
+        "buildPower": 100,
+        "height": 3,
+        "hitpoints": 7500,
+        "id": "FKTowerVTOL",
+        "name": "VTOL Tower",
+        "sensorID": "FKVTOLSensor",
+        "strength": "HARD",
+        "structureModel": [
+            "BLGUARDR.pie"
+        ],
+        "type": "DEFENSE",
+        "width": 1
+    },
+    "FKVTOLFactory": {
+        "armour": 250,
+        "baseModel": "blbfact.pie",
+        "breadth": 3,
+        "buildPoints": 120000,
+        "buildPower": 400,
+        "constructionPoints": 1000,
+        "height": 3,
+        "hitpoints": 7500,
+        "id": "FKVTOLFactory",
+        "name": "VTOL Factory",
+        "resistance": 150,
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "blvfact2.pie"
+        ],
+        "type": "VTOL FACTORY",
+        "width": 3
+    },
+    "FKWall": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 20000,
+        "buildPower": 50,
+        "height": 2,
+        "hitpoints": 10000,
+        "id": "FKWall",
+        "name": "Wall",
+        "sensorID": "ZNULLSENSOR",
+        "strength": "HARD",
+        "structureModel": [
+            "blwallh.pie",
+            "blwallc1.pie",
+            "blwallh_t.pie",
+            "blwallh_l.pie"
+        ],
+        "type": "WALL",
+        "width": 1
+    },
+    "FKWallCorner": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 20000,
+        "buildPower": 50,
+        "height": 2,
+        "hitpoints": 10000,
+        "id": "FKWallCorner",
+        "name": "Wall",
+        "sensorID": "ZNULLSENSOR",
+        "strength": "HARD",
+        "structureModel": [
+            "BLWALLC1.pie"
+        ],
+        "type": "CORNER WALL",
+        "width": 1
+    },
+    "FKWallGate": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 40000,
+        "buildPower": 100,
+        "height": 2,
+        "hitpoints": 15000,
+        "id": "FKWallGate",
+        "name": "Gate",
+        "sensorID": "ZNULLSENSOR",
+        "strength": "HARD",
+        "structureModel": [
+            "BLGATEH.pie"
+        ],
+        "type": "GATE",
+        "width": 1
+    }
+}

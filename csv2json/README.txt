@@ -1,0 +1,1 @@
+Each python script converts the data file of the same name from the old csv format to the new json format used by Warzone 2100 3.2

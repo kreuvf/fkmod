@@ -300,10 +300,10 @@ R-WU-BombCluster-DMG5,FKWeaponUpgradeCLUDamage4,1635
 R-WU-BombCluster-DMG6,FKWeaponUpgradeCLUDamage5,1636
 R-WU-BombCluster-DMG7,FKWeaponUpgradeCLUDamage6,1637
 R-WU-BombCluster-ACC1,FKWeaponUpgradeCLUAccuracy0,1638
-R-WU-BombCluster-ACC2,FKWeaponUpgradeCLUAccuracy0,1639
-R-WU-BombCluster-ACC3,FKWeaponUpgradeCLUAccuracy0,1640
-R-WU-BombCluster-ACC4,FKWeaponUpgradeCLUAccuracy0,1641
-R-WU-BombCluster-ACC5,FKWeaponUpgradeCLUAccuracy0,1642
+R-WU-BombCluster-ACC2,FKWeaponUpgradeCLUAccuracy1,1639
+R-WU-BombCluster-ACC3,FKWeaponUpgradeCLUAccuracy2,1640
+R-WU-BombCluster-ACC4,FKWeaponUpgradeCLUAccuracy3,1641
+R-WU-BombCluster-ACC5,FKWeaponUpgradeCLUAccuracy4,1642
 R-BU-Engine1,FKVehicleUpgradeEngine0,1643
 R-BU-Engine2,FKVehicleUpgradeEngine1,1644
 R-BU-Engine3,FKVehicleUpgradeEngine2,1645

@@ -1,0 +1,125 @@
+{
+    "BaBaSensor": {
+        "buildPoints": 1,
+        "buildPower": 1,
+        "hitpoints": 1,
+        "id": "BaBaSensor",
+        "location": "DEFAULT",
+        "name": "*BaBa Default Sensor*",
+        "power": 100,
+        "range": 640,
+        "type": "STANDARD",
+        "weight": 1
+    },
+    "CCSensor": {
+        "buildPoints": 1,
+        "buildPower": 1,
+        "hitpoints": 200,
+        "id": "CCSensor",
+        "location": "TURRET",
+        "mountModel": "TRLSNSR1.PIE",
+        "name": "*CC Sensor*",
+        "power": 1000,
+        "range": 2048,
+        "sensorModel": "misensor.PIE",
+        "type": "STANDARD",
+        "weight": 1
+    },
+    "DefaultSensor1Mk1": {
+        "id": "DefaultSensor1Mk1",
+        "location": "DEFAULT",
+        "name": "*Default Sensor*",
+        "power": 500,
+        "range": 1024,
+        "type": "STANDARD"
+    },
+    "FKArtillerySensor": {
+        "buildPoints": 100,
+        "buildPower": 20,
+        "hitpoints": 200,
+        "id": "FKArtillerySensor",
+        "location": "TURRET",
+        "mountModel": "TRLSNSR1.PIE",
+        "name": "Artillery Sensor",
+        "power": 1000,
+        "range": 1920,
+        "sensorModel": "GNLSNSR1.PIE",
+        "type": "STANDARD",
+        "weight": 100
+    },
+    "FKCBSensor": {
+        "buildPoints": 100,
+        "buildPower": 20,
+        "hitpoints": 200,
+        "id": "FKCBSensor",
+        "location": "TURRET",
+        "mountModel": "TRMSNSR2.PIE",
+        "name": "CB Sensor",
+        "power": 1000,
+        "range": 1664,
+        "sensorModel": "GNMECM2.PIE",
+        "type": "INDIRECT CB",
+        "weight": 100
+    },
+    "FKScoutSensor": {
+        "designable": 1,
+        "id": "FKScoutSensor",
+        "location": "TURRET",
+        "mountModel": "TRLSNSR1.PIE",
+        "name": "Scout Sensor",
+        "power": 500,
+        "range": 2304,
+        "sensorModel": "RADARSENSOR.PIE",
+        "type": "SURVEILLANCE"
+    },
+    "FKSurveillanceSensor": {
+        "id": "FKSurveillanceSensor",
+        "location": "TURRET",
+        "mountModel": "TRLSNSR1.PIE",
+        "name": "Surveillance Sensor",
+        "power": 500,
+        "range": 2816,
+        "sensorModel": "RADARSENSOR.PIE",
+        "type": "SURVEILLANCE"
+    },
+    "FKVTOLSensor": {
+        "buildPoints": 100,
+        "buildPower": 20,
+        "hitpoints": 200,
+        "id": "FKVTOLSensor",
+        "location": "TURRET",
+        "mountModel": "TRMECM2.PIE",
+        "name": "VTOL Sensor",
+        "power": 1000,
+        "range": 1920,
+        "sensorModel": "GNMSNSR2.PIE",
+        "type": "VTOL INTERCEPT",
+        "weight": 100
+    },
+    "NavGunSensor": {
+        "id": "NavGunSensor",
+        "location": "DEFAULT",
+        "name": "*Nexus Sensor*",
+        "power": 500,
+        "range": 2048,
+        "type": "STANDARD"
+    },
+    "TowerSensor": {
+        "id": "TowerSensor",
+        "location": "DEFAULT",
+        "name": "*Tower Sensor*",
+        "power": 500,
+        "range": 1280,
+        "type": "STANDARD"
+    },
+    "ZNULLSENSOR": {
+        "id": "ZNULLSENSOR",
+        "location": "DEFAULT",
+        "mountModel": "trlsnsr1.PIE",
+        "name": "Z NULL SENSOR",
+        "power": 500,
+        "range": 1024,
+        "sensorModel": "gnlsnsr1.PIE",
+        "type": "STANDARD"
+    }
+}

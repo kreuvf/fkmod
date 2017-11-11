@@ -1,0 +1,9 @@
+ID,spin angle,spin speed,turn speed,acceleration,deceleration,skid deceleration
+ZNULLPROP,0,0,0,0,0,0
+V-Tol-CybTrans,0,0,0,0,0,0
+V-Tol,0,200,100,200,200,0
+tracked01,45,0,0,0,0,0
+hover01,0,0,0,0,0,120
+CyborgLegs,45,450,225,0,450,0
+BaBaProp,0,0,0,0,0,0
+BaBaLegs,45,450,225,0,450,0
