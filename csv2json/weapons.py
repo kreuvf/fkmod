@@ -154,9 +154,9 @@ for line in weapons:
 		att['lightWorld'] = 1
 	
 	if line[49] == "1":
-		att['flags'] = "ShootAir"
-	if line[49] == "100":
 		att['flags'] = "AirOnly"
+	if line[49] == "100":
+		att['flags'] = "ShootAir"
 
 	for sound in sounds:
 		if weapid == sound[0]:
