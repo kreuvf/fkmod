@@ -2,7 +2,7 @@
     "FKCyborgEngineer": {
         "buildPoints": 65,
         "buildPower": 10,
-        "constructionPoints": 500,
+        "constructPoints": 500,
         "designable": 1,
         "hitpoints": 35,
         "id": "FKCyborgEngineer",
@@ -14,7 +14,7 @@
     "FKTruck": {
         "buildPoints": 85,
         "buildPower": 17,
-        "constructionPoints": 1000,
+        "constructPoints": 1000,
         "designable": 1,
         "hitpoints": 25,
         "id": "FKTruck",
@@ -25,7 +25,7 @@
     "Spade1Mk1": {
         "buildPoints": 85,
         "buildPower": 17,
-        "constructionPoints": 8,
+        "constructPoints": 8,
         "designable": 1,
         "hitpoints": 25,
         "id": "Spade1Mk1",

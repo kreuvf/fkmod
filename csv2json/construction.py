@@ -40,7 +40,7 @@ for line in range(len(constCSV)):
 		('buildPoints', int(constCSV[line][3])),
 		('weight', int(constCSV[line][4])),
 		('hitpoints', int(constCSV[line][7])),
-		('constructionPoints', int(constCSV[line][10])),
+		('constructPoints', int(constCSV[line][10])),
 		('designable', int(constCSV[line][11]))
 		]
 	# Prepare list of string to string tuples
