@@ -72,7 +72,7 @@ for line in structure:
 		('breadth', int(line[6])),
 		('buildPoints', int(line[8])),
 		('buildPower', int(line[13])),
-		('constructionPoints', int(line[28])),
+		('productionPoints', int(line[28])),
 		('height', int(line[9])),
 		('hitpoints', int(line[11])),
 		('powerPoints', int(line[29])),
