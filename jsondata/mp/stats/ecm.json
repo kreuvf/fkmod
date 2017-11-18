@@ -8,7 +8,6 @@
     "ZNULLECM": {
         "id": "ZNULLECM",
         "location": "DEFAULT",
-        "name": "Z NULL ECM",
-        "range": 50
+        "name": "Z NULL ECM"
     }
 }
