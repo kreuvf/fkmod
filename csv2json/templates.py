@@ -63,7 +63,10 @@ for line in templates:
 	if line[8] != 'ZNULLREPAIR':
 		att['repair'] = line[8]
 	att['type'] = line[9]
-	if line[10] != 'ZNULLSENSOR':
+	if (
+		(line[10] != 'ZNULLSENSOR') and
+		(line[10] != 'DefaultSensor1Mk1')
+		):
 		att['sensor'] = line[10]
 	weaponList = []
 	hasWeapon = False

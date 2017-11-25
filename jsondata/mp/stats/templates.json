@@ -4,7 +4,6 @@
         "id": "BaBaCivilian",
         "name": "Civilian",
         "propulsion": "BaBaLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "PERSON"
     },
     "BaBaPeople": {
@@ -12,7 +11,6 @@
         "id": "BaBaPeople",
         "name": "Scavenger",
         "propulsion": "BaBaLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "PERSON",
         "weapons": [
             "BaBaMG"
@@ -23,7 +21,6 @@
         "id": "BabaBusCan",
         "name": "School Bus",
         "propulsion": "BaBaProp",
-        "sensor": "DefaultSensor1Mk1",
         "type": "DROID",
         "weapons": [
             "BusCannon"
@@ -34,7 +31,6 @@
         "id": "BabaFireCan",
         "name": "Cannon Fire Truck",
         "propulsion": "BaBaProp",
-        "sensor": "DefaultSensor1Mk1",
         "type": "DROID",
         "weapons": [
             "BusCannon"
@@ -45,7 +41,6 @@
         "id": "BabaFireTruck",
         "name": "Fire Truck",
         "propulsion": "BaBaProp",
-        "sensor": "DefaultSensor1Mk1",
         "type": "DROID",
         "weapons": [
             "BabaFlame"
@@ -56,7 +51,6 @@
         "id": "BabaJeep",
         "name": "Jeep",
         "propulsion": "BaBaProp",
-        "sensor": "DefaultSensor1Mk1",
         "type": "DROID",
         "weapons": [
             "BJeepMG"
@@ -67,7 +61,6 @@
         "construct": "FKTruck",
         "id": "BabaPickUp",
         "name": "Pick-Up Truck",
-        "sensor": "DefaultSensor1Mk1",
         "type": "DROID"
     },
     "BabaRKJeep": {
@@ -75,7 +68,6 @@
         "id": "BabaRKJeep",
         "name": "Rocket Jeep",
         "propulsion": "BaBaProp",
-        "sensor": "DefaultSensor1Mk1",
         "type": "DROID",
         "weapons": [
             "BabaRocket"
@@ -86,7 +78,6 @@
         "id": "BarbarianBuggy",
         "name": "Buggy",
         "propulsion": "BaBaProp",
-        "sensor": "DefaultSensor1Mk1",
         "type": "DROID",
         "weapons": [
             "BuggyMG"
@@ -97,7 +88,6 @@
         "id": "BarbarianRKBuggy",
         "name": "Rocket Buggy",
         "propulsion": "BaBaProp",
-        "sensor": "DefaultSensor1Mk1",
         "type": "DROID",
         "weapons": [
             "BabaRocket"
@@ -108,7 +98,6 @@
         "id": "BarbarianTrike",
         "name": "Trike",
         "propulsion": "BaBaProp",
-        "sensor": "DefaultSensor1Mk1",
         "type": "DROID",
         "weapons": [
             "bTrikeMG"
@@ -135,7 +124,6 @@
         "id": "FK-Cyb-Cannon",
         "name": "Cannon Cyborg Mk1",
         "propulsion": "CyborgLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG",
         "weapons": [
             "FK-SF-Cannon-Cyborg"
@@ -146,7 +134,6 @@
         "id": "FK-Cyb-Cannon2",
         "name": "Cannon Cyborg Mk2",
         "propulsion": "CyborgLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG",
         "weapons": [
             "FK-SF-Cannon-Cyborg2"
@@ -157,7 +144,6 @@
         "id": "FK-Cyb-Cannon3",
         "name": "Cannon Cyborg Mk3",
         "propulsion": "CyborgLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG",
         "weapons": [
             "FK-SF-Cannon-Cyborg3"
@@ -169,7 +155,6 @@
         "id": "FK-Cyb-Engineer",
         "name": "Engineer",
         "propulsion": "CyborgLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG_CONSTRUCT"
     },
     "FK-Cyb-Flamethrower": {
@@ -177,7 +162,6 @@
         "id": "FK-Cyb-Flamethrower",
         "name": "Flamer Mk1",
         "propulsion": "CyborgLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG",
         "weapons": [
             "FK-HOT-Flamethrower"
@@ -188,7 +172,6 @@
         "id": "FK-Cyb-Flamethrower2",
         "name": "Flamer Mk2",
         "propulsion": "CyborgLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG",
         "weapons": [
             "FK-HOT-Flamethrower2"
@@ -199,7 +182,6 @@
         "id": "FK-Cyb-Flamethrower3",
         "name": "Flamer Mk3",
         "propulsion": "CyborgLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG",
         "weapons": [
             "FK-HOT-Flamethrower3"
@@ -210,7 +192,6 @@
         "id": "FK-Cyb-GrenadeLauncher",
         "name": "Grenadier Mk1",
         "propulsion": "CyborgLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG",
         "weapons": [
             "FK-SPL-GrenadeLauncher-Cyborg"
@@ -221,7 +202,6 @@
         "id": "FK-Cyb-GrenadeLauncher2",
         "name": "Grenadier Mk2",
         "propulsion": "CyborgLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG",
         "weapons": [
             "FK-SPL-GrenadeLauncher-Cyborg2"
@@ -232,7 +212,6 @@
         "id": "FK-Cyb-GrenadeLauncher3",
         "name": "Grenadier Mk3",
         "propulsion": "CyborgLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG",
         "weapons": [
             "FK-SPL-GrenadeLauncher-Cyborg3"
@@ -243,7 +222,6 @@
         "id": "FK-Cyb-Lancer",
         "name": "Lancer Mk1",
         "propulsion": "CyborgLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG",
         "weapons": [
             "FK-MIS-Lancer-Cyborg"
@@ -254,7 +232,6 @@
         "id": "FK-Cyb-Lancer2",
         "name": "Lancer Mk2",
         "propulsion": "CyborgLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG",
         "weapons": [
             "FK-MIS-Lancer-Cyborg2"
@@ -265,7 +242,6 @@
         "id": "FK-Cyb-MG",
         "name": "Machinegunner Mk1",
         "propulsion": "CyborgLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG",
         "weapons": [
             "FK-FF-Machinegun-Cyborg"
@@ -276,7 +252,6 @@
         "id": "FK-Cyb-MG2",
         "name": "Machinegunner Mk2",
         "propulsion": "CyborgLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG",
         "weapons": [
             "FK-FF-Machinegun-Cyborg2"
@@ -287,7 +262,6 @@
         "id": "FK-Cyb-MG3",
         "name": "Machinegunner Mk3",
         "propulsion": "CyborgLegs",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG",
         "weapons": [
             "FK-FF-Machinegun-Cyborg3"
@@ -299,7 +273,6 @@
         "name": "Mechanic",
         "propulsion": "CyborgLegs",
         "repair": "FKCyborgRepair",
-        "sensor": "DefaultSensor1Mk1",
         "type": "CYBORG_REPAIR"
     },
     "Transporter": {
