@@ -104,6 +104,7 @@
         ]
     },
     "ConstructionDroid": {
+        "available": true,
         "body": "FKTankStart",
         "construct": "FKTruck",
         "id": "ConstructionDroid",
@@ -112,6 +113,7 @@
         "type": "DROID"
     },
     "ConstructorDroid": {
+        "available": true,
         "body": "FKTankStart",
         "construct": "FKTruck",
         "id": "ConstructorDroid",
@@ -120,6 +122,7 @@
         "type": "DROID"
     },
     "FK-Cyb-Cannon": {
+        "available": true,
         "body": "FKCyborg-Cannon",
         "id": "FK-Cyb-Cannon",
         "name": "Cannon Cyborg Mk1",
@@ -130,6 +133,7 @@
         ]
     },
     "FK-Cyb-Cannon2": {
+        "available": true,
         "body": "FKCyborg-Cannon2",
         "id": "FK-Cyb-Cannon2",
         "name": "Cannon Cyborg Mk2",
@@ -140,6 +144,7 @@
         ]
     },
     "FK-Cyb-Cannon3": {
+        "available": true,
         "body": "FKCyborg-Cannon3",
         "id": "FK-Cyb-Cannon3",
         "name": "Cannon Cyborg Mk3",
@@ -150,6 +155,7 @@
         ]
     },
     "FK-Cyb-Engineer": {
+        "available": true,
         "body": "FKCyborg-Engineer",
         "construct": "FKCyborgEngineer",
         "id": "FK-Cyb-Engineer",
@@ -158,6 +164,7 @@
         "type": "CYBORG_CONSTRUCT"
     },
     "FK-Cyb-Flamethrower": {
+        "available": true,
         "body": "FKCyborg-Flamethrower",
         "id": "FK-Cyb-Flamethrower",
         "name": "Flamer Mk1",
@@ -168,6 +175,7 @@
         ]
     },
     "FK-Cyb-Flamethrower2": {
+        "available": true,
         "body": "FKCyborg-Flamethrower2",
         "id": "FK-Cyb-Flamethrower2",
         "name": "Flamer Mk2",
@@ -178,6 +186,7 @@
         ]
     },
     "FK-Cyb-Flamethrower3": {
+        "available": true,
         "body": "FKCyborg-Flamethrower3",
         "id": "FK-Cyb-Flamethrower3",
         "name": "Flamer Mk3",
@@ -188,6 +197,7 @@
         ]
     },
     "FK-Cyb-GrenadeLauncher": {
+        "available": true,
         "body": "FKCyborg-GrenadeLauncher",
         "id": "FK-Cyb-GrenadeLauncher",
         "name": "Grenadier Mk1",
@@ -198,6 +208,7 @@
         ]
     },
     "FK-Cyb-GrenadeLauncher2": {
+        "available": true,
         "body": "FKCyborg-GrenadeLauncher2",
         "id": "FK-Cyb-GrenadeLauncher2",
         "name": "Grenadier Mk2",
@@ -208,6 +219,7 @@
         ]
     },
     "FK-Cyb-GrenadeLauncher3": {
+        "available": true,
         "body": "FKCyborg-GrenadeLauncher3",
         "id": "FK-Cyb-GrenadeLauncher3",
         "name": "Grenadier Mk3",
@@ -218,6 +230,7 @@
         ]
     },
     "FK-Cyb-Lancer": {
+        "available": true,
         "body": "FKCyborg-Lancer",
         "id": "FK-Cyb-Lancer",
         "name": "Lancer Mk1",
@@ -228,6 +241,7 @@
         ]
     },
     "FK-Cyb-Lancer2": {
+        "available": true,
         "body": "FKCyborg-Lancer2",
         "id": "FK-Cyb-Lancer2",
         "name": "Lancer Mk2",
@@ -238,6 +252,7 @@
         ]
     },
     "FK-Cyb-MG": {
+        "available": true,
         "body": "FKCyborg-MG",
         "id": "FK-Cyb-MG",
         "name": "Machinegunner Mk1",
@@ -248,6 +263,7 @@
         ]
     },
     "FK-Cyb-MG2": {
+        "available": true,
         "body": "FKCyborg-MG2",
         "id": "FK-Cyb-MG2",
         "name": "Machinegunner Mk2",
@@ -258,6 +274,7 @@
         ]
     },
     "FK-Cyb-MG3": {
+        "available": true,
         "body": "FKCyborg-MG3",
         "id": "FK-Cyb-MG3",
         "name": "Machinegunner Mk3",
@@ -268,6 +285,7 @@
         ]
     },
     "FK-Cyb-Repair": {
+        "available": true,
         "body": "FKCyborg-Repair",
         "id": "FK-Cyb-Repair",
         "name": "Mechanic",
@@ -276,6 +294,7 @@
         "type": "CYBORG_REPAIR"
     },
     "Transporter": {
+        "available": true,
         "body": "FKTransportBody",
         "id": "Transporter",
         "name": "Cyborg Transport",
