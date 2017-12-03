@@ -85,6 +85,7 @@ for line in structure:
 	
 	strlist = [
 		('baseModel', line[22]),
+		('ecmID', line[18]),
 		('id', line[0]),
 		('sensorID', line[19]),
 		('strength', line[3]),
