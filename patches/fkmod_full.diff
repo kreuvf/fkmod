@@ -842,7 +842,7 @@ index d2a9477..61dbece 100644
  	Vector3i        src;                    ///< Where projectile started
  	Vector3i        dst;                    ///< The target coordinates
 diff --git a/src/stats.cpp b/src/stats.cpp
-index ec3412f..c163df2 100644
+index ec3412f..d94aa9e 100644
 --- a/src/stats.cpp
 +++ b/src/stats.cpp
 @@ -38,6 +38,7 @@
@@ -976,7 +976,7 @@ index ec3412f..c163df2 100644
  	case WSC_NUM_WEAPON_SUBCLASSES: break;
  	}
  	ASSERT(false, "No such weapon subclass");
-@@ -1675,9 +1762,16 @@ int weaponRadDamage(const WEAPON_STATS *psStats, int player)
+@@ -1675,9 +1762,14 @@ int weaponRadDamage(const WEAPON_STATS *psStats, int player)
  	return psStats->upgrade[player].radiusDamage;
  }
  
@@ -984,18 +984,16 @@ index ec3412f..c163df2 100644
 +int weaponPeriodicalDamage(BASE_OBJECT *psObj, const WEAPON_STATS *psStats, int player)
  {
 -	return psStats->upgrade[player].periodicalDamage;
-+	double damage = (double) psStats->base.periodicalDamage;
 +	const WEAPON_CLASS weaponClass = psStats->weaponClass;
 +	DROID *target = (DROID *)psObj;
-+	const UDWORD armour = objArmour(target, weaponClass);
-+	const double upgrade = (double) psStats->upgrade[player].periodicalDamage;
-+	damage = floor(damage * upgrade);
++	const int armour = objArmour(target, weaponClass);
++	unsigned int damage = psStats->upgrade[player].periodicalDamage;
 +	damage < armour ? 0 : damage -= armour;
 +	return (int) round(damage);
  }
  
  int sensorRange(const SENSOR_STATS *psStats, int player)
-@@ -2095,3 +2189,88 @@ bool objRadarDetector(const BASE_OBJECT *psObj)
+@@ -2095,3 +2187,88 @@ bool objRadarDetector(const BASE_OBJECT *psObj)
  	}
  	return false;
  }

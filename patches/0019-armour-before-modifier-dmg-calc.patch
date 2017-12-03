@@ -359,7 +359,7 @@ index b7e1d9b..4e12894 100644
  
  /***************************************************************************/
 diff --git a/src/stats.cpp b/src/stats.cpp
-index f42ed99..c163df2 100644
+index f42ed99..d94aa9e 100644
 --- a/src/stats.cpp
 +++ b/src/stats.cpp
 @@ -38,6 +38,7 @@
@@ -370,7 +370,7 @@ index f42ed99..c163df2 100644
  
  #define WEAPON_TIME		100
  
-@@ -1761,9 +1762,16 @@ int weaponRadDamage(const WEAPON_STATS *psStats, int player)
+@@ -1761,9 +1762,14 @@ int weaponRadDamage(const WEAPON_STATS *psStats, int player)
  	return psStats->upgrade[player].radiusDamage;
  }
  
@@ -378,12 +378,10 @@ index f42ed99..c163df2 100644
 +int weaponPeriodicalDamage(BASE_OBJECT *psObj, const WEAPON_STATS *psStats, int player)
  {
 -	return psStats->upgrade[player].periodicalDamage;
-+	double damage = (double) psStats->base.periodicalDamage;
 +	const WEAPON_CLASS weaponClass = psStats->weaponClass;
 +	DROID *target = (DROID *)psObj;
-+	const UDWORD armour = objArmour(target, weaponClass);
-+	const double upgrade = (double) psStats->upgrade[player].periodicalDamage;
-+	damage = floor(damage * upgrade);
++	const int armour = objArmour(target, weaponClass);
++	unsigned int damage = psStats->upgrade[player].periodicalDamage;
 +	damage < armour ? 0 : damage -= armour;
 +	return (int) round(damage);
  }
