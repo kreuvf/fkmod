@@ -57,14 +57,14 @@
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Droids",
-                "parameter": "HitPointPct",
+                "parameter": "HitPoints",
                 "value": 10
             },
             {
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Cyborgs",
-                "parameter": "HitPointPct",
+                "parameter": "HitPoints",
                 "value": 10
             }
         ],
@@ -86,14 +86,14 @@
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Droids",
-                "parameter": "HitPointPct",
+                "parameter": "HitPoints",
                 "value": 11
             },
             {
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Cyborgs",
-                "parameter": "HitPointPct",
+                "parameter": "HitPoints",
                 "value": 11
             }
         ],
@@ -115,14 +115,14 @@
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Droids",
-                "parameter": "HitPointPct",
+                "parameter": "HitPoints",
                 "value": 12
             },
             {
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Cyborgs",
-                "parameter": "HitPointPct",
+                "parameter": "HitPoints",
                 "value": 12
             }
         ],
@@ -144,14 +144,14 @@
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Droids",
-                "parameter": "HitPointPct",
+                "parameter": "HitPoints",
                 "value": 13
             },
             {
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Cyborgs",
-                "parameter": "HitPointPct",
+                "parameter": "HitPoints",
                 "value": 13
             }
         ],
@@ -173,14 +173,14 @@
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Droids",
-                "parameter": "HitPointPct",
+                "parameter": "HitPoints",
                 "value": 15
             },
             {
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Cyborgs",
-                "parameter": "HitPointPct",
+                "parameter": "HitPoints",
                 "value": 15
             }
         ],
@@ -1641,6 +1641,13 @@
                 "filterValue": "Wall",
                 "parameter": "Armour",
                 "value": 10
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
+                "filterValue": "Structure",
+                "parameter": "Armour",
+                "value": 10
             }
         ],
         "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
@@ -1661,6 +1668,13 @@
                 "class": "Building",
                 "filterParameter": "Type",
                 "filterValue": "Wall",
+                "parameter": "Armour",
+                "value": 11
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
+                "filterValue": "Structure",
                 "parameter": "Armour",
                 "value": 11
             }
@@ -1685,6 +1699,13 @@
                 "filterValue": "Wall",
                 "parameter": "Armour",
                 "value": 12
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
+                "filterValue": "Structure",
+                "parameter": "Armour",
+                "value": 12
             }
         ],
         "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
@@ -1705,6 +1726,13 @@
                 "class": "Building",
                 "filterParameter": "Type",
                 "filterValue": "Wall",
+                "parameter": "Armour",
+                "value": 13
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
+                "filterValue": "Structure",
                 "parameter": "Armour",
                 "value": 13
             }
@@ -1729,6 +1757,13 @@
                 "filterValue": "Wall",
                 "parameter": "Armour",
                 "value": 15
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
+                "filterValue": "Structure",
+                "parameter": "Armour",
+                "value": 15
             }
         ],
         "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
@@ -1746,6 +1781,13 @@
                 "class": "Building",
                 "filterParameter": "Type",
                 "filterValue": "Wall",
+                "parameter": "HitPoints",
+                "value": 10
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
+                "filterValue": "Structure",
                 "parameter": "HitPoints",
                 "value": 10
             }
@@ -1770,6 +1812,13 @@
                 "filterValue": "Wall",
                 "parameter": "HitPoints",
                 "value": 11
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
+                "filterValue": "Structure",
+                "parameter": "HitPoints",
+                "value": 11
             }
         ],
         "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
@@ -1790,6 +1839,13 @@
                 "class": "Building",
                 "filterParameter": "Type",
                 "filterValue": "Wall",
+                "parameter": "HitPoints",
+                "value": 12
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
+                "filterValue": "Structure",
                 "parameter": "HitPoints",
                 "value": 12
             }
@@ -1814,6 +1870,13 @@
                 "filterValue": "Wall",
                 "parameter": "HitPoints",
                 "value": 13
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
+                "filterValue": "Structure",
+                "parameter": "HitPoints",
+                "value": 13
             }
         ],
         "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
@@ -1834,6 +1897,13 @@
                 "class": "Building",
                 "filterParameter": "Type",
                 "filterValue": "Wall",
+                "parameter": "HitPoints",
+                "value": 15
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
+                "filterValue": "Structure",
                 "parameter": "HitPoints",
                 "value": 15
             }

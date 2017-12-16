@@ -384,6 +384,9 @@ for funcline in funcCSV:
 	elif funcline[0] == 'Power Upgrade':
 		results = []
 		results.append({"class": "Building", "parameter": "PowerPoints", "value": int(funcline[2])})
+		# Merge with existing results
+		if 'results' in resJSON[getRFF(funcline[1], resfuncCSV)]:
+			results.extend(resJSON[getRFF(funcline[1], resfuncCSV)]['results'])
 		resJSON[getRFF(funcline[1], resfuncCSV)].update({'results': results})
 	elif funcline[0] == 'Production':
 		print("Production ignored:", funcline)
@@ -392,18 +395,30 @@ for funcline in funcCSV:
 	elif funcline[0] == 'ReArm Upgrade':
 		results = []
 		results.append({"class": "Building", "parameter": "RearmPoints", "value": int(funcline[2])})
+		# Merge with existing results
+		if 'results' in resJSON[getRFF(funcline[1], resfuncCSV)]:
+			results.extend(resJSON[getRFF(funcline[1], resfuncCSV)]['results'])
+		# Merge with existing results
+		if 'results' in resJSON[getRFF(funcline[1], resfuncCSV)]:
+			results.extend(resJSON[getRFF(funcline[1], resfuncCSV)]['results'])
 		resJSON[getRFF(funcline[1], resfuncCSV)].update({'results': results})
 	elif funcline[0] == 'Repair Droid':
 		print("Repair droid ignored:", funcline)
 	elif funcline[0] == 'Repair Upgrade':
 		results = []
 		results.append({"class": "Building", "parameter": "RepairPoints", "value": int(funcline[2])})
+		# Merge with existing results
+		if 'results' in resJSON[getRFF(funcline[1], resfuncCSV)]:
+			results.extend(resJSON[getRFF(funcline[1], resfuncCSV)]['results'])
 		resJSON[getRFF(funcline[1], resfuncCSV)].update({'results': results})
 	elif funcline[0] == 'Research':
 		print("Research ignored:", funcline)
 	elif funcline[0] == 'Research Upgrade':
 		results = []
 		results.append({"class": "Building", "parameter": "ResearchPoints", "value": int(funcline[2])})
+		# Merge with existing results
+		if 'results' in resJSON[getRFF(funcline[1], resfuncCSV)]:
+			results.extend(resJSON[getRFF(funcline[1], resfuncCSV)]['results'])
 		resJSON[getRFF(funcline[1], resfuncCSV)].update({'results': results})
 	elif funcline[0] == 'Resource':
 		print("Resource ignored:", funcline)
@@ -425,6 +440,9 @@ for funcline in funcCSV:
 			results.append(copy.deepcopy(tmp))
 			results[-1]['parameter'] = 'Resistance'
 			results[-1]['value'] = int(funcline[4])
+		# Merge with existing results
+		if 'results' in resJSON[getRFF(funcline[1], resfuncCSV)]:
+			results.extend(resJSON[getRFF(funcline[1], resfuncCSV)]['results'])
 		resJSON[getRFF(funcline[1], resfuncCSV)].update({'results': results})
 	elif funcline[0] == 'VehicleBody Upgrade':
 		tmp = {}
@@ -439,7 +457,7 @@ for funcline in funcCSV:
 				results[-1]['value'] = int(funcline[2])
 			if funcline[3] != '0':
 				results.append(copy.deepcopy(tmp))
-				results[-1]['parameter'] = 'HitPointPct'
+				results[-1]['parameter'] = 'HitPoints'
 				results[-1]['value'] = int(funcline[3])
 			if funcline[4] != '0':
 				results.append(copy.deepcopy(tmp))
@@ -457,7 +475,7 @@ for funcline in funcCSV:
 				results[-1]['value'] = int(funcline[2])
 			if funcline[3] != '0':
 				results.append(copy.deepcopy(tmp))
-				results[-1]['parameter'] = 'HitPointPct'
+				results[-1]['parameter'] = 'HitPoints'
 				results[-1]['value'] = int(funcline[3])
 			if funcline[4] != '0':
 				results.append(copy.deepcopy(tmp))
@@ -467,6 +485,9 @@ for funcline in funcCSV:
 				results.append(copy.deepcopy(tmp))
 				results[-1]['parameter'] = 'Thermal'
 				results[-1]['value'] = int(funcline[5])		
+		# Merge with existing results
+		if 'results' in resJSON[getRFF(funcline[1], resfuncCSV)]:
+			results.extend(resJSON[getRFF(funcline[1], resfuncCSV)]['results'])
 		resJSON[getRFF(funcline[1], resfuncCSV)].update({'results': results})
 	elif funcline[0] == 'VehicleConst Upgrade':
 		print("VehicleConst Upgrade ignored (not used in FKmod):", funcline)
@@ -490,6 +511,9 @@ for funcline in funcCSV:
 			results.append(copy.deepcopy(tmp))
 			results[-1]['parameter'] = 'HitPoints'
 			results[-1]['value'] = int(funcline[3])
+		# Merge with existing results
+		if 'results' in resJSON[getRFF(funcline[1], resfuncCSV)]:
+			results.extend(resJSON[getRFF(funcline[1], resfuncCSV)]['results'])
 		resJSON[getRFF(funcline[1], resfuncCSV)].update({'results': results})
 	elif funcline[0] == 'Weapon Upgrade':
 		tmp = {}
@@ -542,6 +566,9 @@ for funcline in funcCSV:
 				else:
 					results[-1]['value'] = int(funcline[6])
 
+			# Merge with existing results
+			if 'results' in resJSON[getRFF(funcline[1], resfuncCSV)]:
+				results.extend(resJSON[getRFF(funcline[1], resfuncCSV)]['results'])
 			resJSON[getRFF(funcline[1], resfuncCSV)].update({'results': results})
 
 		elif upgradeType == "HitChance":
@@ -551,6 +578,9 @@ for funcline in funcCSV:
 			results[-1]['parameter'] = "HitChance"
 			results[-1]['value'] = int(round((float(funcline[4]) + float(funcline[5])) / 2))
 
+			# Merge with existing results
+			if 'results' in resJSON[getRFF(funcline[1], resfuncCSV)]:
+				results.extend(resJSON[getRFF(funcline[1], resfuncCSV)]['results'])
 			resJSON[getRFF(funcline[1], resfuncCSV)].update({'results': results})
 
 		elif upgradeType == "rof":
@@ -562,6 +592,9 @@ for funcline in funcCSV:
 			results[-1]['parameter'] = "ReloadTime"
 			results[-1]['value'] = -int(funcline[3])
 
+			# Merge with existing results
+			if 'results' in resJSON[getRFF(funcline[1], resfuncCSV)]:
+				results.extend(resJSON[getRFF(funcline[1], resfuncCSV)]['results'])
 			resJSON[getRFF(funcline[1], resfuncCSV)].update({'results': results})
 		else:
 			print("Weapon Upgrade type unknown. Nothing done.")
