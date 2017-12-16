@@ -341,14 +341,14 @@
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Droids",
-                "parameter": "Armor",
+                "parameter": "Armour",
                 "value": 10
             },
             {
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Cyborgs",
-                "parameter": "Armor",
+                "parameter": "Armour",
                 "value": 10
             }
         ],
@@ -370,14 +370,14 @@
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Droids",
-                "parameter": "Armor",
+                "parameter": "Armour",
                 "value": 11
             },
             {
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Cyborgs",
-                "parameter": "Armor",
+                "parameter": "Armour",
                 "value": 11
             }
         ],
@@ -399,14 +399,14 @@
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Droids",
-                "parameter": "Armor",
+                "parameter": "Armour",
                 "value": 12
             },
             {
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Cyborgs",
-                "parameter": "Armor",
+                "parameter": "Armour",
                 "value": 12
             }
         ],
@@ -428,14 +428,14 @@
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Droids",
-                "parameter": "Armor",
+                "parameter": "Armour",
                 "value": 13
             },
             {
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Cyborgs",
-                "parameter": "Armor",
+                "parameter": "Armour",
                 "value": 13
             }
         ],
@@ -457,14 +457,14 @@
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Droids",
-                "parameter": "Armor",
+                "parameter": "Armour",
                 "value": 15
             },
             {
                 "class": "Body",
                 "filterParameter": "BodyClass",
                 "filterValue": "Cyborgs",
-                "parameter": "Armor",
+                "parameter": "Armour",
                 "value": 15
             }
         ],
