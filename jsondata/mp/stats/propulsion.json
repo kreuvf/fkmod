@@ -1,14 +1,14 @@
 {
     "BaBaLegs": {
         "buildPoints": 15,
-        "deceleration": "450",
+        "deceleration": 450,
         "hitpoints": 1,
         "id": "BaBaLegs",
         "name": "BaBaLegs",
         "speed": 200,
-        "spinAngle": "45",
-        "spinSpeed": "450",
-        "turnSpeed": "225",
+        "spinAngle": 45,
+        "spinSpeed": 450,
+        "turnSpeed": 225,
         "type": "Legged",
         "weight": 10
     },
@@ -22,31 +22,31 @@
         "weight": 10
     },
     "CyborgLegs": {
-        "deceleration": "450",
+        "deceleration": 450,
         "designable": 1,
         "hitpoints": 30,
         "id": "CyborgLegs",
         "name": "Cyborg Propulsion II",
         "speed": 1337,
-        "spinAngle": "45",
-        "spinSpeed": "450",
-        "turnSpeed": "225",
+        "spinAngle": 45,
+        "spinSpeed": 450,
+        "turnSpeed": 225,
         "type": "Legged",
         "weight": 30
     },
     "V-Tol": {
-        "acceleration": "200",
+        "acceleration": 200,
         "buildPoints": 100,
         "buildPower": 130,
-        "deceleration": "200",
+        "deceleration": 200,
         "designable": 1,
         "hitpoints": 50,
         "id": "V-Tol",
         "model": "DPVTOL.PIE",
         "name": "VTOL",
         "speed": 1337,
-        "spinSpeed": "200",
-        "turnSpeed": "100",
+        "spinSpeed": 200,
+        "turnSpeed": 100,
         "type": "Lift",
         "weight": 50
     },
@@ -71,7 +71,7 @@
         "id": "hover01",
         "model": "PRLHOV1.PIE",
         "name": "Hover",
-        "skidDecelertaion": "120",
+        "skidDeceleration": 120,
         "speed": 1337,
         "type": "Hover",
         "weight": 70
@@ -85,7 +85,7 @@
         "model": "PRLRTRK1.PIE",
         "name": "Tracks",
         "speed": 1337,
-        "spinAngle": "45",
+        "spinAngle": 45,
         "type": "Tracked",
         "weight": 130
     }

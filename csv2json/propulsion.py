@@ -45,7 +45,7 @@ with open("../data/mp/messages/strings/names.txt", 'r') as f:
 # 3 -> turnSpeed
 # 4 -> acceleration
 # 5 -> deceleration
-# 6 -> skidDecelertaion
+# 6 -> skidDeceleration
 
 obj = dict()		
 for line in propulsion:
@@ -72,17 +72,17 @@ for line in propulsion:
 	for lineAddInf in addInf:
 		if propid == lineAddInf[0]:
 			if lineAddInf[1] != '0':
-				att['spinAngle'] = lineAddInf[1]
+				att['spinAngle'] = int(lineAddInf[1])
 			if lineAddInf[2] != '0':
-				att['spinSpeed'] = lineAddInf[2]
+				att['spinSpeed'] = int(lineAddInf[2])
 			if lineAddInf[3] != '0':
-				att['turnSpeed'] = lineAddInf[3]
+				att['turnSpeed'] = int(lineAddInf[3])
 			if lineAddInf[4] != '0':
-				att['acceleration'] = lineAddInf[4]
+				att['acceleration'] = int(lineAddInf[4])
 			if lineAddInf[5] != '0':
-				att['deceleration'] = lineAddInf[5]
+				att['deceleration'] = int(lineAddInf[5])
 			if lineAddInf[6] != '0':
-				att['skidDecelertaion'] = lineAddInf[6]
+				att['skidDeceleration'] = int(lineAddInf[6])
 				
 	att['name'] = id2name(propid, names)
 	obj[propid] = att
