@@ -1,2 +1,4 @@
 Currently, there are no known issues. Items in TODO.txt do not count.
 
+Upstream bug: Autorepair does not apply to units produced via the debug menu.
+
