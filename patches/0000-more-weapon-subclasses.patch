@@ -2,7 +2,7 @@ diff --git a/src/component.cpp b/src/component.cpp
 index 1a465a2..32dd183 100644
 --- a/src/component.cpp
 +++ b/src/component.cpp
-@@ -119,6 +119,9 @@ UDWORD getComponentRadius(BASE_STATS *psComponent)
+@@ -109,6 +109,9 @@ UDWORD getComponentRadius(BASE_STATS *psComponent)
  	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
  	if (StatIsComponent(psComponent) != COMP_WEAPON
  	    || (((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_BOMB
@@ -12,7 +12,7 @@ index 1a465a2..32dd183 100644
  	        && ((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_EMP))
  	{
  		ASSERT(ComponentIMD, "No ComponentIMD!");
-@@ -294,6 +297,9 @@ void displayComponentButton(BASE_STATS *Stat, const Vector3i *Rotation, const Ve
+@@ -278,6 +281,9 @@ void displayComponentButton(BASE_STATS *Stat, const Vector3i *Rotation, const Ve
  	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
  	if (StatIsComponent(Stat) != COMP_WEAPON
  	    || (((WEAPON_STATS *)Stat)->weaponSubClass != WSC_BOMB
@@ -87,7 +87,7 @@ diff --git a/src/projectile.cpp b/src/projectile.cpp
 index 1d38191..972681a 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
-@@ -556,7 +556,8 @@ bool proj_SendProjectileAngled(WEAPON *psWeap, SIMPLE_OBJECT *psAttacker, int pl
+@@ -552,7 +552,8 @@ bool proj_SendProjectileAngled(WEAPON *psWeap, SIMPLE_OBJECT *psAttacker, int pl
  				/* firing sound emitted from source */
  				audio_PlayObjDynamicTrack(psProj->psSource, psStats->iAudioFireID, NULL);
  				/* GJ HACK: move howitzer sound with shell */
@@ -101,7 +101,7 @@ diff --git a/src/stats.cpp b/src/stats.cpp
 index ec3412f..010399d 100644
 --- a/src/stats.cpp
 +++ b/src/stats.cpp
-@@ -397,7 +397,7 @@ bool loadWeaponStats(const char *pFileName)
+@@ -394,7 +394,7 @@ bool loadWeaponStats(const char *pFileName)
  		{
  			psStats->distanceExtensionFactor = 120;
  		}
@@ -110,7 +110,7 @@ index ec3412f..010399d 100644
  		{
  			psStats->distanceExtensionFactor = 100;
  		}
-@@ -1517,6 +1517,71 @@ bool getWeaponSubClass(const char *subClass, WEAPON_SUBCLASS *wclass)
+@@ -1494,6 +1494,71 @@ bool getWeaponSubClass(const char *subClass, WEAPON_SUBCLASS *wclass)
  	{
  		*wclass = WSC_EMP;
  	}
@@ -182,7 +182,7 @@ index ec3412f..010399d 100644
  	else
  	{
  		ASSERT(!"Invalid weapon sub class", "Invalid weapon sub class: %s", subClass);
-@@ -1548,6 +1613,22 @@ const char *getWeaponSubClass(WEAPON_SUBCLASS wclass)
+@@ -1525,6 +1590,22 @@ const char *getWeaponSubClass(WEAPON_SUBCLASS wclass)
  	case WSC_BOMB: return "BOMB";
  	case WSC_COMMAND: return "COMMAND";
  	case WSC_EMP: return "EMP";
