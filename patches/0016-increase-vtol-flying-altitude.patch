@@ -2,7 +2,7 @@ diff --git a/src/move.cpp b/src/move.cpp
 index b310ee5..d4793a9 100644
 --- a/src/move.cpp
 +++ b/src/move.cpp
-@@ -61,9 +61,9 @@
+@@ -57,9 +57,9 @@
  #include "qtscript.h"
  
  /* max and min vtol heights above terrain */
