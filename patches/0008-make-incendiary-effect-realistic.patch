@@ -2,7 +2,7 @@ diff --git a/src/combat.cpp b/src/combat.cpp
 index 83e29e7..2324a40 100644
 --- a/src/combat.cpp
 +++ b/src/combat.cpp
-@@ -424,13 +424,7 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+@@ -426,13 +426,7 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
  
  	if (isDamagePerSecond)
  	{
@@ -21,7 +21,7 @@ diff --git a/src/droid.cpp b/src/droid.cpp
 index 359bdcb..5828868 100644
 --- a/src/droid.cpp
 +++ b/src/droid.cpp
-@@ -890,23 +890,6 @@ void droidUpdate(DROID *psDroid)
+@@ -806,23 +806,6 @@ void droidUpdate(DROID *psDroid)
  		droidUpdateDroidSelfRepair(psDroid);
  	}
  
@@ -49,7 +49,7 @@ diff --git a/src/projectile.cpp b/src/projectile.cpp
 index 52677f7..787ec93 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
-@@ -1317,6 +1317,13 @@ void PROJECTILE::update()
+@@ -1309,6 +1309,13 @@ void PROJECTILE::update()
  
  	case PROJ_INACTIVE:
  		psObj->died = psObj->time;
@@ -63,7 +63,7 @@ index 52677f7..787ec93 100644
  		break;
  	}
  
-@@ -1348,11 +1355,26 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
+@@ -1340,11 +1347,26 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
  
  	WEAPON_STATS *psStats = psProj->psWStats;
  
@@ -91,7 +91,7 @@ index 52677f7..787ec93 100644
  		if (psCurr->died)
  		{
  			continue;  // Do not damage dead objects further.
-@@ -1380,13 +1402,35 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
+@@ -1372,13 +1394,35 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
  			psCurr->periodicalDamageStart = gameTime;
  			psCurr->periodicalDamage = 0;  // Reset periodical damage done this tick.
  		}
