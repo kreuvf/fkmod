@@ -2,7 +2,7 @@ diff --git a/src/droid.cpp b/src/droid.cpp
 index 1c58abb..bbe8dd2 100644
 --- a/src/droid.cpp
 +++ b/src/droid.cpp
-@@ -882,7 +882,7 @@ void droidUpdate(DROID *psDroid)
+@@ -798,7 +798,7 @@ void droidUpdate(DROID *psDroid)
  	// -----------------
  
  	// See if we can and need to self repair.
