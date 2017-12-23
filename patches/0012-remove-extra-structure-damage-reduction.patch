@@ -2,7 +2,7 @@ diff --git a/src/combat.cpp b/src/combat.cpp
 index b227d1b..40c8649 100644
 --- a/src/combat.cpp
 +++ b/src/combat.cpp
-@@ -371,7 +371,7 @@ void counterBatteryFire(BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget)
+@@ -373,7 +373,7 @@ void counterBatteryFire(BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget)
   */
  int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAPON_CLASS weaponClass, WEAPON_SUBCLASS weaponSubClass, bool isDamagePerSecond, int minDamage)
  {
@@ -11,7 +11,7 @@ index b227d1b..40c8649 100644
  	int armour = objArmour(psObj, weaponClass);
  
  	// If the previous hit was by an EMP cannon and this one is not:
-@@ -461,7 +461,7 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+@@ -463,7 +463,7 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
  unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BASE_OBJECT *psTarget)
  {
  	unsigned int damage;
