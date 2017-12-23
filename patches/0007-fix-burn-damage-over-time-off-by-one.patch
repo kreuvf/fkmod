@@ -2,7 +2,7 @@ diff --git a/src/projectile.cpp b/src/projectile.cpp
 index 972681a..52677f7 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
-@@ -1248,7 +1248,7 @@ static void proj_PostImpactFunc(PROJECTILE *psObj)
+@@ -1240,7 +1240,7 @@ static void proj_PostImpactFunc(PROJECTILE *psObj)
  	int age = gameTime - psObj->born;
  
  	/* Time to finish postimpact effect? */
