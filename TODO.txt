@@ -11,6 +11,8 @@ Requirements for Final Version
 * Convert data files to new format
     * weapons require %min. damage value
     * propulsion require deceleration or skidDeceleration
+* Cyborgs do not get Autorepair
+* Grenade Launcher triggers CB fire when ground unit in CB range gets attacked (does not trigger when firing at structures)
 
 Nice to Have for Final Version
 ------------------------------
