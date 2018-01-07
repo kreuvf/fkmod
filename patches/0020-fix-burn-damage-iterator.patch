@@ -2,7 +2,7 @@ diff --git a/src/projectile.cpp b/src/projectile.cpp
 index de2ae85..3464e75 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
-@@ -1363,8 +1363,7 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
+@@ -1355,8 +1355,7 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
  			psCurr = *it;
  			if(isDead(psCurr))
  			{
