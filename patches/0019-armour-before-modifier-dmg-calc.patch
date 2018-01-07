@@ -2,7 +2,7 @@ diff --git a/src/combat.cpp b/src/combat.cpp
 index cfeb9f3..396e78d 100644
 --- a/src/combat.cpp
 +++ b/src/combat.cpp
-@@ -373,13 +373,14 @@ int objArmour(BASE_OBJECT *psObj, WEAPON_CLASS weaponClass)
+@@ -375,13 +375,14 @@ int objArmour(BASE_OBJECT *psObj, WEAPON_CLASS weaponClass)
  /* Deals damage to an object
   * \param psObj object to deal damage to
   * \param damage amount of damage to deal
@@ -20,7 +20,7 @@ index cfeb9f3..396e78d 100644
  	int armour = objArmour(psObj, weaponClass);
  
  	// If the previous hit was by an EMP cannon and this one is not:
-@@ -424,9 +425,6 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+@@ -426,9 +427,6 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
  	// Reduce damage taken by EXP_REDUCE_DAMAGE % for each experience level
  	actualDamage = (damage * (100 - EXP_REDUCE_DAMAGE * level)) / 100;
  
@@ -30,7 +30,7 @@ index cfeb9f3..396e78d 100644
  	// And at least MIN_WEAPON_DAMAGE points
  	actualDamage = MAX(actualDamage, MIN_WEAPON_DAMAGE);
  
-@@ -460,23 +458,21 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+@@ -462,23 +460,21 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
  }
  
  /* Guesses how damage a shot might do.
@@ -59,7 +59,7 @@ index cfeb9f3..396e78d 100644
  
  	// EMP cannons do no damage, if we are one return now
  	if (psStats->weaponSubClass == WSC_EMP)
-@@ -486,8 +482,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
+@@ -488,8 +484,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
  
  	// apply game difficulty setting
  	damage = modifyForDifficultyLevel(damage, psTarget->player != selectedPlayer);
@@ -68,7 +68,7 @@ index cfeb9f3..396e78d 100644
  	if (psTarget->type == OBJ_DROID)
  	{
  		DROID *psDroid = (DROID *)psTarget;
-@@ -500,9 +494,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
+@@ -502,9 +496,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
  	// Reduce damage taken by EXP_REDUCE_DAMAGE % for each experience level
  	actualDamage = (damage * (100 - EXP_REDUCE_DAMAGE * level)) / 100;
  
@@ -95,7 +95,7 @@ diff --git a/src/droid.cpp b/src/droid.cpp
 index 9d548c4..2814444 100644
 --- a/src/droid.cpp
 +++ b/src/droid.cpp
-@@ -209,23 +209,23 @@ int droidReloadBar(BASE_OBJECT *psObj, WEAPON *psWeap, int weapon_slot)
+@@ -202,23 +202,23 @@ int droidReloadBar(BASE_OBJECT *psObj, WEAPON *psWeap, int weapon_slot)
  /* Deals damage to a droid
   * \param psDroid droid to deal damage to
   * \param damage amount of damage to deal
@@ -123,7 +123,7 @@ index 9d548c4..2814444 100644
  
  	if (relativeDamage > 0)
  	{
-@@ -1233,7 +1233,7 @@ bool droidUpdateRestore(DROID *psDroid)
+@@ -1147,7 +1147,7 @@ bool droidUpdateRestore(DROID *psDroid)
  	ASSERT_OR_RETURN(false, psStats->weaponSubClass == WSC_ELECTRONIC, "unit's weapon is not EW");
  
  	restorePoints = calcDamage(weaponDamage(psStats, psDroid->player),
@@ -149,7 +149,7 @@ diff --git a/src/feature.cpp b/src/feature.cpp
 index 86b2322..2d0f078 100644
 --- a/src/feature.cpp
 +++ b/src/feature.cpp
-@@ -160,7 +160,7 @@ void featureStatsShutDown(void)
+@@ -155,7 +155,7 @@ void featureStatsShutDown(void)
   *  \param weaponClass,weaponSubClass the class and subclass of the weapon that deals the damage
   *  \return < 0 never, >= 0 always
   */
@@ -158,7 +158,7 @@ index 86b2322..2d0f078 100644
  {
  	int32_t relativeDamage;
  
-@@ -169,7 +169,7 @@ int32_t featureDamage(FEATURE *psFeature, unsigned damage, WEAPON_CLASS weaponCl
+@@ -164,7 +164,7 @@ int32_t featureDamage(FEATURE *psFeature, unsigned damage, WEAPON_CLASS weaponCl
  	debug(LOG_ATTACK, "feature (id %d): body %d armour %d damage: %d",
  	      psFeature->id, psFeature->body, psFeature->psStats->armourValue, damage);
  
@@ -184,7 +184,7 @@ diff --git a/src/projectile.cpp b/src/projectile.cpp
 index 787ec93..de2ae85 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
-@@ -114,8 +114,7 @@ static void	proj_ImpactFunc(PROJECTILE *psObj);
+@@ -112,8 +112,7 @@ static void	proj_ImpactFunc(PROJECTILE *psObj);
  static void	proj_PostImpactFunc(PROJECTILE *psObj);
  static void proj_checkPeriodicalDamage(PROJECTILE *psProj);
  
@@ -194,7 +194,7 @@ index 787ec93..de2ae85 100644
  
  static inline void setProjectileDestination(PROJECTILE *psProj, BASE_OBJECT *psObj)
  {
-@@ -1096,7 +1095,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
+@@ -1088,7 +1087,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
  		{
  			// If we did enough `damage' to capture the target
  			if (electronicDamage(psObj->psDest,
@@ -203,7 +203,7 @@ index 787ec93..de2ae85 100644
  			                     psObj->player))
  			{
  				switch (psObj->psSource->type)
-@@ -1121,7 +1120,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
+@@ -1113,7 +1112,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
  		else
  		{
  			// Calculate the damage the weapon does to its target
@@ -212,7 +212,7 @@ index 787ec93..de2ae85 100644
  
  			// If we are in a multi-player game and the attacker is our responsibility
  			if (bMultiPlayer && psObj->psSource)
-@@ -1133,8 +1132,8 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
+@@ -1125,8 +1124,8 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
  			      psObj->psDest->id, psObj->psDest->player);
  
  			// Damage the object
@@ -223,7 +223,7 @@ index 787ec93..de2ae85 100644
  
  			proj_UpdateKills(psObj, relativeDamage);
  
-@@ -1212,14 +1211,14 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
+@@ -1204,14 +1203,14 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
  				continue;  // Target out of range.
  			}
  			// The psCurr will get damaged, at this point.
@@ -241,7 +241,7 @@ index 787ec93..de2ae85 100644
  			proj_UpdateKills(psObj, relativeDamage);
  		}
  	}
-@@ -1419,7 +1418,7 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
+@@ -1411,7 +1410,7 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
  			}
  		}
  	}
@@ -250,7 +250,7 @@ index 787ec93..de2ae85 100644
  
  	int relativeDamage;
  	
-@@ -1428,7 +1427,8 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
+@@ -1420,7 +1419,8 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
  		for (std::list<BASE_OBJECT *>::iterator it = psProj->burnVictims.begin(); it != psProj->burnVictims.end(); it++)
  		{
  			psCurr = *it;
@@ -260,7 +260,7 @@ index 787ec93..de2ae85 100644
  			proj_UpdateKills(psProj, relativeDamage);
  		}
  	}
-@@ -1510,29 +1510,42 @@ static ObjectShape establishTargetShape(BASE_OBJECT *psTarget)
+@@ -1502,29 +1502,42 @@ static ObjectShape establishTargetShape(BASE_OBJECT *psTarget)
  
  /*the damage depends on the weapon effect and the target propulsion type or
  structure strength*/
@@ -320,7 +320,7 @@ index 787ec93..de2ae85 100644
  }
  
  /*
-@@ -1550,20 +1563,20 @@ UDWORD	calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *ps
+@@ -1542,20 +1555,20 @@ UDWORD	calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *ps
   *    multiplied by -1, resulting in a negative number. Killed features do not
   *    result in negative numbers.
   */
@@ -362,7 +362,7 @@ diff --git a/src/stats.cpp b/src/stats.cpp
 index f42ed99..d94aa9e 100644
 --- a/src/stats.cpp
 +++ b/src/stats.cpp
-@@ -38,6 +38,7 @@
+@@ -40,6 +40,7 @@
  #include "lib/sound/audio_id.h"
  #include "projectile.h"
  #include "text.h"
@@ -370,7 +370,7 @@ index f42ed99..d94aa9e 100644
  
  #define WEAPON_TIME		100
  
-@@ -1761,9 +1762,14 @@ int weaponRadDamage(const WEAPON_STATS *psStats, int player)
+@@ -1738,9 +1739,14 @@ int weaponRadDamage(const WEAPON_STATS *psStats, int player)
  	return psStats->upgrade[player].radiusDamage;
  }
  
@@ -404,7 +404,7 @@ diff --git a/src/structure.cpp b/src/structure.cpp
 index 7c3813c..866ddf7 100644
 --- a/src/structure.cpp
 +++ b/src/structure.cpp
-@@ -731,16 +731,17 @@ void handleAbandonedStructures()
+@@ -724,16 +724,17 @@ void handleAbandonedStructures()
   * \param weaponSubClass the subclass of the weapon that deals the damage
   * \return < 0 when the dealt damage destroys the structure, > 0 when the structure survives
   */
