@@ -2,16 +2,16 @@ diff --git a/src/action.cpp b/src/action.cpp
 index c30e920..f646629 100644
 --- a/src/action.cpp
 +++ b/src/action.cpp
-@@ -43,6 +43,8 @@
- #include "scripttabs.h"
- #include "transporter.h"
- #include "mapgrid.h"
+@@ -46,6 +46,8 @@
+ #include "order.h"
+ #include "objmem.h"
+ #include "move.h"
 +#include <math.h>
 +#include "console.h"
  
  /* attack run distance */
  #define	VTOL_ATTACK_LENGTH		1000
-@@ -179,10 +192,21 @@ bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
+@@ -182,10 +195,21 @@ bool actionInRange(DROID *psDroid, BASE_OBJECT *psObj, int weapon_slot)
  		const int minrange = psStats->upgrade[psDroid->player].minRange;
  		if (radSq >= minrange * minrange || !proj_Direct(psStats))
  		{
@@ -35,7 +35,7 @@ index c30e920..f646629 100644
  	return false;
  }
  
-@@ -895,7 +919,7 @@ void actionUpdateDroid(DROID *psDroid)
+@@ -897,7 +921,7 @@ void actionUpdateDroid(DROID *psDroid)
  					{
  						BASE_OBJECT *psActionTarget = psDroid->psActionTarget[i];
  						// is the turret aligned with the target?
@@ -48,16 +48,16 @@ diff --git a/src/ai.cpp b/src/ai.cpp
 index 1ba1806..d4487d7 100644
 --- a/src/ai.cpp
 +++ b/src/ai.cpp
-@@ -33,6 +33,8 @@
- #include "mapgrid.h"
- #include "map.h"
+@@ -36,6 +36,8 @@
  #include "projectile.h"
+ #include "objmem.h"
+ #include "order.h"
 +#include <math.h>
 +#include "console.h"
  
  /* Weights used for target selection code,
   * target distance is used as 'common currency'
-@@ -110,12 +112,37 @@ static bool aiStructHasRange(STRUCTURE *psStruct, BASE_OBJECT *psTarget, int wea
+@@ -113,12 +115,37 @@ static bool aiStructHasRange(STRUCTURE *psStruct, BASE_OBJECT *psTarget, int wea
  	WEAPON_STATS *psWStats = psStruct->asWeaps[weapon_slot].nStat + asWeaponStats;
  
  	int longRange = proj_GetLongRange(psWStats, psStruct->player);
@@ -95,7 +95,7 @@ index 1ba1806..d4487d7 100644
  
  	return objPosDiffSq(psDroid, psTarget) < longRange * longRange;
  }
-@@ -184,6 +211,9 @@ static BASE_OBJECT *aiSearchSensorTargets(BASE_OBJECT *psObj, int weapon_slot, W
+@@ -187,6 +214,9 @@ static BASE_OBJECT *aiSearchSensorTargets(BASE_OBJECT *psObj, int weapon_slot, W
  		{
  			continue;
  		}
@@ -105,7 +105,7 @@ index 1ba1806..d4487d7 100644
  		else if (psSensor->type == OBJ_DROID)
  		{
  			DROID		*psDroid = (DROID *)psSensor;
-@@ -978,6 +1009,12 @@ bool aiChooseSensorTarget(BASE_OBJECT *psObj, BASE_OBJECT **ppsTarget)
+@@ -958,6 +989,12 @@ bool aiChooseSensorTarget(BASE_OBJECT *psObj, BASE_OBJECT **ppsTarget)
  		ASSERT(false, "Only to be used for sensor turrets!");
  		return false;
  	}
@@ -118,7 +118,7 @@ index 1ba1806..d4487d7 100644
  
  	/* See if there is something in range */
  	if (psObj->type == OBJ_DROID)
-@@ -1314,3 +1351,65 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot)
+@@ -1292,3 +1329,65 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot)
  
  	return bValidTarget;
  }
@@ -188,7 +188,7 @@ diff --git a/src/ai.h b/src/ai.h
 index 7a31507..f9a6e20 100644
 --- a/src/ai.h
 +++ b/src/ai.h
-@@ -110,5 +110,6 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot);
+@@ -113,5 +113,6 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot);
  {
  	return t != NO_ALLIANCES;
  }
@@ -199,7 +199,7 @@ diff --git a/src/combat.cpp b/src/combat.cpp
 index 40c8649..41943c4 100644
 --- a/src/combat.cpp
 +++ b/src/combat.cpp
-@@ -28,6 +28,7 @@
+@@ -29,6 +29,7 @@
  #include "lib/netplay/netplay.h"
  
  #include "action.h"
@@ -207,7 +207,7 @@ index 40c8649..41943c4 100644
  #include "cluster.h"
  #include "combat.h"
  #include "difficulty.h"
-@@ -120,6 +121,13 @@ bool combFire(WEAPON *psWeap, BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, in
+@@ -122,6 +123,13 @@ bool combFire(WEAPON *psWeap, BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, in
  		return false;
  	}
  
@@ -225,15 +225,15 @@ diff --git a/src/stats.cpp b/src/stats.cpp
 index e1d813f..83fc106 100644
 --- a/src/stats.cpp
 +++ b/src/stats.cpp
-@@ -356,6 +356,7 @@ bool loadWeaponStats(const char *pWeaponData, UDWORD bufferSize)
+@@ -353,6 +353,7 @@ bool loadWeaponStats(const char *pWeaponData, UDWORD bufferSize)
+ 		flags = ini.value("flags", 0).toStringList();
  		psStats->vtolAttackRuns = ini.value("numAttackRuns", 0).toUInt();
- 		psStats->designable = ini.value("designable").toBool();
  		psStats->penetrate = ini.value("penetrate", false).toBool();
 +		psStats->targeting = ini.value("targeting", false).toBool();
  		// weapon size limitation
  		int weaponSize = ini.value("weaponSize", WEAPON_SIZE_ANY).toInt();
  		ASSERT(weaponSize <= WEAPON_SIZE_ANY, "Bad weapon size for %s", list[i].toUtf8().constData());
-@@ -869,6 +869,10 @@ bool loadSensorStats(const char *pSensorData, UDWORD bufferSize)
+@@ -856,6 +856,10 @@ bool loadSensorStats(const char *pSensorData, UDWORD bufferSize)
  		{
  			psStats->type = RADAR_DETECTOR_SENSOR;
  		}
@@ -244,7 +244,7 @@ index e1d813f..83fc106 100644
  		else
  		{
  			ASSERT(false, "Invalid Sensor type");
-@@ -2176,3 +2180,88 @@ bool objRadarDetector(const BASE_OBJECT *psObj)
+@@ -2153,3 +2157,88 @@ bool objRadarDetector(const BASE_OBJECT *psObj)
  	}
  	return false;
  }
@@ -364,7 +364,7 @@ index 6f5db23..5dabe15 100644
  };
  
  enum TRAVEL_MEDIUM
-@@ -407,6 +408,7 @@ struct WEAPON_STATS : public COMPONENT_STATS
+@@ -406,6 +407,7 @@ struct WEAPON_STATS : public COMPONENT_STATS
  	short			vtolAttackRuns;			///< number of attack runs a VTOL droid can	do with this weapon
  	bool			penetrate;				///< flag to indicate whether pentrate droid or not
  	int			distanceExtensionFactor;	///< max extra distance a projectile can travel if misses target
