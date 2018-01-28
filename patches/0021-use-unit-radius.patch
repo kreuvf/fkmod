@@ -1,0 +1,13 @@
+diff --git a/src/projectile.cpp b/src/projectile.cpp
+index 2d3ed11..217f187 100644
+--- a/src/projectile.cpp
++++ b/src/projectile.cpp
+@@ -1476,7 +1476,7 @@ static ObjectShape establishTargetShape(BASE_OBJECT *psTarget)
+ 		case DROID_CYBORG_REPAIR:
+ 		case DROID_CYBORG_SUPER:
+ 			//Watermelon:'hitbox' size is now based on imd size
+-			return abs(psTarget->sDisplay.imd->radius) * 2;
++                        return abs(psTarget->sDisplay.imd->radius);
+ 		case DROID_DEFAULT:
+ 		case DROID_TRANSPORTER:
+ 		case DROID_SUPERTRANSPORTER:
