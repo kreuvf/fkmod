@@ -2130,7 +2130,7 @@
     "FK-SF-Cannon-Cyborg": {
         "buildPoints": 1,
         "buildPower": 80,
-        "damage": 1150,
+        "damage": 1000,
         "designable": 1,
         "effectSize": 75,
         "explosionWav": "medcan.ogg",
@@ -2169,7 +2169,7 @@
     "FK-SF-Cannon-Cyborg2": {
         "buildPoints": 1,
         "buildPower": 80,
-        "damage": 1150,
+        "damage": 1000,
         "designable": 1,
         "effectSize": 75,
         "explosionWav": "medcan.ogg",
@@ -2207,7 +2207,7 @@
     "FK-SF-Cannon-Cyborg3": {
         "buildPoints": 1,
         "buildPower": 80,
-        "damage": 1150,
+        "damage": 1000,
         "designable": 1,
         "effectSize": 75,
         "explosionWav": "medcan.ogg",
@@ -2245,7 +2245,7 @@
     "FK-SF-Cannon-Structure": {
         "buildPoints": 1,
         "buildPower": 1,
-        "damage": 1050,
+        "damage": 1350,
         "effectSize": 75,
         "explosionWav": "medcan.ogg",
         "facePlayer": 1,
@@ -2283,7 +2283,7 @@
     "FK-SF-Cannon-Structure2": {
         "buildPoints": 1,
         "buildPower": 1,
-        "damage": 1050,
+        "damage": 1400,
         "effectSize": 75,
         "explosionWav": "medcan.ogg",
         "facePlayer": 1,
@@ -2321,7 +2321,7 @@
     "FK-SF-Cannon-Structure3": {
         "buildPoints": 1,
         "buildPower": 1,
-        "damage": 1050,
+        "damage": 1400,
         "effectSize": 75,
         "explosionWav": "medcan.ogg",
         "facePlayer": 1,
