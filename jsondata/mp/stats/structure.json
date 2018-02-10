@@ -1263,7 +1263,7 @@
         "buildPower": 100,
         "ecmID": "ZNULLECM",
         "height": 2,
-        "hitpoints": 15000,
+        "hitpoints": 10000,
         "id": "FKWallGate",
         "name": "Gate",
         "sensorID": "ZNULLSENSOR",
