@@ -186,7 +186,7 @@
     "FKCyborg-Cannon": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 40000,
+        "buildPoints": 50000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
@@ -201,7 +201,7 @@
     "FKCyborg-Cannon2": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 40000,
+        "buildPoints": 50000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
@@ -216,7 +216,7 @@
     "FKCyborg-Cannon3": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 40000,
+        "buildPoints": 50000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
@@ -231,7 +231,7 @@
     "FKCyborg-Engineer": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 20000,
+        "buildPoints": 30000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
@@ -246,7 +246,7 @@
     "FKCyborg-Flamethrower": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 35000,
+        "buildPoints": 45000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
@@ -261,7 +261,7 @@
     "FKCyborg-Flamethrower2": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 35000,
+        "buildPoints": 45000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
@@ -276,7 +276,7 @@
     "FKCyborg-Flamethrower3": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 35000,
+        "buildPoints": 45000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
@@ -291,7 +291,7 @@
     "FKCyborg-GrenadeLauncher": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 45000,
+        "buildPoints": 55000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
@@ -306,7 +306,7 @@
     "FKCyborg-GrenadeLauncher2": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 45000,
+        "buildPoints": 55000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
@@ -321,7 +321,7 @@
     "FKCyborg-GrenadeLauncher3": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 45000,
+        "buildPoints": 55000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
@@ -336,7 +336,7 @@
     "FKCyborg-Lancer": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 40000,
+        "buildPoints": 50000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
@@ -351,7 +351,7 @@
     "FKCyborg-Lancer2": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 40000,
+        "buildPoints": 50000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
@@ -366,7 +366,7 @@
     "FKCyborg-MG": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 35000,
+        "buildPoints": 45000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
@@ -381,7 +381,7 @@
     "FKCyborg-MG2": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 35000,
+        "buildPoints": 45000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
@@ -396,7 +396,7 @@
     "FKCyborg-MG3": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 35000,
+        "buildPoints": 45000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
@@ -411,7 +411,7 @@
     "FKCyborg-Repair": {
         "armourHeat": 100,
         "armourKinetic": 100,
-        "buildPoints": 20000,
+        "buildPoints": 30000,
         "class": "Cyborgs",
         "designable": 1,
         "hitpoints": 1200,
