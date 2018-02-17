@@ -44,6 +44,7 @@
         "id": "V-Tol",
         "model": "DPVTOL.PIE",
         "name": "VTOL",
+        "skidDeceleration": 1000,
         "speed": 1337,
         "spinSpeed": 200,
         "turnSpeed": 100,
