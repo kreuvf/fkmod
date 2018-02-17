@@ -1050,7 +1050,7 @@
         "hitpoints": 2500,
         "id": "FKRearmPad",
         "name": "Rearming Pad",
-        "rearmPoints": 10,
+        "rearmPoints": 100,
         "repairPoints": 50,
         "resistance": 150,
         "sensorID": "DefaultSensor1Mk1",
