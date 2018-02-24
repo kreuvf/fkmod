@@ -265,13 +265,13 @@
         "width": 1
     },
     "A0ResourceExtractor": {
-        "armour": 250,
+        "armour": 150,
         "breadth": 1,
         "buildPoints": 45000,
         "buildPower": 100,
         "ecmID": "ZNULLECM",
         "height": 1,
-        "hitpoints": 2500,
+        "hitpoints": 5000,
         "id": "A0ResourceExtractor",
         "name": "Oil Derrick",
         "resistance": 150,
