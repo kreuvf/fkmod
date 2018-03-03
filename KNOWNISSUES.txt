@@ -2,3 +2,8 @@ Currently, there are no known issues. Items in TODO.txt do not count.
 
 Upstream bug: Autorepair does not apply to units produced via the debug menu.
 
+Not reproducable:
+ab79eb07fa462f066d180ba638476c12d5b29e7d
+* Conditions for checking victory do not work sometimes
+* Grenade Launcher triggers CB fire when ground unit in CB range gets attacked (does not trigger when firing at structures)
+
