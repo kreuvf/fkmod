@@ -1,0 +1,82 @@
+diff --git a/src/projectile.cpp b/src/projectile.cpp
+index 217f187..327be8c 100644
+--- a/src/projectile.cpp
++++ b/src/projectile.cpp
+@@ -1361,7 +1361,14 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
+ 	}
+ 
+ 	static GridList gridList;  // static to avoid allocations.
+-	gridList = gridStartIterate(psProj->pos.x, psProj->pos.y, psStats->upgrade[psProj->player].periodicalDamageRadius);
++	/*
++		HACK
++		Problem: 3x3 buildings can only be hit by burn damage if the radius touches the centre of the structure
++		Solution: Include more targets in the gridList by raising the fire radius by the maximum distance from the corner of a building to its centre		
++	*/
++	gridList = gridStartIterate(psProj->pos.x,
++	                            psProj->pos.y,
++	                            psStats->upgrade[psProj->player].periodicalDamageRadius + 2.2 * TILE_UNITS);
+ 	for (GridIterator gi = gridList.begin(); gi != gridList.end(); ++gi)
+ 	{
+ 		psCurr = *gi;
+@@ -1387,6 +1394,61 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
+ 			continue;  // Can't destroy oil wells.
+ 		}
+ 
++		if (psCurr->type == OBJ_DROID)
++		{
++			/* Distance between projectile centre and unit centre must <= burn radius + hitbox radius */
++			int squareDistance =
++				(psProj->pos.x - psCurr->pos.x) * (psProj->pos.x - psCurr->pos.x)
++				+ (psProj->pos.y - psCurr->pos.y) * (psProj->pos.y - psCurr->pos.y);
++			int squareRadii =
++				(establishTargetShape(psCurr).radius() + psStats->upgrade[psProj->player].periodicalDamageRadius)
++				* (establishTargetShape(psCurr).radius() + psStats->upgrade[psProj->player].periodicalDamageRadius);
++			if (squareDistance > squareRadii)
++			{
++				continue;
++			}
++			/*debug(LOG_WZ, "Proj x,y,r: %i,%i,%i  Target x,y,r: %i,%i,%i",
++				psProj->pos.x,
++				psProj->pos.y,
++				psStats->upgrade[psProj->player].periodicalDamageRadius,
++				psCurr->pos.x,
++				psCurr->pos.y,
++				establishTargetShape(psCurr).radius());
++			debug(LOG_WZ, "Distance²: %i  Radius sum²: %i", (psProj->pos.x - psCurr->pos.x) * (psProj->pos.x - psCurr->pos.x) + (psProj->pos.y - psCurr->pos.y) * (psProj->pos.y - psCurr->pos.y), (establishTargetShape(psCurr).radius() + psStats->upgrade[psProj->player].periodicalDamageRadius) * (establishTargetShape(psCurr).radius() + psStats->upgrade[psProj->player].periodicalDamageRadius));*/			
++		}
++		
++		if (psCurr->type == OBJ_STRUCTURE)
++		{
++			ObjectShape hitbox = establishTargetShape(psCurr);
++			Vector2i circle, rect, distance;
++			int32_t width, height, radius, cornerDistance_sq;
++			width = hitbox.size.x;
++			height = hitbox.size.y;
++			radius = psStats->upgrade[psProj->player].periodicalDamageRadius;
++			circle.x = psProj->pos.x;
++			circle.y = psProj->pos.y;
++			rect.x = psCurr->pos.x;
++			rect.y = psCurr->pos.y;
++			distance.x = abs(circle.x - rect.x);
++			distance.y = abs(circle.y - rect.y);
++			//debug(LOG_WZ, "Proj: %i,%i Target: %i, %i Width %i Height %i Radius %i ", circle.x, circle.y, rect.x, rect.y, width, height, radius);
++
++			bool intersects;
++			if (distance.x > (width + radius) || distance.y > (height + radius)) {
++				intersects = false;
++			} else	if (distance.x <= (width) || distance.y <= (height)) {
++				intersects = true;
++			} else {
++				cornerDistance_sq = (distance.x - width)*(distance.x - width) +
++									(distance.y - height)*(distance.y - height/2);
++
++				intersects = cornerDistance_sq <= (radius *radius);
++			}
++			//debug(LOG_WZ, "Intersects: %s", intersects?"true":"false");
++
++			if (!intersects) continue;
++		}
++
+ 		if (psCurr->periodicalDamageStart != gameTime)
+ 		{
+ 			psCurr->periodicalDamageStart = gameTime;
