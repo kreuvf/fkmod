@@ -1,5 +1,5 @@
 diff --git a/src/projectile.cpp b/src/projectile.cpp
-index 217f187..327be8c 100644
+index 217f187..7fa9786 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
 @@ -1361,7 +1361,14 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
@@ -10,7 +10,7 @@ index 217f187..327be8c 100644
 +	/*
 +		HACK
 +		Problem: 3x3 buildings can only be hit by burn damage if the radius touches the centre of the structure
-+		Solution: Include more targets in the gridList by raising the fire radius by the maximum distance from the corner of a building to its centre		
++		Solution: Include more targets in the gridList by raising the fire radius by the maximum distance from the corner of a building to its centre
 +	*/
 +	gridList = gridStartIterate(psProj->pos.x,
 +	                            psProj->pos.y,
@@ -42,9 +42,9 @@ index 217f187..327be8c 100644
 +				psCurr->pos.x,
 +				psCurr->pos.y,
 +				establishTargetShape(psCurr).radius());
-+			debug(LOG_WZ, "Distance²: %i  Radius sum²: %i", (psProj->pos.x - psCurr->pos.x) * (psProj->pos.x - psCurr->pos.x) + (psProj->pos.y - psCurr->pos.y) * (psProj->pos.y - psCurr->pos.y), (establishTargetShape(psCurr).radius() + psStats->upgrade[psProj->player].periodicalDamageRadius) * (establishTargetShape(psCurr).radius() + psStats->upgrade[psProj->player].periodicalDamageRadius));*/			
++			debug(LOG_WZ, "Distance²: %i  Radius sum²: %i", (psProj->pos.x - psCurr->pos.x) * (psProj->pos.x - psCurr->pos.x) + (psProj->pos.y - psCurr->pos.y) * (psProj->pos.y - psCurr->pos.y), (establishTargetShape(psCurr).radius() + psStats->upgrade[psProj->player].periodicalDamageRadius) * (establishTargetShape(psCurr).radius() + psStats->upgrade[psProj->player].periodicalDamageRadius));*/
 +		}
-+		
++
 +		if (psCurr->type == OBJ_STRUCTURE)
 +		{
 +			ObjectShape hitbox = establishTargetShape(psCurr);
@@ -67,12 +67,12 @@ index 217f187..327be8c 100644
 +			} else	if (distance.x <= (width) || distance.y <= (height)) {
 +				intersects = true;
 +			} else {
-+				cornerDistance_sq = (distance.x - width)*(distance.x - width) +
-+									(distance.y - height)*(distance.y - height/2);
++				cornerDistance_sq = (distance.x - width)  * (distance.x - width) +
++				                    (distance.y - height) * (distance.y - height/2);
 +
-+				intersects = cornerDistance_sq <= (radius *radius);
++				intersects = cornerDistance_sq <= (radius * radius);
 +			}
-+			//debug(LOG_WZ, "Intersects: %s", intersects?"true":"false");
++			//debug(LOG_WZ, "Intersects: %s", intersects ? "true" : "false");
 +
 +			if (!intersects) continue;
 +		}
