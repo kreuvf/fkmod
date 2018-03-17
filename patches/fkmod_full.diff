@@ -1,17 +1,17 @@
 diff --git a/src/action.cpp b/src/action.cpp
-index ca55e48..295f209 100644
+index 0af50c0..6fae9ab 100644
 --- a/src/action.cpp
 +++ b/src/action.cpp
-@@ -43,6 +43,8 @@
- #include "scripttabs.h"
- #include "transporter.h"
- #include "mapgrid.h"
+@@ -46,6 +46,8 @@
+ #include "order.h"
+ #include "objmem.h"
+ #include "move.h"
 +#include <math.h>
 +#include "console.h"
  
  /* attack run distance */
  #define	VTOL_ATTACK_LENGTH		1000
-@@ -179,10 +181,21 @@ bool actionInRange(const DROID *psDroid, const BASE_OBJECT *psObj, int weapon_sl
+@@ -182,10 +184,21 @@ bool actionInRange(const DROID *psDroid, const BASE_OBJECT *psObj, int weapon_sl
  		const int minrange = psStats->upgrade[psDroid->player].minRange;
  		if (radSq >= minrange * minrange || !proj_Direct(psStats))
  		{
@@ -35,7 +35,7 @@ index ca55e48..295f209 100644
  	return false;
  }
  
-@@ -895,7 +908,7 @@ void actionUpdateDroid(DROID *psDroid)
+@@ -897,7 +910,7 @@ void actionUpdateDroid(DROID *psDroid)
  					{
  						BASE_OBJECT *psActionTarget = psDroid->psActionTarget[i];
  						// is the turret aligned with the target?
@@ -45,19 +45,19 @@ index ca55e48..295f209 100644
  							// In range - fire !!!
  							combFire(&psDroid->asWeaps[i], psDroid, psActionTarget, i);
 diff --git a/src/ai.cpp b/src/ai.cpp
-index f4e57b7..a871fd2 100644
+index 54dc7c7..04475ed 100644
 --- a/src/ai.cpp
 +++ b/src/ai.cpp
-@@ -33,6 +33,8 @@
- #include "mapgrid.h"
- #include "map.h"
+@@ -36,6 +36,8 @@
  #include "projectile.h"
+ #include "objmem.h"
+ #include "order.h"
 +#include <math.h>
 +#include "console.h"
  
  /* Weights used for target selection code,
   * target distance is used as 'common currency'
-@@ -110,12 +112,37 @@ static bool aiStructHasRange(STRUCTURE *psStruct, BASE_OBJECT *psTarget, int wea
+@@ -113,12 +115,37 @@ static bool aiStructHasRange(STRUCTURE *psStruct, BASE_OBJECT *psTarget, int wea
  	WEAPON_STATS *psWStats = psStruct->asWeaps[weapon_slot].nStat + asWeaponStats;
  
  	int longRange = proj_GetLongRange(psWStats, psStruct->player);
@@ -95,7 +95,7 @@ index f4e57b7..a871fd2 100644
  
  	return objPosDiffSq(psDroid, psTarget) < longRange * longRange;
  }
-@@ -184,6 +211,9 @@ static BASE_OBJECT *aiSearchSensorTargets(BASE_OBJECT *psObj, int weapon_slot, W
+@@ -187,6 +214,9 @@ static BASE_OBJECT *aiSearchSensorTargets(BASE_OBJECT *psObj, int weapon_slot, W
  		{
  			continue;
  		}
@@ -105,7 +105,7 @@ index f4e57b7..a871fd2 100644
  		else if (psSensor->type == OBJ_DROID)
  		{
  			DROID		*psDroid = (DROID *)psSensor;
-@@ -978,6 +1008,12 @@ bool aiChooseSensorTarget(BASE_OBJECT *psObj, BASE_OBJECT **ppsTarget)
+@@ -958,6 +988,12 @@ bool aiChooseSensorTarget(BASE_OBJECT *psObj, BASE_OBJECT **ppsTarget)
  		ASSERT(false, "Only to be used for sensor turrets!");
  		return false;
  	}
@@ -118,7 +118,7 @@ index f4e57b7..a871fd2 100644
  
  	/* See if there is something in range */
  	if (psObj->type == OBJ_DROID)
-@@ -1314,3 +1350,65 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot)
+@@ -1292,3 +1328,65 @@ bool validTarget(BASE_OBJECT *psObject, BASE_OBJECT *psTarget, int weapon_slot)
  
  	return bValidTarget;
  }
@@ -185,10 +185,10 @@ index f4e57b7..a871fd2 100644
 +
 +}
 diff --git a/src/ai.h b/src/ai.h
-index 67e7939..d9f9f00 100644
+index d668825..0a201c6 100644
 --- a/src/ai.h
 +++ b/src/ai.h
-@@ -110,5 +110,6 @@ static inline bool alliancesCanGiveAnything(int t)
+@@ -113,5 +113,6 @@ static inline bool alliancesCanGiveAnything(int t)
  {
  	return t != NO_ALLIANCES;
  }
@@ -196,10 +196,10 @@ index 67e7939..d9f9f00 100644
  
  #endif // __INCLUDED_SRC_AI_H__
 diff --git a/src/combat.cpp b/src/combat.cpp
-index 83e29e7..396e78d 100644
+index df5b98a..7b59e28 100644
 --- a/src/combat.cpp
 +++ b/src/combat.cpp
-@@ -28,6 +28,7 @@
+@@ -29,6 +29,7 @@
  #include "lib/netplay/netplay.h"
  
  #include "action.h"
@@ -207,7 +207,7 @@ index 83e29e7..396e78d 100644
  #include "cluster.h"
  #include "combat.h"
  #include "difficulty.h"
-@@ -120,6 +121,13 @@ bool combFire(WEAPON *psWeap, BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, in
+@@ -122,6 +123,13 @@ bool combFire(WEAPON *psWeap, BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, in
  		return false;
  	}
  
@@ -221,7 +221,7 @@ index 83e29e7..396e78d 100644
  	Vector3i deltaPos = psTarget->pos - psAttacker->pos;
  
  	// if the turret doesn't turn, check if the attacker is in alignment with the target
-@@ -365,13 +373,14 @@ int objArmour(BASE_OBJECT *psObj, WEAPON_CLASS weaponClass)
+@@ -367,13 +375,14 @@ int objArmour(BASE_OBJECT *psObj, WEAPON_CLASS weaponClass)
  /* Deals damage to an object
   * \param psObj object to deal damage to
   * \param damage amount of damage to deal
@@ -240,7 +240,7 @@ index 83e29e7..396e78d 100644
  	int armour = objArmour(psObj, weaponClass);
  
  	// If the previous hit was by an EMP cannon and this one is not:
-@@ -416,21 +425,12 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+@@ -418,21 +427,12 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
  	// Reduce damage taken by EXP_REDUCE_DAMAGE % for each experience level
  	actualDamage = (damage * (100 - EXP_REDUCE_DAMAGE * level)) / 100;
  
@@ -263,7 +263,7 @@ index 83e29e7..396e78d 100644
  	}
  
  	objTrace(psObj->id, "objDamage: Penetrated %d", actualDamage);
-@@ -458,23 +458,21 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
+@@ -460,23 +460,21 @@ int32_t objDamage(BASE_OBJECT *psObj, unsigned damage, unsigned originalhp, WEAP
  }
  
  /* Guesses how damage a shot might do.
@@ -292,7 +292,7 @@ index 83e29e7..396e78d 100644
  
  	// EMP cannons do no damage, if we are one return now
  	if (psStats->weaponSubClass == WSC_EMP)
-@@ -484,8 +482,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
+@@ -486,8 +484,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
  
  	// apply game difficulty setting
  	damage = modifyForDifficultyLevel(damage, psTarget->player != selectedPlayer);
@@ -301,7 +301,7 @@ index 83e29e7..396e78d 100644
  	if (psTarget->type == OBJ_DROID)
  	{
  		DROID *psDroid = (DROID *)psTarget;
-@@ -498,9 +494,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
+@@ -500,9 +496,6 @@ unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BA
  	// Reduce damage taken by EXP_REDUCE_DAMAGE % for each experience level
  	actualDamage = (damage * (100 - EXP_REDUCE_DAMAGE * level)) / 100;
  
@@ -325,10 +325,10 @@ index 9dc51bc..9ad28d6 100644
  unsigned int objGuessFutureDamage(WEAPON_STATS *psStats, unsigned int player, BASE_OBJECT *psTarget);
  
 diff --git a/src/component.cpp b/src/component.cpp
-index 1a465a2..32dd183 100644
+index cb067cb..13e3af6 100644
 --- a/src/component.cpp
 +++ b/src/component.cpp
-@@ -119,6 +119,9 @@ UDWORD getComponentRadius(BASE_STATS *psComponent)
+@@ -109,6 +109,9 @@ UDWORD getComponentRadius(BASE_STATS *psComponent)
  	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
  	if (StatIsComponent(psComponent) != COMP_WEAPON
  	    || (((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_BOMB
@@ -338,7 +338,7 @@ index 1a465a2..32dd183 100644
  	        && ((WEAPON_STATS *)psComponent)->weaponSubClass != WSC_EMP))
  	{
  		ASSERT(ComponentIMD, "No ComponentIMD!");
-@@ -294,6 +297,9 @@ void displayComponentButton(BASE_STATS *Stat, const Vector3i *Rotation, const Ve
+@@ -278,6 +281,9 @@ void displayComponentButton(BASE_STATS *Stat, const Vector3i *Rotation, const Ve
  	/* VTOL bombs are only stats allowed to have NULL ComponentIMD */
  	if (StatIsComponent(Stat) != COMP_WEAPON
  	    || (((WEAPON_STATS *)Stat)->weaponSubClass != WSC_BOMB
@@ -349,10 +349,10 @@ index 1a465a2..32dd183 100644
  	{
  		ASSERT(ComponentIMD, "No ComponentIMD");
 diff --git a/src/droid.cpp b/src/droid.cpp
-index 359bdcb..2814444 100644
+index cc59c49..1880fb3 100644
 --- a/src/droid.cpp
 +++ b/src/droid.cpp
-@@ -209,26 +209,23 @@ int droidReloadBar(BASE_OBJECT *psObj, WEAPON *psWeap, int weapon_slot)
+@@ -202,26 +202,23 @@ int droidReloadBar(BASE_OBJECT *psObj, WEAPON *psWeap, int weapon_slot)
  /* Deals damage to a droid
   * \param psDroid droid to deal damage to
   * \param damage amount of damage to deal
@@ -384,7 +384,7 @@ index 359bdcb..2814444 100644
  
  	if (relativeDamage > 0)
  	{
-@@ -885,28 +882,11 @@ void droidUpdate(DROID *psDroid)
+@@ -801,28 +798,11 @@ void droidUpdate(DROID *psDroid)
  	// -----------------
  
  	// See if we can and need to self repair.
@@ -414,7 +414,7 @@ index 359bdcb..2814444 100644
  	// At this point, the droid may be dead due to periodical damage or hardcoded burn damage.
  	if (isDead((BASE_OBJECT *)psDroid))
  	{
-@@ -1253,7 +1233,7 @@ bool droidUpdateRestore(DROID *psDroid)
+@@ -1167,7 +1147,7 @@ bool droidUpdateRestore(DROID *psDroid)
  	ASSERT_OR_RETURN(false, psStats->weaponSubClass == WSC_ELECTRONIC, "unit's weapon is not EW");
  
  	restorePoints = calcDamage(weaponDamage(psStats, psDroid->player),
@@ -424,7 +424,7 @@ index 359bdcb..2814444 100644
  	pointsToAdd = restorePoints * (gameTime - psDroid->actionStarted) /
  	              GAME_TICKS_PER_SEC;
 diff --git a/src/droid.h b/src/droid.h
-index d4c339a..cecd152 100644
+index ce41168..06cfd88 100644
 --- a/src/droid.h
 +++ b/src/droid.h
 @@ -110,7 +110,7 @@ extern UDWORD	calcTemplatePower(DROID_TEMPLATE *psTemplate);
@@ -437,10 +437,10 @@ index d4c339a..cecd152 100644
  /* The main update routine for all droids */
  extern void droidUpdate(DROID *psDroid);
 diff --git a/src/feature.cpp b/src/feature.cpp
-index 86b2322..2d0f078 100644
+index 7b5b81c..9d22eac 100644
 --- a/src/feature.cpp
 +++ b/src/feature.cpp
-@@ -160,7 +160,7 @@ void featureStatsShutDown(void)
+@@ -155,7 +155,7 @@ void featureStatsShutDown(void)
   *  \param weaponClass,weaponSubClass the class and subclass of the weapon that deals the damage
   *  \return < 0 never, >= 0 always
   */
@@ -449,7 +449,7 @@ index 86b2322..2d0f078 100644
  {
  	int32_t relativeDamage;
  
-@@ -169,7 +169,7 @@ int32_t featureDamage(FEATURE *psFeature, unsigned damage, WEAPON_CLASS weaponCl
+@@ -164,7 +164,7 @@ int32_t featureDamage(FEATURE *psFeature, unsigned damage, WEAPON_CLASS weaponCl
  	debug(LOG_ATTACK, "feature (id %d): body %d armour %d damage: %d",
  	      psFeature->id, psFeature->body, psFeature->psStats->armourValue, damage);
  
@@ -472,10 +472,10 @@ index 9818eda..ef7071a 100644
  extern void     featureInitVars(void);
  
 diff --git a/src/move.cpp b/src/move.cpp
-index 621d03b..cd5491a 100644
+index 27def0e..b08a3e1 100644
 --- a/src/move.cpp
 +++ b/src/move.cpp
-@@ -61,9 +61,9 @@
+@@ -57,9 +57,9 @@
  #include "qtscript.h"
  
  /* max and min vtol heights above terrain */
@@ -550,10 +550,10 @@ index ee3e6d6..24d6ec7 100644
  		pWSC = "UNKNOWN SUB CLASS";
  		break;
 diff --git a/src/projectile.cpp b/src/projectile.cpp
-index 1d38191..3464e75 100644
+index 024148f..7fa9786 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
-@@ -114,8 +114,7 @@ static void	proj_ImpactFunc(PROJECTILE *psObj);
+@@ -112,8 +112,7 @@ static void	proj_ImpactFunc(PROJECTILE *psObj);
  static void	proj_PostImpactFunc(PROJECTILE *psObj);
  static void proj_checkPeriodicalDamage(PROJECTILE *psProj);
  
@@ -563,7 +563,7 @@ index 1d38191..3464e75 100644
  
  static inline void setProjectileDestination(PROJECTILE *psProj, BASE_OBJECT *psObj)
  {
-@@ -556,7 +555,8 @@ bool proj_SendProjectileAngled(WEAPON *psWeap, SIMPLE_OBJECT *psAttacker, int pl
+@@ -552,7 +551,8 @@ bool proj_SendProjectileAngled(WEAPON *psWeap, SIMPLE_OBJECT *psAttacker, int pl
  				/* firing sound emitted from source */
  				audio_PlayObjDynamicTrack(psProj->psSource, psStats->iAudioFireID, NULL);
  				/* GJ HACK: move howitzer sound with shell */
@@ -573,7 +573,7 @@ index 1d38191..3464e75 100644
  				{
  					audio_PlayObjDynamicTrack(psProj, ID_SOUND_HOWITZ_FLIGHT, NULL);
  				}
-@@ -1095,7 +1095,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
+@@ -1087,7 +1087,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
  		{
  			// If we did enough `damage' to capture the target
  			if (electronicDamage(psObj->psDest,
@@ -582,7 +582,7 @@ index 1d38191..3464e75 100644
  			                     psObj->player))
  			{
  				switch (psObj->psSource->type)
-@@ -1120,7 +1120,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
+@@ -1112,7 +1112,7 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
  		else
  		{
  			// Calculate the damage the weapon does to its target
@@ -591,7 +591,7 @@ index 1d38191..3464e75 100644
  
  			// If we are in a multi-player game and the attacker is our responsibility
  			if (bMultiPlayer && psObj->psSource)
-@@ -1132,8 +1132,8 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
+@@ -1124,8 +1124,8 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
  			      psObj->psDest->id, psObj->psDest->player);
  
  			// Damage the object
@@ -602,7 +602,7 @@ index 1d38191..3464e75 100644
  
  			proj_UpdateKills(psObj, relativeDamage);
  
-@@ -1211,14 +1211,14 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
+@@ -1203,14 +1203,14 @@ static void proj_ImpactFunc(PROJECTILE *psObj)
  				continue;  // Target out of range.
  			}
  			// The psCurr will get damaged, at this point.
@@ -620,7 +620,7 @@ index 1d38191..3464e75 100644
  			proj_UpdateKills(psObj, relativeDamage);
  		}
  	}
-@@ -1247,7 +1247,7 @@ static void proj_PostImpactFunc(PROJECTILE *psObj)
+@@ -1239,7 +1239,7 @@ static void proj_PostImpactFunc(PROJECTILE *psObj)
  	int age = gameTime - psObj->born;
  
  	/* Time to finish postimpact effect? */
@@ -629,7 +629,7 @@ index 1d38191..3464e75 100644
  	{
  		psObj->state = PROJ_INACTIVE;
  		return;
-@@ -1316,6 +1316,13 @@ void PROJECTILE::update()
+@@ -1308,6 +1308,13 @@ void PROJECTILE::update()
  
  	case PROJ_INACTIVE:
  		psObj->died = psObj->time;
@@ -643,7 +643,7 @@ index 1d38191..3464e75 100644
  		break;
  	}
  
-@@ -1347,11 +1354,25 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
+@@ -1339,11 +1346,32 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
  
  	WEAPON_STATS *psStats = psProj->psWStats;
  
@@ -662,7 +662,15 @@ index 1d38191..3464e75 100644
 +	}
 +
  	static GridList gridList;  // static to avoid allocations.
- 	gridList = gridStartIterate(psProj->pos.x, psProj->pos.y, psStats->upgrade[psProj->player].periodicalDamageRadius);
+-	gridList = gridStartIterate(psProj->pos.x, psProj->pos.y, psStats->upgrade[psProj->player].periodicalDamageRadius);
++	/*
++		HACK
++		Problem: 3x3 buildings can only be hit by burn damage if the radius touches the centre of the structure
++		Solution: Include more targets in the gridList by raising the fire radius by the maximum distance from the corner of a building to its centre
++	*/
++	gridList = gridStartIterate(psProj->pos.x,
++	                            psProj->pos.y,
++	                            psStats->upgrade[psProj->player].periodicalDamageRadius + 2.2 * TILE_UNITS);
  	for (GridIterator gi = gridList.begin(); gi != gridList.end(); ++gi)
  	{
 -		BASE_OBJECT *psCurr = *gi;
@@ -670,7 +678,67 @@ index 1d38191..3464e75 100644
  		if (psCurr->died)
  		{
  			continue;  // Do not damage dead objects further.
-@@ -1379,13 +1400,36 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
+@@ -1366,18 +1394,96 @@ static void proj_checkPeriodicalDamage(PROJECTILE *psProj)
+ 			continue;  // Can't destroy oil wells.
+ 		}
+ 
++		if (psCurr->type == OBJ_DROID)
++		{
++			/* Distance between projectile centre and unit centre must <= burn radius + hitbox radius */
++			int squareDistance =
++				(psProj->pos.x - psCurr->pos.x) * (psProj->pos.x - psCurr->pos.x)
++				+ (psProj->pos.y - psCurr->pos.y) * (psProj->pos.y - psCurr->pos.y);
++			int squareRadii =
++				(establishTargetShape(psCurr).radius() + psStats->upgrade[psProj->player].periodicalDamageRadius)
++				* (establishTargetShape(psCurr).radius() + psStats->upgrade[psProj->player].periodicalDamageRadius);
++			if (squareDistance > squareRadii)
++			{
++				continue;
++			}
++			/*debug(LOG_WZ, "Proj x,y,r: %i,%i,%i  Target x,y,r: %i,%i,%i",
++				psProj->pos.x,
++				psProj->pos.y,
++				psStats->upgrade[psProj->player].periodicalDamageRadius,
++				psCurr->pos.x,
++				psCurr->pos.y,
++				establishTargetShape(psCurr).radius());
++			debug(LOG_WZ, "Distance²: %i  Radius sum²: %i", (psProj->pos.x - psCurr->pos.x) * (psProj->pos.x - psCurr->pos.x) + (psProj->pos.y - psCurr->pos.y) * (psProj->pos.y - psCurr->pos.y), (establishTargetShape(psCurr).radius() + psStats->upgrade[psProj->player].periodicalDamageRadius) * (establishTargetShape(psCurr).radius() + psStats->upgrade[psProj->player].periodicalDamageRadius));*/
++		}
++
++		if (psCurr->type == OBJ_STRUCTURE)
++		{
++			ObjectShape hitbox = establishTargetShape(psCurr);
++			Vector2i circle, rect, distance;
++			int32_t width, height, radius, cornerDistance_sq;
++			width = hitbox.size.x;
++			height = hitbox.size.y;
++			radius = psStats->upgrade[psProj->player].periodicalDamageRadius;
++			circle.x = psProj->pos.x;
++			circle.y = psProj->pos.y;
++			rect.x = psCurr->pos.x;
++			rect.y = psCurr->pos.y;
++			distance.x = abs(circle.x - rect.x);
++			distance.y = abs(circle.y - rect.y);
++			//debug(LOG_WZ, "Proj: %i,%i Target: %i, %i Width %i Height %i Radius %i ", circle.x, circle.y, rect.x, rect.y, width, height, radius);
++
++			bool intersects;
++			if (distance.x > (width + radius) || distance.y > (height + radius)) {
++				intersects = false;
++			} else	if (distance.x <= (width) || distance.y <= (height)) {
++				intersects = true;
++			} else {
++				cornerDistance_sq = (distance.x - width)  * (distance.x - width) +
++				                    (distance.y - height) * (distance.y - height/2);
++
++				intersects = cornerDistance_sq <= (radius * radius);
++			}
++			//debug(LOG_WZ, "Intersects: %s", intersects ? "true" : "false");
++
++			if (!intersects) continue;
++		}
++
+ 		if (psCurr->periodicalDamageStart != gameTime)
+ 		{
  			psCurr->periodicalDamageStart = gameTime;
  			psCurr->periodicalDamage = 0;  // Reset periodical damage done this tick.
  		}
@@ -713,7 +781,16 @@ index 1d38191..3464e75 100644
  	}
  }
  
-@@ -1465,29 +1509,42 @@ static ObjectShape establishTargetShape(BASE_OBJECT *psTarget)
+@@ -1432,7 +1538,7 @@ static ObjectShape establishTargetShape(BASE_OBJECT *psTarget)
+ 		case DROID_CYBORG_REPAIR:
+ 		case DROID_CYBORG_SUPER:
+ 			//Watermelon:'hitbox' size is now based on imd size
+-			return abs(psTarget->sDisplay.imd->radius) * 2;
++                        return abs(psTarget->sDisplay.imd->radius);
+ 		case DROID_DEFAULT:
+ 		case DROID_TRANSPORTER:
+ 		case DROID_SUPERTRANSPORTER:
+@@ -1457,29 +1563,42 @@ static ObjectShape establishTargetShape(BASE_OBJECT *psTarget)
  
  /*the damage depends on the weapon effect and the target propulsion type or
  structure strength*/
@@ -773,7 +850,7 @@ index 1d38191..3464e75 100644
  }
  
  /*
-@@ -1505,20 +1562,20 @@ UDWORD	calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *ps
+@@ -1497,20 +1616,20 @@ UDWORD	calcDamage(UDWORD baseDamage, WEAPON_EFFECT weaponEffect, BASE_OBJECT *ps
   *    multiplied by -1, resulting in a negative number. Killed features do not
   *    result in negative numbers.
   */
@@ -799,7 +876,7 @@ index 1d38191..3464e75 100644
  
  	case OBJ_PROJECTILE:
 diff --git a/src/projectile.h b/src/projectile.h
-index 3a04ff9..4e12894 100644
+index d2d9975..636375c 100644
 --- a/src/projectile.h
 +++ b/src/projectile.h
 @@ -38,9 +38,6 @@ extern	BASE_OBJECT	*g_pProjLastAttacker;	///< The last unit that did damage - us
@@ -842,10 +919,10 @@ index d2a9477..61dbece 100644
  	Vector3i        src;                    ///< Where projectile started
  	Vector3i        dst;                    ///< The target coordinates
 diff --git a/src/stats.cpp b/src/stats.cpp
-index ec3412f..d94aa9e 100644
+index 02cd789..1d4cb4b 100644
 --- a/src/stats.cpp
 +++ b/src/stats.cpp
-@@ -38,6 +38,7 @@
+@@ -40,6 +40,7 @@
  #include "lib/sound/audio_id.h"
  #include "projectile.h"
  #include "text.h"
@@ -853,15 +930,15 @@ index ec3412f..d94aa9e 100644
  
  #define WEAPON_TIME		100
  
-@@ -356,6 +357,7 @@ bool loadWeaponStats(const char *pFileName)
+@@ -353,6 +354,7 @@ bool loadWeaponStats(const char *pFileName)
+ 		flags = ini.value("flags", 0).toStringList();
  		psStats->vtolAttackRuns = ini.value("numAttackRuns", 0).toUInt();
- 		psStats->designable = ini.value("designable").toBool();
  		psStats->penetrate = ini.value("penetrate", false).toBool();
 +		psStats->targeting = ini.value("targeting", false).toBool();
  		// weapon size limitation
  		int weaponSize = ini.value("weaponSize", WEAPON_SIZE_ANY).toInt();
  		ASSERT(weaponSize <= WEAPON_SIZE_ANY, "Bad weapon size for %s", list[i].toUtf8().constData());
-@@ -397,7 +399,7 @@ bool loadWeaponStats(const char *pFileName)
+@@ -394,7 +396,7 @@ bool loadWeaponStats(const char *pFileName)
  		{
  			psStats->distanceExtensionFactor = 120;
  		}
@@ -870,7 +947,7 @@ index ec3412f..d94aa9e 100644
  		{
  			psStats->distanceExtensionFactor = 100;
  		}
-@@ -869,6 +871,10 @@ bool loadSensorStats(const char *pFileName)
+@@ -856,6 +858,10 @@ bool loadSensorStats(const char *pFileName)
  		{
  			psStats->type = RADAR_DETECTOR_SENSOR;
  		}
@@ -881,7 +958,7 @@ index ec3412f..d94aa9e 100644
  		else
  		{
  			ASSERT(false, "Invalid Sensor type");
-@@ -1517,6 +1523,71 @@ bool getWeaponSubClass(const char *subClass, WEAPON_SUBCLASS *wclass)
+@@ -1494,6 +1500,71 @@ bool getWeaponSubClass(const char *subClass, WEAPON_SUBCLASS *wclass)
  	{
  		*wclass = WSC_EMP;
  	}
@@ -953,7 +1030,7 @@ index ec3412f..d94aa9e 100644
  	else
  	{
  		ASSERT(!"Invalid weapon sub class", "Invalid weapon sub class: %s", subClass);
-@@ -1548,6 +1619,22 @@ const char *getWeaponSubClass(WEAPON_SUBCLASS wclass)
+@@ -1525,6 +1596,22 @@ const char *getWeaponSubClass(WEAPON_SUBCLASS wclass)
  	case WSC_BOMB: return "BOMB";
  	case WSC_COMMAND: return "COMMAND";
  	case WSC_EMP: return "EMP";
@@ -976,7 +1053,7 @@ index ec3412f..d94aa9e 100644
  	case WSC_NUM_WEAPON_SUBCLASSES: break;
  	}
  	ASSERT(false, "No such weapon subclass");
-@@ -1675,9 +1762,14 @@ int weaponRadDamage(const WEAPON_STATS *psStats, int player)
+@@ -1652,9 +1739,14 @@ int weaponRadDamage(const WEAPON_STATS *psStats, int player)
  	return psStats->upgrade[player].radiusDamage;
  }
  
@@ -993,7 +1070,7 @@ index ec3412f..d94aa9e 100644
  }
  
  int sensorRange(const SENSOR_STATS *psStats, int player)
-@@ -2095,3 +2187,88 @@ bool objRadarDetector(const BASE_OBJECT *psObj)
+@@ -2072,3 +2164,88 @@ bool objRadarDetector(const BASE_OBJECT *psObj)
  	}
  	return false;
  }
@@ -1111,7 +1188,7 @@ index 789804b..cd39c8f 100644
 +
  #endif // __INCLUDED_SRC_STATS_H__
 diff --git a/src/statsdef.h b/src/statsdef.h
-index 922f2ac..24b30c4 100644
+index 4027ec9..e0dccf9 100644
 --- a/src/statsdef.h
 +++ b/src/statsdef.h
 @@ -169,6 +169,23 @@ enum WEAPON_SUBCLASS
@@ -1146,7 +1223,7 @@ index 922f2ac..24b30c4 100644
  };
  
  enum TRAVEL_MEDIUM
-@@ -390,6 +408,7 @@ struct WEAPON_STATS : public COMPONENT_STATS
+@@ -389,6 +407,7 @@ struct WEAPON_STATS : public COMPONENT_STATS
  	short			vtolAttackRuns;			///< number of attack runs a VTOL droid can	do with this weapon
  	bool			penetrate;				///< flag to indicate whether pentrate droid or not
  	int			distanceExtensionFactor;	///< max extra distance a projectile can travel if misses target
@@ -1155,10 +1232,10 @@ index 922f2ac..24b30c4 100644
  	/* Graphics control stats */
  	UDWORD			radiusLife;				///< How long a blast radius is visible
 diff --git a/src/structure.cpp b/src/structure.cpp
-index 7c3813c..866ddf7 100644
+index 4092a3f..96fca2c 100644
 --- a/src/structure.cpp
 +++ b/src/structure.cpp
-@@ -731,16 +731,17 @@ void handleAbandonedStructures()
+@@ -724,16 +724,17 @@ void handleAbandonedStructures()
   * \param weaponSubClass the subclass of the weapon that deals the damage
   * \return < 0 when the dealt damage destroys the structure, > 0 when the structure survives
   */
@@ -1179,7 +1256,7 @@ index 7c3813c..866ddf7 100644
  	// If the shell did sufficient damage to destroy the structure
  	if (relativeDamage < 0)
 diff --git a/src/structure.h b/src/structure.h
-index a84adb5..9bb0604 100644
+index 35bc869..052e1a5 100644
 --- a/src/structure.h
 +++ b/src/structure.h
 @@ -90,7 +90,7 @@ extern bool	structureStatsShutDown(void);
