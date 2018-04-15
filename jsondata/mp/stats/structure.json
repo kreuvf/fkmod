@@ -14,6 +14,7 @@
         "structureModel": [
             "icdozer.PIE"
         ],
+        "thermal": 6,
         "type": "DEMOLISH",
         "width": 1
     },
@@ -33,6 +34,7 @@
         "structureModel": [
             "blbrbbnk.PIE"
         ],
+        "thermal": 12,
         "type": "DEFENSE",
         "width": 1
     },
@@ -52,6 +54,7 @@
         "structureModel": [
             "BLBRBFAC.PIE"
         ],
+        "thermal": 5,
         "type": "FACTORY",
         "width": 2
     },
@@ -71,6 +74,7 @@
         "structureModel": [
             "Blbrtowf.pie"
         ],
+        "thermal": 7,
         "type": "DEFENSE",
         "weapons": [
             "Flame1Mk1"
@@ -93,6 +97,7 @@
         "structureModel": [
             "BLBRBTW1.PIE"
         ],
+        "thermal": 7,
         "type": "DEFENSE",
         "weapons": [
             "BuggyMG"
@@ -115,6 +120,7 @@
         "structureModel": [
             "Blbrbtw2.PIE"
         ],
+        "thermal": 7,
         "type": "DEFENSE",
         "weapons": [
             "BuggyMG"
@@ -136,6 +142,7 @@
         "structureModel": [
             "BLBRBWLH.PIE"
         ],
+        "thermal": 7,
         "type": "WALL",
         "width": 1
     },
@@ -155,6 +162,7 @@
         "structureModel": [
             "BLBRMRTP.PIE"
         ],
+        "thermal": 10,
         "type": "DEFENSE",
         "weapons": [
             "Mortar1Mk1"
@@ -177,6 +185,7 @@
         "structureModel": [
             "BLBRBGEN.PIE"
         ],
+        "thermal": 5,
         "type": "POWER GENERATOR",
         "width": 1
     },
@@ -196,6 +205,7 @@
         "structureModel": [
             "EXROCKET.PIE"
         ],
+        "thermal": 10,
         "type": "DEFENSE",
         "weapons": [
             "BabaPitRocket"
@@ -218,6 +228,7 @@
         "structureModel": [
             "EXROCKET.PIE"
         ],
+        "thermal": 10,
         "type": "DEFENSE",
         "weapons": [
             "BabaPitRocketAT"
@@ -239,6 +250,7 @@
         "structureModel": [
             "BLBRBCR1.PIE"
         ],
+        "thermal": 5,
         "type": "CORNER WALL",
         "width": 1
     },
@@ -258,6 +270,7 @@
         "structureModel": [
             "BLBRTOWR.PIE"
         ],
+        "thermal": 10,
         "type": "DEFENSE",
         "weapons": [
             "BaBaCannon"
@@ -280,6 +293,7 @@
         "structureModel": [
             "BLDERIK.PIE"
         ],
+        "thermal": 150,
         "type": "RESOURCE EXTRACTOR",
         "width": 1
     },
@@ -298,6 +312,7 @@
         "structureModel": [
             "Blaamnt2.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-MIS-AAAvengerSAM"
@@ -319,6 +334,7 @@
         "structureModel": [
             "Blaamnt2.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-MIS-AAAvengerSAM2"
@@ -340,6 +356,7 @@
         "structureModel": [
             "Blaamnt2.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-SF-AACyclone"
@@ -361,6 +378,7 @@
         "structureModel": [
             "Blaamnt2.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-SF-AACyclone2"
@@ -382,6 +400,7 @@
         "structureModel": [
             "Blaamnt2.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-SF-AACyclone3"
@@ -403,6 +422,7 @@
         "structureModel": [
             "Blaamnt2.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-FF-AAHurricane"
@@ -424,6 +444,7 @@
         "structureModel": [
             "Blaamnt2.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-FF-AAHurricane2"
@@ -445,6 +466,7 @@
         "structureModel": [
             "Blaamnt2.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-FF-AAHurricane3"
@@ -466,6 +488,7 @@
         "structureModel": [
             "Blaamnt2.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-HOT-AAStormbringer"
@@ -487,6 +510,7 @@
         "structureModel": [
             "Blaamnt2.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-HOT-AAStormbringer2"
@@ -508,6 +532,7 @@
         "structureModel": [
             "Blcanpil.pie"
         ],
+        "thermal": 350,
         "type": "DEFENSE",
         "weapons": [
             "FK-SF-Cannon-Structure"
@@ -529,6 +554,7 @@
         "structureModel": [
             "Blcanpil.pie"
         ],
+        "thermal": 350,
         "type": "DEFENSE",
         "weapons": [
             "FK-SF-Cannon-Structure2"
@@ -550,6 +576,7 @@
         "structureModel": [
             "Blcanpil.pie"
         ],
+        "thermal": 350,
         "type": "DEFENSE",
         "weapons": [
             "FK-SF-Cannon-Structure3"
@@ -571,6 +598,7 @@
         "structureModel": [
             "blpilbox.pie"
         ],
+        "thermal": 350,
         "type": "DEFENSE",
         "weapons": [
             "FK-FF-Machinegun-Structure"
@@ -592,6 +620,7 @@
         "structureModel": [
             "blpilbox.pie"
         ],
+        "thermal": 350,
         "type": "DEFENSE",
         "weapons": [
             "FK-FF-Machinegun-Structure2"
@@ -613,6 +642,7 @@
         "structureModel": [
             "blpilbox.pie"
         ],
+        "thermal": 350,
         "type": "DEFENSE",
         "weapons": [
             "FK-FF-Machinegun-Structure3"
@@ -637,6 +667,7 @@
         "structureModel": [
             "blcfact1.pie"
         ],
+        "thermal": 250,
         "type": "CYBORG FACTORY",
         "width": 1
     },
@@ -655,6 +686,7 @@
         "structureModel": [
             "BLGUARD1.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-SF-Cannon-Structure"
@@ -676,6 +708,7 @@
         "structureModel": [
             "BLGUARD1.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-SF-Cannon-Structure2"
@@ -697,6 +730,7 @@
         "structureModel": [
             "BLGUARD1.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-SF-Cannon-Structure3"
@@ -718,6 +752,7 @@
         "structureModel": [
             "BLGUARD1.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-FF-Machinegun-Structure"
@@ -739,6 +774,7 @@
         "structureModel": [
             "BLGUARD1.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-FF-Machinegun-Structure2"
@@ -760,6 +796,7 @@
         "structureModel": [
             "BLGUARD1.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-FF-Machinegun-Structure3"
@@ -781,6 +818,7 @@
         "structureModel": [
             "BLMRTPIT.PIE"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-SPL-GrenadeLauncher-TankStructure"
@@ -802,6 +840,7 @@
         "structureModel": [
             "BLMRTPIT.PIE"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-SPL-GrenadeLauncher-TankStructure2"
@@ -823,6 +862,7 @@
         "structureModel": [
             "BLMRTPIT.PIE"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-SPL-GrenadeLauncher-TankStructure3"
@@ -844,6 +884,7 @@
         "structureModel": [
             "BLMRTPIT.PIE"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-ART-Howitzer"
@@ -865,6 +906,7 @@
         "structureModel": [
             "BLMRTPIT.PIE"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-ART-Howitzer2"
@@ -886,6 +928,7 @@
         "structureModel": [
             "BLMRTPIT.PIE"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-ART-Howitzer3"
@@ -907,6 +950,7 @@
         "structureModel": [
             "BLMRTPIT.PIE"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-HOT-HowitzerIncendiary"
@@ -928,6 +972,7 @@
         "structureModel": [
             "BLMRTPIT.PIE"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-HOT-HowitzerIncendiary2"
@@ -949,6 +994,7 @@
         "structureModel": [
             "BLMRTPIT.PIE"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-HOT-HowitzerIncendiary3"
@@ -970,6 +1016,7 @@
         "structureModel": [
             "BLMRTPIT.PIE"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-ART-RocketBattery"
@@ -991,6 +1038,7 @@
         "structureModel": [
             "BLMRTPIT.PIE"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-ART-RocketBattery2"
@@ -1012,6 +1060,7 @@
         "structureModel": [
             "BLMRTPIT.PIE"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "weapons": [
             "FK-ART-RocketBattery3"
@@ -1036,6 +1085,7 @@
         "structureModel": [
             "BLPOWER4.PIE"
         ],
+        "thermal": 250,
         "type": "POWER GENERATOR",
         "width": 2
     },
@@ -1058,6 +1108,7 @@
         "structureModel": [
             "blvtolpd.pie"
         ],
+        "thermal": 250,
         "type": "REARM PAD",
         "width": 1
     },
@@ -1079,6 +1130,7 @@
         "structureModel": [
             "BLRPAIR3.PIE"
         ],
+        "thermal": 250,
         "type": "REPAIR FACILITY",
         "width": 1
     },
@@ -1100,6 +1152,7 @@
         "structureModel": [
             "BLRESCH4.PIE"
         ],
+        "thermal": 250,
         "type": "RESEARCH",
         "width": 2
     },
@@ -1121,6 +1174,7 @@
         "structureModel": [
             "BLFACT2.pie"
         ],
+        "thermal": 250,
         "type": "FACTORY",
         "width": 3
     },
@@ -1139,6 +1193,7 @@
         "structureModel": [
             "BLGUARDR.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "width": 1
     },
@@ -1157,6 +1212,7 @@
         "structureModel": [
             "BLGUARDR.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "width": 1
     },
@@ -1175,6 +1231,7 @@
         "structureModel": [
             "BLGUARDR.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "width": 1
     },
@@ -1193,6 +1250,7 @@
         "structureModel": [
             "BLGUARDR.pie"
         ],
+        "thermal": 300,
         "type": "DEFENSE",
         "width": 1
     },
@@ -1214,6 +1272,7 @@
         "structureModel": [
             "blvfact2.pie"
         ],
+        "thermal": 250,
         "type": "VTOL FACTORY",
         "width": 3
     },
@@ -1235,6 +1294,7 @@
             "blwallh_t.pie",
             "blwallh_l.pie"
         ],
+        "thermal": 300,
         "type": "WALL",
         "width": 1
     },
@@ -1253,6 +1313,7 @@
         "structureModel": [
             "BLWALLC1.pie"
         ],
+        "thermal": 300,
         "type": "CORNER WALL",
         "width": 1
     },
@@ -1271,6 +1332,7 @@
         "structureModel": [
             "BLGATEH.pie"
         ],
+        "thermal": 300,
         "type": "GATE",
         "width": 1
     }

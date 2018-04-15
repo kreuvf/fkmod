@@ -80,6 +80,7 @@ for line in structure:
 		('repairPoints', int(line[25])),
 		('researchPoints', int(line[27])),
 		('resistance', int(line[15])),
+		('thermal', int(line[10])),
 		('width', int(line[5]))
 		]
 	
