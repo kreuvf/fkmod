@@ -283,7 +283,7 @@ index 787ec93..de2ae85 100644
 +		const double modifier = asStructStrengthModifier[weaponEffect][structMod]/100.0;
 +		
 +		/* Step 1: Reduce damage by armour */
-+		damage < armour ? 0 : damage -= armour;
++		damage = damage < armour ? 0 : damage - armour;
 +		
 +		/* Step 2: Reduce damage by target type modifier */
 +		damage = floor(damage * modifier);
@@ -311,7 +311,7 @@ index 787ec93..de2ae85 100644
 +		and they were just a constant factor of 1 anyway! */
 +		
 +		/* Step 1: Reduce damage by armour */
-+		damage < armour ? 0 : damage -= armour;
++		damage = damage < armour ? 0 : damage - armour;
 +		
 +		/* Step 2: Reduce damage by propulsion type modifier */
 +		damage = floor(damage * modifier);
@@ -382,7 +382,7 @@ index f42ed99..d94aa9e 100644
 +	DROID *target = (DROID *)psObj;
 +	const int armour = objArmour(target, weaponClass);
 +	unsigned int damage = psStats->upgrade[player].periodicalDamage;
-+	damage < armour ? 0 : damage -= armour;
++	damage = damage < armour ? 0 : damage - armour;
 +	return (int) round(damage);
  }
  

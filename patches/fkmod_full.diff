@@ -550,7 +550,7 @@ index ee3e6d6..24d6ec7 100644
  		pWSC = "UNKNOWN SUB CLASS";
  		break;
 diff --git a/src/projectile.cpp b/src/projectile.cpp
-index 024148f..7fa9786 100644
+index 024148f..35acf0b 100644
 --- a/src/projectile.cpp
 +++ b/src/projectile.cpp
 @@ -112,8 +112,7 @@ static void	proj_ImpactFunc(PROJECTILE *psObj);
@@ -813,7 +813,7 @@ index 024148f..7fa9786 100644
 +		const double modifier = asStructStrengthModifier[weaponEffect][structMod]/100.0;
 +		
 +		/* Step 1: Reduce damage by armour */
-+		damage < armour ? 0 : damage -= armour;
++		damage = damage < armour ? 0 : damage - armour;
 +		
 +		/* Step 2: Reduce damage by target type modifier */
 +		damage = floor(damage * modifier);
@@ -841,7 +841,7 @@ index 024148f..7fa9786 100644
 +		and they were just a constant factor of 1 anyway! */
 +		
 +		/* Step 1: Reduce damage by armour */
-+		damage < armour ? 0 : damage -= armour;
++		damage = damage < armour ? 0 : damage - armour;
 +		
 +		/* Step 2: Reduce damage by propulsion type modifier */
 +		damage = floor(damage * modifier);
@@ -919,7 +919,7 @@ index d2a9477..61dbece 100644
  	Vector3i        src;                    ///< Where projectile started
  	Vector3i        dst;                    ///< The target coordinates
 diff --git a/src/stats.cpp b/src/stats.cpp
-index 02cd789..1d4cb4b 100644
+index 02cd789..23401fc 100644
 --- a/src/stats.cpp
 +++ b/src/stats.cpp
 @@ -40,6 +40,7 @@
@@ -1065,7 +1065,7 @@ index 02cd789..1d4cb4b 100644
 +	DROID *target = (DROID *)psObj;
 +	const int armour = objArmour(target, weaponClass);
 +	unsigned int damage = psStats->upgrade[player].periodicalDamage;
-+	damage < armour ? 0 : damage -= armour;
++	damage = damage < armour ? 0 : damage - armour;
 +	return (int) round(damage);
  }
  
