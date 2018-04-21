@@ -650,7 +650,7 @@
         "width": 1
     },
     "FKCyborgFactory": {
-        "armour": 250,
+        "armour": 150,
         "baseModel": "blbcfact.pie",
         "breadth": 2,
         "buildPoints": 120000,
@@ -667,7 +667,7 @@
         "structureModel": [
             "blcfact1.pie"
         ],
-        "thermal": 250,
+        "thermal": 150,
         "type": "CYBORG FACTORY",
         "width": 1
     },
@@ -1068,7 +1068,7 @@
         "width": 1
     },
     "FKPowerGenerator": {
-        "armour": 250,
+        "armour": 150,
         "baseModel": "blbpower.pie",
         "breadth": 2,
         "buildPoints": 90000,
@@ -1085,12 +1085,12 @@
         "structureModel": [
             "BLPOWER4.PIE"
         ],
-        "thermal": 250,
+        "thermal": 150,
         "type": "POWER GENERATOR",
         "width": 2
     },
     "FKRearmPad": {
-        "armour": 250,
+        "armour": 150,
         "baseModel": "blbgen.pie",
         "breadth": 1,
         "buildPoints": 45000,
@@ -1108,12 +1108,12 @@
         "structureModel": [
             "blvtolpd.pie"
         ],
-        "thermal": 250,
+        "thermal": 150,
         "type": "REARM PAD",
         "width": 1
     },
     "FKRepairFacility": {
-        "armour": 250,
+        "armour": 150,
         "baseModel": "BLBGEN.PIE",
         "breadth": 1,
         "buildPoints": 45000,
@@ -1130,12 +1130,12 @@
         "structureModel": [
             "BLRPAIR3.PIE"
         ],
-        "thermal": 250,
+        "thermal": 150,
         "type": "REPAIR FACILITY",
         "width": 1
     },
     "FKResearchFacility": {
-        "armour": 250,
+        "armour": 150,
         "baseModel": "blbresch.pie",
         "breadth": 2,
         "buildPoints": 90000,
@@ -1152,12 +1152,12 @@
         "structureModel": [
             "BLRESCH4.PIE"
         ],
-        "thermal": 250,
+        "thermal": 150,
         "type": "RESEARCH",
         "width": 2
     },
     "FKTankFactory": {
-        "armour": 250,
+        "armour": 150,
         "baseModel": "blbfact.pie",
         "breadth": 3,
         "buildPoints": 120000,
@@ -1174,7 +1174,7 @@
         "structureModel": [
             "BLFACT2.pie"
         ],
-        "thermal": 250,
+        "thermal": 150,
         "type": "FACTORY",
         "width": 3
     },
@@ -1255,7 +1255,7 @@
         "width": 1
     },
     "FKVTOLFactory": {
-        "armour": 250,
+        "armour": 150,
         "baseModel": "blbfact.pie",
         "breadth": 3,
         "buildPoints": 120000,
@@ -1272,7 +1272,7 @@
         "structureModel": [
             "blvfact2.pie"
         ],
-        "thermal": 250,
+        "thermal": 150,
         "type": "VTOL FACTORY",
         "width": 3
     },
