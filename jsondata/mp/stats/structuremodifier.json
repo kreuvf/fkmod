@@ -6,9 +6,9 @@
         "SOFT": 130
     },
     "ANTI PERSONNEL": {
-        "BUNKER": 70,
-        "HARD": 85,
-        "MEDIUM": 100,
+        "BUNKER": 60,
+        "HARD": 70,
+        "MEDIUM": 80,
         "SOFT": 160
     },
     "ANTI TANK": {
