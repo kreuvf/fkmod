@@ -906,7 +906,7 @@
     "FK-FF-Machinegun-Tank": {
         "buildPoints": 20000,
         "buildPower": 80,
-        "damage": 525,
+        "damage": 450,
         "designable": 1,
         "effectSize": 50,
         "explosionWav": "rapdcan.ogg",
@@ -943,7 +943,7 @@
     "FK-FF-Machinegun-Tank2": {
         "buildPoints": 20000,
         "buildPower": 80,
-        "damage": 525,
+        "damage": 450,
         "designable": 1,
         "effectSize": 50,
         "explosionWav": "rapdcan.ogg",
@@ -980,7 +980,7 @@
     "FK-FF-Machinegun-Tank3": {
         "buildPoints": 20000,
         "buildPower": 80,
-        "damage": 525,
+        "damage": 450,
         "designable": 1,
         "effectSize": 50,
         "explosionWav": "rapdcan.ogg",
