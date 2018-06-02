@@ -29,8 +29,10 @@ FKTowerCB,DEFENSE,Level All,HARD,0,1,1,Concrete,30000,3,300,7500,0,100,1,0,255,0
 FKTowerVTOL,DEFENSE,Level All,HARD,0,1,1,Concrete,30000,3,300,7500,0,100,1,0,255,0,ZNULLECM,FKVTOLSensor,0,BLGUARDR.pie,0,0,0,0,0,0,0,0
 FKHardpointMG,DEFENSE,Level All,HARD,0,1,1,Concrete,60000,2,300,10000,0,300,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,BLGUARD1.pie,0,0,1,0,0,0,0,0
 FKHardpointCannon,DEFENSE,Level All,HARD,0,1,1,Concrete,60000,2,300,10000,0,350,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,BLGUARD1.pie,0,0,1,0,0,0,0,0
+FKHardpointScourgeMissile,DEFENSE,Level All,HARD,0,1,1,Concrete,60000,2,300,10000,0,350,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,BLGUARD1.pie,0,0,1,0,0,0,0,0
 FKBunkerMG,DEFENSE,Level All,BUNKER,0,1,1,Concrete,60000,1,350,10000,0,300,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,blpilbox.pie,0,0,1,0,0,0,0,0
 FKBunkerCannon,DEFENSE,Level All,BUNKER,0,1,1,Concrete,60000,1,350,10000,0,350,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,Blcanpil.pie,0,0,1,0,0,0,0,0
+FKBunkerScourgeMissile,DEFENSE,Level All,BUNKER,0,1,1,Concrete,60000,1,350,10000,0,350,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,Blcanpil.pie,0,0,1,0,0,0,0,0
 FKAASiteHurricane,DEFENSE,Level All,HARD,0,1,1,Concrete,60000,1,300,10000,0,300,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,Blaamnt2.pie,0,0,1,0,0,0,0,0
 FKAASiteCyclone,DEFENSE,Level All,HARD,0,1,1,Concrete,60000,1,300,10000,0,350,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,Blaamnt2.pie,0,0,1,0,0,0,0,0
 FKAASiteAvengerSAM,DEFENSE,Level All,HARD,0,1,1,Concrete,60000,1,300,10000,0,350,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,Blaamnt2.pie,0,0,1,0,0,0,0,0
@@ -41,8 +43,10 @@ FKPitHowitzerIncendiary,DEFENSE,Level All,HARD,0,1,1,Concrete,90000,1,300,7000,0
 FKPitGrenadeLauncher,DEFENSE,Level All,HARD,0,1,1,Concrete,60000,1,300,7000,0,350,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,BLMRTPIT.PIE,0,0,1,0,0,0,0,0
 FKHardpointMG2,DEFENSE,Level All,HARD,0,1,1,Concrete,60000,2,300,10000,0,300,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,BLGUARD1.pie,0,0,1,0,0,0,0,0
 FKHardpointCannon2,DEFENSE,Level All,HARD,0,1,1,Concrete,60000,2,300,10000,0,350,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,BLGUARD1.pie,0,0,1,0,0,0,0,0
+FKHardpointScourgeMissile2,DEFENSE,Level All,HARD,0,1,1,Concrete,60000,2,300,10000,0,350,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,BLGUARD1.pie,0,0,1,0,0,0,0,0
 FKBunkerMG2,DEFENSE,Level All,BUNKER,0,1,1,Concrete,60000,1,350,10000,0,300,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,blpilbox.pie,0,0,1,0,0,0,0,0
 FKBunkerCannon2,DEFENSE,Level All,BUNKER,0,1,1,Concrete,60000,1,350,10000,0,350,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,Blcanpil.pie,0,0,1,0,0,0,0,0
+FKBunkerScourgeMissile2,DEFENSE,Level All,BUNKER,0,1,1,Concrete,60000,1,350,10000,0,350,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,Blcanpil.pie,0,0,1,0,0,0,0,0
 FKAASiteHurricane2,DEFENSE,Level All,HARD,0,1,1,Concrete,60000,1,300,10000,0,300,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,Blaamnt2.pie,0,0,1,0,0,0,0,0
 FKAASiteCyclone2,DEFENSE,Level All,HARD,0,1,1,Concrete,60000,1,300,10000,0,350,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,Blaamnt2.pie,0,0,1,0,0,0,0,0
 FKAASiteAvengerSAM2,DEFENSE,Level All,HARD,0,1,1,Concrete,60000,1,300,10000,0,350,1,0,255,0,ZNULLECM,DefaultSensor1Mk1,1,Blaamnt2.pie,0,0,1,0,0,0,0,0

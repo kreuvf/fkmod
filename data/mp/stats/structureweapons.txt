@@ -12,8 +12,10 @@ FKAASiteHurricane,FK-FF-AAHurricane,NULL,NULL,NULL,1337
 FKAASiteStormbringer,FK-HOT-AAStormbringer,NULL,NULL,NULL,1337
 FKBunkerCannon,FK-SF-Cannon-Structure,NULL,NULL,NULL,1337
 FKBunkerMG,FK-FF-Machinegun-Structure,NULL,NULL,NULL,1337
+FKBunkerScourgeMissile,FK-MIS-ScourgeMissile,NULL,NULL,NULL,1337
 FKHardpointCannon,FK-SF-Cannon-Structure,NULL,NULL,NULL,1337
 FKHardpointMG,FK-FF-Machinegun-Structure,NULL,NULL,NULL,1337
+FKHardpointScourgeMissile,FK-MIS-ScourgeMissile,NULL,NULL,NULL,1337
 FKPitGrenadeLauncher,FK-SPL-GrenadeLauncher-TankStructure,NULL,NULL,NULL,1337
 FKPitHowitzer,FK-ART-Howitzer,NULL,NULL,NULL,1337
 FKPitHowitzerIncendiary,FK-HOT-HowitzerIncendiary,NULL,NULL,NULL,1337
@@ -24,8 +26,10 @@ FKAASiteHurricane2,FK-FF-AAHurricane2,NULL,NULL,NULL,1337
 FKAASiteStormbringer2,FK-HOT-AAStormbringer2,NULL,NULL,NULL,1337
 FKBunkerCannon2,FK-SF-Cannon-Structure2,NULL,NULL,NULL,1337
 FKBunkerMG2,FK-FF-Machinegun-Structure2,NULL,NULL,NULL,1337
+FKBunkerScourgeMissile2,FK-MIS-ScourgeMissile2,NULL,NULL,NULL,1337
 FKHardpointCannon2,FK-SF-Cannon-Structure2,NULL,NULL,NULL,1337
 FKHardpointMG2,FK-FF-Machinegun-Structure2,NULL,NULL,NULL,1337
+FKHardpointScourgeMissile2,FK-MIS-ScourgeMissile2,NULL,NULL,NULL,1337
 FKPitGrenadeLauncher2,FK-SPL-GrenadeLauncher-TankStructure2,NULL,NULL,NULL,1337
 FKPitHowitzer2,FK-ART-Howitzer2,NULL,NULL,NULL,1337
 FKPitHowitzerIncendiary2,FK-HOT-HowitzerIncendiary2,NULL,NULL,NULL,1337

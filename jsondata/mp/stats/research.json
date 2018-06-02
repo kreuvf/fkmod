@@ -834,6 +834,37 @@
         "statID": "FKBunkerMG3",
         "subgroupIconID": "IMAGE_RES_DEFENCE"
     },
+    "R-HACK-Bunker-ScourgeMissile": {
+        "id": "R-HACK-Bunker-ScourgeMissile",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "requiredResearch": [
+            "R-Def-Bunker",
+            "R-W-MIS-ScourgeMissile"
+        ],
+        "resultStructures": [
+            "FKBunkerScourgeMissile"
+        ],
+        "statID": "FKBunkerScourgeMissile",
+        "subgroupIconID": "IMAGE_RES_DEFENCE"
+    },
+    "R-HACK-Bunker-ScourgeMissile2": {
+        "id": "R-HACK-Bunker-ScourgeMissile2",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "redStructures": [
+            "FKBunkerScourgeMissile"
+        ],
+        "requiredResearch": [
+            "R-HACK-Bunker-ScourgeMissile",
+            "R-WU-ScourgeMissile-SPE1"
+        ],
+        "resultStructures": [
+            "FKBunkerScourgeMissile2"
+        ],
+        "statID": "FKBunkerScourgeMissile2",
+        "subgroupIconID": "IMAGE_RES_DEFENCE"
+    },
     "R-HACK-Hardpoint-Cannon": {
         "id": "R-HACK-Hardpoint-Cannon",
         "msgName": "RES_DF_HCW1",
@@ -928,6 +959,37 @@
             "FKHardpointMG3"
         ],
         "statID": "FKHardpointMG3",
+        "subgroupIconID": "IMAGE_RES_DEFENCE"
+    },
+    "R-HACK-Hardpoint-ScourgeMissile": {
+        "id": "R-HACK-Hardpoint-ScourgeMissile",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "requiredResearch": [
+            "R-Def-Hardpoint",
+            "R-W-MIS-ScourgeMissile"
+        ],
+        "resultStructures": [
+            "FKHardpointScourgeMissile"
+        ],
+        "statID": "FKHardpointScourgeMissile",
+        "subgroupIconID": "IMAGE_RES_DEFENCE"
+    },
+    "R-HACK-Hardpoint-ScourgeMissile2": {
+        "id": "R-HACK-Hardpoint-ScourgeMissile2",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "redStructures": [
+            "FKHardpointScourgeMissile"
+        ],
+        "requiredResearch": [
+            "R-HACK-Hardpoint-ScourgeMissile",
+            "R-WU-ScourgeMissile-SPE1"
+        ],
+        "resultStructures": [
+            "FKHardpointScourgeMissile2"
+        ],
+        "statID": "FKHardpointScourgeMissile",
         "subgroupIconID": "IMAGE_RES_DEFENCE"
     },
     "R-HACK-Site-AAAvengerSAM": {
