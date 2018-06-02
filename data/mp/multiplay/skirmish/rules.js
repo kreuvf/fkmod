@@ -63,6 +63,7 @@ function eventGameInit()
 		setStructureLimits("FKResearchFacility", 5, playnum);
 		setStructureLimits("FKCyborgFactory", 5, playnum);
 		setStructureLimits("FKVTOLFactory", 5, playnum);
+                setStructureLimits("FKRepairFacility", 25, playnum);
 	}
 	applyLimitSet();	// set limit options
 

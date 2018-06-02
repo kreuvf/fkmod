@@ -19,7 +19,7 @@ event initialisedEvent(init)
 	setStructureLimits(powerGen, 	10, 	0);
 	setStructureLimits(research, 	5, 	0);
 	setStructureLimits(cybfac, 	5, 	0);
-	setStructureLimits(repair, 	5, 	0);
+	setStructureLimits(repair, 	25, 	0);
 	setStructureLimits(vtolfact, 	5, 	0);
 	setStructureLimits(vtolpad, 	50,	0);
 }
