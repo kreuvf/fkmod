@@ -20,3 +20,5 @@ R-WU-HowitzerIncendiary-SPE2,FKPitHowitzerIncendiary2,1355
 R-HACK-Site-AAStormbringer2,FKAASiteStormbringer,1356
 R-HACK-Bunker-GrenadeLauncher2,FKPitGrenadeLauncher,1357
 R-HACK-Bunker-GrenadeLauncher3,FKPitGrenadeLauncher2,1358
+R-HACK-Bunker-ScourgeMissile2,FKBunkerScourgeMissile,1359
+R-HACK-Hardpoint-ScourgeMissile2,FKHardpointScourgeMissile,1360

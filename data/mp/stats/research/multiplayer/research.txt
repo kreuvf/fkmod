@@ -36,12 +36,16 @@ R-HACK-Bunker-GrenadeLauncher3,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,F
 R-HACK-Bunker-Machinegun,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKBunkerMG,0,0,0,0,2,0,0,0,1,0,0
 R-HACK-Bunker-Machinegun2,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKBunkerMG2,0,0,0,0,2,0,0,0,1,0,0
 R-HACK-Bunker-Machinegun3,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKBunkerMG3,0,0,0,0,2,0,0,0,1,0,0
+R-HACK-Bunker-ScourgeMissile,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKBunkerScourgeMissile,0,0,0,0,2,0,0,0,1,0,0
+R-HACK-Bunker-ScourgeMissile2,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKBunkerScourgeMissile2,0,0,0,0,2,0,0,0,1,0,0
 R-HACK-Hardpoint-Cannon,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKHardpointCannon,0,0,0,0,2,0,0,0,1,0,0
 R-HACK-Hardpoint-Cannon2,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKHardpointCannon2,0,0,0,0,2,0,0,0,1,0,0
 R-HACK-Hardpoint-Cannon3,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKHardpointCannon3,0,0,0,0,2,0,0,0,1,0,0
 R-HACK-Hardpoint-Machinegun,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKHardpointMG,0,0,0,0,2,0,0,0,1,0,0
 R-HACK-Hardpoint-Machinegun2,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKHardpointMG2,0,0,0,0,2,0,0,0,1,0,0
 R-HACK-Hardpoint-Machinegun3,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKHardpointMG3,0,0,0,0,2,0,0,0,1,0,0
+R-HACK-Hardpoint-ScourgeMissile,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKHardpointScourgeMissile,0,0,0,0,2,0,0,0,1,0,0
+R-HACK-Hardpoint-ScourgeMissile2,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKHardpointScourgeMissile,0,0,0,0,2,0,0,0,1,0,0
 R-HACK-Site-AAAvengerSAM,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKAASiteAvengerSAM,0,0,0,0,2,0,0,0,1,0,0
 R-HACK-Site-AAAvengerSAM2,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKAASiteAvengerSAM2,0,0,0,0,2,0,0,0,1,0,0
 R-HACK-Site-AACyclone,Level One,0,0,IMAGE_RES_DEFENCE,0,0,RES_DF_HCW1,FKAASiteCyclone,0,0,0,0,2,0,0,0,1,0,0

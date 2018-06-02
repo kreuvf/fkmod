@@ -649,6 +649,50 @@
         ],
         "width": 1
     },
+    "FKBunkerScourgeMissile": {
+        "armour": 350,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "ecmID": "ZNULLECM",
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKBunkerScourgeMissile",
+        "name": "Scourge Missile Bunker Mk1",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "BUNKER",
+        "structureModel": [
+            "Blcanpil.pie"
+        ],
+        "thermal": 350,
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-MIS-ScourgeMissile"
+        ],
+        "width": 1
+    },
+    "FKBunkerScourgeMissile2": {
+        "armour": 350,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "ecmID": "ZNULLECM",
+        "height": 1,
+        "hitpoints": 10000,
+        "id": "FKBunkerScourgeMissile2",
+        "name": "Scourge Missile Bunker Mk2",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "BUNKER",
+        "structureModel": [
+            "Blcanpil.pie"
+        ],
+        "thermal": 350,
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-MIS-ScourgeMissile2"
+        ],
+        "width": 1
+    },
     "FKCyborgFactory": {
         "armour": 200,
         "baseModel": "blbcfact.pie",
@@ -800,6 +844,50 @@
         "type": "DEFENSE",
         "weapons": [
             "FK-FF-Machinegun-Structure3"
+        ],
+        "width": 1
+    },
+    "FKHardpointScourgeMissile": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "ecmID": "ZNULLECM",
+        "height": 2,
+        "hitpoints": 10000,
+        "id": "FKHardpointScourgeMissile",
+        "name": "Scourge Missile Hardpoint Mk1",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLGUARD1.pie"
+        ],
+        "thermal": 300,
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-MIS-ScourgeMissile"
+        ],
+        "width": 1
+    },
+    "FKHardpointScourgeMissile2": {
+        "armour": 300,
+        "breadth": 1,
+        "buildPoints": 60000,
+        "buildPower": 350,
+        "ecmID": "ZNULLECM",
+        "height": 2,
+        "hitpoints": 10000,
+        "id": "FKHardpointScourgeMissile2",
+        "name": "Scourge Missile Hardpoint Mk2",
+        "sensorID": "DefaultSensor1Mk1",
+        "strength": "HARD",
+        "structureModel": [
+            "BLGUARD1.pie"
+        ],
+        "thermal": 300,
+        "type": "DEFENSE",
+        "weapons": [
+            "FK-MIS-ScourgeMissile2"
         ],
         "width": 1
     },
