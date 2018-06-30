@@ -809,7 +809,7 @@
         ],
         "requiredResearch": [
             "R-HACK-Bunker-Machinegun",
-            "R-WU-Machinegun-CybStruc-SPE1"
+            "R-WU-Machinegun-SPE1"
         ],
         "resultStructures": [
             "FKBunkerMG2"
@@ -826,7 +826,7 @@
         ],
         "requiredResearch": [
             "R-HACK-Bunker-Machinegun2",
-            "R-WU-Machinegun-CybStruc-SPE2"
+            "R-WU-Machinegun-SPE2"
         ],
         "resultStructures": [
             "FKBunkerMG3"
@@ -936,7 +936,7 @@
         ],
         "requiredResearch": [
             "R-HACK-Hardpoint-Machinegun",
-            "R-WU-Machinegun-CybStruc-SPE1"
+            "R-WU-Machinegun-SPE1"
         ],
         "resultStructures": [
             "FKHardpointMG2"
@@ -953,7 +953,7 @@
         ],
         "requiredResearch": [
             "R-HACK-Hardpoint-Machinegun2",
-            "R-WU-Machinegun-CybStruc-SPE2"
+            "R-WU-Machinegun-SPE2"
         ],
         "resultStructures": [
             "FKHardpointMG3"
@@ -2039,6 +2039,19 @@
         "statID": "FK-FF-AAHurricane",
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
+    "R-W-FF-Autocannon": {
+        "id": "R-W-FF-Autocannon",
+        "msgName": "RES_DF_HCW1",
+        "name": "Autocannon",
+        "researchPoints": 4375,
+        "researchPower": 136,
+        "resultComponents": [
+            "FK-FF-Autocannon-Tank",
+            "FK-FF-Autocannon-VTOL"
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
     "R-W-FF-Machinegun": {
         "id": "R-W-FF-Machinegun",
         "msgName": "RES_DF_HCW1",
@@ -2046,8 +2059,6 @@
         "researchPoints": 4375,
         "researchPower": 136,
         "resultComponents": [
-            "FK-FF-Machinegun-Tank",
-            "FK-FF-Machinegun-VTOL",
             "FKCyborg-MG",
             "FK-FF-Machinegun-Cyborg"
         ],
@@ -4333,6 +4344,406 @@
             "FK-HOT-AAStormbringer2"
         ],
         "statID": "FK-HOT-AAStormbringer",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-ACC1": {
+        "iconID": "IMAGE_RES_GRPACC",
+        "id": "R-WU-Autocannon-ACC1",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 8021,
+        "researchPower": 250,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "HitChance",
+                "value": 10
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-ACC2": {
+        "iconID": "IMAGE_RES_GRPACC",
+        "id": "R-WU-Autocannon-ACC2",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 8823,
+        "researchPower": 275,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "HitChance",
+                "value": 21
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-ACC3": {
+        "iconID": "IMAGE_RES_GRPACC",
+        "id": "R-WU-Autocannon-ACC3",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 9706,
+        "researchPower": 303,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "HitChance",
+                "value": 33
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-ACC4": {
+        "iconID": "IMAGE_RES_GRPACC",
+        "id": "R-WU-Autocannon-ACC4",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 10676,
+        "researchPower": 333,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "HitChance",
+                "value": 46
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-ACC5": {
+        "iconID": "IMAGE_RES_GRPACC",
+        "id": "R-WU-Autocannon-ACC5",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 11744,
+        "researchPower": 367,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "HitChance",
+                "value": 61
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-DMG1": {
+        "iconID": "IMAGE_RES_GRPDAM",
+        "id": "R-WU-Autocannon-DMG1",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 8021,
+        "researchPower": 250,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "Damage",
+                "value": 10
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-DMG2": {
+        "iconID": "IMAGE_RES_GRPDAM",
+        "id": "R-WU-Autocannon-DMG2",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 8823,
+        "researchPower": 275,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "Damage",
+                "value": 21
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-DMG3": {
+        "iconID": "IMAGE_RES_GRPDAM",
+        "id": "R-WU-Autocannon-DMG3",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 9706,
+        "researchPower": 303,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "Damage",
+                "value": 33
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-DMG4": {
+        "iconID": "IMAGE_RES_GRPDAM",
+        "id": "R-WU-Autocannon-DMG4",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 10676,
+        "researchPower": 333,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "Damage",
+                "value": 46
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-DMG5": {
+        "iconID": "IMAGE_RES_GRPDAM",
+        "id": "R-WU-Autocannon-DMG5",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 11744,
+        "researchPower": 367,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "Damage",
+                "value": 61
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-ROF1": {
+        "iconID": "IMAGE_RES_GRPROF",
+        "id": "R-WU-Autocannon-ROF1",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 5196,
+        "researchPower": 162,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "FirePause",
+                "value": -9
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "ReloadTime",
+                "value": -9
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-ROF2": {
+        "iconID": "IMAGE_RES_GRPROF",
+        "id": "R-WU-Autocannon-ROF2",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 5715,
+        "researchPower": 178,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "FirePause",
+                "value": -17
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "ReloadTime",
+                "value": -17
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-ROF3": {
+        "iconID": "IMAGE_RES_GRPROF",
+        "id": "R-WU-Autocannon-ROF3",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 6287,
+        "researchPower": 196,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "FirePause",
+                "value": -25
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "ReloadTime",
+                "value": -25
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-ROF4": {
+        "iconID": "IMAGE_RES_GRPROF",
+        "id": "R-WU-Autocannon-ROF4",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 6915,
+        "researchPower": 216,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "FirePause",
+                "value": -32
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "ReloadTime",
+                "value": -32
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-ROF5": {
+        "iconID": "IMAGE_RES_GRPROF",
+        "id": "R-WU-Autocannon-ROF5",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 7607,
+        "researchPower": 237,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "FirePause",
+                "value": -38
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "ReloadTime",
+                "value": -38
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-ROF6": {
+        "iconID": "IMAGE_RES_GRPROF",
+        "id": "R-WU-Autocannon-ROF6",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 8367,
+        "researchPower": 261,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "FirePause",
+                "value": -44
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "ReloadTime",
+                "value": -44
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-ROF7": {
+        "iconID": "IMAGE_RES_GRPROF",
+        "id": "R-WU-Autocannon-ROF7",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 9204,
+        "researchPower": 287,
+        "results": [
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "FirePause",
+                "value": -49
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "MACHINE GUN",
+                "parameter": "ReloadTime",
+                "value": -49
+            }
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-SPE1": {
+        "iconID": "IMAGE_RES_GRPUPG",
+        "id": "R-WU-Autocannon-SPE1",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 8204,
+        "researchPower": 256,
+        "resultComponents": [
+            "FK-FF-Autocannon-Tank2",
+            "FK-FF-Autocannon-VTOL2"
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
+        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+    },
+    "R-WU-Autocannon-SPE2": {
+        "iconID": "IMAGE_RES_GRPUPG",
+        "id": "R-WU-Autocannon-SPE2",
+        "msgName": "RES_DF_HCW1",
+        "name": null,
+        "researchPoints": 10938,
+        "researchPower": 341,
+        "resultComponents": [
+            "FK-FF-Autocannon-Tank3",
+            "FK-FF-Autocannon-VTOL3"
+        ],
+        "statID": "FK-FF-Autocannon-Tank",
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
     "R-WU-BombCluster-ACC1": {
@@ -9864,57 +10275,6 @@
         "statID": "FK-FF-Machinegun-Structure",
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
-    "R-WU-Machinegun-CybStruc-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
-        "id": "R-WU-Machinegun-CybStruc-SPE1",
-        "msgName": "RES_DF_HCW1",
-        "name": "Cyborg Machinegun Special Mk1",
-        "redComponents": [
-            "FK-FF-Machinegun-Cyborg"
-        ],
-        "replacedComponents": [
-            "FKCyborg-MG:FKCyborg-MG2"
-        ],
-        "requiredResearch": [
-            "R-WU-Machinegun-ROF5",
-            "R-WU-Machinegun-DMG3",
-            "R-WU-Machinegun-ACC3"
-        ],
-        "researchPoints": 8204,
-        "researchPower": 256,
-        "resultComponents": [
-            "FKCyborg-MG2",
-            "FK-FF-Machinegun-Cyborg2"
-        ],
-        "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
-    },
-    "R-WU-Machinegun-CybStruc-SPE2": {
-        "iconID": "IMAGE_RES_GRPUPG",
-        "id": "R-WU-Machinegun-CybStruc-SPE2",
-        "msgName": "RES_DF_HCW1",
-        "name": "Cyborg Machinegun Special Mk2",
-        "redComponents": [
-            "FK-FF-Machinegun-Cyborg2"
-        ],
-        "replacedComponents": [
-            "FKCyborg-MG2:FKCyborg-MG3"
-        ],
-        "requiredResearch": [
-            "R-WU-Machinegun-ROF7",
-            "R-WU-Machinegun-DMG5",
-            "R-WU-Machinegun-ACC5",
-            "R-WU-Machinegun-CybStruc-SPE1"
-        ],
-        "researchPoints": 10938,
-        "researchPower": 341,
-        "resultComponents": [
-            "FKCyborg-MG3",
-            "FK-FF-Machinegun-Cyborg3"
-        ],
-        "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
-    },
     "R-WU-Machinegun-DMG1": {
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Machinegun-DMG1",
@@ -10228,49 +10588,36 @@
         "statID": "FK-FF-Machinegun-Structure",
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
-    "R-WU-Machinegun-TankVTOL-SPE1": {
+    "R-WU-Machinegun-SPE1": {
         "iconID": "IMAGE_RES_GRPUPG",
-        "id": "R-WU-Machinegun-TankVTOL-SPE1",
+        "id": "R-WU-Machinegun-SPE1",
         "msgName": "RES_DF_HCW1",
-        "name": "Tank/VTOL Machinegun Special Mk1",
-        "redComponents": [
-            "FK-FF-Machinegun-Tank",
-            "FK-FF-Machinegun-VTOL"
-        ],
-        "requiredResearch": [
-            "R-WU-Machinegun-ROF5",
-            "R-WU-Machinegun-DMG3",
-            "R-WU-Machinegun-ACC3"
+        "name": null,
+        "replacedComponents": [
+            "FKCyborg-MG:FKCyborg-MG2"
         ],
         "researchPoints": 8204,
         "researchPower": 256,
         "resultComponents": [
-            "FK-FF-Machinegun-Tank2",
-            "FK-FF-Machinegun-VTOL2"
+            "FKCyborg-MG2",
+            "FK-FF-Machinegun-Cyborg2"
         ],
         "statID": "FK-FF-Machinegun-Structure",
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
-    "R-WU-Machinegun-TankVTOL-SPE2": {
+    "R-WU-Machinegun-SPE2": {
         "iconID": "IMAGE_RES_GRPUPG",
-        "id": "R-WU-Machinegun-TankVTOL-SPE2",
+        "id": "R-WU-Machinegun-SPE2",
         "msgName": "RES_DF_HCW1",
-        "name": "Tank/VTOL Machinegun Special Mk2",
-        "redComponents": [
-            "FK-FF-Machinegun-Tank2",
-            "FK-FF-Machinegun-VTOL2"
-        ],
-        "requiredResearch": [
-            "R-WU-Machinegun-ROF7",
-            "R-WU-Machinegun-DMG5",
-            "R-WU-Machinegun-ACC5",
-            "R-WU-Machinegun-TankVTOL-SPE1"
+        "name": null,
+        "replacedComponents": [
+            "FKCyborg-MG2:FKCyborg-MG3"
         ],
         "researchPoints": 10938,
         "researchPower": 341,
         "resultComponents": [
-            "FK-FF-Machinegun-Tank3",
-            "FK-FF-Machinegun-VTOL3"
+            "FKCyborg-MG3",
+            "FK-FF-Machinegun-Cyborg3"
         ],
         "statID": "FK-FF-Machinegun-Structure",
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"

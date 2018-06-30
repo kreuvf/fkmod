@@ -111,6 +111,7 @@ function eventGameInit()
 		makeComponentAvailable("tracked01", playnum);
 	 	//makeComponentAvailable("", playnum);
 
+		enableResearch("R-W-FF-Autocannon", playnum);
 		enableResearch("R-W-FF-Machinegun", playnum);
 		enableResearch("R-W-SF-Railgun", playnum);
 		enableResearch("R-W-SF-Cannon", playnum);
@@ -147,7 +148,7 @@ function eventGameInit()
 		setStructureLimits("FKResearchFacility", 5, playnum);
 		setStructureLimits("FKCyborgFactory", 5, playnum);
 		setStructureLimits("FKVTOLFactory", 5, playnum);
-                setStructureLimits("FKRepairFacility", 25, playnum);
+		  setStructureLimits("FKRepairFacility", 25, playnum);
 	}
 	applyLimitSet();	// set limit options
 
@@ -183,6 +184,7 @@ function eventGameInit()
 		"R-W-ART-Howitzer",
 		"R-W-ART-RocketBattery",
 		"R-W-FF-AAHurricane",
+		"R-W-FF-Autocannon",
 		"R-W-FF-Machinegun",
 		"R-W-HOT-AAStormbringer",
 		"R-W-HOT-BombThermite",
@@ -325,6 +327,25 @@ function eventGameInit()
 		"R-WU-AAHurricane-ROF7",
 		"R-WU-AAHurricane-SPE1",
 		"R-WU-AAHurricane-SPE2",
+		"R-WU-Autocannon-ACC1",
+		"R-WU-Autocannon-ACC2",
+		"R-WU-Autocannon-ACC3",
+		"R-WU-Autocannon-ACC4",
+		"R-WU-Autocannon-ACC5",
+		"R-WU-Autocannon-DMG1",
+		"R-WU-Autocannon-DMG2",
+		"R-WU-Autocannon-DMG3",
+		"R-WU-Autocannon-DMG4",
+		"R-WU-Autocannon-DMG5",
+		"R-WU-Autocannon-ROF1",
+		"R-WU-Autocannon-ROF2",
+		"R-WU-Autocannon-ROF3",
+		"R-WU-Autocannon-ROF4",
+		"R-WU-Autocannon-ROF5",
+		"R-WU-Autocannon-ROF6",
+		"R-WU-Autocannon-ROF7",
+		"R-WU-Autocannon-SPE1",
+		"R-WU-Autocannon-SPE2",
 		"R-WU-AAStormbringer-ACC1",
 		"R-WU-AAStormbringer-ACC2",
 		"R-WU-AAStormbringer-ACC3",
@@ -538,8 +559,6 @@ function eventGameInit()
 		"R-WU-Machinegun-ACC3",
 		"R-WU-Machinegun-ACC4",
 		"R-WU-Machinegun-ACC5",
-		"R-WU-Machinegun-CybStruc-SPE1",
-		"R-WU-Machinegun-CybStruc-SPE2",
 		"R-WU-Machinegun-DMG1",
 		"R-WU-Machinegun-DMG2",
 		"R-WU-Machinegun-DMG3",
@@ -552,8 +571,8 @@ function eventGameInit()
 		"R-WU-Machinegun-ROF5",
 		"R-WU-Machinegun-ROF6",
 		"R-WU-Machinegun-ROF7",
-		"R-WU-Machinegun-TankVTOL-SPE1",
-		"R-WU-Machinegun-TankVTOL-SPE2",
+		"R-WU-Machinegun-SPE1",
+		"R-WU-Machinegun-SPE2",
 		"R-WU-Railgun-ACC1",
 		"R-WU-Railgun-ACC2",
 		"R-WU-Railgun-ACC3",
