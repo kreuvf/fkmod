@@ -221,6 +221,19 @@ index df5b98a..7b59e28 100644
  	Vector3i deltaPos = psTarget->pos - psAttacker->pos;
  
  	// if the turret doesn't turn, check if the attacker is in alignment with the target
+@@ -274,10 +282,10 @@ bool combFire(WEAPON *psWeap, BASE_OBJECT *psAttacker, BASE_OBJECT *psTarget, in
+ 	}
+ 	else /* Deal with a missed shot */
+ 	{
+-		const int minOffset = 5;
++		const int minOffset = 50;
+ 
+ 		int missDist = 2 * (100 - resultHitChance) + minOffset;
+-		Vector3i miss = Vector3i(iSinCosR(gameRand(DEG(360)), missDist), 0);
++		Vector3i miss = Vector3i(iSinCosR(gameRand(DEG(360)), missDist), gameRand(128) - 64);
+ 		predict += miss;
+ 
+ 		psTarget = NULL;  // Missed the target, so don't expect to hit it.
 @@ -367,13 +375,14 @@ int objArmour(BASE_OBJECT *psObj, WEAPON_CLASS weaponClass)
  /* Deals damage to an object
   * \param psObj object to deal damage to
