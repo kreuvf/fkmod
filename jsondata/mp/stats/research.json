@@ -4350,7 +4350,10 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Autocannon-ACC1",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Accuracy Mk1",
+        "requiredResearch": [
+            "R-W-FF-Autocannon"
+        ],
         "researchPoints": 8021,
         "researchPower": 250,
         "results": [
@@ -4369,7 +4372,10 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Autocannon-ACC2",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Accuracy Mk2",
+        "requiredResearch": [
+            "R-WU-Autocannon-ACC1"
+        ],
         "researchPoints": 8823,
         "researchPower": 275,
         "results": [
@@ -4378,7 +4384,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "HitChance",
-                "value": 21
+                "value": 11
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4388,7 +4394,10 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Autocannon-ACC3",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Accuracy Mk3",
+        "requiredResearch": [
+            "R-WU-Autocannon-ACC2"
+        ],
         "researchPoints": 9706,
         "researchPower": 303,
         "results": [
@@ -4397,7 +4406,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "HitChance",
-                "value": 33
+                "value": 12
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4407,7 +4416,10 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Autocannon-ACC4",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Accuracy Mk4",
+        "requiredResearch": [
+            "R-WU-Autocannon-ACC3"
+        ],
         "researchPoints": 10676,
         "researchPower": 333,
         "results": [
@@ -4416,7 +4428,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "HitChance",
-                "value": 46
+                "value": 13
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4426,7 +4438,10 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Autocannon-ACC5",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Accuracy Mk5",
+        "requiredResearch": [
+            "R-WU-Autocannon-ACC4"
+        ],
         "researchPoints": 11744,
         "researchPower": 367,
         "results": [
@@ -4435,7 +4450,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "HitChance",
-                "value": 61
+                "value": 15
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4445,7 +4460,10 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Autocannon-DMG1",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Damage Mk1",
+        "requiredResearch": [
+            "R-W-FF-Autocannon"
+        ],
         "researchPoints": 8021,
         "researchPower": 250,
         "results": [
@@ -4464,7 +4482,10 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Autocannon-DMG2",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Damage Mk2",
+        "requiredResearch": [
+            "R-WU-Autocannon-DMG1"
+        ],
         "researchPoints": 8823,
         "researchPower": 275,
         "results": [
@@ -4473,7 +4494,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "Damage",
-                "value": 21
+                "value": 11
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4483,7 +4504,10 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Autocannon-DMG3",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Damage Mk3",
+        "requiredResearch": [
+            "R-WU-Autocannon-DMG2"
+        ],
         "researchPoints": 9706,
         "researchPower": 303,
         "results": [
@@ -4492,7 +4516,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "Damage",
-                "value": 33
+                "value": 12
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4502,7 +4526,10 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Autocannon-DMG4",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Damage Mk4",
+        "requiredResearch": [
+            "R-WU-Autocannon-DMG3"
+        ],
         "researchPoints": 10676,
         "researchPower": 333,
         "results": [
@@ -4511,7 +4538,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "Damage",
-                "value": 46
+                "value": 13
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4521,7 +4548,10 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Autocannon-DMG5",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Damage Mk5",
+        "requiredResearch": [
+            "R-WU-Autocannon-DMG4"
+        ],
         "researchPoints": 11744,
         "researchPower": 367,
         "results": [
@@ -4530,7 +4560,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "Damage",
-                "value": 61
+                "value": 15
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4540,7 +4570,10 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Autocannon-ROF1",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Rate of Fire Mk1",
+        "requiredResearch": [
+            "R-W-FF-Autocannon"
+        ],
         "researchPoints": 5196,
         "researchPower": 162,
         "results": [
@@ -4566,7 +4599,10 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Autocannon-ROF2",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Rate of Fire Mk2",
+        "requiredResearch": [
+            "R-WU-Autocannon-ROF1"
+        ],
         "researchPoints": 5715,
         "researchPower": 178,
         "results": [
@@ -4575,14 +4611,14 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "FirePause",
-                "value": -17
+                "value": -8
             },
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "ReloadTime",
-                "value": -17
+                "value": -8
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4592,7 +4628,10 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Autocannon-ROF3",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Rate of Fire Mk3",
+        "requiredResearch": [
+            "R-WU-Autocannon-ROF2"
+        ],
         "researchPoints": 6287,
         "researchPower": 196,
         "results": [
@@ -4601,14 +4640,14 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "FirePause",
-                "value": -25
+                "value": -8
             },
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "ReloadTime",
-                "value": -25
+                "value": -8
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4618,7 +4657,10 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Autocannon-ROF4",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Rate of Fire Mk4",
+        "requiredResearch": [
+            "R-WU-Autocannon-ROF3"
+        ],
         "researchPoints": 6915,
         "researchPower": 216,
         "results": [
@@ -4627,14 +4669,14 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "FirePause",
-                "value": -32
+                "value": -7
             },
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "ReloadTime",
-                "value": -32
+                "value": -7
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4644,7 +4686,10 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Autocannon-ROF5",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Rate of Fire Mk5",
+        "requiredResearch": [
+            "R-WU-Autocannon-ROF4"
+        ],
         "researchPoints": 7607,
         "researchPower": 237,
         "results": [
@@ -4653,14 +4698,14 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "FirePause",
-                "value": -38
+                "value": -6
             },
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "ReloadTime",
-                "value": -38
+                "value": -6
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4670,7 +4715,10 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Autocannon-ROF6",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Rate of Fire Mk6",
+        "requiredResearch": [
+            "R-WU-Autocannon-ROF5"
+        ],
         "researchPoints": 8367,
         "researchPower": 261,
         "results": [
@@ -4679,14 +4727,14 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "FirePause",
-                "value": -44
+                "value": -6
             },
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "ReloadTime",
-                "value": -44
+                "value": -6
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4696,7 +4744,10 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Autocannon-ROF7",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Rate of Fire Mk7",
+        "requiredResearch": [
+            "R-WU-Autocannon-ROF6"
+        ],
         "researchPoints": 9204,
         "researchPower": 287,
         "results": [
@@ -4705,14 +4756,14 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "FirePause",
-                "value": -49
+                "value": -5
             },
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "ReloadTime",
-                "value": -49
+                "value": -5
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4722,7 +4773,12 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Autocannon-SPE1",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Special Mk1",
+        "requiredResearch": [
+            "R-WU-Autocannon-ROF5",
+            "R-WU-Autocannon-DMG3",
+            "R-WU-Autocannon-ACC3"
+        ],
         "researchPoints": 8204,
         "researchPower": 256,
         "resultComponents": [
@@ -4736,7 +4792,13 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Autocannon-SPE2",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Autocannon Special Mk2",
+        "requiredResearch": [
+            "R-WU-Autocannon-ROF7",
+            "R-WU-Autocannon-DMG5",
+            "R-WU-Autocannon-ACC5",
+            "R-WU-Autocannon-SPE1"
+        ],
         "researchPoints": 10938,
         "researchPower": 341,
         "resultComponents": [
@@ -10592,9 +10654,14 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Machinegun-SPE1",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Machinegun Special Mk1",
         "replacedComponents": [
             "FKCyborg-MG:FKCyborg-MG2"
+        ],
+        "requiredResearch": [
+            "R-WU-Machinegun-ROF5",
+            "R-WU-Machinegun-DMG3",
+            "R-WU-Machinegun-ACC3"
         ],
         "researchPoints": 8204,
         "researchPower": 256,
@@ -10609,9 +10676,15 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Machinegun-SPE2",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Machinegun Special Mk2",
         "replacedComponents": [
             "FKCyborg-MG2:FKCyborg-MG3"
+        ],
+        "requiredResearch": [
+            "R-WU-Machinegun-ROF7",
+            "R-WU-Machinegun-DMG5",
+            "R-WU-Machinegun-ACC5",
+            "R-WU-Machinegun-SPE1"
         ],
         "researchPoints": 10938,
         "researchPower": 341,
