@@ -558,7 +558,6 @@
         "buildPoints": 45000,
         "buildPower": 250,
         "damage": 1,
-        "designable": 1,
         "effectSize": 1,
         "facePlayer": 1,
         "firePause": 1,
