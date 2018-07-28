@@ -748,6 +748,9 @@ for chain in upgrades:
 					else:
 						print("'class', 'filterValue', 'filterParameter' and/or 'parameter' of", research, "and/or", prereq, "missing.")
 
+# Step 7: Fix for hiding commander templates
+resJSON['R-Commander']['resultComponents'] = [resJSON['R-Commander']['resultComponents'][0], 'FK-Commander' ]
+
 # Save JSON dump
 with open('../jsondata/mp/stats/research.json', 'w') as f:
 	json.dump(resJSON, fp=f, indent=4, sort_keys=True)

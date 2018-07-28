@@ -622,7 +622,8 @@
         "researchPoints": 6563,
         "researchPower": 205,
         "resultComponents": [
-            "CommandBrain01"
+            "CommandBrain01",
+            "FK-Commander"
         ],
         "statID": "CommandBrain01",
         "subgroupIconID": "IMAGE_RES_SYSTEMTECH"
