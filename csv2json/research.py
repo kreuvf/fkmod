@@ -227,6 +227,11 @@ with open("../data/mp/stats/research/multiplayer/resultstructure.txt", 'r') as f
 	reader = csv.reader(f, delimiter=",")
 	resstructCSV = list(reader)
 
+# Get all command turrets (to know which weapon has to become a research result)
+with open("../data/mp/stats/brain.txt", 'r') as f:
+	reader = csv.reader(f, delimiter=",")	
+	brains = list(reader)
+
 # Read file to populate names
 with open("../data/mp/messages/strings/names.txt", 'r') as f:
 	names = f.readlines()
@@ -319,6 +324,10 @@ for resline in resCSV:
 	for rescompline in rescompCSV:
 		if rescompline[0] == col_id:
 			rescomp.append(rescompline[1])
+			# Special case: Command Turrets need corresponding weapon turret
+			for brain in brains:
+				if rescompline[1] == brain[0]:
+					rescomp.append(brain[7])
 	if len(rescomp):
 		feedstrs([('resultComponents', rescomp)], resJSON[col_id])
 	
@@ -747,9 +756,6 @@ for chain in upgrades:
 							print("'class', 'filterValue', 'filterParameter' and/or 'parameter' of", research, "and", prereq, "do not match.")
 					else:
 						print("'class', 'filterValue', 'filterParameter' and/or 'parameter' of", research, "and/or", prereq, "missing.")
-
-# Step 7: Fix for hiding commander templates
-resJSON['R-Commander']['resultComponents'] = [resJSON['R-Commander']['resultComponents'][0], 'FK-Commander' ]
 
 # Save JSON dump
 with open('../jsondata/mp/stats/research.json', 'w') as f:
