@@ -1,7 +1,7 @@
 {
     "FKCyborgEngineer": {
         "buildPoints": 65,
-        "buildPower": 10,
+        "buildPower": 40,
         "constructPoints": 500,
         "designable": 1,
         "hitpoints": 35,
