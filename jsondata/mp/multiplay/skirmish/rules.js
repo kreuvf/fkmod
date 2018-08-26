@@ -711,7 +711,7 @@ function checkEndConditions()
 	{
 		if (playnum != selectedPlayer && !allianceExistsBetween(selectedPlayer, playnum))	// checking enemy player
 		{
-			factories = countStruct("FKTankFactory") + countStruct("FKCyborgFactory") + countStruct("FKVTOLFactory");
+			factories = countStruct("FKTankFactory", playnum) + countStruct("FKCyborgFactory", playnum) + countStruct("FKVTOLFactory", playnum);
 			droids = countDroid(DROID_ANY, playnum);
 			if (droids > 0 || factories > 0)
 			{
