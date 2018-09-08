@@ -1,13 +1,9 @@
-TODO for FKmod
-==============
+# TODO for FKmod
 
-Requirements for Final Version
-------------------------------
+## Requirements for Final Version
 
-Nice to Have for Final Version
-------------------------------
-Code
-----
+## Nice to Have for Final Version
+### Code
 * Debug switch to turn off data checking
 * EMP weapons should do some damage
 * Flamer incendiary damage can burn the same target multiple times, when penetrate is on
@@ -21,10 +17,8 @@ Code
 	* Walls are not attacked at will
 * VTOL Strike Tower menu to select target classes (aerial, ground, mobile)
 
-Miscellaneous
--------------
+### Miscellaneous
 * Surveillance Tower: Sensor is floating on top of tower
 * Propulsion changing: Changing the propulsion of an existing design does not change until weapon is changed afterwards
 * Maybe use Super cyborg models for easier selection
-
 
