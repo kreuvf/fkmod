@@ -3,6 +3,7 @@
 ## Requirements for Final Version
 ### Pre-Release Polishing
 * Intelligence Screen
+* Hint at the results of weapon research by using appropriate icons and models (Cyborg weapon for Cyborg-only weapons)
 * Set up build infrastructure for Windows and deb packages
 * Set up default map (not Rush)
 * Set up default AI
