@@ -3,13 +3,13 @@ TODO for FKmod
 
 Requirements for Final Version
 ------------------------------
-* Code: EMP weapons should do some damage
 
 Nice to Have for Final Version
 ------------------------------
 Code
 ----
 * Debug switch to turn off data checking
+* EMP weapons should do some damage
 * Flamer incendiary damage can burn the same target multiple times, when penetrate is on
 	* Penetrate = on impact, spawn new projectile
 	* new projectile lands somewhere, sets fire to the area -> burn effect from new projectile
