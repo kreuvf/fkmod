@@ -3,7 +3,6 @@
         "buildPoints": 65,
         "buildPower": 40,
         "constructPoints": 500,
-        "designable": 1,
         "hitpoints": 35,
         "id": "FKCyborgEngineer",
         "mountModel": "cybody.pie",

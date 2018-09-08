@@ -3,7 +3,6 @@
 ## Requirements for Final Version
 ### Pre-Release Polishing
 * Intelligence Screen
-* Remove Cyborg parts from design screen
 * Set up build infrastructure for Windows and deb packages
 * Set up default map (not Rush)
 * Set up default AI
