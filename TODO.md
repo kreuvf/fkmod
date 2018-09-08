@@ -1,11 +1,22 @@
 # TODO for FKmod
 
 ## Requirements for Final Version
+### Pre-Release Polishing
+* Intelligence Screen
+* Remove Cyborg parts from design screen
+* Set up build infrastructure for Windows and deb packages
+* Set up default map (not Rush)
+* Set up default AI
+* Replace/remove default units and structures in all packaged maps
+* Add end user readme
 
 ## Nice to Have for Final Version
 ### Code
 * Debug switch to turn off data checking
 * EMP weapons should do some damage
+* Flamer effects stack indefinitely
+	* Move burn effect logic away from projectile to unit
+	* Reorganize allocation of experience from damage
 * Flamer incendiary damage can burn the same target multiple times, when penetrate is on
 	* Penetrate = on impact, spawn new projectile
 	* new projectile lands somewhere, sets fire to the area -> burn effect from new projectile
