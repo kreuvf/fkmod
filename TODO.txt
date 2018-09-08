@@ -4,9 +4,6 @@ TODO for FKmod
 Requirements for Final Version
 ------------------------------
 * Code: EMP weapons should do some damage
-* Balancing
-	* MG damage vs. ground units too high
-	* FLAMER structure modifier bit too low
 
 Nice to Have for Final Version
 ------------------------------
