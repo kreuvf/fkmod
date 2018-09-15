@@ -45,7 +45,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-BodyPoints1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-BodyPoints1",
         "imdName": "icmolql.pie",
         "msgName": "RES_DF_HCW1",
@@ -71,7 +71,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-BodyPoints2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-BodyPoints2",
         "imdName": "icmolql.pie",
         "msgName": "RES_DF_HCW1",
@@ -100,7 +100,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-BodyPoints3": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-BodyPoints3",
         "imdName": "icmolql.pie",
         "msgName": "RES_DF_HCW1",
@@ -129,7 +129,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-BodyPoints4": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-BodyPoints4",
         "imdName": "icmolql.pie",
         "msgName": "RES_DF_HCW1",
@@ -158,7 +158,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-BodyPoints5": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-BodyPoints5",
         "imdName": "icmolql.pie",
         "msgName": "RES_DF_HCW1",
@@ -187,7 +187,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-Engine1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-Engine1",
         "imdName": "iceng.pie",
         "msgName": "RES_DF_HCW1",
@@ -213,7 +213,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-Engine2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-Engine2",
         "imdName": "iceng.pie",
         "msgName": "RES_DF_HCW1",
@@ -242,7 +242,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-Engine3": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-Engine3",
         "imdName": "iceng.pie",
         "msgName": "RES_DF_HCW1",
@@ -271,7 +271,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-Engine4": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-Engine4",
         "imdName": "iceng.pie",
         "msgName": "RES_DF_HCW1",
@@ -300,7 +300,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-Engine5": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-Engine5",
         "imdName": "iceng.pie",
         "msgName": "RES_DF_HCW1",
@@ -329,7 +329,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-KineticArmour1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-KineticArmour1",
         "imdName": "icmolql.pie",
         "msgName": "RES_DF_HCW1",
@@ -355,7 +355,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-KineticArmour2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-KineticArmour2",
         "imdName": "icmolql.pie",
         "msgName": "RES_DF_HCW1",
@@ -384,7 +384,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-KineticArmour3": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-KineticArmour3",
         "imdName": "icmolql.pie",
         "msgName": "RES_DF_HCW1",
@@ -413,7 +413,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-KineticArmour4": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-KineticArmour4",
         "imdName": "icmolql.pie",
         "msgName": "RES_DF_HCW1",
@@ -442,7 +442,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-KineticArmour5": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-KineticArmour5",
         "imdName": "icmolql.pie",
         "msgName": "RES_DF_HCW1",
@@ -471,7 +471,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-ThermalArmour1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-ThermalArmour1",
         "imdName": "icamrhot.pie",
         "msgName": "RES_DF_HCW1",
@@ -497,7 +497,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-ThermalArmour2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-ThermalArmour2",
         "imdName": "icamrhot.pie",
         "msgName": "RES_DF_HCW1",
@@ -526,7 +526,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-ThermalArmour3": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-ThermalArmour3",
         "imdName": "icamrhot.pie",
         "msgName": "RES_DF_HCW1",
@@ -555,7 +555,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-ThermalArmour4": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-ThermalArmour4",
         "imdName": "icamrhot.pie",
         "msgName": "RES_DF_HCW1",
@@ -584,7 +584,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-BU-ThermalArmour5": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-BU-ThermalArmour5",
         "imdName": "icamrhot.pie",
         "msgName": "RES_DF_HCW1",
@@ -613,6 +613,7 @@
         "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-Commander": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-Commander",
         "msgName": "RES_DF_HCW1",
         "name": "Command Turret",
@@ -1443,6 +1444,7 @@
         "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
     },
     "R-Repair": {
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Repair",
         "msgName": "RES_DF_HCW1",
         "name": "Repair",
@@ -1454,7 +1456,7 @@
             "FKCyborgRepair"
         ],
         "statID": "FKTankRepair",
-        "subgroupIconID": "IMAGE_RES_SYSTEMTECH"
+        "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-Res1": {
         "iconID": "IMAGE_RES_GRPUPG",
@@ -1625,7 +1627,7 @@
         "resultStructures": [
             "FKTowerArtillery"
         ],
-        "statID": "FKArtillerySensor",
+        "statID": "FKTowerArtillery",
         "subgroupIconID": "IMAGE_RES_SYSTEMTECH"
     },
     "R-SensorCB": {
@@ -1640,10 +1642,11 @@
         "resultStructures": [
             "FKTowerCB"
         ],
-        "statID": "FKCBSensor",
+        "statID": "FKTowerCB",
         "subgroupIconID": "IMAGE_RES_SYSTEMTECH"
     },
     "R-SensorSurveillance": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-SensorSurveillance",
         "msgName": "RES_DF_HCW1",
         "name": "Surveillance Sensor",
@@ -1657,7 +1660,7 @@
             "FKTowerSurveillance"
         ],
         "statID": "FKSurveillanceSensor",
-        "subgroupIconID": "IMAGE_RES_SYSTEMTECH"
+        "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-SensorVTOL": {
         "id": "R-SensorVTOL",
@@ -1671,7 +1674,7 @@
         "resultStructures": [
             "FKTowerVTOL"
         ],
-        "statID": "FKVTOLSensor",
+        "statID": "FKTowerVTOL",
         "subgroupIconID": "IMAGE_RES_SYSTEMTECH"
     },
     "R-St-RepairFacility": {
@@ -1990,6 +1993,7 @@
         "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-W-ART-Howitzer": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-W-ART-Howitzer",
         "msgName": "RES_DF_HCW1",
         "name": "Howitzer",
@@ -2008,6 +2012,7 @@
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
     "R-W-ART-RocketBattery": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-W-ART-RocketBattery",
         "msgName": "RES_DF_HCW1",
         "name": "Rocket Battery",
@@ -2026,6 +2031,7 @@
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
     "R-W-FF-AAHurricane": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-FF-AAHurricane",
         "msgName": "RES_DF_HCW1",
         "name": "Hurricane AA",
@@ -2038,9 +2044,10 @@
             "FK-FF-AAHurricane"
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_DEFENCE"
     },
     "R-W-FF-Autocannon": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-FF-Autocannon",
         "msgName": "RES_DF_HCW1",
         "name": "Autocannon",
@@ -2054,6 +2061,7 @@
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
     "R-W-FF-Machinegun": {
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-W-FF-Machinegun",
         "msgName": "RES_DF_HCW1",
         "name": "Machinegun",
@@ -2063,10 +2071,11 @@
             "FKCyborg-MG",
             "FK-FF-Machinegun-Cyborg"
         ],
-        "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "statID": "FK-FF-Machinegun-Cyborg",
+        "subgroupIconID": "IMAGE_RES_DEFENCE"
     },
     "R-W-HOT-AAStormbringer": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-HOT-AAStormbringer",
         "msgName": "RES_DF_HCW1",
         "name": "Stormbringer AA",
@@ -2079,9 +2088,10 @@
             "FK-HOT-AAStormbringer"
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_DEFENCE"
     },
     "R-W-HOT-BombThermite": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-HOT-BombThermite",
         "imdName": "trlvtlin.PIE",
         "msgName": "RES_DF_HCW1",
@@ -2097,6 +2107,7 @@
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
     "R-W-HOT-Flamethrower": {
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-W-HOT-Flamethrower",
         "msgName": "RES_DF_HCW1",
         "name": "Flamethrower",
@@ -2110,6 +2121,7 @@
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
     "R-W-HOT-HowitzerIncendiary": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-W-HOT-HowitzerIncendiary",
         "msgName": "RES_DF_HCW1",
         "name": "Incendiary Howitzer",
@@ -2129,6 +2141,7 @@
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
     "R-W-HOT-Laser": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-HOT-Laser",
         "msgName": "RES_DF_HCW1",
         "name": "Laser",
@@ -2141,6 +2154,7 @@
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
     "R-W-MIS-AAAvengerSAM": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-MIS-AAAvengerSAM",
         "msgName": "RES_DF_HCW1",
         "name": "Avenger SAM",
@@ -2153,9 +2167,10 @@
             "FK-MIS-AAAvengerSAM"
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_DEFENCE"
     },
     "R-W-MIS-Lancer": {
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-W-MIS-Lancer",
         "msgName": "RES_DF_HCW1",
         "name": "Lancer",
@@ -2166,10 +2181,11 @@
             "FKCyborg-Lancer",
             "FK-MIS-Lancer-Cyborg"
         ],
-        "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "statID": "FK-MIS-Lancer-Cyborg",
+        "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-W-MIS-ScourgeMissile": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-MIS-ScourgeMissile",
         "msgName": "RES_DF_HCW1",
         "name": "Scourge Missile",
@@ -2182,6 +2198,7 @@
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
     "R-W-SF-AACyclone": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-W-SF-AACyclone",
         "msgName": "RES_DF_HCW1",
         "name": "Cyclone AA",
@@ -2197,6 +2214,7 @@
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
     "R-W-SF-BombHeavy": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-SF-BombHeavy",
         "imdName": "trmvtlhe.PIE",
         "msgName": "RES_DF_HCW1",
@@ -2212,6 +2230,7 @@
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
     "R-W-SF-Cannon": {
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-W-SF-Cannon",
         "msgName": "RES_DF_HCW1",
         "name": "Cannon",
@@ -2221,10 +2240,11 @@
             "FKCyborg-Cannon",
             "FK-SF-Cannon-Cyborg"
         ],
-        "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "statID": "FK-SF-Cannon-Cyborg",
+        "subgroupIconID": "IMAGE_RES_DEFENCE"
     },
     "R-W-SF-Railgun": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-SF-Railgun",
         "msgName": "RES_DF_HCW1",
         "name": "Railgun",
@@ -2237,6 +2257,7 @@
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
     "R-W-SPL-BombCluster": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-SPL-BombCluster",
         "imdName": "trlvtlhe.PIE",
         "msgName": "RES_DF_HCW1",
@@ -2252,6 +2273,7 @@
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
     },
     "R-W-SPL-GrenadeLauncher": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-SPL-GrenadeLauncher",
         "msgName": "RES_DF_HCW1",
         "name": "Grenade Launcher",
@@ -2266,7 +2288,7 @@
             "FK-SPL-GrenadeLauncher-Cyborg"
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_DEFENCE"
     },
     "R-WU-AAAvengerSAM-ACC1": {
         "iconID": "IMAGE_RES_GRPACC",
