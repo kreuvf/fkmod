@@ -3,6 +3,7 @@
 ## Requirements for Final Version
 ### Pre-Release Polishing
 * Intelligence Screen
+* Hurricane AA depends on Cyborg MG, although Tank MG seems to be the more logical choice
 * Set up build infrastructure for Windows and deb packages
 * Set up default map (not Rush)
 * Set up default AI
