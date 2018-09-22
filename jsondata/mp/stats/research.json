@@ -2036,7 +2036,7 @@
         "msgName": "RES_DF_HCW1",
         "name": "Hurricane AA",
         "requiredResearch": [
-            "R-W-FF-Machinegun"
+            "R-W-FF-Autocannon"
         ],
         "researchPoints": 4375,
         "researchPower": 136,

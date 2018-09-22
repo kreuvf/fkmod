@@ -116,7 +116,7 @@ R-U-CyborgTransport,R-P-VTOL,1420
 R-U-CyborgTransport,R-BU-Engine3,1421
 R-W-ART-Howitzer,R-W-SF-Cannon,1422
 R-W-ART-RocketBattery,R-W-MIS-ScourgeMissile,1423
-R-W-FF-AAHurricane,R-W-FF-Machinegun,1424
+R-W-FF-AAHurricane,R-W-FF-Autocannon,1424
 R-W-HOT-AAStormbringer,R-W-HOT-Laser,1425
 R-W-HOT-BombThermite,R-P-VTOL,1427
 R-W-HOT-HowitzerIncendiary,R-W-ART-Howitzer,1428
