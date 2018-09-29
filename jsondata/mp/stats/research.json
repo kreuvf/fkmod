@@ -3933,7 +3933,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAStormbringer-ACC5",
         "msgName": "RES_DF_HCW1",
-        "name": "AStormbringer AA ccuracy Mk5",
+        "name": "Stormbringer AA Accuracy Mk5",
         "requiredResearch": [
             "R-WU-AAStormbringer-ACC4"
         ],
