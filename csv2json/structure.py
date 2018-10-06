@@ -14,7 +14,7 @@ with open('../data/mp/stats/structures.txt', 'r') as file:
 	
 with open('../data/mp/stats/structureweapons.txt', 'r') as file:
 	reader = csv.reader(file, delimiter=',')
-	weapons = list(reader)[1:]
+	weapons = list(reader)
 
 # Read file to populate names
 with open("../data/mp/messages/strings/names.txt", 'r') as f:

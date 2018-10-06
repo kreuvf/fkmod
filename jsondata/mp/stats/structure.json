@@ -36,6 +36,9 @@
         ],
         "thermal": 12,
         "type": "DEFENSE",
+        "weapons": [
+            "MG3Mk1"
+        ],
         "width": 1
     },
     "A0BaBaFactory": {
