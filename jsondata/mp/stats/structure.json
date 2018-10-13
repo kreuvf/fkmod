@@ -1426,5 +1426,24 @@
         "thermal": 300,
         "type": "GATE",
         "width": 1
+    },
+    "LookOutTower": {
+        "armour": 5,
+        "breadth": 1,
+        "buildPoints": 5,
+        "buildPower": 5,
+        "ecmID": "ZNULLECM",
+        "height": 2,
+        "hitpoints": 400,
+        "id": "LookOutTower",
+        "name": "Look-Out Tower",
+        "sensorID": "BaBaSensor",
+        "strength": "MEDIUM",
+        "structureModel": [
+            "blbrlook.PIE"
+        ],
+        "thermal": 5,
+        "type": "CORNER WALL",
+        "width": 1
     }
 }
