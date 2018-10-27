@@ -241,6 +241,34 @@
         ],
         "startpos": 1
     },
+    "structure_0053": {
+        "name": "FKHardpointCannon",
+        "position": [
+            1984,
+            3392,
+            28
+        ],
+        "rotation": [
+            0,
+            0,
+            0
+        ],
+        "startpos": 1
+    },
+    "structure_0054": {
+        "name": "FKHardpointCannon",
+        "position": [
+            2240,
+            3392,
+            14
+        ],
+        "rotation": [
+            0,
+            0,
+            0
+        ],
+        "startpos": 1
+    },
     "structure_0055": {
         "name": "FKBunkerMG",
         "position": [
@@ -296,6 +324,34 @@
             0
         ],
         "startpos": 1
+    },
+    "structure_0060": {
+        "name": "FKHardpointCannon",
+        "position": [
+            4800,
+            13504,
+            110
+        ],
+        "rotation": [
+            0,
+            0,
+            0
+        ],
+        "startpos": 0
+    },
+    "structure_0061": {
+        "name": "FKHardpointCannon",
+        "position": [
+            5056,
+            13504,
+            110
+        ],
+        "rotation": [
+            0,
+            0,
+            0
+        ],
+        "startpos": 0
     },
     "structure_0065": {
         "name": "A0ResourceExtractor",

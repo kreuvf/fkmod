@@ -982,6 +982,34 @@
         ],
         "startpos": 0
     },
+    "structure_0590": {
+        "name": "FKBunkerCannon",
+        "position": [
+            2240,
+            2624,
+            510
+        ],
+        "rotation": [
+            0,
+            0,
+            0
+        ],
+        "startpos": 0
+    },
+    "structure_0591": {
+        "name": "FKBunkerCannon",
+        "position": [
+            1856,
+            3136,
+            404
+        ],
+        "rotation": [
+            0,
+            0,
+            0
+        ],
+        "startpos": 0
+    },
     "structure_0593": {
         "name": "FKWall",
         "position": [
@@ -1332,12 +1360,40 @@
         ],
         "startpos": 1
     },
+    "structure_0618": {
+        "name": "FKBunkerCannon",
+        "position": [
+            9792,
+            9408,
+            510
+        ],
+        "rotation": [
+            0,
+            0,
+            0
+        ],
+        "startpos": 1
+    },
     "structure_0619": {
         "name": "FKBunkerMG",
         "position": [
             9920,
             9152,
             408
+        ],
+        "rotation": [
+            0,
+            0,
+            0
+        ],
+        "startpos": 1
+    },
+    "structure_0620": {
+        "name": "FKBunkerCannon",
+        "position": [
+            10176,
+            8896,
+            404
         ],
         "rotation": [
             0,
