@@ -97,6 +97,7 @@ for key, value in data.items():
 		doomed.append(key)
 
 for structure in doomed:
+	print("Removed '{}' named '{}'".format(structure, data[structure]["name"]))
 	data.pop(structure)
 
 with open(sys.argv[1], 'w') as outfile:
