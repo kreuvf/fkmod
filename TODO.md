@@ -6,7 +6,6 @@
 * Set up build infrastructure for Windows and deb packages
 * Set up default map (not Rush)
 * Set up default AI
-* Replace/remove default units and structures in all packaged maps
 * Add end user readme
 
 ## Nice to Have for Final Version
