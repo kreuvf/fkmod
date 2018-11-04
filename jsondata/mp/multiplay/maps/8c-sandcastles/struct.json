@@ -1,6 +1,6 @@
 {
     "structure_0048": {
-        "name": "A0LightFactory",
+        "name": "FKTankFactory",
         "position": [
             1472,
             1216,
@@ -14,8 +14,8 @@
         "startpos": 0
     },
     "structure_0049": {
-        "modules": 1,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             1472,
             1856,
@@ -28,37 +28,9 @@
         ],
         "startpos": 0
     },
-    "structure_0051": {
-        "name": "A0ComDroidControl",
-        "position": [
-            896,
-            1152,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 0
-    },
-    "structure_0052": {
-        "name": "A0CommandCentre",
-        "position": [
-            896,
-            640,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 0
-    },
     "structure_0053": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             896,
             1536,
@@ -72,8 +44,8 @@
         "startpos": 0
     },
     "structure_0055": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             1408,
             640,
@@ -87,8 +59,8 @@
         "startpos": 0
     },
     "structure_0056": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             896,
             1920,
@@ -158,7 +130,7 @@
         "startpos": 0
     },
     "structure_0063": {
-        "name": "A0CyborgFactory",
+        "name": "FKCyborgFactory",
         "position": [
             1856,
             1152,
@@ -172,7 +144,7 @@
         "startpos": 0
     },
     "structure_0064": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             1600,
             3008,
@@ -186,7 +158,7 @@
         "startpos": 0
     },
     "structure_0065": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             1984,
             3008,
@@ -200,7 +172,7 @@
         "startpos": 0
     },
     "structure_0066": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             3520,
             1088,
@@ -214,7 +186,7 @@
         "startpos": 0
     },
     "structure_0067": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             3520,
             704,
@@ -228,7 +200,7 @@
         "startpos": 0
     },
     "structure_0073": {
-        "name": "A0LightFactory",
+        "name": "FKTankFactory",
         "position": [
             22720,
             576,
@@ -242,8 +214,8 @@
         "startpos": 1
     },
     "structure_0074": {
-        "modules": 1,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             23232,
             576,
@@ -256,37 +228,9 @@
         ],
         "startpos": 1
     },
-    "structure_0076": {
-        "name": "A0ComDroidControl",
-        "position": [
-            23040,
-            1152,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 1
-    },
-    "structure_0077": {
-        "name": "A0CommandCentre",
-        "position": [
-            23936,
-            640,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 1
-    },
     "structure_0078": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             23424,
             1152,
@@ -300,8 +244,8 @@
         "startpos": 1
     },
     "structure_0080": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             22656,
             1152,
@@ -315,8 +259,8 @@
         "startpos": 1
     },
     "structure_0081": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             22656,
             1536,
@@ -386,7 +330,7 @@
         "startpos": 1
     },
     "structure_0088": {
-        "name": "A0CyborgFactory",
+        "name": "FKCyborgFactory",
         "position": [
             23616,
             640,
@@ -400,7 +344,7 @@
         "startpos": 1
     },
     "structure_0089": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             21312,
             704,
@@ -414,7 +358,7 @@
         "startpos": 1
     },
     "structure_0090": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             21312,
             1088,
@@ -428,7 +372,7 @@
         "startpos": 1
     },
     "structure_0091": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             22848,
             3008,
@@ -442,7 +386,7 @@
         "startpos": 1
     },
     "structure_0092": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             23232,
             3008,
@@ -456,7 +400,7 @@
         "startpos": 1
     },
     "structure_0097": {
-        "name": "A0LightFactory",
+        "name": "FKTankFactory",
         "position": [
             2112,
             23488,
@@ -470,8 +414,8 @@
         "startpos": 2
     },
     "structure_0098": {
-        "modules": 1,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             1600,
             23488,
@@ -484,37 +428,9 @@
         ],
         "startpos": 2
     },
-    "structure_0100": {
-        "name": "A0ComDroidControl",
-        "position": [
-            2304,
-            24064,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 2
-    },
-    "structure_0101": {
-        "name": "A0CommandCentre",
-        "position": [
-            1024,
-            24064,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 2
-    },
     "structure_0102": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             2688,
             24064,
@@ -528,8 +444,8 @@
         "startpos": 2
     },
     "structure_0104": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             1920,
             24064,
@@ -543,8 +459,8 @@
         "startpos": 2
     },
     "structure_0105": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             1536,
             24064,
@@ -614,7 +530,7 @@
         "startpos": 2
     },
     "structure_0112": {
-        "name": "A0CyborgFactory",
+        "name": "FKCyborgFactory",
         "position": [
             2496,
             23552,
@@ -628,7 +544,7 @@
         "startpos": 2
     },
     "structure_0113": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             1088,
             22464,
@@ -642,7 +558,7 @@
         "startpos": 2
     },
     "structure_0114": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             3520,
             23104,
@@ -656,7 +572,7 @@
         "startpos": 2
     },
     "structure_0115": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             3520,
             23488,
@@ -670,7 +586,7 @@
         "startpos": 2
     },
     "structure_0116": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             1472,
             22464,
@@ -684,7 +600,7 @@
         "startpos": 2
     },
     "structure_0121": {
-        "name": "A0LightFactory",
+        "name": "FKTankFactory",
         "position": [
             23104,
             23744,
@@ -698,8 +614,8 @@
         "startpos": 3
     },
     "structure_0122": {
-        "modules": 1,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             23616,
             23744,
@@ -712,37 +628,9 @@
         ],
         "startpos": 3
     },
-    "structure_0124": {
-        "name": "A0ComDroidControl",
-        "position": [
-            22144,
-            23808,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 3
-    },
-    "structure_0125": {
-        "name": "A0CommandCentre",
-        "position": [
-            22528,
-            23808,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 3
-    },
     "structure_0126": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             22528,
             23296,
@@ -756,8 +644,8 @@
         "startpos": 3
     },
     "structure_0128": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             23424,
             23296,
@@ -771,8 +659,8 @@
         "startpos": 3
     },
     "structure_0129": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             23040,
             23296,
@@ -842,7 +730,7 @@
         "startpos": 3
     },
     "structure_0136": {
-        "name": "A0CyborgFactory",
+        "name": "FKCyborgFactory",
         "position": [
             24000,
             23808,
@@ -856,7 +744,7 @@
         "startpos": 3
     },
     "structure_0137": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             22592,
             22464,
@@ -870,7 +758,7 @@
         "startpos": 3
     },
     "structure_0138": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             21312,
             23232,
@@ -884,7 +772,7 @@
         "startpos": 3
     },
     "structure_0139": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             21312,
             22848,
@@ -898,7 +786,7 @@
         "startpos": 3
     },
     "structure_0140": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             22976,
             22464,
@@ -912,7 +800,7 @@
         "startpos": 3
     },
     "structure_0145": {
-        "name": "A0LightFactory",
+        "name": "FKTankFactory",
         "position": [
             1728,
             12864,
@@ -926,8 +814,8 @@
         "startpos": 4
     },
     "structure_0146": {
-        "modules": 1,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             1216,
             12864,
@@ -940,37 +828,9 @@
         ],
         "startpos": 4
     },
-    "structure_0148": {
-        "name": "A0ComDroidControl",
-        "position": [
-            640,
-            13440,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 4
-    },
-    "structure_0149": {
-        "name": "A0CommandCentre",
-        "position": [
-            640,
-            12928,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 4
-    },
     "structure_0150": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             640,
             12544,
@@ -984,8 +844,8 @@
         "startpos": 4
     },
     "structure_0152": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             640,
             12160,
@@ -999,8 +859,8 @@
         "startpos": 4
     },
     "structure_0153": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             1152,
             12160,
@@ -1070,7 +930,7 @@
         "startpos": 4
     },
     "structure_0160": {
-        "name": "A0CyborgFactory",
+        "name": "FKCyborgFactory",
         "position": [
             1088,
             13440,
@@ -1084,7 +944,7 @@
         "startpos": 4
     },
     "structure_0161": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             704,
             14144,
@@ -1098,7 +958,7 @@
         "startpos": 4
     },
     "structure_0162": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             1088,
             14144,
@@ -1112,7 +972,7 @@
         "startpos": 4
     },
     "structure_0163": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             3520,
             13376,
@@ -1126,7 +986,7 @@
         "startpos": 4
     },
     "structure_0164": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             3520,
             12992,
@@ -1140,7 +1000,7 @@
         "startpos": 4
     },
     "structure_0169": {
-        "name": "A0LightFactory",
+        "name": "FKTankFactory",
         "position": [
             22592,
             12608,
@@ -1154,8 +1014,8 @@
         "startpos": 5
     },
     "structure_0170": {
-        "modules": 1,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             23104,
             12608,
@@ -1168,37 +1028,9 @@
         ],
         "startpos": 5
     },
-    "structure_0172": {
-        "name": "A0ComDroidControl",
-        "position": [
-            22528,
-            13184,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 5
-    },
-    "structure_0173": {
-        "name": "A0CommandCentre",
-        "position": [
-            23424,
-            13568,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 5
-    },
     "structure_0174": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             22912,
             13568,
@@ -1212,8 +1044,8 @@
         "startpos": 5
     },
     "structure_0176": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             23424,
             13184,
@@ -1227,8 +1059,8 @@
         "startpos": 5
     },
     "structure_0177": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             22912,
             13184,
@@ -1298,7 +1130,7 @@
         "startpos": 5
     },
     "structure_0184": {
-        "name": "A0CyborgFactory",
+        "name": "FKCyborgFactory",
         "position": [
             23488,
             12672,
@@ -1312,7 +1144,7 @@
         "startpos": 5
     },
     "structure_0185": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             22976,
             11328,
@@ -1326,7 +1158,7 @@
         "startpos": 5
     },
     "structure_0186": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             21312,
             13120,
@@ -1340,7 +1172,7 @@
         "startpos": 5
     },
     "structure_0187": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             22592,
             11328,
@@ -1354,7 +1186,7 @@
         "startpos": 5
     },
     "structure_0188": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             21312,
             12736,
@@ -1368,7 +1200,7 @@
         "startpos": 5
     },
     "structure_0739": {
-        "name": "A0LightFactory",
+        "name": "FKTankFactory",
         "position": [
             14272,
             23616,
@@ -1382,8 +1214,8 @@
         "startpos": 6
     },
     "structure_0740": {
-        "modules": 1,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             14784,
             23616,
@@ -1396,37 +1228,9 @@
         ],
         "startpos": 6
     },
-    "structure_0742": {
-        "name": "A0ComDroidControl",
-        "position": [
-            13440,
-            24192,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 6
-    },
-    "structure_0743": {
-        "name": "A0CommandCentre",
-        "position": [
-            13824,
-            24192,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 6
-    },
     "structure_0744": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             13440,
             23680,
@@ -1440,8 +1244,8 @@
         "startpos": 6
     },
     "structure_0746": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             15488,
             23168,
@@ -1455,8 +1259,8 @@
         "startpos": 6
     },
     "structure_0747": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             13824,
             23680,
@@ -1526,7 +1330,7 @@
         "startpos": 6
     },
     "structure_0754": {
-        "name": "A0CyborgFactory",
+        "name": "FKCyborgFactory",
         "position": [
             15168,
             23680,
@@ -1540,7 +1344,7 @@
         "startpos": 6
     },
     "structure_0759": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             14272,
             22464,
@@ -1554,7 +1358,7 @@
         "startpos": 6
     },
     "structure_0760": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             14784,
             22464,
@@ -1568,7 +1372,7 @@
         "startpos": 6
     },
     "structure_0761": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             12864,
             23488,
@@ -1582,7 +1386,7 @@
         "startpos": 6
     },
     "structure_0762": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             12864,
             22976,
@@ -1596,7 +1400,7 @@
         "startpos": 6
     },
     "structure_0765": {
-        "name": "A0LightFactory",
+        "name": "FKTankFactory",
         "position": [
             10048,
             832,
@@ -1610,8 +1414,8 @@
         "startpos": 7
     },
     "structure_0766": {
-        "modules": 1,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             10688,
             832,
@@ -1624,37 +1428,9 @@
         ],
         "startpos": 7
     },
-    "structure_0768": {
-        "name": "A0ComDroidControl",
-        "position": [
-            9472,
-            1408,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 7
-    },
-    "structure_0769": {
-        "name": "A0CommandCentre",
-        "position": [
-            9856,
-            1408,
-            256
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 7
-    },
     "structure_0770": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             9216,
             896,
@@ -1668,8 +1444,8 @@
         "startpos": 7
     },
     "structure_0772": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             10496,
             1408,
@@ -1683,8 +1459,8 @@
         "startpos": 7
     },
     "structure_0773": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             9600,
             896,
@@ -1754,7 +1530,7 @@
         "startpos": 7
     },
     "structure_0780": {
-        "name": "A0CyborgFactory",
+        "name": "FKCyborgFactory",
         "position": [
             10176,
             1408,
@@ -1768,7 +1544,7 @@
         "startpos": 7
     },
     "structure_0787": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             10176,
             2368,
@@ -1782,7 +1558,7 @@
         "startpos": 7
     },
     "structure_0788": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             10688,
             2368,
@@ -1796,7 +1572,7 @@
         "startpos": 7
     },
     "structure_0789": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             11328,
             2368,
@@ -1810,7 +1586,7 @@
         "startpos": 7
     },
     "structure_0790": {
-        "name": "WallTower01",
+        "name": "FKHardpointMG",
         "position": [
             11328,
             2752,

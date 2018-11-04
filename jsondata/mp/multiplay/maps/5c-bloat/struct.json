@@ -1,7 +1,7 @@
 {
     "structure_100": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             13312,
             9856,
@@ -15,8 +15,8 @@
         "startpos": 2
     },
     "structure_101": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             12928,
             9856,
@@ -30,8 +30,8 @@
         "startpos": 2
     },
     "structure_102": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             11008,
             3712,
@@ -45,8 +45,8 @@
         "startpos": 1
     },
     "structure_103": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             11392,
             3712,
@@ -60,8 +60,8 @@
         "startpos": 1
     },
     "structure_104": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             4736,
             3840,
@@ -75,8 +75,8 @@
         "startpos": 0
     },
     "structure_105": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             5120,
             3840,
@@ -90,8 +90,8 @@
         "startpos": 0
     },
     "structure_116": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             3328,
             9856,
@@ -105,8 +105,8 @@
         "startpos": 4
     },
     "structure_117": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             2432,
             9856,
@@ -120,8 +120,8 @@
         "startpos": 4
     },
     "structure_118": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             2432,
             9088,
@@ -135,8 +135,8 @@
         "startpos": 4
     },
     "structure_119": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             4352,
             3840,
@@ -150,8 +150,8 @@
         "startpos": 0
     },
     "structure_120": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             4352,
             2944,
@@ -165,8 +165,8 @@
         "startpos": 0
     },
     "structure_121": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             5120,
             2944,
@@ -180,8 +180,8 @@
         "startpos": 0
     },
     "structure_122": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             10496,
             2816,
@@ -195,8 +195,8 @@
         "startpos": 1
     },
     "structure_123": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             11264,
             2816,
@@ -210,8 +210,8 @@
         "startpos": 1
     },
     "structure_124": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             10624,
             3712,
@@ -225,8 +225,8 @@
         "startpos": 1
     },
     "structure_125": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             12544,
             9856,
@@ -240,8 +240,8 @@
         "startpos": 2
     },
     "structure_126": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             12544,
             8960,
@@ -255,8 +255,8 @@
         "startpos": 2
     },
     "structure_127": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             13312,
             8960,
@@ -270,8 +270,8 @@
         "startpos": 2
     },
     "structure_128": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             7424,
             13568,
@@ -285,8 +285,8 @@
         "startpos": 3
     },
     "structure_129": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             7424,
             12672,
@@ -300,8 +300,8 @@
         "startpos": 3
     },
     "structure_130": {
-        "modules": 1,
-        "name": "A0ResearchFacility",
+        "modules": 0,
+        "name": "FKResearchFacility",
         "position": [
             8192,
             12672,
@@ -2849,84 +2849,9 @@
             0
         ]
     },
-    "structure_46": {
-        "modules": 0,
-        "name": "A0CommandCentre",
-        "position": [
-            4736,
-            2944,
-            0
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 0
-    },
-    "structure_47": {
-        "modules": 0,
-        "name": "A0CommandCentre",
-        "position": [
-            10880,
-            2816,
-            0
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 1
-    },
-    "structure_48": {
-        "modules": 0,
-        "name": "A0CommandCentre",
-        "position": [
-            12928,
-            8960,
-            0
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 2
-    },
-    "structure_49": {
-        "modules": 0,
-        "name": "A0CommandCentre",
-        "position": [
-            7808,
-            12672,
-            0
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 3
-    },
-    "structure_50": {
-        "modules": 0,
-        "name": "A0CommandCentre",
-        "position": [
-            2432,
-            9472,
-            0
-        ],
-        "rotation": [
-            0,
-            0,
-            0
-        ],
-        "startpos": 4
-    },
     "structure_51": {
-        "modules": 2,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             4160,
             3392,
@@ -2940,8 +2865,8 @@
         "startpos": 0
     },
     "structure_52": {
-        "modules": 2,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             4672,
             3392,
@@ -2955,8 +2880,8 @@
         "startpos": 0
     },
     "structure_53": {
-        "modules": 2,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             5184,
             3392,
@@ -2970,8 +2895,8 @@
         "startpos": 0
     },
     "structure_54": {
-        "modules": 2,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             10432,
             3264,
@@ -2985,8 +2910,8 @@
         "startpos": 1
     },
     "structure_55": {
-        "modules": 2,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             10944,
             3264,
@@ -3000,8 +2925,8 @@
         "startpos": 1
     },
     "structure_56": {
-        "modules": 2,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             11456,
             3264,
@@ -3015,8 +2940,8 @@
         "startpos": 1
     },
     "structure_57": {
-        "modules": 2,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             12480,
             9408,
@@ -3030,8 +2955,8 @@
         "startpos": 2
     },
     "structure_58": {
-        "modules": 2,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             12992,
             9408,
@@ -3045,8 +2970,8 @@
         "startpos": 2
     },
     "structure_59": {
-        "modules": 2,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             13504,
             9408,
@@ -3060,8 +2985,8 @@
         "startpos": 2
     },
     "structure_60": {
-        "modules": 2,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             7360,
             13120,
@@ -3075,8 +3000,8 @@
         "startpos": 3
     },
     "structure_61": {
-        "modules": 2,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             7872,
             13120,
@@ -3090,8 +3015,8 @@
         "startpos": 3
     },
     "structure_62": {
-        "modules": 2,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             8384,
             13120,
@@ -3105,8 +3030,8 @@
         "startpos": 3
     },
     "structure_63": {
-        "modules": 2,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             2880,
             8896,
@@ -3120,8 +3045,8 @@
         "startpos": 4
     },
     "structure_64": {
-        "modules": 2,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             2880,
             9408,
@@ -3135,8 +3060,8 @@
         "startpos": 4
     },
     "structure_65": {
-        "modules": 2,
-        "name": "A0LightFactory",
+        "modules": 0,
+        "name": "FKTankFactory",
         "position": [
             2880,
             9920,
@@ -3150,8 +3075,8 @@
         "startpos": 4
     },
     "structure_96": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             3328,
             8960,
@@ -3165,8 +3090,8 @@
         "startpos": 4
     },
     "structure_97": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             3328,
             9472,
@@ -3180,8 +3105,8 @@
         "startpos": 4
     },
     "structure_98": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             7808,
             13568,
@@ -3195,8 +3120,8 @@
         "startpos": 3
     },
     "structure_99": {
-        "modules": 1,
-        "name": "A0PowerGenerator",
+        "modules": 0,
+        "name": "FKPowerGenerator",
         "position": [
             8192,
             13568,
