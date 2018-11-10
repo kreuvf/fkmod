@@ -19,13 +19,13 @@
         "width": 1
     },
     "A0BaBaBunker": {
-        "armour": 12,
+        "armour": 200,
         "breadth": 1,
-        "buildPoints": 10,
+        "buildPoints": 5000,
         "buildPower": 100,
         "ecmID": "ZNULLECM",
         "height": 1,
-        "hitpoints": 600,
+        "hitpoints": 6000,
         "id": "A0BaBaBunker",
         "name": "Scavenger Bunker",
         "resistance": 150,
@@ -34,7 +34,7 @@
         "structureModel": [
             "blbrbbnk.PIE"
         ],
-        "thermal": 12,
+        "thermal": 200,
         "type": "DEFENSE",
         "weapons": [
             "MG3Mk1"
@@ -42,33 +42,33 @@
         "width": 1
     },
     "A0BaBaFactory": {
-        "armour": 5,
+        "armour": 150,
         "breadth": 1,
-        "buildPoints": 1,
+        "buildPoints": 500,
         "buildPower": 20,
         "ecmID": "ZNULLECM",
         "height": 2,
-        "hitpoints": 400,
+        "hitpoints": 4000,
         "id": "A0BaBaFactory",
         "name": "Scavenger Factory",
         "resistance": 150,
-        "sensorID": "ZNULLSENSOR",
+        "sensorID": "BaBaSensor",
         "strength": "MEDIUM",
         "structureModel": [
             "BLBRBFAC.PIE"
         ],
-        "thermal": 5,
+        "thermal": 150,
         "type": "FACTORY",
         "width": 2
     },
     "A0BaBaFlameTower": {
-        "armour": 7,
+        "armour": 200,
         "breadth": 1,
-        "buildPoints": 10,
+        "buildPoints": 5000,
         "buildPower": 100,
         "ecmID": "ZNULLECM",
         "height": 2,
-        "hitpoints": 400,
+        "hitpoints": 4000,
         "id": "A0BaBaFlameTower",
         "name": "Scavenger Flame Tower",
         "resistance": 150,
@@ -77,7 +77,7 @@
         "structureModel": [
             "Blbrtowf.pie"
         ],
-        "thermal": 7,
+        "thermal": 200,
         "type": "DEFENSE",
         "weapons": [
             "Flame1Mk1"
@@ -85,13 +85,13 @@
         "width": 1
     },
     "A0BaBaGunTower": {
-        "armour": 7,
+        "armour": 200,
         "breadth": 1,
-        "buildPoints": 10,
+        "buildPoints": 5000,
         "buildPower": 100,
         "ecmID": "ZNULLECM",
         "height": 2,
-        "hitpoints": 400,
+        "hitpoints": 4000,
         "id": "A0BaBaGunTower",
         "name": "Scavenger Gun Tower",
         "resistance": 150,
@@ -100,7 +100,7 @@
         "structureModel": [
             "BLBRBTW1.PIE"
         ],
-        "thermal": 7,
+        "thermal": 200,
         "type": "DEFENSE",
         "weapons": [
             "BuggyMG"
@@ -108,13 +108,13 @@
         "width": 1
     },
     "A0BaBaGunTowerEND": {
-        "armour": 7,
+        "armour": 200,
         "breadth": 1,
-        "buildPoints": 10,
+        "buildPoints": 5000,
         "buildPower": 20,
         "ecmID": "ZNULLECM",
         "height": 2,
-        "hitpoints": 400,
+        "hitpoints": 4000,
         "id": "A0BaBaGunTowerEND",
         "name": "*Scavenger End Tower*",
         "resistance": 150,
@@ -123,7 +123,7 @@
         "structureModel": [
             "Blbrbtw2.PIE"
         ],
-        "thermal": 7,
+        "thermal": 200,
         "type": "DEFENSE",
         "weapons": [
             "BuggyMG"
@@ -131,32 +131,32 @@
         "width": 1
     },
     "A0BaBaHorizontalWall": {
-        "armour": 7,
+        "armour": 200,
         "breadth": 1,
-        "buildPoints": 10,
+        "buildPoints": 5000,
         "buildPower": 10,
         "ecmID": "ZNULLECM",
         "height": 2,
-        "hitpoints": 300,
+        "hitpoints": 3000,
         "id": "A0BaBaHorizontalWall",
         "name": "Scavenger Horizontal Wall",
-        "sensorID": "BaBaSensor",
-        "strength": "SOFT",
+        "sensorID": "ZNULLSENSOR",
+        "strength": "MEDIUM",
         "structureModel": [
             "BLBRBWLH.PIE"
         ],
-        "thermal": 7,
+        "thermal": 200,
         "type": "WALL",
         "width": 1
     },
     "A0BaBaMortarPit": {
-        "armour": 10,
+        "armour": 200,
         "breadth": 1,
-        "buildPoints": 1,
+        "buildPoints": 500,
         "buildPower": 10,
         "ecmID": "ZNULLECM",
         "height": 1,
-        "hitpoints": 500,
+        "hitpoints": 5000,
         "id": "A0BaBaMortarPit",
         "name": "*BaBaMortarPit*",
         "resistance": 150,
@@ -165,7 +165,7 @@
         "structureModel": [
             "BLBRMRTP.PIE"
         ],
-        "thermal": 10,
+        "thermal": 200,
         "type": "DEFENSE",
         "weapons": [
             "Mortar1Mk1"
@@ -173,33 +173,33 @@
         "width": 1
     },
     "A0BaBaPowerGenerator": {
-        "armour": 5,
+        "armour": 150,
         "breadth": 1,
-        "buildPoints": 1,
+        "buildPoints": 500,
         "buildPower": 10,
         "ecmID": "ZNULLECM",
         "height": 2,
-        "hitpoints": 400,
+        "hitpoints": 4000,
         "id": "A0BaBaPowerGenerator",
         "name": "Scavenger Power Generator",
         "resistance": 150,
         "sensorID": "BaBaSensor",
-        "strength": "SOFT",
+        "strength": "MEDIUM",
         "structureModel": [
             "BLBRBGEN.PIE"
         ],
-        "thermal": 5,
+        "thermal": 150,
         "type": "POWER GENERATOR",
         "width": 1
     },
     "A0BaBaRocketPit": {
-        "armour": 10,
+        "armour": 200,
         "breadth": 1,
-        "buildPoints": 1,
+        "buildPoints": 500,
         "buildPower": 10,
         "ecmID": "ZNULLECM",
         "height": 1,
-        "hitpoints": 500,
+        "hitpoints": 5000,
         "id": "A0BaBaRocketPit",
         "name": "Scavenger Rocket Pit",
         "resistance": 150,
@@ -208,7 +208,7 @@
         "structureModel": [
             "EXROCKET.PIE"
         ],
-        "thermal": 10,
+        "thermal": 200,
         "type": "DEFENSE",
         "weapons": [
             "BabaPitRocket"
@@ -216,13 +216,13 @@
         "width": 1
     },
     "A0BaBaRocketPitAT": {
-        "armour": 10,
+        "armour": 200,
         "breadth": 1,
-        "buildPoints": 1,
+        "buildPoints": 500,
         "buildPower": 10,
         "ecmID": "ZNULLECM",
         "height": 1,
-        "hitpoints": 500,
+        "hitpoints": 5000,
         "id": "A0BaBaRocketPitAT",
         "name": "Scavenger AT-Rocket Pit",
         "resistance": 150,
@@ -231,7 +231,7 @@
         "structureModel": [
             "EXROCKET.PIE"
         ],
-        "thermal": 10,
+        "thermal": 200,
         "type": "DEFENSE",
         "weapons": [
             "BabaPitRocketAT"
@@ -239,32 +239,32 @@
         "width": 1
     },
     "A0BabaCornerWall": {
-        "armour": 5,
+        "armour": 200,
         "breadth": 1,
-        "buildPoints": 3,
+        "buildPoints": 1500,
         "buildPower": 20,
         "ecmID": "ZNULLECM",
         "height": 2,
-        "hitpoints": 300,
+        "hitpoints": 3000,
         "id": "A0BabaCornerWall",
         "name": "Scavenger CornerWall",
         "sensorID": "ZNULLSENSOR",
-        "strength": "SOFT",
+        "strength": "MEDIUM",
         "structureModel": [
             "BLBRBCR1.PIE"
         ],
-        "thermal": 5,
+        "thermal": 200,
         "type": "CORNER WALL",
         "width": 1
     },
     "A0CannonTower": {
-        "armour": 10,
+        "armour": 200,
         "breadth": 1,
-        "buildPoints": 5,
+        "buildPoints": 2500,
         "buildPower": 10,
         "ecmID": "ZNULLECM",
         "height": 2,
-        "hitpoints": 400,
+        "hitpoints": 4000,
         "id": "A0CannonTower",
         "name": "Cannon Tower",
         "resistance": 150,
@@ -273,7 +273,7 @@
         "structureModel": [
             "BLBRTOWR.PIE"
         ],
-        "thermal": 10,
+        "thermal": 200,
         "type": "DEFENSE",
         "weapons": [
             "BaBaCannon"
@@ -1428,13 +1428,13 @@
         "width": 1
     },
     "LookOutTower": {
-        "armour": 5,
+        "armour": 200,
         "breadth": 1,
-        "buildPoints": 5,
+        "buildPoints": 2500,
         "buildPower": 5,
         "ecmID": "ZNULLECM",
         "height": 2,
-        "hitpoints": 400,
+        "hitpoints": 4000,
         "id": "LookOutTower",
         "name": "Look-Out Tower",
         "sensorID": "BaBaSensor",
@@ -1442,7 +1442,7 @@
         "structureModel": [
             "blbrlook.PIE"
         ],
-        "thermal": 5,
+        "thermal": 200,
         "type": "CORNER WALL",
         "width": 1
     }
