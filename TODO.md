@@ -4,7 +4,6 @@
 ### Pre-Release Polishing
 * Intelligence Screen
 * Set up build infrastructure for Windows and deb packages
-* Set up default map (not Rush)
 * Set up default AI
 * Add end user readme
 

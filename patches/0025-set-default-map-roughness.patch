@@ -1,0 +1,12 @@
+diff --git a/src/configuration.h b/src/configuration.h
+index 1c615e6..be15a3c 100644
+--- a/src/configuration.h
++++ b/src/configuration.h
+@@ -30,6 +30,6 @@ bool reloadMPConfig(void);
+ void closeConfig(void);
+ 
+ /// Default map for Skirmish
+-static const char DEFAULTSKIRMISHMAP[] = "Sk-Rush";
++static const char DEFAULTSKIRMISHMAP[] = "Roughness-T1";
+ 
+ #endif // __INCLUDED_SRC_CONFIGURATION_H__
