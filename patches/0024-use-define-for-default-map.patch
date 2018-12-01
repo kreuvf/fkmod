@@ -1,0 +1,31 @@
+diff --git a/src/configuration.cpp b/src/configuration.cpp
+index 5e7b0fb..856fd1d 100644
+--- a/src/configuration.cpp
++++ b/src/configuration.cpp
+@@ -115,7 +115,7 @@ bool loadConfig()
+ 	sstrcpy(sPlayer, ini.value("playerName", _("Player")).toString().toUtf8().constData());
+ 
+ 	// Set a default map to prevent hosting games without a map.
+-	sstrcpy(game.map, "Sk-Rush");
++	sstrcpy(game.map, DEFAULTSKIRMISHMAP);
+ 	game.hash.setZero();
+ 	game.maxPlayers = 4;
+ 
+@@ -297,7 +297,7 @@ bool reloadMPConfig(void)
+ 		}
+ 
+ 		// Set a default map to prevent hosting games without a map.
+-		sstrcpy(game.map, "Sk-Rush");
++		sstrcpy(game.map, DEFAULTSKIRMISHMAP);
+ 		game.hash.setZero();
+ 		game.maxPlayers = 4;
+ 
+@@ -316,7 +316,7 @@ bool reloadMPConfig(void)
+ 	}
+ 
+ 	// Set a default map to prevent hosting games without a map.
+-	sstrcpy(game.map, "Sk-Rush");
++	sstrcpy(game.map, DEFAULTSKIRMISHMAP);
+ 	game.hash.setZero();
+ 	game.maxPlayers = 4;
+ 
