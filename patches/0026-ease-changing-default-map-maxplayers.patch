@@ -1,0 +1,55 @@
+diff --git a/src/configuration.cpp b/src/configuration.cpp
+index 856fd1d..e8755c0 100644
+--- a/src/configuration.cpp
++++ b/src/configuration.cpp
+@@ -117,7 +117,7 @@ bool loadConfig()
+ 	// Set a default map to prevent hosting games without a map.
+ 	sstrcpy(game.map, DEFAULTSKIRMISHMAP);
+ 	game.hash.setZero();
+-	game.maxPlayers = 4;
++	game.maxPlayers = DEFAULTSKIRMISHMAPMAXPLAYERS;
+ 
+ 	game.power = ini.value("powerLevel", LEV_MED).toInt();
+ 	game.base = ini.value("base", CAMP_BASE).toInt();
+@@ -299,7 +299,7 @@ bool reloadMPConfig(void)
+ 		// Set a default map to prevent hosting games without a map.
+ 		sstrcpy(game.map, DEFAULTSKIRMISHMAP);
+ 		game.hash.setZero();
+-		game.maxPlayers = 4;
++		game.maxPlayers = DEFAULTSKIRMISHMAPMAXPLAYERS;
+ 
+ 		ini.setValue("powerLevel", game.power);				// power
+ 		ini.setValue("base", game.base);				// size of base
+@@ -318,7 +318,7 @@ bool reloadMPConfig(void)
+ 	// Set a default map to prevent hosting games without a map.
+ 	sstrcpy(game.map, DEFAULTSKIRMISHMAP);
+ 	game.hash.setZero();
+-	game.maxPlayers = 4;
++	game.maxPlayers = DEFAULTSKIRMISHMAPMAXPLAYERS;
+ 
+ 	game.power = ini.value("powerLevel", LEV_MED).toInt();
+ 	game.base = ini.value("base", CAMP_BASE).toInt();
+diff --git a/src/configuration.h b/src/configuration.h
+index be15a3c..4e31974 100644
+--- a/src/configuration.h
++++ b/src/configuration.h
+@@ -31,5 +31,6 @@ void closeConfig(void);
+ 
+ /// Default map for Skirmish
+ static const char DEFAULTSKIRMISHMAP[] = "Roughness-T1";
++static const int DEFAULTSKIRMISHMAPMAXPLAYERS = 2;
+ 
+ #endif // __INCLUDED_SRC_CONFIGURATION_H__
+diff --git a/src/multiint.cpp b/src/multiint.cpp
+index 53e9f12..9c0bc1e 100644
+--- a/src/multiint.cpp
++++ b/src/multiint.cpp
+@@ -3817,7 +3817,7 @@ bool startMultiOptions(bool bReenter)
+ 			game.type = SKIRMISH;
+ 			sstrcpy(game.map, DEFAULTSKIRMISHMAP);
+ 			game.hash = levGetMapNameHash(game.map);
+-			game.maxPlayers = 4;
++			game.maxPlayers = DEFAULTSKIRMISHMAPMAXPLAYERS;
+ 		}
+ 
+ 		ingame.localOptionsReceived = false;
