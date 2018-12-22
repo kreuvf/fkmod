@@ -273,10 +273,16 @@ for resline in resCSV:
 		('iconID', resline[2]),
 		('subgroupIconID', resline[4]),
 		('imdName', resline[5]),
-		('msgName', resline[7]),
 		('statID', resline[8]),
 		('statID', resline[9])
 		]
+
+	# Add msgName only if the research is a key topic
+	# [7] contains the dummy msgName and is not used anymore
+	# [7] gets replaced with an automatically generated one
+	if int(resline[12]) == 1:
+		strlist.append(('msgName', ("RES_" + col_id[2:]).replace('-', '_')))
+	
 	# Add all eligible key value pairs to the dictionary
 	feedints(intlist, resJSON[col_id])
 	feedstrs(strlist, resJSON[col_id])
