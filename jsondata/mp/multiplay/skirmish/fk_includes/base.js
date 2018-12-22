@@ -60,6 +60,7 @@ function buildStructureAt(x, y, structure) {
 	if (!isStructureAvailable(structure, me)) return;
 	if (!builder) return;
 	var pos = pickStructLocation(builder, structure, x, y);
+	if (!pos) return;
 	orderDroidBuild(builder, DORDER_BUILD, structure, pos.x, pos.y);
 }
 
