@@ -59,7 +59,8 @@ function buildStructureAt(x, y, structure) {
 	var builder = findNearestIdleBuilder(x, y);
 	if (!isStructureAvailable(structure, me)) return;
 	if (!builder) return;
-	orderDroidBuild(builder, DORDER_BUILD, structure, x, y);
+	var pos = pickStructLocation(builder, structure, x, y);
+	orderDroidBuild(builder, DORDER_BUILD, structure, pos.x, pos.y);
 }
 
 // Struct for building priority list
@@ -73,6 +74,7 @@ function potStructure(id, x, y, priority) {
 // Try to have at least 1 oil derrick, 1 power generator and 1 factory
 function buildEssentials() {
 	var buildings = [];
+		// Check oil derricks
 	var numDerricks = enumStruct(me, BaseStructs.derricks[0]);
 	if (numDerricks < 1) {
 		var oil = enumFeature(-1).filter(function(feature) {
@@ -91,6 +93,23 @@ function buildEssentials() {
 			}
 		}
 	}
+	
+	// Check power generators
+	var numGens = enumStruct(me, BaseStructs.gens[0]);
+		if (numGens < 1) {
+			buildings.push(new potStructure(BaseStructs.gens[0], startPositions[me].x, startPositions[me].y, 0));
+		}
+	
+	// Check factories
+	var numFacs = enumStruct(me, BaseStructs.tankFac[0]) + enumStruct(me, BaseStructs.cybFac[0]);
+	if(numFacs < 1) {
+		if(playerPower(me) < 300) {
+			buildings.push(new potStructure(BaseStructs.cybFac[0], startPositions[me].x, startPositions[me].y, 0));
+		} else {
+			buildings.push(new potStructure(BaseStructs.tankFac[0], startPositions[me].x, startPositions[me].y, 0));
+		}
+	}
+	
 	return buildings;
 }
 
