@@ -113,8 +113,36 @@ function buildEssentials() {
 	return buildings;
 }
 
+// Build more oil derricks, if not enough power generation for existing buildings and there is safe oil
+function buildOil() {
+	var buildings = [];
+	var numDerricks = enumStruct(me, BaseStructs.derricks[0]).length;
+	var requiredOil = ( 4 +
+		enumStruct(me, BaseStructs.cybFac[0]).length + 
+		enumStruct(me, BaseStructs.tankFac[0]).length * 2 +
+		enumStruct(me, BaseStructs.vtolFac[0]).length * 2 +
+		enumStruct(me, BaseStructs.labs[0]).length * 2
+	)
+	if (numDerricks < requiredOil) {
+		var oil = enumFeature(-1).filter(function(feature) {
+			return feature.stattype == OIL_RESOURCE;
+		}).sort(function(one, two) {
+			return distanceToBase(one) - distanceToBase(two);
+		});
+		var safeOil = oil.filter(function(feature){
+			return isAreaSafe(feature.x, feature.y, 10);
+		});
+		if (safeOil.length > 0) {
+			buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[0].x, safeOil[0].y, 1));
+		}
+	}
+	
+	return buildings;
+}
+
 function buildSomething() {
 	var buildList = buildEssentials();
+	buildList = buildList.concat(buildOil());
 	var trucks = findIdleBuilders();
 	if (buildList.length > 0 && trucks.length > 0) {
 		buildStructureAt(buildList[0].x, buildList[0].y, buildList[0].id);
