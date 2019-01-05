@@ -134,9 +134,49 @@ function buildOil() {
 	return buildings;
 }
 
+function buildBase() {
+	var buildings = [];
+	var numDerricks = enumStruct(me, BaseStructs.derricks[0]).length;
+	var cybFacs = enumStruct(me, BaseStructs.cybFac[0]).length;
+	var tankFacs = enumStruct(me, BaseStructs.tankFac[0]).length;
+	var vtolFacs = enumStruct(me, BaseStructs.vtolFac[0]).length;
+	var labs = enumStruct(me, BaseStructs.labs[0]).length;
+	var gens = enumStruct(me, BaseStructs.gens[0]).length;
+	
+	if (numDerricks + 2 > gens * 4) {
+		buildings.push(new potStructure(BaseStructs.gens[0], startPositions[me].x, startPositions[me].y, 0));
+	}
+	
+	var requiredOil = (
+		cybFacs + 
+		tankFacs * 2 +
+		vtolFacs * 2 +
+		labs * 2
+	)	
+	if (numDerricks > requiredOil) {
+		if (labs == 0) {
+			buildings.push(new potStructure(BaseStructs.labs[0], startPositions[me].x, startPositions[me].y, 0));
+		} else if (cybFacs + tankFacs + vtolFacs < labs + 2 || labs == getStructureLimit(BaseStructs.labs[0], me)) {
+			if((tankFacs <= cybFacs || !isStructureAvailable(BaseStructs.cybFac[0], me)) && (tankFacs <= vtolFacs || !isStructureAvailable(BaseStructs.vtolFac[0], me))) {
+				buildings.push(new potStructure(BaseStructs.tankFac[0], startPositions[me].x, startPositions[me].y, 0));
+			} else if((cybFacs < tankFacs || !isStructureAvailable(BaseStructs.tankFac[0], me)) && (cybFacs <= vtolFacs || !isStructureAvailable(BaseStructs.vtolFac[0], me))) {
+				buildings.push(new potStructure(BaseStructs.cybFac[0], startPositions[me].x, startPositions[me].y, 0));
+			} else if(isStructureAvailable(BaseStructs.vtolFac[0], me)) {
+				buildings.push(new potStructure(BaseStructs.vtolFac[0], startPositions[me].x, startPositions[me].y, 0));
+			}
+		} else {
+			buildings.push(new potStructure(BaseStructs.labs[0], startPositions[me].x, startPositions[me].y, 0));
+		}
+		
+	}
+	
+	return buildings;
+}
+
 function buildSomething() {
 	var buildList = buildEssentials();
 	buildList = buildList.concat(buildOil());
+	buildList = buildList.concat(buildBase());
 	var trucks = findIdleBuilders();
 	if (buildList.length > 0 && trucks.length > 0) {
 		for(var i = 0; i < buildList.length; i++) {
