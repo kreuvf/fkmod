@@ -82,8 +82,20 @@ function buildEssentials() {
 		if (oil.length > 0) {
 			if (safeOil.length == 0) {
 				buildings.push(new potStructure(BaseStructs.derricks[0], oil[0].x, oil[0].y, 0));
+				if (oil.length > 1) {
+					buildings.push(new potStructure(BaseStructs.derricks[0], oil[1].x, oil[1].y, 0));
+				}
 			} else {
 				buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[0].x, safeOil[0].y, 0));
+				if (safeOil.length > 1) {
+					buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[1].x, safeOil[1].y, 0));
+				} else if (oil.length > 1) {
+					if (oil[0] != safeOil[0]) {
+						buildings.push(new potStructure(BaseStructs.derricks[0], oil[0].x, oil[0].y, 0));
+					} else {
+						buildings.push(new potStructure(BaseStructs.derricks[0], oil[1].x, oil[1].y, 0));
+					}
+				}
 			}
 		}
 	}
@@ -126,7 +138,10 @@ function buildOil() {
 		var safeOil = oil.filter(function(feature){
 			return isAreaSafe(feature.x, feature.y, 10);
 		});
-		if (safeOil.length > 0) {
+		if (safeOil.length > 1) {
+			buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[0].x, safeOil[0].y, 1));
+			buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[1].x, safeOil[1].y, 1));
+		} else {
 			buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[0].x, safeOil[0].y, 1));
 		}
 	}
