@@ -55,14 +55,7 @@ function findNearestIdleBuilder(x, y) {
 	if (builders.length > 0) return builders[0];
 }
 
-function buildStructureAt(x, y, structure) {
-	var builder = findNearestIdleBuilder(x, y);
-	if (!isStructureAvailable(structure, me)) return;
-	if (!builder) return;
-	var pos = pickStructLocation(builder, structure, x, y);
-	if (!pos) return;
-	orderDroidBuild(builder, DORDER_BUILD, structure, pos.x, pos.y);
-}
+
 
 // Struct for building priority list
 function potStructure(id, x, y, priority) {
@@ -146,6 +139,15 @@ function buildSomething() {
 	buildList = buildList.concat(buildOil());
 	var trucks = findIdleBuilders();
 	if (buildList.length > 0 && trucks.length > 0) {
-		buildStructureAt(buildList[0].x, buildList[0].y, buildList[0].id);
+		for(var i = 0; i < buildList.length; i++) {
+			var structure = buildList[i];
+			var builder = findNearestIdleBuilder(structure.x, structure.y);
+			if (!builder) return;
+			if (!isStructureAvailable(structure.id, me)) continue;
+			var pos = pickStructLocation(builder, structure.id, structure.x, structure.y);
+			if (!pos) return;
+			orderDroidBuild(builder, DORDER_BUILD, structure.id, pos.x, pos.y);
+			break;
+		}
 	}
 }
