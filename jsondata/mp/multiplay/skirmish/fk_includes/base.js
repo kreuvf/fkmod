@@ -188,6 +188,10 @@ function buildBase() {
 	return buildings;
 }
 
+function buildDefense() {
+	
+}
+
 function buildSomething() {
 	var buildList = buildEssentials();
 	buildList = buildList.concat(buildOil());
