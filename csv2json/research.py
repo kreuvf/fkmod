@@ -281,7 +281,7 @@ for resline in resCSV:
 	# [7] contains the dummy msgName and is not used anymore
 	# [7] gets replaced with an automatically generated one
 	if int(resline[12]) == 1:
-		strlist.append(('msgName', ("RES_" + col_id[2:]).replace('-', '_')))
+		strlist.append(('msgName', "RM-" + col_id[2:]))
 	
 	# Add all eligible key value pairs to the dictionary
 	feedints(intlist, resJSON[col_id])

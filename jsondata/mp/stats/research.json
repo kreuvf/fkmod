@@ -2,7 +2,7 @@
     "R-B-HiKin": {
         "id": "R-B-HiKin",
         "keyTopic": 1,
-        "msgName": "RES_B_HiKin",
+        "msgName": "RM-B-HiKin",
         "name": "Panther",
         "requiredResearch": [
             "R-BU-KineticArmour1"
@@ -18,7 +18,7 @@
     "R-B-HiSpeed": {
         "id": "R-B-HiSpeed",
         "keyTopic": 1,
-        "msgName": "RES_B_HiSpeed",
+        "msgName": "RM-B-HiSpeed",
         "name": "Retribution",
         "requiredResearch": [
             "R-BU-Engine1"
@@ -34,7 +34,7 @@
     "R-B-HiTherm": {
         "id": "R-B-HiTherm",
         "keyTopic": 1,
-        "msgName": "RES_B_HiTherm",
+        "msgName": "RM-B-HiTherm",
         "name": "Scorpion",
         "requiredResearch": [
             "R-BU-ThermalArmour1"
@@ -52,7 +52,7 @@
         "id": "R-BU-BodyPoints1",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_BodyPoints1",
+        "msgName": "RM-BU-BodyPoints1",
         "name": "Body Points Upgrade Mk1",
         "researchPoints": 5287,
         "researchPower": 165,
@@ -79,7 +79,7 @@
         "id": "R-BU-BodyPoints2",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_BodyPoints2",
+        "msgName": "RM-BU-BodyPoints2",
         "name": "Body Points Upgrade Mk2",
         "requiredResearch": [
             "R-BU-BodyPoints1"
@@ -109,7 +109,7 @@
         "id": "R-BU-BodyPoints3",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_BodyPoints3",
+        "msgName": "RM-BU-BodyPoints3",
         "name": "Body Points Upgrade Mk3",
         "requiredResearch": [
             "R-BU-BodyPoints2"
@@ -139,7 +139,7 @@
         "id": "R-BU-BodyPoints4",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_BodyPoints4",
+        "msgName": "RM-BU-BodyPoints4",
         "name": "Body Points Upgrade Mk4",
         "requiredResearch": [
             "R-BU-BodyPoints3"
@@ -169,7 +169,7 @@
         "id": "R-BU-BodyPoints5",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_BodyPoints5",
+        "msgName": "RM-BU-BodyPoints5",
         "name": "Body Points Upgrade Mk5",
         "requiredResearch": [
             "R-BU-BodyPoints4"
@@ -199,7 +199,7 @@
         "id": "R-BU-Engine1",
         "imdName": "iceng.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_Engine1",
+        "msgName": "RM-BU-Engine1",
         "name": "Engine Upgrade Mk1",
         "researchPoints": 7839,
         "researchPower": 244,
@@ -226,7 +226,7 @@
         "id": "R-BU-Engine2",
         "imdName": "iceng.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_Engine2",
+        "msgName": "RM-BU-Engine2",
         "name": "Engine Upgrade Mk2",
         "requiredResearch": [
             "R-BU-Engine1"
@@ -256,7 +256,7 @@
         "id": "R-BU-Engine3",
         "imdName": "iceng.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_Engine3",
+        "msgName": "RM-BU-Engine3",
         "name": "Engine Upgrade Mk3",
         "requiredResearch": [
             "R-BU-Engine2"
@@ -286,7 +286,7 @@
         "id": "R-BU-Engine4",
         "imdName": "iceng.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_Engine4",
+        "msgName": "RM-BU-Engine4",
         "name": "Engine Upgrade Mk4",
         "requiredResearch": [
             "R-BU-Engine3"
@@ -316,7 +316,7 @@
         "id": "R-BU-Engine5",
         "imdName": "iceng.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_Engine5",
+        "msgName": "RM-BU-Engine5",
         "name": "Engine Upgrade Mk5",
         "requiredResearch": [
             "R-BU-Engine4"
@@ -346,7 +346,7 @@
         "id": "R-BU-KineticArmour1",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_KineticArmour1",
+        "msgName": "RM-BU-KineticArmour1",
         "name": "Kinetic Armour Upgrade Mk1",
         "researchPoints": 5287,
         "researchPower": 165,
@@ -373,7 +373,7 @@
         "id": "R-BU-KineticArmour2",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_KineticArmour2",
+        "msgName": "RM-BU-KineticArmour2",
         "name": "Kinetic Armour Upgrade Mk2",
         "requiredResearch": [
             "R-BU-KineticArmour1"
@@ -403,7 +403,7 @@
         "id": "R-BU-KineticArmour3",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_KineticArmour3",
+        "msgName": "RM-BU-KineticArmour3",
         "name": "Kinetic Armour Upgrade Mk3",
         "requiredResearch": [
             "R-BU-KineticArmour2"
@@ -433,7 +433,7 @@
         "id": "R-BU-KineticArmour4",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_KineticArmour4",
+        "msgName": "RM-BU-KineticArmour4",
         "name": "Kinetic Armour Upgrade Mk4",
         "requiredResearch": [
             "R-BU-KineticArmour3"
@@ -463,7 +463,7 @@
         "id": "R-BU-KineticArmour5",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_KineticArmour5",
+        "msgName": "RM-BU-KineticArmour5",
         "name": "Kinetic Armour Upgrade Mk5",
         "requiredResearch": [
             "R-BU-KineticArmour4"
@@ -493,7 +493,7 @@
         "id": "R-BU-ThermalArmour1",
         "imdName": "icamrhot.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_ThermalArmour1",
+        "msgName": "RM-BU-ThermalArmour1",
         "name": "Thermal Armour Upgrade Mk1",
         "researchPoints": 5287,
         "researchPower": 165,
@@ -520,7 +520,7 @@
         "id": "R-BU-ThermalArmour2",
         "imdName": "icamrhot.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_ThermalArmour2",
+        "msgName": "RM-BU-ThermalArmour2",
         "name": "Thermal Armour Upgrade Mk2",
         "requiredResearch": [
             "R-BU-ThermalArmour1"
@@ -550,7 +550,7 @@
         "id": "R-BU-ThermalArmour3",
         "imdName": "icamrhot.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_ThermalArmour3",
+        "msgName": "RM-BU-ThermalArmour3",
         "name": "Thermal Armour Upgrade Mk3",
         "requiredResearch": [
             "R-BU-ThermalArmour2"
@@ -580,7 +580,7 @@
         "id": "R-BU-ThermalArmour4",
         "imdName": "icamrhot.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_ThermalArmour4",
+        "msgName": "RM-BU-ThermalArmour4",
         "name": "Thermal Armour Upgrade Mk4",
         "requiredResearch": [
             "R-BU-ThermalArmour3"
@@ -610,7 +610,7 @@
         "id": "R-BU-ThermalArmour5",
         "imdName": "icamrhot.pie",
         "keyTopic": 1,
-        "msgName": "RES_BU_ThermalArmour5",
+        "msgName": "RM-BU-ThermalArmour5",
         "name": "Thermal Armour Upgrade Mk5",
         "requiredResearch": [
             "R-BU-ThermalArmour4"
@@ -639,7 +639,7 @@
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-Commander",
         "keyTopic": 1,
-        "msgName": "RES_Commander",
+        "msgName": "RM-Commander",
         "name": "Command Turret",
         "requiredResearch": [
             "R-SensorSurveillance"
@@ -657,7 +657,7 @@
         "id": "R-Def-Bunker",
         "imdName": "blpilbox.pie",
         "keyTopic": 1,
-        "msgName": "RES_Def_Bunker",
+        "msgName": "RM-Def-Bunker",
         "name": "Bunker",
         "requiredResearch": [
             "R-Def-Wall"
@@ -670,7 +670,7 @@
         "id": "R-Def-Hardpoint",
         "imdName": "BLGUARD1.pie",
         "keyTopic": 1,
-        "msgName": "RES_Def_Hardpoint",
+        "msgName": "RM-Def-Hardpoint",
         "name": "Hardpoint",
         "requiredResearch": [
             "R-Def-Wall"
@@ -683,7 +683,7 @@
         "id": "R-Def-Site",
         "imdName": "Blaamnt2.pie",
         "keyTopic": 1,
-        "msgName": "RES_Def_Site",
+        "msgName": "RM-Def-Site",
         "name": "Site",
         "requiredResearch": [
             "R-Def-Wall"
@@ -695,7 +695,7 @@
     "R-Def-Wall": {
         "id": "R-Def-Wall",
         "keyTopic": 1,
-        "msgName": "RES_Def_Wall",
+        "msgName": "RM-Def-Wall",
         "name": "Wall",
         "researchPoints": 4375,
         "researchPower": 136,
@@ -1155,7 +1155,7 @@
         "id": "R-NRG1",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
-        "msgName": "RES_NRG1",
+        "msgName": "RM-NRG1",
         "name": "Power Generator Upgrade Mk1",
         "researchPoints": 7839,
         "researchPower": 244,
@@ -1173,7 +1173,7 @@
         "id": "R-NRG10",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
-        "msgName": "RES_NRG10",
+        "msgName": "RM-NRG10",
         "name": "Power Generator Upgrade Mk10",
         "requiredResearch": [
             "R-NRG9"
@@ -1194,7 +1194,7 @@
         "id": "R-NRG2",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
-        "msgName": "RES_NRG2",
+        "msgName": "RM-NRG2",
         "name": "Power Generator Upgrade Mk2",
         "requiredResearch": [
             "R-NRG1"
@@ -1215,7 +1215,7 @@
         "id": "R-NRG3",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
-        "msgName": "RES_NRG3",
+        "msgName": "RM-NRG3",
         "name": "Power Generator Upgrade Mk3",
         "requiredResearch": [
             "R-NRG2"
@@ -1236,7 +1236,7 @@
         "id": "R-NRG4",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
-        "msgName": "RES_NRG4",
+        "msgName": "RM-NRG4",
         "name": "Power Generator Upgrade Mk4",
         "requiredResearch": [
             "R-NRG3"
@@ -1257,7 +1257,7 @@
         "id": "R-NRG5",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
-        "msgName": "RES_NRG5",
+        "msgName": "RM-NRG5",
         "name": "Power Generator Upgrade Mk5",
         "requiredResearch": [
             "R-NRG4"
@@ -1278,7 +1278,7 @@
         "id": "R-NRG6",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
-        "msgName": "RES_NRG6",
+        "msgName": "RM-NRG6",
         "name": "Power Generator Upgrade Mk6",
         "requiredResearch": [
             "R-NRG5"
@@ -1299,7 +1299,7 @@
         "id": "R-NRG7",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
-        "msgName": "RES_NRG7",
+        "msgName": "RM-NRG7",
         "name": "Power Generator Upgrade Mk7",
         "requiredResearch": [
             "R-NRG6"
@@ -1320,7 +1320,7 @@
         "id": "R-NRG8",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
-        "msgName": "RES_NRG8",
+        "msgName": "RM-NRG8",
         "name": "Power Generator Upgrade Mk8",
         "requiredResearch": [
             "R-NRG7"
@@ -1341,7 +1341,7 @@
         "id": "R-NRG9",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
-        "msgName": "RES_NRG9",
+        "msgName": "RM-NRG9",
         "name": "Power Generator Upgrade Mk9",
         "requiredResearch": [
             "R-NRG8"
@@ -1360,7 +1360,7 @@
     "R-P-Hover": {
         "id": "R-P-Hover",
         "keyTopic": 1,
-        "msgName": "RES_P_Hover",
+        "msgName": "RM-P-Hover",
         "name": "Hover",
         "requiredResearch": [
             "R-BU-Engine1"
@@ -1377,7 +1377,7 @@
         "id": "R-P-VTOL",
         "imdName": "DPVTOL.PIE",
         "keyTopic": 1,
-        "msgName": "RES_P_VTOL",
+        "msgName": "RM-P-VTOL",
         "name": "VTOL",
         "requiredResearch": [
             "R-BU-Engine2"
@@ -1397,7 +1397,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-RAU1",
         "keyTopic": 1,
-        "msgName": "RES_RAU1",
+        "msgName": "RM-RAU1",
         "name": "Rearming Speed Upgrade Mk1",
         "requiredResearch": [
             "R-P-VTOL"
@@ -1418,7 +1418,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-RAU2",
         "keyTopic": 1,
-        "msgName": "RES_RAU2",
+        "msgName": "RM-RAU2",
         "name": "Rearming Speed Upgrade Mk2",
         "requiredResearch": [
             "R-RAU1"
@@ -1439,7 +1439,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-RAU3",
         "keyTopic": 1,
-        "msgName": "RES_RAU3",
+        "msgName": "RM-RAU3",
         "name": "Rearming Speed Upgrade Mk3",
         "requiredResearch": [
             "R-RAU2"
@@ -1460,7 +1460,7 @@
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-Repair",
         "keyTopic": 1,
-        "msgName": "RES_Repair",
+        "msgName": "RM-Repair",
         "name": "Repair",
         "researchPoints": 4375,
         "researchPower": 136,
@@ -1477,7 +1477,7 @@
         "id": "R-Res1",
         "imdName": "blresch4.PIE",
         "keyTopic": 1,
-        "msgName": "RES_Res1",
+        "msgName": "RM-Res1",
         "name": "Research Speed Upgrade Mk1",
         "researchPoints": 8933,
         "researchPower": 279,
@@ -1495,7 +1495,7 @@
         "id": "R-Res2",
         "imdName": "blresch4.PIE",
         "keyTopic": 1,
-        "msgName": "RES_Res2",
+        "msgName": "RM-Res2",
         "name": "Research Speed Upgrade Mk2",
         "requiredResearch": [
             "R-Res1"
@@ -1516,7 +1516,7 @@
         "id": "R-Res3",
         "imdName": "blresch4.PIE",
         "keyTopic": 1,
-        "msgName": "RES_Res3",
+        "msgName": "RM-Res3",
         "name": "Research Speed Upgrade Mk3",
         "requiredResearch": [
             "R-Res2"
@@ -1537,7 +1537,7 @@
         "id": "R-Res4",
         "imdName": "blresch4.PIE",
         "keyTopic": 1,
-        "msgName": "RES_Res4",
+        "msgName": "RM-Res4",
         "name": "Research Speed Upgrade Mk4",
         "requiredResearch": [
             "R-Res3"
@@ -1558,7 +1558,7 @@
         "id": "R-Res5",
         "imdName": "blresch4.PIE",
         "keyTopic": 1,
-        "msgName": "RES_Res5",
+        "msgName": "RM-Res5",
         "name": "Research Speed Upgrade Mk5",
         "requiredResearch": [
             "R-Res4"
@@ -1578,7 +1578,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-RpU1",
         "keyTopic": 1,
-        "msgName": "RES_RpU1",
+        "msgName": "RM-RpU1",
         "name": "Repair Speed Upgrade Mk1",
         "requiredResearch": [
             "R-Repair"
@@ -1599,7 +1599,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-RpU2",
         "keyTopic": 1,
-        "msgName": "RES_RpU2",
+        "msgName": "RM-RpU2",
         "name": "Repair Speed Upgrade Mk2",
         "requiredResearch": [
             "R-RpU1"
@@ -1620,7 +1620,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-RpU3",
         "keyTopic": 1,
-        "msgName": "RES_RpU3",
+        "msgName": "RM-RpU3",
         "name": "Repair Speed Upgrade Mk3",
         "requiredResearch": [
             "R-RpU2"
@@ -1640,7 +1640,7 @@
     "R-SensorArtillery": {
         "id": "R-SensorArtillery",
         "keyTopic": 1,
-        "msgName": "RES_SensorArtillery",
+        "msgName": "RM-SensorArtillery",
         "name": "Artillery Sensor",
         "requiredResearch": [
             "R-SensorSurveillance"
@@ -1656,7 +1656,7 @@
     "R-SensorCB": {
         "id": "R-SensorCB",
         "keyTopic": 1,
-        "msgName": "RES_SensorCB",
+        "msgName": "RM-SensorCB",
         "name": "CB Sensor",
         "requiredResearch": [
             "R-SensorSurveillance"
@@ -1673,7 +1673,7 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-SensorSurveillance",
         "keyTopic": 1,
-        "msgName": "RES_SensorSurveillance",
+        "msgName": "RM-SensorSurveillance",
         "name": "Surveillance Sensor",
         "researchPoints": 4375,
         "researchPower": 136,
@@ -1690,7 +1690,7 @@
     "R-SensorVTOL": {
         "id": "R-SensorVTOL",
         "keyTopic": 1,
-        "msgName": "RES_SensorVTOL",
+        "msgName": "RM-SensorVTOL",
         "name": "VTOL Sensor",
         "requiredResearch": [
             "R-SensorSurveillance"
@@ -1706,7 +1706,7 @@
     "R-St-RepairFacility": {
         "id": "R-St-RepairFacility",
         "keyTopic": 1,
-        "msgName": "RES_St_RepairFacility",
+        "msgName": "RM-St-RepairFacility",
         "name": "Repair Facility",
         "requiredResearch": [
             "R-Repair"
@@ -1724,7 +1724,7 @@
         "id": "R-StU-Armours1",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_StU_Armours1",
+        "msgName": "RM-StU-Armours1",
         "name": "Armour Upgrade Mk1",
         "researchPoints": 9662,
         "researchPower": 301,
@@ -1751,7 +1751,7 @@
         "id": "R-StU-Armours2",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_StU_Armours2",
+        "msgName": "RM-StU-Armours2",
         "name": "Armour Upgrade Mk2",
         "requiredResearch": [
             "R-StU-Armours1"
@@ -1781,7 +1781,7 @@
         "id": "R-StU-Armours3",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_StU_Armours3",
+        "msgName": "RM-StU-Armours3",
         "name": "Armour Upgrade Mk3",
         "requiredResearch": [
             "R-StU-Armours2"
@@ -1811,7 +1811,7 @@
         "id": "R-StU-Armours4",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_StU_Armours4",
+        "msgName": "RM-StU-Armours4",
         "name": "Armour Upgrade Mk4",
         "requiredResearch": [
             "R-StU-Armours3"
@@ -1841,7 +1841,7 @@
         "id": "R-StU-Armours5",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_StU_Armours5",
+        "msgName": "RM-StU-Armours5",
         "name": "Armour Upgrade Mk5",
         "requiredResearch": [
             "R-StU-Armours4"
@@ -1871,7 +1871,7 @@
         "id": "R-StU-BodyPoints1",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_StU_BodyPoints1",
+        "msgName": "RM-StU-BodyPoints1",
         "name": "Body Points Upgrade Mk1",
         "researchPoints": 9662,
         "researchPower": 301,
@@ -1898,7 +1898,7 @@
         "id": "R-StU-BodyPoints2",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_StU_BodyPoints2",
+        "msgName": "RM-StU-BodyPoints2",
         "name": "Body Points Upgrade Mk2",
         "requiredResearch": [
             "R-StU-BodyPoints1"
@@ -1928,7 +1928,7 @@
         "id": "R-StU-BodyPoints3",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_StU_BodyPoints3",
+        "msgName": "RM-StU-BodyPoints3",
         "name": "Body Points Upgrade Mk3",
         "requiredResearch": [
             "R-StU-BodyPoints2"
@@ -1958,7 +1958,7 @@
         "id": "R-StU-BodyPoints4",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_StU_BodyPoints4",
+        "msgName": "RM-StU-BodyPoints4",
         "name": "Body Points Upgrade Mk4",
         "requiredResearch": [
             "R-StU-BodyPoints3"
@@ -1988,7 +1988,7 @@
         "id": "R-StU-BodyPoints5",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
-        "msgName": "RES_StU_BodyPoints5",
+        "msgName": "RM-StU-BodyPoints5",
         "name": "Body Points Upgrade Mk5",
         "requiredResearch": [
             "R-StU-BodyPoints4"
@@ -2016,7 +2016,7 @@
     "R-U-CyborgTransport": {
         "id": "R-U-CyborgTransport",
         "keyTopic": 1,
-        "msgName": "RES_U_CyborgTransport",
+        "msgName": "RM-U-CyborgTransport",
         "name": "Cyborg Transport",
         "requiredResearch": [
             "R-P-VTOL",
@@ -2034,7 +2034,7 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-W-ART-Howitzer",
         "keyTopic": 1,
-        "msgName": "RES_W_ART_Howitzer",
+        "msgName": "RM-W-ART-Howitzer",
         "name": "Howitzer",
         "requiredResearch": [
             "R-W-SF-Cannon"
@@ -2054,7 +2054,7 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-W-ART-RocketBattery",
         "keyTopic": 1,
-        "msgName": "RES_W_ART_RocketBattery",
+        "msgName": "RM-W-ART-RocketBattery",
         "name": "Rocket Battery",
         "requiredResearch": [
             "R-W-MIS-ScourgeMissile"
@@ -2074,7 +2074,7 @@
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-FF-AAHurricane",
         "keyTopic": 1,
-        "msgName": "RES_W_FF_AAHurricane",
+        "msgName": "RM-W-FF-AAHurricane",
         "name": "Hurricane AA",
         "requiredResearch": [
             "R-W-FF-Autocannon"
@@ -2091,7 +2091,7 @@
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-FF-Autocannon",
         "keyTopic": 1,
-        "msgName": "RES_W_FF_Autocannon",
+        "msgName": "RM-W-FF-Autocannon",
         "name": "Autocannon",
         "researchPoints": 4375,
         "researchPower": 136,
@@ -2106,7 +2106,7 @@
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-W-FF-Machinegun",
         "keyTopic": 1,
-        "msgName": "RES_W_FF_Machinegun",
+        "msgName": "RM-W-FF-Machinegun",
         "name": "Machinegun",
         "researchPoints": 4375,
         "researchPower": 136,
@@ -2121,7 +2121,7 @@
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-HOT-AAStormbringer",
         "keyTopic": 1,
-        "msgName": "RES_W_HOT_AAStormbringer",
+        "msgName": "RM-W-HOT-AAStormbringer",
         "name": "Stormbringer AA",
         "requiredResearch": [
             "R-W-HOT-Laser"
@@ -2139,7 +2139,7 @@
         "id": "R-W-HOT-BombThermite",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_W_HOT_BombThermite",
+        "msgName": "RM-W-HOT-BombThermite",
         "name": "Thermite Bomb",
         "requiredResearch": [
             "R-P-VTOL"
@@ -2155,7 +2155,7 @@
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-W-HOT-Flamethrower",
         "keyTopic": 1,
-        "msgName": "RES_W_HOT_Flamethrower",
+        "msgName": "RM-W-HOT-Flamethrower",
         "name": "Flamethrower",
         "researchPoints": 4375,
         "researchPower": 136,
@@ -2170,7 +2170,7 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-W-HOT-HowitzerIncendiary",
         "keyTopic": 1,
-        "msgName": "RES_W_HOT_HowitzerIncendiary",
+        "msgName": "RM-W-HOT-HowitzerIncendiary",
         "name": "Incendiary Howitzer",
         "requiredResearch": [
             "R-W-ART-Howitzer",
@@ -2191,7 +2191,7 @@
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-HOT-Laser",
         "keyTopic": 1,
-        "msgName": "RES_W_HOT_Laser",
+        "msgName": "RM-W-HOT-Laser",
         "name": "Laser",
         "researchPoints": 4375,
         "researchPower": 136,
@@ -2205,7 +2205,7 @@
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-MIS-AAAvengerSAM",
         "keyTopic": 1,
-        "msgName": "RES_W_MIS_AAAvengerSAM",
+        "msgName": "RM-W-MIS-AAAvengerSAM",
         "name": "Avenger SAM",
         "requiredResearch": [
             "R-W-MIS-ScourgeMissile"
@@ -2222,7 +2222,7 @@
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-W-MIS-Lancer",
         "keyTopic": 1,
-        "msgName": "RES_W_MIS_Lancer",
+        "msgName": "RM-W-MIS-Lancer",
         "name": "Lancer",
         "researchPoints": 4375,
         "researchPower": 136,
@@ -2238,7 +2238,7 @@
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-MIS-ScourgeMissile",
         "keyTopic": 1,
-        "msgName": "RES_W_MIS_ScourgeMissile",
+        "msgName": "RM-W-MIS-ScourgeMissile",
         "name": "Scourge Missile",
         "researchPoints": 4375,
         "researchPower": 136,
@@ -2252,7 +2252,7 @@
         "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-W-SF-AACyclone",
         "keyTopic": 1,
-        "msgName": "RES_W_SF_AACyclone",
+        "msgName": "RM-W-SF-AACyclone",
         "name": "Cyclone AA",
         "requiredResearch": [
             "R-W-SF-Railgun"
@@ -2270,7 +2270,7 @@
         "id": "R-W-SF-BombHeavy",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_W_SF_BombHeavy",
+        "msgName": "RM-W-SF-BombHeavy",
         "name": "Heavy Bomb",
         "requiredResearch": [
             "R-P-VTOL"
@@ -2286,7 +2286,7 @@
         "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-W-SF-Cannon",
         "keyTopic": 1,
-        "msgName": "RES_W_SF_Cannon",
+        "msgName": "RM-W-SF-Cannon",
         "name": "Cannon",
         "researchPoints": 4375,
         "researchPower": 136,
@@ -2301,7 +2301,7 @@
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-SF-Railgun",
         "keyTopic": 1,
-        "msgName": "RES_W_SF_Railgun",
+        "msgName": "RM-W-SF-Railgun",
         "name": "Railgun",
         "researchPoints": 4375,
         "researchPower": 136,
@@ -2316,7 +2316,7 @@
         "id": "R-W-SPL-BombCluster",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_W_SPL_BombCluster",
+        "msgName": "RM-W-SPL-BombCluster",
         "name": "Cluster Bomb",
         "requiredResearch": [
             "R-P-VTOL"
@@ -2332,7 +2332,7 @@
         "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-W-SPL-GrenadeLauncher",
         "keyTopic": 1,
-        "msgName": "RES_W_SPL_GrenadeLauncher",
+        "msgName": "RM-W-SPL-GrenadeLauncher",
         "name": "Grenade Launcher",
         "requiredResearch": [
             "R-W-SF-Cannon"
@@ -2351,7 +2351,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAAvengerSAM-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_ACC1",
+        "msgName": "RM-WU-AAAvengerSAM-ACC1",
         "name": "Avenger SAM Accuracy Mk1",
         "requiredResearch": [
             "R-W-MIS-AAAvengerSAM"
@@ -2374,7 +2374,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAAvengerSAM-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_ACC2",
+        "msgName": "RM-WU-AAAvengerSAM-ACC2",
         "name": "Avenger SAM Accuracy Mk2",
         "requiredResearch": [
             "R-WU-AAAvengerSAM-ACC1"
@@ -2397,7 +2397,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAAvengerSAM-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_ACC3",
+        "msgName": "RM-WU-AAAvengerSAM-ACC3",
         "name": "Avenger SAM Accuracy Mk3",
         "requiredResearch": [
             "R-WU-AAAvengerSAM-ACC2"
@@ -2420,7 +2420,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAAvengerSAM-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_ACC4",
+        "msgName": "RM-WU-AAAvengerSAM-ACC4",
         "name": "Avenger SAM Accuracy Mk4",
         "requiredResearch": [
             "R-WU-AAAvengerSAM-ACC3"
@@ -2443,7 +2443,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAAvengerSAM-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_ACC5",
+        "msgName": "RM-WU-AAAvengerSAM-ACC5",
         "name": "Avenger SAM Accuracy Mk5",
         "requiredResearch": [
             "R-WU-AAAvengerSAM-ACC4"
@@ -2466,7 +2466,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAAvengerSAM-ACC6",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_ACC6",
+        "msgName": "RM-WU-AAAvengerSAM-ACC6",
         "name": "Avenger SAM Accuracy Mk6",
         "requiredResearch": [
             "R-WU-AAAvengerSAM-ACC5"
@@ -2489,7 +2489,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAAvengerSAM-ACC7",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_ACC7",
+        "msgName": "RM-WU-AAAvengerSAM-ACC7",
         "name": "Avenger SAM Accuracy Mk7",
         "requiredResearch": [
             "R-WU-AAAvengerSAM-ACC6"
@@ -2512,7 +2512,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAAvengerSAM-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_DMG1",
+        "msgName": "RM-WU-AAAvengerSAM-DMG1",
         "name": "Avenger SAM Damage Mk1",
         "requiredResearch": [
             "R-W-MIS-AAAvengerSAM"
@@ -2549,7 +2549,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAAvengerSAM-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_DMG2",
+        "msgName": "RM-WU-AAAvengerSAM-DMG2",
         "name": "Avenger SAM Damage Mk2",
         "requiredResearch": [
             "R-WU-AAAvengerSAM-DMG1"
@@ -2586,7 +2586,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAAvengerSAM-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_DMG3",
+        "msgName": "RM-WU-AAAvengerSAM-DMG3",
         "name": "Avenger SAM Damage Mk3",
         "requiredResearch": [
             "R-WU-AAAvengerSAM-DMG2"
@@ -2623,7 +2623,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAAvengerSAM-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_DMG4",
+        "msgName": "RM-WU-AAAvengerSAM-DMG4",
         "name": "Avenger SAM Damage Mk4",
         "requiredResearch": [
             "R-WU-AAAvengerSAM-DMG3"
@@ -2660,7 +2660,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAAvengerSAM-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_DMG5",
+        "msgName": "RM-WU-AAAvengerSAM-DMG5",
         "name": "Avenger SAM Damage Mk5",
         "requiredResearch": [
             "R-WU-AAAvengerSAM-DMG4"
@@ -2697,7 +2697,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAAvengerSAM-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_ROF1",
+        "msgName": "RM-WU-AAAvengerSAM-ROF1",
         "name": "Avenger SAM Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-MIS-AAAvengerSAM"
@@ -2727,7 +2727,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAAvengerSAM-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_ROF2",
+        "msgName": "RM-WU-AAAvengerSAM-ROF2",
         "name": "Avenger SAM Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-AAAvengerSAM-ROF1"
@@ -2757,7 +2757,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAAvengerSAM-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_ROF3",
+        "msgName": "RM-WU-AAAvengerSAM-ROF3",
         "name": "Avenger SAM Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-AAAvengerSAM-ROF2"
@@ -2787,7 +2787,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAAvengerSAM-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_ROF4",
+        "msgName": "RM-WU-AAAvengerSAM-ROF4",
         "name": "Avenger SAM Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-AAAvengerSAM-ROF3"
@@ -2817,7 +2817,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAAvengerSAM-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_ROF5",
+        "msgName": "RM-WU-AAAvengerSAM-ROF5",
         "name": "Avenger SAM Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-AAAvengerSAM-ROF4"
@@ -2847,7 +2847,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-AAAvengerSAM-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAAvengerSAM_SPE1",
+        "msgName": "RM-WU-AAAvengerSAM-SPE1",
         "name": "Avenger SAM Special Mk1",
         "redComponents": [
             "FK-MIS-AAAvengerSAM"
@@ -2869,7 +2869,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AACyclone-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_ACC1",
+        "msgName": "RM-WU-AACyclone-ACC1",
         "name": "Cyclone AA Accuracy Mk1",
         "requiredResearch": [
             "R-W-SF-AACyclone"
@@ -2892,7 +2892,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AACyclone-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_ACC2",
+        "msgName": "RM-WU-AACyclone-ACC2",
         "name": "Cyclone AA Accuracy Mk2",
         "requiredResearch": [
             "R-WU-AACyclone-ACC1"
@@ -2915,7 +2915,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AACyclone-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_ACC3",
+        "msgName": "RM-WU-AACyclone-ACC3",
         "name": "Cyclone AA Accuracy Mk3",
         "requiredResearch": [
             "R-WU-AACyclone-ACC2"
@@ -2938,7 +2938,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AACyclone-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_ACC4",
+        "msgName": "RM-WU-AACyclone-ACC4",
         "name": "Cyclone AA Accuracy Mk4",
         "requiredResearch": [
             "R-WU-AACyclone-ACC3"
@@ -2961,7 +2961,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AACyclone-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_ACC5",
+        "msgName": "RM-WU-AACyclone-ACC5",
         "name": "Cyclone AA Accuracy Mk5",
         "requiredResearch": [
             "R-WU-AACyclone-ACC4"
@@ -2984,7 +2984,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AACyclone-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_DMG1",
+        "msgName": "RM-WU-AACyclone-DMG1",
         "name": "Cyclone AA Damage Mk1",
         "requiredResearch": [
             "R-W-SF-AACyclone"
@@ -3021,7 +3021,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AACyclone-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_DMG2",
+        "msgName": "RM-WU-AACyclone-DMG2",
         "name": "Cyclone AA Damage Mk2",
         "requiredResearch": [
             "R-WU-AACyclone-DMG1"
@@ -3058,7 +3058,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AACyclone-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_DMG3",
+        "msgName": "RM-WU-AACyclone-DMG3",
         "name": "Cyclone AA Damage Mk3",
         "requiredResearch": [
             "R-WU-AACyclone-DMG2"
@@ -3095,7 +3095,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AACyclone-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_DMG4",
+        "msgName": "RM-WU-AACyclone-DMG4",
         "name": "Cyclone AA Damage Mk4",
         "requiredResearch": [
             "R-WU-AACyclone-DMG3"
@@ -3132,7 +3132,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AACyclone-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_DMG5",
+        "msgName": "RM-WU-AACyclone-DMG5",
         "name": "Cyclone AA Damage Mk5",
         "requiredResearch": [
             "R-WU-AACyclone-DMG4"
@@ -3169,7 +3169,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AACyclone-DMG6",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_DMG6",
+        "msgName": "RM-WU-AACyclone-DMG6",
         "name": "Cyclone AA Damage Mk6",
         "requiredResearch": [
             "R-WU-AACyclone-DMG5"
@@ -3206,7 +3206,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AACyclone-DMG7",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_DMG7",
+        "msgName": "RM-WU-AACyclone-DMG7",
         "name": "Cyclone AA Damage Mk7",
         "requiredResearch": [
             "R-WU-AACyclone-DMG6"
@@ -3243,7 +3243,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AACyclone-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_ROF1",
+        "msgName": "RM-WU-AACyclone-ROF1",
         "name": "Cyclone AA Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-SF-AACyclone"
@@ -3273,7 +3273,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AACyclone-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_ROF2",
+        "msgName": "RM-WU-AACyclone-ROF2",
         "name": "Cyclone AA Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-AACyclone-ROF1"
@@ -3303,7 +3303,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AACyclone-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_ROF3",
+        "msgName": "RM-WU-AACyclone-ROF3",
         "name": "Cyclone AA Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-AACyclone-ROF2"
@@ -3333,7 +3333,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AACyclone-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_ROF4",
+        "msgName": "RM-WU-AACyclone-ROF4",
         "name": "Cyclone AA Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-AACyclone-ROF3"
@@ -3363,7 +3363,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AACyclone-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_ROF5",
+        "msgName": "RM-WU-AACyclone-ROF5",
         "name": "Cyclone AA Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-AACyclone-ROF4"
@@ -3393,7 +3393,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-AACyclone-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_SPE1",
+        "msgName": "RM-WU-AACyclone-SPE1",
         "name": "Cyclone AA Special Mk1",
         "redComponents": [
             "FK-SF-AACyclone"
@@ -3415,7 +3415,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-AACyclone-SPE2",
         "keyTopic": 1,
-        "msgName": "RES_WU_AACyclone_SPE2",
+        "msgName": "RM-WU-AACyclone-SPE2",
         "name": "Cyclone AA Special Mk2",
         "redComponents": [
             "FK-SF-AACyclone2"
@@ -3438,7 +3438,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAHurricane-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_ACC1",
+        "msgName": "RM-WU-AAHurricane-ACC1",
         "name": "Hurricane AA Accuracy Mk1",
         "requiredResearch": [
             "R-W-FF-AAHurricane"
@@ -3461,7 +3461,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAHurricane-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_ACC2",
+        "msgName": "RM-WU-AAHurricane-ACC2",
         "name": "Hurricane AA Accuracy Mk2",
         "requiredResearch": [
             "R-WU-AAHurricane-ACC1"
@@ -3484,7 +3484,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAHurricane-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_ACC3",
+        "msgName": "RM-WU-AAHurricane-ACC3",
         "name": "Hurricane AA Accuracy Mk3",
         "requiredResearch": [
             "R-WU-AAHurricane-ACC2"
@@ -3507,7 +3507,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAHurricane-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_ACC4",
+        "msgName": "RM-WU-AAHurricane-ACC4",
         "name": "Hurricane AA Accuracy Mk4",
         "requiredResearch": [
             "R-WU-AAHurricane-ACC3"
@@ -3530,7 +3530,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAHurricane-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_ACC5",
+        "msgName": "RM-WU-AAHurricane-ACC5",
         "name": "Hurricane AA Accuracy Mk5",
         "requiredResearch": [
             "R-WU-AAHurricane-ACC4"
@@ -3553,7 +3553,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAHurricane-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_DMG1",
+        "msgName": "RM-WU-AAHurricane-DMG1",
         "name": "Hurricane AA Damage Mk1",
         "requiredResearch": [
             "R-W-FF-AAHurricane"
@@ -3583,7 +3583,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAHurricane-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_DMG2",
+        "msgName": "RM-WU-AAHurricane-DMG2",
         "name": "Hurricane AA Damage Mk2",
         "requiredResearch": [
             "R-WU-AAHurricane-DMG1"
@@ -3613,7 +3613,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAHurricane-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_DMG3",
+        "msgName": "RM-WU-AAHurricane-DMG3",
         "name": "Hurricane AA Damage Mk3",
         "requiredResearch": [
             "R-WU-AAHurricane-DMG2"
@@ -3643,7 +3643,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAHurricane-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_DMG4",
+        "msgName": "RM-WU-AAHurricane-DMG4",
         "name": "Hurricane AA Damage Mk4",
         "requiredResearch": [
             "R-WU-AAHurricane-DMG3"
@@ -3673,7 +3673,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAHurricane-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_DMG5",
+        "msgName": "RM-WU-AAHurricane-DMG5",
         "name": "Hurricane AA Damage Mk5",
         "requiredResearch": [
             "R-WU-AAHurricane-DMG4"
@@ -3703,7 +3703,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAHurricane-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_ROF1",
+        "msgName": "RM-WU-AAHurricane-ROF1",
         "name": "Hurricane AA Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-FF-AAHurricane"
@@ -3733,7 +3733,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAHurricane-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_ROF2",
+        "msgName": "RM-WU-AAHurricane-ROF2",
         "name": "Hurricane AA Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-AAHurricane-ROF1"
@@ -3763,7 +3763,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAHurricane-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_ROF3",
+        "msgName": "RM-WU-AAHurricane-ROF3",
         "name": "Hurricane AA Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-AAHurricane-ROF2"
@@ -3793,7 +3793,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAHurricane-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_ROF4",
+        "msgName": "RM-WU-AAHurricane-ROF4",
         "name": "Hurricane AA Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-AAHurricane-ROF3"
@@ -3823,7 +3823,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAHurricane-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_ROF5",
+        "msgName": "RM-WU-AAHurricane-ROF5",
         "name": "Hurricane AA Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-AAHurricane-ROF4"
@@ -3853,7 +3853,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAHurricane-ROF6",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_ROF6",
+        "msgName": "RM-WU-AAHurricane-ROF6",
         "name": "Hurricane AA Rate of Fire Mk6",
         "requiredResearch": [
             "R-WU-AAHurricane-ROF5"
@@ -3883,7 +3883,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAHurricane-ROF7",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_ROF7",
+        "msgName": "RM-WU-AAHurricane-ROF7",
         "name": "Hurricane AA Rate of Fire Mk7",
         "requiredResearch": [
             "R-WU-AAHurricane-ROF6"
@@ -3913,7 +3913,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-AAHurricane-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_SPE1",
+        "msgName": "RM-WU-AAHurricane-SPE1",
         "name": "Hurricane AA Special Mk1",
         "redComponents": [
             "FK-FF-AAHurricane"
@@ -3935,7 +3935,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-AAHurricane-SPE2",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAHurricane_SPE2",
+        "msgName": "RM-WU-AAHurricane-SPE2",
         "name": "Hurricane AA Special Mk2",
         "redComponents": [
             "FK-FF-AAHurricane2"
@@ -3958,7 +3958,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAStormbringer-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_ACC1",
+        "msgName": "RM-WU-AAStormbringer-ACC1",
         "name": "Stormbringer AA Accuracy Mk1",
         "requiredResearch": [
             "R-W-HOT-AAStormbringer"
@@ -3981,7 +3981,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAStormbringer-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_ACC2",
+        "msgName": "RM-WU-AAStormbringer-ACC2",
         "name": "Stormbringer AA Accuracy Mk2",
         "requiredResearch": [
             "R-WU-AAStormbringer-ACC1"
@@ -4004,7 +4004,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAStormbringer-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_ACC3",
+        "msgName": "RM-WU-AAStormbringer-ACC3",
         "name": "Stormbringer AA Accuracy Mk3",
         "requiredResearch": [
             "R-WU-AAStormbringer-ACC2"
@@ -4027,7 +4027,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAStormbringer-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_ACC4",
+        "msgName": "RM-WU-AAStormbringer-ACC4",
         "name": "Stormbringer AA Accuracy Mk4",
         "requiredResearch": [
             "R-WU-AAStormbringer-ACC3"
@@ -4050,7 +4050,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-AAStormbringer-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_ACC5",
+        "msgName": "RM-WU-AAStormbringer-ACC5",
         "name": "Stormbringer AA Accuracy Mk5",
         "requiredResearch": [
             "R-WU-AAStormbringer-ACC4"
@@ -4073,7 +4073,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAStormbringer-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_DMG1",
+        "msgName": "RM-WU-AAStormbringer-DMG1",
         "name": "Stormbringer AA Damage Mk1",
         "requiredResearch": [
             "R-W-HOT-AAStormbringer"
@@ -4110,7 +4110,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAStormbringer-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_DMG2",
+        "msgName": "RM-WU-AAStormbringer-DMG2",
         "name": "Stormbringer AA Damage Mk2",
         "requiredResearch": [
             "R-WU-AAStormbringer-DMG1"
@@ -4147,7 +4147,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAStormbringer-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_DMG3",
+        "msgName": "RM-WU-AAStormbringer-DMG3",
         "name": "Stormbringer AA Damage Mk3",
         "requiredResearch": [
             "R-WU-AAStormbringer-DMG2"
@@ -4184,7 +4184,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAStormbringer-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_DMG4",
+        "msgName": "RM-WU-AAStormbringer-DMG4",
         "name": "Stormbringer AA Damage Mk4",
         "requiredResearch": [
             "R-WU-AAStormbringer-DMG3"
@@ -4221,7 +4221,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAStormbringer-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_DMG5",
+        "msgName": "RM-WU-AAStormbringer-DMG5",
         "name": "Stormbringer AA Damage Mk5",
         "requiredResearch": [
             "R-WU-AAStormbringer-DMG4"
@@ -4258,7 +4258,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAStormbringer-DMG6",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_DMG6",
+        "msgName": "RM-WU-AAStormbringer-DMG6",
         "name": "Stormbringer AA Damage Mk6",
         "requiredResearch": [
             "R-WU-AAStormbringer-DMG5"
@@ -4295,7 +4295,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-AAStormbringer-DMG7",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_DMG7",
+        "msgName": "RM-WU-AAStormbringer-DMG7",
         "name": "Stormbringer AA Damage Mk7",
         "requiredResearch": [
             "R-WU-AAStormbringer-DMG6"
@@ -4332,7 +4332,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAStormbringer-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_ROF1",
+        "msgName": "RM-WU-AAStormbringer-ROF1",
         "name": "Stormbringer AA Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-HOT-AAStormbringer"
@@ -4362,7 +4362,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAStormbringer-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_ROF2",
+        "msgName": "RM-WU-AAStormbringer-ROF2",
         "name": "Stormbringer AA Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-AAStormbringer-ROF1"
@@ -4392,7 +4392,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAStormbringer-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_ROF3",
+        "msgName": "RM-WU-AAStormbringer-ROF3",
         "name": "Stormbringer AA Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-AAStormbringer-ROF2"
@@ -4422,7 +4422,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAStormbringer-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_ROF4",
+        "msgName": "RM-WU-AAStormbringer-ROF4",
         "name": "Stormbringer AA Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-AAStormbringer-ROF3"
@@ -4452,7 +4452,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-AAStormbringer-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_ROF5",
+        "msgName": "RM-WU-AAStormbringer-ROF5",
         "name": "Stormbringer AA Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-AAStormbringer-ROF4"
@@ -4482,7 +4482,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-AAStormbringer-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_AAStormbringer_SPE1",
+        "msgName": "RM-WU-AAStormbringer-SPE1",
         "name": "Stormbringer AA Special Mk1",
         "redComponents": [
             "FK-HOT-AAStormbringer"
@@ -4504,7 +4504,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Autocannon-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_ACC1",
+        "msgName": "RM-WU-Autocannon-ACC1",
         "name": "Autocannon Accuracy Mk1",
         "requiredResearch": [
             "R-W-FF-Autocannon"
@@ -4527,7 +4527,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Autocannon-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_ACC2",
+        "msgName": "RM-WU-Autocannon-ACC2",
         "name": "Autocannon Accuracy Mk2",
         "requiredResearch": [
             "R-WU-Autocannon-ACC1"
@@ -4550,7 +4550,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Autocannon-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_ACC3",
+        "msgName": "RM-WU-Autocannon-ACC3",
         "name": "Autocannon Accuracy Mk3",
         "requiredResearch": [
             "R-WU-Autocannon-ACC2"
@@ -4573,7 +4573,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Autocannon-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_ACC4",
+        "msgName": "RM-WU-Autocannon-ACC4",
         "name": "Autocannon Accuracy Mk4",
         "requiredResearch": [
             "R-WU-Autocannon-ACC3"
@@ -4596,7 +4596,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Autocannon-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_ACC5",
+        "msgName": "RM-WU-Autocannon-ACC5",
         "name": "Autocannon Accuracy Mk5",
         "requiredResearch": [
             "R-WU-Autocannon-ACC4"
@@ -4619,7 +4619,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Autocannon-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_DMG1",
+        "msgName": "RM-WU-Autocannon-DMG1",
         "name": "Autocannon Damage Mk1",
         "requiredResearch": [
             "R-W-FF-Autocannon"
@@ -4642,7 +4642,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Autocannon-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_DMG2",
+        "msgName": "RM-WU-Autocannon-DMG2",
         "name": "Autocannon Damage Mk2",
         "requiredResearch": [
             "R-WU-Autocannon-DMG1"
@@ -4665,7 +4665,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Autocannon-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_DMG3",
+        "msgName": "RM-WU-Autocannon-DMG3",
         "name": "Autocannon Damage Mk3",
         "requiredResearch": [
             "R-WU-Autocannon-DMG2"
@@ -4688,7 +4688,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Autocannon-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_DMG4",
+        "msgName": "RM-WU-Autocannon-DMG4",
         "name": "Autocannon Damage Mk4",
         "requiredResearch": [
             "R-WU-Autocannon-DMG3"
@@ -4711,7 +4711,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Autocannon-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_DMG5",
+        "msgName": "RM-WU-Autocannon-DMG5",
         "name": "Autocannon Damage Mk5",
         "requiredResearch": [
             "R-WU-Autocannon-DMG4"
@@ -4734,7 +4734,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Autocannon-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_ROF1",
+        "msgName": "RM-WU-Autocannon-ROF1",
         "name": "Autocannon Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-FF-Autocannon"
@@ -4764,7 +4764,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Autocannon-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_ROF2",
+        "msgName": "RM-WU-Autocannon-ROF2",
         "name": "Autocannon Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-Autocannon-ROF1"
@@ -4794,7 +4794,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Autocannon-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_ROF3",
+        "msgName": "RM-WU-Autocannon-ROF3",
         "name": "Autocannon Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-Autocannon-ROF2"
@@ -4824,7 +4824,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Autocannon-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_ROF4",
+        "msgName": "RM-WU-Autocannon-ROF4",
         "name": "Autocannon Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-Autocannon-ROF3"
@@ -4854,7 +4854,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Autocannon-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_ROF5",
+        "msgName": "RM-WU-Autocannon-ROF5",
         "name": "Autocannon Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-Autocannon-ROF4"
@@ -4884,7 +4884,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Autocannon-ROF6",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_ROF6",
+        "msgName": "RM-WU-Autocannon-ROF6",
         "name": "Autocannon Rate of Fire Mk6",
         "requiredResearch": [
             "R-WU-Autocannon-ROF5"
@@ -4914,7 +4914,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Autocannon-ROF7",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_ROF7",
+        "msgName": "RM-WU-Autocannon-ROF7",
         "name": "Autocannon Rate of Fire Mk7",
         "requiredResearch": [
             "R-WU-Autocannon-ROF6"
@@ -4944,7 +4944,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Autocannon-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_SPE1",
+        "msgName": "RM-WU-Autocannon-SPE1",
         "name": "Autocannon Special Mk1",
         "requiredResearch": [
             "R-WU-Autocannon-ROF5",
@@ -4964,7 +4964,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Autocannon-SPE2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Autocannon_SPE2",
+        "msgName": "RM-WU-Autocannon-SPE2",
         "name": "Autocannon Special Mk2",
         "requiredResearch": [
             "R-WU-Autocannon-ROF7",
@@ -4986,7 +4986,7 @@
         "id": "R-WU-BombCluster-ACC1",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_ACC1",
+        "msgName": "RM-WU-BombCluster-ACC1",
         "name": "Cluster Bomb Accuracy Mk1",
         "requiredResearch": [
             "R-W-SPL-BombCluster"
@@ -5009,7 +5009,7 @@
         "id": "R-WU-BombCluster-ACC2",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_ACC2",
+        "msgName": "RM-WU-BombCluster-ACC2",
         "name": "Cluster Bomb Accuracy Mk2",
         "requiredResearch": [
             "R-WU-BombCluster-ACC1"
@@ -5032,7 +5032,7 @@
         "id": "R-WU-BombCluster-ACC3",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_ACC3",
+        "msgName": "RM-WU-BombCluster-ACC3",
         "name": "Cluster Bomb Accuracy Mk3",
         "requiredResearch": [
             "R-WU-BombCluster-ACC2"
@@ -5055,7 +5055,7 @@
         "id": "R-WU-BombCluster-ACC4",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_ACC4",
+        "msgName": "RM-WU-BombCluster-ACC4",
         "name": "Cluster Bomb Accuracy Mk4",
         "requiredResearch": [
             "R-WU-BombCluster-ACC3"
@@ -5078,7 +5078,7 @@
         "id": "R-WU-BombCluster-ACC5",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_ACC5",
+        "msgName": "RM-WU-BombCluster-ACC5",
         "name": "Cluster Bomb Accuracy Mk5",
         "requiredResearch": [
             "R-WU-BombCluster-ACC4"
@@ -5101,7 +5101,7 @@
         "id": "R-WU-BombCluster-DMG1",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_DMG1",
+        "msgName": "RM-WU-BombCluster-DMG1",
         "name": "Cluster Bomb Damage Mk1",
         "requiredResearch": [
             "R-W-SPL-BombCluster"
@@ -5138,7 +5138,7 @@
         "id": "R-WU-BombCluster-DMG2",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_DMG2",
+        "msgName": "RM-WU-BombCluster-DMG2",
         "name": "Cluster Bomb Damage Mk2",
         "requiredResearch": [
             "R-WU-BombCluster-DMG1"
@@ -5175,7 +5175,7 @@
         "id": "R-WU-BombCluster-DMG3",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_DMG3",
+        "msgName": "RM-WU-BombCluster-DMG3",
         "name": "Cluster Bomb Damage Mk3",
         "requiredResearch": [
             "R-WU-BombCluster-DMG2"
@@ -5212,7 +5212,7 @@
         "id": "R-WU-BombCluster-DMG4",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_DMG4",
+        "msgName": "RM-WU-BombCluster-DMG4",
         "name": "Cluster Bomb Damage Mk4",
         "requiredResearch": [
             "R-WU-BombCluster-DMG3"
@@ -5249,7 +5249,7 @@
         "id": "R-WU-BombCluster-DMG5",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_DMG5",
+        "msgName": "RM-WU-BombCluster-DMG5",
         "name": "Cluster Bomb Damage Mk5",
         "requiredResearch": [
             "R-WU-BombCluster-DMG4"
@@ -5286,7 +5286,7 @@
         "id": "R-WU-BombCluster-DMG6",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_DMG6",
+        "msgName": "RM-WU-BombCluster-DMG6",
         "name": "Cluster Bomb Damage Mk6",
         "requiredResearch": [
             "R-WU-BombCluster-DMG5"
@@ -5323,7 +5323,7 @@
         "id": "R-WU-BombCluster-DMG7",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_DMG7",
+        "msgName": "RM-WU-BombCluster-DMG7",
         "name": "Cluster Bomb Damage Mk7",
         "requiredResearch": [
             "R-WU-BombCluster-DMG6"
@@ -5360,7 +5360,7 @@
         "id": "R-WU-BombCluster-ROF1",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_ROF1",
+        "msgName": "RM-WU-BombCluster-ROF1",
         "name": "Cluster Bomb Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-SPL-BombCluster"
@@ -5390,7 +5390,7 @@
         "id": "R-WU-BombCluster-ROF2",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_ROF2",
+        "msgName": "RM-WU-BombCluster-ROF2",
         "name": "Cluster Bomb Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-BombCluster-ROF1"
@@ -5420,7 +5420,7 @@
         "id": "R-WU-BombCluster-ROF3",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_ROF3",
+        "msgName": "RM-WU-BombCluster-ROF3",
         "name": "Cluster Bomb Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-BombCluster-ROF2"
@@ -5450,7 +5450,7 @@
         "id": "R-WU-BombCluster-ROF4",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_ROF4",
+        "msgName": "RM-WU-BombCluster-ROF4",
         "name": "Cluster Bomb Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-BombCluster-ROF3"
@@ -5480,7 +5480,7 @@
         "id": "R-WU-BombCluster-ROF5",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_ROF5",
+        "msgName": "RM-WU-BombCluster-ROF5",
         "name": "Cluster Bomb Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-BombCluster-ROF4"
@@ -5510,7 +5510,7 @@
         "id": "R-WU-BombCluster-SPE1",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_SPE1",
+        "msgName": "RM-WU-BombCluster-SPE1",
         "name": "Cluster Bomb Special Mk1",
         "redComponents": [
             "FK-SPL-BombCluster"
@@ -5532,7 +5532,7 @@
         "id": "R-WU-BombCluster-SPE2",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombCluster_SPE2",
+        "msgName": "RM-WU-BombCluster-SPE2",
         "name": "Cluster Bomb Special Mk2",
         "redComponents": [
             "FK-SPL-BombCluster2"
@@ -5555,7 +5555,7 @@
         "id": "R-WU-BombHeavy-ACC1",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_ACC1",
+        "msgName": "RM-WU-BombHeavy-ACC1",
         "name": "Heavy Bomb Accuracy Mk1",
         "requiredResearch": [
             "R-W-SF-BombHeavy"
@@ -5578,7 +5578,7 @@
         "id": "R-WU-BombHeavy-ACC2",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_ACC2",
+        "msgName": "RM-WU-BombHeavy-ACC2",
         "name": "Heavy Bomb Accuracy Mk2",
         "requiredResearch": [
             "R-WU-BombHeavy-ACC1"
@@ -5601,7 +5601,7 @@
         "id": "R-WU-BombHeavy-ACC3",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_ACC3",
+        "msgName": "RM-WU-BombHeavy-ACC3",
         "name": "Heavy Bomb Accuracy Mk3",
         "requiredResearch": [
             "R-WU-BombHeavy-ACC2"
@@ -5624,7 +5624,7 @@
         "id": "R-WU-BombHeavy-ACC4",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_ACC4",
+        "msgName": "RM-WU-BombHeavy-ACC4",
         "name": "Heavy Bomb Accuracy Mk4",
         "requiredResearch": [
             "R-WU-BombHeavy-ACC3"
@@ -5647,7 +5647,7 @@
         "id": "R-WU-BombHeavy-ACC5",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_ACC5",
+        "msgName": "RM-WU-BombHeavy-ACC5",
         "name": "Heavy Bomb Accuracy Mk5",
         "requiredResearch": [
             "R-WU-BombHeavy-ACC4"
@@ -5670,7 +5670,7 @@
         "id": "R-WU-BombHeavy-DMG1",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_DMG1",
+        "msgName": "RM-WU-BombHeavy-DMG1",
         "name": "Heavy Bomb Damage Mk1",
         "requiredResearch": [
             "R-W-SF-BombHeavy"
@@ -5707,7 +5707,7 @@
         "id": "R-WU-BombHeavy-DMG2",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_DMG2",
+        "msgName": "RM-WU-BombHeavy-DMG2",
         "name": "Heavy Bomb Damage Mk2",
         "requiredResearch": [
             "R-WU-BombHeavy-DMG1"
@@ -5744,7 +5744,7 @@
         "id": "R-WU-BombHeavy-DMG3",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_DMG3",
+        "msgName": "RM-WU-BombHeavy-DMG3",
         "name": "Heavy Bomb Damage Mk3",
         "requiredResearch": [
             "R-WU-BombHeavy-DMG2"
@@ -5781,7 +5781,7 @@
         "id": "R-WU-BombHeavy-DMG4",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_DMG4",
+        "msgName": "RM-WU-BombHeavy-DMG4",
         "name": "Heavy Bomb Damage Mk4",
         "requiredResearch": [
             "R-WU-BombHeavy-DMG3"
@@ -5818,7 +5818,7 @@
         "id": "R-WU-BombHeavy-DMG5",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_DMG5",
+        "msgName": "RM-WU-BombHeavy-DMG5",
         "name": "Heavy Bomb Damage Mk5",
         "requiredResearch": [
             "R-WU-BombHeavy-DMG4"
@@ -5855,7 +5855,7 @@
         "id": "R-WU-BombHeavy-DMG6",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_DMG6",
+        "msgName": "RM-WU-BombHeavy-DMG6",
         "name": "Heavy Bomb Damage Mk6",
         "requiredResearch": [
             "R-WU-BombHeavy-DMG5"
@@ -5892,7 +5892,7 @@
         "id": "R-WU-BombHeavy-DMG7",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_DMG7",
+        "msgName": "RM-WU-BombHeavy-DMG7",
         "name": "Heavy Bomb Damage Mk7",
         "requiredResearch": [
             "R-WU-BombHeavy-DMG6"
@@ -5929,7 +5929,7 @@
         "id": "R-WU-BombHeavy-ROF1",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_ROF1",
+        "msgName": "RM-WU-BombHeavy-ROF1",
         "name": "Heavy Bomb Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-SF-BombHeavy"
@@ -5959,7 +5959,7 @@
         "id": "R-WU-BombHeavy-ROF2",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_ROF2",
+        "msgName": "RM-WU-BombHeavy-ROF2",
         "name": "Heavy Bomb Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-BombHeavy-ROF1"
@@ -5989,7 +5989,7 @@
         "id": "R-WU-BombHeavy-ROF3",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_ROF3",
+        "msgName": "RM-WU-BombHeavy-ROF3",
         "name": "Heavy Bomb Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-BombHeavy-ROF2"
@@ -6019,7 +6019,7 @@
         "id": "R-WU-BombHeavy-ROF4",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_ROF4",
+        "msgName": "RM-WU-BombHeavy-ROF4",
         "name": "Heavy Bomb Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-BombHeavy-ROF3"
@@ -6049,7 +6049,7 @@
         "id": "R-WU-BombHeavy-ROF5",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_ROF5",
+        "msgName": "RM-WU-BombHeavy-ROF5",
         "name": "Heavy Bomb Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-BombHeavy-ROF4"
@@ -6079,7 +6079,7 @@
         "id": "R-WU-BombHeavy-SPE1",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_SPE1",
+        "msgName": "RM-WU-BombHeavy-SPE1",
         "name": "Heavy Bomb Special Mk1",
         "redComponents": [
             "FK-SF-BombHeavy"
@@ -6101,7 +6101,7 @@
         "id": "R-WU-BombHeavy-SPE2",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombHeavy_SPE2",
+        "msgName": "RM-WU-BombHeavy-SPE2",
         "name": "Heavy Bomb Special Mk2",
         "redComponents": [
             "FK-SF-BombHeavy2"
@@ -6124,7 +6124,7 @@
         "id": "R-WU-BombThermite-ACC1",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_ACC1",
+        "msgName": "RM-WU-BombThermite-ACC1",
         "name": "Thermite Bomb Accuracy Mk1",
         "requiredResearch": [
             "R-W-HOT-BombThermite"
@@ -6147,7 +6147,7 @@
         "id": "R-WU-BombThermite-ACC2",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_ACC2",
+        "msgName": "RM-WU-BombThermite-ACC2",
         "name": "Thermite Bomb Accuracy Mk2",
         "requiredResearch": [
             "R-WU-BombThermite-ACC1"
@@ -6170,7 +6170,7 @@
         "id": "R-WU-BombThermite-ACC3",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_ACC3",
+        "msgName": "RM-WU-BombThermite-ACC3",
         "name": "Thermite Bomb Accuracy Mk3",
         "requiredResearch": [
             "R-WU-BombThermite-ACC2"
@@ -6193,7 +6193,7 @@
         "id": "R-WU-BombThermite-ACC4",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_ACC4",
+        "msgName": "RM-WU-BombThermite-ACC4",
         "name": "Thermite Bomb Accuracy Mk4",
         "requiredResearch": [
             "R-WU-BombThermite-ACC3"
@@ -6216,7 +6216,7 @@
         "id": "R-WU-BombThermite-ACC5",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_ACC5",
+        "msgName": "RM-WU-BombThermite-ACC5",
         "name": "Thermite Bomb Accuracy Mk5",
         "requiredResearch": [
             "R-WU-BombThermite-ACC4"
@@ -6239,7 +6239,7 @@
         "id": "R-WU-BombThermite-DMG1",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_DMG1",
+        "msgName": "RM-WU-BombThermite-DMG1",
         "name": "Thermite Bomb Damage Mk1",
         "requiredResearch": [
             "R-W-HOT-BombThermite"
@@ -6276,7 +6276,7 @@
         "id": "R-WU-BombThermite-DMG2",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_DMG2",
+        "msgName": "RM-WU-BombThermite-DMG2",
         "name": "Thermite Bomb Damage Mk2",
         "requiredResearch": [
             "R-WU-BombThermite-DMG1"
@@ -6313,7 +6313,7 @@
         "id": "R-WU-BombThermite-DMG3",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_DMG3",
+        "msgName": "RM-WU-BombThermite-DMG3",
         "name": "Thermite Bomb Damage Mk3",
         "requiredResearch": [
             "R-WU-BombThermite-DMG2"
@@ -6350,7 +6350,7 @@
         "id": "R-WU-BombThermite-DMG4",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_DMG4",
+        "msgName": "RM-WU-BombThermite-DMG4",
         "name": "Thermite Bomb Damage Mk4",
         "requiredResearch": [
             "R-WU-BombThermite-DMG3"
@@ -6387,7 +6387,7 @@
         "id": "R-WU-BombThermite-DMG5",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_DMG5",
+        "msgName": "RM-WU-BombThermite-DMG5",
         "name": "Thermite Bomb Damage Mk5",
         "requiredResearch": [
             "R-WU-BombThermite-DMG4"
@@ -6424,7 +6424,7 @@
         "id": "R-WU-BombThermite-DMG6",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_DMG6",
+        "msgName": "RM-WU-BombThermite-DMG6",
         "name": "Thermite Bomb Damage Mk6",
         "requiredResearch": [
             "R-WU-BombThermite-DMG5"
@@ -6461,7 +6461,7 @@
         "id": "R-WU-BombThermite-DMG7",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_DMG7",
+        "msgName": "RM-WU-BombThermite-DMG7",
         "name": "Thermite Bomb Damage Mk7",
         "requiredResearch": [
             "R-WU-BombThermite-DMG6"
@@ -6498,7 +6498,7 @@
         "id": "R-WU-BombThermite-ROF1",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_ROF1",
+        "msgName": "RM-WU-BombThermite-ROF1",
         "name": "Thermite Bomb Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-HOT-BombThermite"
@@ -6528,7 +6528,7 @@
         "id": "R-WU-BombThermite-ROF2",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_ROF2",
+        "msgName": "RM-WU-BombThermite-ROF2",
         "name": "Thermite Bomb Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-BombThermite-ROF1"
@@ -6558,7 +6558,7 @@
         "id": "R-WU-BombThermite-ROF3",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_ROF3",
+        "msgName": "RM-WU-BombThermite-ROF3",
         "name": "Thermite Bomb Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-BombThermite-ROF2"
@@ -6588,7 +6588,7 @@
         "id": "R-WU-BombThermite-ROF4",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_ROF4",
+        "msgName": "RM-WU-BombThermite-ROF4",
         "name": "Thermite Bomb Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-BombThermite-ROF3"
@@ -6618,7 +6618,7 @@
         "id": "R-WU-BombThermite-ROF5",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_ROF5",
+        "msgName": "RM-WU-BombThermite-ROF5",
         "name": "Thermite Bomb Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-BombThermite-ROF4"
@@ -6648,7 +6648,7 @@
         "id": "R-WU-BombThermite-SPE1",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_SPE1",
+        "msgName": "RM-WU-BombThermite-SPE1",
         "name": "Thermite Bomb Special Mk1",
         "redComponents": [
             "FK-HOT-BombThermite"
@@ -6670,7 +6670,7 @@
         "id": "R-WU-BombThermite-SPE2",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
-        "msgName": "RES_WU_BombThermite_SPE2",
+        "msgName": "RM-WU-BombThermite-SPE2",
         "name": "Thermite Bomb Special Mk2",
         "redComponents": [
             "FK-HOT-BombThermite2"
@@ -6692,7 +6692,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Cannon-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_ACC1",
+        "msgName": "RM-WU-Cannon-ACC1",
         "name": "Cannon Accuracy Mk1",
         "requiredResearch": [
             "R-W-SF-Cannon"
@@ -6715,7 +6715,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Cannon-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_ACC2",
+        "msgName": "RM-WU-Cannon-ACC2",
         "name": "Cannon Accuracy Mk2",
         "requiredResearch": [
             "R-WU-Cannon-ACC1"
@@ -6738,7 +6738,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Cannon-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_ACC3",
+        "msgName": "RM-WU-Cannon-ACC3",
         "name": "Cannon Accuracy Mk3",
         "requiredResearch": [
             "R-WU-Cannon-ACC2"
@@ -6761,7 +6761,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Cannon-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_ACC4",
+        "msgName": "RM-WU-Cannon-ACC4",
         "name": "Cannon Accuracy Mk4",
         "requiredResearch": [
             "R-WU-Cannon-ACC3"
@@ -6784,7 +6784,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Cannon-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_ACC5",
+        "msgName": "RM-WU-Cannon-ACC5",
         "name": "Cannon Accuracy Mk5",
         "requiredResearch": [
             "R-WU-Cannon-ACC4"
@@ -6807,7 +6807,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Cannon-Cyb-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_Cyb_SPE1",
+        "msgName": "RM-WU-Cannon-Cyb-SPE1",
         "name": "Cyborg Cannon Special Mk1",
         "redComponents": [
             "FK-SF-Cannon-Cyborg"
@@ -6833,7 +6833,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Cannon-Cyb-SPE2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_Cyb_SPE2",
+        "msgName": "RM-WU-Cannon-Cyb-SPE2",
         "name": "Cyborg Cannon Special Mk2",
         "redComponents": [
             "FK-SF-Cannon-Cyborg2"
@@ -6860,7 +6860,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Cannon-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_DMG1",
+        "msgName": "RM-WU-Cannon-DMG1",
         "name": "Cannon Damage Mk1",
         "requiredResearch": [
             "R-W-SF-Cannon"
@@ -6890,7 +6890,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Cannon-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_DMG2",
+        "msgName": "RM-WU-Cannon-DMG2",
         "name": "Cannon Damage Mk2",
         "requiredResearch": [
             "R-WU-Cannon-DMG1"
@@ -6920,7 +6920,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Cannon-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_DMG3",
+        "msgName": "RM-WU-Cannon-DMG3",
         "name": "Cannon Damage Mk3",
         "requiredResearch": [
             "R-WU-Cannon-DMG2"
@@ -6950,7 +6950,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Cannon-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_DMG4",
+        "msgName": "RM-WU-Cannon-DMG4",
         "name": "Cannon Damage Mk4",
         "requiredResearch": [
             "R-WU-Cannon-DMG3"
@@ -6980,7 +6980,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Cannon-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_DMG5",
+        "msgName": "RM-WU-Cannon-DMG5",
         "name": "Cannon Damage Mk5",
         "requiredResearch": [
             "R-WU-Cannon-DMG4"
@@ -7010,7 +7010,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Cannon-DMG6",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_DMG6",
+        "msgName": "RM-WU-Cannon-DMG6",
         "name": "Cannon Damage Mk6",
         "requiredResearch": [
             "R-WU-Cannon-DMG5"
@@ -7040,7 +7040,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Cannon-DMG7",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_DMG7",
+        "msgName": "RM-WU-Cannon-DMG7",
         "name": "Cannon Damage Mk7",
         "requiredResearch": [
             "R-WU-Cannon-DMG6"
@@ -7070,7 +7070,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Cannon-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_ROF1",
+        "msgName": "RM-WU-Cannon-ROF1",
         "name": "Cannon Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-SF-Cannon"
@@ -7100,7 +7100,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Cannon-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_ROF2",
+        "msgName": "RM-WU-Cannon-ROF2",
         "name": "Cannon Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-Cannon-ROF1"
@@ -7130,7 +7130,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Cannon-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_ROF3",
+        "msgName": "RM-WU-Cannon-ROF3",
         "name": "Cannon Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-Cannon-ROF2"
@@ -7160,7 +7160,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Cannon-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_ROF4",
+        "msgName": "RM-WU-Cannon-ROF4",
         "name": "Cannon Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-Cannon-ROF3"
@@ -7190,7 +7190,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Cannon-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_ROF5",
+        "msgName": "RM-WU-Cannon-ROF5",
         "name": "Cannon Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-Cannon-ROF4"
@@ -7220,7 +7220,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Cannon-Struc-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_Struc_SPE1",
+        "msgName": "RM-WU-Cannon-Struc-SPE1",
         "name": "Structure Cannon Special Mk1",
         "redComponents": [
             "FK-SF-Cannon-Structure"
@@ -7239,7 +7239,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Cannon-Struc-SPE2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Cannon_Struc_SPE2",
+        "msgName": "RM-WU-Cannon-Struc-SPE2",
         "name": "Structure Cannon Special Mk2",
         "redComponents": [
             "FK-SF-Cannon-Structure2"
@@ -7259,7 +7259,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Flamethrower-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_ACC1",
+        "msgName": "RM-WU-Flamethrower-ACC1",
         "name": "Flamethrower Accuracy Mk1",
         "requiredResearch": [
             "R-W-HOT-Flamethrower"
@@ -7282,7 +7282,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Flamethrower-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_ACC2",
+        "msgName": "RM-WU-Flamethrower-ACC2",
         "name": "Flamethrower Accuracy Mk2",
         "requiredResearch": [
             "R-WU-Flamethrower-ACC1"
@@ -7305,7 +7305,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Flamethrower-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_ACC3",
+        "msgName": "RM-WU-Flamethrower-ACC3",
         "name": "Flamethrower Accuracy Mk3",
         "requiredResearch": [
             "R-WU-Flamethrower-ACC2"
@@ -7328,7 +7328,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Flamethrower-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_ACC4",
+        "msgName": "RM-WU-Flamethrower-ACC4",
         "name": "Flamethrower Accuracy Mk4",
         "requiredResearch": [
             "R-WU-Flamethrower-ACC3"
@@ -7351,7 +7351,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Flamethrower-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_ACC5",
+        "msgName": "RM-WU-Flamethrower-ACC5",
         "name": "Flamethrower Accuracy Mk5",
         "requiredResearch": [
             "R-WU-Flamethrower-ACC4"
@@ -7374,7 +7374,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Flamethrower-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_DMG1",
+        "msgName": "RM-WU-Flamethrower-DMG1",
         "name": "Flamethrower Damage Mk1",
         "requiredResearch": [
             "R-W-HOT-Flamethrower"
@@ -7404,7 +7404,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Flamethrower-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_DMG2",
+        "msgName": "RM-WU-Flamethrower-DMG2",
         "name": "Flamethrower Damage Mk2",
         "requiredResearch": [
             "R-WU-Flamethrower-DMG1"
@@ -7434,7 +7434,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Flamethrower-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_DMG3",
+        "msgName": "RM-WU-Flamethrower-DMG3",
         "name": "Flamethrower Damage Mk3",
         "requiredResearch": [
             "R-WU-Flamethrower-DMG2"
@@ -7464,7 +7464,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Flamethrower-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_DMG4",
+        "msgName": "RM-WU-Flamethrower-DMG4",
         "name": "Flamethrower Damage Mk4",
         "requiredResearch": [
             "R-WU-Flamethrower-DMG3"
@@ -7494,7 +7494,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Flamethrower-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_DMG5",
+        "msgName": "RM-WU-Flamethrower-DMG5",
         "name": "Flamethrower Damage Mk5",
         "requiredResearch": [
             "R-WU-Flamethrower-DMG4"
@@ -7524,7 +7524,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Flamethrower-DMG6",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_DMG6",
+        "msgName": "RM-WU-Flamethrower-DMG6",
         "name": "Flamethrower Damage Mk6",
         "requiredResearch": [
             "R-WU-Flamethrower-DMG5"
@@ -7554,7 +7554,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Flamethrower-DMG7",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_DMG7",
+        "msgName": "RM-WU-Flamethrower-DMG7",
         "name": "Flamethrower Damage Mk7",
         "requiredResearch": [
             "R-WU-Flamethrower-DMG6"
@@ -7584,7 +7584,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Flamethrower-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_ROF1",
+        "msgName": "RM-WU-Flamethrower-ROF1",
         "name": "Flamethrower Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-HOT-Flamethrower"
@@ -7614,7 +7614,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Flamethrower-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_ROF2",
+        "msgName": "RM-WU-Flamethrower-ROF2",
         "name": "Flamethrower Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-Flamethrower-ROF1"
@@ -7644,7 +7644,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Flamethrower-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_ROF3",
+        "msgName": "RM-WU-Flamethrower-ROF3",
         "name": "Flamethrower Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-Flamethrower-ROF2"
@@ -7674,7 +7674,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Flamethrower-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_ROF4",
+        "msgName": "RM-WU-Flamethrower-ROF4",
         "name": "Flamethrower Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-Flamethrower-ROF3"
@@ -7704,7 +7704,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Flamethrower-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_ROF5",
+        "msgName": "RM-WU-Flamethrower-ROF5",
         "name": "Flamethrower Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-Flamethrower-ROF4"
@@ -7734,7 +7734,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Flamethrower-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_SPE1",
+        "msgName": "RM-WU-Flamethrower-SPE1",
         "name": "Flamethrower Special Mk1",
         "redComponents": [
             "FK-HOT-Flamethrower"
@@ -7760,7 +7760,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Flamethrower-SPE2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Flamethrower_SPE2",
+        "msgName": "RM-WU-Flamethrower-SPE2",
         "name": "Flamethrower Special Mk2",
         "redComponents": [
             "FK-HOT-Flamethrower2"
@@ -7787,7 +7787,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-GrenadeLauncher-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_ACC1",
+        "msgName": "RM-WU-GrenadeLauncher-ACC1",
         "name": "Grenade Launcher Accuracy Mk1",
         "requiredResearch": [
             "R-W-SPL-GrenadeLauncher"
@@ -7810,7 +7810,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-GrenadeLauncher-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_ACC2",
+        "msgName": "RM-WU-GrenadeLauncher-ACC2",
         "name": "Grenade Launcher Accuracy Mk2",
         "requiredResearch": [
             "R-WU-GrenadeLauncher-ACC1"
@@ -7833,7 +7833,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-GrenadeLauncher-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_ACC3",
+        "msgName": "RM-WU-GrenadeLauncher-ACC3",
         "name": "Grenade Launcher Accuracy Mk3",
         "requiredResearch": [
             "R-WU-GrenadeLauncher-ACC2"
@@ -7856,7 +7856,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-GrenadeLauncher-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_ACC4",
+        "msgName": "RM-WU-GrenadeLauncher-ACC4",
         "name": "Grenade Launcher Accuracy Mk4",
         "requiredResearch": [
             "R-WU-GrenadeLauncher-ACC3"
@@ -7879,7 +7879,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-GrenadeLauncher-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_ACC5",
+        "msgName": "RM-WU-GrenadeLauncher-ACC5",
         "name": "Grenade Launcher Accuracy Mk5",
         "requiredResearch": [
             "R-WU-GrenadeLauncher-ACC4"
@@ -7902,7 +7902,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-GrenadeLauncher-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_DMG1",
+        "msgName": "RM-WU-GrenadeLauncher-DMG1",
         "name": "Grenade Launcher Damage Mk1",
         "requiredResearch": [
             "R-W-SPL-GrenadeLauncher"
@@ -7939,7 +7939,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-GrenadeLauncher-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_DMG2",
+        "msgName": "RM-WU-GrenadeLauncher-DMG2",
         "name": "Grenade Launcher Damage Mk2",
         "requiredResearch": [
             "R-WU-GrenadeLauncher-DMG1"
@@ -7976,7 +7976,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-GrenadeLauncher-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_DMG3",
+        "msgName": "RM-WU-GrenadeLauncher-DMG3",
         "name": "Grenade Launcher Damage Mk3",
         "requiredResearch": [
             "R-WU-GrenadeLauncher-DMG2"
@@ -8013,7 +8013,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-GrenadeLauncher-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_DMG4",
+        "msgName": "RM-WU-GrenadeLauncher-DMG4",
         "name": "Grenade Launcher Damage Mk4",
         "requiredResearch": [
             "R-WU-GrenadeLauncher-DMG3"
@@ -8050,7 +8050,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-GrenadeLauncher-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_DMG5",
+        "msgName": "RM-WU-GrenadeLauncher-DMG5",
         "name": "Grenade Launcher Damage Mk5",
         "requiredResearch": [
             "R-WU-GrenadeLauncher-DMG4"
@@ -8087,7 +8087,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-GrenadeLauncher-DMG6",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_DMG6",
+        "msgName": "RM-WU-GrenadeLauncher-DMG6",
         "name": "Grenade Launcher Damage Mk6",
         "requiredResearch": [
             "R-WU-GrenadeLauncher-DMG5"
@@ -8124,7 +8124,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-GrenadeLauncher-DMG7",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_DMG7",
+        "msgName": "RM-WU-GrenadeLauncher-DMG7",
         "name": "Grenade Launcher Damage Mk7",
         "requiredResearch": [
             "R-WU-GrenadeLauncher-DMG6"
@@ -8161,7 +8161,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-GrenadeLauncher-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_ROF1",
+        "msgName": "RM-WU-GrenadeLauncher-ROF1",
         "name": "Grenade Launcher Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-SPL-GrenadeLauncher"
@@ -8191,7 +8191,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-GrenadeLauncher-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_ROF2",
+        "msgName": "RM-WU-GrenadeLauncher-ROF2",
         "name": "Grenade Launcher Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-GrenadeLauncher-ROF1"
@@ -8221,7 +8221,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-GrenadeLauncher-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_ROF3",
+        "msgName": "RM-WU-GrenadeLauncher-ROF3",
         "name": "Grenade Launcher Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-GrenadeLauncher-ROF2"
@@ -8251,7 +8251,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-GrenadeLauncher-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_ROF4",
+        "msgName": "RM-WU-GrenadeLauncher-ROF4",
         "name": "Grenade Launcher Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-GrenadeLauncher-ROF3"
@@ -8281,7 +8281,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-GrenadeLauncher-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_ROF5",
+        "msgName": "RM-WU-GrenadeLauncher-ROF5",
         "name": "Grenade Launcher Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-GrenadeLauncher-ROF4"
@@ -8311,7 +8311,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-GrenadeLauncher-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_SPE1",
+        "msgName": "RM-WU-GrenadeLauncher-SPE1",
         "name": "Grenade Launcher Special Mk1",
         "redComponents": [
             "FK-SPL-GrenadeLauncher-Cyborg",
@@ -8339,7 +8339,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-GrenadeLauncher-SPE2",
         "keyTopic": 1,
-        "msgName": "RES_WU_GrenadeLauncher_SPE2",
+        "msgName": "RM-WU-GrenadeLauncher-SPE2",
         "name": "Grenade Launcher Special Mk2",
         "redComponents": [
             "FK-SPL-GrenadeLauncher-Cyborg2",
@@ -8368,7 +8368,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Howitzer-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_ACC1",
+        "msgName": "RM-WU-Howitzer-ACC1",
         "name": "Howitzer Accuracy Mk1",
         "requiredResearch": [
             "R-W-ART-Howitzer"
@@ -8391,7 +8391,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Howitzer-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_ACC2",
+        "msgName": "RM-WU-Howitzer-ACC2",
         "name": "Howitzer Accuracy Mk2",
         "requiredResearch": [
             "R-WU-Howitzer-ACC1"
@@ -8414,7 +8414,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Howitzer-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_ACC3",
+        "msgName": "RM-WU-Howitzer-ACC3",
         "name": "Howitzer Accuracy Mk3",
         "requiredResearch": [
             "R-WU-Howitzer-ACC2"
@@ -8437,7 +8437,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Howitzer-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_ACC4",
+        "msgName": "RM-WU-Howitzer-ACC4",
         "name": "Howitzer Accuracy Mk4",
         "requiredResearch": [
             "R-WU-Howitzer-ACC3"
@@ -8460,7 +8460,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Howitzer-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_ACC5",
+        "msgName": "RM-WU-Howitzer-ACC5",
         "name": "Howitzer Accuracy Mk5",
         "requiredResearch": [
             "R-WU-Howitzer-ACC4"
@@ -8483,7 +8483,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Howitzer-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_DMG1",
+        "msgName": "RM-WU-Howitzer-DMG1",
         "name": "Howitzer Damage Mk1",
         "requiredResearch": [
             "R-W-ART-Howitzer"
@@ -8520,7 +8520,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Howitzer-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_DMG2",
+        "msgName": "RM-WU-Howitzer-DMG2",
         "name": "Howitzer Damage Mk2",
         "requiredResearch": [
             "R-WU-Howitzer-DMG1"
@@ -8557,7 +8557,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Howitzer-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_DMG3",
+        "msgName": "RM-WU-Howitzer-DMG3",
         "name": "Howitzer Damage Mk3",
         "requiredResearch": [
             "R-WU-Howitzer-DMG2"
@@ -8594,7 +8594,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Howitzer-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_DMG4",
+        "msgName": "RM-WU-Howitzer-DMG4",
         "name": "Howitzer Damage Mk4",
         "requiredResearch": [
             "R-WU-Howitzer-DMG3"
@@ -8631,7 +8631,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Howitzer-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_DMG5",
+        "msgName": "RM-WU-Howitzer-DMG5",
         "name": "Howitzer Damage Mk5",
         "requiredResearch": [
             "R-WU-Howitzer-DMG4"
@@ -8668,7 +8668,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Howitzer-DMG6",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_DMG6",
+        "msgName": "RM-WU-Howitzer-DMG6",
         "name": "Howitzer Damage Mk6",
         "requiredResearch": [
             "R-WU-Howitzer-DMG5"
@@ -8705,7 +8705,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Howitzer-DMG7",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_DMG7",
+        "msgName": "RM-WU-Howitzer-DMG7",
         "name": "Howitzer Damage Mk7",
         "requiredResearch": [
             "R-WU-Howitzer-DMG6"
@@ -8742,7 +8742,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Howitzer-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_ROF1",
+        "msgName": "RM-WU-Howitzer-ROF1",
         "name": "Howitzer Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-ART-Howitzer"
@@ -8772,7 +8772,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Howitzer-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_ROF2",
+        "msgName": "RM-WU-Howitzer-ROF2",
         "name": "Howitzer Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-Howitzer-ROF1"
@@ -8802,7 +8802,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Howitzer-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_ROF3",
+        "msgName": "RM-WU-Howitzer-ROF3",
         "name": "Howitzer Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-Howitzer-ROF2"
@@ -8832,7 +8832,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Howitzer-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_ROF4",
+        "msgName": "RM-WU-Howitzer-ROF4",
         "name": "Howitzer Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-Howitzer-ROF3"
@@ -8862,7 +8862,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Howitzer-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_ROF5",
+        "msgName": "RM-WU-Howitzer-ROF5",
         "name": "Howitzer Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-Howitzer-ROF4"
@@ -8892,7 +8892,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Howitzer-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_SPE1",
+        "msgName": "RM-WU-Howitzer-SPE1",
         "name": "Howitzer Special Mk1",
         "redComponents": [
             "FK-ART-Howitzer"
@@ -8920,7 +8920,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Howitzer-SPE2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Howitzer_SPE2",
+        "msgName": "RM-WU-Howitzer-SPE2",
         "name": "Howitzer Special Mk2",
         "redComponents": [
             "FK-ART-Howitzer2"
@@ -8949,7 +8949,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-HowitzerIncendiary-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_ACC1",
+        "msgName": "RM-WU-HowitzerIncendiary-ACC1",
         "name": "Incendiary Howitzer Accuracy Mk1",
         "requiredResearch": [
             "R-W-HOT-HowitzerIncendiary"
@@ -8972,7 +8972,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-HowitzerIncendiary-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_ACC2",
+        "msgName": "RM-WU-HowitzerIncendiary-ACC2",
         "name": "Incendiary Howitzer Accuracy Mk2",
         "requiredResearch": [
             "R-WU-HowitzerIncendiary-ACC1"
@@ -8995,7 +8995,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-HowitzerIncendiary-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_ACC3",
+        "msgName": "RM-WU-HowitzerIncendiary-ACC3",
         "name": "Incendiary Howitzer Accuracy Mk3",
         "requiredResearch": [
             "R-WU-HowitzerIncendiary-ACC2"
@@ -9018,7 +9018,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-HowitzerIncendiary-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_ACC4",
+        "msgName": "RM-WU-HowitzerIncendiary-ACC4",
         "name": "Incendiary Howitzer Accuracy Mk4",
         "requiredResearch": [
             "R-WU-HowitzerIncendiary-ACC3"
@@ -9041,7 +9041,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-HowitzerIncendiary-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_ACC5",
+        "msgName": "RM-WU-HowitzerIncendiary-ACC5",
         "name": "Incendiary Howitzer Accuracy Mk5",
         "requiredResearch": [
             "R-WU-HowitzerIncendiary-ACC4"
@@ -9064,7 +9064,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-HowitzerIncendiary-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_DMG1",
+        "msgName": "RM-WU-HowitzerIncendiary-DMG1",
         "name": "Incendiary Howitzer Damage Mk1",
         "requiredResearch": [
             "R-W-HOT-HowitzerIncendiary"
@@ -9101,7 +9101,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-HowitzerIncendiary-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_DMG2",
+        "msgName": "RM-WU-HowitzerIncendiary-DMG2",
         "name": "Incendiary Howitzer Damage Mk2",
         "requiredResearch": [
             "R-WU-HowitzerIncendiary-DMG1"
@@ -9138,7 +9138,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-HowitzerIncendiary-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_DMG3",
+        "msgName": "RM-WU-HowitzerIncendiary-DMG3",
         "name": "Incendiary Howitzer Damage Mk3",
         "requiredResearch": [
             "R-WU-HowitzerIncendiary-DMG2"
@@ -9175,7 +9175,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-HowitzerIncendiary-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_DMG4",
+        "msgName": "RM-WU-HowitzerIncendiary-DMG4",
         "name": "Incendiary Howitzer Damage Mk4",
         "requiredResearch": [
             "R-WU-HowitzerIncendiary-DMG3"
@@ -9212,7 +9212,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-HowitzerIncendiary-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_DMG5",
+        "msgName": "RM-WU-HowitzerIncendiary-DMG5",
         "name": "Incendiary Howitzer Damage Mk5",
         "requiredResearch": [
             "R-WU-HowitzerIncendiary-DMG4"
@@ -9249,7 +9249,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-HowitzerIncendiary-DMG6",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_DMG6",
+        "msgName": "RM-WU-HowitzerIncendiary-DMG6",
         "name": "Incendiary Howitzer Damage Mk6",
         "requiredResearch": [
             "R-WU-HowitzerIncendiary-DMG5"
@@ -9286,7 +9286,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-HowitzerIncendiary-DMG7",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_DMG7",
+        "msgName": "RM-WU-HowitzerIncendiary-DMG7",
         "name": "Incendiary Howitzer Damage Mk7",
         "requiredResearch": [
             "R-WU-HowitzerIncendiary-DMG6"
@@ -9323,7 +9323,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-HowitzerIncendiary-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_ROF1",
+        "msgName": "RM-WU-HowitzerIncendiary-ROF1",
         "name": "Incendiary Howitzer Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-HOT-HowitzerIncendiary"
@@ -9353,7 +9353,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-HowitzerIncendiary-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_ROF2",
+        "msgName": "RM-WU-HowitzerIncendiary-ROF2",
         "name": "Incendiary Howitzer Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-HowitzerIncendiary-ROF1"
@@ -9383,7 +9383,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-HowitzerIncendiary-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_ROF3",
+        "msgName": "RM-WU-HowitzerIncendiary-ROF3",
         "name": "Incendiary Howitzer Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-HowitzerIncendiary-ROF2"
@@ -9413,7 +9413,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-HowitzerIncendiary-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_ROF4",
+        "msgName": "RM-WU-HowitzerIncendiary-ROF4",
         "name": "Incendiary Howitzer Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-HowitzerIncendiary-ROF3"
@@ -9443,7 +9443,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-HowitzerIncendiary-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_ROF5",
+        "msgName": "RM-WU-HowitzerIncendiary-ROF5",
         "name": "Incendiary Howitzer Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-HowitzerIncendiary-ROF4"
@@ -9473,7 +9473,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-HowitzerIncendiary-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_SPE1",
+        "msgName": "RM-WU-HowitzerIncendiary-SPE1",
         "name": "Incendiary Howitzer Special Mk1",
         "redComponents": [
             "FK-HOT-HowitzerIncendiary"
@@ -9498,7 +9498,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-HowitzerIncendiary-SPE2",
         "keyTopic": 1,
-        "msgName": "RES_WU_HowitzerIncendiary_SPE2",
+        "msgName": "RM-WU-HowitzerIncendiary-SPE2",
         "name": "Incendiary Howitzer Special Mk2",
         "redComponents": [
             "FK-HOT-HowitzerIncendiary2"
@@ -9524,7 +9524,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Lancer-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_ACC1",
+        "msgName": "RM-WU-Lancer-ACC1",
         "name": "Lancer Accuracy Mk1",
         "requiredResearch": [
             "R-W-MIS-Lancer"
@@ -9547,7 +9547,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Lancer-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_ACC2",
+        "msgName": "RM-WU-Lancer-ACC2",
         "name": "Lancer Accuracy Mk2",
         "requiredResearch": [
             "R-WU-Lancer-ACC1"
@@ -9570,7 +9570,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Lancer-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_ACC3",
+        "msgName": "RM-WU-Lancer-ACC3",
         "name": "Lancer Accuracy Mk3",
         "requiredResearch": [
             "R-WU-Lancer-ACC2"
@@ -9593,7 +9593,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Lancer-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_ACC4",
+        "msgName": "RM-WU-Lancer-ACC4",
         "name": "Lancer Accuracy Mk4",
         "requiredResearch": [
             "R-WU-Lancer-ACC3"
@@ -9616,7 +9616,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Lancer-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_ACC5",
+        "msgName": "RM-WU-Lancer-ACC5",
         "name": "Lancer Accuracy Mk5",
         "requiredResearch": [
             "R-WU-Lancer-ACC4"
@@ -9639,7 +9639,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Lancer-ACC6",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_ACC6",
+        "msgName": "RM-WU-Lancer-ACC6",
         "name": "Lancer Accuracy Mk6",
         "requiredResearch": [
             "R-WU-Lancer-ACC5"
@@ -9662,7 +9662,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Lancer-ACC7",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_ACC7",
+        "msgName": "RM-WU-Lancer-ACC7",
         "name": "Lancer Accuracy Mk7",
         "requiredResearch": [
             "R-WU-Lancer-ACC6"
@@ -9685,7 +9685,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Lancer-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_DMG1",
+        "msgName": "RM-WU-Lancer-DMG1",
         "name": "Lancer Damage Mk1",
         "requiredResearch": [
             "R-W-MIS-Lancer"
@@ -9722,7 +9722,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Lancer-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_DMG2",
+        "msgName": "RM-WU-Lancer-DMG2",
         "name": "Lancer Damage Mk2",
         "requiredResearch": [
             "R-WU-Lancer-DMG1"
@@ -9759,7 +9759,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Lancer-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_DMG3",
+        "msgName": "RM-WU-Lancer-DMG3",
         "name": "Lancer Damage Mk3",
         "requiredResearch": [
             "R-WU-Lancer-DMG2"
@@ -9796,7 +9796,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Lancer-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_DMG4",
+        "msgName": "RM-WU-Lancer-DMG4",
         "name": "Lancer Damage Mk4",
         "requiredResearch": [
             "R-WU-Lancer-DMG3"
@@ -9833,7 +9833,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Lancer-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_DMG5",
+        "msgName": "RM-WU-Lancer-DMG5",
         "name": "Lancer Damage Mk5",
         "requiredResearch": [
             "R-WU-Lancer-DMG4"
@@ -9870,7 +9870,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Lancer-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_ROF1",
+        "msgName": "RM-WU-Lancer-ROF1",
         "name": "Lancer Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-MIS-Lancer"
@@ -9900,7 +9900,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Lancer-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_ROF2",
+        "msgName": "RM-WU-Lancer-ROF2",
         "name": "Lancer Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-Lancer-ROF1"
@@ -9930,7 +9930,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Lancer-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_ROF3",
+        "msgName": "RM-WU-Lancer-ROF3",
         "name": "Lancer Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-Lancer-ROF2"
@@ -9960,7 +9960,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Lancer-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_ROF4",
+        "msgName": "RM-WU-Lancer-ROF4",
         "name": "Lancer Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-Lancer-ROF3"
@@ -9990,7 +9990,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Lancer-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_ROF5",
+        "msgName": "RM-WU-Lancer-ROF5",
         "name": "Lancer Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-Lancer-ROF4"
@@ -10020,7 +10020,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Lancer-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Lancer_SPE1",
+        "msgName": "RM-WU-Lancer-SPE1",
         "name": "Lancer Special Mk1",
         "redComponents": [
             "FK-MIS-Lancer-VTOL",
@@ -10048,7 +10048,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Laser-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_ACC1",
+        "msgName": "RM-WU-Laser-ACC1",
         "name": "Laser Accuracy Mk1",
         "requiredResearch": [
             "R-W-HOT-Laser"
@@ -10071,7 +10071,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Laser-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_ACC2",
+        "msgName": "RM-WU-Laser-ACC2",
         "name": "Laser Accuracy Mk2",
         "requiredResearch": [
             "R-WU-Laser-ACC1"
@@ -10094,7 +10094,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Laser-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_ACC3",
+        "msgName": "RM-WU-Laser-ACC3",
         "name": "Laser Accuracy Mk3",
         "requiredResearch": [
             "R-WU-Laser-ACC2"
@@ -10117,7 +10117,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Laser-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_ACC4",
+        "msgName": "RM-WU-Laser-ACC4",
         "name": "Laser Accuracy Mk4",
         "requiredResearch": [
             "R-WU-Laser-ACC3"
@@ -10140,7 +10140,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Laser-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_ACC5",
+        "msgName": "RM-WU-Laser-ACC5",
         "name": "Laser Accuracy Mk5",
         "requiredResearch": [
             "R-WU-Laser-ACC4"
@@ -10163,7 +10163,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Laser-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_DMG1",
+        "msgName": "RM-WU-Laser-DMG1",
         "name": "Laser Damage Mk1",
         "requiredResearch": [
             "R-W-HOT-Laser"
@@ -10200,7 +10200,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Laser-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_DMG2",
+        "msgName": "RM-WU-Laser-DMG2",
         "name": "Laser Damage Mk2",
         "requiredResearch": [
             "R-WU-Laser-DMG1"
@@ -10237,7 +10237,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Laser-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_DMG3",
+        "msgName": "RM-WU-Laser-DMG3",
         "name": "Laser Damage Mk3",
         "requiredResearch": [
             "R-WU-Laser-DMG2"
@@ -10274,7 +10274,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Laser-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_DMG4",
+        "msgName": "RM-WU-Laser-DMG4",
         "name": "Laser Damage Mk4",
         "requiredResearch": [
             "R-WU-Laser-DMG3"
@@ -10311,7 +10311,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Laser-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_DMG5",
+        "msgName": "RM-WU-Laser-DMG5",
         "name": "Laser Damage Mk5",
         "requiredResearch": [
             "R-WU-Laser-DMG4"
@@ -10348,7 +10348,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Laser-DMG6",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_DMG6",
+        "msgName": "RM-WU-Laser-DMG6",
         "name": "Laser Damage Mk6",
         "requiredResearch": [
             "R-WU-Laser-DMG5"
@@ -10385,7 +10385,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Laser-DMG7",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_DMG7",
+        "msgName": "RM-WU-Laser-DMG7",
         "name": "Laser Damage Mk7",
         "requiredResearch": [
             "R-WU-Laser-DMG6"
@@ -10422,7 +10422,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Laser-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_ROF1",
+        "msgName": "RM-WU-Laser-ROF1",
         "name": "Laser Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-HOT-Laser"
@@ -10452,7 +10452,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Laser-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_ROF2",
+        "msgName": "RM-WU-Laser-ROF2",
         "name": "Laser Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-Laser-ROF1"
@@ -10482,7 +10482,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Laser-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_ROF3",
+        "msgName": "RM-WU-Laser-ROF3",
         "name": "Laser Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-Laser-ROF2"
@@ -10512,7 +10512,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Laser-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_ROF4",
+        "msgName": "RM-WU-Laser-ROF4",
         "name": "Laser Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-Laser-ROF3"
@@ -10542,7 +10542,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Laser-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_ROF5",
+        "msgName": "RM-WU-Laser-ROF5",
         "name": "Laser Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-Laser-ROF4"
@@ -10572,7 +10572,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Laser-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Laser_SPE1",
+        "msgName": "RM-WU-Laser-SPE1",
         "name": "Laser Special Mk1",
         "redComponents": [
             "FK-HOT-Laser"
@@ -10594,7 +10594,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Machinegun-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_ACC1",
+        "msgName": "RM-WU-Machinegun-ACC1",
         "name": "Machinegun Accuracy Mk1",
         "requiredResearch": [
             "R-W-FF-Machinegun"
@@ -10617,7 +10617,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Machinegun-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_ACC2",
+        "msgName": "RM-WU-Machinegun-ACC2",
         "name": "Machinegun Accuracy Mk2",
         "requiredResearch": [
             "R-WU-Machinegun-ACC1"
@@ -10640,7 +10640,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Machinegun-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_ACC3",
+        "msgName": "RM-WU-Machinegun-ACC3",
         "name": "Machinegun Accuracy Mk3",
         "requiredResearch": [
             "R-WU-Machinegun-ACC2"
@@ -10663,7 +10663,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Machinegun-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_ACC4",
+        "msgName": "RM-WU-Machinegun-ACC4",
         "name": "Machinegun Accuracy Mk4",
         "requiredResearch": [
             "R-WU-Machinegun-ACC3"
@@ -10686,7 +10686,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Machinegun-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_ACC5",
+        "msgName": "RM-WU-Machinegun-ACC5",
         "name": "Machinegun Accuracy Mk5",
         "requiredResearch": [
             "R-WU-Machinegun-ACC4"
@@ -10709,7 +10709,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Machinegun-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_DMG1",
+        "msgName": "RM-WU-Machinegun-DMG1",
         "name": "Machinegun Damage Mk1",
         "requiredResearch": [
             "R-W-FF-Machinegun"
@@ -10732,7 +10732,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Machinegun-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_DMG2",
+        "msgName": "RM-WU-Machinegun-DMG2",
         "name": "Machinegun Damage Mk2",
         "requiredResearch": [
             "R-WU-Machinegun-DMG1"
@@ -10755,7 +10755,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Machinegun-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_DMG3",
+        "msgName": "RM-WU-Machinegun-DMG3",
         "name": "Machinegun Damage Mk3",
         "requiredResearch": [
             "R-WU-Machinegun-DMG2"
@@ -10778,7 +10778,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Machinegun-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_DMG4",
+        "msgName": "RM-WU-Machinegun-DMG4",
         "name": "Machinegun Damage Mk4",
         "requiredResearch": [
             "R-WU-Machinegun-DMG3"
@@ -10801,7 +10801,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Machinegun-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_DMG5",
+        "msgName": "RM-WU-Machinegun-DMG5",
         "name": "Machinegun Damage Mk5",
         "requiredResearch": [
             "R-WU-Machinegun-DMG4"
@@ -10824,7 +10824,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Machinegun-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_ROF1",
+        "msgName": "RM-WU-Machinegun-ROF1",
         "name": "Machinegun Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-FF-Machinegun"
@@ -10854,7 +10854,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Machinegun-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_ROF2",
+        "msgName": "RM-WU-Machinegun-ROF2",
         "name": "Machinegun Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-Machinegun-ROF1"
@@ -10884,7 +10884,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Machinegun-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_ROF3",
+        "msgName": "RM-WU-Machinegun-ROF3",
         "name": "Machinegun Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-Machinegun-ROF2"
@@ -10914,7 +10914,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Machinegun-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_ROF4",
+        "msgName": "RM-WU-Machinegun-ROF4",
         "name": "Machinegun Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-Machinegun-ROF3"
@@ -10944,7 +10944,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Machinegun-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_ROF5",
+        "msgName": "RM-WU-Machinegun-ROF5",
         "name": "Machinegun Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-Machinegun-ROF4"
@@ -10974,7 +10974,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Machinegun-ROF6",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_ROF6",
+        "msgName": "RM-WU-Machinegun-ROF6",
         "name": "Machinegun Rate of Fire Mk6",
         "requiredResearch": [
             "R-WU-Machinegun-ROF5"
@@ -11004,7 +11004,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Machinegun-ROF7",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_ROF7",
+        "msgName": "RM-WU-Machinegun-ROF7",
         "name": "Machinegun Rate of Fire Mk7",
         "requiredResearch": [
             "R-WU-Machinegun-ROF6"
@@ -11034,7 +11034,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Machinegun-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_SPE1",
+        "msgName": "RM-WU-Machinegun-SPE1",
         "name": "Machinegun Special Mk1",
         "replacedComponents": [
             "FKCyborg-MG:FKCyborg-MG2"
@@ -11057,7 +11057,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Machinegun-SPE2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Machinegun_SPE2",
+        "msgName": "RM-WU-Machinegun-SPE2",
         "name": "Machinegun Special Mk2",
         "replacedComponents": [
             "FKCyborg-MG2:FKCyborg-MG3"
@@ -11081,7 +11081,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Railgun-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_ACC1",
+        "msgName": "RM-WU-Railgun-ACC1",
         "name": "Railgun Accuracy Mk1",
         "requiredResearch": [
             "R-W-SF-Railgun"
@@ -11104,7 +11104,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Railgun-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_ACC2",
+        "msgName": "RM-WU-Railgun-ACC2",
         "name": "Railgun Accuracy Mk2",
         "requiredResearch": [
             "R-WU-Railgun-ACC1"
@@ -11127,7 +11127,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Railgun-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_ACC3",
+        "msgName": "RM-WU-Railgun-ACC3",
         "name": "Railgun Accuracy Mk3",
         "requiredResearch": [
             "R-WU-Railgun-ACC2"
@@ -11150,7 +11150,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Railgun-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_ACC4",
+        "msgName": "RM-WU-Railgun-ACC4",
         "name": "Railgun Accuracy Mk4",
         "requiredResearch": [
             "R-WU-Railgun-ACC3"
@@ -11173,7 +11173,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-Railgun-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_ACC5",
+        "msgName": "RM-WU-Railgun-ACC5",
         "name": "Railgun Accuracy Mk5",
         "requiredResearch": [
             "R-WU-Railgun-ACC4"
@@ -11196,7 +11196,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Railgun-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_DMG1",
+        "msgName": "RM-WU-Railgun-DMG1",
         "name": "Railgun Damage Mk1",
         "requiredResearch": [
             "R-W-SF-Railgun"
@@ -11226,7 +11226,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Railgun-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_DMG2",
+        "msgName": "RM-WU-Railgun-DMG2",
         "name": "Railgun Damage Mk2",
         "requiredResearch": [
             "R-WU-Railgun-DMG1"
@@ -11256,7 +11256,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Railgun-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_DMG3",
+        "msgName": "RM-WU-Railgun-DMG3",
         "name": "Railgun Damage Mk3",
         "requiredResearch": [
             "R-WU-Railgun-DMG2"
@@ -11286,7 +11286,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Railgun-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_DMG4",
+        "msgName": "RM-WU-Railgun-DMG4",
         "name": "Railgun Damage Mk4",
         "requiredResearch": [
             "R-WU-Railgun-DMG3"
@@ -11316,7 +11316,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Railgun-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_DMG5",
+        "msgName": "RM-WU-Railgun-DMG5",
         "name": "Railgun Damage Mk5",
         "requiredResearch": [
             "R-WU-Railgun-DMG4"
@@ -11346,7 +11346,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Railgun-DMG6",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_DMG6",
+        "msgName": "RM-WU-Railgun-DMG6",
         "name": "Railgun Damage Mk6",
         "requiredResearch": [
             "R-WU-Railgun-DMG5"
@@ -11376,7 +11376,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-Railgun-DMG7",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_DMG7",
+        "msgName": "RM-WU-Railgun-DMG7",
         "name": "Railgun Damage Mk7",
         "requiredResearch": [
             "R-WU-Railgun-DMG6"
@@ -11406,7 +11406,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Railgun-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_ROF1",
+        "msgName": "RM-WU-Railgun-ROF1",
         "name": "Railgun Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-SF-Railgun"
@@ -11436,7 +11436,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Railgun-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_ROF2",
+        "msgName": "RM-WU-Railgun-ROF2",
         "name": "Railgun Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-Railgun-ROF1"
@@ -11466,7 +11466,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Railgun-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_ROF3",
+        "msgName": "RM-WU-Railgun-ROF3",
         "name": "Railgun Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-Railgun-ROF2"
@@ -11496,7 +11496,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Railgun-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_ROF4",
+        "msgName": "RM-WU-Railgun-ROF4",
         "name": "Railgun Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-Railgun-ROF3"
@@ -11526,7 +11526,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-Railgun-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_ROF5",
+        "msgName": "RM-WU-Railgun-ROF5",
         "name": "Railgun Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-Railgun-ROF4"
@@ -11556,7 +11556,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-Railgun-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_Railgun_SPE1",
+        "msgName": "RM-WU-Railgun-SPE1",
         "name": "Railgun Special Mk1",
         "redComponents": [
             "FK-SF-Railgun"
@@ -11578,7 +11578,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-RocketBattery-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_ACC1",
+        "msgName": "RM-WU-RocketBattery-ACC1",
         "name": "Rocket Battery Accuracy Mk1",
         "requiredResearch": [
             "R-W-ART-RocketBattery"
@@ -11601,7 +11601,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-RocketBattery-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_ACC2",
+        "msgName": "RM-WU-RocketBattery-ACC2",
         "name": "Rocket Battery Accuracy Mk2",
         "requiredResearch": [
             "R-WU-RocketBattery-ACC1"
@@ -11624,7 +11624,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-RocketBattery-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_ACC3",
+        "msgName": "RM-WU-RocketBattery-ACC3",
         "name": "Rocket Battery Accuracy Mk3",
         "requiredResearch": [
             "R-WU-RocketBattery-ACC2"
@@ -11647,7 +11647,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-RocketBattery-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_ACC4",
+        "msgName": "RM-WU-RocketBattery-ACC4",
         "name": "Rocket Battery Accuracy Mk4",
         "requiredResearch": [
             "R-WU-RocketBattery-ACC3"
@@ -11670,7 +11670,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-RocketBattery-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_ACC5",
+        "msgName": "RM-WU-RocketBattery-ACC5",
         "name": "Rocket Battery Accuracy Mk5",
         "requiredResearch": [
             "R-WU-RocketBattery-ACC4"
@@ -11693,7 +11693,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-RocketBattery-ACC6",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_ACC6",
+        "msgName": "RM-WU-RocketBattery-ACC6",
         "name": "Rocket Battery Accuracy Mk6",
         "requiredResearch": [
             "R-WU-RocketBattery-ACC5"
@@ -11716,7 +11716,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-RocketBattery-ACC7",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_ACC7",
+        "msgName": "RM-WU-RocketBattery-ACC7",
         "name": "Rocket Battery Accuracy Mk7",
         "requiredResearch": [
             "R-WU-RocketBattery-ACC6"
@@ -11739,7 +11739,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-RocketBattery-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_DMG1",
+        "msgName": "RM-WU-RocketBattery-DMG1",
         "name": "Rocket Battery Damage Mk1",
         "requiredResearch": [
             "R-W-ART-RocketBattery"
@@ -11769,7 +11769,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-RocketBattery-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_DMG2",
+        "msgName": "RM-WU-RocketBattery-DMG2",
         "name": "Rocket Battery Damage Mk2",
         "requiredResearch": [
             "R-WU-RocketBattery-DMG1"
@@ -11799,7 +11799,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-RocketBattery-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_DMG3",
+        "msgName": "RM-WU-RocketBattery-DMG3",
         "name": "Rocket Battery Damage Mk3",
         "requiredResearch": [
             "R-WU-RocketBattery-DMG2"
@@ -11829,7 +11829,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-RocketBattery-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_DMG4",
+        "msgName": "RM-WU-RocketBattery-DMG4",
         "name": "Rocket Battery Damage Mk4",
         "requiredResearch": [
             "R-WU-RocketBattery-DMG3"
@@ -11859,7 +11859,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-RocketBattery-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_DMG5",
+        "msgName": "RM-WU-RocketBattery-DMG5",
         "name": "Rocket Battery Damage Mk5",
         "requiredResearch": [
             "R-WU-RocketBattery-DMG4"
@@ -11889,7 +11889,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-RocketBattery-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_ROF1",
+        "msgName": "RM-WU-RocketBattery-ROF1",
         "name": "Rocket Battery Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-ART-RocketBattery"
@@ -11919,7 +11919,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-RocketBattery-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_ROF2",
+        "msgName": "RM-WU-RocketBattery-ROF2",
         "name": "Rocket Battery Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-RocketBattery-ROF1"
@@ -11949,7 +11949,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-RocketBattery-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_ROF3",
+        "msgName": "RM-WU-RocketBattery-ROF3",
         "name": "Rocket Battery Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-RocketBattery-ROF2"
@@ -11979,7 +11979,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-RocketBattery-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_ROF4",
+        "msgName": "RM-WU-RocketBattery-ROF4",
         "name": "Rocket Battery Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-RocketBattery-ROF3"
@@ -12009,7 +12009,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-RocketBattery-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_ROF5",
+        "msgName": "RM-WU-RocketBattery-ROF5",
         "name": "Rocket Battery Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-RocketBattery-ROF4"
@@ -12039,7 +12039,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-RocketBattery-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_SPE1",
+        "msgName": "RM-WU-RocketBattery-SPE1",
         "name": "Rocket Battery Special Mk1",
         "redComponents": [
             "FK-ART-RocketBattery"
@@ -12064,7 +12064,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-RocketBattery-SPE2",
         "keyTopic": 1,
-        "msgName": "RES_WU_RocketBattery_SPE2",
+        "msgName": "RM-WU-RocketBattery-SPE2",
         "name": "Rocket Battery Special Mk2",
         "redComponents": [
             "FK-ART-RocketBattery2"
@@ -12090,7 +12090,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-ScourgeMissile-ACC1",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_ACC1",
+        "msgName": "RM-WU-ScourgeMissile-ACC1",
         "name": "Scourge Missile Accuracy Mk1",
         "requiredResearch": [
             "R-W-MIS-ScourgeMissile"
@@ -12113,7 +12113,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-ScourgeMissile-ACC2",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_ACC2",
+        "msgName": "RM-WU-ScourgeMissile-ACC2",
         "name": "Scourge Missile Accuracy Mk2",
         "requiredResearch": [
             "R-WU-ScourgeMissile-ACC1"
@@ -12136,7 +12136,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-ScourgeMissile-ACC3",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_ACC3",
+        "msgName": "RM-WU-ScourgeMissile-ACC3",
         "name": "Scourge Missile Accuracy Mk3",
         "requiredResearch": [
             "R-WU-ScourgeMissile-ACC2"
@@ -12159,7 +12159,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-ScourgeMissile-ACC4",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_ACC4",
+        "msgName": "RM-WU-ScourgeMissile-ACC4",
         "name": "Scourge Missile Accuracy Mk4",
         "requiredResearch": [
             "R-WU-ScourgeMissile-ACC3"
@@ -12182,7 +12182,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-ScourgeMissile-ACC5",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_ACC5",
+        "msgName": "RM-WU-ScourgeMissile-ACC5",
         "name": "Scourge Missile Accuracy Mk5",
         "requiredResearch": [
             "R-WU-ScourgeMissile-ACC4"
@@ -12205,7 +12205,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-ScourgeMissile-ACC6",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_ACC6",
+        "msgName": "RM-WU-ScourgeMissile-ACC6",
         "name": "Scourge Missile Accuracy Mk6",
         "requiredResearch": [
             "R-WU-ScourgeMissile-ACC5"
@@ -12228,7 +12228,7 @@
         "iconID": "IMAGE_RES_GRPACC",
         "id": "R-WU-ScourgeMissile-ACC7",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_ACC7",
+        "msgName": "RM-WU-ScourgeMissile-ACC7",
         "name": "Scourge Missile Accuracy Mk7",
         "requiredResearch": [
             "R-WU-ScourgeMissile-ACC6"
@@ -12251,7 +12251,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-ScourgeMissile-DMG1",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_DMG1",
+        "msgName": "RM-WU-ScourgeMissile-DMG1",
         "name": "Scourge Missile Damage Mk1",
         "requiredResearch": [
             "R-W-MIS-ScourgeMissile"
@@ -12281,7 +12281,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-ScourgeMissile-DMG2",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_DMG2",
+        "msgName": "RM-WU-ScourgeMissile-DMG2",
         "name": "Scourge Missile Damage Mk2",
         "requiredResearch": [
             "R-WU-ScourgeMissile-DMG1"
@@ -12311,7 +12311,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-ScourgeMissile-DMG3",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_DMG3",
+        "msgName": "RM-WU-ScourgeMissile-DMG3",
         "name": "Scourge Missile Damage Mk3",
         "requiredResearch": [
             "R-WU-ScourgeMissile-DMG2"
@@ -12341,7 +12341,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-ScourgeMissile-DMG4",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_DMG4",
+        "msgName": "RM-WU-ScourgeMissile-DMG4",
         "name": "Scourge Missile Damage Mk4",
         "requiredResearch": [
             "R-WU-ScourgeMissile-DMG3"
@@ -12371,7 +12371,7 @@
         "iconID": "IMAGE_RES_GRPDAM",
         "id": "R-WU-ScourgeMissile-DMG5",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_DMG5",
+        "msgName": "RM-WU-ScourgeMissile-DMG5",
         "name": "Scourge Missile Damage Mk5",
         "requiredResearch": [
             "R-WU-ScourgeMissile-DMG4"
@@ -12401,7 +12401,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-ScourgeMissile-ROF1",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_ROF1",
+        "msgName": "RM-WU-ScourgeMissile-ROF1",
         "name": "Scourge Missile Rate of Fire Mk1",
         "requiredResearch": [
             "R-W-MIS-ScourgeMissile"
@@ -12431,7 +12431,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-ScourgeMissile-ROF2",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_ROF2",
+        "msgName": "RM-WU-ScourgeMissile-ROF2",
         "name": "Scourge Missile Rate of Fire Mk2",
         "requiredResearch": [
             "R-WU-ScourgeMissile-ROF1"
@@ -12461,7 +12461,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-ScourgeMissile-ROF3",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_ROF3",
+        "msgName": "RM-WU-ScourgeMissile-ROF3",
         "name": "Scourge Missile Rate of Fire Mk3",
         "requiredResearch": [
             "R-WU-ScourgeMissile-ROF2"
@@ -12491,7 +12491,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-ScourgeMissile-ROF4",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_ROF4",
+        "msgName": "RM-WU-ScourgeMissile-ROF4",
         "name": "Scourge Missile Rate of Fire Mk4",
         "requiredResearch": [
             "R-WU-ScourgeMissile-ROF3"
@@ -12521,7 +12521,7 @@
         "iconID": "IMAGE_RES_GRPROF",
         "id": "R-WU-ScourgeMissile-ROF5",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_ROF5",
+        "msgName": "RM-WU-ScourgeMissile-ROF5",
         "name": "Scourge Missile Rate of Fire Mk5",
         "requiredResearch": [
             "R-WU-ScourgeMissile-ROF4"
@@ -12551,7 +12551,7 @@
         "iconID": "IMAGE_RES_GRPUPG",
         "id": "R-WU-ScourgeMissile-SPE1",
         "keyTopic": 1,
-        "msgName": "RES_WU_ScourgeMissile_SPE1",
+        "msgName": "RM-WU-ScourgeMissile-SPE1",
         "name": "Scourge Missile Special Mk1",
         "redComponents": [
             "FK-MIS-ScourgeMissile"
