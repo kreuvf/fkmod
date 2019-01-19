@@ -45,6 +45,22 @@ for resID in nonsingles:
 
 # Create research messages
 resmsgs = {}
+
+for single in singles:
+	# Starting at 1 to get rid of the "R" in "R-[...]"
+	resmsgname = 'RM' + single[1:]
+	resmsgs[resmsgname] = {
+		'id': resmsgname,
+		'imdName': 'MICAPSUL.pie',
+		'sequenceName': 'INVALID',
+		'text': [
+			'Line 0',
+			'Line 1',
+			'Line 2',
+			'Line 3'
+		]
+	}
+
 for succession in sorted(successions):
 	for i in successions[succession]:
 		resmsgname = 'RM' + succession[1:] + str(i)
