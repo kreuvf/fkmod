@@ -70,7 +70,7 @@ for succession in sorted(successions):
 			'imdName': 'MICAPSUL.pie',
 			'sequenceName': 'INVALID',
 			'text': [
-			'Line 0',
+				'Line 0',
 				'Line 1',
 				'Line 2',
 				'Line 3'
