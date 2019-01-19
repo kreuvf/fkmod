@@ -63,6 +63,7 @@ for single in singles:
 
 for succession in sorted(successions):
 	for i in successions[succession]:
+		# Starting at 1 to get rid of the "R" in "R-[...]"
 		resmsgname = 'RM' + succession[1:] + str(i)
 		resmsgs[resmsgname] = {
 			'id': resmsgname,
@@ -76,8 +77,7 @@ for succession in sorted(successions):
 			]
 		}
 
-
-# This is still quite hardcoded and would ideally some external text file with all the text. For now (and probably ever), things stay in this file. ¯\_(ツ)_/¯
+# This is still quite hardcoded and would ideally use some external text file with all the text. For now (and probably ever), things stay in this file. ¯\_(ツ)_/¯
 
 
 # Save JSON dump
