@@ -25,6 +25,10 @@ successions = {}
 
 # Tell singles and non-singles apart
 for resID in research:
+	# Hacks do not get research messages
+	if re.match('R-HACK-', resID):
+		continue
+
 	if re.search('^.*[0-9]+$', resID):
 		nonsingles.append(resID)
 	else:
