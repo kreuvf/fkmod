@@ -516,10 +516,16 @@ resmsgs = {}
 for single in singles:
 	# Starting at 1 to get rid of the "R" in "R-[...]"
 	resmsgname = 'RM' + single[1:]
+	sequencename = 'INVALID'
+	for videotype in resvideotype:
+		if resmsgname in resvideotype[videotype]:
+			sequencename = videotype
+			break
+
 	resmsgs[resmsgname] = {
 		'id': resmsgname,
 		'imdName': 'MICAPSUL.pie',
-		'sequenceName': 'INVALID',
+		'sequenceName': sequencename,
 		'text': [
 			'Line 0',
 			'Line 1',
@@ -532,10 +538,16 @@ for succession in sorted(successions):
 	for i in successions[succession]:
 		# Starting at 1 to get rid of the "R" in "R-[...]"
 		resmsgname = 'RM' + succession[1:] + str(i)
+		sequencename = 'INVALID'
+		for videotype in resvideotype:
+			if resmsgname in resvideotype[videotype]:
+				sequencename = videotype
+				break
+
 		resmsgs[resmsgname] = {
 			'id': resmsgname,
 			'imdName': 'MICAPSUL.pie',
-			'sequenceName': 'INVALID',
+			'sequenceName': sequencename,
 			'text': [
 				'Line 0',
 				'Line 1',
