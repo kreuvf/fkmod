@@ -82,6 +82,6 @@ for succession in sorted(successions):
 
 # Save JSON dump
 with open('../jsondata/mp/messages/resmessagesall.json', 'w') as f:
-	json.dump(research, fp=f, indent=4, sort_keys=True)
+	json.dump(resmsgs, fp=f, indent=4, sort_keys=True)
 
 
