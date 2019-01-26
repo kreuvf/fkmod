@@ -362,11 +362,12 @@ diff --git a/src/stats.cpp b/src/stats.cpp
 index f42ed99..d94aa9e 100644
 --- a/src/stats.cpp
 +++ b/src/stats.cpp
-@@ -40,6 +40,7 @@
+@@ -40,6 +40,8 @@
  #include "lib/sound/audio_id.h"
  #include "projectile.h"
  #include "text.h"
 +#include "combat.h"
++#include <math.h>
  
  #define WEAPON_TIME		100
  
