@@ -513,15 +513,8 @@ for resID in nonsingles:
 # Create research messages
 resmsgs = {}
 
-for single in singles:
-	# Starting at 1 to get rid of the "R" in "R-[...]"
-	resmsgname = 'RM' + single[1:]
-	sequencename = 'INVALID'
-	for videotype in resvideotype:
-		if resmsgname in resvideotype[videotype]:
-			sequencename = videotype
-			break
-
+# Code deduplication \o/
+def addmessage (resmsgs, resmsgname, sequencename):
 	resmsgs[resmsgname] = {
 		'id': resmsgname,
 		'imdName': 'MICAPSUL.pie',
@@ -534,6 +527,17 @@ for single in singles:
 		]
 	}
 
+for single in singles:
+	# Starting at 1 to get rid of the "R" in "R-[...]"
+	resmsgname = 'RM' + single[1:]
+	sequencename = 'INVALID'
+	for videotype in resvideotype:
+		if resmsgname in resvideotype[videotype]:
+			sequencename = videotype
+			break
+
+	addmessage(resmsgs, resmsgname, sequencename)
+
 for succession in sorted(successions):
 	for i in successions[succession]:
 		# Starting at 1 to get rid of the "R" in "R-[...]"
@@ -544,17 +548,7 @@ for succession in sorted(successions):
 				sequencename = videotype
 				break
 
-		resmsgs[resmsgname] = {
-			'id': resmsgname,
-			'imdName': 'MICAPSUL.pie',
-			'sequenceName': sequencename,
-			'text': [
-				'Line 0',
-				'Line 1',
-				'Line 2',
-				'Line 3'
-			]
-		}
+		addmessage(resmsgs, resmsgname, sequencename)
 
 # This is still quite hardcoded and would ideally use some external text file with all the text. For now (and probably ever), things stay in this file. ¯\_(ツ)_/¯
 
