@@ -477,6 +477,13 @@ resvideotype['res_weapons.ogg'] = [
 with open("../jsondata/mp/stats/research.json", 'r') as f:
 	research = json.load(fp=f)
 
+with open("../jsondata/mp/stats/structure.json", 'r') as f:
+	structures = json.load(fp=f)
+
+with open("../jsondata/mp/stats/structuremodifier.json", 'r') as f:
+	structuremodifier = json.load(fp=f)
+
+
 # Heuristic to find singles and successions:
 # 	Does the name end with a digit?
 #		Yes: Succession.
@@ -551,10 +558,268 @@ for succession in sorted(successions):
 		addmessage(resmsgs, resmsgname, sequencename)
 
 # This is still quite hardcoded and would ideally use some external text file with all the text. For now (and probably ever), things stay in this file. ¯\_(ツ)_/¯
+# Define standard messages
+s = {}
+s['nb'] = 'New body available'
+s['nd'] = 'New defensive structure available'
+s['np'] = 'New propulsion available'
+s['ns'] = 'New system available'
+s['nw'] = 'New weapon available'
 
+s['AA1'] = 'Strong against VTOLs'
+s['AA2'] = 'May also target ground units at the right elevation'
+s['AT'] = 'Strong against tanks'
+# weapon type "artillery"
+s['tART1'] = 'Strong against hover units and cyborgs'
+s['tART2'] = 'Artillery weapons need Artillery sensors to work'
+# weapon type "fast fire"
+s['tFF'] = 'Strong against cyborgs, weak against tanks and structures'
+# weapon type "thermal weapons (HOT)"
+s['tHOT1'] = 'Strong against cyborgs, hover units; weak against tanks, structures'
+s['tHOT2'] = 'Burn effect continues at full strength after leaving fire'
+
+# aerial only
+s['ao'] = 'Can be used against aerial targets only'
+# ground only
+s['go'] = 'Can be used against ground targets only'
+
+s['hard'] = 'Base armour: {}, reduced damage from some weapon types' #structure.json
+
+
+# Define all the things o\ (singles only)
+singlemsgs = {}
+singlemsgs['RM-B-HiKin'] = [
+	s['nb'],
+	'Higher kinetic armour than the standard body',
+	'Same speed and same thermal armour as standard body',
+	'Comes in sleek 2095 turquoise',
+]
+singlemsgs['RM-B-HiSpeed'] = [
+	s['nb'],
+	'Higher speed than the standard body',
+	'Same kinetic armour and same thermal armour as standard body',
+	'Black is beautiful',
+]
+singlemsgs['RM-B-HiTherm'] = [
+	s['nb'],
+	'Higher thermal armour than the standard body',
+	'Same speed and same kinetic armour as standard body',
+	'Designed to conceal bigbonedness of the drivers',
+]
+singlemsgs['RM-Commander'] = [
+	s['ns'],
+	'Commanders concentrate the fire of attached units',
+	'Assign units, factories and/or artillery to commanders',
+	'Damaged units are sent to repair and return automatically',
+]
+singlemsgs['RM-Def-Bunker'] = [
+	s['nd'],
+	'Bunkers are well-protected, but cannot fire over walls',
+	'Base armour: {}, reduced damage from many weapon types'.format(
+		structures['FKBunkerCannon']['armour']
+	),
+	'Weakness: Heavy Bomb ({}% damage)'.format(
+		structuremodifier['BUNKER BUSTER']['BUNKER']
+	),
+]
+singlemsgs['RM-Def-Hardpoint'] = [
+	s['nd'],
+	'Hardpoints can fire over walls and other hardpoints',
+	s['hard'].format(
+		structures['FKHardpointCannon']['armour']
+	),
+	'Build behind walls for enhanced durability',
+]
+singlemsgs['RM-Def-Site'] = [
+	s['nd'],
+	'Sites carry mainly indirect and anti-air weapons',
+	s['hard'].format(
+		structures['FKAASiteAvengerSAM']['armour']
+	),
+	'Combine with other defensive structures',
+]
+singlemsgs['RM-Def-Wall'] = [
+	s['nd'],
+	'Walls and automatic gates keep intruders out',
+	s['hard'].format(
+		structures['FKWall']['armour']
+	),
+	'Weak against graffiti sprayers',
+]
+singlemsgs['RM-P-Hover'] = [
+	s['np'],
+	'Hover propulsion allows travel on land and water',
+	'Generally weaker than tracked tanks',
+	'Hovercraft have been in use since ancient times',
+]
+singlemsgs['RM-P-VTOL'] = [
+	s['np'],
+	'Vertical Take Off and Landing (VTOL) allows aircraft',
+	'Weak against anti-air weapons',
+	'Units must be rearmed on rearming pads',
+]
+singlemsgs['RM-Repair'] = [
+	s['ns'],
+	'Repair turret automatically repairs damaged units nearby',
+	'Cyborg and tank turrets available',
+	'Repair all the things',
+]
+singlemsgs['RM-SensorArtillery'] = [
+	s['ns'],
+	'Artillery sensor scans for targets',
+	'Mandatory for artillery to work',
+	'Destroy enemy sensors to shut down artillery',
+]
+singlemsgs['RM-SensorCB'] = [
+	s['ns'],
+	'Counter Battery (CB) sensors scan for enemy artillery fire',
+	'Assigned artillery tries to destroy enemy artillery',
+	'Stay out of CB vs. CB fights',
+]
+singlemsgs['RM-SensorSurveillance'] = [
+	s['ns'],
+	'Surveillance sensors give visibility for surrounding area',
+	'Extends unit field of view',
+	'Cannot be used for artillery',
+]
+singlemsgs['RM-SensorVTOL'] = [
+	s['ns'],
+	'Send assigned VTOLs to engage targets',
+	'VTOL attacks are fully automated',
+	'Caution: Attacks only start if all VTOLs are repaired and rearmed',
+]
+singlemsgs['RM-St-RepairFacility'] = [
+	'New structure available',
+	'Repair facilities provide stationary repairs',
+	'Faster repair rate than mobile repair turrets',
+	'Automatically repair damaged units in range',
+]
+singlemsgs['RM-U-CyborgTransport'] = [
+	'New unit available',
+	'Cyborg Transport transports up to 10 cyborgs',
+	'VTOL without weapons',
+	'Units inside are lost when the transport is destroyed',
+]
+singlemsgs['RM-W-ART-Howitzer'] = [
+	s['nw'],
+	'Howitzers fire explosive shells',
+	s['tART1'],
+	s['tART2'],
+]
+singlemsgs['RM-W-ART-RocketBattery'] = [
+	s['nw'],
+	'Rocket batteries have the longest range',
+	s['tART1'],
+	s['tART2'],
+]
+singlemsgs['RM-W-FF-AAHurricane'] = [
+	s['nw'],
+	'Hurricane AA fires armour-piercing shells',
+	s['AA1'],
+	s['AA2'],
+]
+singlemsgs['RM-W-FF-Autocannon'] = [
+	s['nw'],
+	'Autocannon shoots small-calibre ammunition in short succession',
+	s['tFF'],
+	'Tank equivalent for machine gun',
+]
+singlemsgs['RM-W-FF-Machinegun'] = [
+	s['nw'],
+	'Machine gun shoots small-calibre ammunition in short succession',
+	s['tFF'],
+	'Cyborg equivalent for Autocannon',
+]
+singlemsgs['RM-W-HOT-AAStormbringer'] = [
+	s['nw'],
+	'Stormbringer AA fires laser beams',
+	s['AA1'],
+	s['AA2'],
+]
+singlemsgs['RM-W-HOT-BombThermite'] = [
+	s['nw'],
+	'Thermite bombs set large areas on fire',
+	s['tHOT1'],
+	s['tHOT2'],
+]
+singlemsgs['RM-W-HOT-Flamethrower'] = [
+	s['nw'],
+	'Flamethrowers set small areas on fire',
+	s['tHOT1'],
+	s['tHOT2'],
+]
+singlemsgs['RM-W-HOT-HowitzerIncendiary'] = [
+	s['nw'],
+	'Incendiary howitzer fires explosive shells setting small areas on fire',
+	s['tHOT1'],
+	s['tART2'],
+]
+singlemsgs['RM-W-HOT-Laser'] = [
+	s['nw'],
+	'Laser fires laser beams setting the target on fire',
+	s['tHOT1'],
+	s['tHOT2'],
+]
+singlemsgs['RM-W-MIS-AAAvengerSAM'] = [
+	s['nw'],
+	'Avenger Surface-to-Air Missile (SAM) without homing',
+	s['AA1'],
+	s['ao'],
+]
+singlemsgs['RM-W-MIS-Lancer'] = [
+	s['nw'],
+	'Lancer multi-purpose missile',
+	s['AT'],
+	s['go'],
+]
+singlemsgs['RM-W-MIS-ScourgeMissile'] = [
+	s['nw'],
+	'Scourge Missile with long range',
+	s['AT'],
+	s['go'],
+]
+singlemsgs['RM-W-SF-AACyclone'] = [
+	s['nw'],
+	'Cyclone AA fires explosive rounds',
+	s['AA1'],
+	s['AA2'],
+]
+singlemsgs['RM-W-SF-BombHeavy'] = [
+	s['nw'],
+	'Heavy Bomb with anti-defense warhead',
+	'Strong against defensive structures',
+	'Slow rearming',
+]
+singlemsgs['RM-W-SF-Cannon'] = [
+	s['nw'],
+	'Cyborg Cannon firing anti-tank projectiles',
+	s['AT'],
+	'Weak against cyborgs',
+]
+singlemsgs['RM-W-SF-Railgun'] = [
+	s['nw'],
+	'Tank Railgun firing anti-tank projectiles',
+	s['AT'],
+	'Weak against cyborgs',
+]
+singlemsgs['RM-W-SPL-BombCluster'] = [
+	s['nw'],
+	'Cluster Bombs damage large areas',
+	'Strong against cyborgs',
+	'Weak against tanks',
+]
+singlemsgs['RM-W-SPL-GrenadeLauncher'] = [
+	s['nw'],
+	'Indirect non-artillery weapon with splash damage',
+	'Strong against cyborgs',
+	'No particular weakness',
+]
+
+for key in resmsgs:
+	if key in singlemsgs:
+		resmsgs[key]['text'] = singlemsgs[key]
 
 # Save JSON dump
 with open('../jsondata/mp/messages/resmessagesall.json', 'w') as f:
 	json.dump(resmsgs, fp=f, indent=4, sort_keys=True)
-
 
