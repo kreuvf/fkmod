@@ -15,10 +15,10 @@ const tankWeapons = {
 }
 
 const vtolWeapons = {
-	clustrer: ["FK-SPL-BombCluster", "FK-SPL-BombCluster2", "FK-SPL-BombCluster3"],
+	cluster: ["FK-SPL-BombCluster", "FK-SPL-BombCluster2", "FK-SPL-BombCluster3"],
 	heavy: ["FK-SF-BombHeavy", "FK-SF-BombHeavy2", "FK-SF-BombHeavy3"],
 	lancer: ["FK-MIS-LancerVTOL", "FK-MIS-LancerVTOL2"],
-	mg: ["FK-FF-Autoannon-VTOL", "FK-FF-Autoannon-VTOL2", "FK-FF-Autoannon-VTOL3"],
+	mg: ["FK-FF-Autocannon-VTOL", "FK-FF-Autocannon-VTOL2", "FK-FF-Autocannon-VTOL3"],
 	thermite: ["FK-HOT-BombThermite", "FK-HOT-BombThermite2", "FK-HOT-BombThermite3"],
 }
 
@@ -36,19 +36,19 @@ const propulsions = {
 }
 
 function idleTankFacs() {
-	return facs = enumStruct(me, BaseStructs.tankFac[0]).filter(function(struct) {
+	return enumStruct(me, BaseStructs.tankFac[0]).filter(function(struct) {
 		return struct.status == BUILT && structureIdle(struct);
 	});
 }
 
 function idleCybFacs() {
-	return facs = enumStruct(me, BaseStructs.cybFac[0]).filter(function(struct) {
+	return enumStruct(me, BaseStructs.cybFac[0]).filter(function(struct) {
 		return struct.status == BUILT && structureIdle(struct);
 	});
 }
 
 function idleVtolFacs() {
-	return facs = enumStruct(me, BaseStructs.vtolFac[0]).filter(function(struct) {
+	return enumStruct(me, BaseStructs.vtolFac[0]).filter(function(struct) {
 		return struct.status == BUILT && structureIdle(struct);
 	});
 }
@@ -82,7 +82,6 @@ function production() {
 	if (tankFacs.length > 0) {
 		var tank = mgTank();
 		if(defined(tank)) {
-			debug(tank.name + " " + tank.body + " " + tank.propulsion + " " + tank.weapon);
 			buildDroid(tankFacs[0], tank.name, tank.body, tank.propulsion, null, null, tank.weapon);
 		}
 	}
