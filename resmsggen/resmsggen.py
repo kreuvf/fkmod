@@ -499,6 +499,12 @@ for resID in research:
 	if re.match('R-HACK-', resID):
 		continue
 
+	# Catch quasi-singles (= need dedicated research messages): -SPE
+	if re.search('^.*-SPE[12]$', resID):
+		singles.append(resID)
+		continue
+
+	# Process the remaining ones
 	if re.search('^.*[0-9]+$', resID):
 		nonsingles.append(resID)
 	else:
