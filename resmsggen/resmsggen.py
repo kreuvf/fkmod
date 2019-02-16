@@ -483,6 +483,8 @@ with open("../jsondata/mp/stats/structure.json", 'r') as f:
 with open("../jsondata/mp/stats/structuremodifier.json", 'r') as f:
 	structuremodifier = json.load(fp=f)
 
+with open("../jsondata/mp/stats/weapons.json", 'r') as f:
+	weapons = json.load(fp=f)
 
 # Heuristic to find singles and successions:
 # 	Does the name end with a digit?
@@ -571,6 +573,7 @@ s['nd'] = 'New defensive structure available'
 s['np'] = 'New propulsion available'
 s['ns'] = 'New system available'
 s['nw'] = 'New weapon available'
+s['su'] = 'Special upgrade unlocked'
 
 s['AA1'] = 'Strong against VTOLs'
 s['AA2'] = 'May also target ground units at the right elevation'
@@ -820,10 +823,396 @@ singlemsgs['RM-W-SPL-GrenadeLauncher'] = [
 	'Strong against cyborgs',
 	'No particular weakness',
 ]
+# quasi-single messages
+singlemsgs['RM-WU-AAAvengerSAM-SPE1'] = [
+	s['su'],
+	'Avenger Surface-to-Air Missile is now homing',
+	'Missiles will follow the target',
+	'',
+]
+singlemsgs['RM-WU-AACyclone-SPE1'] = [
+	s['su'],
+	'Cyclone shells fly faster',
+	'Turret can fire vertically now (90°)',
+	'',
+]
+singlemsgs['RM-WU-AACyclone-SPE2'] = [
+	s['su'],
+	'Cyclone explosions affect larger area',
+	'Splash radius increased from {} to {}'.format(
+		weapons['FK-SF-AACyclone2']['radius'],
+		weapons['FK-SF-AACyclone3']['radius']
+	),
+	'',
+]
+singlemsgs['RM-WU-AAHurricane-SPE1'] = [
+	s['su'],
+	'Hurricane shells fly faster',
+	'Turret can fire vertically now (90°)',
+	'',
+]
+singlemsgs['RM-WU-AAHurricane-SPE2'] = [
+	s['su'],
+	'Hurricane salvo size increased',
+	'Shots per salvo increased from {} to {}'.format(
+		weapons['FK-FF-AAHurricane2']['numRounds'],
+		weapons['FK-FF-AAHurricane3']['numRounds']
+	),
+	'',
+]
+singlemsgs['RM-WU-AAStormbringer-SPE1'] = [
+	s['su'],
+	'Stormbringer shots travel faster (yes, we can do even that)',
+	'Range increased by {}, fire pause decreased from {} to {}'.format(
+		weapons['FK-HOT-AAStormbringer2']['longRange']-weapons['FK-HOT-AAStormbringer']['longRange'],
+		weapons['FK-HOT-AAStormbringer']['firePause'],
+		weapons['FK-HOT-AAStormbringer2']['firePause']
+	),
+	'Turret can fire almost vertically now (85°)',
+]
+singlemsgs['RM-WU-Autocannon-SPE1'] = [
+	s['su'],
+	'Autocannon salvo size increased',
+	'Shots per salvo increased from {} to {}'.format(
+		weapons['FK-FF-Autocannon-Tank']['numRounds'],
+		weapons['FK-FF-Autocannon-Tank2']['numRounds']
+	),
+	'',
+]
+singlemsgs['RM-WU-Autocannon-SPE2'] = [
+	s['su'],
+	'Autocannon salvo size increased',
+	'Shots per salvo increased from {} to {}'.format(
+		weapons['FK-FF-Autocannon-Tank2']['numRounds'],
+		weapons['FK-FF-Autocannon-Tank3']['numRounds']
+	),
+	'Tanks only: Barrel can be lowered further ({} ↗ {})'.format(
+		-weapons['FK-FF-Autocannon-Tank2']['minElevation'],
+		-weapons['FK-FF-Autocannon-Tank3']['minElevation']
+	),
+]
+singlemsgs['RM-WU-BombCluster-SPE1'] = [
+	s['su'],
+	'Cluster bomb explosions affect larger area',
+	'Splash radius increased from {} to {}'.format(
+		weapons['FK-SPL-BombCluster']['radius'],
+		weapons['FK-SPL-BombCluster2']['radius']
+	),
+	'',
+]
+singlemsgs['RM-WU-BombCluster-SPE2'] = [
+	s['su'],
+	'Cluster bomb salvo size increased',
+	'Bombs per salvo increased from {} to {}'.format(
+		weapons['FK-SPL-BombCluster2']['numRounds'],
+		weapons['FK-SPL-BombCluster3']['numRounds']
+	),
+	'',
+]
+singlemsgs['RM-WU-BombHeavy-SPE1'] = [
+	s['su'],
+	'Heavy bomb mass decreased',
+	'Mass decreased from {} to {}'.format(
+		weapons['FK-SF-BombHeavy']['weight'],
+		weapons['FK-SF-BombHeavy2']['weight']
+	),
+	'',
+]
+singlemsgs['RM-WU-BombHeavy-SPE2'] = [
+	s['su'],
+	'Heavy bomb mass decreased',
+	'Mass decreased from {} to {}'.format(
+		weapons['FK-SF-BombHeavy']['weight'],
+		weapons['FK-SF-BombHeavy2']['weight']
+	),
+	'',
+]
+singlemsgs['RM-WU-BombThermite-SPE1'] = [
+	s['su'],
+	'Thermite bomb burning affects larger area',
+	'Incendiary radius increased from {} to {}'.format(
+		weapons['FK-HOT-BombThermite']['periodicalDamageRadius'],
+		weapons['FK-HOT-BombThermite2']['periodicalDamageRadius']
+	),
+	'',
+]
+singlemsgs['RM-WU-BombThermite-SPE2'] = [
+	s['su'],
+	'Thermite bomb mass decreased',
+	'Mass decreased from {} to {}'.format(
+		weapons['FK-HOT-BombThermite2']['weight'],
+		weapons['FK-HOT-BombThermite3']['weight']
+	),
+	'',
+]
+singlemsgs['RM-WU-Cannon-Cyb-SPE1'] = [
+	s['su'],
+	'Cyborg cannons usable while moving',
+	'Cannons may be fired while moving at 50% reduced accuracy',
+	'',
+]
+singlemsgs['RM-WU-Cannon-Cyb-SPE2'] = [
+	s['su'],
+	'Cyborg cannons usable while moving',
+	'Cannons may be fired while moving at full accuracy',
+	'',
+]
+singlemsgs['RM-WU-Cannon-Struc-SPE1'] = [
+	s['su'],
+	'Structure cannon damage and splash radius increased',
+	'Base damage increased from {} to {}'.format(
+		weapons['FK-SF-Cannon-Structure']['damage'],
+		weapons['FK-SF-Cannon-Structure2']['damage']
+	),
+	'Splash radius increased from {} to {}'.format(
+		weapons['FK-SF-Cannon-Structure']['radius'],
+		weapons['FK-SF-Cannon-Structure2']['radius']
+	),
+]
+singlemsgs['RM-WU-Cannon-Struc-SPE2'] = [
+	s['su'],
+	'Structure cannon range increased',
+	'Range increased from {} to {}'.format(
+		weapons['FK-SF-Cannon-Structure2']['longRange'],
+		weapons['FK-SF-Cannon-Structure3']['longRange']
+	),
+	'',
+]
+singlemsgs['RM-WU-Flamethrower-SPE1'] = [
+	s['su'],
+	'Flamethrower burning affects larger area',
+	'Incendiary radius increased from {} to {}'.format(
+		weapons['FK-HOT-Flamethrower']['periodicalDamageRadius'],
+		weapons['FK-HOT-Flamethrower2']['periodicalDamageRadius']
+	),
+	'',
+]
+singlemsgs['RM-WU-Flamethrower-SPE2'] = [
+	s['su'],
+	'Flamethrower flames burn longer',
+	'Incendiary effect duration increased from {} to {}'.format(
+		weapons['FK-HOT-Flamethrower2']['periodicalDamageTime'],
+		weapons['FK-HOT-Flamethrower3']['periodicalDamageTime']
+	),
+	'',
+]
+singlemsgs['RM-WU-GrenadeLauncher-SPE1'] = [
+	s['su'],
+	'Grenade launcher explosions affect larger area',
+	'Cyborgs only: Splash radius increased from {} to {}'.format(
+		weapons['FK-SPL-GrenadeLauncher-Cyborg']['radius'],
+		weapons['FK-SPL-GrenadeLauncher-Cyborg2']['radius']
+	),
+	'Tanks/structure only: Splash radius increased from {} to {}'.format(
+		weapons['FK-SPL-GrenadeLauncher-TankStructure']['radius'],
+		weapons['FK-SPL-GrenadeLauncher-TankStructure2']['radius']
+	),
+]
+singlemsgs['RM-WU-GrenadeLauncher-SPE2'] = [
+	s['su'],
+	'Grenade launcher explosions affect larger area',
+	'Cyborgs only: Splash radius increased from {} to {}'.format(
+		weapons['FK-SPL-GrenadeLauncher-Cyborg2']['radius'],
+		weapons['FK-SPL-GrenadeLauncher-Cyborg3']['radius']
+	),
+	'Tanks/structure only: Splash radius increased from {} to {}'.format(
+		weapons['FK-SPL-GrenadeLauncher-TankStructure2']['radius'],
+		weapons['FK-SPL-GrenadeLauncher-TankStructure3']['radius']
+	),
+]
+singlemsgs['RM-WU-HowitzerIncendiary-SPE1'] = [
+	s['su'],
+	'Incendiary howitzer range increased',
+	'Range increased from {} to {}'.format(
+		weapons['FK-HOT-HowitzerIncendiary']['longRange'],
+		weapons['FK-HOT-HowitzerIncendiary2']['longRange']
+	),
+	'',
+]
+singlemsgs['RM-WU-HowitzerIncendiary-SPE2'] = [
+	s['su'],
+	'Incendiary howitzer burning affects larger area',
+	'Incendiary radius increased from {} to {}'.format(
+		weapons['FK-HOT-HowitzerIncendiary2']['periodicalDamageRadius'],
+		weapons['FK-HOT-HowitzerIncendiary3']['periodicalDamageRadius']
+	),
+	'',
+]
+singlemsgs['RM-WU-Howitzer-SPE1'] = [
+	s['su'],
+	'Howitzer range increased',
+	'Range increased from {} to {}'.format(
+		weapons['FK-ART-Howitzer']['longRange'],
+		weapons['FK-ART-Howitzer2']['longRange']
+	),
+	'',
+]
+singlemsgs['RM-WU-Howitzer-SPE2'] = [
+	s['su'],
+	'Howitzer range increased',
+	'Range increased from {} to {}'.format(
+		weapons['FK-ART-Howitzer2']['longRange'],
+		weapons['FK-ART-Howitzer3']['longRange']
+	),
+	'',
+]
+singlemsgs['RM-WU-Lancer-SPE1'] = [
+	s['su'],
+	'Lancer rockets usable against ground and aerial targets',
+	'',
+	'',
+]
+singlemsgs['RM-WU-Laser-SPE1'] = [
+	s['su'],
+	'Laser beams penetrate targets',
+	'One shot may hit several targets in a row',
+	'',
+]
+singlemsgs['RM-WU-Machinegun-SPE1'] = [
+	s['su'],
+	'Machine gun bullets fired at higher velocity',
+	'Cyborgs only: Flight speed increased from {} to {}'.format(
+		weapons['FK-FF-Machinegun-Cyborg']['flightSpeed'],
+		weapons['FK-FF-Machinegun-Cyborg2']['flightSpeed']
+	),
+	'Structures only: Flight speed increased from {} to {}'.format(
+		weapons['FK-FF-Machinegun-Structure']['flightSpeed'],
+		weapons['FK-FF-Machinegun-Structure2']['flightSpeed']
+	),
+]
+singlemsgs['RM-WU-Machinegun-SPE2'] = [
+	s['su'],
+	'Machine gun barrel can be raised/lowered further',
+	'Cyborgs only: Barrel can be raised/lowered further ({} ↗ {}/{} ↗ {})'.format(
+		weapons['FK-FF-Machinegun-Cyborg2']['maxElevation'],
+		weapons['FK-FF-Machinegun-Cyborg3']['maxElevation'],
+		-weapons['FK-FF-Machinegun-Cyborg2']['minElevation'],
+		-weapons['FK-FF-Machinegun-Cyborg3']['minElevation']
+	),
+	'Structures only: Barrel can be raised/lowered further ({} ↗ {}/{} ↗ {})'.format(
+		weapons['FK-FF-Machinegun-Structure2']['maxElevation'],
+		weapons['FK-FF-Machinegun-Structure3']['maxElevation'],
+		-weapons['FK-FF-Machinegun-Structure2']['minElevation'],
+		-weapons['FK-FF-Machinegun-Structure3']['minElevation']
+	),
+]
+singlemsgs['RM-WU-Railgun-SPE1'] = [
+	s['su'],
+	'Railgun projectiles penetrate targets',
+	'One shot may hit several targets in a row',
+	'',
+]
+singlemsgs['RM-WU-RocketBattery-SPE1'] = [
+	s['su'],
+	'Rocket Battery range increased',
+	'Range increased from {} to {}'.format(
+		weapons['FK-ART-RocketBattery']['longRange'],
+		weapons['FK-ART-RocketBattery2']['longRange']
+	),
+	'',
+]
+singlemsgs['RM-WU-RocketBattery-SPE2'] = [
+	s['su'],
+	'Rocket Battery is now homing',
+	'Rockets will follow the target',
+	'',
+]
+singlemsgs['RM-WU-ScourgeMissile-SPE1'] = [
+	s['su'],
+	'Scourge Missile is now homing',
+	'Missiles will follow the target',
+	'',
+]
 
+
+# Define all the things o\ (successions only)
+# To save keystrokes, grouped by upgrade type
+# Upgrade types: ACC, Armours, BodyPoints, DMG, Engine, KineticArmour, NRG, RAU, Res, ROF, RpU, ThermalArmour
+successionmsgs = {}
+
+# Internal name to display name converter
+displaynames = {}
+displaynames['AAAvengerSAM'] = 'Avenger SAM'
+displaynames['AACyclone'] = 'Cyclone AA'
+displaynames['AAHurricane'] = 'Hurricane AA'
+displaynames['AAStormbringer'] = 'Stormbringer AA'
+displaynames['Autocannon'] = 'Autocannon'
+displaynames['BombCluster'] = 'Cluster bomb'
+displaynames['BombHeavy'] = 'Heavy bomb'
+displaynames['BombThermite'] = 'Thermite bomb'
+displaynames['Cannon'] = 'Cannon'
+displaynames['Flamethrower'] = 'Flamethrower'
+displaynames['GrenadeLauncher'] = 'Grenade Launcher'
+displaynames['Howitzer'] = 'Howitzer'
+displaynames['HowitzerIncendiary'] = 'Incendiary Howitzer'
+displaynames['Lancer'] = 'Lancer'
+displaynames['Laser'] = 'Laser'
+displaynames['Machinegun'] = 'Machinegun'
+displaynames['Railgun'] = 'Railgun'
+displaynames['RocketBattery'] = 'Rocket Battery'
+displaynames['ScourgeMissile'] = 'Scourge Missile'
+
+# Internal name to weapon entry converter
+weaponnames = {}
+weaponnames['AAAvengerSAM'] = 'FK-MIS-AAAvengerSAM'
+weaponnames['AACyclone'] = 'FK-SF-AACyclone'
+weaponnames['AAHurricane'] = 'FK-FF-AAHurricane'
+weaponnames['AAStormbringer'] = 'FK-HOT-AAStormbringer'
+# FK-FF-Autocannon-Tank vs. FK-FF-Autocannon-VTOL
+weaponnames['Autocannon'] = 'FK-FF-Autocannon-Tank'
+weaponnames['BombCluster'] = 'FK-SPL-BombCluster'
+weaponnames['BombHeavy'] = 'FK-SF-BombHeavy'
+weaponnames['BombThermite'] = 'FK-HOT-BombThermite'
+# FK-SF-Cannon-Cyborg vs. FK-SF-Cannon-Structure vs. FK-SF-Cannon-Structure
+weaponnames['Cannon'] = 'FK-SF-Cannon-Cyborg'
+weaponnames['Flamethrower'] = 'FK-HOT-Flamethrower'
+# FK-SPL-GrenadeLauncher-Cyborg vs. FK-SPL-GrenadeLauncher-TankStructure
+weaponnames['GrenadeLauncher'] = 'FK-SPL-GrenadeLauncher-Cyborg'
+weaponnames['Howitzer'] = 'FK-ART-Howitzer'
+weaponnames['HowitzerIncendiary'] = 'FK-HOT-HowitzerIncendiary'
+# FK-MIS-Lancer-Cyborg vs. FK-MIS-Lancer-VTOL
+weaponnames['Lancer'] = 'FK-MIS-Lancer-Cyborg'
+weaponnames['Laser'] = 'FK-HOT-Laser'
+#ä FK-FF-Machinegun-Cyborg vs. FK-FF-Machinegun-Structure
+weaponnames['Machinegun'] = 'FK-FF-Machinegun-Cyborg'
+weaponnames['Railgun'] = 'FK-SF-Railgun'
+weaponnames['RocketBattery'] = 'FK-ART-RocketBattery'
+weaponnames['ScourgeMissile'] = 'FK-MIS-ScourgeMissile'
+
+for succession in successions:
+	successionparts = re.split('-', succession)
+	if successionparts[-1] == 'ACC':
+		for topic in successions[succession]:
+			# Generate research message name
+			# Starting at 1 to get rid of the "R" in "R-[...]"
+			resmsgname = 'RM' + succession[1:] + topic
+			# Generate weapon name
+			weaponname = displaynames[successionparts[2]]
+			# Get internal weapon name
+			internalweaponname = weaponnames[successionparts[2]]
+			# Generate Upgrade information
+			newvalue = -1
+			oldvalue = int(weapons[internalweaponname]['longHit'])
+			# Cycle over upgrades for oldvalue
+			for oldtopic in range(1, int(topic)):
+				oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+			newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+			upgradeinfo = 'Accuracy improved from {:d} % to {:d} %'.format(int(oldvalue), int(newvalue))
+			successionmsgs[resmsgname] = [
+				'{} accuracy improved'.format(weaponname),
+				upgradeinfo,
+			]
+	print('{}: {}'.format(succession, successions[succession]))
+
+for key in successionmsgs:
+	print(key)
+
+# Apply all the new messages
 for key in resmsgs:
 	if key in singlemsgs:
 		resmsgs[key]['text'] = singlemsgs[key]
+	if key in successionmsgs:
+		resmsgs[key]['text'] = successionmsgs[key]
 
 # Save JSON dump
 with open('../jsondata/mp/messages/resmessagesall.json', 'w') as f:
