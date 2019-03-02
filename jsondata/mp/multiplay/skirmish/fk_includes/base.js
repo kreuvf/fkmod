@@ -168,7 +168,7 @@ function buildBase() {
 		vtolFacs * 2 +
 		labs * 2
 	)	
-	if (numDerricks > requiredOil) {
+	if (numDerricks >= requiredOil) {
 		if (labs == 0) {
 			buildings.push(new potStructure(BaseStructs.labs[0], startPositions[me].x, startPositions[me].y, 0));
 		} else if (cybFacs + tankFacs + vtolFacs < labs + 2 || labs == getStructureLimit(BaseStructs.labs[0], me)) {
@@ -208,5 +208,36 @@ function buildSomething() {
 			orderDroidBuild(builder, DORDER_BUILD, structure.id, pos.x, pos.y);
 			break;
 		}
+	}
+}
+
+// Initial build order at game start
+
+var buildOrder= [
+	new potStructure(BaseStructs.tankFac[0], startPositions[me].x, startPositions[me].y, 0),
+	new potStructure(BaseStructs.gens[0], startPositions[me].x, startPositions[me].y, 0),
+	new potStructure(BaseStructs.labs[0], startPositions[me].x, startPositions[me].y, 0),
+	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0),
+	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0),
+	new potStructure(BaseStructs.gens[0], startPositions[me].x, startPositions[me].y, 0),
+	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0),
+	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0),
+]
+
+function buildStartup() {
+	var trucks = findIdleBuilders();
+	if(buildOrder.length > 0) {
+		if(trucks.length > 0) {
+			var structure = buildOrder[0];
+			var builder = findNearestIdleBuilder(structure.x, structure.y);
+			if (!builder) return;
+			var pos = pickStructLocation(builder, structure.id, structure.x, structure.y);
+			if (!pos) return;
+			orderDroidBuild(builder, DORDER_BUILD, structure.id, pos.x, pos.y);
+			buildOrder.shift();
+		}
+	} else {
+		removeTimer("buildStartup");
+		setTimer("buildSomething", 1000); // start regular build routine
 	}
 }
