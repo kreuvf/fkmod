@@ -193,11 +193,26 @@ function buildDefense() {
 }
 
 function buildSomething() {
+	var trucks = findIdleBuilders();
+	if(trucks.length == 0) return;
+	
+	// Help build a started structure if near enough
+	var unfinished = enumStruct(me).filter(function(struct) {
+		return struct.status == BEING_BUILT;
+	});
+	if(unfinished.length > 0) {
+		for(var i = 0; i < unfinished.length; i++) {
+			if(distance(trucks[0], unfinished[0]) < 20) {
+				orderDroidObj(trucks[0], DORDER_HELPBUILD, unfinished[0]);
+				return;
+			}
+		}
+	}
+	
 	var buildList = buildEssentials();
 	buildList = buildList.concat(buildOil());
 	buildList = buildList.concat(buildBase());
-	var trucks = findIdleBuilders();
-	if (buildList.length > 0 && trucks.length > 0) {
+	if (buildList.length > 0) {
 		for(var i = 0; i < buildList.length; i++) {
 			var structure = buildList[i];
 			var builder = findNearestIdleBuilder(structure.x, structure.y);
@@ -205,8 +220,8 @@ function buildSomething() {
 			if (!isStructureAvailable(structure.id, me)) continue;
 			var pos = pickStructLocation(builder, structure.id, structure.x, structure.y);
 			if (!pos) return;
-			orderDroidBuild(builder, DORDER_BUILD, structure.id, pos.x, pos.y);
-			break;
+			var status = orderDroidBuild(builder, DORDER_BUILD, structure.id, pos.x, pos.y);
+			if(status) break;
 		}
 	}
 }
@@ -216,28 +231,56 @@ function buildSomething() {
 var buildOrder= [
 	new potStructure(BaseStructs.tankFac[0], startPositions[me].x, startPositions[me].y, 0),
 	new potStructure(BaseStructs.gens[0], startPositions[me].x, startPositions[me].y, 0),
-	new potStructure(BaseStructs.labs[0], startPositions[me].x, startPositions[me].y, 0),
 	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0),
+	new potStructure(BaseStructs.labs[0], startPositions[me].x, startPositions[me].y, 0),
 	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0),
 	new potStructure(BaseStructs.gens[0], startPositions[me].x, startPositions[me].y, 0),
 	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0),
 	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0),
 ]
 
+// Chekcs if ai has at least nr of type and orders an additinal structure built if not
+function buildMin(type, nr) {
+	var num = enumStruct(me, type).length;
+	if(num < nr) {
+		var structure = new potStructure(type, startPositions[me].x, startPositions[me].y, 0)
+		var builder = findNearestIdleBuilder(structure.x, structure.y);
+		if (!builder) return true;
+		var pos = pickStructLocation(builder, structure.id, structure.x, structure.y);
+		if (!pos) return true;
+		orderDroidBuild(builder, DORDER_BUILD, structure.id, pos.x, pos.y);
+		return true;
+	}
+	return false;
+}
+
+// Initial build order for game start, calls "buildsomething" when all required buildings are built
 function buildStartup() {
 	var trucks = findIdleBuilders();
-	if(buildOrder.length > 0) {
-		if(trucks.length > 0) {
-			var structure = buildOrder[0];
-			var builder = findNearestIdleBuilder(structure.x, structure.y);
-			if (!builder) return;
-			var pos = pickStructLocation(builder, structure.id, structure.x, structure.y);
-			if (!pos) return;
-			orderDroidBuild(builder, DORDER_BUILD, structure.id, pos.x, pos.y);
-			buildOrder.shift();
+	if(trucks.length == 0) return;
+	
+	// Help build a started structure if near enough
+	var unfinished = enumStruct(me).filter(function(struct) {
+		return struct.status == BEING_BUILT;
+	});
+	if(unfinished.length > 0) {
+		for(var i = 0; i < unfinished.length; i++) {
+			if(distance(trucks[0], unfinished[0]) < 20) {
+				orderDroidObj(trucks[0], DORDER_HELPBUILD, unfinished[0]);
+				return;
+			}
 		}
-	} else {
-		removeTimer("buildStartup");
-		setTimer("buildSomething", 1000); // start regular build routine
 	}
+	
+	//build order
+	if(buildMin(BaseStructs.tankFac[0], 1)) return;
+	if(buildMin(BaseStructs.gens[0], 1)) return;
+	if(buildMin(BaseStructs.derricks[0], 2)) return;
+	if(buildMin(BaseStructs.labs[0], 1)) return;
+	if(buildMin(BaseStructs.derricks[0], 4)) return;
+	if(buildMin(BaseStructs.gens[0], 2)) return;
+	if(buildMin(BaseStructs.derricks[0], 6)) return;
+	
+	removeTimer("buildStartup");
+	setTimer("buildSomething", 1000); // start regular build routine
 }
