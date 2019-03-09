@@ -29,7 +29,7 @@ function findAntiTankTarget() {
 	droids = droids.filter(function(droid) {
 		return droid.droidType != DROID_CYBORG && !droid.isVTOL;
 	});
-	if(droids.length > 0) return droids[0];
+	return droids;
 }
 
 function findAntiCyborgTarget() {
@@ -43,7 +43,31 @@ function findAntiCyborgTarget() {
 	droids = droids.filter(function(droid) {
 		return droid.droidType == DROID_CYBORG;
 	});
-	if(droids.length > 0) return droids[0];
+	return droids;
+}
+
+function isAntiTank(unit) {
+	if(!defined(unit)) return false;
+	if(unit.type !== DROID) return false;
+	if(unit.droidType !== DROID_WEAPON || unit.isVTOL) return false;
+	if(
+		unit.weapons[0].name == tankWeapons.railgun[0] || unit.weapons[0].name == tankWeapons.railgun[1] ||
+		unit.weapons[0].name == tankWeapons.scourge[0] || unit.weapons[0].name == tankWeapons.scourge[1]
+	) {
+		return true;
+	}
+}
+
+function isAntiCyborg(unit) {
+	if(!defined(unit)) return false;
+	if(unit.type !== DROID) return false;
+	if(unit.droidType !== DROID_WEAPON || unit.isVTOL) return false;
+	if(
+		unit.weapons[0].name == tankWeapons.mg[0] || unit.weapons[0].name == tankWeapons.mg[1] || unit.weapons[0].name == tankWeapons.mg[2] ||
+		unit.weapons[0].name == tankWeapons.grenade[0] || unit.weapons[0].name == tankWeapons.grenade[1] || unit.weapons[0].name == tankWeapons.grenade[2]
+	) { 
+		return true;
+	}
 }
 
 // Main loop
@@ -57,12 +81,7 @@ function unitControl() {
 			var freeUnits = enumGroup(ungrouped);
 			for(j = 0; j < freeUnits.length; j++) {
 				var unit = freeUnits[j];
-				if(unit.type !== DROID) continue;
-				if(unit.droidType !== DROID_WEAPON || unit.isVTOL) continue;
-				if(
-					unit.weapons[0].name == tankWeapons.railgun[0] || unit.weapons[0].name == tankWeapons.railgun[1] ||
-					unit.weapons[0].name == tankWeapons.scourge[0] || unit.weapons[0].name == tankWeapons.scourge[1]
-				) {
+				if(isAntiTank(unit)) {
 					groupAdd(group, unit);
 					if(groupSize(group) >= tankGroupSize) break;
 				}
@@ -76,9 +95,9 @@ function unitControl() {
 				units[0].order !== DORDER_SCOUT
 			) {
 				var target = findAntiTankTarget();
-				if(defined(target)) {
+				if(target.length > 0) {
 					for(j = 0; j < units.length; j++) {
-					orderDroidObj(units[j], DORDER_ATTACK, target);
+					orderDroidObj(units[j], DORDER_ATTACK, target[0]);
 					}
 				}
 			}
@@ -94,12 +113,7 @@ function unitControl() {
 			var freeUnits = enumGroup(ungrouped);
 			for(j = 0; j < freeUnits.length; j++) {
 				var unit = freeUnits[j];
-				if(unit.type !== DROID) continue;
-				if(unit.droidType !== DROID_WEAPON || unit.isVTOL) continue;
-				if(
-					unit.weapons[0].name == tankWeapons.mg[0] || unit.weapons[0].name == tankWeapons.mg[1] || unit.weapons[0].name == tankWeapons.mg[2] ||
-					unit.weapons[0].name == tankWeapons.grenade[0] || unit.weapons[0].name == tankWeapons.grenade[1] || unit.weapons[0].name == tankWeapons.grenade[2]
-				) {
+				if(isAntiCyborg(unit)) {
 					groupAdd(group, unit);
 					if(groupSize(group) >= cyborgGroupSize) break;
 				}
@@ -113,9 +127,9 @@ function unitControl() {
 				units[0].order !== DORDER_SCOUT
 			) {
 				var target = findAntiCyborgTarget();
-				if(defined(target)) {
+				if(target.length > 0) {
 					for(j = 0; j < units.length; j++) {
-					orderDroidObj(units[j], DORDER_ATTACK, target);
+					orderDroidObj(units[j], DORDER_ATTACK, target[0]);
 					}
 				}
 			}

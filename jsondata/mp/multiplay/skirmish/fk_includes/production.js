@@ -77,10 +77,35 @@ function mgTank() {
 	return new unit(name, body, propulsion, weapon);
 }
 
+function railgunTank() {
+	var name = "MG-Tank";
+	var weapon;
+	if (componentAvailable(tankWeapons.railgun[1])) {
+		weapon = tankWeapons.railgun[1];
+	} else if (componentAvailable(tankWeapons.railgun[0])) {
+		weapon = tankWeapons.railgun[0];
+	} else {
+		return;
+	}
+	var body = bodies.standard[0];
+	var propulsion = propulsions.tracks[0];
+	return new unit(name, body, propulsion, weapon);
+}
+
 function production() {
 	var tankFacs = idleTankFacs();
 	if (tankFacs.length > 0) {
-		var tank = mgTank();
+		var tank;
+		// choose tank type
+		var enemyTanks = findAntiTankTarget().length;
+		var enemyCyborgs = findAntiCyborgTarget().length;
+		var ownAntiTank = enumDroid(me).filter(isAntiTank).length;
+		var ownAntiCyborg = enumDroid(me).filter(isAntiCyborg).length;
+		if((1+enemyTanks)/(1+ownAntiTank) > (1+enemyCyborgs)/(1+ownAntiCyborg)) {
+			tank = railgunTank();
+		} else {
+			tank = mgTank();
+		}
 		if(defined(tank)) {
 			buildDroid(tankFacs[0], tank.name, tank.body, tank.propulsion, null, null, tank.weapon);
 		}
