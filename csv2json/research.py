@@ -441,6 +441,9 @@ for funcline in funcCSV:
 			results.append(copy.deepcopy(tmp))
 			results[-1]['parameter'] = 'Armour'
 			results[-1]['value'] = int(funcline[2])
+			results.append(copy.deepcopy(tmp))
+			results[-1]['parameter'] = 'Thermal'
+			results[-1]['value'] = int(funcline[2])
 		if funcline[3] != '0':
 			results.append(copy.deepcopy(tmp))
 			results[-1]['parameter'] = 'HitPoints'
@@ -515,6 +518,9 @@ for funcline in funcCSV:
 		if funcline[2] != '0':
 			results.append(copy.deepcopy(tmp))
 			results[-1]['parameter'] = 'Armour'
+			results[-1]['value'] = int(funcline[2])
+			results.append(copy.deepcopy(tmp))
+			results[-1]['parameter'] = 'Thermal'
 			results[-1]['value'] = int(funcline[2])
 		if funcline[3] != '0':
 			results.append(copy.deepcopy(tmp))

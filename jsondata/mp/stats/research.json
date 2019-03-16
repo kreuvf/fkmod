@@ -1711,8 +1711,22 @@
             {
                 "class": "Building",
                 "filterParameter": "Type",
+                "filterValue": "Wall",
+                "parameter": "Thermal",
+                "value": 10
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
                 "filterValue": "Structure",
                 "parameter": "Armour",
+                "value": 10
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
+                "filterValue": "Structure",
+                "parameter": "Thermal",
                 "value": 10
             }
         ],
@@ -1740,8 +1754,22 @@
             {
                 "class": "Building",
                 "filterParameter": "Type",
+                "filterValue": "Wall",
+                "parameter": "Thermal",
+                "value": 11
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
                 "filterValue": "Structure",
                 "parameter": "Armour",
+                "value": 11
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
+                "filterValue": "Structure",
+                "parameter": "Thermal",
                 "value": 11
             }
         ],
@@ -1769,8 +1797,22 @@
             {
                 "class": "Building",
                 "filterParameter": "Type",
+                "filterValue": "Wall",
+                "parameter": "Thermal",
+                "value": 12
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
                 "filterValue": "Structure",
                 "parameter": "Armour",
+                "value": 12
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
+                "filterValue": "Structure",
+                "parameter": "Thermal",
                 "value": 12
             }
         ],
@@ -1798,8 +1840,22 @@
             {
                 "class": "Building",
                 "filterParameter": "Type",
+                "filterValue": "Wall",
+                "parameter": "Thermal",
+                "value": 13
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
                 "filterValue": "Structure",
                 "parameter": "Armour",
+                "value": 13
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
+                "filterValue": "Structure",
+                "parameter": "Thermal",
                 "value": 13
             }
         ],
@@ -1827,8 +1883,22 @@
             {
                 "class": "Building",
                 "filterParameter": "Type",
+                "filterValue": "Wall",
+                "parameter": "Thermal",
+                "value": 15
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
                 "filterValue": "Structure",
                 "parameter": "Armour",
+                "value": 15
+            },
+            {
+                "class": "Building",
+                "filterParameter": "Type",
+                "filterValue": "Structure",
+                "parameter": "Thermal",
                 "value": 15
             }
         ],
