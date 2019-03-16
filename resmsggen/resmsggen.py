@@ -1202,10 +1202,6 @@ for succession in successions:
 				'{} accuracy improved'.format(weaponname),
 				upgradeinfo,
 			]
-	print('{}: {}'.format(succession, successions[succession]))
-
-for key in successionmsgs:
-	print(key)
 	elif successionparts[-1] == 'Armours':
 		for topic in successions[succession]:
 			# Generate research message name
