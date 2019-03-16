@@ -1206,6 +1206,36 @@ for succession in successions:
 
 for key in successionmsgs:
 	print(key)
+	elif successionparts[-1] == 'Armours':
+		for topic in successions[succession]:
+			# Generate research message name
+			# Starting at 1 to get rid of the "R" in "R-[...]"
+			resmsgname = 'RM' + succession[1:] + topic
+			# Generate Upgrade information (only percentage as structures have different armour values)
+			newvalue = -1
+			oldvalue = 100
+			# Cycle over upgrades for oldvalue
+			for oldtopic in range(1, int(topic)):
+				oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+			newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+			upgradeinfo = [
+				'Kinetic armour improved to {new:d} % of its base value (was {old:d} %)'.format(old = int(oldvalue), new = int(newvalue)),
+				'Thermal armour improved to {new:d} % of its base value (was {old:d} %)'.format(old = int(oldvalue), new = int(newvalue)),]
+			successionmsgs[resmsgname] = [
+				'Structure armours improved',
+				upgradeinfo[0],
+				upgradeinfo[1]
+			]
+#	elif successionparts[-1] == 'BodyPoints':
+#	elif successionparts[-1] == 'DMG':
+#	elif successionparts[-1] == 'Engine':
+#	elif successionparts[-1] == 'KineticArmour':
+#	elif successionparts[-1] == 'NRG':
+#	elif successionparts[-1] == 'RAU':
+#	elif successionparts[-1] == 'Res':
+#	elif successionparts[-1] == 'ROF':
+#	elif successionparts[-1] == 'RpU':
+#	elif successionparts[-1] == 'ThermalArmour':
 
 # Apply all the new messages
 for key in resmsgs:
