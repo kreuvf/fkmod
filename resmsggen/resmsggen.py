@@ -1222,7 +1222,28 @@ for succession in successions:
 				upgradeinfo[0],
 				upgradeinfo[1]
 			]
-#	elif successionparts[-1] == 'BodyPoints':
+	elif successionparts[-1] == 'BodyPoints':
+		for topic in successions[succession]:
+			# Generate research message name
+			# Starting at 1 to get rid of the "R" in "R-[...]"
+			resmsgname = 'RM' + succession[1:] + topic
+			# Generate Upgrade information (only percentage as structures have different bodypoints values)
+			newvalue = -1
+			oldvalue = 100
+			# Cycle over upgrades for oldvalue
+			for oldtopic in range(1, int(topic)):
+				oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+			newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+			# Two types: Units and structures/walls
+			if research[succession + topic]['results'][0]['class'] == 'Building':
+				upgradeinfo = ['Structure body points improved']
+			elif research[succession + topic]['results'][0]['class'] == 'Body':
+				upgradeinfo = ['Unit body points improved']
+			upgradeinfo.append('Body points improved to {new:d} % of its base value (was {old:d} %)'.format(old = int(oldvalue), new = int(newvalue)))
+			successionmsgs[resmsgname] = [
+				upgradeinfo[0],
+				upgradeinfo[1]
+			]
 #	elif successionparts[-1] == 'DMG':
 #	elif successionparts[-1] == 'Engine':
 #	elif successionparts[-1] == 'KineticArmour':
