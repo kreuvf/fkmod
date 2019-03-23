@@ -1351,7 +1351,23 @@ for succession in successions:
 				"Rearming pads improved",
 				upgradeinfo
 			]
-#	elif successionparts[-1] == 'Res':
+	elif successionparts[-1] == 'Res':
+		for topic in successions[succession]:
+			# Generate research message name
+			# Starting at 1 to get rid of the "R" in "R-[...]"
+			resmsgname = 'RM' + succession[1:] + topic
+			# Generate Upgrade information (only percentage as bodies have different kinetic armour values)
+			newvalue = -1
+			oldvalue = 100
+			# Cycle over upgrades for oldvalue
+			for oldtopic in range(1, int(topic)):
+				oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+			newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+			upgradeinfo = 'Research speed improved to {new:d} % of its base value (was {old:d} %)'.format(old = int(oldvalue), new = int(newvalue))
+			successionmsgs[resmsgname] = [
+				"Research facilities improved",
+				upgradeinfo
+			]
 #	elif successionparts[-1] == 'ROF':
 #	elif successionparts[-1] == 'RpU':
 	elif successionparts[-1] == 'ThermalArmour':
