@@ -60,38 +60,6 @@ function unit(name, body, propulsion, weapon) {
 	this.weapon = weapon;
 }
 
-function mgTank() {
-	var name = "MG-Tank";
-	var weapon;
-	if (componentAvailable(tankWeapons.mg[2])) {
-		weapon = tankWeapons.mg[2];
-	} else if (componentAvailable(tankWeapons.mg[1])) {
-		weapon = tankWeapons.mg[1];
-	} else if (componentAvailable(tankWeapons.mg[0])) {
-		weapon = tankWeapons.mg[0];
-	} else {
-		return;
-	}
-	var body = bodies.standard[0];
-	var propulsion = propulsions.tracks[0];
-	return new unit(name, body, propulsion, weapon);
-}
-
-function railgunTank() {
-	var name = "MG-Tank";
-	var weapon;
-	if (componentAvailable(tankWeapons.railgun[1])) {
-		weapon = tankWeapons.railgun[1];
-	} else if (componentAvailable(tankWeapons.railgun[0])) {
-		weapon = tankWeapons.railgun[0];
-	} else {
-		return;
-	}
-	var body = bodies.standard[0];
-	var propulsion = propulsions.tracks[0];
-	return new unit(name, body, propulsion, weapon);
-}
-
 function production() {
 	var tankFacs = idleTankFacs();
 	if (tankFacs.length > 0) {
