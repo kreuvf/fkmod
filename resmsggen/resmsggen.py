@@ -1244,7 +1244,45 @@ for succession in successions:
 				upgradeinfo[0],
 				upgradeinfo[1]
 			]
-#	elif successionparts[-1] == 'DMG':
+	elif successionparts[-1] == 'DMG':
+		for topic in successions[succession]:
+			# Generate research message name
+			# Starting at 1 to get rid of the "R" in "R-[...]"
+			resmsgname = 'RM' + succession[1:] + topic
+			# Generate weapon name
+			weaponname = displaynames[successionparts[2]]
+			# Get internal weapon name
+			internalweaponname = weaponnames[successionparts[2]]
+			# Generate Upgrade information (impact damage, splash damage, burn damage)
+			# More complicated than before, because "damage" may not be used in all cases
+			# Flamethrowers have damage 1 and show no improvement on upgrades
+			newvalue = {}
+			oldvalue = {}
+			keys = ['damage', 'radiusDamage', 'periodicalDamage']
+			for key in keys:
+				newvalue[key] = -1
+				if key in weapons[internalweaponname]:
+					oldvalue[key] = int(weapons[internalweaponname][key])
+				else:
+					oldvalue[key] = 0
+			# Cycle over upgrades for oldvalue
+			for key in oldvalue:
+				for oldtopic in range(1, int(topic)):
+					oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+				newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+			upgradeinfo = 'Damage improved from {impactold:d}/{splashold:d}/{burnold:d} to {impactnew:d}/{splashnew:d}/{burnnew:d}'.format(
+				impactold = int(oldvalue['damage']),
+				splashold = int(oldvalue['radiusDamage']),
+				burnold = int(oldvalue['periodicalDamage']),
+				impactnew = int(newvalue['damage']),
+				splashnew = int(newvalue['radiusDamage']),
+				burnnew = int(newvalue['periodicalDamage']),
+			)
+			successionmsgs[resmsgname] = [
+				'{} damage improved'.format(weaponname),
+				upgradeinfo,
+				'All applicable damage types (impact, splash, burn) affected'
+			]
 #	elif successionparts[-1] == 'Engine':
 #	elif successionparts[-1] == 'KineticArmour':
 #	elif successionparts[-1] == 'NRG':
