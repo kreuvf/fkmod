@@ -13,6 +13,10 @@ from natsort import natsorted
 
 # Hard-coded stuff
 #
+# Conversion factors
+conv = {'s per min': 60, '0.1 s per s': 10}
+conv['0.1 s per min'] = conv['0.1 s per s'] * conv['s per min']
+
 # Six videos for computer research, droid research, power research, structure research, system research and weapon research exist.
 # If the sequence is available it gets played in the intelligence screen
 # Sort each research into a fitting category to show the correct video:
@@ -1368,7 +1372,144 @@ for succession in successions:
 				"Research facilities improved",
 				upgradeinfo
 			]
-#	elif successionparts[-1] == 'ROF':
+	elif successionparts[-1] == 'ROF':
+		# firePause in 0.1 s
+		# numRounds in 1
+		# reloadTime in 0.1 s
+		# average ROF (during salvo vs. complete cycle)
+		# 	firePause only between shots (beware off-by-one)
+		# 	time for one salvo (in s): (numRounds - 1) * firePause
+		# 	sum: reloadTime + time for one salvo
+		# 	ROF (salvo): (numRounds / time for one salvo) * 60 s/min
+		# 	ROF (complete cycle): (numRounds / (time for one salvo + reloadTime)) * 60 s/min
+		# Official calculation does not take firePause into account -> hint in messages
+		# Do not take numAttackRuns into account
+		#
+		# Two weapon types to distinguish
+		# Non-salvo firing
+		# firePause, no numRounds, no reloadTime
+		# Salvo firing
+		# firePause, numRounds, reloadTime
+		#
+		# Some weapons come in different flavours, e. g. for cyborgs, tanks, structures, VTOLs
+		# 	FK-FF-Autocannon-Tank vs. FK-FF-Autocannon-VTOL
+		# 	FK-SF-Cannon-Cyborg vs. FK-SF-Cannon-Structure vs. FK-SF-Cannon-Structure
+		# 	FK-SPL-GrenadeLauncher-Cyborg vs. FK-SPL-GrenadeLauncher-TankStructure
+		# 	FK-MIS-Lancer-Cyborg vs. FK-MIS-Lancer-VTOL
+		# 	FK-FF-Machinegun-Cyborg vs. FK-FF-Machinegun-Structure
+		# Not yet handled.
+		for topic in successions[succession]:
+			# Generate research message name
+			# Starting at 1 to get rid of the "R" in "R-[...]"
+			resmsgname = 'RM' + succession[1:] + topic
+			# Generate weapon name
+			weaponname = displaynames[successionparts[2]]
+			# Get internal weapon name
+			internalweaponname = weaponnames[successionparts[2]]
+			# Generate Upgrade information
+			newvalue = {}
+			oldvalue = {}
+			keys = ['firePause', 'numRounds', 'reloadTime']
+			for key in keys:
+				newvalue[key] = -1
+				if key in weapons[internalweaponname]:
+					oldvalue[key] = int(weapons[internalweaponname][key])
+				else:
+					oldvalue[key] = 0
+			# Decide for weapon type
+			# Salvo firing weapon
+			if (oldvalue['firePause'] != 0) \
+			and (oldvalue['numRounds'] != 0) \
+			and (oldvalue['reloadTime'] != 0):
+				# Cycle over upgrades for oldvalue
+				for key in oldvalue:
+					for oldtopic in range(1, int(topic)):
+						oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+					newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+				# Calculate ROFs
+				rofs = {}
+				if oldvalue['numRounds'] == 1:
+					print("Warning: Weapon {} fires in salvoes, but has only one shot per salvo effectively making it a non-salvo firing weapon which should only use 'firePause' and not 'numRounds' or 'reloadTime'.".format(weaponname))
+				else:
+					# Per salvo
+					rofs['salvo old'] = (
+						(oldvalue['numRounds'] / 
+							(
+								(oldvalue['numRounds'] - 1)
+								 * oldvalue['firePause']
+							)
+						) * conv['0.1 s per min']
+					)
+					rofs['salvo new'] = (
+						(newvalue['numRounds'] / 
+							(
+								(newvalue['numRounds'] - 1)
+								 * newvalue['firePause']
+							)
+						) * conv['0.1 s per min']
+					)
+					# Per complete cycle
+					rofs['complete old'] = (
+						(oldvalue['numRounds'] / 
+							(
+								(
+									(oldvalue['numRounds'] - 1)
+									 * oldvalue['firePause']
+								)
+							+ oldvalue['reloadTime']
+							)
+						) * conv['0.1 s per min']
+					)
+					rofs['complete new'] = (
+						(newvalue['numRounds'] / 
+							(
+								(
+									(newvalue['numRounds'] - 1)
+									 * newvalue['firePause']
+								)
+							+ newvalue['reloadTime']
+							)
+						) * conv['0.1 s per min']
+					)
+				upgradeinfo = [
+					'ROF improved from {salvoold:.1f}/{completeold:.1f} per min to {salvonew:.1f}/{completenew:.1f} per min'.format(
+						salvoold = rofs['salvo old'],
+						completeold = rofs['complete old'],
+						salvonew = rofs['salvo new'],
+						completenew = rofs['complete new']
+					)
+					, 'Values reported are for one salvo and for a complete cycle'
+				]
+				successionmsgs[resmsgname] = [
+					'{} rate of fire (ROF) improved'.format(weaponname),
+					upgradeinfo[0],
+					upgradeinfo[1],
+					'Note: ROFs differ from game-calculated ones. See documentation.'
+				]
+			# Non-salvo firing weapon
+			if (oldvalue['firePause'] != 0) \
+			and (oldvalue['numRounds'] == 0) \
+			and (oldvalue['reloadTime'] == 0):
+				# Cycle over upgrades for oldvalue
+				for key in oldvalue:
+					for oldtopic in range(1, int(topic)):
+						oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+					newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+				# Calculate ROFs
+				rofs = {}
+				# Per complete cycle
+				rofs['complete old'] = conv['0.1 s per min'] / oldvalue['firePause']
+				rofs['complete new'] = conv['0.1 s per min'] / newvalue['firePause']
+				upgradeinfo =  'ROF improved from {completeold:.1f} per min to {completenew:.1f} per min'.format(
+					completeold = rofs['complete old'],
+					completenew = rofs['complete new']
+				)
+				successionmsgs[resmsgname] = [
+					'{} rate of fire (ROF) improved'.format(weaponname),
+					upgradeinfo,
+					'',
+					'Note: ROFs differ from game-calculated ones. See documentation.'
+				]
 	elif successionparts[-1] == 'RpU':
 		for topic in successions[succession]:
 			# Generate research message name
