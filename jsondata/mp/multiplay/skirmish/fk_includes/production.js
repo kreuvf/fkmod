@@ -2,6 +2,8 @@
  * This file handles the production of units
  */
 
+var unitRequest = [];
+
 const tankWeapons = {
 	avenger: ["FK-MIS-AAAvengerSAM", "FK-MIS-AAAvengerSAM2",],
 	cyclone: ["FK-SF-AACyclone", "FK-SF-AACyclone2", "FK-SF-AACyclone3"],
@@ -20,6 +22,13 @@ const vtolWeapons = {
 	lancer: ["FK-MIS-LancerVTOL", "FK-MIS-LancerVTOL2"],
 	mg: ["FK-FF-Autocannon-VTOL", "FK-FF-Autocannon-VTOL2", "FK-FF-Autocannon-VTOL3"],
 	thermite: ["FK-HOT-BombThermite", "FK-HOT-BombThermite2", "FK-HOT-BombThermite3"],
+}
+
+const systemTurrets = {
+	commander: "FK-Commander",
+	scout: "FKScoutSensor",
+	repair: "FKTankRepair",
+	truck: "FKTruck",
 }
 
 const bodies = {
@@ -64,18 +73,35 @@ function production() {
 	var tankFacs = idleTankFacs();
 	if (tankFacs.length > 0) {
 		var tank;
-		// choose tank type
-		var enemyTanks = findAntiTankTarget().length;
-		var enemyCyborgs = findAntiCyborgTarget().length;
-		var ownAntiTank = enumDroid(me).filter(isAntiTank).length;
-		var ownAntiCyborg = enumDroid(me).filter(isAntiCyborg).length;
-		if((1+enemyTanks)/(1+ownAntiTank) > (1+enemyCyborgs)/(1+ownAntiCyborg)) {
-			tank = railgunTank();
+		if(unitRequest.length > 0) {
+			tank = unitRequest.shift();
 		} else {
-			tank = mgTank();
+			// choose tank type
+			var enemyTanks = findAntiTankTarget().length;
+			var enemyCyborgs = findAntiCyborgTarget().length;
+			var ownAntiTank = enumDroid(me).filter(isAntiTank).length;
+			var ownAntiCyborg = enumDroid(me).filter(isAntiCyborg).length;
+			if((1+enemyTanks)/(1+ownAntiTank) > (1+enemyCyborgs)/(1+ownAntiCyborg)) {
+				tank = railgunTank();
+			} else {
+				if(enemyCyborgs > 20 && enemyCyborgs / enemyCyborgs + enemyTanks > 0.7 && componentAvailable(tankWeapons.grenade[0])) {
+					tank = grenadeTank();
+				} else {
+					tank = mgTank();
+				}
+			}
 		}
 		if(defined(tank)) {
 			buildDroid(tankFacs[0], tank.name, tank.body, tank.propulsion, null, null, tank.weapon);
 		}
 	}
+}
+
+// Add a tank to unitRequests, if it isn't in there already
+function queueTank(tank) {
+	var duplicate = false;
+	for(var i=0; i < unitRequest.length; i++) {
+		if(tank.name == unitRequest[i].name) duplicate = true;
+	}
+	if(!duplicate) unitRequest.push(tank);
 }

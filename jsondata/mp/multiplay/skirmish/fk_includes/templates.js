@@ -140,4 +140,17 @@ function stormbringerTank() {
 	var body = bodies.standard[0];
 	var propulsion = propulsions.tracks[0];
 	return new unit(name, body, propulsion, weapon);
-} 
+}
+
+function scoutTank() {
+	var name = "Scout-Tank";
+	var weapon;
+	if (componentAvailable(systemTurrets.scout)) {
+		weapon = systemTurrets.scout;
+	} else {
+		return;
+	}
+	var body = bodies.standard[0];
+	var propulsion = propulsions.tracks[0];
+	return new unit(name, body, propulsion, weapon);
+}

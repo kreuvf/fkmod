@@ -35,3 +35,7 @@ function distance(obj1, obj2, obj3, obj4) {
 function defined(variable) {
 	return typeof(variable) !== "undefined";
 }
+
+function random(min, max) {
+	return Math.floor(Math.random() * (max - min)) + min;
+}

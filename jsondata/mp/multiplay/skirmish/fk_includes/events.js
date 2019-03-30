@@ -6,7 +6,10 @@ function eventStartLevel() {
 }
 
 function eventDroidBuilt(droid, structure) {
-	if (droid.droidType !== DROID_CONSTRUCT) {
+	if (droid.droidType !== DROID_CONSTRUCT && droid.droidType !== DROID_SENSOR) {
 		groupAddDroid(ungrouped, droid);
+	}
+	if(droid.droidType == DROID_SENSOR) {
+		groupAddDroid(scouts, droid);
 	}
 }

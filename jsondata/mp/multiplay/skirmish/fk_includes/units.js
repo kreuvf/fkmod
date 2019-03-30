@@ -17,6 +17,10 @@ function vtolGroupSize() {
 	return 10;
 }
 
+function numScouts() {
+	return 3;
+}
+
 function findAntiTankTarget() {
 	var droids = [];
 	//find enemy droids
@@ -69,16 +73,20 @@ function isAntiCyborg(unit) {
 	}
 }
 
+function isUnitSafe(unit) {
+	
+}
+
 // Main loop
 function unitControl() {
 	// Anti Tank
-	for(i = 0; i < antiTankGroups.length; i++) {
+	for(var i = 0; i < antiTankGroups.length; i++) {
 		var group = antiTankGroups[i];
 		
 		// Check if we need to add new units
 		if(groupSize(group) < tankGroupSize()) {
 			var freeUnits = enumGroup(ungrouped);
-			for(j = 0; j < freeUnits.length; j++) {
+			for(var j = 0; j < freeUnits.length; j++) {
 				var unit = freeUnits[j];
 				if(isAntiTank(unit)) {
 					groupAdd(group, unit);
@@ -98,7 +106,7 @@ function unitControl() {
 					return droidCanReach(units[0], droid.x, droid.y);
 				});
 				if(target.length > 0) {
-					for(j = 0; j < units.length; j++) {
+					for(var j = 0; j < units.length; j++) {
 						orderDroidObj(units[j], DORDER_ATTACK, target[0]);
 					}
 				}
@@ -107,13 +115,13 @@ function unitControl() {
 	}
 	
 	// Anti-Cyborg
-	for(i = 0; i < antiCyborgGroups.length; i++) {
+	for(var i = 0; i < antiCyborgGroups.length; i++) {
 		var group = antiCyborgGroups[i];
 		
 		// Check if we need to add new units
 		if(groupSize(group) < tankGroupSize()) {
 			var freeUnits = enumGroup(ungrouped);
-			for(j = 0; j < freeUnits.length; j++) {
+			for(var j = 0; j < freeUnits.length; j++) {
 				var unit = freeUnits[j];
 				if(isAntiCyborg(unit)) {
 					groupAdd(group, unit);
@@ -133,7 +141,7 @@ function unitControl() {
 					return droidCanReach(units[0], droid.x, droid.y);
 				});
 				if(target.length > 0) {
-					for(j = 0; j < units.length; j++) {
+					for(var j = 0; j < units.length; j++) {
 						orderDroidObj(units[j], DORDER_ATTACK, target[0]);
 					}
 				}
@@ -142,7 +150,7 @@ function unitControl() {
 	}
 	
 	// Mixed Groups
-	for(i = 0; i < mixedGroups.length; i++) {
+	for(var i = 0; i < mixedGroups.length; i++) {
 		var group = mixedGroups[i];
 		
 		// Check if we need to add new units
@@ -150,7 +158,7 @@ function unitControl() {
 			var freeUnits = enumGroup(ungrouped);
 			var nrAntiTank = enumGroup(group).filter(isAntiTank).length;
 			var nrAntiCyborg = enumGroup(group).filter(isAntiCyborg).length;
-			for(j = 0; j < freeUnits.length; j++) {
+			for(var j = 0; j < freeUnits.length; j++) {
 				var unit = freeUnits[j];
 				if(isAntiCyborg(unit) && nrAntiTank >= nrAntiCyborg) {
 					groupAdd(group, unit);
@@ -175,11 +183,29 @@ function unitControl() {
 					return droidCanReach(units[0], droid.x, droid.y);
 				});
 				if(target.length > 0) {
-					for(j = 0; j < units.length; j++) {
+					for(var j = 0; j < units.length; j++) {
 						orderDroidObj(units[j], DORDER_ATTACK, target[0]);
 					}
 				}
 			}
+		}
+	}
+	
+	// Scouts - they're not really doing anything
+	var units = enumGroup(scouts);
+	if(groupSize(scouts) < numScouts()) {
+		var tank = scoutTank();
+		if(defined(tank)) queueTank(tank);
+	}
+	for(var i = 0; i < groupSize(scouts); i++) {
+		if(
+			units[i].order !== DORDER_ATTACK &&
+			units[i].order !== DORDER_RTR &&
+			units[i].order !== DORDER_SCOUT
+		) {
+			var x = random(3, mapWidth - 3);
+			var y = random(3, mapHeight - 3);
+			orderDroidLoc(units[i], DORDER_SCOUT, x, y);
 		}
 	}
 }
