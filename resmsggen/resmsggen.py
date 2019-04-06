@@ -1177,7 +1177,7 @@ weaponnames['HowitzerIncendiary'] = 'FK-HOT-HowitzerIncendiary'
 # FK-MIS-Lancer-Cyborg vs. FK-MIS-Lancer-VTOL
 weaponnames['Lancer'] = 'FK-MIS-Lancer-Cyborg'
 weaponnames['Laser'] = 'FK-HOT-Laser'
-#ä FK-FF-Machinegun-Cyborg vs. FK-FF-Machinegun-Structure
+# FK-FF-Machinegun-Cyborg vs. FK-FF-Machinegun-Structure
 weaponnames['Machinegun'] = 'FK-FF-Machinegun-Cyborg'
 weaponnames['Railgun'] = 'FK-SF-Railgun'
 weaponnames['RocketBattery'] = 'FK-ART-RocketBattery'
