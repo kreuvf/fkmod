@@ -843,7 +843,7 @@ singlemsgs['RM-WU-AACyclone-SPE1'] = [
 singlemsgs['RM-WU-AACyclone-SPE2'] = [
 	s['su'],
 	'Cyclone explosions affect larger area',
-	'Splash radius increased from {} to {}'.format(
+	'Splash radius: {} ↗ {}'.format(
 		weapons['FK-SF-AACyclone2']['radius'],
 		weapons['FK-SF-AACyclone3']['radius']
 	),
@@ -858,7 +858,7 @@ singlemsgs['RM-WU-AAHurricane-SPE1'] = [
 singlemsgs['RM-WU-AAHurricane-SPE2'] = [
 	s['su'],
 	'Hurricane salvo size increased',
-	'Shots per salvo increased from {} to {}'.format(
+	'Shots per salvo: {} ↗ {}'.format(
 		weapons['FK-FF-AAHurricane2']['numRounds'],
 		weapons['FK-FF-AAHurricane3']['numRounds']
 	),
@@ -867,7 +867,7 @@ singlemsgs['RM-WU-AAHurricane-SPE2'] = [
 singlemsgs['RM-WU-AAStormbringer-SPE1'] = [
 	s['su'],
 	'Stormbringer shots travel faster (yes, we can do even that)',
-	'Range increased by {}, fire pause decreased from {} to {}'.format(
+	'Range: +{}, fire pause: {} ↘ {}'.format(
 		weapons['FK-HOT-AAStormbringer2']['longRange']-weapons['FK-HOT-AAStormbringer']['longRange'],
 		weapons['FK-HOT-AAStormbringer']['firePause'],
 		weapons['FK-HOT-AAStormbringer2']['firePause']
@@ -877,7 +877,7 @@ singlemsgs['RM-WU-AAStormbringer-SPE1'] = [
 singlemsgs['RM-WU-Autocannon-SPE1'] = [
 	s['su'],
 	'Autocannon salvo size increased',
-	'Shots per salvo increased from {} to {}'.format(
+	'Shots per salvo: {} ↗ {}'.format(
 		weapons['FK-FF-Autocannon-Tank']['numRounds'],
 		weapons['FK-FF-Autocannon-Tank2']['numRounds']
 	),
@@ -886,7 +886,7 @@ singlemsgs['RM-WU-Autocannon-SPE1'] = [
 singlemsgs['RM-WU-Autocannon-SPE2'] = [
 	s['su'],
 	'Autocannon salvo size increased',
-	'Shots per salvo increased from {} to {}'.format(
+	'Shots per salvo: {} ↗ {}'.format(
 		weapons['FK-FF-Autocannon-Tank2']['numRounds'],
 		weapons['FK-FF-Autocannon-Tank3']['numRounds']
 	),
@@ -898,7 +898,7 @@ singlemsgs['RM-WU-Autocannon-SPE2'] = [
 singlemsgs['RM-WU-BombCluster-SPE1'] = [
 	s['su'],
 	'Cluster bomb explosions affect larger area',
-	'Splash radius increased from {} to {}'.format(
+	'Splash radius: {} ↗ {}'.format(
 		weapons['FK-SPL-BombCluster']['radius'],
 		weapons['FK-SPL-BombCluster2']['radius']
 	),
@@ -907,7 +907,7 @@ singlemsgs['RM-WU-BombCluster-SPE1'] = [
 singlemsgs['RM-WU-BombCluster-SPE2'] = [
 	s['su'],
 	'Cluster bomb salvo size increased',
-	'Bombs per salvo increased from {} to {}'.format(
+	'Bombs per salvo: {} ↗ {}'.format(
 		weapons['FK-SPL-BombCluster2']['numRounds'],
 		weapons['FK-SPL-BombCluster3']['numRounds']
 	),
@@ -916,7 +916,7 @@ singlemsgs['RM-WU-BombCluster-SPE2'] = [
 singlemsgs['RM-WU-BombHeavy-SPE1'] = [
 	s['su'],
 	'Heavy bomb mass decreased',
-	'Mass decreased from {} to {}'.format(
+	'Mass: {} ↘ {}'.format(
 		weapons['FK-SF-BombHeavy']['weight'],
 		weapons['FK-SF-BombHeavy2']['weight']
 	),
@@ -925,7 +925,7 @@ singlemsgs['RM-WU-BombHeavy-SPE1'] = [
 singlemsgs['RM-WU-BombHeavy-SPE2'] = [
 	s['su'],
 	'Heavy bomb mass decreased',
-	'Mass decreased from {} to {}'.format(
+	'Mass: {} ↘ {}'.format(
 		weapons['FK-SF-BombHeavy']['weight'],
 		weapons['FK-SF-BombHeavy2']['weight']
 	),
@@ -934,7 +934,7 @@ singlemsgs['RM-WU-BombHeavy-SPE2'] = [
 singlemsgs['RM-WU-BombThermite-SPE1'] = [
 	s['su'],
 	'Thermite bomb burning affects larger area',
-	'Incendiary radius increased from {} to {}'.format(
+	'Incendiary radius: {} ↗ {}'.format(
 		weapons['FK-HOT-BombThermite']['periodicalDamageRadius'],
 		weapons['FK-HOT-BombThermite2']['periodicalDamageRadius']
 	),
@@ -943,7 +943,7 @@ singlemsgs['RM-WU-BombThermite-SPE1'] = [
 singlemsgs['RM-WU-BombThermite-SPE2'] = [
 	s['su'],
 	'Thermite bomb mass decreased',
-	'Mass decreased from {} to {}'.format(
+	'Mass: {} ↘ {}'.format(
 		weapons['FK-HOT-BombThermite2']['weight'],
 		weapons['FK-HOT-BombThermite3']['weight']
 	),
@@ -964,11 +964,11 @@ singlemsgs['RM-WU-Cannon-Cyb-SPE2'] = [
 singlemsgs['RM-WU-Cannon-Struc-SPE1'] = [
 	s['su'],
 	'Structure cannon damage and splash radius increased',
-	'Base damage increased from {} to {}'.format(
+	'Base damage: {} ↗ {}'.format(
 		weapons['FK-SF-Cannon-Structure']['damage'],
 		weapons['FK-SF-Cannon-Structure2']['damage']
 	),
-	'Splash radius increased from {} to {}'.format(
+	'Splash radius: {} ↗ {}'.format(
 		weapons['FK-SF-Cannon-Structure']['radius'],
 		weapons['FK-SF-Cannon-Structure2']['radius']
 	),
@@ -976,7 +976,7 @@ singlemsgs['RM-WU-Cannon-Struc-SPE1'] = [
 singlemsgs['RM-WU-Cannon-Struc-SPE2'] = [
 	s['su'],
 	'Structure cannon range increased',
-	'Range increased from {} to {}'.format(
+	'Range: {} ↗ {}'.format(
 		weapons['FK-SF-Cannon-Structure2']['longRange'],
 		weapons['FK-SF-Cannon-Structure3']['longRange']
 	),
@@ -985,7 +985,7 @@ singlemsgs['RM-WU-Cannon-Struc-SPE2'] = [
 singlemsgs['RM-WU-Flamethrower-SPE1'] = [
 	s['su'],
 	'Flamethrower burning affects larger area',
-	'Incendiary radius increased from {} to {}'.format(
+	'Incendiary radius: {} ↗ {}'.format(
 		weapons['FK-HOT-Flamethrower']['periodicalDamageRadius'],
 		weapons['FK-HOT-Flamethrower2']['periodicalDamageRadius']
 	),
@@ -994,7 +994,7 @@ singlemsgs['RM-WU-Flamethrower-SPE1'] = [
 singlemsgs['RM-WU-Flamethrower-SPE2'] = [
 	s['su'],
 	'Flamethrower flames burn longer',
-	'Incendiary effect duration increased from {} to {}'.format(
+	'Incendiary effect duration: {} ↗ {}'.format(
 		weapons['FK-HOT-Flamethrower2']['periodicalDamageTime'],
 		weapons['FK-HOT-Flamethrower3']['periodicalDamageTime']
 	),
@@ -1003,11 +1003,11 @@ singlemsgs['RM-WU-Flamethrower-SPE2'] = [
 singlemsgs['RM-WU-GrenadeLauncher-SPE1'] = [
 	s['su'],
 	'Grenade launcher explosions affect larger area',
-	'Cyborgs only: Splash radius increased from {} to {}'.format(
+	'Cyborgs only: Splash radius: {} ↗ {}'.format(
 		weapons['FK-SPL-GrenadeLauncher-Cyborg']['radius'],
 		weapons['FK-SPL-GrenadeLauncher-Cyborg2']['radius']
 	),
-	'Tanks/structure only: Splash radius increased from {} to {}'.format(
+	'Tanks/structure only: Splash radius: {} ↗ {}'.format(
 		weapons['FK-SPL-GrenadeLauncher-TankStructure']['radius'],
 		weapons['FK-SPL-GrenadeLauncher-TankStructure2']['radius']
 	),
@@ -1015,11 +1015,11 @@ singlemsgs['RM-WU-GrenadeLauncher-SPE1'] = [
 singlemsgs['RM-WU-GrenadeLauncher-SPE2'] = [
 	s['su'],
 	'Grenade launcher explosions affect larger area',
-	'Cyborgs only: Splash radius increased from {} to {}'.format(
+	'Cyborgs only: Splash radius: {} ↗ {}'.format(
 		weapons['FK-SPL-GrenadeLauncher-Cyborg2']['radius'],
 		weapons['FK-SPL-GrenadeLauncher-Cyborg3']['radius']
 	),
-	'Tanks/structure only: Splash radius increased from {} to {}'.format(
+	'Tanks/structure only: Splash radius: {} ↗ {}'.format(
 		weapons['FK-SPL-GrenadeLauncher-TankStructure2']['radius'],
 		weapons['FK-SPL-GrenadeLauncher-TankStructure3']['radius']
 	),
@@ -1027,7 +1027,7 @@ singlemsgs['RM-WU-GrenadeLauncher-SPE2'] = [
 singlemsgs['RM-WU-HowitzerIncendiary-SPE1'] = [
 	s['su'],
 	'Incendiary howitzer range increased',
-	'Range increased from {} to {}'.format(
+	'Range: {} ↗ {}'.format(
 		weapons['FK-HOT-HowitzerIncendiary']['longRange'],
 		weapons['FK-HOT-HowitzerIncendiary2']['longRange']
 	),
@@ -1036,7 +1036,7 @@ singlemsgs['RM-WU-HowitzerIncendiary-SPE1'] = [
 singlemsgs['RM-WU-HowitzerIncendiary-SPE2'] = [
 	s['su'],
 	'Incendiary howitzer burning affects larger area',
-	'Incendiary radius increased from {} to {}'.format(
+	'Incendiary radius: {} ↗ {}'.format(
 		weapons['FK-HOT-HowitzerIncendiary2']['periodicalDamageRadius'],
 		weapons['FK-HOT-HowitzerIncendiary3']['periodicalDamageRadius']
 	),
@@ -1045,7 +1045,7 @@ singlemsgs['RM-WU-HowitzerIncendiary-SPE2'] = [
 singlemsgs['RM-WU-Howitzer-SPE1'] = [
 	s['su'],
 	'Howitzer range increased',
-	'Range increased from {} to {}'.format(
+	'Range: {} ↗ {}'.format(
 		weapons['FK-ART-Howitzer']['longRange'],
 		weapons['FK-ART-Howitzer2']['longRange']
 	),
@@ -1054,7 +1054,7 @@ singlemsgs['RM-WU-Howitzer-SPE1'] = [
 singlemsgs['RM-WU-Howitzer-SPE2'] = [
 	s['su'],
 	'Howitzer range increased',
-	'Range increased from {} to {}'.format(
+	'Range: {} ↗ {}'.format(
 		weapons['FK-ART-Howitzer2']['longRange'],
 		weapons['FK-ART-Howitzer3']['longRange']
 	),
@@ -1075,11 +1075,11 @@ singlemsgs['RM-WU-Laser-SPE1'] = [
 singlemsgs['RM-WU-Machinegun-SPE1'] = [
 	s['su'],
 	'Machine gun bullets fired at higher velocity',
-	'Cyborgs only: Flight speed increased from {} to {}'.format(
+	'Cyborgs only: Flight speed: {} ↗ {}'.format(
 		weapons['FK-FF-Machinegun-Cyborg']['flightSpeed'],
 		weapons['FK-FF-Machinegun-Cyborg2']['flightSpeed']
 	),
-	'Structures only: Flight speed increased from {} to {}'.format(
+	'Structures only: Flight speed: {} ↗ {}'.format(
 		weapons['FK-FF-Machinegun-Structure']['flightSpeed'],
 		weapons['FK-FF-Machinegun-Structure2']['flightSpeed']
 	),
@@ -1109,7 +1109,7 @@ singlemsgs['RM-WU-Railgun-SPE1'] = [
 singlemsgs['RM-WU-RocketBattery-SPE1'] = [
 	s['su'],
 	'Rocket Battery range increased',
-	'Range increased from {} to {}'.format(
+	'Range: {} ↗ {}'.format(
 		weapons['FK-ART-RocketBattery']['longRange'],
 		weapons['FK-ART-RocketBattery2']['longRange']
 	),
@@ -1201,7 +1201,7 @@ for succession in successions:
 			for oldtopic in range(1, int(topic)):
 				oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 			newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
-			upgradeinfo = 'Accuracy improved from {old:d} % to {new:d} %'.format(old = int(oldvalue), new = int(newvalue))
+			upgradeinfo = 'Accuracy: {old:d} % ↗ {new:d} %'.format(old = int(oldvalue), new = int(newvalue))
 			successionmsgs[resmsgname] = [
 				'{} accuracy improved'.format(weaponname),
 				upgradeinfo,
@@ -1219,8 +1219,8 @@ for succession in successions:
 				oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 			newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
 			upgradeinfo = [
-				'Kinetic armour improved to {new:d} % of its base value (was {old:d} %)'.format(old = int(oldvalue), new = int(newvalue)),
-				'Thermal armour improved to {new:d} % of its base value (was {old:d} %)'.format(old = int(oldvalue), new = int(newvalue)),]
+				'Kinetic armour: {old:d} % ↗ {new:d} % (of the base value)'.format(old = int(oldvalue), new = int(newvalue)),
+				'Thermal armour: {old:d} % ↗ {new:d} % (of the base value)'.format(old = int(oldvalue), new = int(newvalue)),]
 			successionmsgs[resmsgname] = [
 				'Structure armours improved',
 				upgradeinfo[0],
@@ -1243,7 +1243,7 @@ for succession in successions:
 				upgradeinfo = ['Structure body points improved']
 			elif research[succession + topic]['results'][0]['class'] == 'Body':
 				upgradeinfo = ['Unit body points improved']
-			upgradeinfo.append('Body points improved to {new:d} % of its base value (was {old:d} %)'.format(old = int(oldvalue), new = int(newvalue)))
+			upgradeinfo.append('Body points: {old:d} % ↗ {new:d} % (of the base value)'.format(old = int(oldvalue), new = int(newvalue)))
 			successionmsgs[resmsgname] = [
 				upgradeinfo[0],
 				upgradeinfo[1]
@@ -1274,7 +1274,7 @@ for succession in successions:
 				for oldtopic in range(1, int(topic)):
 					oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 				newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
-			upgradeinfo = 'Damage improved from {impactold:d}/{splashold:d}/{burnold:d} to {impactnew:d}/{splashnew:d}/{burnnew:d}'.format(
+			upgradeinfo = 'Damage: {impactold:d}/{splashold:d}/{burnold:d} ↗ {impactnew:d}/{splashnew:d}/{burnnew:d}'.format(
 				impactold = int(oldvalue['damage']),
 				splashold = int(oldvalue['radiusDamage']),
 				burnold = int(oldvalue['periodicalDamage']),
@@ -1299,7 +1299,7 @@ for succession in successions:
 			for oldtopic in range(1, int(topic)):
 				oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 			newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
-			upgradeinfo = 'Engine power output improved to {new:d} % of its base value (was {old:d} %)'.format(old = int(oldvalue), new = int(newvalue))
+			upgradeinfo = 'Engine power output: {old:d} % ↗ {new:d} % (of the base value)'.format(old = int(oldvalue), new = int(newvalue))
 			successionmsgs[resmsgname] = [
 				"Improved engines available",
 				upgradeinfo
@@ -1316,7 +1316,7 @@ for succession in successions:
 			for oldtopic in range(1, int(topic)):
 				oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 			newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
-			upgradeinfo = 'Kinetic armours improved to {new:d} % of its base value (was {old:d} %)'.format(old = int(oldvalue), new = int(newvalue))
+			upgradeinfo = 'Kinetic armours: {old:d} % ↗ {new:d} % (of the base value)'.format(old = int(oldvalue), new = int(newvalue))
 			successionmsgs[resmsgname] = [
 				"Unit armours improved",
 				upgradeinfo
@@ -1333,7 +1333,7 @@ for succession in successions:
 			for oldtopic in range(1, int(topic)):
 				oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 			newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
-			upgradeinfo = 'Power output improved to {new:d} % of its base value (was {old:d} %)'.format(old = int(oldvalue), new = int(newvalue))
+			upgradeinfo = 'Power output: {old:d} % ↗ {new:d} % (of the base value)'.format(old = int(oldvalue), new = int(newvalue))
 			successionmsgs[resmsgname] = [
 				"Power generators improved",
 				upgradeinfo
@@ -1350,7 +1350,7 @@ for succession in successions:
 			for oldtopic in range(1, int(topic)):
 				oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 			newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
-			upgradeinfo = 'Rearming speed improved to {new:d} % of its base value (was {old:d} %)'.format(old = int(oldvalue), new = int(newvalue))
+			upgradeinfo = 'Rearming speed: {old:d} % ↗ {new:d} % (of the base value)'.format(old = int(oldvalue), new = int(newvalue))
 			successionmsgs[resmsgname] = [
 				"Rearming pads improved",
 				upgradeinfo
@@ -1367,7 +1367,7 @@ for succession in successions:
 			for oldtopic in range(1, int(topic)):
 				oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 			newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
-			upgradeinfo = 'Research speed improved to {new:d} % of its base value (was {old:d} %)'.format(old = int(oldvalue), new = int(newvalue))
+			upgradeinfo = 'Research speed: {old:d} % ↗ {new:d} % (of the base value)'.format(old = int(oldvalue), new = int(newvalue))
 			successionmsgs[resmsgname] = [
 				"Research facilities improved",
 				upgradeinfo
@@ -1528,7 +1528,7 @@ for succession in successions:
 				rofs['complete old'] = conv['0.1 s per min'] / oldvalue['firePause']
 				rofs['complete new'] = conv['0.1 s per min'] / newvalue['firePause']
 				upgradeinfo = [
-					'ROF improved from {completeold:.1f} per min to {completenew:.1f} per min'.format(
+					'ROF: {completeold:.1f} per min ↗ {completenew:.1f} per min'.format(
 						completeold = rofs['complete old'],
 						completenew = rofs['complete new']
 					)
@@ -1578,7 +1578,7 @@ for succession in successions:
 			for oldtopic in range(1, int(topic)):
 				oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 			newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
-			upgradeinfo = 'Repair speed improved to {new:d} % of its base value (was {old:d} %)'.format(old = int(oldvalue), new = int(newvalue))
+			upgradeinfo = 'Repair speed: {old:d} % ↗ {new:d} % (of the base value)'.format(old = int(oldvalue), new = int(newvalue))
 			successionmsgs[resmsgname] = [
 				"Repair capabilities improved",
 				upgradeinfo,
@@ -1597,7 +1597,7 @@ for succession in successions:
 			for oldtopic in range(1, int(topic)):
 				oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 			newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
-			upgradeinfo = 'Thermal armours improved to {new:d} % of its base value (was {old:d} %)'.format(old = int(oldvalue), new = int(newvalue))
+			upgradeinfo = 'Thermal armours: {old:d} % ↗ {new:d} % (of the base value)'.format(old = int(oldvalue), new = int(newvalue))
 			successionmsgs[resmsgname] = [
 				"Unit armours improved",
 				upgradeinfo
