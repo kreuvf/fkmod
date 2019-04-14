@@ -98,9 +98,11 @@ function researchSomething() {
 	
 	// Check weapon focus
 	setWeaponFocus();
-	pursueResearch(freeLabs[0], weaponFocus.special[weaponFocus.special.length - 1]);
-	if(isLabIdle(freeLabs[0])) return;
-	
-	// Nothing suitable found, just research anything
-	pursueResearch(freeLabs[0], available[0].name);
+	var tech = findResearch(weaponFocus.special[weaponFocus.special.length - 1]);
+	if(tech.length > 0) {
+		pursueResearch(freeLabs[0], tech[0].name);
+	} else {
+		// Nothing suitable found, just research anything
+		pursueResearch(freeLabs[0], available[0].name);
+	}
 }
