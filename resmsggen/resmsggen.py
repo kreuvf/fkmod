@@ -1472,14 +1472,41 @@ for succession in successions:
 						) * conv['0.1 s per min']
 					)
 				upgradeinfo = [
-					'ROF improved from {salvoold:.1f}/{completeold:.1f} per min to {salvonew:.1f}/{completenew:.1f} per min'.format(
+					'Salvo/Cycle ROF: {salvoold:.1f}/{completeold:.1f} per min ↗ {salvonew:.1f}/{completenew:.1f} per min'.format(
 						salvoold = rofs['salvo old'],
 						completeold = rofs['complete old'],
 						salvonew = rofs['salvo new'],
 						completenew = rofs['complete new']
 					)
-					, 'Values reported are for one salvo and for a complete cycle'
 				]
+				if internalweaponname == 'FK-FF-Autocannon-Tank':
+					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+						unit = 'tank',
+						weapon = weaponname)
+					)
+				elif internalweaponname == 'FK-SF-Cannon-Cyborg':
+					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+						unit = 'cyborg',
+						weapon = weaponname)
+					)
+				elif internalweaponname == 'FK-SPL-GrenadeLauncher-Cyborg':
+					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+						unit = 'cyborg',
+						weapon = weaponname)
+					)
+				elif internalweaponname == 'FK-MIS-Lancer-Cyborg':
+					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+						unit = 'cyborg',
+						weapon = weaponname)
+					)
+				elif internalweaponname == 'FK-FF-Machinegun-Cyborg':
+					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+						unit = 'cyborg',
+						weapon = weaponname)
+					)
+				else:
+					upgradeinfo.append('')
+					
 				successionmsgs[resmsgname] = [
 					'{} rate of fire (ROF) improved'.format(weaponname),
 					upgradeinfo[0],
@@ -1500,14 +1527,43 @@ for succession in successions:
 				# Per complete cycle
 				rofs['complete old'] = conv['0.1 s per min'] / oldvalue['firePause']
 				rofs['complete new'] = conv['0.1 s per min'] / newvalue['firePause']
-				upgradeinfo =  'ROF improved from {completeold:.1f} per min to {completenew:.1f} per min'.format(
-					completeold = rofs['complete old'],
-					completenew = rofs['complete new']
-				)
+				upgradeinfo = [
+					'ROF improved from {completeold:.1f} per min to {completenew:.1f} per min'.format(
+						completeold = rofs['complete old'],
+						completenew = rofs['complete new']
+					)
+				]
+				if internalweaponname == 'FK-FF-Autocannon-Tank':
+					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+						unit = 'tank',
+						weapon = weaponname)
+					)
+				elif internalweaponname == 'FK-SF-Cannon-Cyborg':
+					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+						unit = 'cyborg',
+						weapon = weaponname)
+					)
+				elif internalweaponname == 'FK-SPL-GrenadeLauncher-Cyborg':
+					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+						unit = 'cyborg',
+						weapon = weaponname)
+					)
+				elif internalweaponname == 'FK-MIS-Lancer-Cyborg':
+					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+						unit = 'cyborg',
+						weapon = weaponname)
+					)
+				elif internalweaponname == 'FK-FF-Machinegun-Cyborg':
+					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+						unit = 'cyborg',
+						weapon = weaponname)
+					)
+				else:
+					upgradeinfo.append('')
 				successionmsgs[resmsgname] = [
 					'{} rate of fire (ROF) improved'.format(weaponname),
-					upgradeinfo,
-					'',
+					upgradeinfo[0],
+					upgradeinfo[1],
 					'Note: ROFs differ from game-calculated ones. See documentation.'
 				]
 	elif successionparts[-1] == 'RpU':
