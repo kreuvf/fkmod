@@ -1201,10 +1201,42 @@ for succession in successions:
 			for oldtopic in range(1, int(topic)):
 				oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 			newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
-			upgradeinfo = 'Accuracy: {old:d} % ↗ {new:d} %'.format(old = int(oldvalue), new = int(newvalue))
+			upgradeinfo = ['Accuracy: {old:d} % ↗ {new:d} %'.format(
+					old = int(oldvalue),
+					new = int(newvalue)
+				)
+			]
+			if internalweaponname == 'FK-FF-Autocannon-Tank':
+				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+					unit = 'tank',
+					weapon = weaponname)
+				)
+			elif internalweaponname == 'FK-SF-Cannon-Cyborg':
+				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+					unit = 'cyborg',
+					weapon = weaponname)
+				)
+			elif internalweaponname == 'FK-SPL-GrenadeLauncher-Cyborg':
+				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+					unit = 'cyborg',
+					weapon = weaponname)
+				)
+			elif internalweaponname == 'FK-MIS-Lancer-Cyborg':
+				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+					unit = 'cyborg',
+					weapon = weaponname)
+				)
+			elif internalweaponname == 'FK-FF-Machinegun-Cyborg':
+				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+					unit = 'cyborg',
+					weapon = weaponname)
+				)
+			else:
+				upgradeinfo.append('')
 			successionmsgs[resmsgname] = [
 				'{} accuracy improved'.format(weaponname),
-				upgradeinfo,
+				upgradeinfo[0],
+				upgradeinfo[1]
 			]
 	elif successionparts[-1] == 'Armours':
 		for topic in successions[succession]:
@@ -1274,17 +1306,46 @@ for succession in successions:
 				for oldtopic in range(1, int(topic)):
 					oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 				newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
-			upgradeinfo = 'Damage: {impactold:d}/{splashold:d}/{burnold:d} ↗ {impactnew:d}/{splashnew:d}/{burnnew:d}'.format(
-				impactold = int(oldvalue['damage']),
-				splashold = int(oldvalue['radiusDamage']),
-				burnold = int(oldvalue['periodicalDamage']),
-				impactnew = int(newvalue['damage']),
-				splashnew = int(newvalue['radiusDamage']),
-				burnnew = int(newvalue['periodicalDamage']),
-			)
+			upgradeinfo = ['Damage: {impactold:d}/{splashold:d}/{burnold:d} ↗ {impactnew:d}/{splashnew:d}/{burnnew:d}'.format(
+					impactold = int(oldvalue['damage']),
+					splashold = int(oldvalue['radiusDamage']),
+					burnold = int(oldvalue['periodicalDamage']),
+					impactnew = int(newvalue['damage']),
+					splashnew = int(newvalue['radiusDamage']),
+					burnnew = int(newvalue['periodicalDamage']),
+				)
+			]
+			if internalweaponname == 'FK-FF-Autocannon-Tank':
+				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+					unit = 'tank',
+					weapon = weaponname)
+				)
+			elif internalweaponname == 'FK-SF-Cannon-Cyborg':
+				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+					unit = 'cyborg',
+					weapon = weaponname)
+				)
+			elif internalweaponname == 'FK-SPL-GrenadeLauncher-Cyborg':
+				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+					unit = 'cyborg',
+					weapon = weaponname)
+				)
+			elif internalweaponname == 'FK-MIS-Lancer-Cyborg':
+				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+					unit = 'cyborg',
+					weapon = weaponname)
+				)
+			elif internalweaponname == 'FK-FF-Machinegun-Cyborg':
+				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
+					unit = 'cyborg',
+					weapon = weaponname)
+				)
+			else:
+				upgradeinfo.append('')
 			successionmsgs[resmsgname] = [
 				'{} damage improved'.format(weaponname),
-				upgradeinfo,
+				upgradeinfo[0],
+				upgradeinfo[1],
 				'All applicable damage types (impact, splash, burn) affected'
 			]
 	elif successionparts[-1] == 'Engine':
