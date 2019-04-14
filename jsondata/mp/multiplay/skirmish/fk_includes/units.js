@@ -74,7 +74,10 @@ function isAntiCyborg(unit) {
 }
 
 function isUnitSafe(unit) {
-	
+	if(!defined(unit)) return true;
+	var enemyUnits = enumRange(unit.x, unit.y, 15, ENEMIES, false);
+	var friendlyUnits = enumRange(unit.x, unit.y, 15, ALLIES, false);
+	return enemyUnits <= friendlyUnits;
 }
 
 // Main loop
@@ -93,7 +96,8 @@ function unitControl() {
 					if(groupSize(group) >= tankGroupSize()) break;
 				}
 			}
-		} else {
+		} 
+		if(groupSize(group) >= tankGroupSize()) {
 			// Check if group needs orders
 			var units = enumGroup(group);
 			if(
@@ -109,6 +113,14 @@ function unitControl() {
 					for(var j = 0; j < units.length; j++) {
 						orderDroidObj(units[j], DORDER_ATTACK, target[0]);
 					}
+				}
+			}
+		} else {
+			// Send units back to base if unsafe
+			var units = enumGroup(group);
+			if(!isUnitSafe(units[0])) {
+				for(var j = 0; j < units.length; j++) {
+					orderDroidLoc(units[j], DORDER_MOVE, startPositions[me].x, startPositions[me].y);
 				}
 			}
 		}
@@ -128,7 +140,8 @@ function unitControl() {
 					if(groupSize(group) >= tankGroupSize()) break;
 				}
 			}
-		} else {
+		} 
+		if(groupSize(group) >= tankGroupSize()) {
 			// Check if group needs orders
 			var units = enumGroup(group);
 			if(
@@ -144,6 +157,14 @@ function unitControl() {
 					for(var j = 0; j < units.length; j++) {
 						orderDroidObj(units[j], DORDER_ATTACK, target[0]);
 					}
+				}
+			}
+		} else {
+			// Send units back to base if unsafe
+			var units = enumGroup(group);
+			if(!isUnitSafe(units[0])) {
+				for(var j = 0; j < units.length; j++) {
+					orderDroidLoc(units[j], DORDER_MOVE, startPositions[me].x, startPositions[me].y);
 				}
 			}
 		}
@@ -169,7 +190,8 @@ function unitControl() {
 					if(groupSize(group) >= tankGroupSize()) break;
 				}
 			}
-		} else {
+		} 
+		if(groupSize(group) >= tankGroupSize()) {
 			// Check if group needs orders
 			var units = enumGroup(group);
 			if(
@@ -186,6 +208,14 @@ function unitControl() {
 					for(var j = 0; j < units.length; j++) {
 						orderDroidObj(units[j], DORDER_ATTACK, target[0]);
 					}
+				}
+			}
+		} else {
+			// Send units back to base if unsafe
+			var units = enumGroup(group);
+			if(!isUnitSafe(units[0])) {
+				for(var j = 0; j < units.length; j++) {
+					orderDroidLoc(units[j], DORDER_MOVE, startPositions[me].x, startPositions[me].y);
 				}
 			}
 		}
