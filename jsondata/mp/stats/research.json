@@ -966,7 +966,7 @@
     "R-HACK-Hardpoint-ScourgeMissile": {
         "id": "R-HACK-Hardpoint-ScourgeMissile",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Scourge Missile Hardpoint (HACK)",
         "requiredResearch": [
             "R-Def-Hardpoint",
             "R-W-MIS-ScourgeMissile"
@@ -980,7 +980,7 @@
     "R-HACK-Hardpoint-ScourgeMissile2": {
         "id": "R-HACK-Hardpoint-ScourgeMissile2",
         "msgName": "RES_DF_HCW1",
-        "name": null,
+        "name": "Scourge Missile Hardpoint (HACK)",
         "redStructures": [
             "FKHardpointScourgeMissile"
         ],
