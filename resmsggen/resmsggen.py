@@ -867,8 +867,9 @@ singlemsgs['RM-WU-AAHurricane-SPE2'] = [
 singlemsgs['RM-WU-AAStormbringer-SPE1'] = [
 	s['su'],
 	'Stormbringer shots travel faster (yes, we can do even that)',
-	'Range: +{}, fire pause: {} ↘ {}'.format(
-		weapons['FK-HOT-AAStormbringer2']['longRange']-weapons['FK-HOT-AAStormbringer']['longRange'],
+	'Range: {} ↗ {}, fire pause: {} ↘ {}'.format(
+		weapons['FK-HOT-AAStormbringer']['longRange'],
+		weapons['FK-HOT-AAStormbringer2']['longRange'],
 		weapons['FK-HOT-AAStormbringer']['firePause'],
 		weapons['FK-HOT-AAStormbringer2']['firePause']
 	),
@@ -890,7 +891,7 @@ singlemsgs['RM-WU-Autocannon-SPE2'] = [
 		weapons['FK-FF-Autocannon-Tank2']['numRounds'],
 		weapons['FK-FF-Autocannon-Tank3']['numRounds']
 	),
-	'Tanks only: Barrel can be lowered further ({} ↗ {})'.format(
+	'Tanks only: Barrel can be lowered further (−{}° ↘ −{}°)'.format(
 		-weapons['FK-FF-Autocannon-Tank2']['minElevation'],
 		-weapons['FK-FF-Autocannon-Tank3']['minElevation']
 	),
@@ -926,8 +927,8 @@ singlemsgs['RM-WU-BombHeavy-SPE2'] = [
 	s['su'],
 	'Heavy bomb mass decreased',
 	'Mass: {} ↘ {}'.format(
-		weapons['FK-SF-BombHeavy']['weight'],
-		weapons['FK-SF-BombHeavy2']['weight']
+		weapons['FK-SF-BombHeavy2']['weight'],
+		weapons['FK-SF-BombHeavy3']['weight']
 	),
 	'',
 ]
@@ -994,9 +995,9 @@ singlemsgs['RM-WU-Flamethrower-SPE1'] = [
 singlemsgs['RM-WU-Flamethrower-SPE2'] = [
 	s['su'],
 	'Flamethrower flames burn longer',
-	'Incendiary effect duration: {} ↗ {}'.format(
-		weapons['FK-HOT-Flamethrower2']['periodicalDamageTime'],
-		weapons['FK-HOT-Flamethrower3']['periodicalDamageTime']
+	'Incendiary effect duration: {} s ↗ {} s '.format(
+		weapons['FK-HOT-Flamethrower2']['periodicalDamageTime'] / conv['0.1 s per s'],
+		weapons['FK-HOT-Flamethrower3']['periodicalDamageTime'] / conv['0.1 s per s']
 	),
 	'',
 ]
@@ -1087,13 +1088,13 @@ singlemsgs['RM-WU-Machinegun-SPE1'] = [
 singlemsgs['RM-WU-Machinegun-SPE2'] = [
 	s['su'],
 	'Machine gun barrel can be raised/lowered further',
-	'Cyborgs only: Barrel can be raised/lowered further ({} ↗ {}/{} ↗ {})'.format(
+	'Cyborgs only: {}° ↗ {}°/−{}° ↘ −{}°'.format(
 		weapons['FK-FF-Machinegun-Cyborg2']['maxElevation'],
 		weapons['FK-FF-Machinegun-Cyborg3']['maxElevation'],
 		-weapons['FK-FF-Machinegun-Cyborg2']['minElevation'],
 		-weapons['FK-FF-Machinegun-Cyborg3']['minElevation']
 	),
-	'Structures only: Barrel can be raised/lowered further ({} ↗ {}/{} ↗ {})'.format(
+	'Structures only: {}° ↗ {}°/−{}° ↘ −{}°'.format(
 		weapons['FK-FF-Machinegun-Structure2']['maxElevation'],
 		weapons['FK-FF-Machinegun-Structure3']['maxElevation'],
 		-weapons['FK-FF-Machinegun-Structure2']['minElevation'],
