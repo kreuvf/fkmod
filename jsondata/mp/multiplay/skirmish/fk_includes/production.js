@@ -71,7 +71,8 @@ function unit(name, body, propulsion, weapon) {
 
 function production() {
 	var tankFacs = idleTankFacs();
-	if (tankFacs.length > 0) {
+	if(enumDroid(me, DROID_CONSTRUCT).length < 3) queueTank(new truck());
+	if(tankFacs.length > 0) {
 		var tank;
 		if(unitRequest.length > 0) {
 			tank = unitRequest.shift();

@@ -154,3 +154,11 @@ function scoutTank() {
 	var propulsion = propulsions.tracks[0];
 	return new unit(name, body, propulsion, weapon);
 }
+
+function truck() {
+	var name = "Truck";
+	var weapon = systemTurrets.truck;
+	var body = bodies.standard[0];
+	var propulsion = propulsions.tracks[0];
+	return new unit(name, body, propulsion, weapon);
+}
