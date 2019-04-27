@@ -1,0 +1,4692 @@
+{
+    "RM-B-HiKin": {
+        "id": "RM-B-HiKin",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "New body available",
+            "Higher kinetic armour than the standard body",
+            "Same speed and same thermal armour as standard body",
+            "Comes in sleek 2095 turquoise"
+        ]
+    },
+    "RM-B-HiSpeed": {
+        "id": "RM-B-HiSpeed",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "New body available",
+            "Higher speed than the standard body",
+            "Same kinetic armour and same thermal armour as standard body",
+            "Black is beautiful"
+        ]
+    },
+    "RM-B-HiTherm": {
+        "id": "RM-B-HiTherm",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "New body available",
+            "Higher thermal armour than the standard body",
+            "Same speed and same kinetic armour as standard body",
+            "Designed to conceal bigbonedness of the drivers"
+        ]
+    },
+    "RM-BU-BodyPoints1": {
+        "id": "RM-BU-BodyPoints1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Unit body points improved",
+            "Body points: 100 % \u2197 110 % (of the base value)"
+        ]
+    },
+    "RM-BU-BodyPoints2": {
+        "id": "RM-BU-BodyPoints2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Unit body points improved",
+            "Body points: 110 % \u2197 122 % (of the base value)"
+        ]
+    },
+    "RM-BU-BodyPoints3": {
+        "id": "RM-BU-BodyPoints3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Unit body points improved",
+            "Body points: 122 % \u2197 136 % (of the base value)"
+        ]
+    },
+    "RM-BU-BodyPoints4": {
+        "id": "RM-BU-BodyPoints4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Unit body points improved",
+            "Body points: 136 % \u2197 154 % (of the base value)"
+        ]
+    },
+    "RM-BU-BodyPoints5": {
+        "id": "RM-BU-BodyPoints5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Unit body points improved",
+            "Body points: 154 % \u2197 177 % (of the base value)"
+        ]
+    },
+    "RM-BU-Engine1": {
+        "id": "RM-BU-Engine1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Improved engines available",
+            "Engine power output: 100 % \u2197 105 % (of the base value)"
+        ]
+    },
+    "RM-BU-Engine2": {
+        "id": "RM-BU-Engine2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Improved engines available",
+            "Engine power output: 105 % \u2197 110 % (of the base value)"
+        ]
+    },
+    "RM-BU-Engine3": {
+        "id": "RM-BU-Engine3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Improved engines available",
+            "Engine power output: 110 % \u2197 116 % (of the base value)"
+        ]
+    },
+    "RM-BU-Engine4": {
+        "id": "RM-BU-Engine4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Improved engines available",
+            "Engine power output: 116 % \u2197 123 % (of the base value)"
+        ]
+    },
+    "RM-BU-Engine5": {
+        "id": "RM-BU-Engine5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Improved engines available",
+            "Engine power output: 123 % \u2197 131 % (of the base value)"
+        ]
+    },
+    "RM-BU-KineticArmour1": {
+        "id": "RM-BU-KineticArmour1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Unit armours improved",
+            "Kinetic armours: 100 % \u2197 110 % (of the base value)"
+        ]
+    },
+    "RM-BU-KineticArmour2": {
+        "id": "RM-BU-KineticArmour2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Unit armours improved",
+            "Kinetic armours: 110 % \u2197 122 % (of the base value)"
+        ]
+    },
+    "RM-BU-KineticArmour3": {
+        "id": "RM-BU-KineticArmour3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Unit armours improved",
+            "Kinetic armours: 122 % \u2197 136 % (of the base value)"
+        ]
+    },
+    "RM-BU-KineticArmour4": {
+        "id": "RM-BU-KineticArmour4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Unit armours improved",
+            "Kinetic armours: 136 % \u2197 154 % (of the base value)"
+        ]
+    },
+    "RM-BU-KineticArmour5": {
+        "id": "RM-BU-KineticArmour5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Unit armours improved",
+            "Kinetic armours: 154 % \u2197 177 % (of the base value)"
+        ]
+    },
+    "RM-BU-ThermalArmour1": {
+        "id": "RM-BU-ThermalArmour1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Unit armours improved",
+            "Thermal armours: 100 % \u2197 110 % (of the base value)"
+        ]
+    },
+    "RM-BU-ThermalArmour2": {
+        "id": "RM-BU-ThermalArmour2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Unit armours improved",
+            "Thermal armours: 110 % \u2197 122 % (of the base value)"
+        ]
+    },
+    "RM-BU-ThermalArmour3": {
+        "id": "RM-BU-ThermalArmour3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Unit armours improved",
+            "Thermal armours: 122 % \u2197 136 % (of the base value)"
+        ]
+    },
+    "RM-BU-ThermalArmour4": {
+        "id": "RM-BU-ThermalArmour4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Unit armours improved",
+            "Thermal armours: 136 % \u2197 154 % (of the base value)"
+        ]
+    },
+    "RM-BU-ThermalArmour5": {
+        "id": "RM-BU-ThermalArmour5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "Unit armours improved",
+            "Thermal armours: 154 % \u2197 177 % (of the base value)"
+        ]
+    },
+    "RM-Commander": {
+        "id": "RM-Commander",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_systech.ogg",
+        "text": [
+            "New system available",
+            "Commanders concentrate the fire of attached units",
+            "Assign units, factories and/or artillery to commanders",
+            "Damaged units are sent to repair and return automatically"
+        ]
+    },
+    "RM-Def-Bunker": {
+        "id": "RM-Def-Bunker",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "New defensive structure available",
+            "Bunkers are well-protected, but cannot fire over walls",
+            "Base armour: 350, reduced damage from many weapon types",
+            "Weakness: Heavy Bomb (150% damage)"
+        ]
+    },
+    "RM-Def-Hardpoint": {
+        "id": "RM-Def-Hardpoint",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "New defensive structure available",
+            "Hardpoints can fire over walls and other hardpoints",
+            "Base armour: 300, reduced damage from some weapon types",
+            "Build behind walls for enhanced durability"
+        ]
+    },
+    "RM-Def-Site": {
+        "id": "RM-Def-Site",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "New defensive structure available",
+            "Sites carry mainly indirect and anti-air weapons",
+            "Base armour: 300, reduced damage from some weapon types",
+            "Combine with other defensive structures"
+        ]
+    },
+    "RM-Def-Wall": {
+        "id": "RM-Def-Wall",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "New defensive structure available",
+            "Walls and automatic gates keep intruders out",
+            "Base armour: 300, reduced damage from some weapon types",
+            "Weak against graffiti sprayers"
+        ]
+    },
+    "RM-NRG1": {
+        "id": "RM-NRG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_pow.ogg",
+        "text": [
+            "Power generators improved",
+            "Power output: 100 % \u2197 105 % (of the base value)"
+        ]
+    },
+    "RM-NRG10": {
+        "id": "RM-NRG10",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_pow.ogg",
+        "text": [
+            "Power generators improved",
+            "Power output: 170 % \u2197 184 % (of the base value)"
+        ]
+    },
+    "RM-NRG2": {
+        "id": "RM-NRG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_pow.ogg",
+        "text": [
+            "Power generators improved",
+            "Power output: 105 % \u2197 110 % (of the base value)"
+        ]
+    },
+    "RM-NRG3": {
+        "id": "RM-NRG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_pow.ogg",
+        "text": [
+            "Power generators improved",
+            "Power output: 110 % \u2197 116 % (of the base value)"
+        ]
+    },
+    "RM-NRG4": {
+        "id": "RM-NRG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_pow.ogg",
+        "text": [
+            "Power generators improved",
+            "Power output: 116 % \u2197 123 % (of the base value)"
+        ]
+    },
+    "RM-NRG5": {
+        "id": "RM-NRG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_pow.ogg",
+        "text": [
+            "Power generators improved",
+            "Power output: 123 % \u2197 131 % (of the base value)"
+        ]
+    },
+    "RM-NRG6": {
+        "id": "RM-NRG6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_pow.ogg",
+        "text": [
+            "Power generators improved",
+            "Power output: 131 % \u2197 139 % (of the base value)"
+        ]
+    },
+    "RM-NRG7": {
+        "id": "RM-NRG7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_pow.ogg",
+        "text": [
+            "Power generators improved",
+            "Power output: 139 % \u2197 148 % (of the base value)"
+        ]
+    },
+    "RM-NRG8": {
+        "id": "RM-NRG8",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_pow.ogg",
+        "text": [
+            "Power generators improved",
+            "Power output: 148 % \u2197 159 % (of the base value)"
+        ]
+    },
+    "RM-NRG9": {
+        "id": "RM-NRG9",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_pow.ogg",
+        "text": [
+            "Power generators improved",
+            "Power output: 159 % \u2197 170 % (of the base value)"
+        ]
+    },
+    "RM-P-Hover": {
+        "id": "RM-P-Hover",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "New propulsion available",
+            "Hover propulsion allows travel on land and water",
+            "Generally weaker than tracked tanks",
+            "Hovercraft have been in use since ancient times"
+        ]
+    },
+    "RM-P-VTOL": {
+        "id": "RM-P-VTOL",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "New propulsion available",
+            "Vertical Take Off and Landing (VTOL) allows aircraft",
+            "Weak against anti-air weapons",
+            "Units must be rearmed on rearming pads"
+        ]
+    },
+    "RM-RAU1": {
+        "id": "RM-RAU1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "Rearming pads improved",
+            "Rearming speed: 100 % \u2197 110 % (of the base value)"
+        ]
+    },
+    "RM-RAU2": {
+        "id": "RM-RAU2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "Rearming pads improved",
+            "Rearming speed: 110 % \u2197 122 % (of the base value)"
+        ]
+    },
+    "RM-RAU3": {
+        "id": "RM-RAU3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "Rearming pads improved",
+            "Rearming speed: 122 % \u2197 136 % (of the base value)"
+        ]
+    },
+    "RM-Repair": {
+        "id": "RM-Repair",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_systech.ogg",
+        "text": [
+            "New system available",
+            "Repair turret automatically repairs damaged units nearby",
+            "Cyborg and tank turrets available",
+            "Repair all the things"
+        ]
+    },
+    "RM-Res1": {
+        "id": "RM-Res1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_com.ogg",
+        "text": [
+            "Research facilities improved",
+            "Research speed: 100 % \u2197 110 % (of the base value)"
+        ]
+    },
+    "RM-Res2": {
+        "id": "RM-Res2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_com.ogg",
+        "text": [
+            "Research facilities improved",
+            "Research speed: 110 % \u2197 122 % (of the base value)"
+        ]
+    },
+    "RM-Res3": {
+        "id": "RM-Res3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_com.ogg",
+        "text": [
+            "Research facilities improved",
+            "Research speed: 122 % \u2197 136 % (of the base value)"
+        ]
+    },
+    "RM-Res4": {
+        "id": "RM-Res4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_com.ogg",
+        "text": [
+            "Research facilities improved",
+            "Research speed: 136 % \u2197 154 % (of the base value)"
+        ]
+    },
+    "RM-Res5": {
+        "id": "RM-Res5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_com.ogg",
+        "text": [
+            "Research facilities improved",
+            "Research speed: 154 % \u2197 177 % (of the base value)"
+        ]
+    },
+    "RM-RpU1": {
+        "id": "RM-RpU1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_systech.ogg",
+        "text": [
+            "Repair capabilities improved",
+            "Repair speed: 100 % \u2197 110 % (of the base value)",
+            "Repair speed of auto-repair, repair turrets/facilities",
+            "and rearming pads affected"
+        ]
+    },
+    "RM-RpU2": {
+        "id": "RM-RpU2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_systech.ogg",
+        "text": [
+            "Repair capabilities improved",
+            "Repair speed: 110 % \u2197 122 % (of the base value)",
+            "Repair speed of auto-repair, repair turrets/facilities",
+            "and rearming pads affected"
+        ]
+    },
+    "RM-RpU3": {
+        "id": "RM-RpU3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_systech.ogg",
+        "text": [
+            "Repair capabilities improved",
+            "Repair speed: 122 % \u2197 136 % (of the base value)",
+            "Repair speed of auto-repair, repair turrets/facilities",
+            "and rearming pads affected"
+        ]
+    },
+    "RM-SensorArtillery": {
+        "id": "RM-SensorArtillery",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_systech.ogg",
+        "text": [
+            "New system available",
+            "Artillery sensor scans for targets",
+            "Mandatory for artillery to work",
+            "Destroy enemy sensors to shut down artillery"
+        ]
+    },
+    "RM-SensorCB": {
+        "id": "RM-SensorCB",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_systech.ogg",
+        "text": [
+            "New system available",
+            "Counter Battery (CB) sensors scan for enemy artillery fire",
+            "Assigned artillery tries to destroy enemy artillery",
+            "Stay out of CB vs. CB fights"
+        ]
+    },
+    "RM-SensorSurveillance": {
+        "id": "RM-SensorSurveillance",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_systech.ogg",
+        "text": [
+            "New system available",
+            "Surveillance sensors give visibility for surrounding area",
+            "Extends unit field of view",
+            "Cannot be used for artillery"
+        ]
+    },
+    "RM-SensorVTOL": {
+        "id": "RM-SensorVTOL",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_systech.ogg",
+        "text": [
+            "New system available",
+            "Send assigned VTOLs to engage targets",
+            "VTOL attacks are fully automated",
+            "Caution: Attacks only start if all VTOLs are repaired and rearmed"
+        ]
+    },
+    "RM-St-RepairFacility": {
+        "id": "RM-St-RepairFacility",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "New structure available",
+            "Repair facilities provide stationary repairs",
+            "Faster repair rate than mobile repair turrets",
+            "Automatically repair damaged units in range"
+        ]
+    },
+    "RM-StU-Armours1": {
+        "id": "RM-StU-Armours1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "Structure armours improved",
+            "Kinetic armour: 100 % \u2197 110 % (of the base value)",
+            "Thermal armour: 100 % \u2197 110 % (of the base value)"
+        ]
+    },
+    "RM-StU-Armours2": {
+        "id": "RM-StU-Armours2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "Structure armours improved",
+            "Kinetic armour: 110 % \u2197 122 % (of the base value)",
+            "Thermal armour: 110 % \u2197 122 % (of the base value)"
+        ]
+    },
+    "RM-StU-Armours3": {
+        "id": "RM-StU-Armours3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "Structure armours improved",
+            "Kinetic armour: 122 % \u2197 136 % (of the base value)",
+            "Thermal armour: 122 % \u2197 136 % (of the base value)"
+        ]
+    },
+    "RM-StU-Armours4": {
+        "id": "RM-StU-Armours4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "Structure armours improved",
+            "Kinetic armour: 136 % \u2197 154 % (of the base value)",
+            "Thermal armour: 136 % \u2197 154 % (of the base value)"
+        ]
+    },
+    "RM-StU-Armours5": {
+        "id": "RM-StU-Armours5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "Structure armours improved",
+            "Kinetic armour: 154 % \u2197 177 % (of the base value)",
+            "Thermal armour: 154 % \u2197 177 % (of the base value)"
+        ]
+    },
+    "RM-StU-BodyPoints1": {
+        "id": "RM-StU-BodyPoints1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "Structure body points improved",
+            "Body points: 100 % \u2197 110 % (of the base value)"
+        ]
+    },
+    "RM-StU-BodyPoints2": {
+        "id": "RM-StU-BodyPoints2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "Structure body points improved",
+            "Body points: 110 % \u2197 122 % (of the base value)"
+        ]
+    },
+    "RM-StU-BodyPoints3": {
+        "id": "RM-StU-BodyPoints3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "Structure body points improved",
+            "Body points: 122 % \u2197 136 % (of the base value)"
+        ]
+    },
+    "RM-StU-BodyPoints4": {
+        "id": "RM-StU-BodyPoints4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "Structure body points improved",
+            "Body points: 136 % \u2197 154 % (of the base value)"
+        ]
+    },
+    "RM-StU-BodyPoints5": {
+        "id": "RM-StU-BodyPoints5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_struttech.ogg",
+        "text": [
+            "Structure body points improved",
+            "Body points: 154 % \u2197 177 % (of the base value)"
+        ]
+    },
+    "RM-U-CyborgTransport": {
+        "id": "RM-U-CyborgTransport",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_droid.ogg",
+        "text": [
+            "New unit available",
+            "Cyborg Transport transports up to 10 cyborgs",
+            "VTOL without weapons",
+            "Units inside are lost when the transport is destroyed"
+        ]
+    },
+    "RM-W-ART-Howitzer": {
+        "id": "RM-W-ART-Howitzer",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Howitzers fire explosive shells",
+            "Strong against hover units and cyborgs",
+            "Artillery weapons need Artillery sensors to work"
+        ]
+    },
+    "RM-W-ART-RocketBattery": {
+        "id": "RM-W-ART-RocketBattery",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Rocket batteries have the longest range",
+            "Strong against hover units and cyborgs",
+            "Artillery weapons need Artillery sensors to work"
+        ]
+    },
+    "RM-W-FF-AAHurricane": {
+        "id": "RM-W-FF-AAHurricane",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Hurricane AA fires armour-piercing shells",
+            "Strong against VTOLs",
+            "May also target ground units at the right elevation"
+        ]
+    },
+    "RM-W-FF-Autocannon": {
+        "id": "RM-W-FF-Autocannon",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Autocannon shoots small-calibre ammunition in short succession",
+            "Strong against cyborgs, weak against tanks and structures",
+            "Tank equivalent for machine gun"
+        ]
+    },
+    "RM-W-FF-Machinegun": {
+        "id": "RM-W-FF-Machinegun",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Machine gun shoots small-calibre ammunition in short succession",
+            "Strong against cyborgs, weak against tanks and structures",
+            "Cyborg equivalent for Autocannon"
+        ]
+    },
+    "RM-W-HOT-AAStormbringer": {
+        "id": "RM-W-HOT-AAStormbringer",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Stormbringer AA fires laser beams",
+            "Strong against VTOLs",
+            "May also target ground units at the right elevation"
+        ]
+    },
+    "RM-W-HOT-BombThermite": {
+        "id": "RM-W-HOT-BombThermite",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Thermite bombs set large areas on fire",
+            "Strong against cyborgs, hover units; weak against tanks, structures",
+            "Burn effect continues at full strength after leaving fire"
+        ]
+    },
+    "RM-W-HOT-Flamethrower": {
+        "id": "RM-W-HOT-Flamethrower",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Flamethrowers set small areas on fire",
+            "Strong against cyborgs, hover units; weak against tanks, structures",
+            "Burn effect continues at full strength after leaving fire"
+        ]
+    },
+    "RM-W-HOT-HowitzerIncendiary": {
+        "id": "RM-W-HOT-HowitzerIncendiary",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Incendiary howitzer fires explosive shells setting small areas on fire",
+            "Strong against cyborgs, hover units; weak against tanks, structures",
+            "Artillery weapons need Artillery sensors to work"
+        ]
+    },
+    "RM-W-HOT-Laser": {
+        "id": "RM-W-HOT-Laser",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Laser fires laser beams setting the target on fire",
+            "Strong against cyborgs, hover units; weak against tanks, structures",
+            "Burn effect continues at full strength after leaving fire"
+        ]
+    },
+    "RM-W-MIS-AAAvengerSAM": {
+        "id": "RM-W-MIS-AAAvengerSAM",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Avenger Surface-to-Air Missile (SAM) without homing",
+            "Strong against VTOLs",
+            "Can be used against aerial targets only"
+        ]
+    },
+    "RM-W-MIS-Lancer": {
+        "id": "RM-W-MIS-Lancer",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Lancer multi-purpose missile",
+            "Strong against tanks",
+            "Can be used against ground targets only"
+        ]
+    },
+    "RM-W-MIS-ScourgeMissile": {
+        "id": "RM-W-MIS-ScourgeMissile",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Scourge Missile with long range",
+            "Strong against tanks",
+            "Can be used against ground targets only"
+        ]
+    },
+    "RM-W-SF-AACyclone": {
+        "id": "RM-W-SF-AACyclone",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Cyclone AA fires explosive rounds",
+            "Strong against VTOLs",
+            "May also target ground units at the right elevation"
+        ]
+    },
+    "RM-W-SF-BombHeavy": {
+        "id": "RM-W-SF-BombHeavy",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Heavy Bomb with anti-defense warhead",
+            "Strong against defensive structures",
+            "Slow rearming"
+        ]
+    },
+    "RM-W-SF-Cannon": {
+        "id": "RM-W-SF-Cannon",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Cyborg Cannon firing anti-tank projectiles",
+            "Strong against tanks",
+            "Weak against cyborgs"
+        ]
+    },
+    "RM-W-SF-Railgun": {
+        "id": "RM-W-SF-Railgun",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Tank Railgun firing anti-tank projectiles",
+            "Strong against tanks",
+            "Weak against cyborgs"
+        ]
+    },
+    "RM-W-SPL-BombCluster": {
+        "id": "RM-W-SPL-BombCluster",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Cluster Bombs damage large areas",
+            "Strong against cyborgs",
+            "Weak against tanks"
+        ]
+    },
+    "RM-W-SPL-GrenadeLauncher": {
+        "id": "RM-W-SPL-GrenadeLauncher",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "New weapon available",
+            "Indirect non-artillery weapon with splash damage",
+            "Strong against cyborgs",
+            "No particular weakness"
+        ]
+    },
+    "RM-WU-AAAvengerSAM-ACC1": {
+        "id": "RM-WU-AAAvengerSAM-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM accuracy improved",
+            "Accuracy: 70 % \u2197 77 %",
+            ""
+        ]
+    },
+    "RM-WU-AAAvengerSAM-ACC2": {
+        "id": "RM-WU-AAAvengerSAM-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM accuracy improved",
+            "Accuracy: 77 % \u2197 85 %",
+            ""
+        ]
+    },
+    "RM-WU-AAAvengerSAM-ACC3": {
+        "id": "RM-WU-AAAvengerSAM-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM accuracy improved",
+            "Accuracy: 85 % \u2197 95 %",
+            ""
+        ]
+    },
+    "RM-WU-AAAvengerSAM-ACC4": {
+        "id": "RM-WU-AAAvengerSAM-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM accuracy improved",
+            "Accuracy: 95 % \u2197 108 %",
+            ""
+        ]
+    },
+    "RM-WU-AAAvengerSAM-ACC5": {
+        "id": "RM-WU-AAAvengerSAM-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM accuracy improved",
+            "Accuracy: 108 % \u2197 124 %",
+            ""
+        ]
+    },
+    "RM-WU-AAAvengerSAM-ACC6": {
+        "id": "RM-WU-AAAvengerSAM-ACC6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM accuracy improved",
+            "Accuracy: 124 % \u2197 144 %",
+            ""
+        ]
+    },
+    "RM-WU-AAAvengerSAM-ACC7": {
+        "id": "RM-WU-AAAvengerSAM-ACC7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM accuracy improved",
+            "Accuracy: 144 % \u2197 170 %",
+            ""
+        ]
+    },
+    "RM-WU-AAAvengerSAM-DMG1": {
+        "id": "RM-WU-AAAvengerSAM-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM damage improved",
+            "Damage: 800/300/0 \u2197 880/330/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAAvengerSAM-DMG2": {
+        "id": "RM-WU-AAAvengerSAM-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM damage improved",
+            "Damage: 880/330/0 \u2197 976/366/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAAvengerSAM-DMG3": {
+        "id": "RM-WU-AAAvengerSAM-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM damage improved",
+            "Damage: 976/366/0 \u2197 1094/410/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAAvengerSAM-DMG4": {
+        "id": "RM-WU-AAAvengerSAM-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM damage improved",
+            "Damage: 1094/410/0 \u2197 1236/463/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAAvengerSAM-DMG5": {
+        "id": "RM-WU-AAAvengerSAM-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM damage improved",
+            "Damage: 1236/463/0 \u2197 1421/533/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAAvengerSAM-ROF1": {
+        "id": "RM-WU-AAAvengerSAM-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 240.0/11.4 \u2197 292.7/11.5",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAAvengerSAM-ROF2": {
+        "id": "RM-WU-AAAvengerSAM-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 292.7/11.5 \u2197 355.9/11.6",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAAvengerSAM-ROF3": {
+        "id": "RM-WU-AAAvengerSAM-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 355.9/11.6 \u2197 444.1/11.7",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAAvengerSAM-ROF4": {
+        "id": "RM-WU-AAAvengerSAM-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 444.1/11.7 \u2197 554.8/11.7",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAAvengerSAM-ROF5": {
+        "id": "RM-WU-AAAvengerSAM-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Avenger SAM rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 554.8/11.7 \u2197 692.3/11.8",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAAvengerSAM-SPE1": {
+        "id": "RM-WU-AAAvengerSAM-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Avenger Surface-to-Air Missile is now homing",
+            "Missiles will follow the target",
+            ""
+        ]
+    },
+    "RM-WU-AACyclone-ACC1": {
+        "id": "RM-WU-AACyclone-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA accuracy improved",
+            "Accuracy: 80 % \u2197 88 %",
+            ""
+        ]
+    },
+    "RM-WU-AACyclone-ACC2": {
+        "id": "RM-WU-AACyclone-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA accuracy improved",
+            "Accuracy: 88 % \u2197 97 %",
+            ""
+        ]
+    },
+    "RM-WU-AACyclone-ACC3": {
+        "id": "RM-WU-AACyclone-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA accuracy improved",
+            "Accuracy: 97 % \u2197 109 %",
+            ""
+        ]
+    },
+    "RM-WU-AACyclone-ACC4": {
+        "id": "RM-WU-AACyclone-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA accuracy improved",
+            "Accuracy: 109 % \u2197 123 %",
+            ""
+        ]
+    },
+    "RM-WU-AACyclone-ACC5": {
+        "id": "RM-WU-AACyclone-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA accuracy improved",
+            "Accuracy: 123 % \u2197 142 %",
+            ""
+        ]
+    },
+    "RM-WU-AACyclone-DMG1": {
+        "id": "RM-WU-AACyclone-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA damage improved",
+            "Damage: 1400/250/0 \u2197 1540/275/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AACyclone-DMG2": {
+        "id": "RM-WU-AACyclone-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA damage improved",
+            "Damage: 1540/275/0 \u2197 1709/305/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AACyclone-DMG3": {
+        "id": "RM-WU-AACyclone-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA damage improved",
+            "Damage: 1709/305/0 \u2197 1914/341/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AACyclone-DMG4": {
+        "id": "RM-WU-AACyclone-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA damage improved",
+            "Damage: 1914/341/0 \u2197 2163/386/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AACyclone-DMG5": {
+        "id": "RM-WU-AACyclone-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA damage improved",
+            "Damage: 2163/386/0 \u2197 2487/444/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AACyclone-DMG6": {
+        "id": "RM-WU-AACyclone-DMG6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA damage improved",
+            "Damage: 2487/444/0 \u2197 2885/515/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AACyclone-DMG7": {
+        "id": "RM-WU-AACyclone-DMG7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA damage improved",
+            "Damage: 2885/515/0 \u2197 3405/608/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AACyclone-ROF1": {
+        "id": "RM-WU-AACyclone-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 120.0/5.7 \u2197 146.3/5.8",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AACyclone-ROF2": {
+        "id": "RM-WU-AACyclone-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 146.3/5.8 \u2197 177.9/5.8",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AACyclone-ROF3": {
+        "id": "RM-WU-AACyclone-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 177.9/5.8 \u2197 222.0/5.8",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AACyclone-ROF4": {
+        "id": "RM-WU-AACyclone-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 222.0/5.8 \u2197 277.4/5.9",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AACyclone-ROF5": {
+        "id": "RM-WU-AACyclone-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cyclone AA rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 277.4/5.9 \u2197 346.2/5.9",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AACyclone-SPE1": {
+        "id": "RM-WU-AACyclone-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Cyclone shells fly faster",
+            "Turret can fire vertically now (90\u00b0)",
+            ""
+        ]
+    },
+    "RM-WU-AACyclone-SPE2": {
+        "id": "RM-WU-AACyclone-SPE2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Cyclone explosions affect larger area",
+            "Splash radius: 128 \u2197 256",
+            ""
+        ]
+    },
+    "RM-WU-AAHurricane-ACC1": {
+        "id": "RM-WU-AAHurricane-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA accuracy improved",
+            "Accuracy: 80 % \u2197 88 %",
+            ""
+        ]
+    },
+    "RM-WU-AAHurricane-ACC2": {
+        "id": "RM-WU-AAHurricane-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA accuracy improved",
+            "Accuracy: 88 % \u2197 97 %",
+            ""
+        ]
+    },
+    "RM-WU-AAHurricane-ACC3": {
+        "id": "RM-WU-AAHurricane-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA accuracy improved",
+            "Accuracy: 97 % \u2197 109 %",
+            ""
+        ]
+    },
+    "RM-WU-AAHurricane-ACC4": {
+        "id": "RM-WU-AAHurricane-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA accuracy improved",
+            "Accuracy: 109 % \u2197 123 %",
+            ""
+        ]
+    },
+    "RM-WU-AAHurricane-ACC5": {
+        "id": "RM-WU-AAHurricane-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA accuracy improved",
+            "Accuracy: 123 % \u2197 142 %",
+            ""
+        ]
+    },
+    "RM-WU-AAHurricane-DMG1": {
+        "id": "RM-WU-AAHurricane-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA damage improved",
+            "Damage: 400/0/0 \u2197 440/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAHurricane-DMG2": {
+        "id": "RM-WU-AAHurricane-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA damage improved",
+            "Damage: 440/0/0 \u2197 488/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAHurricane-DMG3": {
+        "id": "RM-WU-AAHurricane-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA damage improved",
+            "Damage: 488/0/0 \u2197 547/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAHurricane-DMG4": {
+        "id": "RM-WU-AAHurricane-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA damage improved",
+            "Damage: 547/0/0 \u2197 618/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAHurricane-DMG5": {
+        "id": "RM-WU-AAHurricane-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA damage improved",
+            "Damage: 618/0/0 \u2197 710/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAHurricane-ROF1": {
+        "id": "RM-WU-AAHurricane-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 800.0/72.7 \u2197 909.1/73.5",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAHurricane-ROF2": {
+        "id": "RM-WU-AAHurricane-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 909.1/73.5 \u2197 1021.8/74.2",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAHurricane-ROF3": {
+        "id": "RM-WU-AAHurricane-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 1021.8/74.2 \u2197 1153.3/74.8",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAHurricane-ROF4": {
+        "id": "RM-WU-AAHurricane-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 1153.3/74.8 \u2197 1286.7/75.3",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAHurricane-ROF5": {
+        "id": "RM-WU-AAHurricane-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 1286.7/75.3 \u2197 1417.3/75.7",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAHurricane-ROF6": {
+        "id": "RM-WU-AAHurricane-ROF6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 1417.3/75.7 \u2197 1566.9/76.1",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAHurricane-ROF7": {
+        "id": "RM-WU-AAHurricane-ROF7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Hurricane AA rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 1566.9/76.1 \u2197 1708.0/76.4",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAHurricane-SPE1": {
+        "id": "RM-WU-AAHurricane-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Hurricane shells fly faster",
+            "Turret can fire vertically now (90\u00b0)",
+            ""
+        ]
+    },
+    "RM-WU-AAHurricane-SPE2": {
+        "id": "RM-WU-AAHurricane-SPE2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Hurricane salvo size increased",
+            "Shots per salvo: 4 \u2197 5",
+            ""
+        ]
+    },
+    "RM-WU-AAStormbringer-ACC1": {
+        "id": "RM-WU-AAStormbringer-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA accuracy improved",
+            "Accuracy: 95 % \u2197 104 %",
+            ""
+        ]
+    },
+    "RM-WU-AAStormbringer-ACC2": {
+        "id": "RM-WU-AAStormbringer-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA accuracy improved",
+            "Accuracy: 104 % \u2197 115 %",
+            ""
+        ]
+    },
+    "RM-WU-AAStormbringer-ACC3": {
+        "id": "RM-WU-AAStormbringer-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA accuracy improved",
+            "Accuracy: 115 % \u2197 129 %",
+            ""
+        ]
+    },
+    "RM-WU-AAStormbringer-ACC4": {
+        "id": "RM-WU-AAStormbringer-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA accuracy improved",
+            "Accuracy: 129 % \u2197 146 %",
+            ""
+        ]
+    },
+    "RM-WU-AAStormbringer-ACC5": {
+        "id": "RM-WU-AAStormbringer-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA accuracy improved",
+            "Accuracy: 146 % \u2197 168 %",
+            ""
+        ]
+    },
+    "RM-WU-AAStormbringer-DMG1": {
+        "id": "RM-WU-AAStormbringer-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA damage improved",
+            "Damage: 1000/0/0 \u2197 1100/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAStormbringer-DMG2": {
+        "id": "RM-WU-AAStormbringer-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA damage improved",
+            "Damage: 1100/0/0 \u2197 1221/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAStormbringer-DMG3": {
+        "id": "RM-WU-AAStormbringer-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA damage improved",
+            "Damage: 1221/0/0 \u2197 1367/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAStormbringer-DMG4": {
+        "id": "RM-WU-AAStormbringer-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA damage improved",
+            "Damage: 1367/0/0 \u2197 1545/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAStormbringer-DMG5": {
+        "id": "RM-WU-AAStormbringer-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA damage improved",
+            "Damage: 1545/0/0 \u2197 1777/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAStormbringer-DMG6": {
+        "id": "RM-WU-AAStormbringer-DMG6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA damage improved",
+            "Damage: 1777/0/0 \u2197 2061/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAStormbringer-DMG7": {
+        "id": "RM-WU-AAStormbringer-DMG7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA damage improved",
+            "Damage: 2061/0/0 \u2197 2432/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-AAStormbringer-ROF1": {
+        "id": "RM-WU-AAStormbringer-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA rate of fire (ROF) improved",
+            "ROF per min: 6.0 \u2197 6.6",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAStormbringer-ROF2": {
+        "id": "RM-WU-AAStormbringer-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA rate of fire (ROF) improved",
+            "ROF per min: 6.6 \u2197 7.2",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAStormbringer-ROF3": {
+        "id": "RM-WU-AAStormbringer-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA rate of fire (ROF) improved",
+            "ROF per min: 7.2 \u2197 7.8",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAStormbringer-ROF4": {
+        "id": "RM-WU-AAStormbringer-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA rate of fire (ROF) improved",
+            "ROF per min: 7.8 \u2197 8.4",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAStormbringer-ROF5": {
+        "id": "RM-WU-AAStormbringer-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Stormbringer AA rate of fire (ROF) improved",
+            "ROF per min: 8.4 \u2197 8.9",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-AAStormbringer-SPE1": {
+        "id": "RM-WU-AAStormbringer-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Stormbringer shots travel faster (yes, we can do even that)",
+            "Range: 1920 \u2197 2048, fire pause: 100 \u2198 90",
+            "Turret can fire almost vertically now (85\u00b0)"
+        ]
+    },
+    "RM-WU-Autocannon-ACC1": {
+        "id": "RM-WU-Autocannon-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon accuracy improved",
+            "Accuracy (tank): 70 % \u2197 77 %",
+            "Accuracy (VTOL): 60 % \u2197 66 %"
+        ]
+    },
+    "RM-WU-Autocannon-ACC2": {
+        "id": "RM-WU-Autocannon-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon accuracy improved",
+            "Accuracy (tank): 77 % \u2197 85 %",
+            "Accuracy (VTOL): 66 % \u2197 73 %"
+        ]
+    },
+    "RM-WU-Autocannon-ACC3": {
+        "id": "RM-WU-Autocannon-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon accuracy improved",
+            "Accuracy (tank): 85 % \u2197 95 %",
+            "Accuracy (VTOL): 73 % \u2197 82 %"
+        ]
+    },
+    "RM-WU-Autocannon-ACC4": {
+        "id": "RM-WU-Autocannon-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon accuracy improved",
+            "Accuracy (tank): 95 % \u2197 108 %",
+            "Accuracy (VTOL): 82 % \u2197 92 %"
+        ]
+    },
+    "RM-WU-Autocannon-ACC5": {
+        "id": "RM-WU-Autocannon-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon accuracy improved",
+            "Accuracy (tank): 108 % \u2197 124 %",
+            "Accuracy (VTOL): 92 % \u2197 106 %"
+        ]
+    },
+    "RM-WU-Autocannon-DMG1": {
+        "id": "RM-WU-Autocannon-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon damage improved",
+            "Damage (tank): 450/0/0 \u2197 495/0/0",
+            "Damage (VTOL): 525/0/0 \u2197 577/0/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Autocannon-DMG2": {
+        "id": "RM-WU-Autocannon-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon damage improved",
+            "Damage (tank): 495/0/0 \u2197 549/0/0",
+            "Damage (VTOL): 577/0/0 \u2197 641/0/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Autocannon-DMG3": {
+        "id": "RM-WU-Autocannon-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon damage improved",
+            "Damage (tank): 549/0/0 \u2197 615/0/0",
+            "Damage (VTOL): 641/0/0 \u2197 717/0/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Autocannon-DMG4": {
+        "id": "RM-WU-Autocannon-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon damage improved",
+            "Damage (tank): 615/0/0 \u2197 695/0/0",
+            "Damage (VTOL): 717/0/0 \u2197 811/0/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Autocannon-DMG5": {
+        "id": "RM-WU-Autocannon-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon damage improved",
+            "Damage (tank): 695/0/0 \u2197 799/0/0",
+            "Damage (VTOL): 811/0/0 \u2197 932/0/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Autocannon-ROF1": {
+        "id": "RM-WU-Autocannon-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min (tank): 75.0/25.0 \u2197 84.5/26.0",
+            "Salvo/Cycle ROF per min (VTOL): 750.0/88.2 \u2197 845.1/89.4",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Autocannon-ROF2": {
+        "id": "RM-WU-Autocannon-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min (tank): 84.5/26.0 \u2197 94.2/26.8",
+            "Salvo/Cycle ROF per min (VTOL): 845.1/89.4 \u2197 941.6/90.4",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Autocannon-ROF3": {
+        "id": "RM-WU-Autocannon-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min (tank): 94.2/26.8 \u2197 105.2/27.6",
+            "Salvo/Cycle ROF per min (VTOL): 941.6/90.4 \u2197 1052.2/91.3",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Autocannon-ROF4": {
+        "id": "RM-WU-Autocannon-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min (tank): 105.2/27.6 \u2197 116.2/28.4",
+            "Salvo/Cycle ROF per min (VTOL): 1052.2/91.3 \u2197 1162.1/92.1",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Autocannon-ROF5": {
+        "id": "RM-WU-Autocannon-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min (tank): 116.2/28.4 \u2197 126.8/28.9",
+            "Salvo/Cycle ROF per min (VTOL): 1162.1/92.1 \u2197 1267.6/92.7",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Autocannon-ROF6": {
+        "id": "RM-WU-Autocannon-ROF6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min (tank): 126.8/28.9 \u2197 138.6/29.5",
+            "Salvo/Cycle ROF per min (VTOL): 1267.6/92.7 \u2197 1385.9/93.3",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Autocannon-ROF7": {
+        "id": "RM-WU-Autocannon-ROF7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Autocannon rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min (tank): 138.6/29.5 \u2197 149.5/30.0",
+            "Salvo/Cycle ROF per min (VTOL): 1385.9/93.3 \u2197 1495.2/93.7",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Autocannon-SPE1": {
+        "id": "RM-WU-Autocannon-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Autocannon salvo size increased",
+            "Shots per salvo: 5 \u2197 6",
+            ""
+        ]
+    },
+    "RM-WU-Autocannon-SPE2": {
+        "id": "RM-WU-Autocannon-SPE2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Autocannon salvo size increased",
+            "Shots per salvo: 6 \u2197 7",
+            "Tanks only: Barrel can be lowered further (\u221230\u00b0 \u2198 \u221235\u00b0)"
+        ]
+    },
+    "RM-WU-BombCluster-ACC1": {
+        "id": "RM-WU-BombCluster-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb accuracy improved",
+            "Accuracy: 30 % \u2197 33 %",
+            ""
+        ]
+    },
+    "RM-WU-BombCluster-ACC2": {
+        "id": "RM-WU-BombCluster-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb accuracy improved",
+            "Accuracy: 33 % \u2197 36 %",
+            ""
+        ]
+    },
+    "RM-WU-BombCluster-ACC3": {
+        "id": "RM-WU-BombCluster-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb accuracy improved",
+            "Accuracy: 36 % \u2197 41 %",
+            ""
+        ]
+    },
+    "RM-WU-BombCluster-ACC4": {
+        "id": "RM-WU-BombCluster-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb accuracy improved",
+            "Accuracy: 41 % \u2197 46 %",
+            ""
+        ]
+    },
+    "RM-WU-BombCluster-ACC5": {
+        "id": "RM-WU-BombCluster-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb accuracy improved",
+            "Accuracy: 46 % \u2197 53 %",
+            ""
+        ]
+    },
+    "RM-WU-BombCluster-DMG1": {
+        "id": "RM-WU-BombCluster-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb damage improved",
+            "Damage: 750/400/0 \u2197 825/440/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombCluster-DMG2": {
+        "id": "RM-WU-BombCluster-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb damage improved",
+            "Damage: 825/440/0 \u2197 915/488/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombCluster-DMG3": {
+        "id": "RM-WU-BombCluster-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb damage improved",
+            "Damage: 915/488/0 \u2197 1025/547/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombCluster-DMG4": {
+        "id": "RM-WU-BombCluster-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb damage improved",
+            "Damage: 1025/547/0 \u2197 1158/618/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombCluster-DMG5": {
+        "id": "RM-WU-BombCluster-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb damage improved",
+            "Damage: 1158/618/0 \u2197 1332/710/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombCluster-DMG6": {
+        "id": "RM-WU-BombCluster-DMG6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb damage improved",
+            "Damage: 1332/710/0 \u2197 1546/824/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombCluster-DMG7": {
+        "id": "RM-WU-BombCluster-DMG7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb damage improved",
+            "Damage: 1546/824/0 \u2197 1824/972/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombCluster-ROF1": {
+        "id": "RM-WU-BombCluster-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 750.0/55.6 \u2197 845.1/56.0",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-BombCluster-ROF2": {
+        "id": "RM-WU-BombCluster-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 845.1/56.0 \u2197 941.6/56.4",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-BombCluster-ROF3": {
+        "id": "RM-WU-BombCluster-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 941.6/56.4 \u2197 1052.2/56.8",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-BombCluster-ROF4": {
+        "id": "RM-WU-BombCluster-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 1052.2/56.8 \u2197 1162.1/57.1",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-BombCluster-ROF5": {
+        "id": "RM-WU-BombCluster-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cluster bomb rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 1162.1/57.1 \u2197 1267.6/57.3",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-BombCluster-SPE1": {
+        "id": "RM-WU-BombCluster-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Cluster bomb explosions affect larger area",
+            "Splash radius: 128 \u2197 192",
+            ""
+        ]
+    },
+    "RM-WU-BombCluster-SPE2": {
+        "id": "RM-WU-BombCluster-SPE2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Cluster bomb salvo size increased",
+            "Bombs per salvo: 5 \u2197 6",
+            ""
+        ]
+    },
+    "RM-WU-BombHeavy-ACC1": {
+        "id": "RM-WU-BombHeavy-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb accuracy improved",
+            "Accuracy: 80 % \u2197 88 %",
+            ""
+        ]
+    },
+    "RM-WU-BombHeavy-ACC2": {
+        "id": "RM-WU-BombHeavy-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb accuracy improved",
+            "Accuracy: 88 % \u2197 97 %",
+            ""
+        ]
+    },
+    "RM-WU-BombHeavy-ACC3": {
+        "id": "RM-WU-BombHeavy-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb accuracy improved",
+            "Accuracy: 97 % \u2197 109 %",
+            ""
+        ]
+    },
+    "RM-WU-BombHeavy-ACC4": {
+        "id": "RM-WU-BombHeavy-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb accuracy improved",
+            "Accuracy: 109 % \u2197 123 %",
+            ""
+        ]
+    },
+    "RM-WU-BombHeavy-ACC5": {
+        "id": "RM-WU-BombHeavy-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb accuracy improved",
+            "Accuracy: 123 % \u2197 142 %",
+            ""
+        ]
+    },
+    "RM-WU-BombHeavy-DMG1": {
+        "id": "RM-WU-BombHeavy-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb damage improved",
+            "Damage: 1837/500/0 \u2197 2020/550/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombHeavy-DMG2": {
+        "id": "RM-WU-BombHeavy-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb damage improved",
+            "Damage: 2020/550/0 \u2197 2242/610/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombHeavy-DMG3": {
+        "id": "RM-WU-BombHeavy-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb damage improved",
+            "Damage: 2242/610/0 \u2197 2512/683/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombHeavy-DMG4": {
+        "id": "RM-WU-BombHeavy-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb damage improved",
+            "Damage: 2512/683/0 \u2197 2838/772/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombHeavy-DMG5": {
+        "id": "RM-WU-BombHeavy-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb damage improved",
+            "Damage: 2838/772/0 \u2197 3264/888/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombHeavy-DMG6": {
+        "id": "RM-WU-BombHeavy-DMG6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb damage improved",
+            "Damage: 3264/888/0 \u2197 3786/1030/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombHeavy-DMG7": {
+        "id": "RM-WU-BombHeavy-DMG7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb damage improved",
+            "Damage: 3786/1030/0 \u2197 4468/1216/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombHeavy-ROF1": {
+        "id": "RM-WU-BombHeavy-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb rate of fire (ROF) improved",
+            "ROF per min: 12.0 \u2197 13.2",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-BombHeavy-ROF2": {
+        "id": "RM-WU-BombHeavy-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb rate of fire (ROF) improved",
+            "ROF per min: 13.2 \u2197 14.3",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-BombHeavy-ROF3": {
+        "id": "RM-WU-BombHeavy-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb rate of fire (ROF) improved",
+            "ROF per min: 14.3 \u2197 15.6",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-BombHeavy-ROF4": {
+        "id": "RM-WU-BombHeavy-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb rate of fire (ROF) improved",
+            "ROF per min: 15.6 \u2197 16.8",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-BombHeavy-ROF5": {
+        "id": "RM-WU-BombHeavy-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Heavy bomb rate of fire (ROF) improved",
+            "ROF per min: 16.8 \u2197 17.8",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-BombHeavy-SPE1": {
+        "id": "RM-WU-BombHeavy-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Heavy bomb mass decreased",
+            "Mass: 1800 \u2198 1500",
+            ""
+        ]
+    },
+    "RM-WU-BombHeavy-SPE2": {
+        "id": "RM-WU-BombHeavy-SPE2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Heavy bomb mass decreased",
+            "Mass: 1500 \u2198 1300",
+            ""
+        ]
+    },
+    "RM-WU-BombThermite-ACC1": {
+        "id": "RM-WU-BombThermite-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb accuracy improved",
+            "Accuracy: 80 % \u2197 88 %",
+            ""
+        ]
+    },
+    "RM-WU-BombThermite-ACC2": {
+        "id": "RM-WU-BombThermite-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb accuracy improved",
+            "Accuracy: 88 % \u2197 97 %",
+            ""
+        ]
+    },
+    "RM-WU-BombThermite-ACC3": {
+        "id": "RM-WU-BombThermite-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb accuracy improved",
+            "Accuracy: 97 % \u2197 109 %",
+            ""
+        ]
+    },
+    "RM-WU-BombThermite-ACC4": {
+        "id": "RM-WU-BombThermite-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb accuracy improved",
+            "Accuracy: 109 % \u2197 123 %",
+            ""
+        ]
+    },
+    "RM-WU-BombThermite-ACC5": {
+        "id": "RM-WU-BombThermite-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb accuracy improved",
+            "Accuracy: 123 % \u2197 142 %",
+            ""
+        ]
+    },
+    "RM-WU-BombThermite-DMG1": {
+        "id": "RM-WU-BombThermite-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb damage improved",
+            "Damage: 250/0/250 \u2197 275/0/275",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombThermite-DMG2": {
+        "id": "RM-WU-BombThermite-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb damage improved",
+            "Damage: 275/0/275 \u2197 305/0/305",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombThermite-DMG3": {
+        "id": "RM-WU-BombThermite-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb damage improved",
+            "Damage: 305/0/305 \u2197 341/0/341",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombThermite-DMG4": {
+        "id": "RM-WU-BombThermite-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb damage improved",
+            "Damage: 341/0/341 \u2197 386/0/386",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombThermite-DMG5": {
+        "id": "RM-WU-BombThermite-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb damage improved",
+            "Damage: 386/0/386 \u2197 444/0/444",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombThermite-DMG6": {
+        "id": "RM-WU-BombThermite-DMG6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb damage improved",
+            "Damage: 444/0/444 \u2197 515/0/515",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombThermite-DMG7": {
+        "id": "RM-WU-BombThermite-DMG7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb damage improved",
+            "Damage: 515/0/515 \u2197 608/0/608",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-BombThermite-ROF1": {
+        "id": "RM-WU-BombThermite-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb rate of fire (ROF) improved",
+            "ROF per min: 12.0 \u2197 13.2",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-BombThermite-ROF2": {
+        "id": "RM-WU-BombThermite-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb rate of fire (ROF) improved",
+            "ROF per min: 13.2 \u2197 14.3",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-BombThermite-ROF3": {
+        "id": "RM-WU-BombThermite-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb rate of fire (ROF) improved",
+            "ROF per min: 14.3 \u2197 15.6",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-BombThermite-ROF4": {
+        "id": "RM-WU-BombThermite-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb rate of fire (ROF) improved",
+            "ROF per min: 15.6 \u2197 16.8",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-BombThermite-ROF5": {
+        "id": "RM-WU-BombThermite-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Thermite bomb rate of fire (ROF) improved",
+            "ROF per min: 16.8 \u2197 17.8",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-BombThermite-SPE1": {
+        "id": "RM-WU-BombThermite-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Thermite bomb burning affects larger area",
+            "Incendiary radius: 256 \u2197 320",
+            ""
+        ]
+    },
+    "RM-WU-BombThermite-SPE2": {
+        "id": "RM-WU-BombThermite-SPE2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Thermite bomb mass decreased",
+            "Mass: 1800 \u2198 1500",
+            ""
+        ]
+    },
+    "RM-WU-Cannon-ACC1": {
+        "id": "RM-WU-Cannon-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon accuracy improved",
+            "Accuracy (cyborg): 60 % \u2197 66 %",
+            "Accuracy (structure): 60 % \u2197 66 %"
+        ]
+    },
+    "RM-WU-Cannon-ACC2": {
+        "id": "RM-WU-Cannon-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon accuracy improved",
+            "Accuracy (cyborg): 66 % \u2197 73 %",
+            "Accuracy (structure): 66 % \u2197 73 %"
+        ]
+    },
+    "RM-WU-Cannon-ACC3": {
+        "id": "RM-WU-Cannon-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon accuracy improved",
+            "Accuracy (cyborg): 73 % \u2197 82 %",
+            "Accuracy (structure): 73 % \u2197 82 %"
+        ]
+    },
+    "RM-WU-Cannon-ACC4": {
+        "id": "RM-WU-Cannon-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon accuracy improved",
+            "Accuracy (cyborg): 82 % \u2197 92 %",
+            "Accuracy (structure): 82 % \u2197 92 %"
+        ]
+    },
+    "RM-WU-Cannon-ACC5": {
+        "id": "RM-WU-Cannon-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon accuracy improved",
+            "Accuracy (cyborg): 92 % \u2197 106 %",
+            "Accuracy (structure): 92 % \u2197 106 %"
+        ]
+    },
+    "RM-WU-Cannon-Cyb-SPE1": {
+        "id": "RM-WU-Cannon-Cyb-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Cyborg cannons usable while moving",
+            "Cannons may be fired while moving at 50% reduced accuracy",
+            ""
+        ]
+    },
+    "RM-WU-Cannon-Cyb-SPE2": {
+        "id": "RM-WU-Cannon-Cyb-SPE2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Cyborg cannons usable while moving",
+            "Cannons may be fired while moving at full accuracy",
+            ""
+        ]
+    },
+    "RM-WU-Cannon-DMG1": {
+        "id": "RM-WU-Cannon-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon damage improved",
+            "Damage (cyborg): 1000/250/0 \u2197 1100/275/0",
+            "Damage (structure): 1350/300/0 \u2197 1485/330/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Cannon-DMG2": {
+        "id": "RM-WU-Cannon-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon damage improved",
+            "Damage (cyborg): 1100/275/0 \u2197 1221/305/0",
+            "Damage (structure): 1485/330/0 \u2197 1648/366/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Cannon-DMG3": {
+        "id": "RM-WU-Cannon-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon damage improved",
+            "Damage (cyborg): 1221/305/0 \u2197 1367/341/0",
+            "Damage (structure): 1648/366/0 \u2197 1846/410/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Cannon-DMG4": {
+        "id": "RM-WU-Cannon-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon damage improved",
+            "Damage (cyborg): 1367/341/0 \u2197 1545/386/0",
+            "Damage (structure): 1846/410/0 \u2197 2086/463/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Cannon-DMG5": {
+        "id": "RM-WU-Cannon-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon damage improved",
+            "Damage (cyborg): 1545/386/0 \u2197 1777/444/0",
+            "Damage (structure): 2086/463/0 \u2197 2399/533/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Cannon-DMG6": {
+        "id": "RM-WU-Cannon-DMG6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon damage improved",
+            "Damage (cyborg): 1777/444/0 \u2197 2061/515/0",
+            "Damage (structure): 2399/533/0 \u2197 2782/618/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Cannon-DMG7": {
+        "id": "RM-WU-Cannon-DMG7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon damage improved",
+            "Damage (cyborg): 2061/515/0 \u2197 2432/608/0",
+            "Damage (structure): 2782/618/0 \u2197 3283/729/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Cannon-ROF1": {
+        "id": "RM-WU-Cannon-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon rate of fire (ROF) improved",
+            "ROF per min (cyborg): 4.6 \u2197 5.1",
+            "ROF per min (structure): 4.6 \u2197 5.1",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Cannon-ROF2": {
+        "id": "RM-WU-Cannon-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon rate of fire (ROF) improved",
+            "ROF per min (cyborg): 5.1 \u2197 5.5",
+            "ROF per min (structure): 5.1 \u2197 5.5",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Cannon-ROF3": {
+        "id": "RM-WU-Cannon-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon rate of fire (ROF) improved",
+            "ROF per min (cyborg): 5.5 \u2197 6.0",
+            "ROF per min (structure): 5.5 \u2197 6.0",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Cannon-ROF4": {
+        "id": "RM-WU-Cannon-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon rate of fire (ROF) improved",
+            "ROF per min (cyborg): 6.0 \u2197 6.4",
+            "ROF per min (structure): 6.0 \u2197 6.4",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Cannon-ROF5": {
+        "id": "RM-WU-Cannon-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Cannon rate of fire (ROF) improved",
+            "ROF per min (cyborg): 6.4 \u2197 6.9",
+            "ROF per min (structure): 6.4 \u2197 6.9",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Cannon-Struc-SPE1": {
+        "id": "RM-WU-Cannon-Struc-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Structure cannon damage and splash radius increased",
+            "Base damage: 1350 \u2197 1400",
+            "Splash radius: 96 \u2197 128"
+        ]
+    },
+    "RM-WU-Cannon-Struc-SPE2": {
+        "id": "RM-WU-Cannon-Struc-SPE2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Structure cannon range increased",
+            "Range: 1280 \u2197 1408",
+            ""
+        ]
+    },
+    "RM-WU-Flamethrower-ACC1": {
+        "id": "RM-WU-Flamethrower-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower accuracy improved",
+            "Accuracy: 40 % \u2197 44 %",
+            ""
+        ]
+    },
+    "RM-WU-Flamethrower-ACC2": {
+        "id": "RM-WU-Flamethrower-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower accuracy improved",
+            "Accuracy: 44 % \u2197 48 %",
+            ""
+        ]
+    },
+    "RM-WU-Flamethrower-ACC3": {
+        "id": "RM-WU-Flamethrower-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower accuracy improved",
+            "Accuracy: 48 % \u2197 54 %",
+            ""
+        ]
+    },
+    "RM-WU-Flamethrower-ACC4": {
+        "id": "RM-WU-Flamethrower-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower accuracy improved",
+            "Accuracy: 54 % \u2197 61 %",
+            ""
+        ]
+    },
+    "RM-WU-Flamethrower-ACC5": {
+        "id": "RM-WU-Flamethrower-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower accuracy improved",
+            "Accuracy: 61 % \u2197 71 %",
+            ""
+        ]
+    },
+    "RM-WU-Flamethrower-DMG1": {
+        "id": "RM-WU-Flamethrower-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower damage improved",
+            "Damage: 1/0/200 \u2197 1/0/220",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Flamethrower-DMG2": {
+        "id": "RM-WU-Flamethrower-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower damage improved",
+            "Damage: 1/0/220 \u2197 1/0/244",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Flamethrower-DMG3": {
+        "id": "RM-WU-Flamethrower-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower damage improved",
+            "Damage: 1/0/244 \u2197 1/0/273",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Flamethrower-DMG4": {
+        "id": "RM-WU-Flamethrower-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower damage improved",
+            "Damage: 1/0/273 \u2197 1/0/309",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Flamethrower-DMG5": {
+        "id": "RM-WU-Flamethrower-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower damage improved",
+            "Damage: 1/0/309 \u2197 1/0/355",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Flamethrower-DMG6": {
+        "id": "RM-WU-Flamethrower-DMG6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower damage improved",
+            "Damage: 1/0/355 \u2197 2/0/412",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Flamethrower-DMG7": {
+        "id": "RM-WU-Flamethrower-DMG7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower damage improved",
+            "Damage: 2/0/412 \u2197 2/0/486",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Flamethrower-ROF1": {
+        "id": "RM-WU-Flamethrower-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 900.0/42.9 \u2197 1040.5/43.1",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Flamethrower-ROF2": {
+        "id": "RM-WU-Flamethrower-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 1040.5/43.1 \u2197 1190.8/43.4",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Flamethrower-ROF3": {
+        "id": "RM-WU-Flamethrower-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 1190.8/43.4 \u2197 1373.3/43.6",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Flamethrower-ROF4": {
+        "id": "RM-WU-Flamethrower-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 1373.3/43.6 \u2197 1566.7/43.7",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Flamethrower-ROF5": {
+        "id": "RM-WU-Flamethrower-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Flamethrower rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 1566.7/43.7 \u2197 1764.7/43.9",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Flamethrower-SPE1": {
+        "id": "RM-WU-Flamethrower-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Flamethrower burning affects larger area",
+            "Incendiary radius: 32 \u2197 48",
+            ""
+        ]
+    },
+    "RM-WU-Flamethrower-SPE2": {
+        "id": "RM-WU-Flamethrower-SPE2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Flamethrower flames burn longer",
+            "Incendiary effect duration: 7.0 s \u2197 9.0 s ",
+            ""
+        ]
+    },
+    "RM-WU-GrenadeLauncher-ACC1": {
+        "id": "RM-WU-GrenadeLauncher-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher accuracy improved",
+            "Accuracy (cyborg): 40 % \u2197 44 %",
+            "Accuracy (tank/structure): 50 % \u2197 55 %"
+        ]
+    },
+    "RM-WU-GrenadeLauncher-ACC2": {
+        "id": "RM-WU-GrenadeLauncher-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher accuracy improved",
+            "Accuracy (cyborg): 44 % \u2197 48 %",
+            "Accuracy (tank/structure): 55 % \u2197 61 %"
+        ]
+    },
+    "RM-WU-GrenadeLauncher-ACC3": {
+        "id": "RM-WU-GrenadeLauncher-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher accuracy improved",
+            "Accuracy (cyborg): 48 % \u2197 54 %",
+            "Accuracy (tank/structure): 61 % \u2197 68 %"
+        ]
+    },
+    "RM-WU-GrenadeLauncher-ACC4": {
+        "id": "RM-WU-GrenadeLauncher-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher accuracy improved",
+            "Accuracy (cyborg): 54 % \u2197 61 %",
+            "Accuracy (tank/structure): 68 % \u2197 77 %"
+        ]
+    },
+    "RM-WU-GrenadeLauncher-ACC5": {
+        "id": "RM-WU-GrenadeLauncher-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher accuracy improved",
+            "Accuracy (cyborg): 61 % \u2197 71 %",
+            "Accuracy (tank/structure): 77 % \u2197 88 %"
+        ]
+    },
+    "RM-WU-GrenadeLauncher-DMG1": {
+        "id": "RM-WU-GrenadeLauncher-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher damage improved",
+            "Damage (cyborg): 675/450/0 \u2197 742/495/0",
+            "Damage (tank/structure): 825/550/0 \u2197 907/605/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-GrenadeLauncher-DMG2": {
+        "id": "RM-WU-GrenadeLauncher-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher damage improved",
+            "Damage (cyborg): 742/495/0 \u2197 824/549/0",
+            "Damage (tank/structure): 907/605/0 \u2197 1007/671/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-GrenadeLauncher-DMG3": {
+        "id": "RM-WU-GrenadeLauncher-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher damage improved",
+            "Damage (cyborg): 824/549/0 \u2197 923/615/0",
+            "Damage (tank/structure): 1007/671/0 \u2197 1128/752/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-GrenadeLauncher-DMG4": {
+        "id": "RM-WU-GrenadeLauncher-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher damage improved",
+            "Damage (cyborg): 923/615/0 \u2197 1043/695/0",
+            "Damage (tank/structure): 1128/752/0 \u2197 1274/849/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-GrenadeLauncher-DMG5": {
+        "id": "RM-WU-GrenadeLauncher-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher damage improved",
+            "Damage (cyborg): 1043/695/0 \u2197 1199/799/0",
+            "Damage (tank/structure): 1274/849/0 \u2197 1466/977/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-GrenadeLauncher-DMG6": {
+        "id": "RM-WU-GrenadeLauncher-DMG6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher damage improved",
+            "Damage (cyborg): 1199/799/0 \u2197 1391/927/0",
+            "Damage (tank/structure): 1466/977/0 \u2197 1700/1133/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-GrenadeLauncher-DMG7": {
+        "id": "RM-WU-GrenadeLauncher-DMG7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher damage improved",
+            "Damage (cyborg): 1391/927/0 \u2197 1641/1094/0",
+            "Damage (tank/structure): 1700/1133/0 \u2197 2006/1337/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-GrenadeLauncher-ROF1": {
+        "id": "RM-WU-GrenadeLauncher-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher rate of fire (ROF) improved",
+            "ROF per min (cyborg): 4.0 \u2197 4.4",
+            "ROF per min (tank/structure): 4.0 \u2197 4.4",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-GrenadeLauncher-ROF2": {
+        "id": "RM-WU-GrenadeLauncher-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher rate of fire (ROF) improved",
+            "ROF per min (cyborg): 4.4 \u2197 4.8",
+            "ROF per min (tank/structure): 4.4 \u2197 4.8",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-GrenadeLauncher-ROF3": {
+        "id": "RM-WU-GrenadeLauncher-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher rate of fire (ROF) improved",
+            "ROF per min (cyborg): 4.8 \u2197 5.2",
+            "ROF per min (tank/structure): 4.8 \u2197 5.2",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-GrenadeLauncher-ROF4": {
+        "id": "RM-WU-GrenadeLauncher-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher rate of fire (ROF) improved",
+            "ROF per min (cyborg): 5.2 \u2197 5.6",
+            "ROF per min (tank/structure): 5.2 \u2197 5.6",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-GrenadeLauncher-ROF5": {
+        "id": "RM-WU-GrenadeLauncher-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Grenade Launcher rate of fire (ROF) improved",
+            "ROF per min (cyborg): 5.6 \u2197 5.9",
+            "ROF per min (tank/structure): 5.6 \u2197 5.9",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-GrenadeLauncher-SPE1": {
+        "id": "RM-WU-GrenadeLauncher-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Grenade launcher explosions affect larger area",
+            "Cyborgs only: Splash radius: 256 \u2197 288",
+            "Tanks/structure only: Splash radius: 256 \u2197 288"
+        ]
+    },
+    "RM-WU-GrenadeLauncher-SPE2": {
+        "id": "RM-WU-GrenadeLauncher-SPE2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Grenade launcher explosions affect larger area",
+            "Cyborgs only: Splash radius: 288 \u2197 320",
+            "Tanks/structure only: Splash radius: 288 \u2197 320"
+        ]
+    },
+    "RM-WU-Howitzer-ACC1": {
+        "id": "RM-WU-Howitzer-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer accuracy improved",
+            "Accuracy: 40 % \u2197 44 %",
+            ""
+        ]
+    },
+    "RM-WU-Howitzer-ACC2": {
+        "id": "RM-WU-Howitzer-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer accuracy improved",
+            "Accuracy: 44 % \u2197 48 %",
+            ""
+        ]
+    },
+    "RM-WU-Howitzer-ACC3": {
+        "id": "RM-WU-Howitzer-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer accuracy improved",
+            "Accuracy: 48 % \u2197 54 %",
+            ""
+        ]
+    },
+    "RM-WU-Howitzer-ACC4": {
+        "id": "RM-WU-Howitzer-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer accuracy improved",
+            "Accuracy: 54 % \u2197 61 %",
+            ""
+        ]
+    },
+    "RM-WU-Howitzer-ACC5": {
+        "id": "RM-WU-Howitzer-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer accuracy improved",
+            "Accuracy: 61 % \u2197 71 %",
+            ""
+        ]
+    },
+    "RM-WU-Howitzer-DMG1": {
+        "id": "RM-WU-Howitzer-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer damage improved",
+            "Damage: 1000/600/0 \u2197 1100/660/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Howitzer-DMG2": {
+        "id": "RM-WU-Howitzer-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer damage improved",
+            "Damage: 1100/660/0 \u2197 1221/732/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Howitzer-DMG3": {
+        "id": "RM-WU-Howitzer-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer damage improved",
+            "Damage: 1221/732/0 \u2197 1367/820/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Howitzer-DMG4": {
+        "id": "RM-WU-Howitzer-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer damage improved",
+            "Damage: 1367/820/0 \u2197 1545/927/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Howitzer-DMG5": {
+        "id": "RM-WU-Howitzer-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer damage improved",
+            "Damage: 1545/927/0 \u2197 1777/1066/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Howitzer-DMG6": {
+        "id": "RM-WU-Howitzer-DMG6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer damage improved",
+            "Damage: 1777/1066/0 \u2197 2061/1236/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Howitzer-DMG7": {
+        "id": "RM-WU-Howitzer-DMG7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer damage improved",
+            "Damage: 2061/1236/0 \u2197 2432/1459/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Howitzer-ROF1": {
+        "id": "RM-WU-Howitzer-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer rate of fire (ROF) improved",
+            "ROF per min: 3.0 \u2197 3.3",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Howitzer-ROF2": {
+        "id": "RM-WU-Howitzer-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer rate of fire (ROF) improved",
+            "ROF per min: 3.3 \u2197 3.6",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Howitzer-ROF3": {
+        "id": "RM-WU-Howitzer-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer rate of fire (ROF) improved",
+            "ROF per min: 3.6 \u2197 3.9",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Howitzer-ROF4": {
+        "id": "RM-WU-Howitzer-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer rate of fire (ROF) improved",
+            "ROF per min: 3.9 \u2197 4.2",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Howitzer-ROF5": {
+        "id": "RM-WU-Howitzer-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Howitzer rate of fire (ROF) improved",
+            "ROF per min: 4.2 \u2197 4.5",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Howitzer-SPE1": {
+        "id": "RM-WU-Howitzer-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Howitzer range increased",
+            "Range: 3200 \u2197 3328",
+            ""
+        ]
+    },
+    "RM-WU-Howitzer-SPE2": {
+        "id": "RM-WU-Howitzer-SPE2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Howitzer range increased",
+            "Range: 3328 \u2197 3456",
+            ""
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-ACC1": {
+        "id": "RM-WU-HowitzerIncendiary-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer accuracy improved",
+            "Accuracy: 40 % \u2197 44 %",
+            ""
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-ACC2": {
+        "id": "RM-WU-HowitzerIncendiary-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer accuracy improved",
+            "Accuracy: 44 % \u2197 48 %",
+            ""
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-ACC3": {
+        "id": "RM-WU-HowitzerIncendiary-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer accuracy improved",
+            "Accuracy: 48 % \u2197 54 %",
+            ""
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-ACC4": {
+        "id": "RM-WU-HowitzerIncendiary-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer accuracy improved",
+            "Accuracy: 54 % \u2197 61 %",
+            ""
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-ACC5": {
+        "id": "RM-WU-HowitzerIncendiary-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer accuracy improved",
+            "Accuracy: 61 % \u2197 71 %",
+            ""
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-DMG1": {
+        "id": "RM-WU-HowitzerIncendiary-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer damage improved",
+            "Damage: 200/0/200 \u2197 220/0/220",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-DMG2": {
+        "id": "RM-WU-HowitzerIncendiary-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer damage improved",
+            "Damage: 220/0/220 \u2197 244/0/244",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-DMG3": {
+        "id": "RM-WU-HowitzerIncendiary-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer damage improved",
+            "Damage: 244/0/244 \u2197 273/0/273",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-DMG4": {
+        "id": "RM-WU-HowitzerIncendiary-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer damage improved",
+            "Damage: 273/0/273 \u2197 309/0/309",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-DMG5": {
+        "id": "RM-WU-HowitzerIncendiary-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer damage improved",
+            "Damage: 309/0/309 \u2197 355/0/355",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-DMG6": {
+        "id": "RM-WU-HowitzerIncendiary-DMG6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer damage improved",
+            "Damage: 355/0/355 \u2197 412/0/412",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-DMG7": {
+        "id": "RM-WU-HowitzerIncendiary-DMG7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer damage improved",
+            "Damage: 412/0/412 \u2197 486/0/486",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-ROF1": {
+        "id": "RM-WU-HowitzerIncendiary-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer rate of fire (ROF) improved",
+            "ROF per min: 3.0 \u2197 3.3",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-ROF2": {
+        "id": "RM-WU-HowitzerIncendiary-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer rate of fire (ROF) improved",
+            "ROF per min: 3.3 \u2197 3.6",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-ROF3": {
+        "id": "RM-WU-HowitzerIncendiary-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer rate of fire (ROF) improved",
+            "ROF per min: 3.6 \u2197 3.9",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-ROF4": {
+        "id": "RM-WU-HowitzerIncendiary-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer rate of fire (ROF) improved",
+            "ROF per min: 3.9 \u2197 4.2",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-ROF5": {
+        "id": "RM-WU-HowitzerIncendiary-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Incendiary Howitzer rate of fire (ROF) improved",
+            "ROF per min: 4.2 \u2197 4.5",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-SPE1": {
+        "id": "RM-WU-HowitzerIncendiary-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Incendiary howitzer range increased",
+            "Range: 3200 \u2197 3328",
+            ""
+        ]
+    },
+    "RM-WU-HowitzerIncendiary-SPE2": {
+        "id": "RM-WU-HowitzerIncendiary-SPE2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Incendiary howitzer burning affects larger area",
+            "Incendiary radius: 192 \u2197 256",
+            ""
+        ]
+    },
+    "RM-WU-Lancer-ACC1": {
+        "id": "RM-WU-Lancer-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer accuracy improved",
+            "Accuracy (cyborg): 70 % \u2197 77 %",
+            "Accuracy (VTOL): 70 % \u2197 77 %"
+        ]
+    },
+    "RM-WU-Lancer-ACC2": {
+        "id": "RM-WU-Lancer-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer accuracy improved",
+            "Accuracy (cyborg): 77 % \u2197 85 %",
+            "Accuracy (VTOL): 77 % \u2197 85 %"
+        ]
+    },
+    "RM-WU-Lancer-ACC3": {
+        "id": "RM-WU-Lancer-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer accuracy improved",
+            "Accuracy (cyborg): 85 % \u2197 95 %",
+            "Accuracy (VTOL): 85 % \u2197 95 %"
+        ]
+    },
+    "RM-WU-Lancer-ACC4": {
+        "id": "RM-WU-Lancer-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer accuracy improved",
+            "Accuracy (cyborg): 95 % \u2197 108 %",
+            "Accuracy (VTOL): 95 % \u2197 108 %"
+        ]
+    },
+    "RM-WU-Lancer-ACC5": {
+        "id": "RM-WU-Lancer-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer accuracy improved",
+            "Accuracy (cyborg): 108 % \u2197 124 %",
+            "Accuracy (VTOL): 108 % \u2197 124 %"
+        ]
+    },
+    "RM-WU-Lancer-ACC6": {
+        "id": "RM-WU-Lancer-ACC6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer accuracy improved",
+            "Accuracy (cyborg): 124 % \u2197 144 %",
+            "Accuracy (VTOL): 124 % \u2197 144 %"
+        ]
+    },
+    "RM-WU-Lancer-ACC7": {
+        "id": "RM-WU-Lancer-ACC7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer accuracy improved",
+            "Accuracy (cyborg): 144 % \u2197 170 %",
+            "Accuracy (VTOL): 144 % \u2197 170 %"
+        ]
+    },
+    "RM-WU-Lancer-DMG1": {
+        "id": "RM-WU-Lancer-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer damage improved",
+            "Damage (cyborg): 500/0/0 \u2197 550/0/0",
+            "Damage (VTOL): 600/0/0 \u2197 660/0/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Lancer-DMG2": {
+        "id": "RM-WU-Lancer-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer damage improved",
+            "Damage (cyborg): 550/0/0 \u2197 610/0/0",
+            "Damage (VTOL): 660/0/0 \u2197 732/0/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Lancer-DMG3": {
+        "id": "RM-WU-Lancer-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer damage improved",
+            "Damage (cyborg): 610/0/0 \u2197 683/0/0",
+            "Damage (VTOL): 732/0/0 \u2197 820/0/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Lancer-DMG4": {
+        "id": "RM-WU-Lancer-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer damage improved",
+            "Damage (cyborg): 683/0/0 \u2197 772/0/0",
+            "Damage (VTOL): 820/0/0 \u2197 927/0/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Lancer-DMG5": {
+        "id": "RM-WU-Lancer-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer damage improved",
+            "Damage (cyborg): 772/0/0 \u2197 888/0/0",
+            "Damage (VTOL): 927/0/0 \u2197 1066/0/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Lancer-ROF1": {
+        "id": "RM-WU-Lancer-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer rate of fire (ROF) improved",
+            "ROF per min (cyborg): 8.6 \u2197 9.4",
+            "ROF per min (VTOL): 200.0 \u2197 219.8",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Lancer-ROF2": {
+        "id": "RM-WU-Lancer-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer rate of fire (ROF) improved",
+            "ROF per min (cyborg): 9.4 \u2197 10.2",
+            "ROF per min (VTOL): 219.8 \u2197 238.9",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Lancer-ROF3": {
+        "id": "RM-WU-Lancer-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer rate of fire (ROF) improved",
+            "ROF per min (cyborg): 10.2 \u2197 11.1",
+            "ROF per min (VTOL): 238.9 \u2197 259.7",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Lancer-ROF4": {
+        "id": "RM-WU-Lancer-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer rate of fire (ROF) improved",
+            "ROF per min (cyborg): 11.1 \u2197 12.0",
+            "ROF per min (VTOL): 259.7 \u2197 279.2",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Lancer-ROF5": {
+        "id": "RM-WU-Lancer-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Lancer rate of fire (ROF) improved",
+            "ROF per min (cyborg): 12.0 \u2197 12.7",
+            "ROF per min (VTOL): 279.2 \u2197 297.0",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Lancer-SPE1": {
+        "id": "RM-WU-Lancer-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Lancer rockets usable against ground and aerial targets",
+            "",
+            ""
+        ]
+    },
+    "RM-WU-Laser-ACC1": {
+        "id": "RM-WU-Laser-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser accuracy improved",
+            "Accuracy: 95 % \u2197 104 %",
+            ""
+        ]
+    },
+    "RM-WU-Laser-ACC2": {
+        "id": "RM-WU-Laser-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser accuracy improved",
+            "Accuracy: 104 % \u2197 115 %",
+            ""
+        ]
+    },
+    "RM-WU-Laser-ACC3": {
+        "id": "RM-WU-Laser-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser accuracy improved",
+            "Accuracy: 115 % \u2197 129 %",
+            ""
+        ]
+    },
+    "RM-WU-Laser-ACC4": {
+        "id": "RM-WU-Laser-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser accuracy improved",
+            "Accuracy: 129 % \u2197 146 %",
+            ""
+        ]
+    },
+    "RM-WU-Laser-ACC5": {
+        "id": "RM-WU-Laser-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser accuracy improved",
+            "Accuracy: 146 % \u2197 168 %",
+            ""
+        ]
+    },
+    "RM-WU-Laser-DMG1": {
+        "id": "RM-WU-Laser-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser damage improved",
+            "Damage: 700/0/250 \u2197 770/0/275",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Laser-DMG2": {
+        "id": "RM-WU-Laser-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser damage improved",
+            "Damage: 770/0/275 \u2197 854/0/305",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Laser-DMG3": {
+        "id": "RM-WU-Laser-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser damage improved",
+            "Damage: 854/0/305 \u2197 957/0/341",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Laser-DMG4": {
+        "id": "RM-WU-Laser-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser damage improved",
+            "Damage: 957/0/341 \u2197 1081/0/386",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Laser-DMG5": {
+        "id": "RM-WU-Laser-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser damage improved",
+            "Damage: 1081/0/386 \u2197 1243/0/444",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Laser-DMG6": {
+        "id": "RM-WU-Laser-DMG6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser damage improved",
+            "Damage: 1243/0/444 \u2197 1442/0/515",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Laser-DMG7": {
+        "id": "RM-WU-Laser-DMG7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser damage improved",
+            "Damage: 1442/0/515 \u2197 1702/0/608",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Laser-ROF1": {
+        "id": "RM-WU-Laser-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser rate of fire (ROF) improved",
+            "ROF per min: 6.0 \u2197 6.6",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Laser-ROF2": {
+        "id": "RM-WU-Laser-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser rate of fire (ROF) improved",
+            "ROF per min: 6.6 \u2197 7.2",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Laser-ROF3": {
+        "id": "RM-WU-Laser-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser rate of fire (ROF) improved",
+            "ROF per min: 7.2 \u2197 7.8",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Laser-ROF4": {
+        "id": "RM-WU-Laser-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser rate of fire (ROF) improved",
+            "ROF per min: 7.8 \u2197 8.4",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Laser-ROF5": {
+        "id": "RM-WU-Laser-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Laser rate of fire (ROF) improved",
+            "ROF per min: 8.4 \u2197 8.9",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Laser-SPE1": {
+        "id": "RM-WU-Laser-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Laser beams penetrate targets",
+            "One shot may hit several targets in a row",
+            ""
+        ]
+    },
+    "RM-WU-Machinegun-ACC1": {
+        "id": "RM-WU-Machinegun-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun accuracy improved",
+            "Accuracy (cyborg): 60 % \u2197 66 %",
+            "Accuracy (structure): 70 % \u2197 77 %"
+        ]
+    },
+    "RM-WU-Machinegun-ACC2": {
+        "id": "RM-WU-Machinegun-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun accuracy improved",
+            "Accuracy (cyborg): 66 % \u2197 73 %",
+            "Accuracy (structure): 77 % \u2197 85 %"
+        ]
+    },
+    "RM-WU-Machinegun-ACC3": {
+        "id": "RM-WU-Machinegun-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun accuracy improved",
+            "Accuracy (cyborg): 73 % \u2197 82 %",
+            "Accuracy (structure): 85 % \u2197 95 %"
+        ]
+    },
+    "RM-WU-Machinegun-ACC4": {
+        "id": "RM-WU-Machinegun-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun accuracy improved",
+            "Accuracy (cyborg): 82 % \u2197 92 %",
+            "Accuracy (structure): 95 % \u2197 108 %"
+        ]
+    },
+    "RM-WU-Machinegun-ACC5": {
+        "id": "RM-WU-Machinegun-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun accuracy improved",
+            "Accuracy (cyborg): 92 % \u2197 106 %",
+            "Accuracy (structure): 108 % \u2197 124 %"
+        ]
+    },
+    "RM-WU-Machinegun-DMG1": {
+        "id": "RM-WU-Machinegun-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun damage improved",
+            "Damage (cyborg): 350/0/0 \u2197 385/0/0",
+            "Damage (structure): 525/0/0 \u2197 577/0/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Machinegun-DMG2": {
+        "id": "RM-WU-Machinegun-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun damage improved",
+            "Damage (cyborg): 385/0/0 \u2197 427/0/0",
+            "Damage (structure): 577/0/0 \u2197 641/0/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Machinegun-DMG3": {
+        "id": "RM-WU-Machinegun-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun damage improved",
+            "Damage (cyborg): 427/0/0 \u2197 478/0/0",
+            "Damage (structure): 641/0/0 \u2197 717/0/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Machinegun-DMG4": {
+        "id": "RM-WU-Machinegun-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun damage improved",
+            "Damage (cyborg): 478/0/0 \u2197 540/0/0",
+            "Damage (structure): 717/0/0 \u2197 811/0/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Machinegun-DMG5": {
+        "id": "RM-WU-Machinegun-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun damage improved",
+            "Damage (cyborg): 540/0/0 \u2197 621/0/0",
+            "Damage (structure): 811/0/0 \u2197 932/0/0",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Machinegun-ROF1": {
+        "id": "RM-WU-Machinegun-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun rate of fire (ROF) improved",
+            "ROF per min (cyborg): 40.0 \u2197 44.0",
+            "ROF per min (structure): 40.0 \u2197 44.0",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Machinegun-ROF2": {
+        "id": "RM-WU-Machinegun-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun rate of fire (ROF) improved",
+            "ROF per min (cyborg): 44.0 \u2197 47.8",
+            "ROF per min (structure): 44.0 \u2197 47.8",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Machinegun-ROF3": {
+        "id": "RM-WU-Machinegun-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun rate of fire (ROF) improved",
+            "ROF per min (cyborg): 47.8 \u2197 51.9",
+            "ROF per min (structure): 47.8 \u2197 51.9",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Machinegun-ROF4": {
+        "id": "RM-WU-Machinegun-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun rate of fire (ROF) improved",
+            "ROF per min (cyborg): 51.9 \u2197 55.8",
+            "ROF per min (structure): 51.9 \u2197 55.8",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Machinegun-ROF5": {
+        "id": "RM-WU-Machinegun-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun rate of fire (ROF) improved",
+            "ROF per min (cyborg): 55.8 \u2197 59.4",
+            "ROF per min (structure): 55.8 \u2197 59.4",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Machinegun-ROF6": {
+        "id": "RM-WU-Machinegun-ROF6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun rate of fire (ROF) improved",
+            "ROF per min (cyborg): 59.4 \u2197 63.2",
+            "ROF per min (structure): 59.4 \u2197 63.2",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Machinegun-ROF7": {
+        "id": "RM-WU-Machinegun-ROF7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Machinegun rate of fire (ROF) improved",
+            "ROF per min (cyborg): 63.2 \u2197 66.5",
+            "ROF per min (structure): 63.2 \u2197 66.5",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Machinegun-SPE1": {
+        "id": "RM-WU-Machinegun-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Machine gun bullets fired at higher velocity",
+            "Cyborgs only: Flight speed: 2500 \u2197 2750",
+            "Structures only: Flight speed: 2500 \u2197 2750"
+        ]
+    },
+    "RM-WU-Machinegun-SPE2": {
+        "id": "RM-WU-Machinegun-SPE2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Machine gun barrel can be raised/lowered further",
+            "Cyborgs only: 60\u00b0 \u2197 65\u00b0/\u221230\u00b0 \u2198 \u221235\u00b0",
+            "Structures only: 60\u00b0 \u2197 65\u00b0/\u221230\u00b0 \u2198 \u221235\u00b0"
+        ]
+    },
+    "RM-WU-Railgun-ACC1": {
+        "id": "RM-WU-Railgun-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun accuracy improved",
+            "Accuracy: 80 % \u2197 88 %",
+            ""
+        ]
+    },
+    "RM-WU-Railgun-ACC2": {
+        "id": "RM-WU-Railgun-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun accuracy improved",
+            "Accuracy: 88 % \u2197 97 %",
+            ""
+        ]
+    },
+    "RM-WU-Railgun-ACC3": {
+        "id": "RM-WU-Railgun-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun accuracy improved",
+            "Accuracy: 97 % \u2197 109 %",
+            ""
+        ]
+    },
+    "RM-WU-Railgun-ACC4": {
+        "id": "RM-WU-Railgun-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun accuracy improved",
+            "Accuracy: 109 % \u2197 123 %",
+            ""
+        ]
+    },
+    "RM-WU-Railgun-ACC5": {
+        "id": "RM-WU-Railgun-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun accuracy improved",
+            "Accuracy: 123 % \u2197 142 %",
+            ""
+        ]
+    },
+    "RM-WU-Railgun-DMG1": {
+        "id": "RM-WU-Railgun-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun damage improved",
+            "Damage: 1337/0/0 \u2197 1470/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Railgun-DMG2": {
+        "id": "RM-WU-Railgun-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun damage improved",
+            "Damage: 1470/0/0 \u2197 1632/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Railgun-DMG3": {
+        "id": "RM-WU-Railgun-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun damage improved",
+            "Damage: 1632/0/0 \u2197 1828/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Railgun-DMG4": {
+        "id": "RM-WU-Railgun-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun damage improved",
+            "Damage: 1828/0/0 \u2197 2066/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Railgun-DMG5": {
+        "id": "RM-WU-Railgun-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun damage improved",
+            "Damage: 2066/0/0 \u2197 2375/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Railgun-DMG6": {
+        "id": "RM-WU-Railgun-DMG6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun damage improved",
+            "Damage: 2375/0/0 \u2197 2756/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Railgun-DMG7": {
+        "id": "RM-WU-Railgun-DMG7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun damage improved",
+            "Damage: 2756/0/0 \u2197 3252/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-Railgun-ROF1": {
+        "id": "RM-WU-Railgun-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun rate of fire (ROF) improved",
+            "ROF per min: 4.0 \u2197 4.4",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Railgun-ROF2": {
+        "id": "RM-WU-Railgun-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun rate of fire (ROF) improved",
+            "ROF per min: 4.4 \u2197 4.8",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Railgun-ROF3": {
+        "id": "RM-WU-Railgun-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun rate of fire (ROF) improved",
+            "ROF per min: 4.8 \u2197 5.2",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Railgun-ROF4": {
+        "id": "RM-WU-Railgun-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun rate of fire (ROF) improved",
+            "ROF per min: 5.2 \u2197 5.6",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Railgun-ROF5": {
+        "id": "RM-WU-Railgun-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Railgun rate of fire (ROF) improved",
+            "ROF per min: 5.6 \u2197 5.9",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-Railgun-SPE1": {
+        "id": "RM-WU-Railgun-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Railgun projectiles penetrate targets",
+            "One shot may hit several targets in a row",
+            ""
+        ]
+    },
+    "RM-WU-RocketBattery-ACC1": {
+        "id": "RM-WU-RocketBattery-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery accuracy improved",
+            "Accuracy: 70 % \u2197 77 %",
+            ""
+        ]
+    },
+    "RM-WU-RocketBattery-ACC2": {
+        "id": "RM-WU-RocketBattery-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery accuracy improved",
+            "Accuracy: 77 % \u2197 85 %",
+            ""
+        ]
+    },
+    "RM-WU-RocketBattery-ACC3": {
+        "id": "RM-WU-RocketBattery-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery accuracy improved",
+            "Accuracy: 85 % \u2197 95 %",
+            ""
+        ]
+    },
+    "RM-WU-RocketBattery-ACC4": {
+        "id": "RM-WU-RocketBattery-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery accuracy improved",
+            "Accuracy: 95 % \u2197 108 %",
+            ""
+        ]
+    },
+    "RM-WU-RocketBattery-ACC5": {
+        "id": "RM-WU-RocketBattery-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery accuracy improved",
+            "Accuracy: 108 % \u2197 124 %",
+            ""
+        ]
+    },
+    "RM-WU-RocketBattery-ACC6": {
+        "id": "RM-WU-RocketBattery-ACC6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery accuracy improved",
+            "Accuracy: 124 % \u2197 144 %",
+            ""
+        ]
+    },
+    "RM-WU-RocketBattery-ACC7": {
+        "id": "RM-WU-RocketBattery-ACC7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery accuracy improved",
+            "Accuracy: 144 % \u2197 170 %",
+            ""
+        ]
+    },
+    "RM-WU-RocketBattery-DMG1": {
+        "id": "RM-WU-RocketBattery-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery damage improved",
+            "Damage: 800/0/0 \u2197 880/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-RocketBattery-DMG2": {
+        "id": "RM-WU-RocketBattery-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery damage improved",
+            "Damage: 880/0/0 \u2197 976/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-RocketBattery-DMG3": {
+        "id": "RM-WU-RocketBattery-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery damage improved",
+            "Damage: 976/0/0 \u2197 1094/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-RocketBattery-DMG4": {
+        "id": "RM-WU-RocketBattery-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery damage improved",
+            "Damage: 1094/0/0 \u2197 1236/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-RocketBattery-DMG5": {
+        "id": "RM-WU-RocketBattery-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery damage improved",
+            "Damage: 1236/0/0 \u2197 1421/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-RocketBattery-ROF1": {
+        "id": "RM-WU-RocketBattery-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 72.0/5.5 \u2197 80.7/5.6",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-RocketBattery-ROF2": {
+        "id": "RM-WU-RocketBattery-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 80.7/5.6 \u2197 89.5/5.6",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-RocketBattery-ROF3": {
+        "id": "RM-WU-RocketBattery-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 89.5/5.6 \u2197 99.4/5.7",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-RocketBattery-ROF4": {
+        "id": "RM-WU-RocketBattery-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 99.4/5.7 \u2197 109.2/5.7",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-RocketBattery-ROF5": {
+        "id": "RM-WU-RocketBattery-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Rocket Battery rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 109.2/5.7 \u2197 118.4/5.7",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-RocketBattery-SPE1": {
+        "id": "RM-WU-RocketBattery-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Rocket Battery range increased",
+            "Range: 3840 \u2197 4000",
+            ""
+        ]
+    },
+    "RM-WU-RocketBattery-SPE2": {
+        "id": "RM-WU-RocketBattery-SPE2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Rocket Battery is now homing",
+            "Rockets will follow the target",
+            ""
+        ]
+    },
+    "RM-WU-ScourgeMissile-ACC1": {
+        "id": "RM-WU-ScourgeMissile-ACC1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile accuracy improved",
+            "Accuracy: 70 % \u2197 77 %",
+            ""
+        ]
+    },
+    "RM-WU-ScourgeMissile-ACC2": {
+        "id": "RM-WU-ScourgeMissile-ACC2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile accuracy improved",
+            "Accuracy: 77 % \u2197 85 %",
+            ""
+        ]
+    },
+    "RM-WU-ScourgeMissile-ACC3": {
+        "id": "RM-WU-ScourgeMissile-ACC3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile accuracy improved",
+            "Accuracy: 85 % \u2197 95 %",
+            ""
+        ]
+    },
+    "RM-WU-ScourgeMissile-ACC4": {
+        "id": "RM-WU-ScourgeMissile-ACC4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile accuracy improved",
+            "Accuracy: 95 % \u2197 108 %",
+            ""
+        ]
+    },
+    "RM-WU-ScourgeMissile-ACC5": {
+        "id": "RM-WU-ScourgeMissile-ACC5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile accuracy improved",
+            "Accuracy: 108 % \u2197 124 %",
+            ""
+        ]
+    },
+    "RM-WU-ScourgeMissile-ACC6": {
+        "id": "RM-WU-ScourgeMissile-ACC6",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile accuracy improved",
+            "Accuracy: 124 % \u2197 144 %",
+            ""
+        ]
+    },
+    "RM-WU-ScourgeMissile-ACC7": {
+        "id": "RM-WU-ScourgeMissile-ACC7",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile accuracy improved",
+            "Accuracy: 144 % \u2197 170 %",
+            ""
+        ]
+    },
+    "RM-WU-ScourgeMissile-DMG1": {
+        "id": "RM-WU-ScourgeMissile-DMG1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile damage improved",
+            "Damage: 500/0/0 \u2197 550/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-ScourgeMissile-DMG2": {
+        "id": "RM-WU-ScourgeMissile-DMG2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile damage improved",
+            "Damage: 550/0/0 \u2197 610/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-ScourgeMissile-DMG3": {
+        "id": "RM-WU-ScourgeMissile-DMG3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile damage improved",
+            "Damage: 610/0/0 \u2197 683/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-ScourgeMissile-DMG4": {
+        "id": "RM-WU-ScourgeMissile-DMG4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile damage improved",
+            "Damage: 683/0/0 \u2197 772/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-ScourgeMissile-DMG5": {
+        "id": "RM-WU-ScourgeMissile-DMG5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile damage improved",
+            "Damage: 772/0/0 \u2197 888/0/0",
+            "",
+            "All applicable damage types (impact, splash, burn) affected"
+        ]
+    },
+    "RM-WU-ScourgeMissile-ROF1": {
+        "id": "RM-WU-ScourgeMissile-ROF1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 240.0/9.6 \u2197 292.7/9.7",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-ScourgeMissile-ROF2": {
+        "id": "RM-WU-ScourgeMissile-ROF2",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 292.7/9.7 \u2197 355.9/9.7",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-ScourgeMissile-ROF3": {
+        "id": "RM-WU-ScourgeMissile-ROF3",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 355.9/9.7 \u2197 444.1/9.8",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-ScourgeMissile-ROF4": {
+        "id": "RM-WU-ScourgeMissile-ROF4",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 444.1/9.8 \u2197 554.8/9.8",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-ScourgeMissile-ROF5": {
+        "id": "RM-WU-ScourgeMissile-ROF5",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Scourge Missile rate of fire (ROF) improved",
+            "Salvo/Cycle ROF per min: 554.8/9.8 \u2197 692.3/9.9",
+            "",
+            "Note: ROFs differ from game-calculated ones. See documentation."
+        ]
+    },
+    "RM-WU-ScourgeMissile-SPE1": {
+        "id": "RM-WU-ScourgeMissile-SPE1",
+        "imdName": "MICAPSUL.pie",
+        "sequenceName": "res_weapons.ogg",
+        "text": [
+            "Special upgrade unlocked",
+            "Scourge Missile is now homing",
+            "Missiles will follow the target",
+            ""
+        ]
+    }
+}
