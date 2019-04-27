@@ -1168,7 +1168,7 @@ weaponnames['Autocannon'] = 'FK-FF-Autocannon-Tank'
 weaponnames['BombCluster'] = 'FK-SPL-BombCluster'
 weaponnames['BombHeavy'] = 'FK-SF-BombHeavy'
 weaponnames['BombThermite'] = 'FK-HOT-BombThermite'
-# FK-SF-Cannon-Cyborg vs. FK-SF-Cannon-Structure vs. FK-SF-Cannon-Structure
+# FK-SF-Cannon-Cyborg vs. FK-SF-Cannon-Structure
 weaponnames['Cannon'] = 'FK-SF-Cannon-Cyborg'
 weaponnames['Flamethrower'] = 'FK-HOT-Flamethrower'
 # FK-SPL-GrenadeLauncher-Cyborg vs. FK-SPL-GrenadeLauncher-TankStructure
@@ -1202,37 +1202,94 @@ for succession in successions:
 			for oldtopic in range(1, int(topic)):
 				oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 			newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
-			upgradeinfo = ['Accuracy: {old:d} % ↗ {new:d} %'.format(
+			upgradeinfo = ['Accuracy{alt}: {old:d} % ↗ {new:d} %'.format(
+					alt = '{alt}',
 					old = int(oldvalue),
 					new = int(newvalue)
 				)
 			]
 			if internalweaponname == 'FK-FF-Autocannon-Tank':
-				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-					unit = 'tank',
-					weapon = weaponname)
+				upgradeinfo[0] = upgradeinfo[0].format(alt = " (tank)")
+				internalweaponname = 'FK-FF-Autocannon-VTOL'
+				# Generate Upgrade information
+				newvalue = -1
+				oldvalue = int(weapons[internalweaponname]['longHit'])
+				# Cycle over upgrades for oldvalue
+				for oldtopic in range(1, int(topic)):
+					oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+				newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+				upgradeinfo.append('Accuracy{alt}: {old:d} % ↗ {new:d} %'.format(
+						alt = ' (VTOL)',
+						old = int(oldvalue),
+						new = int(newvalue)
+					)
 				)
 			elif internalweaponname == 'FK-SF-Cannon-Cyborg':
-				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-					unit = 'cyborg',
-					weapon = weaponname)
+				upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+				internalweaponname = 'FK-SF-Cannon-Structure'
+				# Generate Upgrade information
+				newvalue = -1
+				oldvalue = int(weapons[internalweaponname]['longHit'])
+				# Cycle over upgrades for oldvalue
+				for oldtopic in range(1, int(topic)):
+					oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+				newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+				upgradeinfo.append('Accuracy{alt}: {old:d} % ↗ {new:d} %'.format(
+						alt = ' (structure)',
+						old = int(oldvalue),
+						new = int(newvalue)
+					)
 				)
 			elif internalweaponname == 'FK-SPL-GrenadeLauncher-Cyborg':
-				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-					unit = 'cyborg',
-					weapon = weaponname)
+				upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+				internalweaponname = 'FK-SPL-GrenadeLauncher-TankStructure'
+				# Generate Upgrade information
+				newvalue = -1
+				oldvalue = int(weapons[internalweaponname]['longHit'])
+				# Cycle over upgrades for oldvalue
+				for oldtopic in range(1, int(topic)):
+					oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+				newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+				upgradeinfo.append('Accuracy{alt}: {old:d} % ↗ {new:d} %'.format(
+						alt = ' (tank/structure)',
+						old = int(oldvalue),
+						new = int(newvalue)
+					)
 				)
 			elif internalweaponname == 'FK-MIS-Lancer-Cyborg':
-				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-					unit = 'cyborg',
-					weapon = weaponname)
+				upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+				internalweaponname = 'FK-MIS-Lancer-VTOL'
+				# Generate Upgrade information
+				newvalue = -1
+				oldvalue = int(weapons[internalweaponname]['longHit'])
+				# Cycle over upgrades for oldvalue
+				for oldtopic in range(1, int(topic)):
+					oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+				newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+				upgradeinfo.append('Accuracy{alt}: {old:d} % ↗ {new:d} %'.format(
+						alt = ' (VTOL)',
+						old = int(oldvalue),
+						new = int(newvalue)
+					)
 				)
 			elif internalweaponname == 'FK-FF-Machinegun-Cyborg':
-				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-					unit = 'cyborg',
-					weapon = weaponname)
+				upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+				internalweaponname = 'FK-FF-Machinegun-Structure'
+				# Generate Upgrade information
+				newvalue = -1
+				oldvalue = int(weapons[internalweaponname]['longHit'])
+				# Cycle over upgrades for oldvalue
+				for oldtopic in range(1, int(topic)):
+					oldvalue = oldvalue * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+				newvalue = oldvalue * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+				upgradeinfo.append('Accuracy{alt}: {old:d} % ↗ {new:d} %'.format(
+						alt = ' (structure)',
+						old = int(oldvalue),
+						new = int(newvalue)
+					)
 				)
 			else:
+				upgradeinfo[0] = upgradeinfo[0].format(alt = "")
 				upgradeinfo.append('')
 			successionmsgs[resmsgname] = [
 				'{} accuracy improved'.format(weaponname),
@@ -1455,7 +1512,7 @@ for succession in successions:
 		#
 		# Some weapons come in different flavours, e. g. for cyborgs, tanks, structures, VTOLs
 		# 	FK-FF-Autocannon-Tank vs. FK-FF-Autocannon-VTOL
-		# 	FK-SF-Cannon-Cyborg vs. FK-SF-Cannon-Structure vs. FK-SF-Cannon-Structure
+		# 	FK-SF-Cannon-Cyborg vs. FK-SF-Cannon-Structure
 		# 	FK-SPL-GrenadeLauncher-Cyborg vs. FK-SPL-GrenadeLauncher-TankStructure
 		# 	FK-MIS-Lancer-Cyborg vs. FK-MIS-Lancer-VTOL
 		# 	FK-FF-Machinegun-Cyborg vs. FK-FF-Machinegun-Structure
