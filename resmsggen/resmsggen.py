@@ -1648,9 +1648,10 @@ for succession in successions:
 			# Get internal weapon name
 			internalweaponname = weaponnames[successionparts[2]]
 			# Generate Upgrade information
+			keys = ['firePause', 'numRounds', 'reloadTime']
+			upgradeinfo = []
 			newvalue = {}
 			oldvalue = {}
-			keys = ['firePause', 'numRounds', 'reloadTime']
 			for key in keys:
 				newvalue[key] = -1
 				if key in weapons[internalweaponname]:
@@ -1712,48 +1713,379 @@ for succession in successions:
 							)
 						) * conv['0.1 s per min']
 					)
-				upgradeinfo = [
-					'Salvo/Cycle ROF: {salvoold:.1f}/{completeold:.1f} per min ↗ {salvonew:.1f}/{completenew:.1f} per min'.format(
+				upgradeinfo.append(
+					'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
+						alt = '{alt}',
 						salvoold = rofs['salvo old'],
 						completeold = rofs['complete old'],
 						salvonew = rofs['salvo new'],
 						completenew = rofs['complete new']
 					)
-				]
+				)
 				if internalweaponname == 'FK-FF-Autocannon-Tank':
-					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-						unit = 'tank',
-						weapon = weaponname)
-					)
+					upgradeinfo[0] = upgradeinfo[0].format(alt = " (tank)")
+					internalweaponname = 'FK-FF-Autocannon-VTOL'
+					newvalue = {}
+					oldvalue = {}
+					for key in keys:
+						newvalue[key] = -1
+						if key in weapons[internalweaponname]:
+							oldvalue[key] = int(weapons[internalweaponname][key])
+						else:
+							oldvalue[key] = 0
+					# Assume same firing type
+					# Cycle over upgrades for oldvalue
+					for key in oldvalue:
+						for oldtopic in range(1, int(topic)):
+							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+					# Calculate ROFs
+					rofs = {}
+					if oldvalue['numRounds'] == 1:
+						print("Warning: Weapon {} fires in salvoes, but has only one shot per salvo effectively making it a non-salvo firing weapon which should only use 'firePause' and not 'numRounds' or 'reloadTime'.".format(weaponname))
+					else:
+						# Per salvo
+						rofs['salvo old'] = (
+							(oldvalue['numRounds'] / 
+								(
+									(oldvalue['numRounds'] - 1)
+									 * oldvalue['firePause']
+								)
+							) * conv['0.1 s per min']
+						)
+						rofs['salvo new'] = (
+							(newvalue['numRounds'] / 
+								(
+									(newvalue['numRounds'] - 1)
+									 * newvalue['firePause']
+								)
+							) * conv['0.1 s per min']
+						)
+						# Per complete cycle
+						rofs['complete old'] = (
+							(oldvalue['numRounds'] / 
+								(
+									(
+										(oldvalue['numRounds'] - 1)
+										 * oldvalue['firePause']
+									)
+								+ oldvalue['reloadTime']
+								)
+							) * conv['0.1 s per min']
+						)
+						rofs['complete new'] = (
+							(newvalue['numRounds'] / 
+								(
+									(
+										(newvalue['numRounds'] - 1)
+										 * newvalue['firePause']
+									)
+								+ newvalue['reloadTime']
+								)
+							) * conv['0.1 s per min']
+						)
+						upgradeinfo.append(
+							'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
+								alt = ' (VTOL)',
+								salvoold = rofs['salvo old'],
+								completeold = rofs['complete old'],
+								salvonew = rofs['salvo new'],
+								completenew = rofs['complete new']
+							)
+						)
+
 				elif internalweaponname == 'FK-SF-Cannon-Cyborg':
-					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-						unit = 'cyborg',
-						weapon = weaponname)
-					)
+					upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+					internalweaponname = 'FK-SF-Cannon-Structure'
+					newvalue = {}
+					oldvalue = {}
+					for key in keys:
+						newvalue[key] = -1
+						if key in weapons[internalweaponname]:
+							oldvalue[key] = int(weapons[internalweaponname][key])
+						else:
+							oldvalue[key] = 0
+					# Assume same firing type
+					# Cycle over upgrades for oldvalue
+					for key in oldvalue:
+						for oldtopic in range(1, int(topic)):
+							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+					# Calculate ROFs
+					rofs = {}
+					if oldvalue['numRounds'] == 1:
+						print("Warning: Weapon {} fires in salvoes, but has only one shot per salvo effectively making it a non-salvo firing weapon which should only use 'firePause' and not 'numRounds' or 'reloadTime'.".format(weaponname))
+					else:
+						# Per salvo
+						rofs['salvo old'] = (
+							(oldvalue['numRounds'] / 
+								(
+									(oldvalue['numRounds'] - 1)
+									 * oldvalue['firePause']
+								)
+							) * conv['0.1 s per min']
+						)
+						rofs['salvo new'] = (
+							(newvalue['numRounds'] / 
+								(
+									(newvalue['numRounds'] - 1)
+									 * newvalue['firePause']
+								)
+							) * conv['0.1 s per min']
+						)
+						# Per complete cycle
+						rofs['complete old'] = (
+							(oldvalue['numRounds'] / 
+								(
+									(
+										(oldvalue['numRounds'] - 1)
+										 * oldvalue['firePause']
+									)
+								+ oldvalue['reloadTime']
+								)
+							) * conv['0.1 s per min']
+						)
+						rofs['complete new'] = (
+							(newvalue['numRounds'] / 
+								(
+									(
+										(newvalue['numRounds'] - 1)
+										 * newvalue['firePause']
+									)
+								+ newvalue['reloadTime']
+								)
+							) * conv['0.1 s per min']
+						)
+						upgradeinfo.append(
+							'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
+								alt = ' (structure)',
+								salvoold = rofs['salvo old'],
+								completeold = rofs['complete old'],
+								salvonew = rofs['salvo new'],
+								completenew = rofs['complete new']
+							)
+						)
+
 				elif internalweaponname == 'FK-SPL-GrenadeLauncher-Cyborg':
-					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-						unit = 'cyborg',
-						weapon = weaponname)
-					)
+					upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+					internalweaponname = 'FK-SPL-GrenadeLauncher-TankStructure'
+					newvalue = {}
+					oldvalue = {}
+					for key in keys:
+						newvalue[key] = -1
+						if key in weapons[internalweaponname]:
+							oldvalue[key] = int(weapons[internalweaponname][key])
+						else:
+							oldvalue[key] = 0
+					# Assume same firing type
+					# Cycle over upgrades for oldvalue
+					for key in oldvalue:
+						for oldtopic in range(1, int(topic)):
+							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+					# Calculate ROFs
+					rofs = {}
+					if oldvalue['numRounds'] == 1:
+						print("Warning: Weapon {} fires in salvoes, but has only one shot per salvo effectively making it a non-salvo firing weapon which should only use 'firePause' and not 'numRounds' or 'reloadTime'.".format(weaponname))
+					else:
+						# Per salvo
+						rofs['salvo old'] = (
+							(oldvalue['numRounds'] / 
+								(
+									(oldvalue['numRounds'] - 1)
+									 * oldvalue['firePause']
+								)
+							) * conv['0.1 s per min']
+						)
+						rofs['salvo new'] = (
+							(newvalue['numRounds'] / 
+								(
+									(newvalue['numRounds'] - 1)
+									 * newvalue['firePause']
+								)
+							) * conv['0.1 s per min']
+						)
+						# Per complete cycle
+						rofs['complete old'] = (
+							(oldvalue['numRounds'] / 
+								(
+									(
+										(oldvalue['numRounds'] - 1)
+										 * oldvalue['firePause']
+									)
+								+ oldvalue['reloadTime']
+								)
+							) * conv['0.1 s per min']
+						)
+						rofs['complete new'] = (
+							(newvalue['numRounds'] / 
+								(
+									(
+										(newvalue['numRounds'] - 1)
+										 * newvalue['firePause']
+									)
+								+ newvalue['reloadTime']
+								)
+							) * conv['0.1 s per min']
+						)
+						upgradeinfo.append(
+							'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
+								alt = ' (tank/structure)',
+								salvoold = rofs['salvo old'],
+								completeold = rofs['complete old'],
+								salvonew = rofs['salvo new'],
+								completenew = rofs['complete new']
+							)
+						)
+
 				elif internalweaponname == 'FK-MIS-Lancer-Cyborg':
-					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-						unit = 'cyborg',
-						weapon = weaponname)
-					)
+					upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+					internalweaponname = 'FK-MIS-Lancer-VTOL'
+					newvalue = {}
+					oldvalue = {}
+					for key in keys:
+						newvalue[key] = -1
+						if key in weapons[internalweaponname]:
+							oldvalue[key] = int(weapons[internalweaponname][key])
+						else:
+							oldvalue[key] = 0
+					# Assume same firing type
+					# Cycle over upgrades for oldvalue
+					for key in oldvalue:
+						for oldtopic in range(1, int(topic)):
+							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+					# Calculate ROFs
+					rofs = {}
+					if oldvalue['numRounds'] == 1:
+						print("Warning: Weapon {} fires in salvoes, but has only one shot per salvo effectively making it a non-salvo firing weapon which should only use 'firePause' and not 'numRounds' or 'reloadTime'.".format(weaponname))
+					else:
+						# Per salvo
+						rofs['salvo old'] = (
+							(oldvalue['numRounds'] / 
+								(
+									(oldvalue['numRounds'] - 1)
+									 * oldvalue['firePause']
+								)
+							) * conv['0.1 s per min']
+						)
+						rofs['salvo new'] = (
+							(newvalue['numRounds'] / 
+								(
+									(newvalue['numRounds'] - 1)
+									 * newvalue['firePause']
+								)
+							) * conv['0.1 s per min']
+						)
+						# Per complete cycle
+						rofs['complete old'] = (
+							(oldvalue['numRounds'] / 
+								(
+									(
+										(oldvalue['numRounds'] - 1)
+										 * oldvalue['firePause']
+									)
+								+ oldvalue['reloadTime']
+								)
+							) * conv['0.1 s per min']
+						)
+						rofs['complete new'] = (
+							(newvalue['numRounds'] / 
+								(
+									(
+										(newvalue['numRounds'] - 1)
+										 * newvalue['firePause']
+									)
+								+ newvalue['reloadTime']
+								)
+							) * conv['0.1 s per min']
+						)
+						upgradeinfo.append(
+							'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
+								alt = ' (VTOL)',
+								salvoold = rofs['salvo old'],
+								completeold = rofs['complete old'],
+								salvonew = rofs['salvo new'],
+								completenew = rofs['complete new']
+							)
+						)
+
 				elif internalweaponname == 'FK-FF-Machinegun-Cyborg':
-					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-						unit = 'cyborg',
-						weapon = weaponname)
-					)
+					upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+					internalweaponname = 'FK-FF-Machinegun-Structure'
+					newvalue = {}
+					oldvalue = {}
+					for key in keys:
+						newvalue[key] = -1
+						if key in weapons[internalweaponname]:
+							oldvalue[key] = int(weapons[internalweaponname][key])
+						else:
+							oldvalue[key] = 0
+					# Assume same firing type
+					# Cycle over upgrades for oldvalue
+					for key in oldvalue:
+						for oldtopic in range(1, int(topic)):
+							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+					# Calculate ROFs
+					rofs = {}
+					if oldvalue['numRounds'] == 1:
+						print("Warning: Weapon {} fires in salvoes, but has only one shot per salvo effectively making it a non-salvo firing weapon which should only use 'firePause' and not 'numRounds' or 'reloadTime'.".format(weaponname))
+					else:
+						# Per salvo
+						rofs['salvo old'] = (
+							(oldvalue['numRounds'] / 
+								(
+									(oldvalue['numRounds'] - 1)
+									 * oldvalue['firePause']
+								)
+							) * conv['0.1 s per min']
+						)
+						rofs['salvo new'] = (
+							(newvalue['numRounds'] / 
+								(
+									(newvalue['numRounds'] - 1)
+									 * newvalue['firePause']
+								)
+							) * conv['0.1 s per min']
+						)
+						# Per complete cycle
+						rofs['complete old'] = (
+							(oldvalue['numRounds'] / 
+								(
+									(
+										(oldvalue['numRounds'] - 1)
+										 * oldvalue['firePause']
+									)
+								+ oldvalue['reloadTime']
+								)
+							) * conv['0.1 s per min']
+						)
+						rofs['complete new'] = (
+							(newvalue['numRounds'] / 
+								(
+									(
+										(newvalue['numRounds'] - 1)
+										 * newvalue['firePause']
+									)
+								+ newvalue['reloadTime']
+								)
+							) * conv['0.1 s per min']
+						)
+						upgradeinfo.append(
+							'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
+								alt = ' (structure)',
+								salvoold = rofs['salvo old'],
+								completeold = rofs['complete old'],
+								salvonew = rofs['salvo new'],
+								completenew = rofs['complete new']
+							)
+						)
+
 				else:
+					upgradeinfo[0] = upgradeinfo[0].format(alt = "")
 					upgradeinfo.append('')
-					
-				successionmsgs[resmsgname] = [
-					'{} rate of fire (ROF) improved'.format(weaponname),
-					upgradeinfo[0],
-					upgradeinfo[1],
-					'Note: ROFs differ from game-calculated ones. See documentation.'
-				]
+
 			# Non-salvo firing weapon
 			if (oldvalue['firePause'] != 0) \
 			and (oldvalue['numRounds'] == 0) \
@@ -1768,45 +2100,168 @@ for succession in successions:
 				# Per complete cycle
 				rofs['complete old'] = conv['0.1 s per min'] / oldvalue['firePause']
 				rofs['complete new'] = conv['0.1 s per min'] / newvalue['firePause']
-				upgradeinfo = [
-					'ROF: {completeold:.1f} per min ↗ {completenew:.1f} per min'.format(
+				upgradeinfo.append(
+					'ROF per min{alt}: {completeold:.1f} ↗ {completenew:.1f}'.format(
+						alt = '{alt}',
 						completeold = rofs['complete old'],
 						completenew = rofs['complete new']
 					)
-				]
+				)
 				if internalweaponname == 'FK-FF-Autocannon-Tank':
-					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-						unit = 'tank',
-						weapon = weaponname)
+					upgradeinfo[0] = upgradeinfo[0].format(alt = " (tank)")
+					internalweaponname = 'FK-FF-Autocannon-VTOL'
+					newvalue = {}
+					oldvalue = {}
+					for key in keys:
+						newvalue[key] = -1
+						if key in weapons[internalweaponname]:
+							oldvalue[key] = int(weapons[internalweaponname][key])
+						else:
+							oldvalue[key] = 0
+					# Assume same firing type
+					# Cycle over upgrades for oldvalue
+					for key in oldvalue:
+						for oldtopic in range(1, int(topic)):
+							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+					# Calculate ROFs
+					rofs = {}
+					# Per complete cycle
+					rofs['complete old'] = conv['0.1 s per min'] / oldvalue['firePause']
+					rofs['complete new'] = conv['0.1 s per min'] / newvalue['firePause']
+					upgradeinfo.append(
+						'ROF per min{alt}: {completeold:.1f} ↗ {completenew:.1f}'.format(
+							alt = ' (VTOL)',
+							completeold = rofs['complete old'],
+							completenew = rofs['complete new']
+						)
 					)
 				elif internalweaponname == 'FK-SF-Cannon-Cyborg':
-					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-						unit = 'cyborg',
-						weapon = weaponname)
+					upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+					internalweaponname = 'FK-SF-Cannon-Structure'
+					newvalue = {}
+					oldvalue = {}
+					for key in keys:
+						newvalue[key] = -1
+						if key in weapons[internalweaponname]:
+							oldvalue[key] = int(weapons[internalweaponname][key])
+						else:
+							oldvalue[key] = 0
+					# Assume same firing type
+					# Cycle over upgrades for oldvalue
+					for key in oldvalue:
+						for oldtopic in range(1, int(topic)):
+							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+					# Calculate ROFs
+					rofs = {}
+					# Per complete cycle
+					rofs['complete old'] = conv['0.1 s per min'] / oldvalue['firePause']
+					rofs['complete new'] = conv['0.1 s per min'] / newvalue['firePause']
+					upgradeinfo.append(
+						'ROF per min{alt}: {completeold:.1f} ↗ {completenew:.1f}'.format(
+							alt = ' (structure)',
+							completeold = rofs['complete old'],
+							completenew = rofs['complete new']
+						)
 					)
 				elif internalweaponname == 'FK-SPL-GrenadeLauncher-Cyborg':
-					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-						unit = 'cyborg',
-						weapon = weaponname)
+					upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+					internalweaponname = 'FK-SPL-GrenadeLauncher-TankStructure'
+					newvalue = {}
+					oldvalue = {}
+					for key in keys:
+						newvalue[key] = -1
+						if key in weapons[internalweaponname]:
+							oldvalue[key] = int(weapons[internalweaponname][key])
+						else:
+							oldvalue[key] = 0
+					# Assume same firing type
+					# Cycle over upgrades for oldvalue
+					for key in oldvalue:
+						for oldtopic in range(1, int(topic)):
+							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+					# Calculate ROFs
+					rofs = {}
+					# Per complete cycle
+					rofs['complete old'] = conv['0.1 s per min'] / oldvalue['firePause']
+					rofs['complete new'] = conv['0.1 s per min'] / newvalue['firePause']
+					upgradeinfo.append(
+						'ROF per min{alt}: {completeold:.1f} ↗ {completenew:.1f}'.format(
+							alt = ' (tank/structure)',
+							completeold = rofs['complete old'],
+							completenew = rofs['complete new']
+						)
 					)
 				elif internalweaponname == 'FK-MIS-Lancer-Cyborg':
-					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-						unit = 'cyborg',
-						weapon = weaponname)
+					upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+					internalweaponname = 'FK-MIS-Lancer-VTOL'
+					newvalue = {}
+					oldvalue = {}
+					for key in keys:
+						newvalue[key] = -1
+						if key in weapons[internalweaponname]:
+							oldvalue[key] = int(weapons[internalweaponname][key])
+						else:
+							oldvalue[key] = 0
+					# Assume same firing type
+					# Cycle over upgrades for oldvalue
+					for key in oldvalue:
+						for oldtopic in range(1, int(topic)):
+							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+					# Calculate ROFs
+					rofs = {}
+					# Per complete cycle
+					rofs['complete old'] = conv['0.1 s per min'] / oldvalue['firePause']
+					rofs['complete new'] = conv['0.1 s per min'] / newvalue['firePause']
+					upgradeinfo.append(
+						'ROF per min{alt}: {completeold:.1f} ↗ {completenew:.1f}'.format(
+							alt = ' (VTOL)',
+							completeold = rofs['complete old'],
+							completenew = rofs['complete new']
+						)
 					)
 				elif internalweaponname == 'FK-FF-Machinegun-Cyborg':
-					upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-						unit = 'cyborg',
-						weapon = weaponname)
+					upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+					internalweaponname = 'FK-FF-Machinegun-Structure'
+					newvalue = {}
+					oldvalue = {}
+					for key in keys:
+						newvalue[key] = -1
+						if key in weapons[internalweaponname]:
+							oldvalue[key] = int(weapons[internalweaponname][key])
+						else:
+							oldvalue[key] = 0
+					# Assume same firing type
+					# Cycle over upgrades for oldvalue
+					for key in oldvalue:
+						for oldtopic in range(1, int(topic)):
+							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+					# Calculate ROFs
+					rofs = {}
+					# Per complete cycle
+					rofs['complete old'] = conv['0.1 s per min'] / oldvalue['firePause']
+					rofs['complete new'] = conv['0.1 s per min'] / newvalue['firePause']
+					upgradeinfo.append(
+						'ROF per min{alt}: {completeold:.1f} ↗ {completenew:.1f}'.format(
+							alt = ' (structure)',
+							completeold = rofs['complete old'],
+							completenew = rofs['complete new']
+						)
 					)
 				else:
+					upgradeinfo[0] = upgradeinfo[0].format(alt = "")
 					upgradeinfo.append('')
-				successionmsgs[resmsgname] = [
-					'{} rate of fire (ROF) improved'.format(weaponname),
-					upgradeinfo[0],
-					upgradeinfo[1],
-					'Note: ROFs differ from game-calculated ones. See documentation.'
-				]
+
+			successionmsgs[resmsgname] = [
+				'{} rate of fire (ROF) improved'.format(weaponname),
+				upgradeinfo[0],
+				upgradeinfo[1],
+				'Note: ROFs differ from game-calculated ones. See documentation.'
+			]
 	elif successionparts[-1] == 'RpU':
 		for topic in successions[succession]:
 			# Generate research message name
