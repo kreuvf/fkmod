@@ -1350,9 +1350,9 @@ for succession in successions:
 			# Generate Upgrade information (impact damage, splash damage, burn damage)
 			# More complicated than before, because "damage" may not be used in all cases
 			# Flamethrowers have damage 1 and show no improvement on upgrades
+			keys = ['damage', 'radiusDamage', 'periodicalDamage']
 			newvalue = {}
 			oldvalue = {}
-			keys = ['damage', 'radiusDamage', 'periodicalDamage']
 			for key in keys:
 				newvalue[key] = -1
 				if key in weapons[internalweaponname]:
@@ -1364,7 +1364,8 @@ for succession in successions:
 				for oldtopic in range(1, int(topic)):
 					oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 				newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
-			upgradeinfo = ['Damage: {impactold:d}/{splashold:d}/{burnold:d} ↗ {impactnew:d}/{splashnew:d}/{burnnew:d}'.format(
+			upgradeinfo = ['Damage{alt}: {impactold:d}/{splashold:d}/{burnold:d} ↗ {impactnew:d}/{splashnew:d}/{burnnew:d}'.format(
+					alt = '{alt}',
 					impactold = int(oldvalue['damage']),
 					splashold = int(oldvalue['radiusDamage']),
 					burnold = int(oldvalue['periodicalDamage']),
@@ -1374,31 +1375,152 @@ for succession in successions:
 				)
 			]
 			if internalweaponname == 'FK-FF-Autocannon-Tank':
-				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-					unit = 'tank',
-					weapon = weaponname)
+				upgradeinfo[0] = upgradeinfo[0].format(alt = " (tank)")
+				internalweaponname = 'FK-FF-Autocannon-VTOL'
+				# Generate Upgrade information (impact damage, splash damage, burn damage)
+				# More complicated than before, because "damage" may not be used in all cases
+				# Flamethrowers have damage 1 and show no improvement on upgrades
+				newvalue = {}
+				oldvalue = {}
+				for key in keys:
+					newvalue[key] = -1
+					if key in weapons[internalweaponname]:
+						oldvalue[key] = int(weapons[internalweaponname][key])
+					else:
+						oldvalue[key] = 0
+				# Cycle over upgrades for oldvalue
+				for key in oldvalue:
+					for oldtopic in range(1, int(topic)):
+						oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+					newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+				upgradeinfo.append('Damage{alt}: {impactold:d}/{splashold:d}/{burnold:d} ↗ {impactnew:d}/{splashnew:d}/{burnnew:d}'.format(
+						alt = ' (VTOL)',
+						impactold = int(oldvalue['damage']),
+						splashold = int(oldvalue['radiusDamage']),
+						burnold = int(oldvalue['periodicalDamage']),
+						impactnew = int(newvalue['damage']),
+						splashnew = int(newvalue['radiusDamage']),
+						burnnew = int(newvalue['periodicalDamage']),
+					)
 				)
 			elif internalweaponname == 'FK-SF-Cannon-Cyborg':
-				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-					unit = 'cyborg',
-					weapon = weaponname)
+				upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+				internalweaponname = 'FK-SF-Cannon-Structure'
+				# Generate Upgrade information (impact damage, splash damage, burn damage)
+				# More complicated than before, because "damage" may not be used in all cases
+				# Flamethrowers have damage 1 and show no improvement on upgrades
+				newvalue = {}
+				oldvalue = {}
+				for key in keys:
+					newvalue[key] = -1
+					if key in weapons[internalweaponname]:
+						oldvalue[key] = int(weapons[internalweaponname][key])
+					else:
+						oldvalue[key] = 0
+				# Cycle over upgrades for oldvalue
+				for key in oldvalue:
+					for oldtopic in range(1, int(topic)):
+						oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+					newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+				upgradeinfo.append('Damage{alt}: {impactold:d}/{splashold:d}/{burnold:d} ↗ {impactnew:d}/{splashnew:d}/{burnnew:d}'.format(
+						alt = ' (structure)',
+						impactold = int(oldvalue['damage']),
+						splashold = int(oldvalue['radiusDamage']),
+						burnold = int(oldvalue['periodicalDamage']),
+						impactnew = int(newvalue['damage']),
+						splashnew = int(newvalue['radiusDamage']),
+						burnnew = int(newvalue['periodicalDamage']),
+					)
 				)
 			elif internalweaponname == 'FK-SPL-GrenadeLauncher-Cyborg':
-				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-					unit = 'cyborg',
-					weapon = weaponname)
+				upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+				internalweaponname = 'FK-SPL-GrenadeLauncher-TankStructure'
+				# Generate Upgrade information (impact damage, splash damage, burn damage)
+				# More complicated than before, because "damage" may not be used in all cases
+				# Flamethrowers have damage 1 and show no improvement on upgrades
+				newvalue = {}
+				oldvalue = {}
+				for key in keys:
+					newvalue[key] = -1
+					if key in weapons[internalweaponname]:
+						oldvalue[key] = int(weapons[internalweaponname][key])
+					else:
+						oldvalue[key] = 0
+				# Cycle over upgrades for oldvalue
+				for key in oldvalue:
+					for oldtopic in range(1, int(topic)):
+						oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+					newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+				upgradeinfo.append('Damage{alt}: {impactold:d}/{splashold:d}/{burnold:d} ↗ {impactnew:d}/{splashnew:d}/{burnnew:d}'.format(
+						alt = ' (tank/structure)',
+						impactold = int(oldvalue['damage']),
+						splashold = int(oldvalue['radiusDamage']),
+						burnold = int(oldvalue['periodicalDamage']),
+						impactnew = int(newvalue['damage']),
+						splashnew = int(newvalue['radiusDamage']),
+						burnnew = int(newvalue['periodicalDamage']),
+					)
 				)
 			elif internalweaponname == 'FK-MIS-Lancer-Cyborg':
-				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-					unit = 'cyborg',
-					weapon = weaponname)
+				upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+				internalweaponname = 'FK-MIS-Lancer-VTOL'
+				# Generate Upgrade information (impact damage, splash damage, burn damage)
+				# More complicated than before, because "damage" may not be used in all cases
+				# Flamethrowers have damage 1 and show no improvement on upgrades
+				newvalue = {}
+				oldvalue = {}
+				for key in keys:
+					newvalue[key] = -1
+					if key in weapons[internalweaponname]:
+						oldvalue[key] = int(weapons[internalweaponname][key])
+					else:
+						oldvalue[key] = 0
+				# Cycle over upgrades for oldvalue
+				for key in oldvalue:
+					for oldtopic in range(1, int(topic)):
+						oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+					newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+				upgradeinfo.append('Damage{alt}: {impactold:d}/{splashold:d}/{burnold:d} ↗ {impactnew:d}/{splashnew:d}/{burnnew:d}'.format(
+						alt = ' (VTOL)',
+						impactold = int(oldvalue['damage']),
+						splashold = int(oldvalue['radiusDamage']),
+						burnold = int(oldvalue['periodicalDamage']),
+						impactnew = int(newvalue['damage']),
+						splashnew = int(newvalue['radiusDamage']),
+						burnnew = int(newvalue['periodicalDamage']),
+					)
 				)
 			elif internalweaponname == 'FK-FF-Machinegun-Cyborg':
-				upgradeinfo.append('Values represent the {unit} version of {weapon}'.format(
-					unit = 'cyborg',
-					weapon = weaponname)
+				upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
+				internalweaponname = 'FK-FF-Machinegun-Structure'
+				# Generate Upgrade information (impact damage, splash damage, burn damage)
+				# More complicated than before, because "damage" may not be used in all cases
+				# Flamethrowers have damage 1 and show no improvement on upgrades
+				newvalue = {}
+				oldvalue = {}
+				for key in keys:
+					newvalue[key] = -1
+					if key in weapons[internalweaponname]:
+						oldvalue[key] = int(weapons[internalweaponname][key])
+					else:
+						oldvalue[key] = 0
+				# Cycle over upgrades for oldvalue
+				for key in oldvalue:
+					for oldtopic in range(1, int(topic)):
+						oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
+					newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+				upgradeinfo.append('Damage{alt}: {impactold:d}/{splashold:d}/{burnold:d} ↗ {impactnew:d}/{splashnew:d}/{burnnew:d}'.format(
+						alt = ' (structure)',
+						impactold = int(oldvalue['damage']),
+						splashold = int(oldvalue['radiusDamage']),
+						burnold = int(oldvalue['periodicalDamage']),
+						impactnew = int(newvalue['damage']),
+						splashnew = int(newvalue['radiusDamage']),
+						burnnew = int(newvalue['periodicalDamage']),
+					)
 				)
 			else:
+				upgradeinfo[0] = upgradeinfo[0].format(alt = "")
 				upgradeinfo.append('')
 			successionmsgs[resmsgname] = [
 				'{} damage improved'.format(weaponname),
