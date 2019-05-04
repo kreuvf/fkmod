@@ -17,5 +17,7 @@ function eventDroidBuilt(droid, structure) {
 function eventAttacked(victim, attacker) {
 	if(victim.type == STRUCTURE) {
 		defend(victim);
+	} else if(victim.type == DROID) {
+		switchTarget(victim, attacker);
 	}
 }

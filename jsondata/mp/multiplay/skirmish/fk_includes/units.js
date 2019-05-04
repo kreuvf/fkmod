@@ -278,3 +278,9 @@ function defend(structure) {
 		}
 	}
 }
+
+
+function switchTarget(unit, target) {
+	if(unit.order != DORDER_ATTACK) return;
+	if(distance(unit, target) < unit.range) orderDroidObj(unit, DORDER_ATTACK, target);
+}
