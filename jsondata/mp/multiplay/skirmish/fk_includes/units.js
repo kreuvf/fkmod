@@ -239,3 +239,42 @@ function unitControl() {
 		}
 	}
 }
+
+function defend(structure) {
+	var enemyUnits = enumRange(unit.x, unit.y, 15, ENEMIES, false);
+	var enemyTanks = enemyUnits.filter(function(droid) {
+		return droid.droidType != DROID_CYBORG && !droid.isVTOL;
+	}).length;
+	var enemyCyborgs = enemyUnits.filter(function(droid) {
+		return droid.droidType == DROID_CYBORG;
+	}).length;
+	var tankIndex = 0;
+	var cyborgIndex = 0;
+	var mixedIndex = 0;
+	while(enemyTanks > 0 && enemyCyborgs > 0) {
+		if(enemyTanks > tankGroupSize / 2 && tankIndex < antiTankGroups.length) {
+			var units = enumgGroup(antiTankGroups[tankIndex]);
+			for(var i = 0; i < units.length; i++) {
+				orderDroidObj(units[j], DORDER_MOVE, structure);
+			}
+			tankIndex++;
+			enemyTanks -= units.length;
+			
+		} else if(enemyCyborgs > tankGroupSize && cyborgIndex < antiCyborgGroups.length) {
+			var units = enumgGroup(antiCyborgGroups[cyborgIndex]);
+			for(var i = 0; i < units.length; i++) {
+				orderDroidObj(units[j], DORDER_MOVE, structure);
+			}
+			cyborgIndex++;
+			enemyCyborgs -= units.length * 2;
+		} else if(mixedIndex < mixedGroups.length){
+			var units = enumgGroup(mixedGroups[mixedIndex]);
+			for(var i = 0; i < units.length; i++) {
+				orderDroidObj(units[j], DORDER_MOVE, structure);
+			}
+			mixedIndex++;
+			enemyTanks -= units.length / 2;
+			enemyCyborgs -= units.length;
+		}
+	}
+}

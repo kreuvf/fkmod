@@ -13,3 +13,9 @@ function eventDroidBuilt(droid, structure) {
 		groupAddDroid(scouts, droid);
 	}
 }
+
+function eventAttacked(victim, attacker) {
+	if(victim.type == STRUCTURE) {
+		defend(victim);
+	}
+}
