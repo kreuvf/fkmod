@@ -85,18 +85,18 @@ Weapon Upgrade,FKWeaponUpgradeHOWROF1,HOWITZERS,17,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHOWROF2,HOWITZERS,25,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHOWROF3,HOWITZERS,32,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHOWROF4,HOWITZERS,38,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHOWAccuracy0,HOWITZERS,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHOWAccuracy1,HOWITZERS,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHOWAccuracy2,HOWITZERS,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHOWAccuracy3,HOWITZERS,0,46,46,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHOWAccuracy0,HOWITZERS,0,15,15,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHOWAccuracy1,HOWITZERS,0,29,29,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHOWAccuracy2,HOWITZERS,0,41,41,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHOWAccuracy3,HOWITZERS,0,52,52,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHOWAccuracy4,HOWITZERS,0,61,61,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeROCAccuracy0,ROCKET,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeROCAccuracy1,ROCKET,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeROCAccuracy2,ROCKET,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeROCAccuracy3,ROCKET,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeROCAccuracy4,ROCKET,0,61,61,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeROCAccuracy5,ROCKET,0,77,77,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeROCAccuracy6,ROCKET,0,95,95,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeROCAccuracy0,ROCKET,0,4,4,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeROCAccuracy1,ROCKET,0,8,8,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeROCAccuracy2,ROCKET,0,12,12,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeROCAccuracy3,ROCKET,0,15,15,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeROCAccuracy4,ROCKET,0,18,18,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeROCAccuracy5,ROCKET,0,20,20,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeROCAccuracy6,ROCKET,0,22,22,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeROCROF0,ROCKET,9,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeROCROF1,ROCKET,17,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeROCROF2,ROCKET,25,0,0,0,0,0,0
@@ -114,11 +114,11 @@ Weapon Upgrade,FKWeaponUpgradeMACROF3,MACHINE GUN,32,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeMACROF4,MACHINE GUN,38,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeMACROF5,MACHINE GUN,44,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeMACROF6,MACHINE GUN,49,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeMACAccuracy0,MACHINE GUN,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeMACAccuracy1,MACHINE GUN,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeMACAccuracy2,MACHINE GUN,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeMACAccuracy3,MACHINE GUN,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeMACAccuracy4,MACHINE GUN,0,61,61,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMACAccuracy0,MACHINE GUN,0,4,4,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMACAccuracy1,MACHINE GUN,0,8,8,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMACAccuracy2,MACHINE GUN,0,12,12,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMACAccuracy3,MACHINE GUN,0,15,15,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMACAccuracy4,MACHINE GUN,0,18,18,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeMACDamage0,MACHINE GUN,0,0,0,10,0,10,0
 Weapon Upgrade,FKWeaponUpgradeMACDamage1,MACHINE GUN,0,0,0,21,0,21,0
 Weapon Upgrade,FKWeaponUpgradeMACDamage2,MACHINE GUN,0,0,0,33,0,33,0
@@ -131,11 +131,11 @@ Weapon Upgrade,FKWeaponUpgradeAUCROF3,MACHINE GUN,32,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeAUCROF4,MACHINE GUN,38,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeAUCROF5,MACHINE GUN,44,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeAUCROF6,MACHINE GUN,49,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeAUCAccuracy0,MACHINE GUN,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeAUCAccuracy1,MACHINE GUN,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeAUCAccuracy2,MACHINE GUN,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeAUCAccuracy3,MACHINE GUN,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeAUCAccuracy4,MACHINE GUN,0,61,61,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeAUCAccuracy0,MACHINE GUN,0,4,4,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeAUCAccuracy1,MACHINE GUN,0,8,8,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeAUCAccuracy2,MACHINE GUN,0,12,12,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeAUCAccuracy3,MACHINE GUN,0,15,15,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeAUCAccuracy4,MACHINE GUN,0,18,18,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeAUCDamage0,MACHINE GUN,0,0,0,10,0,10,0
 Weapon Upgrade,FKWeaponUpgradeAUCDamage1,MACHINE GUN,0,0,0,21,0,21,0
 Weapon Upgrade,FKWeaponUpgradeAUCDamage2,MACHINE GUN,0,0,0,33,0,33,0
@@ -148,11 +148,11 @@ Weapon Upgrade,FKWeaponUpgradeAAGROF3,A-A GUN,32,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeAAGROF4,A-A GUN,38,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeAAGROF5,A-A GUN,44,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeAAGROF6,A-A GUN,49,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeAAGAccuracy0,A-A GUN,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeAAGAccuracy1,A-A GUN,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeAAGAccuracy2,A-A GUN,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeAAGAccuracy3,A-A GUN,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeAAGAccuracy4,A-A GUN,0,61,61,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeAAGAccuracy0,A-A GUN,0,3,3,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeAAGAccuracy1,A-A GUN,0,5,5,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeAAGAccuracy2,A-A GUN,0,7,7,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeAAGAccuracy3,A-A GUN,0,9,9,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeAAGAccuracy4,A-A GUN,0,10,10,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeAAGDamage0,A-A GUN,0,0,0,10,0,10,0
 Weapon Upgrade,FKWeaponUpgradeAAGDamage1,A-A GUN,0,0,0,21,0,21,0
 Weapon Upgrade,FKWeaponUpgradeAAGDamage2,A-A GUN,0,0,0,33,0,33,0
@@ -170,11 +170,11 @@ Weapon Upgrade,FKWeaponUpgradeHBMROF1,HOT BOMB,17,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHBMROF2,HOT BOMB,25,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHBMROF3,HOT BOMB,32,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHBMROF4,HOT BOMB,38,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHBMAccuracy0,HOT BOMB,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHBMAccuracy1,HOT BOMB,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHBMAccuracy2,HOT BOMB,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHBMAccuracy3,HOT BOMB,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHBMAccuracy4,HOT BOMB,0,61,61,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHBMAccuracy0,HOT BOMB,0,3,3,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHBMAccuracy1,HOT BOMB,0,5,5,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHBMAccuracy2,HOT BOMB,0,7,7,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHBMAccuracy3,HOT BOMB,0,9,9,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHBMAccuracy4,HOT BOMB,0,10,10,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeFLADamage0,FLAME,0,0,0,10,0,10,0
 Weapon Upgrade,FKWeaponUpgradeFLADamage1,FLAME,0,0,0,21,0,21,0
 Weapon Upgrade,FKWeaponUpgradeFLADamage2,FLAME,0,0,0,33,0,33,0
@@ -187,10 +187,10 @@ Weapon Upgrade,FKWeaponUpgradeFLAROF1,FLAME,17,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeFLAROF2,FLAME,25,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeFLAROF3,FLAME,32,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeFLAROF4,FLAME,38,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeFLAAccuracy0,FLAME,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeFLAAccuracy1,FLAME,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeFLAAccuracy2,FLAME,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeFLAAccuracy3,FLAME,0,46,46,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeFLAAccuracy0,FLAME,0,15,15,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeFLAAccuracy1,FLAME,0,29,29,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeFLAAccuracy2,FLAME,0,41,41,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeFLAAccuracy3,FLAME,0,52,52,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeFLAAccuracy4,FLAME,0,61,61,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHHWDamage0,HOT HOWITZER,0,0,0,10,0,10,0
 Weapon Upgrade,FKWeaponUpgradeHHWDamage1,HOT HOWITZER,0,0,0,21,0,21,0
@@ -204,10 +204,10 @@ Weapon Upgrade,FKWeaponUpgradeHHWROF1,HOT HOWITZER,17,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHHWROF2,HOT HOWITZER,25,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHHWROF3,HOT HOWITZER,32,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHHWROF4,HOT HOWITZER,38,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHHWAccuracy0,HOT HOWITZER,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHHWAccuracy1,HOT HOWITZER,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHHWAccuracy2,HOT HOWITZER,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHHWAccuracy3,HOT HOWITZER,0,46,46,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHHWAccuracy0,HOT HOWITZER,0,15,15,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHHWAccuracy1,HOT HOWITZER,0,29,29,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHHWAccuracy2,HOT HOWITZER,0,41,41,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHHWAccuracy3,HOT HOWITZER,0,52,52,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHHWAccuracy4,HOT HOWITZER,0,61,61,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeLASDamage0,LASER,0,0,0,10,0,10,0
 Weapon Upgrade,FKWeaponUpgradeLASDamage1,LASER,0,0,0,21,0,21,0
@@ -221,11 +221,11 @@ Weapon Upgrade,FKWeaponUpgradeLASROF1,LASER,17,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeLASROF2,LASER,25,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeLASROF3,LASER,32,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeLASROF4,LASER,38,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLASAccuracy0,LASER,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLASAccuracy1,LASER,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLASAccuracy2,LASER,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLASAccuracy3,LASER,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLASAccuracy4,LASER,0,61,61,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLASAccuracy0,LASER,0,2,2,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLASAccuracy1,LASER,0,3,3,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLASAccuracy2,LASER,0,4,4,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLASAccuracy3,LASER,0,5,5,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLASAccuracy4,LASER,0,6,6,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeLAADamage0,A-A LASER,0,0,0,10,0,10,0
 Weapon Upgrade,FKWeaponUpgradeLAADamage1,A-A LASER,0,0,0,21,0,21,0
 Weapon Upgrade,FKWeaponUpgradeLAADamage2,A-A LASER,0,0,0,33,0,33,0
@@ -238,18 +238,18 @@ Weapon Upgrade,FKWeaponUpgradeLAAROF1,A-A LASER,17,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeLAAROF2,A-A LASER,25,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeLAAROF3,A-A LASER,32,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeLAAROF4,A-A LASER,38,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLAAAccuracy0,A-A LASER,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLAAAccuracy1,A-A LASER,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLAAAccuracy2,A-A LASER,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLAAAccuracy3,A-A LASER,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeLAAAccuracy4,A-A LASER,0,61,61,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeSMIAccuracy0,SLOW MISSILE,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeSMIAccuracy1,SLOW MISSILE,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeSMIAccuracy2,SLOW MISSILE,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeSMIAccuracy3,SLOW MISSILE,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeSMIAccuracy4,SLOW MISSILE,0,61,61,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeSMIAccuracy5,SLOW MISSILE,0,77,77,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeSMIAccuracy6,SLOW MISSILE,0,95,95,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLAAAccuracy0,A-A LASER,0,2,2,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLAAAccuracy1,A-A LASER,0,3,3,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLAAAccuracy2,A-A LASER,0,4,4,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLAAAccuracy3,A-A LASER,0,5,5,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeLAAAccuracy4,A-A LASER,0,6,6,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeSMIAccuracy0,SLOW MISSILE,0,4,4,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeSMIAccuracy1,SLOW MISSILE,0,8,8,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeSMIAccuracy2,SLOW MISSILE,0,12,12,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeSMIAccuracy3,SLOW MISSILE,0,15,15,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeSMIAccuracy4,SLOW MISSILE,0,18,18,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeSMIAccuracy5,SLOW MISSILE,0,20,20,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeSMIAccuracy6,SLOW MISSILE,0,22,22,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeSMIROF0,SLOW MISSILE,9,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeSMIROF1,SLOW MISSILE,17,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeSMIROF2,SLOW MISSILE,25,0,0,0,0,0,0
@@ -260,13 +260,13 @@ Weapon Upgrade,FKWeaponUpgradeSMIDamage1,SLOW MISSILE,0,0,0,21,0,21,0
 Weapon Upgrade,FKWeaponUpgradeSMIDamage2,SLOW MISSILE,0,0,0,33,0,33,0
 Weapon Upgrade,FKWeaponUpgradeSMIDamage3,SLOW MISSILE,0,0,0,46,0,46,0
 Weapon Upgrade,FKWeaponUpgradeSMIDamage4,SLOW MISSILE,0,0,0,61,0,61,0
-Weapon Upgrade,FKWeaponUpgradeSROAccuracy0,SLOW ROCKET,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeSROAccuracy1,SLOW ROCKET,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeSROAccuracy2,SLOW ROCKET,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeSROAccuracy3,SLOW ROCKET,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeSROAccuracy4,SLOW ROCKET,0,61,61,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeSROAccuracy5,SLOW ROCKET,0,77,77,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeSROAccuracy6,SLOW ROCKET,0,95,95,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeSROAccuracy0,SLOW ROCKET,0,4,4,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeSROAccuracy1,SLOW ROCKET,0,8,8,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeSROAccuracy2,SLOW ROCKET,0,12,12,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeSROAccuracy3,SLOW ROCKET,0,15,15,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeSROAccuracy4,SLOW ROCKET,0,18,18,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeSROAccuracy5,SLOW ROCKET,0,20,20,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeSROAccuracy6,SLOW ROCKET,0,22,22,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeSROROF0,SLOW ROCKET,9,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeSROROF1,SLOW ROCKET,17,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeSROROF2,SLOW ROCKET,25,0,0,0,0,0,0
@@ -277,13 +277,13 @@ Weapon Upgrade,FKWeaponUpgradeSRODamage1,SLOW ROCKET,0,0,0,21,0,21,0
 Weapon Upgrade,FKWeaponUpgradeSRODamage2,SLOW ROCKET,0,0,0,33,0,33,0
 Weapon Upgrade,FKWeaponUpgradeSRODamage3,SLOW ROCKET,0,0,0,46,0,46,0
 Weapon Upgrade,FKWeaponUpgradeSRODamage4,SLOW ROCKET,0,0,0,61,0,61,0
-Weapon Upgrade,FKWeaponUpgradeMISAccuracy0,MISSILE,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeMISAccuracy1,MISSILE,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeMISAccuracy2,MISSILE,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeMISAccuracy3,MISSILE,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeMISAccuracy4,MISSILE,0,61,61,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeMISAccuracy5,MISSILE,0,77,77,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeMISAccuracy6,MISSILE,0,95,95,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMISAccuracy0,MISSILE,0,4,4,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMISAccuracy1,MISSILE,0,8,8,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMISAccuracy2,MISSILE,0,12,12,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMISAccuracy3,MISSILE,0,15,15,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMISAccuracy4,MISSILE,0,18,18,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMISAccuracy5,MISSILE,0,20,20,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMISAccuracy6,MISSILE,0,22,22,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeMISROF0,MISSILE,9,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeMISROF1,MISSILE,17,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeMISROF2,MISSILE,25,0,0,0,0,0,0
@@ -306,11 +306,11 @@ Weapon Upgrade,FKWeaponUpgradeAACROF1,A-A CANNON,17,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeAACROF2,A-A CANNON,25,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeAACROF3,A-A CANNON,32,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeAACROF4,A-A CANNON,38,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeAACAccuracy0,A-A CANNON,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeAACAccuracy1,A-A CANNON,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeAACAccuracy2,A-A CANNON,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeAACAccuracy3,A-A CANNON,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeAACAccuracy4,A-A CANNON,0,61,61,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeAACAccuracy0,A-A CANNON,0,3,3,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeAACAccuracy1,A-A CANNON,0,5,5,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeAACAccuracy2,A-A CANNON,0,7,7,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeAACAccuracy3,A-A CANNON,0,9,9,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeAACAccuracy4,A-A CANNON,0,10,10,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHBODamage0,HEAVY BOMB,0,0,0,10,0,10,0
 Weapon Upgrade,FKWeaponUpgradeHBODamage1,HEAVY BOMB,0,0,0,21,0,21,0
 Weapon Upgrade,FKWeaponUpgradeHBODamage2,HEAVY BOMB,0,0,0,33,0,33,0
@@ -323,11 +323,11 @@ Weapon Upgrade,FKWeaponUpgradeHBOROF1,HEAVY BOMB,17,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHBOROF2,HEAVY BOMB,25,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHBOROF3,HEAVY BOMB,32,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeHBOROF4,HEAVY BOMB,38,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHBOAccuracy0,HEAVY BOMB,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHBOAccuracy1,HEAVY BOMB,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHBOAccuracy2,HEAVY BOMB,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHBOAccuracy3,HEAVY BOMB,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeHBOAccuracy4,HEAVY BOMB,0,61,61,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHBOAccuracy0,HEAVY BOMB,0,3,3,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHBOAccuracy1,HEAVY BOMB,0,5,5,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHBOAccuracy2,HEAVY BOMB,0,7,7,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHBOAccuracy3,HEAVY BOMB,0,9,9,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeHBOAccuracy4,HEAVY BOMB,0,10,10,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeCANDamage0,CANNON,0,0,0,10,0,10,0
 Weapon Upgrade,FKWeaponUpgradeCANDamage1,CANNON,0,0,0,21,0,21,0
 Weapon Upgrade,FKWeaponUpgradeCANDamage2,CANNON,0,0,0,33,0,33,0
@@ -340,11 +340,11 @@ Weapon Upgrade,FKWeaponUpgradeCANROF1,CANNON,17,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeCANROF2,CANNON,25,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeCANROF3,CANNON,32,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeCANROF4,CANNON,38,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeCANAccuracy0,CANNON,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeCANAccuracy1,CANNON,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeCANAccuracy2,CANNON,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeCANAccuracy3,CANNON,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeCANAccuracy4,CANNON,0,61,61,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeCANAccuracy0,CANNON,0,7,7,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeCANAccuracy1,CANNON,0,13,13,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeCANAccuracy2,CANNON,0,18,18,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeCANAccuracy3,CANNON,0,23,23,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeCANAccuracy4,CANNON,0,27,27,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeGAUDamage0,GAUSS,0,0,0,10,0,10,0
 Weapon Upgrade,FKWeaponUpgradeGAUDamage1,GAUSS,0,0,0,21,0,21,0
 Weapon Upgrade,FKWeaponUpgradeGAUDamage2,GAUSS,0,0,0,33,0,33,0
@@ -357,11 +357,11 @@ Weapon Upgrade,FKWeaponUpgradeGAUROF1,GAUSS,17,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeGAUROF2,GAUSS,25,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeGAUROF3,GAUSS,32,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeGAUROF4,GAUSS,38,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeGAUAccuracy0,GAUSS,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeGAUAccuracy1,GAUSS,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeGAUAccuracy2,GAUSS,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeGAUAccuracy3,GAUSS,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeGAUAccuracy4,GAUSS,0,61,61,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeGAUAccuracy0,GAUSS,0,3,3,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeGAUAccuracy1,GAUSS,0,5,5,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeGAUAccuracy2,GAUSS,0,7,7,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeGAUAccuracy3,GAUSS,0,9,9,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeGAUAccuracy4,GAUSS,0,10,10,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeCLUDamage0,CLUSTER BOMB,0,0,0,10,0,10,0
 Weapon Upgrade,FKWeaponUpgradeCLUDamage1,CLUSTER BOMB,0,0,0,21,0,21,0
 Weapon Upgrade,FKWeaponUpgradeCLUDamage2,CLUSTER BOMB,0,0,0,33,0,33,0
@@ -374,11 +374,11 @@ Weapon Upgrade,FKWeaponUpgradeCLUROF1,CLUSTER BOMB,17,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeCLUROF2,CLUSTER BOMB,25,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeCLUROF3,CLUSTER BOMB,32,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeCLUROF4,CLUSTER BOMB,38,0,0,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeCLUAccuracy0,CLUSTER BOMB,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeCLUAccuracy1,CLUSTER BOMB,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeCLUAccuracy2,CLUSTER BOMB,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeCLUAccuracy3,CLUSTER BOMB,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeCLUAccuracy4,CLUSTER BOMB,0,61,61,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeCLUAccuracy0,CLUSTER BOMB,0,23,23,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeCLUAccuracy1,CLUSTER BOMB,0,44,44,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeCLUAccuracy2,CLUSTER BOMB,0,63,63,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeCLUAccuracy3,CLUSTER BOMB,0,80,80,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeCLUAccuracy4,CLUSTER BOMB,0,96,96,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeMORDamage0,MORTARS,0,0,0,10,0,10,0
 Weapon Upgrade,FKWeaponUpgradeMORDamage1,MORTARS,0,0,0,21,0,21,0
 Weapon Upgrade,FKWeaponUpgradeMORDamage2,MORTARS,0,0,0,33,0,33,0
@@ -392,7 +392,7 @@ Weapon Upgrade,FKWeaponUpgradeMORROF2,MORTARS,25,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeMORROF3,MORTARS,32,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeMORROF4,MORTARS,38,0,0,0,0,0,0
 Weapon Upgrade,FKWeaponUpgradeMORAccuracy0,MORTARS,0,10,10,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeMORAccuracy1,MORTARS,0,21,21,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeMORAccuracy2,MORTARS,0,33,33,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeMORAccuracy3,MORTARS,0,46,46,0,0,0,0
-Weapon Upgrade,FKWeaponUpgradeMORAccuracy4,MORTARS,0,61,61,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMORAccuracy1,MORTARS,0,19,19,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMORAccuracy2,MORTARS,0,27,27,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMORAccuracy3,MORTARS,0,34,34,0,0,0,0
+Weapon Upgrade,FKWeaponUpgradeMORAccuracy4,MORTARS,0,41,41,0,0,0,0

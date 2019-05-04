@@ -975,7 +975,7 @@
     },
     "R-HACK-Hardpoint-ScourgeMissile": {
         "id": "R-HACK-Hardpoint-ScourgeMissile",
-        "name": null,
+        "name": "Scourge Missile Hardpoint (HACK)",
         "requiredResearch": [
             "R-Def-Hardpoint",
             "R-W-MIS-ScourgeMissile"
@@ -988,7 +988,7 @@
     },
     "R-HACK-Hardpoint-ScourgeMissile2": {
         "id": "R-HACK-Hardpoint-ScourgeMissile2",
-        "name": null,
+        "name": "Scourge Missile Hardpoint (HACK)",
         "redStructures": [
             "FKHardpointScourgeMissile"
         ],
@@ -2434,7 +2434,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "SLOW MISSILE",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 4
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
@@ -2457,7 +2457,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "SLOW MISSILE",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 4
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
@@ -2480,7 +2480,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "SLOW MISSILE",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 4
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
@@ -2503,7 +2503,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "SLOW MISSILE",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 3
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
@@ -2526,7 +2526,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "SLOW MISSILE",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 3
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
@@ -2549,7 +2549,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "SLOW MISSILE",
                 "parameter": "HitChance",
-                "value": 16
+                "value": 2
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
@@ -2572,7 +2572,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "SLOW MISSILE",
                 "parameter": "HitChance",
-                "value": 18
+                "value": 2
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
@@ -2952,7 +2952,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A CANNON",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 3
             }
         ],
         "statID": "FK-SF-AACyclone",
@@ -2975,7 +2975,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A CANNON",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 2
             }
         ],
         "statID": "FK-SF-AACyclone",
@@ -2998,7 +2998,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A CANNON",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 2
             }
         ],
         "statID": "FK-SF-AACyclone",
@@ -3021,7 +3021,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A CANNON",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 2
             }
         ],
         "statID": "FK-SF-AACyclone",
@@ -3044,7 +3044,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A CANNON",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 1
             }
         ],
         "statID": "FK-SF-AACyclone",
@@ -3521,7 +3521,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A GUN",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 3
             }
         ],
         "statID": "FK-FF-AAHurricane",
@@ -3544,7 +3544,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A GUN",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 2
             }
         ],
         "statID": "FK-FF-AAHurricane",
@@ -3567,7 +3567,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A GUN",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 2
             }
         ],
         "statID": "FK-FF-AAHurricane",
@@ -3590,7 +3590,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A GUN",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 2
             }
         ],
         "statID": "FK-FF-AAHurricane",
@@ -3613,7 +3613,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A GUN",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 1
             }
         ],
         "statID": "FK-FF-AAHurricane",
@@ -4041,7 +4041,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A LASER",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 2
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
@@ -4064,7 +4064,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A LASER",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 1
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
@@ -4087,7 +4087,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A LASER",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 1
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
@@ -4110,7 +4110,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A LASER",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 1
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
@@ -4133,7 +4133,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "A-A LASER",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 1
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
@@ -4587,7 +4587,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 4
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4610,7 +4610,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 4
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4633,7 +4633,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 4
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4656,7 +4656,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 3
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -4679,7 +4679,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 3
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
@@ -5069,7 +5069,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "CLUSTER BOMB",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 23
             }
         ],
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
@@ -5092,7 +5092,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "CLUSTER BOMB",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 21
             }
         ],
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
@@ -5115,7 +5115,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "CLUSTER BOMB",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 19
             }
         ],
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
@@ -5138,7 +5138,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "CLUSTER BOMB",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 17
             }
         ],
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
@@ -5161,7 +5161,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "CLUSTER BOMB",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 16
             }
         ],
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
@@ -5638,7 +5638,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HEAVY BOMB",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 3
             }
         ],
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
@@ -5661,7 +5661,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HEAVY BOMB",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 2
             }
         ],
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
@@ -5684,7 +5684,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HEAVY BOMB",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 2
             }
         ],
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
@@ -5707,7 +5707,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HEAVY BOMB",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 2
             }
         ],
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
@@ -5730,7 +5730,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HEAVY BOMB",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 1
             }
         ],
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
@@ -6207,7 +6207,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HOT BOMB",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 3
             }
         ],
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
@@ -6230,7 +6230,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HOT BOMB",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 2
             }
         ],
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
@@ -6253,7 +6253,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HOT BOMB",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 2
             }
         ],
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
@@ -6276,7 +6276,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HOT BOMB",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 2
             }
         ],
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
@@ -6299,7 +6299,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HOT BOMB",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 1
             }
         ],
         "subgroupIconID": "IMAGE_RES_WEAPONTECH"
@@ -6775,7 +6775,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "CANNON",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 7
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
@@ -6798,7 +6798,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "CANNON",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 6
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
@@ -6821,7 +6821,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "CANNON",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 5
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
@@ -6844,7 +6844,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "CANNON",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 5
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
@@ -6867,7 +6867,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "CANNON",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 4
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
@@ -7342,7 +7342,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "FLAME",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 15
             }
         ],
         "statID": "FK-HOT-Flamethrower",
@@ -7365,7 +7365,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "FLAME",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 14
             }
         ],
         "statID": "FK-HOT-Flamethrower",
@@ -7411,7 +7411,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "FLAME",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 11
             }
         ],
         "statID": "FK-HOT-Flamethrower",
@@ -7434,7 +7434,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "FLAME",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 9
             }
         ],
         "statID": "FK-HOT-Flamethrower",
@@ -7893,7 +7893,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MORTARS",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 9
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
@@ -7916,7 +7916,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MORTARS",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 8
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
@@ -7939,7 +7939,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MORTARS",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 7
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
@@ -7962,7 +7962,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MORTARS",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 7
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
@@ -8451,7 +8451,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HOWITZERS",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 15
             }
         ],
         "statID": "FK-ART-Howitzer",
@@ -8474,7 +8474,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HOWITZERS",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 14
             }
         ],
         "statID": "FK-ART-Howitzer",
@@ -8520,7 +8520,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HOWITZERS",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 11
             }
         ],
         "statID": "FK-ART-Howitzer",
@@ -8543,7 +8543,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HOWITZERS",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 9
             }
         ],
         "statID": "FK-ART-Howitzer",
@@ -9032,7 +9032,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HOT HOWITZER",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 15
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
@@ -9055,7 +9055,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HOT HOWITZER",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 14
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
@@ -9101,7 +9101,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HOT HOWITZER",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 11
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
@@ -9124,7 +9124,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "HOT HOWITZER",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 9
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
@@ -9607,7 +9607,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "SLOW ROCKET",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 4
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
@@ -9630,7 +9630,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "SLOW ROCKET",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 4
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
@@ -9653,7 +9653,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "SLOW ROCKET",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 4
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
@@ -9676,7 +9676,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "SLOW ROCKET",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 3
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
@@ -9699,7 +9699,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "SLOW ROCKET",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 3
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
@@ -9722,7 +9722,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "SLOW ROCKET",
                 "parameter": "HitChance",
-                "value": 16
+                "value": 2
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
@@ -9745,7 +9745,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "SLOW ROCKET",
                 "parameter": "HitChance",
-                "value": 18
+                "value": 2
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
@@ -10131,7 +10131,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "LASER",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 2
             }
         ],
         "statID": "FK-HOT-Laser",
@@ -10154,7 +10154,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "LASER",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 1
             }
         ],
         "statID": "FK-HOT-Laser",
@@ -10177,7 +10177,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "LASER",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 1
             }
         ],
         "statID": "FK-HOT-Laser",
@@ -10200,7 +10200,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "LASER",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 1
             }
         ],
         "statID": "FK-HOT-Laser",
@@ -10223,7 +10223,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "LASER",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 1
             }
         ],
         "statID": "FK-HOT-Laser",
@@ -10677,7 +10677,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 4
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
@@ -10700,7 +10700,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 4
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
@@ -10723,7 +10723,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 4
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
@@ -10746,7 +10746,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 3
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
@@ -10769,7 +10769,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MACHINE GUN",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 3
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
@@ -11164,7 +11164,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "GAUSS",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 3
             }
         ],
         "statID": "FK-SF-Railgun",
@@ -11187,7 +11187,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "GAUSS",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 2
             }
         ],
         "statID": "FK-SF-Railgun",
@@ -11210,7 +11210,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "GAUSS",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 2
             }
         ],
         "statID": "FK-SF-Railgun",
@@ -11233,7 +11233,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "GAUSS",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 2
             }
         ],
         "statID": "FK-SF-Railgun",
@@ -11256,7 +11256,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "GAUSS",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 1
             }
         ],
         "statID": "FK-SF-Railgun",
@@ -11661,7 +11661,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "ROCKET",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 4
             }
         ],
         "statID": "FK-ART-RocketBattery",
@@ -11684,7 +11684,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "ROCKET",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 4
             }
         ],
         "statID": "FK-ART-RocketBattery",
@@ -11707,7 +11707,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "ROCKET",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 4
             }
         ],
         "statID": "FK-ART-RocketBattery",
@@ -11730,7 +11730,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "ROCKET",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 3
             }
         ],
         "statID": "FK-ART-RocketBattery",
@@ -11753,7 +11753,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "ROCKET",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 3
             }
         ],
         "statID": "FK-ART-RocketBattery",
@@ -11776,7 +11776,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "ROCKET",
                 "parameter": "HitChance",
-                "value": 16
+                "value": 2
             }
         ],
         "statID": "FK-ART-RocketBattery",
@@ -11799,7 +11799,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "ROCKET",
                 "parameter": "HitChance",
-                "value": 18
+                "value": 2
             }
         ],
         "statID": "FK-ART-RocketBattery",
@@ -12173,7 +12173,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MISSILE",
                 "parameter": "HitChance",
-                "value": 10
+                "value": 4
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
@@ -12196,7 +12196,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MISSILE",
                 "parameter": "HitChance",
-                "value": 11
+                "value": 4
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
@@ -12219,7 +12219,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MISSILE",
                 "parameter": "HitChance",
-                "value": 12
+                "value": 4
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
@@ -12242,7 +12242,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MISSILE",
                 "parameter": "HitChance",
-                "value": 13
+                "value": 3
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
@@ -12265,7 +12265,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MISSILE",
                 "parameter": "HitChance",
-                "value": 15
+                "value": 3
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
@@ -12288,7 +12288,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MISSILE",
                 "parameter": "HitChance",
-                "value": 16
+                "value": 2
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
@@ -12311,7 +12311,7 @@
                 "filterParameter": "ImpactClass",
                 "filterValue": "MISSILE",
                 "parameter": "HitChance",
-                "value": 18
+                "value": 2
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",

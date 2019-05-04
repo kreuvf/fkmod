@@ -3,6 +3,7 @@ Currently, there are no known issues. Items in TODO.txt do not count.
 Burn effect stacks: Multiple burn effects stack causing enormous damage per second and almost instantly killing cyborgs
 Upstream bug: Autorepair does not apply to units produced via the debug menu.
 Intelligence screen: Audio message depends on research's IconID which often does not match or uses an icon without corresponding message
+Accuracy research: Due to different base accuracies for Machine Guns, Autocannons and Grenade Launcher the 10% decrease of the current probability to miss the target was calculated for the better of the variants only; this makes the upgrades for the less accurate weapon less effective
 
 Not reproducable:
 ab79eb07fa462f066d180ba638476c12d5b29e7d
