@@ -120,7 +120,7 @@ function buildEssentials() {
 }
 
 // Build more oil derricks, if not enough power generation for existing buildings and there is safe oil
-function buildOil() {
+function buildOil(builder) {
 	var buildings = [];
 	var numDerricks = enumStruct(me, BaseStructs.derricks[0]).length;
 	var requiredOil = ( 4 +
@@ -130,19 +130,16 @@ function buildOil() {
 		enumStruct(me, BaseStructs.labs[0]).length * 2
 	)
 	if (numDerricks < requiredOil) {
-		var oil = enumFeature(-1).filter(function(feature) {
-			return feature.stattype == OIL_RESOURCE;
-		}).sort(function(one, two) {
+		var oil = enumFeature(-1, "OilResource").sort(function(one, two) {
 			return distanceToBase(one) - distanceToBase(two);
 		});
 		var safeOil = oil.filter(function(feature){
 			return isAreaSafe(feature.x, feature.y, 10);
 		});
-		if (safeOil.length > 1) {
-			buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[0].x, safeOil[0].y, 1));
-			buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[1].x, safeOil[1].y, 1));
-		} else {
-			buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[0].x, safeOil[0].y, 1));
+		for(var i = 0; i < safeOil.length; i++) {
+			var pos = pickStructLocation(builder, BaseStructs.derricks[0], safeOil[i].x, safeOil[i].y);
+			if (!pos) continue;
+			buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[i].x, safeOil[i].y, 1));
 		}
 	}
 	
@@ -198,28 +195,26 @@ function buildSomething() {
 	
 	// Help build a started structure if near enough
 	var unfinished = enumStruct(me).filter(function(struct) {
-		return struct.status == BEING_BUILT;
+		return struct.status == BEING_BUILT && distance(trucks[0], struct) < 15;
 	});
-	if(unfinished.length > 0) {
-		for(var i = 0; i < unfinished.length; i++) {
-			if(distance(trucks[0], unfinished[0]) < 20) {
-				orderDroidObj(trucks[0], DORDER_HELPBUILD, unfinished[0]);
-				return;
-			}
-		}
+	if(unfinished.length > 1) {
+		debug(unfinished.length);
+		orderDroidObj(trucks[0], DORDER_HELPBUILD, unfinished[0]);
+		return;
 	}
 	
 	var buildList = buildEssentials();
-	buildList = buildList.concat(buildOil());
+	buildList = buildList.concat(buildOil(trucks[0]));
 	buildList = buildList.concat(buildBase());
 	if (buildList.length > 0) {
 		for(var i = 0; i < buildList.length; i++) {
 			var structure = buildList[i];
 			var builder = findNearestIdleBuilder(structure.x, structure.y);
-			if (!builder) return;
+			if (!builder) continue;
 			if (!isStructureAvailable(structure.id, me)) continue;
 			var pos = pickStructLocation(builder, structure.id, structure.x, structure.y);
-			if (!pos) return;
+			if (!pos) continue;
+			if (!droidCanReach(builder, pos.x, pos.y)) continue;
 			var status = orderDroidBuild(builder, DORDER_BUILD, structure.id, pos.x, pos.y);
 			if(status) break;
 		}
