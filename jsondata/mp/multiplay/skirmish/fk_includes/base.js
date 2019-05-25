@@ -67,11 +67,12 @@ function findNearestIdleBuildersFrom(x, y, builders) {
 
 
 // Struct for building priority list
-function potStructure(id, x, y, priority) {
+function potStructure(id, x, y, priority, numBuilders) {
 	this.id = id;
 	this.x = x;
 	this.y = y;
 	this.priority = priority;
+	this.numBuilders = numBuilders;
 }
 
 // Try to have at least 1 oil derrick, 1 power generator and 1 factory
@@ -90,19 +91,19 @@ function buildEssentials() {
 		});
 		if (oil.length > 0) {
 			if (safeOil.length == 0) {
-				buildings.push(new potStructure(BaseStructs.derricks[0], oil[0].x, oil[0].y, 0));
+				buildings.push(new potStructure(BaseStructs.derricks[0], oil[0].x, oil[0].y, 0, 1));
 				if (oil.length > 1) {
-					buildings.push(new potStructure(BaseStructs.derricks[0], oil[1].x, oil[1].y, 0));
+					buildings.push(new potStructure(BaseStructs.derricks[0], oil[1].x, oil[1].y, 0, 1));
 				}
 			} else {
-				buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[0].x, safeOil[0].y, 0));
+				buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[0].x, safeOil[0].y, 0, 1));
 				if (safeOil.length > 1) {
-					buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[1].x, safeOil[1].y, 0));
+					buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[1].x, safeOil[1].y, 0, 1));
 				} else if (oil.length > 1) {
 					if (oil[0] != safeOil[0]) {
-						buildings.push(new potStructure(BaseStructs.derricks[0], oil[0].x, oil[0].y, 0));
+						buildings.push(new potStructure(BaseStructs.derricks[0], oil[0].x, oil[0].y, 0, 1));
 					} else {
-						buildings.push(new potStructure(BaseStructs.derricks[0], oil[1].x, oil[1].y, 0));
+						buildings.push(new potStructure(BaseStructs.derricks[0], oil[1].x, oil[1].y, 0, 1));
 					}
 				}
 			}
@@ -112,16 +113,16 @@ function buildEssentials() {
 	// Check power generators
 	var numGens = enumStruct(me, BaseStructs.gens[0]);
 		if (numGens < 1) {
-			buildings.push(new potStructure(BaseStructs.gens[0], startPositions[me].x, startPositions[me].y, 0));
+			buildings.push(new potStructure(BaseStructs.gens[0], startPositions[me].x, startPositions[me].y, 0, 2));
 		}
 	
 	// Check factories
 	var numFacs = enumStruct(me, BaseStructs.tankFac[0]) + enumStruct(me, BaseStructs.cybFac[0]);
 	if(numFacs < 1) {
 		if(playerPower(me) < 300) {
-			buildings.push(new potStructure(BaseStructs.cybFac[0], startPositions[me].x, startPositions[me].y, 0));
+			buildings.push(new potStructure(BaseStructs.cybFac[0], startPositions[me].x, startPositions[me].y, 0, 2));
 		} else {
-			buildings.push(new potStructure(BaseStructs.tankFac[0], startPositions[me].x, startPositions[me].y, 0));
+			buildings.push(new potStructure(BaseStructs.tankFac[0], startPositions[me].x, startPositions[me].y, 0, 2));
 		}
 	}
 	
@@ -148,7 +149,7 @@ function buildOil(builder) {
 		for(var i = 0; i < safeOil.length; i++) {
 			var pos = pickStructLocation(builder, BaseStructs.derricks[0], safeOil[i].x, safeOil[i].y);
 			if (!pos) continue;
-			buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[i].x, safeOil[i].y, 1));
+			buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[i].x, safeOil[i].y, 1, 1));
 		}
 	}
 	
@@ -179,14 +180,14 @@ function buildBase() {
 			buildings.push(new potStructure(BaseStructs.labs[0], startPositions[me].x, startPositions[me].y, 0));
 		} else if (cybFacs + tankFacs + vtolFacs < labs + 2 || labs == getStructureLimit(BaseStructs.labs[0], me)) {
 			if((tankFacs <= cybFacs || !isStructureAvailable(BaseStructs.cybFac[0], me)) && (tankFacs <= vtolFacs || !isStructureAvailable(BaseStructs.vtolFac[0], me))) {
-				buildings.push(new potStructure(BaseStructs.tankFac[0], startPositions[me].x, startPositions[me].y, 0));
+				buildings.push(new potStructure(BaseStructs.tankFac[0], startPositions[me].x, startPositions[me].y, 0, 2));
 			} else if((cybFacs < tankFacs || !isStructureAvailable(BaseStructs.tankFac[0], me)) && (cybFacs <= vtolFacs || !isStructureAvailable(BaseStructs.vtolFac[0], me))) {
-				buildings.push(new potStructure(BaseStructs.cybFac[0], startPositions[me].x, startPositions[me].y, 0));
+				buildings.push(new potStructure(BaseStructs.cybFac[0], startPositions[me].x, startPositions[me].y, 0, 2));
 			} else if(isStructureAvailable(BaseStructs.vtolFac[0], me)) {
-				buildings.push(new potStructure(BaseStructs.vtolFac[0], startPositions[me].x, startPositions[me].y, 0));
+				buildings.push(new potStructure(BaseStructs.vtolFac[0], startPositions[me].x, startPositions[me].y, 0, 2));
 			}
 		} else {
-			buildings.push(new potStructure(BaseStructs.labs[0], startPositions[me].x, startPositions[me].y, 0));
+			buildings.push(new potStructure(BaseStructs.labs[0], startPositions[me].x, startPositions[me].y, 0, 2));
 		}
 		
 	}
@@ -227,29 +228,32 @@ function buildSomething() {
 		var pos = pickStructLocation(trucks[0], structure.id, structure.x, structure.y);
 		if (!pos) continue;
 		if (!droidCanReach(trucks[0], pos.x, pos.y)) continue;
-		var status = orderDroidBuild(trucks[0], DORDER_BUILD, structure.id, pos.x, pos.y);
-		if(status) trucks.shift();
+		var numBuilders = structure.numBuilders;
+		while(numBuilders > 0 && trucks.length > 0) {
+			var status = orderDroidBuild(trucks.shift(), DORDER_BUILD, structure.id, pos.x, pos.y);
+			numBuilders--;
+		}
 	}
 }
 
 // Initial build order at game start
 
 var buildOrder= [
-	new potStructure(BaseStructs.tankFac[0], startPositions[me].x, startPositions[me].y, 0),
-	new potStructure(BaseStructs.gens[0], startPositions[me].x, startPositions[me].y, 0),
-	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0),
-	new potStructure(BaseStructs.labs[0], startPositions[me].x, startPositions[me].y, 0),
-	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0),
-	new potStructure(BaseStructs.gens[0], startPositions[me].x, startPositions[me].y, 0),
-	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0),
-	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0),
+	new potStructure(BaseStructs.tankFac[0], startPositions[me].x, startPositions[me].y, 0, 2),
+	new potStructure(BaseStructs.gens[0], startPositions[me].x, startPositions[me].y, 0, 2),
+	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0, 1),
+	new potStructure(BaseStructs.labs[0], startPositions[me].x, startPositions[me].y, 0, 2),
+	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0, 1),
+	new potStructure(BaseStructs.gens[0], startPositions[me].x, startPositions[me].y, 0, 2),
+	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0, 1),
+	new potStructure(BaseStructs.derricks[0], startPositions[me].x, startPositions[me].y, 0, 1),
 ]
 
 // Chekcs if ai has at least nr of type and orders an additinal structure built if not
 function buildMin(type, nr) {
 	var num = enumStruct(me, type).length;
 	if(num < nr) {
-		var structure = new potStructure(type, startPositions[me].x, startPositions[me].y, 0)
+		var structure = new potStructure(type, startPositions[me].x, startPositions[me].y, 0, 1);
 		var builder = findNearestIdleBuilder(structure.x, structure.y);
 		if (!builder) return true;
 		var pos = pickStructLocation(builder, structure.id, structure.x, structure.y);
