@@ -55,6 +55,15 @@ function findNearestIdleBuilder(x, y) {
 	if (builders.length > 0) return builders[0];
 }
 
+function findNearestIdleBuildersFrom(x, y, builders) {
+	var builders = builders.filter(function(droid){
+		return droidCanReach(droid, x, y);
+	}).sort(function(one, two) {
+		return distance(one, x, y) - distance(two, x, y);
+	});
+	if (builders.length > 0) return builders;
+}
+
 
 
 // Struct for building priority list
@@ -199,25 +208,27 @@ function buildSomething() {
 	});
 	if(unfinished.length > 1) {
 		debug(unfinished.length);
-		orderDroidObj(trucks[0], DORDER_HELPBUILD, unfinished[0]);
-		return;
+		for(var i = 0; i < unfinished.length; i++) {
+			if(distance(trucks[0], unfinished[i]) < 20 && unfinished[i].stattype != RESOURCE_EXTRACTOR) {
+				orderDroidObj(trucks[0], DORDER_HELPBUILD, unfinished[i]);
+				return;
+			}
+		}
 	}
 	
 	var buildList = buildEssentials();
 	buildList = buildList.concat(buildOil(trucks[0]));
 	buildList = buildList.concat(buildBase());
-	if (buildList.length > 0) {
-		for(var i = 0; i < buildList.length; i++) {
-			var structure = buildList[i];
-			var builder = findNearestIdleBuilder(structure.x, structure.y);
-			if (!builder) continue;
-			if (!isStructureAvailable(structure.id, me)) continue;
-			var pos = pickStructLocation(builder, structure.id, structure.x, structure.y);
-			if (!pos) continue;
-			if (!droidCanReach(builder, pos.x, pos.y)) continue;
-			var status = orderDroidBuild(builder, DORDER_BUILD, structure.id, pos.x, pos.y);
-			if(status) break;
-		}
+	while (buildList.length > 0 && trucks.length > 0) {
+		var structure = buildList.shift();
+		trucks = findNearestIdleBuildersFrom(structure.x, structure.y, trucks);
+		if (!trucks) continue;
+		if (!isStructureAvailable(structure.id, me)) continue;
+		var pos = pickStructLocation(trucks[0], structure.id, structure.x, structure.y);
+		if (!pos) continue;
+		if (!droidCanReach(trucks[0], pos.x, pos.y)) continue;
+		var status = orderDroidBuild(trucks[0], DORDER_BUILD, structure.id, pos.x, pos.y);
+		if(status) trucks.shift();
 	}
 }
 
@@ -260,8 +271,8 @@ function buildStartup() {
 	});
 	if(unfinished.length > 0) {
 		for(var i = 0; i < unfinished.length; i++) {
-			if(distance(trucks[0], unfinished[0]) < 20) {
-				orderDroidObj(trucks[0], DORDER_HELPBUILD, unfinished[0]);
+			if(distance(trucks[0], unfinished[i]) < 20 && unfinished[i].stattype != RESOURCE_EXTRACTOR) {
+				orderDroidObj(trucks[0], DORDER_HELPBUILD, unfinished[i]);
 				return;
 			}
 		}
