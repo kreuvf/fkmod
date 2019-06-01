@@ -546,6 +546,17 @@ def addmessage (resmsgs, resmsgname, sequencename):
 		]
 	}
 
+def getResValue (research, topic, parameter):
+	for result in research[topic]['results']:
+		if result['parameter'] == parameter:
+			return result['value']
+		# This crap is necessary because WZP decided to have inconsistency in their naming scheme
+		# firePause (weapons.json) vs. FirePause (research.json)
+		# reloadTime (weapons.json) vs. ReloadTime (research.json)
+		elif result['parameter'] == parameter[0].upper() + parameter[1:]:
+			return result['value']
+	return 0
+
 for single in singles:
 	# Starting at 1 to get rid of the "R" in "R-[...]"
 	resmsgname = 'RM' + single[1:]
@@ -1648,6 +1659,10 @@ for succession in successions:
 			# Get internal weapon name
 			internalweaponname = weaponnames[successionparts[2]]
 			# Generate Upgrade information
+			# Keys usage is messy
+			# In weapons.json lowercase + camel case is used
+			# In research.json in the results section the first letter is capitalized + camel case
+			# Thank you for consistency, WZP >.<
 			keys = ['firePause', 'numRounds', 'reloadTime']
 			upgradeinfo = []
 			newvalue = {}
@@ -1666,8 +1681,8 @@ for succession in successions:
 				# Cycle over upgrades for oldvalue
 				for key in oldvalue:
 					for oldtopic in range(1, int(topic)):
-						oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
-					newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+						oldvalue[key] = oldvalue[key] * (1 + (getResValue(research, succession + str(oldtopic), key) / 100))
+					newvalue[key] = oldvalue[key] * (1 + (getResValue(research, succession + topic, key) / 100))
 				# Calculate ROFs
 				rofs = {}
 				if oldvalue['numRounds'] == 1:
@@ -2255,7 +2270,6 @@ for succession in successions:
 				else:
 					upgradeinfo[0] = upgradeinfo[0].format(alt = "")
 					upgradeinfo.append('')
-
 			successionmsgs[resmsgname] = [
 				'{} rate of fire (ROF) improved'.format(weaponname),
 				upgradeinfo[0],
