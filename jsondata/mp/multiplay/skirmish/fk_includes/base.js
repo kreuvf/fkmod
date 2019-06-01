@@ -71,7 +71,7 @@ function potStructure(id, x, y, priority, numBuilders) {
 	this.id = id;
 	this.x = x;
 	this.y = y;
-	this.priority = priority;
+	this.priority = priority; //lower value comes first
 	this.numBuilders = numBuilders;
 }
 
@@ -149,10 +149,9 @@ function buildOil(builder) {
 		for(var i = 0; i < safeOil.length; i++) {
 			var pos = pickStructLocation(builder, BaseStructs.derricks[0], safeOil[i].x, safeOil[i].y);
 			if (!pos) continue;
-			buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[i].x, safeOil[i].y, 1, 1));
+			buildings.push(new potStructure(BaseStructs.derricks[0], safeOil[i].x, safeOil[i].y, i, 1));
 		}
 	}
-	
 	return buildings;
 }
 
@@ -220,6 +219,9 @@ function buildSomething() {
 	var buildList = buildEssentials();
 	buildList = buildList.concat(buildOil(trucks[0]));
 	buildList = buildList.concat(buildBase());
+	buildList = buildList.sort(function(a, b) {
+		return a.priority - b.priority;
+	});
 	while (buildList.length > 0 && trucks.length > 0) {
 		var structure = buildList.shift();
 		trucks = findNearestIdleBuildersFrom(structure.x, structure.y, trucks);
