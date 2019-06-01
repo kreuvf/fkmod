@@ -108,7 +108,7 @@ function unitControl() {
 				var target = findAntiTankTarget();
 				target = target.filter(function(droid) {
 					return droidCanReach(units[0], droid.x, droid.y);
-				});
+				}).sort(function(a, b) {return distance(a,b)});
 				if(target.length > 0) {
 					for(var j = 0; j < units.length; j++) {
 						orderDroidObj(units[j], DORDER_ATTACK, target[0]);
@@ -152,7 +152,7 @@ function unitControl() {
 				var target = findAntiCyborgTarget();
 				target = target.filter(function(droid) {
 					return droidCanReach(units[0], droid.x, droid.y);
-				});
+				}).sort(function(a, b) {return distance(a,b)});
 				if(target.length > 0) {
 					for(var j = 0; j < units.length; j++) {
 						orderDroidObj(units[j], DORDER_ATTACK, target[0]);
@@ -203,7 +203,7 @@ function unitControl() {
 				target.concat(findAntiTankTarget());
 				target = target.filter(function(droid) {
 					return droidCanReach(units[0], droid.x, droid.y);
-				});
+				}).sort(function(a, b) {return distance(a,b)});
 				if(target.length > 0) {
 					for(var j = 0; j < units.length; j++) {
 						orderDroidObj(units[j], DORDER_ATTACK, target[0]);
