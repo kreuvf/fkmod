@@ -70,6 +70,7 @@ function unit(name, body, propulsion, weapon) {
 }
 
 function production() {
+	if (playerPower(me) <= 50) return;
 	var tankFacs = idleTankFacs();
 	if(enumDroid(me, DROID_CONSTRUCT).length < 3) queueTank(new truck());
 	if(tankFacs.length > 0) {

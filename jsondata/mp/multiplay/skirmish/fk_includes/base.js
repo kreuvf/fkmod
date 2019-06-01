@@ -207,7 +207,6 @@ function buildSomething() {
 		return struct.status == BEING_BUILT && distance(trucks[0], struct) < 15;
 	});
 	if(unfinished.length > 1) {
-		debug(unfinished.length);
 		for(var i = 0; i < unfinished.length; i++) {
 			if(distance(trucks[0], unfinished[i]) < 20 && unfinished[i].stattype != RESOURCE_EXTRACTOR) {
 				orderDroidObj(trucks[0], DORDER_HELPBUILD, unfinished[i]);
@@ -222,7 +221,7 @@ function buildSomething() {
 	buildList = buildList.sort(function(a, b) {
 		return a.priority - b.priority;
 	});
-	while (buildList.length > 0 && trucks.length > 0) {
+	while (buildList.length > 0 && trucks.length > 0 && playerPower(me) > 50) {
 		var structure = buildList.shift();
 		trucks = findNearestIdleBuildersFrom(structure.x, structure.y, trucks);
 		if (!trucks) continue;
@@ -268,6 +267,7 @@ function buildMin(type, nr) {
 
 // Initial build order for game start, calls "buildsomething" when all required buildings are built
 function buildStartup() {
+	if(playerPower(me) <= 50) return;
 	var trucks = findIdleBuilders();
 	if(trucks.length == 0) return;
 	

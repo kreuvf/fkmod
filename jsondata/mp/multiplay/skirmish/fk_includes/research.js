@@ -91,6 +91,7 @@ function setWeaponFocus() {
 }
 
 function researchSomething() {
+	if(playerPower(me) <= 50) return;
 	var available = enumResearch();
 	var freeLabs = idleLabs();
 	if(available.length == 0 || freeLabs.length == 0) return;
