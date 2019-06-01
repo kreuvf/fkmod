@@ -1,8 +1,8 @@
 function eventStartLevel() {
 	setTimer("buildStartup", 1000); // build buildings
-	setTimer("production", 1000); // build units
-	setTimer("researchSomething", 1000); // research
-	setTimer("unitControl", 1000);
+	setTimer("production", 5000); // build units
+	setTimer("researchSomething", 5000); // research
+	setTimer("unitControl", 5000);
 }
 
 function eventDroidBuilt(droid, structure) {
