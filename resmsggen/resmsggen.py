@@ -1667,22 +1667,27 @@ for succession in successions:
 			upgradeinfo = []
 			newvalue = {}
 			oldvalue = {}
+			initialvalue = {}
 			for key in keys:
 				newvalue[key] = -1
 				if key in weapons[internalweaponname]:
-					oldvalue[key] = int(weapons[internalweaponname][key])
+					initialvalue[key] = int(weapons[internalweaponname][key])
 				else:
-					oldvalue[key] = 0
+					initialvalue[key] = 0
 			# Decide for weapon type
 			# Salvo firing weapon
-			if (oldvalue['firePause'] != 0) \
-			and (oldvalue['numRounds'] != 0) \
-			and (oldvalue['reloadTime'] != 0):
-				# Cycle over upgrades for oldvalue
-				for key in oldvalue:
+			if (initialvalue['firePause'] != 0) \
+			and (initialvalue['numRounds'] != 0) \
+			and (initialvalue['reloadTime'] != 0):
+				# Cycle over upgrades for initialvalue
+				for key in initialvalue:
+					upgradeTotal = 0
 					for oldtopic in range(1, int(topic)):
-						oldvalue[key] = oldvalue[key] * (1 + (getResValue(research, succession + str(oldtopic), key) / 100))
-					newvalue[key] = oldvalue[key] * (1 + (getResValue(research, succession + topic, key) / 100))
+						upgradeTotal += getResValue(research, succession + str(oldtopic), key)
+					oldvalue[key] = initialvalue[key] * (1 + (upgradeTotal / 100))
+					upgradeTotal += getResValue(research, succession + topic, key)
+					newvalue[key] = initialvalue[key] * (1 + (upgradeTotal / 100))
+				
 				# Calculate ROFs
 				rofs = {}
 				if oldvalue['numRounds'] == 1:
@@ -2102,14 +2107,18 @@ for succession in successions:
 					upgradeinfo.append('')
 
 			# Non-salvo firing weapon
-			if (oldvalue['firePause'] != 0) \
-			and (oldvalue['numRounds'] == 0) \
-			and (oldvalue['reloadTime'] == 0):
-				# Cycle over upgrades for oldvalue
-				for key in oldvalue:
+			if (initialvalue['firePause'] != 0) \
+			and (initialvalue['numRounds'] == 0) \
+			and (initialvalue['reloadTime'] == 0):
+				# Cycle over upgrades for initialvalue
+				for key in initialvalue:
+					upgradeTotal = 0
 					for oldtopic in range(1, int(topic)):
-						oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
-					newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
+						upgradeTotal += getResValue(research, succession + str(oldtopic), key)
+					oldvalue[key] = initialvalue[key] * (1 + (upgradeTotal / 100))
+					upgradeTotal += getResValue(research, succession + topic, key)
+					newvalue[key] = initialvalue[key] * (1 + (upgradeTotal / 100))
+
 				# Calculate ROFs
 				rofs = {}
 				# Per complete cycle

@@ -996,7 +996,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Avenger SAM rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 240.0/11.4 \u2197 292.7/11.5",
+            "Salvo/Cycle ROF per min: 240.0/11.4 \u2197 255.3/12.5",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1007,7 +1007,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Avenger SAM rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 292.7/11.5 \u2197 355.9/11.6",
+            "Salvo/Cycle ROF per min: 255.3/12.5 \u2197 255.3/13.8",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1018,7 +1018,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Avenger SAM rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 355.9/11.6 \u2197 444.1/11.7",
+            "Salvo/Cycle ROF per min: 255.3/13.8 \u2197 300.0/15.2",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1029,7 +1029,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Avenger SAM rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 444.1/11.7 \u2197 554.8/11.7",
+            "Salvo/Cycle ROF per min: 300.0/15.2 \u2197 324.3/16.7",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1040,7 +1040,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Avenger SAM rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 554.8/11.7 \u2197 692.3/11.8",
+            "Salvo/Cycle ROF per min: 324.3/16.7 \u2197 375.0/18.4",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1189,7 +1189,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cyclone AA rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 120.0/5.7 \u2197 146.3/5.8",
+            "Salvo/Cycle ROF per min: 120.0/5.7 \u2197 131.9/6.3",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1200,7 +1200,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cyclone AA rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 146.3/5.8 \u2197 177.9/5.8",
+            "Salvo/Cycle ROF per min: 131.9/6.3 \u2197 144.6/6.9",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1211,7 +1211,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cyclone AA rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 177.9/5.8 \u2197 222.0/5.8",
+            "Salvo/Cycle ROF per min: 144.6/6.9 \u2197 160.0/7.6",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1222,7 +1222,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cyclone AA rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 222.0/5.8 \u2197 277.4/5.9",
+            "Salvo/Cycle ROF per min: 160.0/7.6 \u2197 176.5/8.4",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1233,7 +1233,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cyclone AA rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 277.4/5.9 \u2197 346.2/5.9",
+            "Salvo/Cycle ROF per min: 176.5/8.4 \u2197 193.5/9.2",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1371,7 +1371,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Hurricane AA rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 800.0/72.7 \u2197 909.1/73.5",
+            "Salvo/Cycle ROF per min: 800.0/72.7 \u2197 879.1/79.9",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1382,7 +1382,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Hurricane AA rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 909.1/73.5 \u2197 1021.8/74.2",
+            "Salvo/Cycle ROF per min: 879.1/79.9 \u2197 963.9/87.6",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1393,7 +1393,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Hurricane AA rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 1021.8/74.2 \u2197 1153.3/74.8",
+            "Salvo/Cycle ROF per min: 963.9/87.6 \u2197 1066.7/97.0",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1404,7 +1404,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Hurricane AA rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 1153.3/74.8 \u2197 1286.7/75.3",
+            "Salvo/Cycle ROF per min: 1066.7/97.0 \u2197 1176.5/107.0",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1415,7 +1415,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Hurricane AA rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 1286.7/75.3 \u2197 1417.3/75.7",
+            "Salvo/Cycle ROF per min: 1176.5/107.0 \u2197 1290.3/117.3",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1426,7 +1426,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Hurricane AA rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 1417.3/75.7 \u2197 1566.9/76.1",
+            "Salvo/Cycle ROF per min: 1290.3/117.3 \u2197 1428.6/129.9",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1437,7 +1437,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Hurricane AA rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 1566.9/76.1 \u2197 1708.0/76.4",
+            "Salvo/Cycle ROF per min: 1428.6/129.9 \u2197 1568.6/142.6",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1619,7 +1619,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Stormbringer AA rate of fire (ROF) improved",
-            "ROF per min: 7.2 \u2197 7.8",
+            "ROF per min: 7.2 \u2197 8.0",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1630,7 +1630,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Stormbringer AA rate of fire (ROF) improved",
-            "ROF per min: 7.8 \u2197 8.4",
+            "ROF per min: 8.0 \u2197 8.8",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1641,7 +1641,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Stormbringer AA rate of fire (ROF) improved",
-            "ROF per min: 8.4 \u2197 8.9",
+            "ROF per min: 8.8 \u2197 9.7",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1768,7 +1768,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Autocannon rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min (tank): 75.0/25.0 \u2197 84.5/26.0",
+            "Salvo/Cycle ROF per min (tank): 75.0/25.0 \u2197 82.4/27.5",
             "Salvo/Cycle ROF per min (VTOL): 750.0/88.2 \u2197 845.1/89.4",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1779,7 +1779,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Autocannon rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min (tank): 84.5/26.0 \u2197 94.2/26.8",
+            "Salvo/Cycle ROF per min (tank): 82.4/27.5 \u2197 90.4/30.1",
             "Salvo/Cycle ROF per min (VTOL): 845.1/89.4 \u2197 941.6/90.4",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1790,7 +1790,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Autocannon rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min (tank): 94.2/26.8 \u2197 105.2/27.6",
+            "Salvo/Cycle ROF per min (tank): 90.4/30.1 \u2197 100.0/33.3",
             "Salvo/Cycle ROF per min (VTOL): 941.6/90.4 \u2197 1052.2/91.3",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1801,7 +1801,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Autocannon rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min (tank): 105.2/27.6 \u2197 116.2/28.4",
+            "Salvo/Cycle ROF per min (tank): 100.0/33.3 \u2197 110.3/36.8",
             "Salvo/Cycle ROF per min (VTOL): 1052.2/91.3 \u2197 1162.1/92.1",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1812,7 +1812,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Autocannon rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min (tank): 116.2/28.4 \u2197 126.8/28.9",
+            "Salvo/Cycle ROF per min (tank): 110.3/36.8 \u2197 121.0/40.3",
             "Salvo/Cycle ROF per min (VTOL): 1162.1/92.1 \u2197 1267.6/92.7",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1823,7 +1823,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Autocannon rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min (tank): 126.8/28.9 \u2197 138.6/29.5",
+            "Salvo/Cycle ROF per min (tank): 121.0/40.3 \u2197 133.9/44.6",
             "Salvo/Cycle ROF per min (VTOL): 1267.6/92.7 \u2197 1385.9/93.3",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1834,7 +1834,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Autocannon rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min (tank): 138.6/29.5 \u2197 149.5/30.0",
+            "Salvo/Cycle ROF per min (tank): 133.9/44.6 \u2197 147.1/49.0",
             "Salvo/Cycle ROF per min (VTOL): 1385.9/93.3 \u2197 1495.2/93.7",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -1994,7 +1994,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cluster bomb rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 750.0/55.6 \u2197 845.1/56.0",
+            "Salvo/Cycle ROF per min: 750.0/55.6 \u2197 824.2/61.1",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2005,7 +2005,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cluster bomb rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 845.1/56.0 \u2197 941.6/56.4",
+            "Salvo/Cycle ROF per min: 824.2/61.1 \u2197 903.6/66.9",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2016,7 +2016,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cluster bomb rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 941.6/56.4 \u2197 1052.2/56.8",
+            "Salvo/Cycle ROF per min: 903.6/66.9 \u2197 1000.0/74.1",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2027,7 +2027,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cluster bomb rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 1052.2/56.8 \u2197 1162.1/57.1",
+            "Salvo/Cycle ROF per min: 1000.0/74.1 \u2197 1102.9/81.7",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2038,7 +2038,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cluster bomb rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 1162.1/57.1 \u2197 1267.6/57.3",
+            "Salvo/Cycle ROF per min: 1102.9/81.7 \u2197 1209.7/89.6",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2209,7 +2209,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Heavy bomb rate of fire (ROF) improved",
-            "ROF per min: 13.2 \u2197 14.3",
+            "ROF per min: 13.2 \u2197 14.5",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2220,7 +2220,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Heavy bomb rate of fire (ROF) improved",
-            "ROF per min: 14.3 \u2197 15.6",
+            "ROF per min: 14.5 \u2197 16.0",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2231,7 +2231,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Heavy bomb rate of fire (ROF) improved",
-            "ROF per min: 15.6 \u2197 16.8",
+            "ROF per min: 16.0 \u2197 17.6",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2242,7 +2242,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Heavy bomb rate of fire (ROF) improved",
-            "ROF per min: 16.8 \u2197 17.8",
+            "ROF per min: 17.6 \u2197 19.4",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2413,7 +2413,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Thermite bomb rate of fire (ROF) improved",
-            "ROF per min: 13.2 \u2197 14.3",
+            "ROF per min: 13.2 \u2197 14.5",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2424,7 +2424,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Thermite bomb rate of fire (ROF) improved",
-            "ROF per min: 14.3 \u2197 15.6",
+            "ROF per min: 14.5 \u2197 16.0",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2435,7 +2435,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Thermite bomb rate of fire (ROF) improved",
-            "ROF per min: 15.6 \u2197 16.8",
+            "ROF per min: 16.0 \u2197 17.6",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2446,7 +2446,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Thermite bomb rate of fire (ROF) improved",
-            "ROF per min: 16.8 \u2197 17.8",
+            "ROF per min: 17.6 \u2197 19.4",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2639,7 +2639,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cannon rate of fire (ROF) improved",
-            "ROF per min (cyborg): 5.1 \u2197 5.5",
+            "ROF per min (cyborg): 5.1 \u2197 5.6",
             "ROF per min (structure): 5.1 \u2197 5.5",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2650,7 +2650,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cannon rate of fire (ROF) improved",
-            "ROF per min (cyborg): 5.5 \u2197 6.0",
+            "ROF per min (cyborg): 5.6 \u2197 6.2",
             "ROF per min (structure): 5.5 \u2197 6.0",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2661,7 +2661,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cannon rate of fire (ROF) improved",
-            "ROF per min (cyborg): 6.0 \u2197 6.4",
+            "ROF per min (cyborg): 6.2 \u2197 6.8",
             "ROF per min (structure): 6.0 \u2197 6.4",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2672,7 +2672,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Cannon rate of fire (ROF) improved",
-            "ROF per min (cyborg): 6.4 \u2197 6.9",
+            "ROF per min (cyborg): 6.8 \u2197 7.4",
             "ROF per min (structure): 6.4 \u2197 6.9",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2832,7 +2832,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Flamethrower rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 900.0/42.9 \u2197 1040.5/43.1",
+            "Salvo/Cycle ROF per min: 900.0/42.9 \u2197 989.0/47.1",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2843,7 +2843,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Flamethrower rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 1040.5/43.1 \u2197 1190.8/43.4",
+            "Salvo/Cycle ROF per min: 989.0/47.1 \u2197 1084.3/51.6",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2854,7 +2854,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Flamethrower rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 1190.8/43.4 \u2197 1373.3/43.6",
+            "Salvo/Cycle ROF per min: 1084.3/51.6 \u2197 1200.0/57.1",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2865,7 +2865,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Flamethrower rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 1373.3/43.6 \u2197 1566.7/43.7",
+            "Salvo/Cycle ROF per min: 1200.0/57.1 \u2197 1323.5/63.0",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -2876,7 +2876,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Flamethrower rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 1566.7/43.7 \u2197 1764.7/43.9",
+            "Salvo/Cycle ROF per min: 1323.5/63.0 \u2197 1451.6/69.1",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3058,7 +3058,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Grenade Launcher rate of fire (ROF) improved",
-            "ROF per min (cyborg): 4.8 \u2197 5.2",
+            "ROF per min (cyborg): 4.8 \u2197 5.3",
             "ROF per min (tank/structure): 4.8 \u2197 5.2",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3069,7 +3069,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Grenade Launcher rate of fire (ROF) improved",
-            "ROF per min (cyborg): 5.2 \u2197 5.6",
+            "ROF per min (cyborg): 5.3 \u2197 5.9",
             "ROF per min (tank/structure): 5.2 \u2197 5.6",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3080,7 +3080,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Grenade Launcher rate of fire (ROF) improved",
-            "ROF per min (cyborg): 5.6 \u2197 5.9",
+            "ROF per min (cyborg): 5.9 \u2197 6.5",
             "ROF per min (tank/structure): 5.6 \u2197 5.9",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3262,7 +3262,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Howitzer rate of fire (ROF) improved",
-            "ROF per min: 3.6 \u2197 3.9",
+            "ROF per min: 3.6 \u2197 4.0",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3273,7 +3273,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Howitzer rate of fire (ROF) improved",
-            "ROF per min: 3.9 \u2197 4.2",
+            "ROF per min: 4.0 \u2197 4.4",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3284,7 +3284,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Howitzer rate of fire (ROF) improved",
-            "ROF per min: 4.2 \u2197 4.5",
+            "ROF per min: 4.4 \u2197 4.8",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3466,7 +3466,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Incendiary Howitzer rate of fire (ROF) improved",
-            "ROF per min: 3.6 \u2197 3.9",
+            "ROF per min: 3.6 \u2197 4.0",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3477,7 +3477,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Incendiary Howitzer rate of fire (ROF) improved",
-            "ROF per min: 3.9 \u2197 4.2",
+            "ROF per min: 4.0 \u2197 4.4",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3488,7 +3488,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Incendiary Howitzer rate of fire (ROF) improved",
-            "ROF per min: 4.2 \u2197 4.5",
+            "ROF per min: 4.4 \u2197 4.8",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3657,7 +3657,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Lancer rate of fire (ROF) improved",
-            "ROF per min (cyborg): 9.4 \u2197 10.2",
+            "ROF per min (cyborg): 9.4 \u2197 10.3",
             "ROF per min (VTOL): 219.8 \u2197 238.9",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3668,7 +3668,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Lancer rate of fire (ROF) improved",
-            "ROF per min (cyborg): 10.2 \u2197 11.1",
+            "ROF per min (cyborg): 10.3 \u2197 11.4",
             "ROF per min (VTOL): 238.9 \u2197 259.7",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3679,7 +3679,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Lancer rate of fire (ROF) improved",
-            "ROF per min (cyborg): 11.1 \u2197 12.0",
+            "ROF per min (cyborg): 11.4 \u2197 12.6",
             "ROF per min (VTOL): 259.7 \u2197 279.2",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3690,7 +3690,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Lancer rate of fire (ROF) improved",
-            "ROF per min (cyborg): 12.0 \u2197 12.7",
+            "ROF per min (cyborg): 12.6 \u2197 13.8",
             "ROF per min (VTOL): 279.2 \u2197 297.0",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3861,7 +3861,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Laser rate of fire (ROF) improved",
-            "ROF per min: 7.2 \u2197 7.8",
+            "ROF per min: 7.2 \u2197 8.0",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3872,7 +3872,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Laser rate of fire (ROF) improved",
-            "ROF per min: 7.8 \u2197 8.4",
+            "ROF per min: 8.0 \u2197 8.8",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -3883,7 +3883,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Laser rate of fire (ROF) improved",
-            "ROF per min: 8.4 \u2197 8.9",
+            "ROF per min: 8.8 \u2197 9.7",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4021,7 +4021,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Machinegun rate of fire (ROF) improved",
-            "ROF per min (cyborg): 44.0 \u2197 47.8",
+            "ROF per min (cyborg): 44.0 \u2197 48.2",
             "ROF per min (structure): 44.0 \u2197 47.8",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4032,7 +4032,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Machinegun rate of fire (ROF) improved",
-            "ROF per min (cyborg): 47.8 \u2197 51.9",
+            "ROF per min (cyborg): 48.2 \u2197 53.3",
             "ROF per min (structure): 47.8 \u2197 51.9",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4043,7 +4043,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Machinegun rate of fire (ROF) improved",
-            "ROF per min (cyborg): 51.9 \u2197 55.8",
+            "ROF per min (cyborg): 53.3 \u2197 58.8",
             "ROF per min (structure): 51.9 \u2197 55.8",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4054,7 +4054,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Machinegun rate of fire (ROF) improved",
-            "ROF per min (cyborg): 55.8 \u2197 59.4",
+            "ROF per min (cyborg): 58.8 \u2197 64.5",
             "ROF per min (structure): 55.8 \u2197 59.4",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4065,7 +4065,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Machinegun rate of fire (ROF) improved",
-            "ROF per min (cyborg): 59.4 \u2197 63.2",
+            "ROF per min (cyborg): 64.5 \u2197 71.4",
             "ROF per min (structure): 59.4 \u2197 63.2",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4076,7 +4076,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Machinegun rate of fire (ROF) improved",
-            "ROF per min (cyborg): 63.2 \u2197 66.5",
+            "ROF per min (cyborg): 71.4 \u2197 78.4",
             "ROF per min (structure): 63.2 \u2197 66.5",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4258,7 +4258,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Railgun rate of fire (ROF) improved",
-            "ROF per min: 4.8 \u2197 5.2",
+            "ROF per min: 4.8 \u2197 5.3",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4269,7 +4269,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Railgun rate of fire (ROF) improved",
-            "ROF per min: 5.2 \u2197 5.6",
+            "ROF per min: 5.3 \u2197 5.9",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4280,7 +4280,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Railgun rate of fire (ROF) improved",
-            "ROF per min: 5.6 \u2197 5.9",
+            "ROF per min: 5.9 \u2197 6.5",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4427,7 +4427,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Rocket Battery rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 72.0/5.5 \u2197 80.7/5.6",
+            "Salvo/Cycle ROF per min: 72.0/5.5 \u2197 79.1/6.1",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4438,7 +4438,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Rocket Battery rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 80.7/5.6 \u2197 89.5/5.6",
+            "Salvo/Cycle ROF per min: 79.1/6.1 \u2197 86.7/6.7",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4449,7 +4449,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Rocket Battery rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 89.5/5.6 \u2197 99.4/5.7",
+            "Salvo/Cycle ROF per min: 86.7/6.7 \u2197 96.0/7.4",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4460,7 +4460,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Rocket Battery rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 99.4/5.7 \u2197 109.2/5.7",
+            "Salvo/Cycle ROF per min: 96.0/7.4 \u2197 105.9/8.1",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4471,7 +4471,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Rocket Battery rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 109.2/5.7 \u2197 118.4/5.7",
+            "Salvo/Cycle ROF per min: 105.9/8.1 \u2197 116.1/8.9",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4629,7 +4629,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Scourge Missile rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 240.0/9.6 \u2197 292.7/9.7",
+            "Salvo/Cycle ROF per min: 240.0/9.6 \u2197 263.7/10.5",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4640,7 +4640,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Scourge Missile rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 292.7/9.7 \u2197 355.9/9.7",
+            "Salvo/Cycle ROF per min: 263.7/10.5 \u2197 289.2/11.6",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4651,7 +4651,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Scourge Missile rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 355.9/9.7 \u2197 444.1/9.8",
+            "Salvo/Cycle ROF per min: 289.2/11.6 \u2197 320.0/12.8",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4662,7 +4662,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Scourge Missile rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 444.1/9.8 \u2197 554.8/9.8",
+            "Salvo/Cycle ROF per min: 320.0/12.8 \u2197 352.9/14.1",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
@@ -4673,7 +4673,7 @@
         "sequenceName": "res_weapons.ogg",
         "text": [
             "Scourge Missile rate of fire (ROF) improved",
-            "Salvo/Cycle ROF per min: 554.8/9.8 \u2197 692.3/9.9",
+            "Salvo/Cycle ROF per min: 352.9/14.1 \u2197 387.1/15.5",
             "",
             "Note: ROFs differ from game-calculated ones. See documentation."
         ]
