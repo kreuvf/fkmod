@@ -533,7 +533,7 @@ for resID in nonsingles:
 resmsgs = {}
 
 # Code deduplication \o/
-def addmessage (resmsgs, resmsgname, sequencename):
+def addMessage (resmsgs, resmsgname, sequencename):
 	resmsgs[resmsgname] = {
 		'id': resmsgname,
 		'imdName': 'MICAPSUL.pie',
@@ -566,7 +566,7 @@ for single in singles:
 			sequencename = videotype
 			break
 
-	addmessage(resmsgs, resmsgname, sequencename)
+	addMessage(resmsgs, resmsgname, sequencename)
 
 for succession in sorted(successions):
 	for i in successions[succession]:
@@ -578,7 +578,7 @@ for succession in sorted(successions):
 				sequencename = videotype
 				break
 
-		addmessage(resmsgs, resmsgname, sequencename)
+		addMessage(resmsgs, resmsgname, sequencename)
 
 # This is still quite hardcoded and would ideally use some external text file with all the text. For now (and probably ever), things stay in this file. ¯\_(ツ)_/¯
 # Define standard messages
