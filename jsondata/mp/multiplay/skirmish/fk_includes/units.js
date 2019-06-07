@@ -29,10 +29,20 @@ function findAntiTankTarget() {
 			droids = droids.concat(enumDroid(i));
 		}
 	}
-	droids = droids.filter(function(droid) {
+	var tanks = droids.filter(function(droid) {
 		return droid.droidType != DROID_CYBORG && !droid.isVTOL;
 	});
-	return droids;
+	if (tanks.length > 0) return tanks;
+	// If no tanks are found return cyborgs + structures
+	var targets = droids.filter(function(droid) {
+		return droid.droidType == DROID_CYBORG;
+	});
+	for (var i = 0; i < maxPlayers; i++) {
+		if(i != me && !allianceExistsBetween(me,i)) {
+			targets = targets.concat(enumStruct(i));
+		}
+	}
+	return targets;
 }
 
 function findAntiCyborgTarget() {
@@ -43,10 +53,20 @@ function findAntiCyborgTarget() {
 			droids = droids.concat(enumDroid(i));
 		}
 	}
-	droids = droids.filter(function(droid) {
+	var cyborgs = droids.filter(function(droid) {
 		return droid.droidType == DROID_CYBORG;
 	});
-	return droids;
+	if (cyborgs.length > 0) return droids;
+	// If no cyborgs are found return tanks + structures
+	var targets = droids.filter(function(droid) {
+		return droid.droidType != DROID_CYBORG && !droid.isVTOL;
+	});
+	for (var i = 0; i < maxPlayers; i++) {
+		if(i != me && !allianceExistsBetween(me,i)) {
+			targets = targets.concat(enumStruct(i));
+		}
+	}
+	return targets;
 }
 
 function isAntiTank(unit) {
