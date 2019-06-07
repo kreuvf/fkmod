@@ -557,6 +557,38 @@ def getResValue (research, topic, parameter):
 			return result['value']
 	return 0
 
+def calcSalvoROFs (
+	weaponName,
+	numRoundsInitial,
+	numRoundsOld,
+	numRoundsNew,
+	firePauseOld,
+	firePauseNew,
+	reloadTimeOld,
+	reloadTimeNew):
+
+	rofs = {}
+	
+	if numRoundsInitial == 1:
+		print("Warning: Weapon {} fires in salvoes, but has only one shot per salvo effectively making it a non-salvo firing weapon which should only use 'firePause' and not 'numRounds' or 'reloadTime'.".format(weaponName))
+		rofs = {'salvo old': 0, 'salvo new': 0, 'complete old': 0, 'complete new': 0}
+	else:
+		# Per salvo
+		rofs['salvo old'] = \
+			conv['0.1 s per min'] * numRoundsOld / \
+				( (numRoundsOld - 1) * firePauseOld )
+		rofs['salvo new'] = \
+			conv['0.1 s per min'] * numRoundsNew / \
+				( (numRoundsNew - 1) * firePauseNew )
+		# Per complete cycle
+		rofs['complete old'] = \
+			conv['0.1 s per min'] * numRoundsOld / \
+				( ( (numRoundsOld - 1) * firePauseOld ) + reloadTimeOld )
+		rofs['complete new'] = \
+			conv['0.1 s per min'] * numRoundsNew / \
+				( ( (numRoundsNew - 1) * firePauseNew ) + reloadTimeNew )
+	return rofs
+
 for single in singles:
 	# Starting at 1 to get rid of the "R" in "R-[...]"
 	resmsgname = 'RM' + single[1:]
@@ -1689,50 +1721,15 @@ for succession in successions:
 					newvalue[key] = initialvalue[key] * (1 + (upgradeTotal / 100))
 				
 				# Calculate ROFs
-				rofs = {}
-				if oldvalue['numRounds'] == 1:
-					print("Warning: Weapon {} fires in salvoes, but has only one shot per salvo effectively making it a non-salvo firing weapon which should only use 'firePause' and not 'numRounds' or 'reloadTime'.".format(weaponname))
-				else:
-					# Per salvo
-					rofs['salvo old'] = (
-						(oldvalue['numRounds'] / 
-							(
-								(oldvalue['numRounds'] - 1)
-								 * oldvalue['firePause']
-							)
-						) * conv['0.1 s per min']
-					)
-					rofs['salvo new'] = (
-						(newvalue['numRounds'] / 
-							(
-								(newvalue['numRounds'] - 1)
-								 * newvalue['firePause']
-							)
-						) * conv['0.1 s per min']
-					)
-					# Per complete cycle
-					rofs['complete old'] = (
-						(oldvalue['numRounds'] / 
-							(
-								(
-									(oldvalue['numRounds'] - 1)
-									 * oldvalue['firePause']
-								)
-							+ oldvalue['reloadTime']
-							)
-						) * conv['0.1 s per min']
-					)
-					rofs['complete new'] = (
-						(newvalue['numRounds'] / 
-							(
-								(
-									(newvalue['numRounds'] - 1)
-									 * newvalue['firePause']
-								)
-							+ newvalue['reloadTime']
-							)
-						) * conv['0.1 s per min']
-					)
+				rofs = calcSalvoROFs(
+					weaponname,
+					initialvalue['numRounds'],
+					oldvalue['numRounds'],
+					newvalue['numRounds'],
+					oldvalue['firePause'],
+					newvalue['firePause'],
+					oldvalue['reloadTime'],
+					newvalue['reloadTime'])
 				upgradeinfo.append(
 					'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
 						alt = '{alt}',
@@ -1760,59 +1757,24 @@ for succession in successions:
 							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
 					# Calculate ROFs
-					rofs = {}
-					if oldvalue['numRounds'] == 1:
-						print("Warning: Weapon {} fires in salvoes, but has only one shot per salvo effectively making it a non-salvo firing weapon which should only use 'firePause' and not 'numRounds' or 'reloadTime'.".format(weaponname))
-					else:
-						# Per salvo
-						rofs['salvo old'] = (
-							(oldvalue['numRounds'] / 
-								(
-									(oldvalue['numRounds'] - 1)
-									 * oldvalue['firePause']
-								)
-							) * conv['0.1 s per min']
+					rofs = calcSalvoROFs(
+						weaponname,
+						initialvalue['numRounds'],
+						oldvalue['numRounds'],
+						newvalue['numRounds'],
+						oldvalue['firePause'],
+						newvalue['firePause'],
+						oldvalue['reloadTime'],
+						newvalue['reloadTime'])
+					upgradeinfo.append(
+						'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
+							alt = ' (VTOL)',
+							salvoold = rofs['salvo old'],
+							completeold = rofs['complete old'],
+							salvonew = rofs['salvo new'],
+							completenew = rofs['complete new']
 						)
-						rofs['salvo new'] = (
-							(newvalue['numRounds'] / 
-								(
-									(newvalue['numRounds'] - 1)
-									 * newvalue['firePause']
-								)
-							) * conv['0.1 s per min']
-						)
-						# Per complete cycle
-						rofs['complete old'] = (
-							(oldvalue['numRounds'] / 
-								(
-									(
-										(oldvalue['numRounds'] - 1)
-										 * oldvalue['firePause']
-									)
-								+ oldvalue['reloadTime']
-								)
-							) * conv['0.1 s per min']
-						)
-						rofs['complete new'] = (
-							(newvalue['numRounds'] / 
-								(
-									(
-										(newvalue['numRounds'] - 1)
-										 * newvalue['firePause']
-									)
-								+ newvalue['reloadTime']
-								)
-							) * conv['0.1 s per min']
-						)
-						upgradeinfo.append(
-							'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
-								alt = ' (VTOL)',
-								salvoold = rofs['salvo old'],
-								completeold = rofs['complete old'],
-								salvonew = rofs['salvo new'],
-								completenew = rofs['complete new']
-							)
-						)
+					)
 
 				elif internalweaponname == 'FK-SF-Cannon-Cyborg':
 					upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
@@ -1832,59 +1794,24 @@ for succession in successions:
 							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
 					# Calculate ROFs
-					rofs = {}
-					if oldvalue['numRounds'] == 1:
-						print("Warning: Weapon {} fires in salvoes, but has only one shot per salvo effectively making it a non-salvo firing weapon which should only use 'firePause' and not 'numRounds' or 'reloadTime'.".format(weaponname))
-					else:
-						# Per salvo
-						rofs['salvo old'] = (
-							(oldvalue['numRounds'] / 
-								(
-									(oldvalue['numRounds'] - 1)
-									 * oldvalue['firePause']
-								)
-							) * conv['0.1 s per min']
+					rofs = calcSalvoROFs(
+						weaponname,
+						initialvalue['numRounds'],
+						oldvalue['numRounds'],
+						newvalue['numRounds'],
+						oldvalue['firePause'],
+						newvalue['firePause'],
+						oldvalue['reloadTime'],
+						newvalue['reloadTime'])
+					upgradeinfo.append(
+						'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
+							alt = ' (structure)',
+							salvoold = rofs['salvo old'],
+							completeold = rofs['complete old'],
+							salvonew = rofs['salvo new'],
+							completenew = rofs['complete new']
 						)
-						rofs['salvo new'] = (
-							(newvalue['numRounds'] / 
-								(
-									(newvalue['numRounds'] - 1)
-									 * newvalue['firePause']
-								)
-							) * conv['0.1 s per min']
-						)
-						# Per complete cycle
-						rofs['complete old'] = (
-							(oldvalue['numRounds'] / 
-								(
-									(
-										(oldvalue['numRounds'] - 1)
-										 * oldvalue['firePause']
-									)
-								+ oldvalue['reloadTime']
-								)
-							) * conv['0.1 s per min']
-						)
-						rofs['complete new'] = (
-							(newvalue['numRounds'] / 
-								(
-									(
-										(newvalue['numRounds'] - 1)
-										 * newvalue['firePause']
-									)
-								+ newvalue['reloadTime']
-								)
-							) * conv['0.1 s per min']
-						)
-						upgradeinfo.append(
-							'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
-								alt = ' (structure)',
-								salvoold = rofs['salvo old'],
-								completeold = rofs['complete old'],
-								salvonew = rofs['salvo new'],
-								completenew = rofs['complete new']
-							)
-						)
+					)
 
 				elif internalweaponname == 'FK-SPL-GrenadeLauncher-Cyborg':
 					upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
@@ -1904,59 +1831,24 @@ for succession in successions:
 							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
 					# Calculate ROFs
-					rofs = {}
-					if oldvalue['numRounds'] == 1:
-						print("Warning: Weapon {} fires in salvoes, but has only one shot per salvo effectively making it a non-salvo firing weapon which should only use 'firePause' and not 'numRounds' or 'reloadTime'.".format(weaponname))
-					else:
-						# Per salvo
-						rofs['salvo old'] = (
-							(oldvalue['numRounds'] / 
-								(
-									(oldvalue['numRounds'] - 1)
-									 * oldvalue['firePause']
-								)
-							) * conv['0.1 s per min']
+					rofs = calcSalvoROFs(
+						weaponname,
+						initialvalue['numRounds'],
+						oldvalue['numRounds'],
+						newvalue['numRounds'],
+						oldvalue['firePause'],
+						newvalue['firePause'],
+						oldvalue['reloadTime'],
+						newvalue['reloadTime'])
+					upgradeinfo.append(
+						'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
+							alt = ' (tank/structure)',
+							salvoold = rofs['salvo old'],
+							completeold = rofs['complete old'],
+							salvonew = rofs['salvo new'],
+							completenew = rofs['complete new']
 						)
-						rofs['salvo new'] = (
-							(newvalue['numRounds'] / 
-								(
-									(newvalue['numRounds'] - 1)
-									 * newvalue['firePause']
-								)
-							) * conv['0.1 s per min']
-						)
-						# Per complete cycle
-						rofs['complete old'] = (
-							(oldvalue['numRounds'] / 
-								(
-									(
-										(oldvalue['numRounds'] - 1)
-										 * oldvalue['firePause']
-									)
-								+ oldvalue['reloadTime']
-								)
-							) * conv['0.1 s per min']
-						)
-						rofs['complete new'] = (
-							(newvalue['numRounds'] / 
-								(
-									(
-										(newvalue['numRounds'] - 1)
-										 * newvalue['firePause']
-									)
-								+ newvalue['reloadTime']
-								)
-							) * conv['0.1 s per min']
-						)
-						upgradeinfo.append(
-							'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
-								alt = ' (tank/structure)',
-								salvoold = rofs['salvo old'],
-								completeold = rofs['complete old'],
-								salvonew = rofs['salvo new'],
-								completenew = rofs['complete new']
-							)
-						)
+					)
 
 				elif internalweaponname == 'FK-MIS-Lancer-Cyborg':
 					upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
@@ -1976,59 +1868,24 @@ for succession in successions:
 							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
 					# Calculate ROFs
-					rofs = {}
-					if oldvalue['numRounds'] == 1:
-						print("Warning: Weapon {} fires in salvoes, but has only one shot per salvo effectively making it a non-salvo firing weapon which should only use 'firePause' and not 'numRounds' or 'reloadTime'.".format(weaponname))
-					else:
-						# Per salvo
-						rofs['salvo old'] = (
-							(oldvalue['numRounds'] / 
-								(
-									(oldvalue['numRounds'] - 1)
-									 * oldvalue['firePause']
-								)
-							) * conv['0.1 s per min']
+					rofs = calcSalvoROFs(
+						weaponname,
+						initialvalue['numRounds'],
+						oldvalue['numRounds'],
+						newvalue['numRounds'],
+						oldvalue['firePause'],
+						newvalue['firePause'],
+						oldvalue['reloadTime'],
+						newvalue['reloadTime'])
+					upgradeinfo.append(
+						'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
+							alt = ' (VTOL)',
+							salvoold = rofs['salvo old'],
+							completeold = rofs['complete old'],
+							salvonew = rofs['salvo new'],
+							completenew = rofs['complete new']
 						)
-						rofs['salvo new'] = (
-							(newvalue['numRounds'] / 
-								(
-									(newvalue['numRounds'] - 1)
-									 * newvalue['firePause']
-								)
-							) * conv['0.1 s per min']
-						)
-						# Per complete cycle
-						rofs['complete old'] = (
-							(oldvalue['numRounds'] / 
-								(
-									(
-										(oldvalue['numRounds'] - 1)
-										 * oldvalue['firePause']
-									)
-								+ oldvalue['reloadTime']
-								)
-							) * conv['0.1 s per min']
-						)
-						rofs['complete new'] = (
-							(newvalue['numRounds'] / 
-								(
-									(
-										(newvalue['numRounds'] - 1)
-										 * newvalue['firePause']
-									)
-								+ newvalue['reloadTime']
-								)
-							) * conv['0.1 s per min']
-						)
-						upgradeinfo.append(
-							'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
-								alt = ' (VTOL)',
-								salvoold = rofs['salvo old'],
-								completeold = rofs['complete old'],
-								salvonew = rofs['salvo new'],
-								completenew = rofs['complete new']
-							)
-						)
+					)
 
 				elif internalweaponname == 'FK-FF-Machinegun-Cyborg':
 					upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
@@ -2048,59 +1905,24 @@ for succession in successions:
 							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
 					# Calculate ROFs
-					rofs = {}
-					if oldvalue['numRounds'] == 1:
-						print("Warning: Weapon {} fires in salvoes, but has only one shot per salvo effectively making it a non-salvo firing weapon which should only use 'firePause' and not 'numRounds' or 'reloadTime'.".format(weaponname))
-					else:
-						# Per salvo
-						rofs['salvo old'] = (
-							(oldvalue['numRounds'] / 
-								(
-									(oldvalue['numRounds'] - 1)
-									 * oldvalue['firePause']
-								)
-							) * conv['0.1 s per min']
+					rofs = calcSalvoROFs(
+						weaponname,
+						initialvalue['numRounds'],
+						oldvalue['numRounds'],
+						newvalue['numRounds'],
+						oldvalue['firePause'],
+						newvalue['firePause'],
+						oldvalue['reloadTime'],
+						newvalue['reloadTime'])
+					upgradeinfo.append(
+						'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
+							alt = ' (structure)',
+							salvoold = rofs['salvo old'],
+							completeold = rofs['complete old'],
+							salvonew = rofs['salvo new'],
+							completenew = rofs['complete new']
 						)
-						rofs['salvo new'] = (
-							(newvalue['numRounds'] / 
-								(
-									(newvalue['numRounds'] - 1)
-									 * newvalue['firePause']
-								)
-							) * conv['0.1 s per min']
-						)
-						# Per complete cycle
-						rofs['complete old'] = (
-							(oldvalue['numRounds'] / 
-								(
-									(
-										(oldvalue['numRounds'] - 1)
-										 * oldvalue['firePause']
-									)
-								+ oldvalue['reloadTime']
-								)
-							) * conv['0.1 s per min']
-						)
-						rofs['complete new'] = (
-							(newvalue['numRounds'] / 
-								(
-									(
-										(newvalue['numRounds'] - 1)
-										 * newvalue['firePause']
-									)
-								+ newvalue['reloadTime']
-								)
-							) * conv['0.1 s per min']
-						)
-						upgradeinfo.append(
-							'Salvo/Cycle ROF per min{alt}: {salvoold:.1f}/{completeold:.1f} ↗ {salvonew:.1f}/{completenew:.1f}'.format(
-								alt = ' (structure)',
-								salvoold = rofs['salvo old'],
-								completeold = rofs['complete old'],
-								salvonew = rofs['salvo new'],
-								completenew = rofs['complete new']
-							)
-						)
+					)
 
 				else:
 					upgradeinfo[0] = upgradeinfo[0].format(alt = "")
