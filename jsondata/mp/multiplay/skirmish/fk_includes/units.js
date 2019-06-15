@@ -29,20 +29,10 @@ function findAntiTankTarget() {
 			droids = droids.concat(enumDroid(i));
 		}
 	}
-	var tanks = droids.filter(function(droid) {
+	droids = droids.filter(function(droid) {
 		return droid.droidType != DROID_CYBORG && !droid.isVTOL;
 	});
-	if (tanks.length > 0) return tanks;
-	// If no tanks are found return cyborgs + structures
-	var targets = droids.filter(function(droid) {
-		return droid.droidType == DROID_CYBORG;
-	});
-	for (var i = 0; i < maxPlayers; i++) {
-		if(i != me && !allianceExistsBetween(me,i)) {
-			targets = targets.concat(enumStruct(i));
-		}
-	}
-	return targets;
+	return droids;
 }
 
 function findAntiCyborgTarget() {
@@ -53,14 +43,24 @@ function findAntiCyborgTarget() {
 			droids = droids.concat(enumDroid(i));
 		}
 	}
-	var cyborgs = droids.filter(function(droid) {
+	droids = droids.filter(function(droid) {
 		return droid.droidType == DROID_CYBORG;
 	});
-	if (cyborgs.length > 0) return droids;
-	// If no cyborgs are found return tanks + structures
-	var targets = droids.filter(function(droid) {
-		return droid.droidType != DROID_CYBORG && !droid.isVTOL;
+	return droids;
+}
+
+function findGroundTarget() {
+	var targets = [];
+	//find enemy droids
+	for (var i = 0; i < maxPlayers; i++) {
+		if(i != me && !allianceExistsBetween(me,i)) {
+			targets = targets.concat(enumDroid(i));
+		}
+	}
+	targets = targets.filter(function(target) {
+		return !droid.isVTOL;
 	});
+	// find enemy structures
 	for (var i = 0; i < maxPlayers; i++) {
 		if(i != me && !allianceExistsBetween(me,i)) {
 			targets = targets.concat(enumStruct(i));
@@ -128,7 +128,14 @@ function unitControl() {
 				var target = findAntiTankTarget();
 				target = target.filter(function(droid) {
 					return droidCanReach(units[0], droid.x, droid.y);
-				}).sort(function(a, b) {return distance(a,b)});
+				});
+				if(target.length == 0) {
+					target = findGroundTarget();
+					target = target.filter(function(droid) {
+					return droidCanReach(units[0], droid.x, droid.y);
+					});
+				}
+				target = target.sort(function(a, b) {return distance(a,b)});
 				if(target.length > 0) {
 					for(var j = 0; j < units.length; j++) {
 						orderDroidObj(units[j], DORDER_ATTACK, target[0]);
@@ -172,7 +179,14 @@ function unitControl() {
 				var target = findAntiCyborgTarget();
 				target = target.filter(function(droid) {
 					return droidCanReach(units[0], droid.x, droid.y);
-				}).sort(function(a, b) {return distance(a,b)});
+				});
+				if(target.length == 0) {
+					target = findGroundTarget();
+					target = target.filter(function(droid) {
+					return droidCanReach(units[0], droid.x, droid.y);
+					});
+				}
+				target = target.sort(function(a, b) {return distance(a,b)});
 				if(target.length > 0) {
 					for(var j = 0; j < units.length; j++) {
 						orderDroidObj(units[j], DORDER_ATTACK, target[0]);
@@ -219,11 +233,11 @@ function unitControl() {
 				units[0].order !== DORDER_RTR &&
 				units[0].order !== DORDER_SCOUT
 			) {
-				var target = findAntiCyborgTarget();
-				target.concat(findAntiTankTarget());
+				target = findGroundTarget();
 				target = target.filter(function(droid) {
-					return droidCanReach(units[0], droid.x, droid.y);
-				}).sort(function(a, b) {return distance(a,b)});
+				return droidCanReach(units[0], droid.x, droid.y);
+				});
+				target = target.sort(function(a, b) {return distance(a,b)});
 				if(target.length > 0) {
 					for(var j = 0; j < units.length; j++) {
 						orderDroidObj(units[j], DORDER_ATTACK, target[0]);

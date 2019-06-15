@@ -144,7 +144,7 @@ function buildOil(builder) {
 			return distanceToBase(one) - distanceToBase(two);
 		});
 		var safeOil = oil.filter(function(feature){
-			return isAreaSafe(feature.x, feature.y, 10);
+			return safeDest(me, feature.x, feature.y);
 		});
 		for(var i = 0; i < safeOil.length; i++) {
 			var pos = pickStructLocation(builder, BaseStructs.derricks[0], safeOil[i].x, safeOil[i].y);
