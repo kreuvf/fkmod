@@ -1956,34 +1956,12 @@ for succession in successions:
 						)
 					)
 				elif internalweaponname == 'FK-MIS-Lancer-Cyborg':
-					upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
-					internalweaponname = 'FK-MIS-Lancer-VTOL'
-					newvalue = {}
-					oldvalue = {}
-					for key in keys:
-						newvalue[key] = -1
-						if key in weapons[internalweaponname]:
-							oldvalue[key] = int(weapons[internalweaponname][key])
-						else:
-							oldvalue[key] = 0
-					# Assume same firing type
-					# Cycle over upgrades for oldvalue
-					for key in oldvalue:
-						for oldtopic in range(1, int(topic)):
-							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
-						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
-					# Calculate ROFs
-					rofs = {}
-					# Per complete cycle
-					rofs['complete old'] = conv['0.1 s per min'] / oldvalue['firePause']
-					rofs['complete new'] = conv['0.1 s per min'] / newvalue['firePause']
-					upgradeinfo.append(
-						'ROF per min{alt}: {completeold:.1f} ↗ {completenew:.1f}'.format(
-							alt = ' (VTOL)',
-							completeold = rofs['complete old'],
-							completenew = rofs['complete new']
-						)
-					)
+					genAltROFSalvoUpgradeInfo (
+						'FK-MIS-Lancer-VTOL',
+						upgradeinfo,
+						[' (cyborg)', ' (VTOL)'],
+						topic,
+						keys)
 				elif internalweaponname == 'FK-FF-Machinegun-Cyborg':
 					upgradeinfo[0] = upgradeinfo[0].format(alt = " (cyborg)")
 					internalweaponname = 'FK-FF-Machinegun-Structure'
