@@ -1806,38 +1806,6 @@ for succession in successions:
 						topic,
 						keys)
 
-				elif internalweaponname == 'FK-SF-Cannon-Cyborg':
-					genAltROFSalvoUpgradeInfo (
-						'FK-SF-Cannon-Structure',
-						upgradeinfo,
-						[' (cyborg)', ' (structure)'],
-						topic,
-						keys)
-
-				elif internalweaponname == 'FK-SPL-GrenadeLauncher-Cyborg':
-					genAltROFSalvoUpgradeInfo (
-						'FK-SPL-GrenadeLauncher-TankStructure',
-						upgradeinfo,
-						[' (cyborg)', ' (tank/structure)'],
-						topic,
-						keys)
-
-				elif internalweaponname == 'FK-MIS-Lancer-Cyborg':
-					genAltROFSalvoUpgradeInfo (
-						'FK-MIS-Lancer-VTOL',
-						upgradeinfo,
-						[' (cyborg)', ' (VTOL)'],
-						topic,
-						keys)
-
-				elif internalweaponname == 'FK-FF-Machinegun-Cyborg':
-					genAltROFSalvoUpgradeInfo (
-						'FK-FF-Machinegun-Structure',
-						upgradeinfo,
-						[' (cyborg)', ' (structure)'],
-						topic,
-						keys)
-
 				else:
 					upgradeinfo[0] = upgradeinfo[0].format(alt = "")
 					upgradeinfo.append('')
