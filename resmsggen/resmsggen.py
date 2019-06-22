@@ -557,6 +557,18 @@ def getResValue (research, topic, parameter):
 			return result['value']
 	return 0
 
+def calcSingleROFs (
+	weaponName,
+	firePauseOld,
+	firePauseNew):
+
+	rofs = {}
+	# Per complete cycle
+	rofs['complete old'] = conv['0.1 s per min'] / firePauseOld
+	rofs['complete new'] = conv['0.1 s per min'] / firePauseNew
+
+	return rofs
+
 def calcSalvoROFs (
 	weaponName,
 	numRoundsInitial,
@@ -1797,7 +1809,6 @@ for succession in successions:
 						completenew = rofs['complete new']
 					)
 				)
-				# TODO: Sort out which weapon truly fires in salvos
 				if internalweaponname == 'FK-FF-Autocannon-Tank':
 					genAltROFSalvoUpgradeInfo (
 						'FK-FF-Autocannon-VTOL',
@@ -1824,10 +1835,10 @@ for succession in successions:
 					newvalue[key] = initialvalue[key] * (1 + (upgradeTotal / 100))
 
 				# Calculate ROFs
-				rofs = {}
-				# Per complete cycle
-				rofs['complete old'] = conv['0.1 s per min'] / oldvalue['firePause']
-				rofs['complete new'] = conv['0.1 s per min'] / newvalue['firePause']
+				rofs = calcSingleROFs(
+					internalweaponname,
+					oldvalue['firePause'],
+					newvalue['firePause'])
 				upgradeinfo.append(
 					'ROF per min{alt}: {completeold:.1f} ↗ {completenew:.1f}'.format(
 						alt = '{alt}',
@@ -1835,7 +1846,6 @@ for succession in successions:
 						completenew = rofs['complete new']
 					)
 				)
-				# TODO: Sort out which weapon truly fires in single shots; careful with lancer (cyborg: single shots, VTOL: salvos)
 				if internalweaponname == 'FK-FF-Autocannon-Tank':
 					upgradeinfo[0] = upgradeinfo[0].format(alt = " (tank)")
 					internalweaponname = 'FK-FF-Autocannon-VTOL'
@@ -1854,10 +1864,10 @@ for succession in successions:
 							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
 					# Calculate ROFs
-					rofs = {}
-					# Per complete cycle
-					rofs['complete old'] = conv['0.1 s per min'] / oldvalue['firePause']
-					rofs['complete new'] = conv['0.1 s per min'] / newvalue['firePause']
+					rofs = calcSingleROFs(
+						internalweaponname,
+						oldvalue['firePause'],
+						newvalue['firePause'])
 					upgradeinfo.append(
 						'ROF per min{alt}: {completeold:.1f} ↗ {completenew:.1f}'.format(
 							alt = ' (VTOL)',
@@ -1883,10 +1893,10 @@ for succession in successions:
 							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
 					# Calculate ROFs
-					rofs = {}
-					# Per complete cycle
-					rofs['complete old'] = conv['0.1 s per min'] / oldvalue['firePause']
-					rofs['complete new'] = conv['0.1 s per min'] / newvalue['firePause']
+					rofs = calcSingleROFs(
+						internalweaponname,
+						oldvalue['firePause'],
+						newvalue['firePause'])
 					upgradeinfo.append(
 						'ROF per min{alt}: {completeold:.1f} ↗ {completenew:.1f}'.format(
 							alt = ' (structure)',
@@ -1912,10 +1922,10 @@ for succession in successions:
 							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
 					# Calculate ROFs
-					rofs = {}
-					# Per complete cycle
-					rofs['complete old'] = conv['0.1 s per min'] / oldvalue['firePause']
-					rofs['complete new'] = conv['0.1 s per min'] / newvalue['firePause']
+					rofs = calcSingleROFs(
+						internalweaponname,
+						oldvalue['firePause'],
+						newvalue['firePause'])
 					upgradeinfo.append(
 						'ROF per min{alt}: {completeold:.1f} ↗ {completenew:.1f}'.format(
 							alt = ' (tank/structure)',
@@ -1948,10 +1958,10 @@ for succession in successions:
 							oldvalue[key] = oldvalue[key] * (1 + (research[succession + str(oldtopic)]['results'][0]['value'] / 100))
 						newvalue[key] = oldvalue[key] * (1 + (research[succession + topic]['results'][0]['value'] / 100))
 					# Calculate ROFs
-					rofs = {}
-					# Per complete cycle
-					rofs['complete old'] = conv['0.1 s per min'] / oldvalue['firePause']
-					rofs['complete new'] = conv['0.1 s per min'] / newvalue['firePause']
+					rofs = calcSingleROFs(
+						internalweaponname,
+						oldvalue['firePause'],
+						newvalue['firePause'])
 					upgradeinfo.append(
 						'ROF per min{alt}: {completeold:.1f} ↗ {completenew:.1f}'.format(
 							alt = ' (structure)',
