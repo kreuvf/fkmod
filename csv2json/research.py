@@ -769,6 +769,213 @@ for chain in upgrades:
 					else:
 						print("'class', 'filterValue', 'filterParameter' and/or 'parameter' of", research, "and/or", prereq, "missing.")
 
+# Step 7: FKmod Adjustments
+# ROF upgrades increase shots per min by 10% of the current value
+# The rigid conversion process does not distinguish between firePause and reloadTime
+# Last step adjusts everything to work as expected
+resJSON['R-WU-AAAvengerSAM-ROF1']['results'][0]['value'] = -6
+resJSON['R-WU-AAAvengerSAM-ROF1']['results'][1]['value'] = -9
+resJSON['R-WU-AAAvengerSAM-ROF2']['results'][0]['value'] =  0
+resJSON['R-WU-AAAvengerSAM-ROF2']['results'][1]['value'] = -9
+resJSON['R-WU-AAAvengerSAM-ROF3']['results'][0]['value'] = -14
+resJSON['R-WU-AAAvengerSAM-ROF3']['results'][1]['value'] = -7
+resJSON['R-WU-AAAvengerSAM-ROF4']['results'][0]['value'] = -6
+resJSON['R-WU-AAAvengerSAM-ROF4']['results'][1]['value'] = -7
+resJSON['R-WU-AAAvengerSAM-ROF5']['results'][0]['value'] = -10
+resJSON['R-WU-AAAvengerSAM-ROF5']['results'][1]['value'] = -6
+resJSON['R-WU-AACyclone-ROF1']['results'][0]['value'] = -9
+resJSON['R-WU-AACyclone-ROF1']['results'][1]['value'] = -9
+resJSON['R-WU-AACyclone-ROF2']['results'][0]['value'] = -8
+resJSON['R-WU-AACyclone-ROF2']['results'][1]['value'] = -8
+resJSON['R-WU-AACyclone-ROF3']['results'][0]['value'] = -8
+resJSON['R-WU-AACyclone-ROF3']['results'][1]['value'] = -8
+resJSON['R-WU-AACyclone-ROF4']['results'][0]['value'] = -7
+resJSON['R-WU-AACyclone-ROF4']['results'][1]['value'] = -7
+resJSON['R-WU-AACyclone-ROF5']['results'][0]['value'] = -6
+resJSON['R-WU-AACyclone-ROF5']['results'][1]['value'] = -5
+resJSON['R-WU-AAHurricane-ROF1']['results'][0]['value'] = -10
+resJSON['R-WU-AAHurricane-ROF1']['results'][1]['value'] = -10
+resJSON['R-WU-AAHurricane-ROF2']['results'][0]['value'] = -7
+resJSON['R-WU-AAHurricane-ROF2']['results'][1]['value'] = -7
+resJSON['R-WU-AAHurricane-ROF3']['results'][0]['value'] = -8
+resJSON['R-WU-AAHurricane-ROF3']['results'][1]['value'] = -6
+resJSON['R-WU-AAHurricane-ROF4']['results'][0]['value'] = -7
+resJSON['R-WU-AAHurricane-ROF4']['results'][1]['value'] = -7
+resJSON['R-WU-AAHurricane-ROF5']['results'][0]['value'] = -6
+resJSON['R-WU-AAHurricane-ROF5']['results'][1]['value'] = -6
+resJSON['R-WU-AAHurricane-ROF6']['results'][0]['value'] = -5
+resJSON['R-WU-AAHurricane-ROF6']['results'][1]['value'] = -7
+resJSON['R-WU-AAHurricane-ROF7']['results'][0]['value'] = -5
+resJSON['R-WU-AAHurricane-ROF7']['results'][1]['value'] = -7
+del resJSON['R-WU-AAStormbringer-ROF1']['results'][1]
+del resJSON['R-WU-AAStormbringer-ROF2']['results'][1]
+del resJSON['R-WU-AAStormbringer-ROF3']['results'][1]
+del resJSON['R-WU-AAStormbringer-ROF4']['results'][1]
+del resJSON['R-WU-AAStormbringer-ROF5']['results'][1]
+resJSON['R-WU-AAStormbringer-ROF1']['results'][0]['value'] = -9
+resJSON['R-WU-AAStormbringer-ROF2']['results'][0]['value'] = -9
+resJSON['R-WU-AAStormbringer-ROF3']['results'][0]['value'] = -7
+resJSON['R-WU-AAStormbringer-ROF4']['results'][0]['value'] = -7
+resJSON['R-WU-AAStormbringer-ROF5']['results'][0]['value'] = -6
+resJSON['R-WU-Autocannon-ROF1']['results'][0]['value'] = -9
+resJSON['R-WU-Autocannon-ROF1']['results'][1]['value'] = -9
+resJSON['R-WU-Autocannon-ROF2']['results'][0]['value'] = -8
+resJSON['R-WU-Autocannon-ROF2']['results'][1]['value'] = -9
+resJSON['R-WU-Autocannon-ROF3']['results'][0]['value'] = -9
+resJSON['R-WU-Autocannon-ROF3']['results'][1]['value'] = -7
+resJSON['R-WU-Autocannon-ROF4']['results'][0]['value'] = -6
+resJSON['R-WU-Autocannon-ROF4']['results'][1]['value'] = -6
+resJSON['R-WU-Autocannon-ROF5']['results'][0]['value'] = -6
+resJSON['R-WU-Autocannon-ROF5']['results'][1]['value'] = -6
+resJSON['R-WU-Autocannon-ROF6']['results'][0]['value'] = -5
+resJSON['R-WU-Autocannon-ROF6']['results'][1]['value'] = -7
+resJSON['R-WU-Autocannon-ROF7']['results'][0]['value'] = -6
+resJSON['R-WU-Autocannon-ROF7']['results'][1]['value'] = -5
+resJSON['R-WU-BombCluster-ROF1']['results'][0]['value'] = -9
+resJSON['R-WU-BombCluster-ROF1']['results'][1]['value'] = -8
+resJSON['R-WU-BombCluster-ROF2']['results'][0]['value'] = -8
+resJSON['R-WU-BombCluster-ROF2']['results'][1]['value'] = -10
+resJSON['R-WU-BombCluster-ROF3']['results'][0]['value'] = -8
+resJSON['R-WU-BombCluster-ROF3']['results'][1]['value'] = -6
+resJSON['R-WU-BombCluster-ROF4']['results'][0]['value'] = -7
+resJSON['R-WU-BombCluster-ROF4']['results'][1]['value'] = -8
+resJSON['R-WU-BombCluster-ROF5']['results'][0]['value'] = -6
+resJSON['R-WU-BombCluster-ROF5']['results'][1]['value'] = -6
+del resJSON['R-WU-BombHeavy-ROF1']['results'][1]
+del resJSON['R-WU-BombHeavy-ROF2']['results'][1]
+del resJSON['R-WU-BombHeavy-ROF3']['results'][1]
+del resJSON['R-WU-BombHeavy-ROF4']['results'][1]
+del resJSON['R-WU-BombHeavy-ROF5']['results'][1]
+resJSON['R-WU-BombHeavy-ROF1']['results'][0]['value'] = -8
+resJSON['R-WU-BombHeavy-ROF2']['results'][0]['value'] = -8
+resJSON['R-WU-BombHeavy-ROF3']['results'][0]['value'] = -8
+resJSON['R-WU-BombHeavy-ROF4']['results'][0]['value'] = -8
+resJSON['R-WU-BombHeavy-ROF5']['results'][0]['value'] = -6
+del resJSON['R-WU-BombThermite-ROF1']['results'][1]
+del resJSON['R-WU-BombThermite-ROF2']['results'][1]
+del resJSON['R-WU-BombThermite-ROF3']['results'][1]
+del resJSON['R-WU-BombThermite-ROF4']['results'][1]
+del resJSON['R-WU-BombThermite-ROF5']['results'][1]
+resJSON['R-WU-BombThermite-ROF1']['results'][0]['value'] = -8
+resJSON['R-WU-BombThermite-ROF2']['results'][0]['value'] = -8
+resJSON['R-WU-BombThermite-ROF3']['results'][0]['value'] = -8
+resJSON['R-WU-BombThermite-ROF4']['results'][0]['value'] = -8
+resJSON['R-WU-BombThermite-ROF5']['results'][0]['value'] = -6
+del resJSON['R-WU-Cannon-ROF1']['results'][1]
+del resJSON['R-WU-Cannon-ROF2']['results'][1]
+del resJSON['R-WU-Cannon-ROF3']['results'][1]
+del resJSON['R-WU-Cannon-ROF4']['results'][1]
+del resJSON['R-WU-Cannon-ROF5']['results'][1]
+resJSON['R-WU-Cannon-ROF1']['results'][0]['value'] = -9
+resJSON['R-WU-Cannon-ROF2']['results'][0]['value'] = -8
+resJSON['R-WU-Cannon-ROF3']['results'][0]['value'] = -8
+resJSON['R-WU-Cannon-ROF4']['results'][0]['value'] = -7
+resJSON['R-WU-Cannon-ROF5']['results'][0]['value'] = -6
+resJSON['R-WU-Flamethrower-ROF1']['results'][0]['value'] = -9
+resJSON['R-WU-Flamethrower-ROF1']['results'][1]['value'] = -8
+resJSON['R-WU-Flamethrower-ROF2']['results'][0]['value'] = -8
+resJSON['R-WU-Flamethrower-ROF2']['results'][1]['value'] = -10
+resJSON['R-WU-Flamethrower-ROF3']['results'][0]['value'] = -8
+resJSON['R-WU-Flamethrower-ROF3']['results'][1]['value'] = -7
+resJSON['R-WU-Flamethrower-ROF4']['results'][0]['value'] = -7
+resJSON['R-WU-Flamethrower-ROF4']['results'][1]['value'] = -5
+resJSON['R-WU-Flamethrower-ROF5']['results'][0]['value'] = -6
+resJSON['R-WU-Flamethrower-ROF5']['results'][1]['value'] = -8
+del resJSON['R-WU-GrenadeLauncher-ROF1']['results'][1]
+del resJSON['R-WU-GrenadeLauncher-ROF2']['results'][1]
+del resJSON['R-WU-GrenadeLauncher-ROF3']['results'][1]
+del resJSON['R-WU-GrenadeLauncher-ROF4']['results'][1]
+del resJSON['R-WU-GrenadeLauncher-ROF5']['results'][1]
+resJSON['R-WU-GrenadeLauncher-ROF1']['results'][0]['value'] = -9
+resJSON['R-WU-GrenadeLauncher-ROF2']['results'][0]['value'] = -8
+resJSON['R-WU-GrenadeLauncher-ROF3']['results'][0]['value'] = -7
+resJSON['R-WU-GrenadeLauncher-ROF4']['results'][0]['value'] = -8
+resJSON['R-WU-GrenadeLauncher-ROF5']['results'][0]['value'] = -6
+del resJSON['R-WU-Howitzer-ROF1']['results'][1]
+del resJSON['R-WU-Howitzer-ROF2']['results'][1]
+del resJSON['R-WU-Howitzer-ROF3']['results'][1]
+del resJSON['R-WU-Howitzer-ROF4']['results'][1]
+del resJSON['R-WU-Howitzer-ROF5']['results'][1]
+resJSON['R-WU-Howitzer-ROF1']['results'][0]['value'] = -10
+resJSON['R-WU-Howitzer-ROF2']['results'][0]['value'] = -8
+resJSON['R-WU-Howitzer-ROF3']['results'][0]['value'] = -7
+resJSON['R-WU-Howitzer-ROF4']['results'][0]['value'] = -7
+resJSON['R-WU-Howitzer-ROF5']['results'][0]['value'] = -6
+del resJSON['R-WU-HowitzerIncendiary-ROF1']['results'][1]
+del resJSON['R-WU-HowitzerIncendiary-ROF2']['results'][1]
+del resJSON['R-WU-HowitzerIncendiary-ROF3']['results'][1]
+del resJSON['R-WU-HowitzerIncendiary-ROF4']['results'][1]
+del resJSON['R-WU-HowitzerIncendiary-ROF5']['results'][1]
+resJSON['R-WU-HowitzerIncendiary-ROF1']['results'][0]['value'] = -10
+resJSON['R-WU-HowitzerIncendiary-ROF2']['results'][0]['value'] = -8
+resJSON['R-WU-HowitzerIncendiary-ROF3']['results'][0]['value'] = -7
+resJSON['R-WU-HowitzerIncendiary-ROF4']['results'][0]['value'] = -7
+resJSON['R-WU-HowitzerIncendiary-ROF5']['results'][0]['value'] = -6
+resJSON['R-WU-Lancer-ROF1']['results'][0]['value'] = -9
+resJSON['R-WU-Lancer-ROF1']['results'][1]['value'] = -9
+resJSON['R-WU-Lancer-ROF2']['results'][0]['value'] = -8
+resJSON['R-WU-Lancer-ROF2']['results'][1]['value'] = -9
+resJSON['R-WU-Lancer-ROF3']['results'][0]['value'] = -7
+resJSON['R-WU-Lancer-ROF3']['results'][1]['value'] = -9
+resJSON['R-WU-Lancer-ROF4']['results'][0]['value'] = -7
+resJSON['R-WU-Lancer-ROF4']['results'][1]['value'] = -7
+resJSON['R-WU-Lancer-ROF5']['results'][0]['value'] = -6
+resJSON['R-WU-Lancer-ROF5']['results'][1]['value'] = -6
+del resJSON['R-WU-Laser-ROF1']['results'][1]
+del resJSON['R-WU-Laser-ROF2']['results'][1]
+del resJSON['R-WU-Laser-ROF3']['results'][1]
+del resJSON['R-WU-Laser-ROF4']['results'][1]
+del resJSON['R-WU-Laser-ROF5']['results'][1]
+resJSON['R-WU-Laser-ROF1']['results'][0]['value'] = -9
+resJSON['R-WU-Laser-ROF2']['results'][0]['value'] = -8
+resJSON['R-WU-Laser-ROF3']['results'][0]['value'] = -8
+resJSON['R-WU-Laser-ROF4']['results'][0]['value'] = -7
+resJSON['R-WU-Laser-ROF5']['results'][0]['value'] = -6
+del resJSON['R-WU-Machinegun-ROF1']['results'][1]
+del resJSON['R-WU-Machinegun-ROF2']['results'][1]
+del resJSON['R-WU-Machinegun-ROF3']['results'][1]
+del resJSON['R-WU-Machinegun-ROF4']['results'][1]
+del resJSON['R-WU-Machinegun-ROF5']['results'][1]
+del resJSON['R-WU-Machinegun-ROF6']['results'][1]
+del resJSON['R-WU-Machinegun-ROF7']['results'][1]
+resJSON['R-WU-Machinegun-ROF1']['results'][0]['value'] = -9
+resJSON['R-WU-Machinegun-ROF2']['results'][0]['value'] = -9
+resJSON['R-WU-Machinegun-ROF3']['results'][0]['value'] = -7
+resJSON['R-WU-Machinegun-ROF4']['results'][0]['value'] = -7
+resJSON['R-WU-Machinegun-ROF5']['results'][0]['value'] = -6
+resJSON['R-WU-Machinegun-ROF6']['results'][0]['value'] = -6
+resJSON['R-WU-Machinegun-ROF7']['results'][0]['value'] = -5
+del resJSON['R-WU-Railgun-ROF1']['results'][1]
+del resJSON['R-WU-Railgun-ROF2']['results'][1]
+del resJSON['R-WU-Railgun-ROF3']['results'][1]
+del resJSON['R-WU-Railgun-ROF4']['results'][1]
+del resJSON['R-WU-Railgun-ROF5']['results'][1]
+resJSON['R-WU-Railgun-ROF1']['results'][0]['value'] = -9
+resJSON['R-WU-Railgun-ROF2']['results'][0]['value'] = -8
+resJSON['R-WU-Railgun-ROF3']['results'][0]['value'] = -7
+resJSON['R-WU-Railgun-ROF4']['results'][0]['value'] = -8
+resJSON['R-WU-Railgun-ROF5']['results'][0]['value'] = -6
+resJSON['R-WU-RocketBattery-ROF1']['results'][0]['value'] = -9
+resJSON['R-WU-RocketBattery-ROF1']['results'][1]['value'] = -9
+resJSON['R-WU-RocketBattery-ROF2']['results'][0]['value'] = -8
+resJSON['R-WU-RocketBattery-ROF2']['results'][1]['value'] = -8
+resJSON['R-WU-RocketBattery-ROF3']['results'][0]['value'] = -8
+resJSON['R-WU-RocketBattery-ROF3']['results'][1]['value'] = -8
+resJSON['R-WU-RocketBattery-ROF4']['results'][0]['value'] = -7
+resJSON['R-WU-RocketBattery-ROF4']['results'][1]['value'] = -6
+resJSON['R-WU-RocketBattery-ROF5']['results'][0]['value'] = -6
+resJSON['R-WU-RocketBattery-ROF5']['results'][1]['value'] = -6
+resJSON['R-WU-ScourgeMissile-ROF1']['results'][0]['value'] = -8
+resJSON['R-WU-ScourgeMissile-ROF1']['results'][1]['value'] = -9
+resJSON['R-WU-ScourgeMissile-ROF2']['results'][0]['value'] = -8
+resJSON['R-WU-ScourgeMissile-ROF2']['results'][1]['value'] = -8
+resJSON['R-WU-ScourgeMissile-ROF3']['results'][0]['value'] = -8
+resJSON['R-WU-ScourgeMissile-ROF3']['results'][1]['value'] = -8
+resJSON['R-WU-ScourgeMissile-ROF4']['results'][0]['value'] = -8
+resJSON['R-WU-ScourgeMissile-ROF4']['results'][1]['value'] = -6
+resJSON['R-WU-ScourgeMissile-ROF5']['results'][0]['value'] = -6
+resJSON['R-WU-ScourgeMissile-ROF5']['results'][1]['value'] = -6
+
 # Save JSON dump
 with open('../jsondata/mp/stats/research.json', 'w') as f:
 	json.dump(resJSON, fp=f, indent=4, sort_keys=True)
