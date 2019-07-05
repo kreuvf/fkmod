@@ -24,6 +24,14 @@ const vtolWeapons = {
 	thermite: ["FK-HOT-BombThermite", "FK-HOT-BombThermite2", "FK-HOT-BombThermite3"],
 }
 
+const cyborgWeapons = {
+	cannon: ["FK-SF-Cannon-Cyborg", "FK-SF-Cannon-Cyborg2", "FK-SF-Cannon-Cyborg3"],
+	flame: ["FK-HOT-Flamethrower", "FK-HOT-Flamethrower2", "FK-HOT-Flamethrower3"],
+	grenade: ["FK-SPL-GrenadeLauncher-Cyborg", "FK-SPL-GrenadeLauncher-Cyborg2", "FK-SPL-GrenadeLauncher-Cyborg3"],
+	lancer : ["FK-MIS-Lancer-Cyborg", "FK-MIS-Lancer-Cyborg2"],
+	mg: ["FK-FF-Machinegun-Cyborg", "FK-FF-Machinegun-Cyborg2", "FK-FF-Machinegun-Cyborg3"],
+}
+
 const systemTurrets = {
 	commander: "FK-Commander",
 	scout: "FKScoutSensor",
@@ -71,6 +79,8 @@ function unit(name, body, propulsion, weapon) {
 
 function production() {
 	if (playerPower(me) <= 50) return;
+	
+	// Tanks
 	var tankFacs = idleTankFacs();
 	if(enumDroid(me, DROID_CONSTRUCT).length < 3) queueTank(new truck());
 	if(tankFacs.length > 0) {
@@ -95,6 +105,29 @@ function production() {
 		}
 		if(defined(tank)) {
 			buildDroid(tankFacs[0], tank.name, tank.body, tank.propulsion, null, null, tank.weapon);
+		}
+	}
+	
+	// Cyborgs
+	var cyborgFacs = idleCybFacs();
+	if(cyborgFacs.length > 0) {
+		// choose cyborg type
+		var cyborg;
+		var enemyTanks = findAntiTankTarget().length;
+		var enemyCyborgs = findAntiCyborgTarget().length;
+		var ownAntiTank = enumDroid(me).filter(isAntiTank).length;
+		var ownAntiCyborg = enumDroid(me).filter(isAntiCyborg).length;
+		if((1+enemyTanks)/(1+ownAntiTank) > (1+enemyCyborgs)/(1+ownAntiCyborg)) {
+			cyborg = cannonCyborg();
+		} else {
+			if(enemyCyborgs > 20 && enemyCyborgs / enemyCyborgs + enemyTanks > 0.7 && componentAvailable(cyborgWeapons.grenade[0])) {
+				cyborg = grenadeCyborg();
+			} else {
+				cyborg = mgCyborg();
+			}
+		}
+		if(defined(cyborg)) {
+			buildDroid(cyborgFacs[0], cyborg.name, cyborg.body, cyborg.propulsion, null, null, cyborg.weapon);
 		}
 	}
 }
