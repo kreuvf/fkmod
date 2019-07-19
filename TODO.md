@@ -2,7 +2,6 @@
 
 ## Requirements for Final Version
 ### Pre-Release Polishing
-* Intelligence Screen
 * Set up build infrastructure for Windows and deb packages
 * Set up default AI
 * Add end user readme
