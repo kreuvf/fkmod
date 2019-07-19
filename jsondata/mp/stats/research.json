@@ -1,5 +1,6 @@
 {
     "R-B-HiKin": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-B-HiKin",
         "keyTopic": 1,
         "msgName": "RM-B-HiKin",
@@ -12,10 +13,10 @@
         "resultComponents": [
             "FKTankHiKinetic"
         ],
-        "statID": "FKTankHiKinetic",
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "statID": "FKTankHiKinetic"
     },
     "R-B-HiSpeed": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-B-HiSpeed",
         "keyTopic": 1,
         "msgName": "RM-B-HiSpeed",
@@ -28,10 +29,10 @@
         "resultComponents": [
             "FKTankHiSpeed"
         ],
-        "statID": "FKTankHiSpeed",
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "statID": "FKTankHiSpeed"
     },
     "R-B-HiTherm": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-B-HiTherm",
         "keyTopic": 1,
         "msgName": "RM-B-HiTherm",
@@ -44,11 +45,10 @@
         "resultComponents": [
             "FKTankHiThermal"
         ],
-        "statID": "FKTankHiThermal",
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "statID": "FKTankHiThermal"
     },
     "R-BU-BodyPoints1": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-BodyPoints1",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -72,10 +72,10 @@
                 "value": 10
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-BodyPoints2": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-BodyPoints2",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -102,10 +102,10 @@
                 "value": 11
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-BodyPoints3": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-BodyPoints3",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -132,10 +132,10 @@
                 "value": 12
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-BodyPoints4": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-BodyPoints4",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -162,10 +162,10 @@
                 "value": 13
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-BodyPoints5": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-BodyPoints5",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -192,10 +192,10 @@
                 "value": 15
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-Engine1": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-Engine1",
         "imdName": "iceng.pie",
         "keyTopic": 1,
@@ -219,10 +219,10 @@
                 "value": 5
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-Engine2": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-Engine2",
         "imdName": "iceng.pie",
         "keyTopic": 1,
@@ -249,10 +249,10 @@
                 "value": 5
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-Engine3": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-Engine3",
         "imdName": "iceng.pie",
         "keyTopic": 1,
@@ -279,10 +279,10 @@
                 "value": 6
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-Engine4": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-Engine4",
         "imdName": "iceng.pie",
         "keyTopic": 1,
@@ -309,10 +309,10 @@
                 "value": 6
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-Engine5": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-Engine5",
         "imdName": "iceng.pie",
         "keyTopic": 1,
@@ -339,10 +339,10 @@
                 "value": 6
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-KineticArmour1": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-KineticArmour1",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -366,10 +366,10 @@
                 "value": 10
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-KineticArmour2": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-KineticArmour2",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -396,10 +396,10 @@
                 "value": 11
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-KineticArmour3": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-KineticArmour3",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -426,10 +426,10 @@
                 "value": 12
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-KineticArmour4": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-KineticArmour4",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -456,10 +456,10 @@
                 "value": 13
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-KineticArmour5": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-KineticArmour5",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -486,10 +486,10 @@
                 "value": 15
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-ThermalArmour1": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-ThermalArmour1",
         "imdName": "icamrhot.pie",
         "keyTopic": 1,
@@ -513,10 +513,10 @@
                 "value": 10
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-ThermalArmour2": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-ThermalArmour2",
         "imdName": "icamrhot.pie",
         "keyTopic": 1,
@@ -543,10 +543,10 @@
                 "value": 11
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-ThermalArmour3": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-ThermalArmour3",
         "imdName": "icamrhot.pie",
         "keyTopic": 1,
@@ -573,10 +573,10 @@
                 "value": 12
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-ThermalArmour4": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-ThermalArmour4",
         "imdName": "icamrhot.pie",
         "keyTopic": 1,
@@ -603,10 +603,10 @@
                 "value": 13
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-BU-ThermalArmour5": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-BU-ThermalArmour5",
         "imdName": "icamrhot.pie",
         "keyTopic": 1,
@@ -633,10 +633,10 @@
                 "value": 15
             }
         ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-Commander": {
-        "iconID": "IMAGE_RES_DROIDTECH",
+        "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-Commander",
         "keyTopic": 1,
         "msgName": "RM-Commander",
@@ -650,10 +650,10 @@
             "CommandBrain01",
             "FK-Commander"
         ],
-        "statID": "CommandBrain01",
-        "subgroupIconID": "IMAGE_RES_SYSTEMTECH"
+        "statID": "CommandBrain01"
     },
     "R-Def-Bunker": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Def-Bunker",
         "imdName": "blpilbox.pie",
         "keyTopic": 1,
@@ -663,10 +663,10 @@
             "R-Def-Wall"
         ],
         "researchPoints": 7657,
-        "researchPower": 239,
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "researchPower": 239
     },
     "R-Def-Hardpoint": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Def-Hardpoint",
         "imdName": "BLGUARD1.pie",
         "keyTopic": 1,
@@ -676,10 +676,10 @@
             "R-Def-Wall"
         ],
         "researchPoints": 7657,
-        "researchPower": 239,
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "researchPower": 239
     },
     "R-Def-Site": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Def-Site",
         "imdName": "Blaamnt2.pie",
         "keyTopic": 1,
@@ -689,10 +689,10 @@
             "R-Def-Wall"
         ],
         "researchPoints": 7657,
-        "researchPower": 239,
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "researchPower": 239
     },
     "R-Def-Wall": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-Def-Wall",
         "keyTopic": 1,
         "msgName": "RM-Def-Wall",
@@ -704,10 +704,10 @@
             "FKWallCorner",
             "FKWallGate"
         ],
-        "statID": "FKWall",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKWall"
     },
     "R-HACK-Autorepair": {
+        "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-HACK-Autorepair",
         "name": "Autorepair (HACK, YOU SHOULD NOT SEE THIS)",
         "replacedComponents": [
@@ -716,10 +716,10 @@
         "resultComponents": [
             "FKAutoRepair"
         ],
-        "statID": "FKRepairFacility",
-        "subgroupIconID": "IMAGE_RES_SYSTEMTECH"
+        "statID": "FKRepairFacility"
     },
     "R-HACK-Bunker-Cannon": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Bunker-Cannon",
         "name": "Cannon Bunker (HACK)",
         "requiredResearch": [
@@ -729,10 +729,10 @@
         "resultStructures": [
             "FKBunkerCannon"
         ],
-        "statID": "FKBunkerCannon",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKBunkerCannon"
     },
     "R-HACK-Bunker-Cannon2": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Bunker-Cannon2",
         "name": "Cannon Bunker (HACK)",
         "redStructures": [
@@ -745,10 +745,10 @@
         "resultStructures": [
             "FKBunkerCannon2"
         ],
-        "statID": "FKBunkerCannon2",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKBunkerCannon2"
     },
     "R-HACK-Bunker-Cannon3": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Bunker-Cannon3",
         "name": "Cannon Bunker (HACK)",
         "redStructures": [
@@ -761,10 +761,10 @@
         "resultStructures": [
             "FKBunkerCannon3"
         ],
-        "statID": "FKBunkerCannon3",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKBunkerCannon3"
     },
     "R-HACK-Bunker-GrenadeLauncher": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Bunker-GrenadeLauncher",
         "name": "Grenade Launcher Pit (HACK)",
         "requiredResearch": [
@@ -774,10 +774,10 @@
         "resultStructures": [
             "FKPitGrenadeLauncher"
         ],
-        "statID": "FKPitGrenadeLauncher",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKPitGrenadeLauncher"
     },
     "R-HACK-Bunker-GrenadeLauncher2": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Bunker-GrenadeLauncher2",
         "name": "Grenade Launcher Pit (HACK)",
         "redStructures": [
@@ -790,10 +790,10 @@
         "resultStructures": [
             "FKPitGrenadeLauncher2"
         ],
-        "statID": "FKPitGrenadeLauncher2",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKPitGrenadeLauncher2"
     },
     "R-HACK-Bunker-GrenadeLauncher3": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Bunker-GrenadeLauncher3",
         "name": "Grenade Launcher Pit (HACK)",
         "redStructures": [
@@ -806,10 +806,10 @@
         "resultStructures": [
             "FKPitGrenadeLauncher3"
         ],
-        "statID": "FKPitGrenadeLauncher3",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKPitGrenadeLauncher3"
     },
     "R-HACK-Bunker-Machinegun": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Bunker-Machinegun",
         "name": "Machinegun Bunker (HACK)",
         "requiredResearch": [
@@ -819,10 +819,10 @@
         "resultStructures": [
             "FKBunkerMG"
         ],
-        "statID": "FKBunkerMG",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKBunkerMG"
     },
     "R-HACK-Bunker-Machinegun2": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Bunker-Machinegun2",
         "name": "Machinegun Bunker (HACK)",
         "redStructures": [
@@ -835,10 +835,10 @@
         "resultStructures": [
             "FKBunkerMG2"
         ],
-        "statID": "FKBunkerMG2",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKBunkerMG2"
     },
     "R-HACK-Bunker-Machinegun3": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Bunker-Machinegun3",
         "name": "Machinegun Bunker (HACK)",
         "redStructures": [
@@ -851,10 +851,10 @@
         "resultStructures": [
             "FKBunkerMG3"
         ],
-        "statID": "FKBunkerMG3",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKBunkerMG3"
     },
     "R-HACK-Bunker-ScourgeMissile": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Bunker-ScourgeMissile",
         "name": null,
         "requiredResearch": [
@@ -864,10 +864,10 @@
         "resultStructures": [
             "FKBunkerScourgeMissile"
         ],
-        "statID": "FKBunkerScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKBunkerScourgeMissile"
     },
     "R-HACK-Bunker-ScourgeMissile2": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Bunker-ScourgeMissile2",
         "name": null,
         "redStructures": [
@@ -880,10 +880,10 @@
         "resultStructures": [
             "FKBunkerScourgeMissile2"
         ],
-        "statID": "FKBunkerScourgeMissile2",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKBunkerScourgeMissile2"
     },
     "R-HACK-Hardpoint-Cannon": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Hardpoint-Cannon",
         "name": "Cannon Hardpoint (HACK)",
         "requiredResearch": [
@@ -893,10 +893,10 @@
         "resultStructures": [
             "FKHardpointCannon"
         ],
-        "statID": "FKHardpointCannon",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKHardpointCannon"
     },
     "R-HACK-Hardpoint-Cannon2": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Hardpoint-Cannon2",
         "name": "Cannon Hardpoint (HACK)",
         "redStructures": [
@@ -909,10 +909,10 @@
         "resultStructures": [
             "FKHardpointCannon2"
         ],
-        "statID": "FKHardpointCannon2",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKHardpointCannon2"
     },
     "R-HACK-Hardpoint-Cannon3": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Hardpoint-Cannon3",
         "name": "Cannon Hardpoint (HACK)",
         "redStructures": [
@@ -925,10 +925,10 @@
         "resultStructures": [
             "FKHardpointCannon3"
         ],
-        "statID": "FKHardpointCannon3",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKHardpointCannon3"
     },
     "R-HACK-Hardpoint-Machinegun": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Hardpoint-Machinegun",
         "name": "Machinegun Hardpoint (HACK)",
         "requiredResearch": [
@@ -938,10 +938,10 @@
         "resultStructures": [
             "FKHardpointMG"
         ],
-        "statID": "FKHardpointMG",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKHardpointMG"
     },
     "R-HACK-Hardpoint-Machinegun2": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Hardpoint-Machinegun2",
         "name": "Machinegun Hardpoint (HACK)",
         "redStructures": [
@@ -954,10 +954,10 @@
         "resultStructures": [
             "FKHardpointMG2"
         ],
-        "statID": "FKHardpointMG2",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKHardpointMG2"
     },
     "R-HACK-Hardpoint-Machinegun3": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Hardpoint-Machinegun3",
         "name": "Machinegun Hardpoint (HACK)",
         "redStructures": [
@@ -970,10 +970,10 @@
         "resultStructures": [
             "FKHardpointMG3"
         ],
-        "statID": "FKHardpointMG3",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKHardpointMG3"
     },
     "R-HACK-Hardpoint-ScourgeMissile": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Hardpoint-ScourgeMissile",
         "name": "Scourge Missile Hardpoint (HACK)",
         "requiredResearch": [
@@ -983,10 +983,10 @@
         "resultStructures": [
             "FKHardpointScourgeMissile"
         ],
-        "statID": "FKHardpointScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKHardpointScourgeMissile"
     },
     "R-HACK-Hardpoint-ScourgeMissile2": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Hardpoint-ScourgeMissile2",
         "name": "Scourge Missile Hardpoint (HACK)",
         "redStructures": [
@@ -999,10 +999,10 @@
         "resultStructures": [
             "FKHardpointScourgeMissile2"
         ],
-        "statID": "FKHardpointScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKHardpointScourgeMissile"
     },
     "R-HACK-Site-AAAvengerSAM": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Site-AAAvengerSAM",
         "name": "Avenger SAM Site (HACK)",
         "requiredResearch": [
@@ -1012,10 +1012,10 @@
         "resultStructures": [
             "FKAASiteAvengerSAM"
         ],
-        "statID": "FKAASiteAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKAASiteAvengerSAM"
     },
     "R-HACK-Site-AAAvengerSAM2": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Site-AAAvengerSAM2",
         "name": "Avenger SAM Site (HACK)",
         "redStructures": [
@@ -1028,10 +1028,10 @@
         "resultStructures": [
             "FKAASiteAvengerSAM2"
         ],
-        "statID": "FKAASiteAvengerSAM2",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKAASiteAvengerSAM2"
     },
     "R-HACK-Site-AACyclone": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Site-AACyclone",
         "name": "Cyclone AA Site (HACK)",
         "requiredResearch": [
@@ -1041,10 +1041,10 @@
         "resultStructures": [
             "FKAASiteCyclone"
         ],
-        "statID": "FKAASiteCyclone",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKAASiteCyclone"
     },
     "R-HACK-Site-AACyclone2": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Site-AACyclone2",
         "name": "Cyclone AA Site (HACK)",
         "redStructures": [
@@ -1057,10 +1057,10 @@
         "resultStructures": [
             "FKAASiteCyclone2"
         ],
-        "statID": "FKAASiteCyclone2",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKAASiteCyclone2"
     },
     "R-HACK-Site-AACyclone3": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Site-AACyclone3",
         "name": "Cyclone AA Site (HACK)",
         "redStructures": [
@@ -1073,10 +1073,10 @@
         "resultStructures": [
             "FKAASiteCyclone3"
         ],
-        "statID": "FKAASiteCyclone3",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKAASiteCyclone3"
     },
     "R-HACK-Site-AAHurricane": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Site-AAHurricane",
         "name": "Hurricane AA Site (HACK)",
         "requiredResearch": [
@@ -1086,10 +1086,10 @@
         "resultStructures": [
             "FKAASiteHurricane"
         ],
-        "statID": "FKAASiteHurricane",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKAASiteHurricane"
     },
     "R-HACK-Site-AAHurricane2": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Site-AAHurricane2",
         "name": "Hurricane AA Site (HACK)",
         "redStructures": [
@@ -1102,10 +1102,10 @@
         "resultStructures": [
             "FKAASiteHurricane2"
         ],
-        "statID": "FKAASiteHurricane2",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKAASiteHurricane2"
     },
     "R-HACK-Site-AAHurricane3": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Site-AAHurricane3",
         "name": "Hurricane AA Site (HACK)",
         "redStructures": [
@@ -1118,10 +1118,10 @@
         "resultStructures": [
             "FKAASiteHurricane3"
         ],
-        "statID": "FKAASiteHurricane3",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKAASiteHurricane3"
     },
     "R-HACK-Site-AAStormbringer": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Site-AAStormbringer",
         "name": "Stormbringer AA Site (HACK)",
         "requiredResearch": [
@@ -1131,10 +1131,10 @@
         "resultStructures": [
             "FKAASiteStormbringer"
         ],
-        "statID": "FKAASiteStormbringer",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKAASiteStormbringer"
     },
     "R-HACK-Site-AAStormbringer2": {
+        "iconID": "IMAGE_RES_DEFENCE",
         "id": "R-HACK-Site-AAStormbringer2",
         "name": "Stormbringer AA Site (HACK)",
         "redStructures": [
@@ -1147,11 +1147,10 @@
         "resultStructures": [
             "FKAASiteStormbringer2"
         ],
-        "statID": "FKAASiteStormbringer2",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "statID": "FKAASiteStormbringer2"
     },
     "R-NRG1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_POWERTECH",
         "id": "R-NRG1",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
@@ -1166,10 +1165,10 @@
                 "value": 5
             }
         ],
-        "subgroupIconID": "IMAGE_RES_POWERTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-NRG10": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_POWERTECH",
         "id": "R-NRG10",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
@@ -1187,10 +1186,10 @@
                 "value": 8
             }
         ],
-        "subgroupIconID": "IMAGE_RES_POWERTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-NRG2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_POWERTECH",
         "id": "R-NRG2",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
@@ -1208,10 +1207,10 @@
                 "value": 5
             }
         ],
-        "subgroupIconID": "IMAGE_RES_POWERTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-NRG3": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_POWERTECH",
         "id": "R-NRG3",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
@@ -1229,10 +1228,10 @@
                 "value": 6
             }
         ],
-        "subgroupIconID": "IMAGE_RES_POWERTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-NRG4": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_POWERTECH",
         "id": "R-NRG4",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
@@ -1250,10 +1249,10 @@
                 "value": 6
             }
         ],
-        "subgroupIconID": "IMAGE_RES_POWERTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-NRG5": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_POWERTECH",
         "id": "R-NRG5",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
@@ -1271,10 +1270,10 @@
                 "value": 6
             }
         ],
-        "subgroupIconID": "IMAGE_RES_POWERTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-NRG6": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_POWERTECH",
         "id": "R-NRG6",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
@@ -1292,10 +1291,10 @@
                 "value": 6
             }
         ],
-        "subgroupIconID": "IMAGE_RES_POWERTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-NRG7": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_POWERTECH",
         "id": "R-NRG7",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
@@ -1313,10 +1312,10 @@
                 "value": 7
             }
         ],
-        "subgroupIconID": "IMAGE_RES_POWERTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-NRG8": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_POWERTECH",
         "id": "R-NRG8",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
@@ -1334,10 +1333,10 @@
                 "value": 7
             }
         ],
-        "subgroupIconID": "IMAGE_RES_POWERTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-NRG9": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_POWERTECH",
         "id": "R-NRG9",
         "imdName": "blpower4.pie",
         "keyTopic": 1,
@@ -1355,9 +1354,10 @@
                 "value": 7
             }
         ],
-        "subgroupIconID": "IMAGE_RES_POWERTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-P-Hover": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-P-Hover",
         "keyTopic": 1,
         "msgName": "RM-P-Hover",
@@ -1370,10 +1370,10 @@
         "resultComponents": [
             "hover01"
         ],
-        "statID": "hover01",
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "statID": "hover01"
     },
     "R-P-VTOL": {
+        "iconID": "IMAGE_RES_DROIDTECH",
         "id": "R-P-VTOL",
         "imdName": "DPVTOL.PIE",
         "keyTopic": 1,
@@ -1390,11 +1390,10 @@
         "resultStructures": [
             "FKVTOLFactory",
             "FKRearmPad"
-        ],
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        ]
     },
     "R-RAU1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-RAU1",
         "keyTopic": 1,
         "msgName": "RM-RAU1",
@@ -1412,10 +1411,10 @@
             }
         ],
         "statID": "FKRearmPad",
-        "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-RAU2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-RAU2",
         "keyTopic": 1,
         "msgName": "RM-RAU2",
@@ -1433,10 +1432,10 @@
             }
         ],
         "statID": "FKRearmPad",
-        "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-RAU3": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-RAU3",
         "keyTopic": 1,
         "msgName": "RM-RAU3",
@@ -1454,10 +1453,10 @@
             }
         ],
         "statID": "FKRearmPad",
-        "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-Repair": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-Repair",
         "keyTopic": 1,
         "msgName": "RM-Repair",
@@ -1469,11 +1468,10 @@
             "FKCyborg-Repair",
             "FKCyborgRepair"
         ],
-        "statID": "FKTankRepair",
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "statID": "FKTankRepair"
     },
     "R-Res1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_COMPUTERTECH",
         "id": "R-Res1",
         "imdName": "blresch4.PIE",
         "keyTopic": 1,
@@ -1488,10 +1486,10 @@
                 "value": 10
             }
         ],
-        "subgroupIconID": "IMAGE_RES_COMPUTERTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-Res2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_COMPUTERTECH",
         "id": "R-Res2",
         "imdName": "blresch4.PIE",
         "keyTopic": 1,
@@ -1509,10 +1507,10 @@
                 "value": 11
             }
         ],
-        "subgroupIconID": "IMAGE_RES_COMPUTERTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-Res3": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_COMPUTERTECH",
         "id": "R-Res3",
         "imdName": "blresch4.PIE",
         "keyTopic": 1,
@@ -1530,10 +1528,10 @@
                 "value": 12
             }
         ],
-        "subgroupIconID": "IMAGE_RES_COMPUTERTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-Res4": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_COMPUTERTECH",
         "id": "R-Res4",
         "imdName": "blresch4.PIE",
         "keyTopic": 1,
@@ -1551,10 +1549,10 @@
                 "value": 13
             }
         ],
-        "subgroupIconID": "IMAGE_RES_COMPUTERTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-Res5": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_COMPUTERTECH",
         "id": "R-Res5",
         "imdName": "blresch4.PIE",
         "keyTopic": 1,
@@ -1572,10 +1570,10 @@
                 "value": 15
             }
         ],
-        "subgroupIconID": "IMAGE_RES_COMPUTERTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-RpU1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-RpU1",
         "keyTopic": 1,
         "msgName": "RM-RpU1",
@@ -1593,10 +1591,10 @@
             }
         ],
         "statID": "FKTankRepair",
-        "subgroupIconID": "IMAGE_RES_SYSTEMTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-RpU2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-RpU2",
         "keyTopic": 1,
         "msgName": "RM-RpU2",
@@ -1614,10 +1612,10 @@
             }
         ],
         "statID": "FKTankRepair",
-        "subgroupIconID": "IMAGE_RES_SYSTEMTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-RpU3": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-RpU3",
         "keyTopic": 1,
         "msgName": "RM-RpU3",
@@ -1635,9 +1633,10 @@
             }
         ],
         "statID": "FKTankRepair",
-        "subgroupIconID": "IMAGE_RES_SYSTEMTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-SensorArtillery": {
+        "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-SensorArtillery",
         "keyTopic": 1,
         "msgName": "RM-SensorArtillery",
@@ -1650,10 +1649,10 @@
         "resultStructures": [
             "FKTowerArtillery"
         ],
-        "statID": "FKTowerArtillery",
-        "subgroupIconID": "IMAGE_RES_SYSTEMTECH"
+        "statID": "FKTowerArtillery"
     },
     "R-SensorCB": {
+        "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-SensorCB",
         "keyTopic": 1,
         "msgName": "RM-SensorCB",
@@ -1666,11 +1665,10 @@
         "resultStructures": [
             "FKTowerCB"
         ],
-        "statID": "FKTowerCB",
-        "subgroupIconID": "IMAGE_RES_SYSTEMTECH"
+        "statID": "FKTowerCB"
     },
     "R-SensorSurveillance": {
-        "iconID": "IMAGE_RES_DEFENCE",
+        "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-SensorSurveillance",
         "keyTopic": 1,
         "msgName": "RM-SensorSurveillance",
@@ -1685,9 +1683,10 @@
             "FKTowerSurveillance"
         ],
         "statID": "FKSurveillanceSensor",
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_DEFENCE"
     },
     "R-SensorVTOL": {
+        "iconID": "IMAGE_RES_SYSTEMTECH",
         "id": "R-SensorVTOL",
         "keyTopic": 1,
         "msgName": "RM-SensorVTOL",
@@ -1700,10 +1699,10 @@
         "resultStructures": [
             "FKTowerVTOL"
         ],
-        "statID": "FKTowerVTOL",
-        "subgroupIconID": "IMAGE_RES_SYSTEMTECH"
+        "statID": "FKTowerVTOL"
     },
     "R-St-RepairFacility": {
+        "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-St-RepairFacility",
         "keyTopic": 1,
         "msgName": "RM-St-RepairFacility",
@@ -1716,11 +1715,10 @@
         "resultStructures": [
             "FKRepairFacility"
         ],
-        "statID": "FKRepairFacility",
-        "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
+        "statID": "FKRepairFacility"
     },
     "R-StU-Armours1": {
-        "iconID": "IMAGE_RES_DEFENCE",
+        "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-StU-Armours1",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -1758,10 +1756,10 @@
                 "value": 10
             }
         ],
-        "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-StU-Armours2": {
-        "iconID": "IMAGE_RES_DEFENCE",
+        "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-StU-Armours2",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -1802,10 +1800,10 @@
                 "value": 11
             }
         ],
-        "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-StU-Armours3": {
-        "iconID": "IMAGE_RES_DEFENCE",
+        "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-StU-Armours3",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -1846,10 +1844,10 @@
                 "value": 12
             }
         ],
-        "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-StU-Armours4": {
-        "iconID": "IMAGE_RES_DEFENCE",
+        "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-StU-Armours4",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -1890,10 +1888,10 @@
                 "value": 13
             }
         ],
-        "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-StU-Armours5": {
-        "iconID": "IMAGE_RES_DEFENCE",
+        "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-StU-Armours5",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -1934,10 +1932,10 @@
                 "value": 15
             }
         ],
-        "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-StU-BodyPoints1": {
-        "iconID": "IMAGE_RES_DEFENCE",
+        "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-StU-BodyPoints1",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -1961,10 +1959,10 @@
                 "value": 10
             }
         ],
-        "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-StU-BodyPoints2": {
-        "iconID": "IMAGE_RES_DEFENCE",
+        "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-StU-BodyPoints2",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -1991,10 +1989,10 @@
                 "value": 11
             }
         ],
-        "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-StU-BodyPoints3": {
-        "iconID": "IMAGE_RES_DEFENCE",
+        "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-StU-BodyPoints3",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -2021,10 +2019,10 @@
                 "value": 12
             }
         ],
-        "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-StU-BodyPoints4": {
-        "iconID": "IMAGE_RES_DEFENCE",
+        "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-StU-BodyPoints4",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -2051,10 +2049,10 @@
                 "value": 13
             }
         ],
-        "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-StU-BodyPoints5": {
-        "iconID": "IMAGE_RES_DEFENCE",
+        "iconID": "IMAGE_RES_STRUCTURETECH",
         "id": "R-StU-BodyPoints5",
         "imdName": "icmolql.pie",
         "keyTopic": 1,
@@ -2081,9 +2079,10 @@
                 "value": 15
             }
         ],
-        "subgroupIconID": "IMAGE_RES_STRUCTURETECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-U-CyborgTransport": {
+        "iconID": "IMAGE_RES_CYBORGTECH",
         "id": "R-U-CyborgTransport",
         "keyTopic": 1,
         "msgName": "RM-U-CyborgTransport",
@@ -2097,11 +2096,10 @@
         "resultComponents": [
             "FKTransportBody"
         ],
-        "statID": "FKTransportBody",
-        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
+        "statID": "FKTransportBody"
     },
     "R-W-ART-Howitzer": {
-        "iconID": "IMAGE_RES_DEFENCE",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-ART-Howitzer",
         "keyTopic": 1,
         "msgName": "RM-W-ART-Howitzer",
@@ -2118,10 +2116,10 @@
             "FKPitHowitzer"
         ],
         "statID": "FKPitHowitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_DEFENCE"
     },
     "R-W-ART-RocketBattery": {
-        "iconID": "IMAGE_RES_DEFENCE",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-ART-RocketBattery",
         "keyTopic": 1,
         "msgName": "RM-W-ART-RocketBattery",
@@ -2138,10 +2136,10 @@
             "FKPitRockets"
         ],
         "statID": "FKPitRockets",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_DEFENCE"
     },
     "R-W-FF-AAHurricane": {
-        "iconID": "IMAGE_RES_DROIDTECH",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-FF-AAHurricane",
         "keyTopic": 1,
         "msgName": "RM-W-FF-AAHurricane",
@@ -2158,7 +2156,7 @@
         "subgroupIconID": "IMAGE_RES_DEFENCE"
     },
     "R-W-FF-Autocannon": {
-        "iconID": "IMAGE_RES_DROIDTECH",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-FF-Autocannon",
         "keyTopic": 1,
         "msgName": "RM-W-FF-Autocannon",
@@ -2170,10 +2168,10 @@
             "FK-FF-Autocannon-VTOL"
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-W-FF-Machinegun": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-FF-Machinegun",
         "keyTopic": 1,
         "msgName": "RM-W-FF-Machinegun",
@@ -2185,10 +2183,10 @@
             "FK-FF-Machinegun-Cyborg"
         ],
         "statID": "FK-FF-Machinegun-Cyborg",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-W-HOT-AAStormbringer": {
-        "iconID": "IMAGE_RES_DROIDTECH",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-HOT-AAStormbringer",
         "keyTopic": 1,
         "msgName": "RM-W-HOT-AAStormbringer",
@@ -2202,10 +2200,10 @@
             "FK-HOT-AAStormbringer"
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-W-HOT-BombThermite": {
-        "iconID": "IMAGE_RES_DROIDTECH",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-HOT-BombThermite",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -2219,10 +2217,10 @@
         "resultComponents": [
             "FK-HOT-BombThermite"
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-W-HOT-Flamethrower": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-HOT-Flamethrower",
         "keyTopic": 1,
         "msgName": "RM-W-HOT-Flamethrower",
@@ -2234,10 +2232,10 @@
             "FK-HOT-Flamethrower"
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-W-HOT-HowitzerIncendiary": {
-        "iconID": "IMAGE_RES_DEFENCE",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-HOT-HowitzerIncendiary",
         "keyTopic": 1,
         "msgName": "RM-W-HOT-HowitzerIncendiary",
@@ -2255,10 +2253,10 @@
             "FKPitHowitzerIncendiary"
         ],
         "statID": "FKPitHowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_DEFENCE"
     },
     "R-W-HOT-Laser": {
-        "iconID": "IMAGE_RES_DROIDTECH",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-HOT-Laser",
         "keyTopic": 1,
         "msgName": "RM-W-HOT-Laser",
@@ -2269,10 +2267,10 @@
             "FK-HOT-Laser"
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-W-MIS-AAAvengerSAM": {
-        "iconID": "IMAGE_RES_DROIDTECH",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-MIS-AAAvengerSAM",
         "keyTopic": 1,
         "msgName": "RM-W-MIS-AAAvengerSAM",
@@ -2286,10 +2284,10 @@
             "FK-MIS-AAAvengerSAM"
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-W-MIS-Lancer": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-MIS-Lancer",
         "keyTopic": 1,
         "msgName": "RM-W-MIS-Lancer",
@@ -2302,10 +2300,10 @@
             "FK-MIS-Lancer-Cyborg"
         ],
         "statID": "FK-MIS-Lancer-Cyborg",
-        "subgroupIconID": "IMAGE_RES_DROIDTECH"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-W-MIS-ScourgeMissile": {
-        "iconID": "IMAGE_RES_DROIDTECH",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-MIS-ScourgeMissile",
         "keyTopic": 1,
         "msgName": "RM-W-MIS-ScourgeMissile",
@@ -2316,10 +2314,10 @@
             "FK-MIS-ScourgeMissile"
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-W-SF-AACyclone": {
-        "iconID": "IMAGE_RES_DEFENCE",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-SF-AACyclone",
         "keyTopic": 1,
         "msgName": "RM-W-SF-AACyclone",
@@ -2333,10 +2331,10 @@
             "FK-SF-AACyclone"
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_DEFENCE"
     },
     "R-W-SF-BombHeavy": {
-        "iconID": "IMAGE_RES_DROIDTECH",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-SF-BombHeavy",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -2350,10 +2348,10 @@
         "resultComponents": [
             "FK-SF-BombHeavy"
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-W-SF-Cannon": {
-        "iconID": "IMAGE_RES_CYBORGTECH",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-SF-Cannon",
         "keyTopic": 1,
         "msgName": "RM-W-SF-Cannon",
@@ -2365,10 +2363,10 @@
             "FK-SF-Cannon-Cyborg"
         ],
         "statID": "FK-SF-Cannon-Cyborg",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "subgroupIconID": "IMAGE_RES_CYBORGTECH"
     },
     "R-W-SF-Railgun": {
-        "iconID": "IMAGE_RES_DROIDTECH",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-SF-Railgun",
         "keyTopic": 1,
         "msgName": "RM-W-SF-Railgun",
@@ -2379,10 +2377,10 @@
             "FK-SF-Railgun"
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-W-SPL-BombCluster": {
-        "iconID": "IMAGE_RES_DROIDTECH",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-SPL-BombCluster",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -2396,10 +2394,10 @@
         "resultComponents": [
             "FK-SPL-BombCluster"
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-W-SPL-GrenadeLauncher": {
-        "iconID": "IMAGE_RES_DROIDTECH",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-W-SPL-GrenadeLauncher",
         "keyTopic": 1,
         "msgName": "RM-W-SPL-GrenadeLauncher",
@@ -2415,10 +2413,10 @@
             "FK-SPL-GrenadeLauncher-Cyborg"
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_DEFENCE"
+        "subgroupIconID": "IMAGE_RES_DROIDTECH"
     },
     "R-WU-AAAvengerSAM-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-ACC1",
@@ -2438,10 +2436,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAAvengerSAM-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-ACC2",
@@ -2461,10 +2459,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAAvengerSAM-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-ACC3",
@@ -2484,10 +2482,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAAvengerSAM-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-ACC4",
@@ -2507,10 +2505,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAAvengerSAM-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-ACC5",
@@ -2530,10 +2528,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAAvengerSAM-ACC6": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-ACC6",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-ACC6",
@@ -2553,10 +2551,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAAvengerSAM-ACC7": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-ACC7",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-ACC7",
@@ -2576,10 +2574,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAAvengerSAM-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-DMG1",
@@ -2613,10 +2611,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAAvengerSAM-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-DMG2",
@@ -2650,10 +2648,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAAvengerSAM-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-DMG3",
@@ -2687,10 +2685,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAAvengerSAM-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-DMG4",
@@ -2724,10 +2722,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAAvengerSAM-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-DMG5",
@@ -2761,10 +2759,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAAvengerSAM-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-ROF1",
@@ -2791,10 +2789,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAAvengerSAM-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-ROF2",
@@ -2821,10 +2819,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAAvengerSAM-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-ROF3",
@@ -2851,10 +2849,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAAvengerSAM-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-ROF4",
@@ -2881,10 +2879,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAAvengerSAM-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-ROF5",
@@ -2911,10 +2909,10 @@
             }
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAAvengerSAM-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAAvengerSAM-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-AAAvengerSAM-SPE1",
@@ -2933,10 +2931,10 @@
             "FK-MIS-AAAvengerSAM2"
         ],
         "statID": "FK-MIS-AAAvengerSAM",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-AACyclone-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-ACC1",
@@ -2956,10 +2954,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AACyclone-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-ACC2",
@@ -2979,10 +2977,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AACyclone-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-ACC3",
@@ -3002,10 +3000,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AACyclone-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-ACC4",
@@ -3025,10 +3023,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AACyclone-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-ACC5",
@@ -3048,10 +3046,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AACyclone-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-DMG1",
@@ -3085,10 +3083,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AACyclone-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-DMG2",
@@ -3122,10 +3120,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AACyclone-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-DMG3",
@@ -3159,10 +3157,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AACyclone-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-DMG4",
@@ -3196,10 +3194,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AACyclone-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-DMG5",
@@ -3233,10 +3231,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AACyclone-DMG6": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-DMG6",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-DMG6",
@@ -3270,10 +3268,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AACyclone-DMG7": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-DMG7",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-DMG7",
@@ -3307,10 +3305,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AACyclone-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-ROF1",
@@ -3337,10 +3335,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AACyclone-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-ROF2",
@@ -3367,10 +3365,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AACyclone-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-ROF3",
@@ -3397,10 +3395,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AACyclone-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-ROF4",
@@ -3427,10 +3425,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AACyclone-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-ROF5",
@@ -3457,10 +3455,10 @@
             }
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AACyclone-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-SPE1",
@@ -3479,10 +3477,10 @@
             "FK-SF-AACyclone2"
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-AACyclone-SPE2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AACyclone-SPE2",
         "keyTopic": 1,
         "msgName": "RM-WU-AACyclone-SPE2",
@@ -3502,10 +3500,10 @@
             "FK-SF-AACyclone3"
         ],
         "statID": "FK-SF-AACyclone",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-AAHurricane-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-ACC1",
@@ -3525,10 +3523,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAHurricane-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-ACC2",
@@ -3548,10 +3546,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAHurricane-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-ACC3",
@@ -3571,10 +3569,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAHurricane-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-ACC4",
@@ -3594,10 +3592,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAHurricane-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-ACC5",
@@ -3617,10 +3615,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAHurricane-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-DMG1",
@@ -3647,10 +3645,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAHurricane-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-DMG2",
@@ -3677,10 +3675,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAHurricane-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-DMG3",
@@ -3707,10 +3705,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAHurricane-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-DMG4",
@@ -3737,10 +3735,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAHurricane-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-DMG5",
@@ -3767,10 +3765,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAHurricane-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-ROF1",
@@ -3797,10 +3795,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAHurricane-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-ROF2",
@@ -3827,10 +3825,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAHurricane-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-ROF3",
@@ -3857,10 +3855,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAHurricane-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-ROF4",
@@ -3887,10 +3885,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAHurricane-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-ROF5",
@@ -3917,10 +3915,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAHurricane-ROF6": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-ROF6",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-ROF6",
@@ -3947,10 +3945,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAHurricane-ROF7": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-ROF7",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-ROF7",
@@ -3977,10 +3975,10 @@
             }
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAHurricane-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-SPE1",
@@ -3999,10 +3997,10 @@
             "FK-FF-AAHurricane2"
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-AAHurricane-SPE2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAHurricane-SPE2",
         "keyTopic": 1,
         "msgName": "RM-WU-AAHurricane-SPE2",
@@ -4022,10 +4020,10 @@
             "FK-FF-AAHurricane3"
         ],
         "statID": "FK-FF-AAHurricane",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-AAStormbringer-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-ACC1",
@@ -4045,10 +4043,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAStormbringer-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-ACC2",
@@ -4068,10 +4066,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAStormbringer-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-ACC3",
@@ -4091,10 +4089,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAStormbringer-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-ACC4",
@@ -4114,10 +4112,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAStormbringer-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-ACC5",
@@ -4137,10 +4135,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-AAStormbringer-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-DMG1",
@@ -4174,10 +4172,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAStormbringer-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-DMG2",
@@ -4211,10 +4209,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAStormbringer-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-DMG3",
@@ -4248,10 +4246,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAStormbringer-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-DMG4",
@@ -4285,10 +4283,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAStormbringer-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-DMG5",
@@ -4322,10 +4320,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAStormbringer-DMG6": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-DMG6",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-DMG6",
@@ -4359,10 +4357,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAStormbringer-DMG7": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-DMG7",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-DMG7",
@@ -4396,10 +4394,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-AAStormbringer-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-ROF1",
@@ -4419,10 +4417,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAStormbringer-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-ROF2",
@@ -4442,10 +4440,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAStormbringer-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-ROF3",
@@ -4465,10 +4463,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAStormbringer-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-ROF4",
@@ -4488,10 +4486,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAStormbringer-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-ROF5",
@@ -4511,10 +4509,10 @@
             }
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-AAStormbringer-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-AAStormbringer-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-AAStormbringer-SPE1",
@@ -4533,10 +4531,10 @@
             "FK-HOT-AAStormbringer2"
         ],
         "statID": "FK-HOT-AAStormbringer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-Autocannon-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-ACC1",
@@ -4556,10 +4554,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Autocannon-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-ACC2",
@@ -4579,10 +4577,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Autocannon-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-ACC3",
@@ -4602,10 +4600,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Autocannon-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-ACC4",
@@ -4625,10 +4623,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Autocannon-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-ACC5",
@@ -4648,10 +4646,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Autocannon-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-DMG1",
@@ -4671,10 +4669,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Autocannon-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-DMG2",
@@ -4694,10 +4692,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Autocannon-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-DMG3",
@@ -4717,10 +4715,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Autocannon-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-DMG4",
@@ -4740,10 +4738,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Autocannon-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-DMG5",
@@ -4763,10 +4761,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Autocannon-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-ROF1",
@@ -4793,10 +4791,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Autocannon-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-ROF2",
@@ -4823,10 +4821,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Autocannon-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-ROF3",
@@ -4853,10 +4851,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Autocannon-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-ROF4",
@@ -4883,10 +4881,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Autocannon-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-ROF5",
@@ -4913,10 +4911,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Autocannon-ROF6": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-ROF6",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-ROF6",
@@ -4943,10 +4941,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Autocannon-ROF7": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-ROF7",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-ROF7",
@@ -4973,10 +4971,10 @@
             }
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Autocannon-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-SPE1",
@@ -4993,10 +4991,10 @@
             "FK-FF-Autocannon-VTOL2"
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-Autocannon-SPE2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Autocannon-SPE2",
         "keyTopic": 1,
         "msgName": "RM-WU-Autocannon-SPE2",
@@ -5014,10 +5012,10 @@
             "FK-FF-Autocannon-VTOL3"
         ],
         "statID": "FK-FF-Autocannon-Tank",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-BombCluster-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-ACC1",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5037,10 +5035,10 @@
                 "value": 23
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-BombCluster-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-ACC2",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5060,10 +5058,10 @@
                 "value": 21
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-BombCluster-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-ACC3",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5083,10 +5081,10 @@
                 "value": 19
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-BombCluster-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-ACC4",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5106,10 +5104,10 @@
                 "value": 17
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-BombCluster-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-ACC5",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5129,10 +5127,10 @@
                 "value": 16
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-BombCluster-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-DMG1",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5166,10 +5164,10 @@
                 "value": 10
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombCluster-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-DMG2",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5203,10 +5201,10 @@
                 "value": 11
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombCluster-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-DMG3",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5240,10 +5238,10 @@
                 "value": 12
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombCluster-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-DMG4",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5277,10 +5275,10 @@
                 "value": 13
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombCluster-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-DMG5",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5314,10 +5312,10 @@
                 "value": 15
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombCluster-DMG6": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-DMG6",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5351,10 +5349,10 @@
                 "value": 16
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombCluster-DMG7": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-DMG7",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5388,10 +5386,10 @@
                 "value": 18
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombCluster-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-ROF1",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5418,10 +5416,10 @@
                 "value": -8
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-BombCluster-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-ROF2",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5448,10 +5446,10 @@
                 "value": -10
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-BombCluster-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-ROF3",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5478,10 +5476,10 @@
                 "value": -6
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-BombCluster-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-ROF4",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5508,10 +5506,10 @@
                 "value": -8
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-BombCluster-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-ROF5",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5538,10 +5536,10 @@
                 "value": -6
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-BombCluster-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-SPE1",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5560,10 +5558,10 @@
         "resultComponents": [
             "FK-SPL-BombCluster2"
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-BombCluster-SPE2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombCluster-SPE2",
         "imdName": "trlvtlhe.PIE",
         "keyTopic": 1,
@@ -5583,10 +5581,10 @@
         "resultComponents": [
             "FK-SPL-BombCluster3"
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-BombHeavy-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-ACC1",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -5606,10 +5604,10 @@
                 "value": 3
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-BombHeavy-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-ACC2",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -5629,10 +5627,10 @@
                 "value": 2
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-BombHeavy-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-ACC3",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -5652,10 +5650,10 @@
                 "value": 2
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-BombHeavy-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-ACC4",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -5675,10 +5673,10 @@
                 "value": 2
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-BombHeavy-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-ACC5",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -5698,10 +5696,10 @@
                 "value": 1
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-BombHeavy-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-DMG1",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -5735,10 +5733,10 @@
                 "value": 10
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombHeavy-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-DMG2",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -5772,10 +5770,10 @@
                 "value": 11
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombHeavy-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-DMG3",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -5809,10 +5807,10 @@
                 "value": 12
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombHeavy-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-DMG4",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -5846,10 +5844,10 @@
                 "value": 13
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombHeavy-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-DMG5",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -5883,10 +5881,10 @@
                 "value": 15
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombHeavy-DMG6": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-DMG6",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -5920,10 +5918,10 @@
                 "value": 16
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombHeavy-DMG7": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-DMG7",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -5957,10 +5955,10 @@
                 "value": 18
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombHeavy-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-ROF1",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -5980,10 +5978,10 @@
                 "value": -8
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-BombHeavy-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-ROF2",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -6003,10 +6001,10 @@
                 "value": -8
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-BombHeavy-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-ROF3",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -6026,10 +6024,10 @@
                 "value": -8
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-BombHeavy-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-ROF4",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -6049,10 +6047,10 @@
                 "value": -8
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-BombHeavy-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-ROF5",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -6072,10 +6070,10 @@
                 "value": -6
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-BombHeavy-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-SPE1",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -6094,10 +6092,10 @@
         "resultComponents": [
             "FK-SF-BombHeavy2"
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-BombHeavy-SPE2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombHeavy-SPE2",
         "imdName": "trmvtlhe.PIE",
         "keyTopic": 1,
@@ -6117,10 +6115,10 @@
         "resultComponents": [
             "FK-SF-BombHeavy3"
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-BombThermite-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-ACC1",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6140,10 +6138,10 @@
                 "value": 3
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-BombThermite-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-ACC2",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6163,10 +6161,10 @@
                 "value": 2
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-BombThermite-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-ACC3",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6186,10 +6184,10 @@
                 "value": 2
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-BombThermite-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-ACC4",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6209,10 +6207,10 @@
                 "value": 2
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-BombThermite-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-ACC5",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6232,10 +6230,10 @@
                 "value": 1
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-BombThermite-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-DMG1",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6269,10 +6267,10 @@
                 "value": 10
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombThermite-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-DMG2",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6306,10 +6304,10 @@
                 "value": 11
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombThermite-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-DMG3",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6343,10 +6341,10 @@
                 "value": 12
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombThermite-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-DMG4",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6380,10 +6378,10 @@
                 "value": 13
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombThermite-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-DMG5",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6417,10 +6415,10 @@
                 "value": 15
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombThermite-DMG6": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-DMG6",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6454,10 +6452,10 @@
                 "value": 16
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombThermite-DMG7": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-DMG7",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6491,10 +6489,10 @@
                 "value": 18
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-BombThermite-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-ROF1",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6514,10 +6512,10 @@
                 "value": -8
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-BombThermite-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-ROF2",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6537,10 +6535,10 @@
                 "value": -8
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-BombThermite-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-ROF3",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6560,10 +6558,10 @@
                 "value": -8
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-BombThermite-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-ROF4",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6583,10 +6581,10 @@
                 "value": -8
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-BombThermite-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-ROF5",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6606,10 +6604,10 @@
                 "value": -6
             }
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-BombThermite-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-SPE1",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6628,10 +6626,10 @@
         "resultComponents": [
             "FK-HOT-BombThermite2"
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-BombThermite-SPE2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-BombThermite-SPE2",
         "imdName": "trlvtlin.PIE",
         "keyTopic": 1,
@@ -6651,10 +6649,10 @@
         "resultComponents": [
             "FK-HOT-BombThermite3"
         ],
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-Cannon-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-ACC1",
@@ -6674,10 +6672,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Cannon-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-ACC2",
@@ -6697,10 +6695,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Cannon-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-ACC3",
@@ -6720,10 +6718,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Cannon-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-ACC4",
@@ -6743,10 +6741,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Cannon-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-ACC5",
@@ -6766,10 +6764,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Cannon-Cyb-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-Cyb-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-Cyb-SPE1",
@@ -6792,10 +6790,10 @@
             "FK-SF-Cannon-Cyborg2"
         ],
         "statID": "FK-SF-Cannon-Cyborg",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-Cannon-Cyb-SPE2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-Cyb-SPE2",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-Cyb-SPE2",
@@ -6819,10 +6817,10 @@
             "FK-SF-Cannon-Cyborg3"
         ],
         "statID": "FK-SF-Cannon-Cyborg",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-Cannon-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-DMG1",
@@ -6849,10 +6847,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Cannon-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-DMG2",
@@ -6879,10 +6877,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Cannon-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-DMG3",
@@ -6909,10 +6907,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Cannon-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-DMG4",
@@ -6939,10 +6937,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Cannon-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-DMG5",
@@ -6969,10 +6967,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Cannon-DMG6": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-DMG6",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-DMG6",
@@ -6999,10 +6997,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Cannon-DMG7": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-DMG7",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-DMG7",
@@ -7029,10 +7027,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Cannon-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-ROF1",
@@ -7052,10 +7050,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Cannon-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-ROF2",
@@ -7075,10 +7073,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Cannon-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-ROF3",
@@ -7098,10 +7096,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Cannon-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-ROF4",
@@ -7121,10 +7119,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Cannon-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-ROF5",
@@ -7144,10 +7142,10 @@
             }
         ],
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Cannon-Struc-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-Struc-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-Struc-SPE1",
@@ -7163,10 +7161,10 @@
         "researchPoints": 8204,
         "researchPower": 256,
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-Cannon-Struc-SPE2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Cannon-Struc-SPE2",
         "keyTopic": 1,
         "msgName": "RM-WU-Cannon-Struc-SPE2",
@@ -7183,10 +7181,10 @@
         "researchPoints": 10938,
         "researchPower": 341,
         "statID": "FK-SF-Cannon-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-Flamethrower-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-ACC1",
@@ -7206,10 +7204,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Flamethrower-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-ACC2",
@@ -7229,10 +7227,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Flamethrower-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-ACC3",
@@ -7252,10 +7250,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Flamethrower-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-ACC4",
@@ -7275,10 +7273,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Flamethrower-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-ACC5",
@@ -7298,10 +7296,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Flamethrower-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-DMG1",
@@ -7328,10 +7326,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Flamethrower-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-DMG2",
@@ -7358,10 +7356,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Flamethrower-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-DMG3",
@@ -7388,10 +7386,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Flamethrower-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-DMG4",
@@ -7418,10 +7416,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Flamethrower-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-DMG5",
@@ -7448,10 +7446,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Flamethrower-DMG6": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-DMG6",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-DMG6",
@@ -7478,10 +7476,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Flamethrower-DMG7": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-DMG7",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-DMG7",
@@ -7508,10 +7506,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Flamethrower-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-ROF1",
@@ -7538,10 +7536,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Flamethrower-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-ROF2",
@@ -7568,10 +7566,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Flamethrower-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-ROF3",
@@ -7598,10 +7596,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Flamethrower-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-ROF4",
@@ -7628,10 +7626,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Flamethrower-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-ROF5",
@@ -7658,10 +7656,10 @@
             }
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Flamethrower-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-SPE1",
@@ -7684,10 +7682,10 @@
             "FK-HOT-Flamethrower2"
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-Flamethrower-SPE2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Flamethrower-SPE2",
         "keyTopic": 1,
         "msgName": "RM-WU-Flamethrower-SPE2",
@@ -7711,10 +7709,10 @@
             "FK-HOT-Flamethrower3"
         ],
         "statID": "FK-HOT-Flamethrower",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-GrenadeLauncher-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-ACC1",
@@ -7734,10 +7732,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-GrenadeLauncher-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-ACC2",
@@ -7757,10 +7755,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-GrenadeLauncher-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-ACC3",
@@ -7780,10 +7778,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-GrenadeLauncher-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-ACC4",
@@ -7803,10 +7801,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-GrenadeLauncher-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-ACC5",
@@ -7826,10 +7824,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-GrenadeLauncher-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-DMG1",
@@ -7863,10 +7861,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-GrenadeLauncher-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-DMG2",
@@ -7900,10 +7898,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-GrenadeLauncher-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-DMG3",
@@ -7937,10 +7935,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-GrenadeLauncher-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-DMG4",
@@ -7974,10 +7972,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-GrenadeLauncher-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-DMG5",
@@ -8011,10 +8009,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-GrenadeLauncher-DMG6": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-DMG6",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-DMG6",
@@ -8048,10 +8046,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-GrenadeLauncher-DMG7": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-DMG7",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-DMG7",
@@ -8085,10 +8083,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-GrenadeLauncher-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-ROF1",
@@ -8108,10 +8106,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-GrenadeLauncher-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-ROF2",
@@ -8131,10 +8129,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-GrenadeLauncher-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-ROF3",
@@ -8154,10 +8152,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-GrenadeLauncher-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-ROF4",
@@ -8177,10 +8175,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-GrenadeLauncher-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-ROF5",
@@ -8200,10 +8198,10 @@
             }
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-GrenadeLauncher-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-SPE1",
@@ -8228,10 +8226,10 @@
             "FK-SPL-GrenadeLauncher-Cyborg2"
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-GrenadeLauncher-SPE2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-GrenadeLauncher-SPE2",
         "keyTopic": 1,
         "msgName": "RM-WU-GrenadeLauncher-SPE2",
@@ -8257,10 +8255,10 @@
             "FK-SPL-GrenadeLauncher-Cyborg3"
         ],
         "statID": "FK-SPL-GrenadeLauncher-TankStructure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-Howitzer-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-ACC1",
@@ -8280,10 +8278,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Howitzer-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-ACC2",
@@ -8303,10 +8301,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Howitzer-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-ACC3",
@@ -8326,10 +8324,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Howitzer-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-ACC4",
@@ -8349,10 +8347,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Howitzer-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-ACC5",
@@ -8372,10 +8370,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Howitzer-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-DMG1",
@@ -8409,10 +8407,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Howitzer-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-DMG2",
@@ -8446,10 +8444,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Howitzer-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-DMG3",
@@ -8483,10 +8481,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Howitzer-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-DMG4",
@@ -8520,10 +8518,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Howitzer-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-DMG5",
@@ -8557,10 +8555,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Howitzer-DMG6": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-DMG6",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-DMG6",
@@ -8594,10 +8592,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Howitzer-DMG7": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-DMG7",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-DMG7",
@@ -8631,10 +8629,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Howitzer-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-ROF1",
@@ -8654,10 +8652,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Howitzer-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-ROF2",
@@ -8677,10 +8675,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Howitzer-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-ROF3",
@@ -8700,10 +8698,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Howitzer-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-ROF4",
@@ -8723,10 +8721,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Howitzer-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-ROF5",
@@ -8746,10 +8744,10 @@
             }
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Howitzer-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-SPE1",
@@ -8774,10 +8772,10 @@
             "FKPitHowitzer2"
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-Howitzer-SPE2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Howitzer-SPE2",
         "keyTopic": 1,
         "msgName": "RM-WU-Howitzer-SPE2",
@@ -8803,10 +8801,10 @@
             "FKPitHowitzer3"
         ],
         "statID": "FK-ART-Howitzer",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-HowitzerIncendiary-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-ACC1",
@@ -8826,10 +8824,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-HowitzerIncendiary-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-ACC2",
@@ -8849,10 +8847,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-HowitzerIncendiary-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-ACC3",
@@ -8872,10 +8870,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-HowitzerIncendiary-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-ACC4",
@@ -8895,10 +8893,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-HowitzerIncendiary-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-ACC5",
@@ -8918,10 +8916,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-HowitzerIncendiary-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-DMG1",
@@ -8955,10 +8953,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-HowitzerIncendiary-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-DMG2",
@@ -8992,10 +8990,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-HowitzerIncendiary-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-DMG3",
@@ -9029,10 +9027,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-HowitzerIncendiary-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-DMG4",
@@ -9066,10 +9064,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-HowitzerIncendiary-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-DMG5",
@@ -9103,10 +9101,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-HowitzerIncendiary-DMG6": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-DMG6",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-DMG6",
@@ -9140,10 +9138,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-HowitzerIncendiary-DMG7": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-DMG7",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-DMG7",
@@ -9177,10 +9175,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-HowitzerIncendiary-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-ROF1",
@@ -9200,10 +9198,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-HowitzerIncendiary-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-ROF2",
@@ -9223,10 +9221,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-HowitzerIncendiary-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-ROF3",
@@ -9246,10 +9244,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-HowitzerIncendiary-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-ROF4",
@@ -9269,10 +9267,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-HowitzerIncendiary-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-ROF5",
@@ -9292,10 +9290,10 @@
             }
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-HowitzerIncendiary-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-SPE1",
@@ -9317,10 +9315,10 @@
             "FKPitHowitzerIncendiary2"
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-HowitzerIncendiary-SPE2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-HowitzerIncendiary-SPE2",
         "keyTopic": 1,
         "msgName": "RM-WU-HowitzerIncendiary-SPE2",
@@ -9343,10 +9341,10 @@
             "FKPitHowitzerIncendiary3"
         ],
         "statID": "FK-HOT-HowitzerIncendiary",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-Lancer-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-ACC1",
@@ -9366,10 +9364,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Lancer-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-ACC2",
@@ -9389,10 +9387,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Lancer-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-ACC3",
@@ -9412,10 +9410,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Lancer-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-ACC4",
@@ -9435,10 +9433,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Lancer-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-ACC5",
@@ -9458,10 +9456,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Lancer-ACC6": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-ACC6",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-ACC6",
@@ -9481,10 +9479,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Lancer-ACC7": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-ACC7",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-ACC7",
@@ -9504,10 +9502,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Lancer-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-DMG1",
@@ -9541,10 +9539,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Lancer-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-DMG2",
@@ -9578,10 +9576,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Lancer-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-DMG3",
@@ -9615,10 +9613,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Lancer-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-DMG4",
@@ -9652,10 +9650,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Lancer-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-DMG5",
@@ -9689,10 +9687,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Lancer-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-ROF1",
@@ -9719,10 +9717,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Lancer-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-ROF2",
@@ -9749,10 +9747,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Lancer-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-ROF3",
@@ -9779,10 +9777,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Lancer-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-ROF4",
@@ -9809,10 +9807,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Lancer-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-ROF5",
@@ -9839,10 +9837,10 @@
             }
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Lancer-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Lancer-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-Lancer-SPE1",
@@ -9867,10 +9865,10 @@
             "FK-MIS-Lancer-Cyborg2"
         ],
         "statID": "FK-MIS-Lancer-VTOL",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-Laser-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-ACC1",
@@ -9890,10 +9888,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Laser-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-ACC2",
@@ -9913,10 +9911,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Laser-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-ACC3",
@@ -9936,10 +9934,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Laser-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-ACC4",
@@ -9959,10 +9957,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Laser-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-ACC5",
@@ -9982,10 +9980,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Laser-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-DMG1",
@@ -10019,10 +10017,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Laser-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-DMG2",
@@ -10056,10 +10054,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Laser-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-DMG3",
@@ -10093,10 +10091,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Laser-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-DMG4",
@@ -10130,10 +10128,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Laser-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-DMG5",
@@ -10167,10 +10165,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Laser-DMG6": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-DMG6",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-DMG6",
@@ -10204,10 +10202,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Laser-DMG7": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-DMG7",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-DMG7",
@@ -10241,10 +10239,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Laser-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-ROF1",
@@ -10264,10 +10262,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Laser-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-ROF2",
@@ -10287,10 +10285,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Laser-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-ROF3",
@@ -10310,10 +10308,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Laser-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-ROF4",
@@ -10333,10 +10331,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Laser-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-ROF5",
@@ -10356,10 +10354,10 @@
             }
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Laser-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Laser-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-Laser-SPE1",
@@ -10378,10 +10376,10 @@
             "FK-HOT-Laser2"
         ],
         "statID": "FK-HOT-Laser",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-Machinegun-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-ACC1",
@@ -10401,10 +10399,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Machinegun-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-ACC2",
@@ -10424,10 +10422,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Machinegun-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-ACC3",
@@ -10447,10 +10445,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Machinegun-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-ACC4",
@@ -10470,10 +10468,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Machinegun-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-ACC5",
@@ -10493,10 +10491,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Machinegun-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-DMG1",
@@ -10516,10 +10514,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Machinegun-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-DMG2",
@@ -10539,10 +10537,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Machinegun-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-DMG3",
@@ -10562,10 +10560,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Machinegun-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-DMG4",
@@ -10585,10 +10583,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Machinegun-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-DMG5",
@@ -10608,10 +10606,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Machinegun-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-ROF1",
@@ -10631,10 +10629,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Machinegun-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-ROF2",
@@ -10654,10 +10652,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Machinegun-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-ROF3",
@@ -10677,10 +10675,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Machinegun-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-ROF4",
@@ -10700,10 +10698,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Machinegun-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-ROF5",
@@ -10723,10 +10721,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Machinegun-ROF6": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-ROF6",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-ROF6",
@@ -10746,10 +10744,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Machinegun-ROF7": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-ROF7",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-ROF7",
@@ -10769,10 +10767,10 @@
             }
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Machinegun-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-SPE1",
@@ -10792,10 +10790,10 @@
             "FK-FF-Machinegun-Cyborg2"
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-Machinegun-SPE2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Machinegun-SPE2",
         "keyTopic": 1,
         "msgName": "RM-WU-Machinegun-SPE2",
@@ -10816,10 +10814,10 @@
             "FK-FF-Machinegun-Cyborg3"
         ],
         "statID": "FK-FF-Machinegun-Structure",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-Railgun-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-ACC1",
@@ -10839,10 +10837,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Railgun-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-ACC2",
@@ -10862,10 +10860,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Railgun-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-ACC3",
@@ -10885,10 +10883,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Railgun-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-ACC4",
@@ -10908,10 +10906,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Railgun-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-ACC5",
@@ -10931,10 +10929,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-Railgun-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-DMG1",
@@ -10961,10 +10959,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Railgun-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-DMG2",
@@ -10991,10 +10989,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Railgun-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-DMG3",
@@ -11021,10 +11019,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Railgun-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-DMG4",
@@ -11051,10 +11049,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Railgun-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-DMG5",
@@ -11081,10 +11079,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Railgun-DMG6": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-DMG6",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-DMG6",
@@ -11111,10 +11109,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Railgun-DMG7": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-DMG7",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-DMG7",
@@ -11141,10 +11139,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-Railgun-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-ROF1",
@@ -11164,10 +11162,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Railgun-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-ROF2",
@@ -11187,10 +11185,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Railgun-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-ROF3",
@@ -11210,10 +11208,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Railgun-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-ROF4",
@@ -11233,10 +11231,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Railgun-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-ROF5",
@@ -11256,10 +11254,10 @@
             }
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-Railgun-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-Railgun-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-Railgun-SPE1",
@@ -11278,10 +11276,10 @@
             "FK-SF-Railgun2"
         ],
         "statID": "FK-SF-Railgun",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-RocketBattery-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-ACC1",
@@ -11301,10 +11299,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-RocketBattery-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-ACC2",
@@ -11324,10 +11322,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-RocketBattery-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-ACC3",
@@ -11347,10 +11345,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-RocketBattery-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-ACC4",
@@ -11370,10 +11368,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-RocketBattery-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-ACC5",
@@ -11393,10 +11391,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-RocketBattery-ACC6": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-ACC6",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-ACC6",
@@ -11416,10 +11414,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-RocketBattery-ACC7": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-ACC7",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-ACC7",
@@ -11439,10 +11437,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-RocketBattery-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-DMG1",
@@ -11469,10 +11467,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-RocketBattery-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-DMG2",
@@ -11499,10 +11497,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-RocketBattery-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-DMG3",
@@ -11529,10 +11527,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-RocketBattery-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-DMG4",
@@ -11559,10 +11557,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-RocketBattery-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-DMG5",
@@ -11589,10 +11587,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-RocketBattery-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-ROF1",
@@ -11619,10 +11617,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-RocketBattery-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-ROF2",
@@ -11649,10 +11647,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-RocketBattery-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-ROF3",
@@ -11679,10 +11677,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-RocketBattery-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-ROF4",
@@ -11709,10 +11707,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-RocketBattery-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-ROF5",
@@ -11739,10 +11737,10 @@
             }
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-RocketBattery-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-SPE1",
@@ -11764,10 +11762,10 @@
             "FKPitRockets2"
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-RocketBattery-SPE2": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-RocketBattery-SPE2",
         "keyTopic": 1,
         "msgName": "RM-WU-RocketBattery-SPE2",
@@ -11790,10 +11788,10 @@
             "FKPitRockets3"
         ],
         "statID": "FK-ART-RocketBattery",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     },
     "R-WU-ScourgeMissile-ACC1": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-ACC1",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-ACC1",
@@ -11813,10 +11811,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-ScourgeMissile-ACC2": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-ACC2",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-ACC2",
@@ -11836,10 +11834,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-ScourgeMissile-ACC3": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-ACC3",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-ACC3",
@@ -11859,10 +11857,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-ScourgeMissile-ACC4": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-ACC4",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-ACC4",
@@ -11882,10 +11880,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-ScourgeMissile-ACC5": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-ACC5",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-ACC5",
@@ -11905,10 +11903,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-ScourgeMissile-ACC6": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-ACC6",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-ACC6",
@@ -11928,10 +11926,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-ScourgeMissile-ACC7": {
-        "iconID": "IMAGE_RES_GRPACC",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-ACC7",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-ACC7",
@@ -11951,10 +11949,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPACC"
     },
     "R-WU-ScourgeMissile-DMG1": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-DMG1",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-DMG1",
@@ -11981,10 +11979,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-ScourgeMissile-DMG2": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-DMG2",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-DMG2",
@@ -12011,10 +12009,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-ScourgeMissile-DMG3": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-DMG3",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-DMG3",
@@ -12041,10 +12039,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-ScourgeMissile-DMG4": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-DMG4",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-DMG4",
@@ -12071,10 +12069,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-ScourgeMissile-DMG5": {
-        "iconID": "IMAGE_RES_GRPDAM",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-DMG5",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-DMG5",
@@ -12101,10 +12099,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPDAM"
     },
     "R-WU-ScourgeMissile-ROF1": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-ROF1",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-ROF1",
@@ -12131,10 +12129,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-ScourgeMissile-ROF2": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-ROF2",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-ROF2",
@@ -12161,10 +12159,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-ScourgeMissile-ROF3": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-ROF3",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-ROF3",
@@ -12191,10 +12189,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-ScourgeMissile-ROF4": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-ROF4",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-ROF4",
@@ -12221,10 +12219,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-ScourgeMissile-ROF5": {
-        "iconID": "IMAGE_RES_GRPROF",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-ROF5",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-ROF5",
@@ -12251,10 +12249,10 @@
             }
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPROF"
     },
     "R-WU-ScourgeMissile-SPE1": {
-        "iconID": "IMAGE_RES_GRPUPG",
+        "iconID": "IMAGE_RES_WEAPONTECH",
         "id": "R-WU-ScourgeMissile-SPE1",
         "keyTopic": 1,
         "msgName": "RM-WU-ScourgeMissile-SPE1",
@@ -12273,6 +12271,6 @@
             "FK-MIS-ScourgeMissile2"
         ],
         "statID": "FK-MIS-ScourgeMissile",
-        "subgroupIconID": "IMAGE_RES_WEAPONTECH"
+        "subgroupIconID": "IMAGE_RES_GRPUPG"
     }
 }
