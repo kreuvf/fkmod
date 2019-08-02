@@ -5,7 +5,6 @@
 * Set up build infrastructure for Windows and deb packages
 * Set up default AI
 * Add end user readme
-* Change spelling of "Machinegun" to "Machine Gun" everywhere (incl. camel case in identifiers)
 
 ## Nice to Have for Final Version
 ### Code
