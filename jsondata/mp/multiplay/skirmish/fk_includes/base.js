@@ -165,7 +165,7 @@ function buildBase() {
 	var gens = enumStruct(me, BaseStructs.gens[0]).length;
 	
 	if (numDerricks + 2 > gens * 4) {
-		buildings.push(new potStructure(BaseStructs.gens[0], startPositions[me].x, startPositions[me].y, 0));
+		buildings.push(new potStructure(BaseStructs.gens[0], startPositions[me].x, startPositions[me].y, 0, 2));
 	}
 	
 	var requiredOil = (
@@ -176,7 +176,7 @@ function buildBase() {
 	)	
 	if (numDerricks >= requiredOil) {
 		if (labs == 0) {
-			buildings.push(new potStructure(BaseStructs.labs[0], startPositions[me].x, startPositions[me].y, 0));
+			buildings.push(new potStructure(BaseStructs.labs[0], startPositions[me].x, startPositions[me].y, 0, 2));
 		} else if (cybFacs + tankFacs + vtolFacs < labs + 2 || labs == getStructureLimit(BaseStructs.labs[0], me)) {
 			if((tankFacs <= cybFacs || !isStructureAvailable(BaseStructs.cybFac[0], me)) && (tankFacs <= vtolFacs || !isStructureAvailable(BaseStructs.vtolFac[0], me))) {
 				buildings.push(new potStructure(BaseStructs.tankFac[0], startPositions[me].x, startPositions[me].y, 0, 2));
@@ -199,6 +199,7 @@ function buildDefense() {
 }
 
 function buildSomething() {
+	if(playerPower(me) <= 50) return;
 	var trucks = findIdleBuilders();
 	if(trucks.length == 0) return;
 	
