@@ -1,4 +1,5 @@
 var weaponFocus;
+var researchQueue = [];
 
 const research = {
 	avenger: {
@@ -63,7 +64,21 @@ const research = {
 		rof: ["R-WU-AAStormbringer-ROF1","R-WU-AAStormbringer-ROF2","R-WU-AAStormbringer-ROF3","R-WU-AAStormbringer-ROF4","R-WU-AAStormbringer-ROF5"],
 		acc: ["R-WU-AAStormbringer-ACC1","R-WU-AAStormbringer-ACC2","R-WU-AAStormbringer-ACC3","R-WU-AAStormbringer-ACC4","R-WU-AAStormbringer-ACC5"],
 		special: ["R-WU-AAStormbringer-SPE1"],
-	}
+	},
+	defensive: {
+		kinetic: ["R-BU-KineticArmour1","R-BU-KineticArmour2","R-BU-KineticArmour3","R-BU-KineticArmour4","R-BU-KineticArmour5"],
+		heat: ["R-BU-ThermalArmour1","R-BU-ThermalArmour2","R-BU-ThermalArmour3","R-BU-ThermalArmour4","R-BU-ThermalArmour5"],
+		bp: ["R-BU-BodyPoints1","R-BU-BodyPoints2","R-BU-BodyPoints3","R-BU-BodyPoints4","R-BU-BodyPoints5"],
+	},
+	parts: {
+		bodies: ["R-B-HiKin","R-B-HiSpeed","R-B-HiTherm"],
+		propulsions: ["R-P-Hover","R-P-VTOL"],
+		sensors: ["R-SensorArtillery","R-SensorCB","R-SensorSurveillance","R-SensorVTOL"],
+	},
+	misc: {
+		hacks: ["R-HACK-Autorepair", "R-HACK-Bunker-Cannon", "R-HACK-Bunker-Cannon2", "R-HACK-Bunker-Cannon3", "R-HACK-Bunker-GrenadeLauncher", "R-HACK-Bunker-GrenadeLauncher2", "R-HACK-Bunker-GrenadeLauncher3", "R-HACK-Bunker-Machinegun", "R-HACK-Bunker-Machinegun2", "R-HACK-Bunker-Machinegun3", "R-HACK-Bunker-ScourgeMissile", "R-HACK-Bunker-ScourgeMissile2", "R-HACK-Hardpoint-Cannon", "R-HACK-Hardpoint-Cannon2", "R-HACK-Hardpoint-Cannon3", "R-HACK-Hardpoint-Machinegun", "R-HACK-Hardpoint-Machinegun2", "R-HACK-Hardpoint-Machinegun3", "R-HACK-Hardpoint-ScourgeMissile", "R-HACK-Hardpoint-ScourgeMissile2", "R-HACK-Site-AAAvengerSAM", "R-HACK-Site-AAAvengerSAM2", "R-HACK-Site-AACyclone", "R-HACK-Site-AACyclone2", "R-HACK-Site-AACyclone3", "R-HACK-Site-AAHurricane", "R-HACK-Site-AAHurricane2", "R-HACK-Site-AAHurricane3", "R-HACK-Site-AAStormbringer", "R-HACK-Site-AAStormbringer2"],
+		researchSpeed: ["R-Res1", "R-Res2", "R-Res3", "R-Res4", "R-Res5"],
+	},
 }
 
 function isLabIdle(lab) {
@@ -90,20 +105,43 @@ function setWeaponFocus() {
 	}
 }
 
+function nextQueueItem() {
+	if (researchQueue.length > 0) {
+		return researchQueue.shift();
+	}
+	var weapontech = findResearch(weaponFocus.special[weaponFocus.special.length - 1]);
+	if (weapontech.length > 0) {
+		researchQueue.push(weapontech[0]);
+		researchQueue.push(weapontech[0]);
+		researchQueue.push(weapontech[0]);
+	}
+	var defensetech = findResearch(research.defensive.bp[research.defensive.bp.length - 1]);
+	defensetech.concat(findResearch(research.defensive.kinetic[research.defensive.kinetic.length - 1]));
+	defensetech.concat(findResearch(research.defensive.heat[research.defensive.heat.length - 1]));
+	if (defensetech.length > 0) researchQueue.push(defensetech[0]);
+	var researchtech = findResearch(research.misc.researchSpeed[research.misc.researchSpeed.length - 1]);
+	if(researchtech.length > 0) researchQueue.push(researchtech[0]);
+	for(var i = 0; i < research.misc.hacks.length; i++) {
+		var hack = findResearch(research.misc.hacks[i]);
+		if(hack.length == 1) researchQueue.push(hack[0]);
+	}
+	
+	if(researchQueue.length > 0) {
+		// Nothing suitable found, just research anything
+		researchQueue.concat(enumResearch());
+	}
+}
+
 function researchSomething() {
 	if(playerPower(me) <= 50) return;
-	var available = enumResearch();
 	var freeLabs = idleLabs();
-	if(available.length == 0 || freeLabs.length == 0) return;
+	if(freeLabs.length == 0) return;
 	
 	
 	// Check weapon focus
 	setWeaponFocus();
-	var tech = findResearch(weaponFocus.special[weaponFocus.special.length - 1]);
-	if(tech.length > 0) {
-		pursueResearch(freeLabs[0], tech[0].name);
-	} else {
-		// Nothing suitable found, just research anything
-		pursueResearch(freeLabs[0], available[0].name);
+	var next = nextQueueItem();
+	if(defined(next)) {
+		pursueResearch(freeLabs[0], next.name);
 	}
 }
