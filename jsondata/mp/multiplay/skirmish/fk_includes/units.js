@@ -1,7 +1,10 @@
-var antiTankGroups = [newGroup()];
-var antiCyborgGroups = [newGroup()];
-var vtolGroups = [newGroup()];
-var mixedGroups = [newGroup()];
+var antiTankGroupsTank = [];
+var antiCyborgGroupsTank = [];
+var antiTankGroupsCyborg = [];
+var antiCyborgGroupsCyborg = [];
+var vtolGroups = [];
+var mixedGroupsTank = [];
+var mixedGroupsCyborg = [];
 var scouts = newGroup();
 var ungrouped = newGroup();
 
@@ -58,7 +61,7 @@ function findGroundTarget() {
 		}
 	}
 	targets = targets.filter(function(target) {
-		return !droid.isVTOL;
+		return !target.isVTOL;
 	});
 	// find enemy structures
 	for (var i = 0; i < maxPlayers; i++) {
@@ -72,10 +75,12 @@ function findGroundTarget() {
 function isAntiTank(unit) {
 	if(!defined(unit)) return false;
 	if(unit.type !== DROID) return false;
-	if(unit.droidType !== DROID_WEAPON || unit.isVTOL) return false;
+	if((unit.droidType !== DROID_WEAPON && unit.droidType !== DROID_CYBORG) || unit.isVTOL) return false;
 	if(
 		unit.weapons[0].name == tankWeapons.railgun[0] || unit.weapons[0].name == tankWeapons.railgun[1] ||
-		unit.weapons[0].name == tankWeapons.scourge[0] || unit.weapons[0].name == tankWeapons.scourge[1]
+		unit.weapons[0].name == tankWeapons.scourge[0] || unit.weapons[0].name == tankWeapons.scourge[1] ||
+		unit.weapons[0].name == cyborgWeapons.cannon[0] || unit.weapons[0].name == cyborgWeapons.cannon[1] || unit.weapons[0].name == cyborgWeapons.cannon[2] ||
+		unit.weapons[0].name == cyborgWeapons.lancer[0] || unit.weapons[0].name == cyborgWeapons.lancer[0]
 	) {
 		return true;
 	}
@@ -84,10 +89,12 @@ function isAntiTank(unit) {
 function isAntiCyborg(unit) {
 	if(!defined(unit)) return false;
 	if(unit.type !== DROID) return false;
-	if(unit.droidType !== DROID_WEAPON || unit.isVTOL) return false;
+	if((unit.droidType !== DROID_WEAPON && unit.droidType !== DROID_CYBORG)|| unit.isVTOL) return false;
 	if(
 		unit.weapons[0].name == tankWeapons.mg[0] || unit.weapons[0].name == tankWeapons.mg[1] || unit.weapons[0].name == tankWeapons.mg[2] ||
-		unit.weapons[0].name == tankWeapons.grenade[0] || unit.weapons[0].name == tankWeapons.grenade[1] || unit.weapons[0].name == tankWeapons.grenade[2]
+		unit.weapons[0].name == tankWeapons.grenade[0] || unit.weapons[0].name == tankWeapons.grenade[1] || unit.weapons[0].name == tankWeapons.grenade[2] ||
+		unit.weapons[0].name == cyborgWeapons.mg[0] || unit.weapons[0].name == cyborgWeapons.mg[1] || unit.weapons[0].name == cyborgWeapons.mg[2] ||
+		unit.weapons[0].name == cyborgWeapons.grenade[0] || unit.weapons[0].name == cyborgWeapons.grenade[1] || unit.weapons[0].name == cyborgWeapons.grenade[2]
 	) { 
 		return true;
 	}
@@ -102,16 +109,17 @@ function isUnitSafe(unit) {
 
 // Main loop
 function unitControl() {
+	// Tanks
 	// Anti Tank
-	for(var i = 0; i < antiTankGroups.length; i++) {
-		var group = antiTankGroups[i];
+	for(var i = 0; i < antiTankGroupsTank.length; i++) {
+		var group = antiTankGroupsTank[i];
 		
 		// Check if we need to add new units
 		if(groupSize(group) < tankGroupSize()) {
 			var freeUnits = enumGroup(ungrouped);
 			for(var j = 0; j < freeUnits.length; j++) {
 				var unit = freeUnits[j];
-				if(isAntiTank(unit)) {
+				if(isAntiTank(unit) && (unit.droidType !== DROID_CYBORG)) {
 					groupAdd(group, unit);
 					if(groupSize(group) >= tankGroupSize()) break;
 				}
@@ -154,15 +162,15 @@ function unitControl() {
 	}
 	
 	// Anti-Cyborg
-	for(var i = 0; i < antiCyborgGroups.length; i++) {
-		var group = antiCyborgGroups[i];
+	for(var i = 0; i < antiCyborgGroupsTank.length; i++) {
+		var group = antiCyborgGroupsTank[i];
 		
 		// Check if we need to add new units
 		if(groupSize(group) < tankGroupSize()) {
 			var freeUnits = enumGroup(ungrouped);
 			for(var j = 0; j < freeUnits.length; j++) {
 				var unit = freeUnits[j];
-				if(isAntiCyborg(unit)) {
+				if(isAntiCyborg(unit) && (unit.droidType !== DROID_CYBORG)) {
 					groupAdd(group, unit);
 					if(groupSize(group) >= tankGroupSize()) break;
 				}
@@ -205,8 +213,8 @@ function unitControl() {
 	}
 	
 	// Mixed Groups
-	for(var i = 0; i < mixedGroups.length; i++) {
-		var group = mixedGroups[i];
+	for(var i = 0; i < mixedGroupsTank.length; i++) {
+		var group = mixedGroupsTank[i];
 		
 		// Check if we need to add new units
 		if(groupSize(group) < tankGroupSize()) {
@@ -215,6 +223,7 @@ function unitControl() {
 			var nrAntiCyborg = enumGroup(group).filter(isAntiCyborg).length;
 			for(var j = 0; j < freeUnits.length; j++) {
 				var unit = freeUnits[j];
+				if(unit.droidType == DROID_CYBORG) continue;
 				if(isAntiCyborg(unit) && nrAntiTank >= nrAntiCyborg) {
 					groupAdd(group, unit);
 					if(groupSize(group) >= tankGroupSize()) break;
@@ -252,6 +261,209 @@ function unitControl() {
 					orderDroidLoc(units[j], DORDER_MOVE, startPositions[me].x, startPositions[me].y);
 				}
 			}
+		}
+	}
+	
+	// create new groups if we have too many ungrouped units
+	var tanks = enumGroup(ungrouped).filter(function(droid) {
+		return droid.droidType != DROID_CYBORG && !droid.isVTOL;
+	});
+	var antiTank = tanks.filter(isAntiTank);
+	var nrAntiTank = antiTank.length;
+	var antiCyborg = tanks.filter(isAntiCyborg);
+	var nrAntiCyborg = antiCyborg.length;
+	if(nrAntiTank + nrAntiCyborg > tankGroupSize()) {
+		var group = newGroup();
+		if(nrAntiTank > nrAntiCyborg * 2) {
+			groupAddDroid(group, antiTank[0]);
+			antiTankGroupsTank.push(group);
+		} else if (nrAntiCyborg > nrAntiTank * 2) {
+			groupAddDroid(group, antiCyborg[0]);
+			antiCyborgGroupsTank.push(group);
+		} else  {
+			groupAddDroid(group, antiTank[0]);
+			groupAddDroid(group, antiCyborg[0]);
+			mixedGroupsTank.push(group);
+		}
+	}
+	
+	// Cyborgs
+	// Anti Tank
+	for(var i = 0; i < antiTankGroupsCyborg.length; i++) {
+		var group = antiTankGroupsCyborg[i];
+		
+		// Check if we need to add new units
+		if(groupSize(group) < cyborgGroupSize()) {
+			var freeUnits = enumGroup(ungrouped);
+			for(var j = 0; j < freeUnits.length; j++) {
+				var unit = freeUnits[j];
+				if(isAntiTank(unit) && (unit.droidType == DROID_CYBORG)) {
+					groupAdd(group, unit);
+					if(groupSize(group) >= cyborgGroupSize()) break;
+				}
+			}
+		} 
+		if(groupSize(group) >= cyborgGroupSize()) {
+			// Check if group needs orders
+			var units = enumGroup(group);
+			if(
+				units[0].order !== DORDER_ATTACK &&
+				units[0].order !== DORDER_RTR &&
+				units[0].order !== DORDER_SCOUT
+			) {
+				var target = findAntiTankTarget();
+				target = target.filter(function(droid) {
+					return droidCanReach(units[0], droid.x, droid.y);
+				});
+				if(target.length == 0) {
+					target = findGroundTarget();
+					target = target.filter(function(droid) {
+					return droidCanReach(units[0], droid.x, droid.y);
+					});
+				}
+				target = target.sort(function(a, b) {return distance(a,b)});
+				if(target.length > 0) {
+					for(var j = 0; j < units.length; j++) {
+						orderDroidObj(units[j], DORDER_ATTACK, target[0]);
+					}
+				}
+			}
+		} else {
+			// Send units back to base if unsafe
+			var units = enumGroup(group);
+			if(!isUnitSafe(units[0])) {
+				for(var j = 0; j < units.length; j++) {
+					orderDroidLoc(units[j], DORDER_MOVE, startPositions[me].x, startPositions[me].y);
+				}
+			}
+		}
+	}
+	
+	// Anti-Cyborg
+	for(var i = 0; i < antiCyborgGroupsCyborg.length; i++) {
+		var group = antiCyborgGroupsCyborg[i];
+		if(groupSize(group) == 0) continue;
+		
+		// Check if we need to add new units
+		if(groupSize(group) < cyborgGroupSize()) {
+			var freeUnits = enumGroup(ungrouped);
+			for(var j = 0; j < freeUnits.length; j++) {
+				var unit = freeUnits[j];
+				if(isAntiCyborg(unit) && (unit.droidType == DROID_CYBORG)) {
+					groupAdd(group, unit);
+					if(groupSize(group) >= cyborgGroupSize()) break;
+				}
+			}
+		} 
+		if(groupSize(group) >= cyborgGroupSize()) {
+			// Check if group needs orders
+			var units = enumGroup(group);
+			if(
+				units[0].order !== DORDER_ATTACK &&
+				units[0].order !== DORDER_RTR &&
+				units[0].order !== DORDER_SCOUT
+			) {
+				var target = findAntiCyborgTarget();
+				target = target.filter(function(droid) {
+					return droidCanReach(units[0], droid.x, droid.y);
+				});
+				if(target.length == 0) {
+					target = findGroundTarget();
+					target = target.filter(function(droid) {
+					return droidCanReach(units[0], droid.x, droid.y);
+					});
+				}
+				target = target.sort(function(a, b) {return distance(a,b)});
+				if(target.length > 0) {
+					for(var j = 0; j < units.length; j++) {
+						orderDroidObj(units[j], DORDER_ATTACK, target[0]);
+					}
+				}
+			}
+		} else {
+			// Send units back to base if unsafe
+			var units = enumGroup(group);
+			if(!isUnitSafe(units[0])) {
+				for(var j = 0; j < units.length; j++) {
+					orderDroidLoc(units[j], DORDER_MOVE, startPositions[me].x, startPositions[me].y);
+				}
+			}
+		}
+	}
+	
+	// Mixed Groups
+	for(var i = 0; i < mixedGroupsCyborg.length; i++) {
+		var group = mixedGroupsCyborg[i];
+		
+		// Check if we need to add new units
+		if(groupSize(group) < cyborgGroupSize()) {
+			var freeUnits = enumGroup(ungrouped);
+			var nrAntiTank = enumGroup(group).filter(isAntiTank).length;
+			var nrAntiCyborg = enumGroup(group).filter(isAntiCyborg).length;
+			for(var j = 0; j < freeUnits.length; j++) {
+				var unit = freeUnits[j];
+				if((unit.droidType !== DROID_CYBORG)) continue;
+				if(isAntiCyborg(unit) && nrAntiTank >= nrAntiCyborg) {
+					groupAdd(group, unit);
+					if(groupSize(group) >= cyborgGroupSize()) break;
+				}
+				if(isAntiTank(unit) && nrAntiCyborg >= nrAntiTank) {
+					groupAdd(group, unit);
+					if(groupSize(group) >= cyborgGroupSize()) break;
+				}
+			}
+		} 
+		if(groupSize(group) >= cyborgGroupSize()) {
+			// Check if group needs orders
+			var units = enumGroup(group);
+			if(
+				units[0].order !== DORDER_ATTACK &&
+				units[0].order !== DORDER_RTR &&
+				units[0].order !== DORDER_SCOUT
+			) {
+				target = findGroundTarget();
+				target = target.filter(function(droid) {
+				return droidCanReach(units[0], droid.x, droid.y);
+				});
+				target = target.sort(function(a, b) {return distance(a,b)});
+				if(target.length > 0) {
+					for(var j = 0; j < units.length; j++) {
+						orderDroidObj(units[j], DORDER_ATTACK, target[0]);
+					}
+				}
+			}
+		} else {
+			// Send units back to base if unsafe
+			var units = enumGroup(group);
+			if(!isUnitSafe(units[0])) {
+				for(var j = 0; j < units.length; j++) {
+					orderDroidLoc(units[j], DORDER_MOVE, startPositions[me].x, startPositions[me].y);
+				}
+			}
+		}
+	}
+	
+	
+	// create new groups if we have too many ungrouped units
+	var cyborgs = enumGroup(ungrouped).filter(function(droid) {
+		return droid.droidType == DROID_CYBORG;
+	});
+	var antiTank = cyborgs.filter(isAntiTank);
+	var nrAntiTank = antiTank.length;
+	var antiCyborg = cyborgs.filter(isAntiCyborg);
+	var nrAntiCyborg = antiCyborg.length;
+	if(nrAntiTank + nrAntiCyborg > cyborgGroupSize()) {
+		var group = newGroup();
+		if(nrAntiTank > nrAntiCyborg * 2) {
+			groupAddDroid(group, antiTank[0]);
+			antiTankGroupsCyborg.push(group);
+		} else if (nrAntiCyborg > nrAntiTank * 2) {
+			groupAddDroid(group, antiCyborg[0]);
+			antiCyborgGroupsCyborg.push(group);
+		} else  {
+			groupAddDroid(group, antiTank[0]);
+			groupAddDroid(group, antiCyborg[0]);
+			mixedGroupsCyborg.push(group);
 		}
 	}
 	
