@@ -1,0 +1,12 @@
+diff --git a/src/multiint.cpp b/src/multiint.cpp
+index 9c0bc1e..d8a997a 100644
+--- a/src/multiint.cpp
++++ b/src/multiint.cpp
+@@ -1857,6 +1857,7 @@ static void addAiChooser(int player)
+ 
+ 	for (int i = 0; i < capAIs; i++)
+ 	{
++		if (capAIs == 1) gapDiv = 1; // no divide by zero in the next line
+ 		sButInit.y = (sButInit.height * gapDiv + gap) * (i + 1 + mpbutton) / gapDiv; // +1 for 'closed', and possible +1 more for 'open' for MP games)
+ 		sButInit.pTip = aidata[i].tip;
+ 		sButInit.id = MULTIOP_AI_START + i;
