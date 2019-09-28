@@ -228,8 +228,8 @@ function lancerCyborg() {
 	var name = "Lancer Cyborg";
 	var weapon;
 	var body;
-	if (componentAvailable("FKCyborg-Lancer")) {
-		body = "FKCyborg-Lancer";
+	if (componentAvailable("FKCyborg-Lancer2")) {
+		body = "FKCyborg-Lancer2";
 		weapon = cyborgWeapons.lancer[1];
 	} else if (componentAvailable("FKCyborg-Lancer")) {
 		body = "FKCyborg-Lancer";

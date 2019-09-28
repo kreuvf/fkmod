@@ -1,13 +1,33 @@
 var weaponFocus;
 var researchQueue = [];
 
+var antiTankWeaponTank;
+var antiTankWeaponCyborg;
+var antiCyborgWeaponTank;
+var antiCyborgWeaponCyborg;
+
+
 const research = {
+	autocannon: {
+		base: ["R-W-FF-Autocannon"],
+		dmg: ["R-WU-Autocannon-DMG1","R-WU-Autocannon-DMG2","R-WU-Autocannon-DMG3","R-WU-Autocannon-DMG4","R-WU-Autocannon-DMG5"],
+		rof: ["R-WU-Autocannon-ROF1","R-WU-Autocannon-ROF2","R-WU-Autocannon-ROF3","R-WU-Autocannon-ROF4","R-WU-Autocannon-ROF5","R-WU-Autocannon-ROF6","R-WU-Autocannon-ROF7"],
+		acc: ["R-WU-Autocannon-ACC1","R-WU-Autocannon-ACC2","R-WU-Autocannon-ACC3","R-WU-Autocannon-ACC4","R-WU-Autocannon-ACC5"],
+		special: ["R-WU-Autocannon-SPE1","R-WU-Autocannon-SPE2"],
+	},
 	avenger: {
 		base: ["R-W-MIS-AAAvengerSAM"],
 		dmg: ["R-WU-AAAvengerSAM-DMG1","R-WU-AAAvengerSAM-DMG2","R-WU-AAAvengerSAM-DMG3","R-WU-AAAvengerSAM-DMG4","R-WU-AAAvengerSAM-DMG5"],
 		rof: ["R-WU-AAAvengerSAM-ROF1","R-WU-AAAvengerSAM-ROF2","R-WU-AAAvengerSAM-ROF3","R-WU-AAAvengerSAM-ROF4","R-WU-AAAvengerSAM-ROF5"],
 		acc: ["R-WU-AAAvengerSAM-ACC1","R-WU-AAAvengerSAM-ACC2","R-WU-AAAvengerSAM-ACC3","R-WU-AAAvengerSAM-ACC4","R-WU-AAAvengerSAM-ACC5","R-WU-AAAvengerSAM-ACC6","R-WU-AAAvengerSAM-ACC7"],
 		special: ["R-WU-AAAvengerSAM-SPE1"],
+	},
+	cannon: {
+		base: ["R-W-SF-Cannon"],
+		dmg: ["R-WU-Cannon-DMG1", "R-WU-Cannon-DMG2", "R-WU-Cannon-DMG3", "R-WU-Cannon-DMG4", "R-WU-Cannon-DMG5", "R-WU-Cannon-DMG6", "R-WU-Cannon-DMG7"],
+		rof: ["R-WU-Cannon-ROF1", "R-WU-Cannon-ROF2", "R-WU-Cannon-ROF3", "R-WU-Cannon-ROF4", "R-WU-Cannon-ROF5"],
+		acc: ["R-WU-Cannon-ACC1", "R-WU-Cannon-ACC2", "R-WU-Cannon-ACC3", "R-WU-Cannon-ACC4", "R-WU-Cannon-ACC5"],
+		special: ["R-WU-Cannon-Struc-SPE1", "R-WU-Cannon-Struc-SPE2", "R-WU-Cannon-Cyb-SPE1", "R-WU-Cannon-Cyb-SPE2"],
 	},
 	cyclone: {
 		base: ["R-W-SF-AACyclone"],
@@ -29,6 +49,13 @@ const research = {
 		rof: ["R-WU-AAHurricane-ROF1","R-WU-AAHurricane-ROF2","R-WU-AAHurricane-ROF3","R-WU-AAHurricane-ROF4","R-WU-AAHurricane-ROF5","R-WU-AAHurricane-ROF6","R-WU-AAHurricane-ROF7"],
 		acc: ["R-WU-AAHurricane-ACC1","R-WU-AAHurricane-ACC2","R-WU-AAHurricane-ACC3","R-WU-AAHurricane-ACC4","R-WU-AAHurricane-ACC5"],
 		special: ["R-WU-AAHurricane-SPE1","R-WU-AAHurricane-SPE2"],
+	},
+	lancer: {
+		base: ["R-W-MIS-Lancer"],
+		dmg: ["R-WU-Lancer-DMG1", "R-WU-Lancer-DMG2", "R-WU-Lancer-DMG3", "R-WU-Lancer-DMG4", "R-WU-Lancer-DMG5"],
+		rof: ["R-WU-Lancer-ROF1", "R-WU-Lancer-ROF2", "R-WU-Lancer-ROF3", "R-WU-Lancer-ROF4", "R-WU-Lancer-ROF5"],
+		acc: ["R-WU-Lancer-ACC1", "R-WU-Lancer-ACC2", "R-WU-Lancer-ACC3", "R-WU-Lancer-ACC4", "R-WU-Lancer-ACC5"],
+		special: ["R-WU-Lancer-SPE1"],
 	},
 	laser: {
 		base: ["R-W-HOT-Laser"],
@@ -94,13 +121,27 @@ function idleLabs() {
 function setWeaponFocus() {
 	var enemyTanks = findAntiTankTarget().length;
 	var enemyCyborgs = findAntiCyborgTarget().length;
+	var ownTanks = enumDroid(me).filter(function(droid) {
+		return droid.droidType == DROID_WEAPON && !isVTOL;
+	}).length;
+	var ownCyborgs = enumDroid(me).filter(function(droid) {
+		return droid.droidType == DROID_CYBORG;
+	}).length;
 	if(enemyTanks >= enemyCyborgs) {
-		weaponFocus = research.railgun;
+		if(ownTanks * 2 > ownCyborgs) {
+			weaponFocus = antiTankWeaponTank;
+		} else {
+			weaponFocus = antiTankWeaponCyborg;
+		}
 	} else {
 		if(enemyCyborgs > 20 && enemyCyborgs / enemyCyborgs + enemyTanks > 0.7) {
 			weaponFocus = research.grenade;
 		} else {
-			weaponFocus = research.mg;
+			if(ownTanks * 2 > ownCyborgs) {
+				weaponFocus = antiCyborgWeaponTank;
+			} else {
+				weaponFocus = antiCyborgWeaponCyborg;
+			}
 		}
 	}
 }
@@ -144,4 +185,20 @@ function researchSomething() {
 	if(defined(next)) {
 		pursueResearch(freeLabs[0], next.name);
 	}
+}
+
+function initResearch() {
+	switch(random(0,1)) {
+		case 0: antiTankWeaponTank = research.railgun; break;
+		case 1: antiTankWeaponTank = research.scourge; break;
+	}
+	switch(random(0,1)) {
+		case 0: antiTankWeaponCyborg = research.cannon; break;
+		case 1: antiTankWeaponCyborg = research.lancer; break;
+	}
+	switch(random(0,1)) {
+		case 0: antiCyborgWeaponTank = research.autocannon; break;
+		case 1: antiCyborgWeaponTank = research.laser; break;
+	}
+	antiCyborgWeaponCyborg = research.mg;
 }

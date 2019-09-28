@@ -92,6 +92,7 @@ function isAntiCyborg(unit) {
 	if((unit.droidType !== DROID_WEAPON && unit.droidType !== DROID_CYBORG)|| unit.isVTOL) return false;
 	if(
 		unit.weapons[0].name == tankWeapons.mg[0] || unit.weapons[0].name == tankWeapons.mg[1] || unit.weapons[0].name == tankWeapons.mg[2] ||
+		unit.weapons[0].name == tankWeapons.laser[0] || unit.weapons[0].name == tankWeapons.laser[1] ||
 		unit.weapons[0].name == tankWeapons.grenade[0] || unit.weapons[0].name == tankWeapons.grenade[1] || unit.weapons[0].name == tankWeapons.grenade[2] ||
 		unit.weapons[0].name == cyborgWeapons.mg[0] || unit.weapons[0].name == cyborgWeapons.mg[1] || unit.weapons[0].name == cyborgWeapons.mg[2] ||
 		unit.weapons[0].name == cyborgWeapons.grenade[0] || unit.weapons[0].name == cyborgWeapons.grenade[1] || unit.weapons[0].name == cyborgWeapons.grenade[2]

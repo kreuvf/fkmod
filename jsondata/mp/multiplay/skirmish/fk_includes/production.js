@@ -94,12 +94,14 @@ function production() {
 			var ownAntiTank = enumDroid(me).filter(isAntiTank).length;
 			var ownAntiCyborg = enumDroid(me).filter(isAntiCyborg).length;
 			if((1+enemyTanks)/(1+ownAntiTank) > (1+enemyCyborgs)/(1+ownAntiCyborg)) {
-				tank = railgunTank();
+				if(antiTankWeaponTank == research.railgun) tank = railgunTank();
+				if(antiTankWeaponTank == research.scourge) tank = scourgeTank();
 			} else {
 				if(enemyCyborgs > 20 && enemyCyborgs / enemyCyborgs + enemyTanks > 0.7 && componentAvailable(tankWeapons.grenade[0])) {
 					tank = grenadeTank();
 				} else {
-					tank = mgTank();
+					if(antiCyborgWeaponTank == research.autocannon) tank = mgTank();
+					if(antiCyborgWeaponTank == research.laser) tank = laserTank();
 				}
 			}
 		}
@@ -118,7 +120,8 @@ function production() {
 		var ownAntiTank = enumDroid(me).filter(isAntiTank).length;
 		var ownAntiCyborg = enumDroid(me).filter(isAntiCyborg).length;
 		if((1+enemyTanks)/(1+ownAntiTank) > (1+enemyCyborgs)/(1+ownAntiCyborg)) {
-			cyborg = cannonCyborg();
+			if(antiTankWeaponCyborg == research.cannon) cyborg = cannonCyborg();
+			if(antiTankWeaponCyborg == research.lancer) cyborg = lancerCyborg();
 		} else {
 			if(enemyCyborgs > 20 && enemyCyborgs / enemyCyborgs + enemyTanks > 0.7 && componentAvailable(cyborgWeapons.grenade[0])) {
 				cyborg = grenadeCyborg();

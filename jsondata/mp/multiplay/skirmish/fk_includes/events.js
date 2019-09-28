@@ -1,4 +1,5 @@
 function eventStartLevel() {
+	initResearch();
 	setTimer("buildStartup", 1000); // build buildings
 	setTimer("production", 5000); // build units
 	setTimer("researchSomething", 5000); // research
