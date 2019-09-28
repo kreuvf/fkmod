@@ -1,10 +1,10 @@
-var antiTankGroupsTank = [];
-var antiCyborgGroupsTank = [];
-var antiTankGroupsCyborg = [];
-var antiCyborgGroupsCyborg = [];
-var vtolGroups = [];
-var mixedGroupsTank = [];
-var mixedGroupsCyborg = [];
+var antiTankGroupsTank = [newGroup()];
+var antiCyborgGroupsTank = [newGroup()];
+var antiTankGroupsCyborg = [newGroup()];
+var antiCyborgGroupsCyborg = [newGroup()];
+var vtolGroups = [newGroup()];
+var mixedGroupsTank = [newGroup()];
+var mixedGroupsCyborg = [newGroup()];
 var scouts = newGroup();
 var ungrouped = newGroup();
 
@@ -273,7 +273,7 @@ function unitControl() {
 	var nrAntiTank = antiTank.length;
 	var antiCyborg = tanks.filter(isAntiCyborg);
 	var nrAntiCyborg = antiCyborg.length;
-	if(nrAntiTank + nrAntiCyborg > tankGroupSize()) {
+	if(nrAntiTank + nrAntiCyborg > tankGroupSize() * 0.75) {
 		var group = newGroup();
 		if(nrAntiTank > nrAntiCyborg * 2) {
 			groupAddDroid(group, antiTank[0]);
@@ -453,7 +453,7 @@ function unitControl() {
 	var nrAntiTank = antiTank.length;
 	var antiCyborg = cyborgs.filter(isAntiCyborg);
 	var nrAntiCyborg = antiCyborg.length;
-	if(nrAntiTank + nrAntiCyborg > cyborgGroupSize()) {
+	if(nrAntiTank + nrAntiCyborg > cyborgGroupSize() * 0.75) {
 		var group = newGroup();
 		if(nrAntiTank > nrAntiCyborg * 2) {
 			groupAddDroid(group, antiTank[0]);
