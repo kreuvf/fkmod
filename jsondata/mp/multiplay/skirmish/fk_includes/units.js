@@ -9,15 +9,29 @@ var scouts = newGroup();
 var ungrouped = newGroup();
 
 function tankGroupSize() {
-	return 10;
+	var droids = [];
+	//find enemy droids
+	for (var i = 0; i < maxPlayers; i++) {
+		if(i != me && !allianceExistsBetween(me,i)) {
+			droids = droids.concat(enumDroid(i));
+		}
+	}
+	return Math.min(3, Math.pow(droids.length, 0.5));
 }
 
 function cyborgGroupSize() {
-	return 20;
+	var droids = [];
+	//find enemy droids
+	for (var i = 0; i < maxPlayers; i++) {
+		if(i != me && !allianceExistsBetween(me,i)) {
+			droids = droids.concat(enumDroid(i));
+		}
+	}
+	return Math.min(5, Math.pow(droids.length, 0.7));
 }
 
 function vtolGroupSize() {
-	return 10;
+	return 5;
 }
 
 function numScouts() {
