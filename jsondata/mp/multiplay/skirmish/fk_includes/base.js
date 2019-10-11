@@ -79,7 +79,7 @@ function potStructure(id, x, y, priority, numBuilders) {
 function buildEssentials() {
 	var buildings = [];
 		// Check oil derricks
-	var numDerricks = enumStruct(me, BaseStructs.derricks[0]);
+	var numDerricks = enumStruct(me, BaseStructs.derricks[0]).length;
 	if (numDerricks < 1) {
 		var oil = enumFeature(-1).filter(function(feature) {
 			return feature.stattype == OIL_RESOURCE;
@@ -194,8 +194,30 @@ function buildBase() {
 	return buildings;
 }
 
+function findUndefendedOil() {
+	var derricks = enumStruct(me, BaseStructs.derricks[0]);
+	for(var i = 0; i < derricks.length; i++) {
+		if(enumRange(derricks[i].x, derricks[i].y, 3, me).filter(function(struct) {
+			return struct.type == STRUCTURE && struct.stattype == DEFENSE;
+		}).length < 2) {
+			return derricks[i];
+		}
+	}
+}
+
 function buildDefense() {
-	
+	var buildings = [];
+	var derrick = findUndefendedOil();
+	if(derrick) {
+		var enemyTanks = findAntiTankTarget().length;
+		var enemyCyborgs = findAntiCyborgTarget().length;
+		if (enemyTanks * 2 > enemyCyborgs) {
+			buildings.push(new potStructure(DefStructs.bunkers[1], derrick.x, derrick.y, 1, 2));
+		} else {
+			buildings.push(new potStructure(DefStructs.bunkers[0], derrick.x, derrick.y, 1, 2));
+		}
+	}
+	return buildings;
 }
 
 function buildSomething() {
@@ -219,6 +241,7 @@ function buildSomething() {
 	var buildList = buildEssentials();
 	buildList = buildList.concat(buildOil(trucks[0]));
 	buildList = buildList.concat(buildBase());
+	buildList = buildList.concat(buildDefense());
 	buildList = buildList.sort(function(a, b) {
 		return a.priority - b.priority;
 	});
