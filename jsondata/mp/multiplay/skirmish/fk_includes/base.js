@@ -18,7 +18,7 @@ const DefStructs = {
 	hardpoints: ["FKHardpointMG", "FKHardpointCannon", "FKHardpointScourgeMissile",],
 	bunkers: ["FKBunkerMG", "FKBunkerCannon", "FKBunkerScourgeMissile",],
 	artillery: ["FKPitHowitzer", "FKPitRockets", "FKPitHowitzerIncendiary",],
-	antiAir: ["FKAASiteHurricane", "FKAASiteCyclone", "FKAASiteAvengerSAM", "FKAASiteStormbringer",],
+	antiAir: ["FKAASiteAvengerSAM", "FKAASiteCyclone", "FKAASiteHurricane", "FKAASiteStormbringer",],
 	walls: ["FKWall",],
 };
 
@@ -205,8 +205,17 @@ function findUndefendedOil() {
 	}
 }
 
+function enemyHasVTOL() {
+	for (var i = 0; i < maxPlayers; i++) {
+		if(i != me && !allianceExistsBetween(me,i)) {
+			if(enumStruct(i, VTOL_FACTORY).length >= 1) return true;
+		}
+	}
+}
+
 function buildDefense() {
 	var buildings = [];
+	// Build defense around oil sources
 	var derrick = findUndefendedOil();
 	if(derrick) {
 		var enemyTanks = findAntiTankTarget().length;
@@ -215,6 +224,28 @@ function buildDefense() {
 			buildings.push(new potStructure(DefStructs.bunkers[1], derrick.x, derrick.y, 1, 2));
 		} else {
 			buildings.push(new potStructure(DefStructs.bunkers[0], derrick.x, derrick.y, 1, 2));
+		}
+	}
+	// If enemy has vtols, build aa sites
+	if(enemyHasVTOL()) {
+		var numAA = enumStruct(me, DEFENSE).filter(function(struct) {
+			return struct.name === "FKAASiteAvengerSAM" || struct.name === "FKAASiteAvengerSAM2" ||
+				struct.name === "FKAASiteCyclone" || struct.name === "FKAASiteCyclone2" || struct.name === "FKAASiteCyclone3" ||
+				struct.name === "FKAASiteHurricane" || struct.name === "FKAASiteHurricane2" || struct.name === "FKAASiteHurricane3" ||
+				struct.name === "FKAASiteStormbringer" || struct.name === "FKAASiteStormbringer2";
+		}).length;
+		var enemyVTOLS = findAirTarget().length;
+		if(numAA < 3 + (enemyVTOLS / 3)) {
+			var aaStruct;
+			switch(antiAirWeapon) {
+				case research.avenger: aaStruct = DefStructs.antiAir[0]; break;
+				case research.cyclone: aaStruct = DefStructs.antiAir[1]; break;
+				case research.hurricane: aaStruct = DefStructs.antiAir[2]; break;
+				case research.stormbringer: aaStruct = DefStructs.antiAir[3]; break;
+			}
+			if(isStructureAvailable(aaStruct)) {
+				buildings.push(new potStructure(aaStruct, startPositions[me].x, startPositions[me].y, 0, 2));
+			}
 		}
 	}
 	return buildings;

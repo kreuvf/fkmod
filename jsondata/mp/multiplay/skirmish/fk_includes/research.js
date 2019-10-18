@@ -5,6 +5,7 @@ var antiTankWeaponTank;
 var antiTankWeaponCyborg;
 var antiCyborgWeaponTank;
 var antiCyborgWeaponCyborg;
+var antiAirWeapon;
 
 
 const research = {
@@ -127,7 +128,9 @@ function setWeaponFocus() {
 	var ownCyborgs = enumDroid(me).filter(function(droid) {
 		return droid.droidType == DROID_CYBORG;
 	}).length;
-	if(enemyTanks >= enemyCyborgs) {
+	if(enemyHasVTOL() && !getResearch(antiAirWeapon.base[0]).done) {
+		weaponFocus = antiAirWeapon;
+	} else if(enemyTanks >= enemyCyborgs) {
 		if(ownTanks * 2 > ownCyborgs) {
 			weaponFocus = antiTankWeaponTank;
 		} else {
@@ -201,4 +204,10 @@ function initResearch() {
 		case 1: antiCyborgWeaponTank = research.laser; break;
 	}
 	antiCyborgWeaponCyborg = research.mg;
+	switch(random(0,3)) {
+		case 0: antiAirWeapon = research.avenger; break;
+		case 1: antiAirWeapon = research.cyclone; break;
+		case 2: antiAirWeapon = research.hurricane; break;
+		case 3: antiAirWeapon = research.stormbringer; break;
+	}
 }

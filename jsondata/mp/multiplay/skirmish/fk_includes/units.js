@@ -66,6 +66,20 @@ function findAntiCyborgTarget() {
 	return droids;
 }
 
+function findAirTarget() {
+	var droids = [];
+	//find enemy droids
+	for (var i = 0; i < maxPlayers; i++) {
+		if(i != me && !allianceExistsBetween(me,i)) {
+			droids = droids.concat(enumDroid(i));
+		}
+	}
+	droids = droids.filter(function(droid) {
+		return droid.isVTOL;
+	});
+	return droids;
+}
+
 function findGroundTarget() {
 	var targets = [];
 	//find enemy droids
@@ -502,7 +516,6 @@ function unitControl() {
 }
 
 function defend(structure) {
-	debug("defend");
 	var enemyUnits = enumRange(unit.x, unit.y, 15, ENEMIES, false);
 	var enemyTanks = enemyUnits.filter(function(droid) {
 		return droid.droidType != DROID_CYBORG && !droid.isVTOL;
