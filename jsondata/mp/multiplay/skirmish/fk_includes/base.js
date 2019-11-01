@@ -279,7 +279,7 @@ function buildSomething() {
 	while (buildList.length > 0 && trucks.length > 0 && playerPower(me) > 50) {
 		var structure = buildList.shift();
 		trucks = findNearestIdleBuildersFrom(structure.x, structure.y, trucks);
-		if (!trucks) continue;
+		if (!trucks) break;
 		if (!isStructureAvailable(structure.id, me)) continue;
 		var pos = pickStructLocation(trucks[0], structure.id, structure.x, structure.y);
 		if (!pos) continue;
