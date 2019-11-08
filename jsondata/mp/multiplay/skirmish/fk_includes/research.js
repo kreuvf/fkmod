@@ -210,4 +210,8 @@ function initResearch() {
 		case 2: antiAirWeapon = research.hurricane; break;
 		case 3: antiAirWeapon = research.stormbringer; break;
 	}
+	researchQueue.push(findResearch(antiTankWeaponTank.base[0])[0]);
+	researchQueue.push(findResearch(antiTankWeaponCyborg.base[0])[0]);
+	researchQueue.push(findResearch(antiCyborgWeaponTank.base[0])[0]);
+	researchQueue.push(findResearch(antiCyborgWeaponCyborg.base[0])[0]);
 }
