@@ -1,0 +1,7 @@
+{
+    "AI": {
+        "name": "FK AI",
+        "js": "fk.js",
+        "tip": "Default fkmod AI"
+    }
+}
