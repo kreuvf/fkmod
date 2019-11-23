@@ -23,5 +23,6 @@ event setTechPower(CALL_GAMEINIT)
 			completeResearch(camTechB[count], playnum);
 			count = count + 1;
 		}
+		playnum = playnum + 1;
 	}
 }
