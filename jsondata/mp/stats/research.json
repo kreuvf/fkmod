@@ -4548,7 +4548,7 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "HitChance",
                 "value": 4
             }
@@ -4571,7 +4571,7 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "HitChance",
                 "value": 4
             }
@@ -4594,7 +4594,7 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "HitChance",
                 "value": 4
             }
@@ -4617,7 +4617,7 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "HitChance",
                 "value": 3
             }
@@ -4640,7 +4640,7 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "HitChance",
                 "value": 3
             }
@@ -4663,8 +4663,22 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "Damage",
+                "value": 10
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "GENERIC 0",
+                "parameter": "RadiusDamage",
+                "value": 10
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "GENERIC 0",
+                "parameter": "RepeatDamage",
                 "value": 10
             }
         ],
@@ -4686,8 +4700,22 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "Damage",
+                "value": 11
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "GENERIC 0",
+                "parameter": "RadiusDamage",
+                "value": 11
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "GENERIC 0",
+                "parameter": "RepeatDamage",
                 "value": 11
             }
         ],
@@ -4709,8 +4737,22 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "Damage",
+                "value": 12
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "GENERIC 0",
+                "parameter": "RadiusDamage",
+                "value": 12
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "GENERIC 0",
+                "parameter": "RepeatDamage",
                 "value": 12
             }
         ],
@@ -4732,8 +4774,22 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "Damage",
+                "value": 13
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "GENERIC 0",
+                "parameter": "RadiusDamage",
+                "value": 13
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "GENERIC 0",
+                "parameter": "RepeatDamage",
                 "value": 13
             }
         ],
@@ -4755,8 +4811,22 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "Damage",
+                "value": 15
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "GENERIC 0",
+                "parameter": "RadiusDamage",
+                "value": 15
+            },
+            {
+                "class": "Weapon",
+                "filterParameter": "ImpactClass",
+                "filterValue": "GENERIC 0",
+                "parameter": "RepeatDamage",
                 "value": 15
             }
         ],
@@ -4778,14 +4848,14 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "FirePause",
                 "value": -9
             },
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "ReloadTime",
                 "value": -9
             }
@@ -4808,14 +4878,14 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "FirePause",
                 "value": -8
             },
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "ReloadTime",
                 "value": -9
             }
@@ -4838,14 +4908,14 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "FirePause",
                 "value": -9
             },
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "ReloadTime",
                 "value": -7
             }
@@ -4868,14 +4938,14 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "FirePause",
                 "value": -6
             },
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "ReloadTime",
                 "value": -6
             }
@@ -4898,14 +4968,14 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "FirePause",
                 "value": -6
             },
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "ReloadTime",
                 "value": -6
             }
@@ -4928,14 +4998,14 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "FirePause",
                 "value": -5
             },
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "ReloadTime",
                 "value": -7
             }
@@ -4958,14 +5028,14 @@
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "FirePause",
                 "value": -6
             },
             {
                 "class": "Weapon",
                 "filterParameter": "ImpactClass",
-                "filterValue": "MACHINE GUN",
+                "filterValue": "GENERIC 0",
                 "parameter": "ReloadTime",
                 "value": -5
             }
