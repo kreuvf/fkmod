@@ -1,0 +1,3 @@
+* Three numbers, separated by dots: 0.0.0
+* Beta versions have a "-beta" suffix: 0.0.0-beta
+
