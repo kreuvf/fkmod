@@ -1,3 +1,7 @@
 FKmod Release Notes
 ===================
 
+0.1.0-beta
+----------
+First public release. No pre-built executables/packages.
+
