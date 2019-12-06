@@ -204,3 +204,6 @@ After little more than 1.5 years the first non-crashing version existed. This ve
 In the meantime
 Lots of testing, adapting of ideas to what the game allows, the decision to add more custom patches to the game effectively turning a mod that was supposed to run on top of Vanilla Warzone 2100 into a fork.
 
+2019-12-06, 3c80f6ac3a42bce8f13a2db3c07feb2f795df2b4
+First public release: 0.1.0-beta.
+
