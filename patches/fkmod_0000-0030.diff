@@ -14057,9 +14057,27 @@ index c3598b4..0000000
 -	/////////////////////////////////////////////////////////////////////
 -}
 diff --git a/pkg/nsis/warzone2100.nsi b/pkg/nsis/warzone2100.nsi
-index 12dbdac..8c278b7 100644
+index 12dbdac..7adc0d3 100644
 --- a/pkg/nsis/warzone2100.nsi
 +++ b/pkg/nsis/warzone2100.nsi
+@@ -70,7 +70,7 @@ VIAddVersionKey "ProductVersion"	"${PACKAGE_VERSION}"
+   !define MUI_HEADERIMAGE
+   !define MUI_HEADERIMAGE_BITMAP "${TOP_SRCDIR}\icons\wz2100header.bmp"
+   !define MUI_HEADERIMAGE_RIGHT
+-  !define MUI_WELCOMEPAGE_TITLE "Welcome to Warzone 2100 v. ${PACKAGE_VERSION}"
++  !define MUI_WELCOMEPAGE_TITLE "Warzone 2100 ${PACKAGE_VERSION}"
+   !define MUI_WELCOMEFINISHPAGE_BITMAP "${TOP_SRCDIR}\icons\wz2100welcome.bmp"
+   !define MUI_UNWELCOMEFINISHPAGE_BITMAP "${TOP_SRCDIR}\icons\wz2100welcome.bmp"
+   !define MUI_ICON "${TOP_SRCDIR}\icons\warzone2100.ico"
+@@ -79,7 +79,7 @@ VIAddVersionKey "ProductVersion"	"${PACKAGE_VERSION}"
+   !define MUI_HEADERIMAGE
+   !define MUI_HEADERIMAGE_BITMAP "${TOP_SRCDIR}\icons\wz2100headerP.bmp"
+   !define MUI_HEADERIMAGE_RIGHT
+-  !define MUI_WELCOMEPAGE_TITLE "Warzone 2100 v. ${PACKAGE_VERSION} Portable"
++  !define MUI_WELCOMEPAGE_TITLE "Warzone 2100 FKmod ${PACKAGE_VERSION} Portable"
+   !define MUI_WELCOMEFINISHPAGE_BITMAP "${TOP_SRCDIR}\icons\wz2100welcomeP.bmp"
+   !define MUI_UNWELCOMEFINISHPAGE_BITMAP "${TOP_SRCDIR}\icons\wz2100welcomeP.bmp"
+   !define MUI_ICON "${TOP_SRCDIR}\icons\wz2100portable.ico"
 @@ -621,15 +621,15 @@ FunctionEnd
  ;  LangString DESC_SecOriginalMod ${LANG_DUTCH} "Speel het spel met de originele 1.10 versie balans stats."
  
