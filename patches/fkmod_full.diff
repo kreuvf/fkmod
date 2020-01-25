@@ -1,3 +1,23 @@
+diff --git a/configure.ac b/configure.ac
+index 226b4bf..2a4bb72 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -1,5 +1,5 @@
+ AC_PREREQ([2.56])
+-AC_INIT([Warzone 2100],[3.2.3],[http://wz2100.net/],[warzone2100])
++AC_INIT([Warzone 2100 FKmod],[0.1.0-beta],[https://github.com/kreuvf/fkmod/issues],[warzone2100_fkmod],[https://github.com/kreuvf/fkmod])
+ 
+ AM_INIT_AUTOMAKE([1.11 tar-ustar no-dist-gzip dist-xz])
+ 
+@@ -123,7 +123,7 @@ case ${host_os} in
+ 	*mingw32*)
+ 		host_os_mingw32=yes
+ 		AC_CHECK_TOOL([WINDRES], [windres], AC_MSG_ERROR([windres not found]))
+-		WIN32_LIBS='-ldbghelp -lshfolder -lshlwapi -lpsapi -lshell32 -lwinmm -lws2_32 -liphlpapi'
++		WIN32_LIBS='-ldbghelp -lshfolder -lshlwapi -lpsapi -lshell32 -lwinmm -lws2_32 -liphlpapi -lwtsapi32'
+ 		AC_SUBST([WIN32_LIBS], [${WIN32_LIBS}])
+ 		LDFLAGS="-Wl,-subsystem,windows ${LDFLAGS}"
+ 		;;
 diff --git a/data/mp/multiplay/skirmish/nb_common/standard_build_order.js b/data/mp/multiplay/skirmish/nb_common/standard_build_order.js
 deleted file mode 100644
 index 1041762..0000000
@@ -14036,6 +14056,188 @@ index c3598b4..0000000
 -
 -	/////////////////////////////////////////////////////////////////////
 -}
+diff --git a/pkg/nsis/warzone2100.nsi b/pkg/nsis/warzone2100.nsi
+index 12dbdac..8c278b7 100644
+--- a/pkg/nsis/warzone2100.nsi
++++ b/pkg/nsis/warzone2100.nsi
+@@ -621,15 +621,15 @@ FunctionEnd
+ ;  LangString DESC_SecOriginalMod ${LANG_DUTCH} "Speel het spel met de originele 1.10 versie balans stats."
+ 
+   ;German
+-  LangString WZWelcomeText ${LANG_GERMAN} "Dieser Wizard wird Sie durch die Warzone-2100-Installation fьhren.\r\n\r\nEs wird empfohlen sдmtliche anderen Anwendungen zu schlieЯen, bevor Sie das Setup starten. Dies ermцglicht es relevante Systemdateien zu aktualisieren, ohne neustarten zu mьssen.\r\n\r\nWarzone 2100 ist zu 100% kostenlos, falls Sie dafьr gezahlt haben, lassen Sie es uns wissen!\r\n\r\nKlicken Sie auf Weiter, um fortzufahren."
+-  LangString WZ_GPL_NEXT ${LANG_GERMAN} "nдchste"
++  LangString WZWelcomeText ${LANG_GERMAN} "Dieser Wizard wird Sie durch die Warzone-2100-Installation fГјhren.\r\n\r\nEs wird empfohlen sГ¤mtliche anderen Anwendungen zu schlieГџen, bevor Sie das Setup starten. Dies ermГ¶glicht es relevante Systemdateien zu aktualisieren, ohne neustarten zu mГјssen.\r\n\r\nWarzone 2100 ist zu 100% kostenlos, falls Sie dafГјr gezahlt haben, lassen Sie es uns wissen!\r\n\r\nKlicken Sie auf Weiter, um fortzufahren."
++  LangString WZ_GPL_NEXT ${LANG_GERMAN} "nГ¤chste"
+ 
+ 
+   LangString TEXT_SecBase ${LANG_GERMAN} "Core files"
+-  LangString DESC_SecBase ${LANG_GERMAN} "Die Kerndateien, die fьr Warzone 2100 benцtigt werden."
++  LangString DESC_SecBase ${LANG_GERMAN} "Die Kerndateien, die fГјr Warzone 2100 benГ¶tigt werden."
+ 
+   LangString TEXT_SecOpenAL ${LANG_GERMAN} "OpenAL Bibliotheken"
+-  LangString DESC_SecOpenAL ${LANG_GERMAN} "Bibliotheken fьr OpenAL, ein freies Audio Interface. Implementation von Creative Labs."
++  LangString DESC_SecOpenAL ${LANG_GERMAN} "Bibliotheken fГјr OpenAL, ein freies Audio Interface. Implementation von Creative Labs."
+ 
+ ;  LangString TEXT_SecMods ${LANG_GERMAN} "Mods"
+ ;  LangString DESC_SecMods ${LANG_GERMAN} "Verschiedene Mods."
+@@ -638,63 +638,63 @@ FunctionEnd
+   LangString DESC_SecFMVs ${LANG_GERMAN} "Videos herunterladen und installieren."
+ 
+   LangString TEXT_SecFMVs_EngHi ${LANG_GERMAN} "English (HQ)"
+-  LangString DESC_SecFMVs_EngHi ${LANG_GERMAN} "Videos in besserer Qualitдt und auf Englisch herunterladen und installieren (920 MiB)."
++  LangString DESC_SecFMVs_EngHi ${LANG_GERMAN} "Videos in besserer QualitГ¤t und auf Englisch herunterladen und installieren (920 MiB)."
+ 
+   LangString TEXT_SecFMVs_Eng ${LANG_GERMAN} "English"
+   LangString DESC_SecFMVs_Eng ${LANG_GERMAN} "Die englischen Videos herunterladen und installieren (545 MiB)."
+ 
+   LangString TEXT_SecFMVs_EngLo ${LANG_GERMAN} "English (LQ)"
+-  LangString DESC_SecFMVs_EngLo ${LANG_GERMAN} "Die englischen Videos in geringer Qualitдt herunterladen und installieren (162 MiB)."
++  LangString DESC_SecFMVs_EngLo ${LANG_GERMAN} "Die englischen Videos in geringer QualitГ¤t herunterladen und installieren (162 MiB)."
+ 
+   LangString TEXT_SecFMVs_Ger ${LANG_GERMAN} "German"
+   LangString DESC_SecFMVs_Ger ${LANG_GERMAN} "Die deutschen Videos herunterladen und installieren (460 MiB)."
+ 
+   LangString TEXT_SecNLS ${LANG_GERMAN} "Language files"
+-  LangString DESC_SecNLS ${LANG_GERMAN} "Unterstьtzung fьr Sprachen auЯer Englisch (Deutsch inbegriffen)."
++  LangString DESC_SecNLS ${LANG_GERMAN} "UnterstГјtzung fГјr Sprachen auГџer Englisch (Deutsch inbegriffen)."
+ 
+   LangString TEXT_SecNLS_WinFonts ${LANG_GERMAN} "WinFonts"
+-  LangString DESC_SecNLS_WinFonts ${LANG_GERMAN} "Den Windows-Schriftarten-Ordner in den Suchpfad aufnehmen. Nutzen Sie dies, falls Sie spдter eigene Schriftarten in der Konfigurationsdatei eingeben wollen oder es zu Problemen mit der Standardschriftart kommt. Kann unter Vista und spдter langsam sein!"
++  LangString DESC_SecNLS_WinFonts ${LANG_GERMAN} "Den Windows-Schriftarten-Ordner in den Suchpfad aufnehmen. Nutzen Sie dies, falls Sie spГ¤ter eigene Schriftarten in der Konfigurationsdatei eingeben wollen oder es zu Problemen mit der Standardschriftart kommt. Kann unter Vista und spГ¤ter langsam sein!"
+ 
+   LangString TEXT_SecOriginalMod ${LANG_GERMAN} "1.10 balance"
+   LangString DESC_SecOriginalMod ${LANG_GERMAN} "Spielen Sie das Spiel mit dem Balancing aus der Originalversion 1.10."
+ 
+   ;Russian
+-  LangString WZWelcomeText ${LANG_RUSSIAN} "Этот помощник установки поможет вам установить Warzone2100.\r\n\r\nПеред началом рекомендуем закрыть все другие приложения. Это позволит обновить соответствующие системные файлы без перезагрузки системы.\r\n\r\nWarzone2100 100% бесплатный, если вы за него заплатили сообщите нам!\r\n\r\nНажмите Далее для продолжения."
+-  LangString WZ_GPL_NEXT ${LANG_RUSSIAN} "Согласен"
++  LangString WZWelcomeText ${LANG_RUSSIAN} "Р­С‚РѕС‚ РїРѕРјРѕС‰РЅРёРє СѓСЃС‚Р°РЅРѕРІРєРё РїРѕРјРѕР¶РµС‚ РІР°Рј СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Warzone2100.\r\n\r\nРџРµСЂРµРґ РЅР°С‡Р°Р»РѕРј СЂРµРєРѕРјРµРЅРґСѓРµРј Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ РїСЂРёР»РѕР¶РµРЅРёСЏ. Р­С‚Рѕ РїРѕР·РІРѕР»РёС‚ РѕР±РЅРѕРІРёС‚СЊ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ СЃРёСЃС‚РµРјРЅС‹Рµ С„Р°Р№Р»С‹ Р±РµР· РїРµСЂРµР·Р°РіСЂСѓР·РєРё СЃРёСЃС‚РµРјС‹.\r\n\r\nWarzone2100 100% Р±РµСЃРїР»Р°С‚РЅС‹Р№, РµСЃР»Рё РІС‹ Р·Р° РЅРµРіРѕ Р·Р°РїР»Р°С‚РёР»Рё СЃРѕРѕР±С‰РёС‚Рµ РЅР°Рј!\r\n\r\nРќР°Р¶РјРёС‚Рµ Р”Р°Р»РµРµ РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ."
++  LangString WZ_GPL_NEXT ${LANG_RUSSIAN} "РЎРѕРіР»Р°СЃРµРЅ"
+ 
+ 
+-  LangString TEXT_SecBase ${LANG_RUSSIAN} "Базовые файлы"
+-  LangString DESC_SecBase ${LANG_RUSSIAN} "Файлы требуемые для запуска Warzone 2100."
++  LangString TEXT_SecBase ${LANG_RUSSIAN} "Р‘Р°Р·РѕРІС‹Рµ С„Р°Р№Р»С‹"
++  LangString DESC_SecBase ${LANG_RUSSIAN} "Р¤Р°Р№Р»С‹ С‚СЂРµР±СѓРµРјС‹Рµ РґР»СЏ Р·Р°РїСѓСЃРєР° Warzone 2100."
+ 
+-  LangString TEXT_SecOpenAL ${LANG_RUSSIAN} "Библиотека OpenAL"
+-  LangString DESC_SecOpenAL ${LANG_RUSSIAN} "Свободно распространяемый аппаратно- программный интерфейс (API) для работы с аудиоданными. Версия от Creative Labs."
++  LangString TEXT_SecOpenAL ${LANG_RUSSIAN} "Р‘РёР±Р»РёРѕС‚РµРєР° OpenAL"
++  LangString DESC_SecOpenAL ${LANG_RUSSIAN} "РЎРІРѕР±РѕРґРЅРѕ СЂР°СЃРїСЂРѕСЃС‚СЂР°РЅСЏРµРјС‹Р№ Р°РїРїР°СЂР°С‚РЅРѕ- РїСЂРѕРіСЂР°РјРјРЅС‹Р№ РёРЅС‚РµСЂС„РµР№СЃ (API) РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ Р°СѓРґРёРѕРґР°РЅРЅС‹РјРё. Р’РµСЂСЃРёСЏ РѕС‚ Creative Labs."
+ 
+-;  LangString TEXT_SecMods ${LANG_RUSSIAN} "Модификации"
+-;  LangString DESC_SecMods ${LANG_RUSSIAN} "Различные модификации для Warzone 2100."
++;  LangString TEXT_SecMods ${LANG_RUSSIAN} "РњРѕРґРёС„РёРєР°С†РёРё"
++;  LangString DESC_SecMods ${LANG_RUSSIAN} "Р Р°Р·Р»РёС‡РЅС‹Рµ РјРѕРґРёС„РёРєР°С†РёРё РґР»СЏ Warzone 2100."
+ 
+-  LangString TEXT_SecFMVs ${LANG_RUSSIAN} "Видео"
+-  LangString DESC_SecFMVs ${LANG_RUSSIAN} "Скачать и установить внутриигровые ролики."
++  LangString TEXT_SecFMVs ${LANG_RUSSIAN} "Р’РёРґРµРѕ"
++  LangString DESC_SecFMVs ${LANG_RUSSIAN} "РЎРєР°С‡Р°С‚СЊ Рё СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РІРЅСѓС‚СЂРёРёРіСЂРѕРІС‹Рµ СЂРѕР»РёРєРё."
+ 
+-  LangString TEXT_SecFMVs_EngHi ${LANG_RUSSIAN} "Английские (HQ)"
++  LangString TEXT_SecFMVs_EngHi ${LANG_RUSSIAN} "РђРЅРіР»РёР№СЃРєРёРµ (HQ)"
+   LangString DESC_SecFMVs_EngHi ${LANG_RUSSIAN} "Download and install higher-quality English in-game cutscenes (920 MB)."
+ 
+-  LangString TEXT_SecFMVs_Eng ${LANG_RUSSIAN} "Английские"
+-  LangString DESC_SecFMVs_Eng ${LANG_RUSSIAN} "Скачать и установить внутриигровые ролики на английском языке (545 MB)."
++  LangString TEXT_SecFMVs_Eng ${LANG_RUSSIAN} "РђРЅРіР»РёР№СЃРєРёРµ"
++  LangString DESC_SecFMVs_Eng ${LANG_RUSSIAN} "РЎРєР°С‡Р°С‚СЊ Рё СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РІРЅСѓС‚СЂРёРёРіСЂРѕРІС‹Рµ СЂРѕР»РёРєРё РЅР° Р°РЅРіР»РёР№СЃРєРѕРј СЏР·С‹РєРµ (545 MB)."
+ 
+-  LangString TEXT_SecFMVs_EngLo ${LANG_RUSSIAN} "Английские (LQ)"
+-  LangString DESC_SecFMVs_EngLo ${LANG_RUSSIAN} "Скачать и установить внутриигровые ролики (низкого качества) на английском языке (162 MB)."
++  LangString TEXT_SecFMVs_EngLo ${LANG_RUSSIAN} "РђРЅРіР»РёР№СЃРєРёРµ (LQ)"
++  LangString DESC_SecFMVs_EngLo ${LANG_RUSSIAN} "РЎРєР°С‡Р°С‚СЊ Рё СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РІРЅСѓС‚СЂРёРёРіСЂРѕРІС‹Рµ СЂРѕР»РёРєРё (РЅРёР·РєРѕРіРѕ РєР°С‡РµСЃС‚РІР°) РЅР° Р°РЅРіР»РёР№СЃРєРѕРј СЏР·С‹РєРµ (162 MB)."
+ 
+-  LangString TEXT_SecFMVs_Ger ${LANG_RUSSIAN} "Немецкие"
+-  LangString DESC_SecFMVs_Ger ${LANG_RUSSIAN} "Скачать и установить внутриигровые ролики на немецком языке (460 MB)."
++  LangString TEXT_SecFMVs_Ger ${LANG_RUSSIAN} "РќРµРјРµС†РєРёРµ"
++  LangString DESC_SecFMVs_Ger ${LANG_RUSSIAN} "РЎРєР°С‡Р°С‚СЊ Рё СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РІРЅСѓС‚СЂРёРёРіСЂРѕРІС‹Рµ СЂРѕР»РёРєРё РЅР° РЅРµРјРµС†РєРѕРј СЏР·С‹РєРµ (460 MB)."
+ 
+-  LangString TEXT_SecNLS ${LANG_RUSSIAN} "Языковые файлы"
+-  LangString DESC_SecNLS ${LANG_RUSSIAN} "Поддержка Русского и других языков."
++  LangString TEXT_SecNLS ${LANG_RUSSIAN} "РЇР·С‹РєРѕРІС‹Рµ С„Р°Р№Р»С‹"
++  LangString DESC_SecNLS ${LANG_RUSSIAN} "РџРѕРґРґРµСЂР¶РєР° Р СѓСЃСЃРєРѕРіРѕ Рё РґСЂСѓРіРёС… СЏР·С‹РєРѕРІ."
+ 
+-  LangString TEXT_SecNLS_WinFonts ${LANG_RUSSIAN} "WinШрифты"
+-  LangString DESC_SecNLS_WinFonts ${LANG_RUSSIAN} "Задействовать папку шрифтов Windows при поиске. Помогает если есть проблемы с поставляемыми шрифтами. На Висте возможно замедление при загрузке!"
++  LangString TEXT_SecNLS_WinFonts ${LANG_RUSSIAN} "WinРЁСЂРёС„С‚С‹"
++  LangString DESC_SecNLS_WinFonts ${LANG_RUSSIAN} "Р—Р°РґРµР№СЃС‚РІРѕРІР°С‚СЊ РїР°РїРєСѓ С€СЂРёС„С‚РѕРІ Windows РїСЂРё РїРѕРёСЃРєРµ. РџРѕРјРѕРіР°РµС‚ РµСЃР»Рё РµСЃС‚СЊ РїСЂРѕР±Р»РµРјС‹ СЃ РїРѕСЃС‚Р°РІР»СЏРµРјС‹РјРё С€СЂРёС„С‚Р°РјРё. РќР° Р’РёСЃС‚Рµ РІРѕР·РјРѕР¶РЅРѕ Р·Р°РјРµРґР»РµРЅРёРµ РїСЂРё Р·Р°РіСЂСѓР·РєРµ!"
+ 
+-  LangString TEXT_SecOriginalMod ${LANG_RUSSIAN} "Баланс 1.10"
+-  LangString DESC_SecOriginalMod ${LANG_RUSSIAN} "Играть в игру с балансом от оригинальной версии 1.10."
++  LangString TEXT_SecOriginalMod ${LANG_RUSSIAN} "Р‘Р°Р»Р°РЅСЃ 1.10"
++  LangString DESC_SecOriginalMod ${LANG_RUSSIAN} "РРіСЂР°С‚СЊ РІ РёРіСЂСѓ СЃ Р±Р°Р»Р°РЅСЃРѕРј РѕС‚ РѕСЂРёРіРёРЅР°Р»СЊРЅРѕР№ РІРµСЂСЃРёРё 1.10."
+ 
+   ;Assign language strings to sections
+   !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
+diff --git a/src/Makefile.am b/src/Makefile.am
+index ee4d490..cf1c5c5 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -37,7 +37,7 @@ EXTRA_DIST = \
+ 	cursorselection
+ 
+ if PORTABLE
+-bin_PROGRAMS = warzone2100_portable
++bin_PROGRAMS = warzone2100_fkmod_portable
+ else
+ bin_PROGRAMS = warzone2100
+ endif
+@@ -294,8 +294,8 @@ COMMONLIBS = \
+ 	$(top_builddir)/3rdparty/miniupnpc/libminiupnpc.a
+ 
+ if PORTABLE
+-warzone2100_portable_SOURCES = $(COMMONSOURCES) $(nodist_COMMONSOURCES)
+-warzone2100_portable_LIBS = $(COMMONLIBS)
++warzone2100_fkmod_portable_SOURCES = $(COMMONSOURCES) $(nodist_COMMONSOURCES)
++warzone2100_fkmod_portable_LIBS = $(COMMONLIBS)
+ else
+ warzone2100_SOURCES = $(COMMONSOURCES) $(nodist_COMMONSOURCES)
+ warzone2100_LIBS = $(COMMONLIBS)
+@@ -303,7 +303,7 @@ endif
+ 
+ if BACKEND_QT
+ if PORTABLE
+-warzone2100_portable_LIBS += $(top_builddir)/lib/qtgame/libqtgame.a \
++warzone2100_fkmod_portable_LIBS += $(top_builddir)/lib/qtgame/libqtgame.a \
+ 							 $(top_builddir)/lib/framework/libframework.a
+ else
+ warzone2100_LIBS += $(top_builddir)/lib/qtgame/libqtgame.a \
+@@ -313,7 +313,7 @@ endif
+ 
+ if BACKEND_SDL
+ if PORTABLE
+-warzone2100_portable_LIBS += $(top_builddir)/lib/sdl/libsdl.a \
++warzone2100_fkmod_portable_LIBS += $(top_builddir)/lib/sdl/libsdl.a \
+ 							 $(top_builddir)/lib/framework/libframework.a
+ else
+ warzone2100_LIBS += $(top_builddir)/lib/sdl/libsdl.a \
+@@ -324,13 +324,13 @@ endif
+ # Here, we need to bring in the "plugins" for Qt5 and they MUST come before the other QT libs.
+ # FIXME: At a future date, we should check if they want static builds, but, since we only support those for now...
+ if MINGW32
+-SQT5_LIBS =  -L$(QT5_PLUGIN)/plugins/platforms -lQt5PlatformSupport -lqwindows
++SQT5_LIBS =  -L$(QT5_PLUGIN)/plugins/platforms -lqwindows -lQt5ThemeSupport -lQt5EventDispatcherSupport -lQt5WindowsUIAutomationSupport -lQt5FontDatabaseSupport
+ else
+ SQT5_LIBS =
+ endif
+ 
+ if PORTABLE
+-warzone2100_portable_LDADD = $(warzone2100_portable_LIBS) $(LTLIBINTL) $(SDL_LIBS) $(PHYSFS_LIBS) $(PNG_LIBS) $(VORBISFILE_LIBS) $(VORBIS_LIBS) \
++warzone2100_fkmod_portable_LDADD = $(warzone2100_fkmod_portable_LIBS) $(LTLIBINTL) $(SDL_LIBS) $(PHYSFS_LIBS) $(PNG_LIBS) $(VORBISFILE_LIBS) $(VORBIS_LIBS) \
+ 	$(THEORA_LIBS) $(OPENAL_LIBS) $(FONT_LIBS) $(OPENGL_LIBS) $(SQT5_LIBS) $(QT5_LIBS) $(GLEW_LIBS) \
+ 	$(X_LIBS) $(X_EXTRA_LIBS) $(LIBCRYPTO_LIBS) $(LDFLAGS)
+ else
+@@ -342,7 +342,7 @@ endif
+ 
+ if MINGW32
+ if PORTABLE
+-warzone2100_portable_LDADD += $(top_builddir)/win32/warzone2100_portable.o $(WIN32_LIBS)
++warzone2100_fkmod_portable_LDADD += $(top_builddir)/win32/warzone2100_fkmod_portable.o $(WIN32_LIBS)
+ else
+ warzone2100_LDADD += $(top_builddir)/win32/warzone2100.o  $(WIN32_LIBS)
+ endif
 diff --git a/src/action.cpp b/src/action.cpp
 index 0af50c0..6fae9ab 100644
 --- a/src/action.cpp
@@ -15044,18 +15246,19 @@ index d2a9477..61dbece 100644
  	Vector3i        src;                    ///< Where projectile started
  	Vector3i        dst;                    ///< The target coordinates
 diff --git a/src/stats.cpp b/src/stats.cpp
-index 02cd789..23401fc 100644
+index 02cd789..d892eb4 100644
 --- a/src/stats.cpp
 +++ b/src/stats.cpp
-@@ -40,6 +40,7 @@
+@@ -40,6 +40,8 @@
  #include "lib/sound/audio_id.h"
  #include "projectile.h"
  #include "text.h"
 +#include "combat.h"
++#include <math.h>
  
  #define WEAPON_TIME		100
  
-@@ -353,6 +354,7 @@ bool loadWeaponStats(const char *pFileName)
+@@ -353,6 +355,7 @@ bool loadWeaponStats(const char *pFileName)
  		flags = ini.value("flags", 0).toStringList();
  		psStats->vtolAttackRuns = ini.value("numAttackRuns", 0).toUInt();
  		psStats->penetrate = ini.value("penetrate", false).toBool();
@@ -15063,7 +15266,7 @@ index 02cd789..23401fc 100644
  		// weapon size limitation
  		int weaponSize = ini.value("weaponSize", WEAPON_SIZE_ANY).toInt();
  		ASSERT(weaponSize <= WEAPON_SIZE_ANY, "Bad weapon size for %s", list[i].toUtf8().constData());
-@@ -394,7 +396,7 @@ bool loadWeaponStats(const char *pFileName)
+@@ -394,7 +397,7 @@ bool loadWeaponStats(const char *pFileName)
  		{
  			psStats->distanceExtensionFactor = 120;
  		}
@@ -15072,7 +15275,7 @@ index 02cd789..23401fc 100644
  		{
  			psStats->distanceExtensionFactor = 100;
  		}
-@@ -856,6 +858,10 @@ bool loadSensorStats(const char *pFileName)
+@@ -856,6 +859,10 @@ bool loadSensorStats(const char *pFileName)
  		{
  			psStats->type = RADAR_DETECTOR_SENSOR;
  		}
@@ -15083,7 +15286,7 @@ index 02cd789..23401fc 100644
  		else
  		{
  			ASSERT(false, "Invalid Sensor type");
-@@ -1494,6 +1500,71 @@ bool getWeaponSubClass(const char *subClass, WEAPON_SUBCLASS *wclass)
+@@ -1494,6 +1501,71 @@ bool getWeaponSubClass(const char *subClass, WEAPON_SUBCLASS *wclass)
  	{
  		*wclass = WSC_EMP;
  	}
@@ -15155,7 +15358,7 @@ index 02cd789..23401fc 100644
  	else
  	{
  		ASSERT(!"Invalid weapon sub class", "Invalid weapon sub class: %s", subClass);
-@@ -1525,6 +1596,22 @@ const char *getWeaponSubClass(WEAPON_SUBCLASS wclass)
+@@ -1525,6 +1597,22 @@ const char *getWeaponSubClass(WEAPON_SUBCLASS wclass)
  	case WSC_BOMB: return "BOMB";
  	case WSC_COMMAND: return "COMMAND";
  	case WSC_EMP: return "EMP";
@@ -15178,7 +15381,7 @@ index 02cd789..23401fc 100644
  	case WSC_NUM_WEAPON_SUBCLASSES: break;
  	}
  	ASSERT(false, "No such weapon subclass");
-@@ -1652,9 +1739,14 @@ int weaponRadDamage(const WEAPON_STATS *psStats, int player)
+@@ -1652,9 +1740,14 @@ int weaponRadDamage(const WEAPON_STATS *psStats, int player)
  	return psStats->upgrade[player].radiusDamage;
  }
  
@@ -15195,7 +15398,7 @@ index 02cd789..23401fc 100644
  }
  
  int sensorRange(const SENSOR_STATS *psStats, int player)
-@@ -2072,3 +2164,88 @@ bool objRadarDetector(const BASE_OBJECT *psObj)
+@@ -2072,3 +2165,88 @@ bool objRadarDetector(const BASE_OBJECT *psObj)
  	}
  	return false;
  }
@@ -15393,3 +15596,78 @@ index 35bc869..052e1a5 100644
  extern void structureBuild(STRUCTURE *psStructure, DROID *psDroid, int buildPoints, int buildRate = 1);
  extern void structureDemolish(STRUCTURE *psStructure, DROID *psDroid, int buildPoints);
  void structureRepair(STRUCTURE *psStruct, DROID *psDroid, int buildRate);
+diff --git a/win32/Makefile.am b/win32/Makefile.am
+index 51d9786..c0c8a4e 100644
+--- a/win32/Makefile.am
++++ b/win32/Makefile.am
+@@ -1,7 +1,7 @@
+ .rc.o:
+ 	$(WINDRES) -DVERSION="\"$(VERSION)\"" -o$@ $<
+ if PORTABLE
+-dist_noinst_DATA = warzone2100_portable.rc
++dist_noinst_DATA = warzone2100_fkmod_portable.rc
+ else
+ dist_noinst_DATA = warzone2100.rc
+ endif
+@@ -9,7 +9,7 @@ endif
+ if MINGW32
+ if PORTABLE
+ nodist_noinst_DATA = \
+-		warzone2100_portable.o
++		warzone2100_fkmod_portable.o
+ else
+ nodist_noinst_DATA = \
+ 		warzone2100.o
+diff --git a/win32/warzone2100_fkmod_portable.rc b/win32/warzone2100_fkmod_portable.rc
+new file mode 100644
+index 0000000..b3a9682
+--- /dev/null
++++ b/win32/warzone2100_fkmod_portable.rc
+@@ -0,0 +1,47 @@
++/////////////////////////////////////////////////////////////////////////////
++//
++// Version
++//
++
++1 VERSIONINFO
++ FILEVERSION 3,2,3,0
++ PRODUCTVERSION 3,2,3,0
++ FILEFLAGSMASK 0x0L
++#ifdef _DEBUG
++ FILEFLAGS 0x1L
++#else
++ FILEFLAGS 0x0L
++#endif
++ FILEOS 0x40004L
++ FILETYPE 0x1L
++ FILESUBTYPE 0x0L
++BEGIN
++	BLOCK "StringFileInfo"
++	BEGIN
++		BLOCK "040904b0"
++		BEGIN
++			VALUE "CompanyName", "Warzone 2100 Project"
++			VALUE "FileDescription", "Warzone 2100 portable"
++			VALUE "FileVersion", "3.2.3"
++			VALUE "InternalName", "Warzone 2100"
++			VALUE "LegalCopyright", "Copyright (C) 2005-2017 Warzone 2100 Project"
++			VALUE "OriginalFilename", "warzone2100_portable.exe"
++			VALUE "ProductName", "Warzone 2100 portable"
++			VALUE "ProductVersion", "3.2.3"
++		END
++	END
++	BLOCK "VarFileInfo"
++	BEGIN
++		VALUE "Translation", 0x0409, 0x04b0
++	END
++END
++
++
++/////////////////////////////////////////////////////////////////////////////
++//
++// Icon
++//
++
++// Icon with lowest ID value placed first to ensure application icon
++// remains consistent on all systems.
++2 ICON "../icons/wz2100portable.ico"
