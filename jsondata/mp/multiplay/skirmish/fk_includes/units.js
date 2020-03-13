@@ -590,6 +590,8 @@ function defend(structure) {
 				enemyTanks -= units.length / 2;
 				enemyCyborgs -= units.length;
 			}
+		} else {
+			break;
 		}
 	}
 }
