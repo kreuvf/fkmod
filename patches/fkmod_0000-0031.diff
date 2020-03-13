@@ -1,11 +1,11 @@
 diff --git a/configure.ac b/configure.ac
-index 226b4bf..2a4bb72 100644
+index 226b4bf..f9eae69 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -1,5 +1,5 @@
  AC_PREREQ([2.56])
 -AC_INIT([Warzone 2100],[3.2.3],[http://wz2100.net/],[warzone2100])
-+AC_INIT([Warzone 2100 FKmod],[0.1.0-beta],[https://github.com/kreuvf/fkmod/issues],[warzone2100_fkmod],[https://github.com/kreuvf/fkmod])
++AC_INIT([Warzone 2100 FKmod],[0.3.0-beta],[https://github.com/kreuvf/fkmod/issues],[warzone2100_fkmod],[https://github.com/kreuvf/fkmod])
  
  AM_INIT_AUTOMAKE([1.11 tar-ustar no-dist-gzip dist-xz])
  
@@ -14057,9 +14057,23 @@ index c3598b4..0000000
 -	/////////////////////////////////////////////////////////////////////
 -}
 diff --git a/pkg/nsis/warzone2100.nsi b/pkg/nsis/warzone2100.nsi
-index 12dbdac..7adc0d3 100644
+index 12dbdac..0636ee7 100644
 --- a/pkg/nsis/warzone2100.nsi
 +++ b/pkg/nsis/warzone2100.nsi
+@@ -49,11 +49,11 @@
+ ;Versioninfo
+ 
+ VIProductVersion "${VERSIONNUM}"
+-VIAddVersionKey "CompanyName"	"Warzone 2100 Project"
++VIAddVersionKey "CompanyName"	"FKmod Team"
+ VIAddVersionKey "FileDescription"	"${PACKAGE_NAME} Installer"
+ VIAddVersionKey "FileVersion"		"${PACKAGE_VERSION}"
+ VIAddVersionKey "InternalName"	"${PACKAGE_NAME}"
+-VIAddVersionKey "LegalCopyright"	"Copyright (c) 2006-2013 Warzone 2100 Project"
++VIAddVersionKey "LegalCopyright"	"Copyright (c) 2005-2017 Warzone 2100 Project, Fingolfin, Kreuvf"
+ VIAddVersionKey "OriginalFilename"	"${PACKAGE}-${PACKAGE_VERSION}.exe"
+ VIAddVersionKey "ProductName"	"${PACKAGE_NAME}"
+ VIAddVersionKey "ProductVersion"	"${PACKAGE_VERSION}"
 @@ -70,7 +70,7 @@ VIAddVersionKey "ProductVersion"	"${PACKAGE_VERSION}"
    !define MUI_HEADERIMAGE
    !define MUI_HEADERIMAGE_BITMAP "${TOP_SRCDIR}\icons\wz2100header.bmp"
@@ -14078,19 +14092,61 @@ index 12dbdac..7adc0d3 100644
    !define MUI_WELCOMEFINISHPAGE_BITMAP "${TOP_SRCDIR}\icons\wz2100welcomeP.bmp"
    !define MUI_UNWELCOMEFINISHPAGE_BITMAP "${TOP_SRCDIR}\icons\wz2100welcomeP.bmp"
    !define MUI_ICON "${TOP_SRCDIR}\icons\wz2100portable.ico"
+@@ -142,8 +142,8 @@ Function WelcomePageSetupLinkPre
+   !insertmacro MUI_INSTALLOPTIONS_WRITE "ioSpecial.ini" "Field 3" "Bottom" "142" ; limit size of the upper label
+   !insertmacro MUI_INSTALLOPTIONS_WRITE "ioSpecial.ini" "Settings" "Numfields" "4" ; increase counter
+   !insertmacro MUI_INSTALLOPTIONS_WRITE "ioSpecial.ini" "Field 4" "Type" "Link"
+-  !insertmacro MUI_INSTALLOPTIONS_WRITE "ioSpecial.ini" "Field 4" "Text" "Visit our Official Homepage http://wz2100.net for the latest version."
+-  !insertmacro MUI_INSTALLOPTIONS_WRITE "ioSpecial.ini" "Field 4" "State" "http://wz2100.net/"
++  !insertmacro MUI_INSTALLOPTIONS_WRITE "ioSpecial.ini" "Field 4" "Text" "Visit our GitHub repository https://github.com/kreuvf/fkmod for the latest version."
++  !insertmacro MUI_INSTALLOPTIONS_WRITE "ioSpecial.ini" "Field 4" "State" "https://github.com/kreuvf/fkmod"
+   !insertmacro MUI_INSTALLOPTIONS_WRITE "ioSpecial.ini" "Field 4" "Left" "120"
+   !insertmacro MUI_INSTALLOPTIONS_WRITE "ioSpecial.ini" "Field 4" "Right" "300"
+   !insertmacro MUI_INSTALLOPTIONS_WRITE "ioSpecial.ini" "Field 4" "Top" "154"
+@@ -544,13 +544,13 @@ FunctionEnd
+   ;English
+   LangString WZWelcomeText ${LANG_ENGLISH} "Welcome to the Warzone 2100 installer!\r\n\r\nThis wizard will guide you through the installation of Warzone 2100.\r\n\r\nIt is recommended that you close all other applications before continuing this installation. This will make it possible to update relevant system files without having to reboot your computer.\r\n\r\nWarzone 2100 is 100% free, fully open sourced program\r\n\r\nClick Next to continue."
+ !else
+-  LangString WZWelcomeText ${LANG_ENGLISH} "Welcome to the Warzone 2100 portable installer!\r\n\r\nThis wizard will guide you through the installation of the portable version of Warzone 2100.\r\n\r\nThis install is fully self-contained and you can uninstall the program at any time by deleting the directory.\r\n\r\nWarzone 2100 is 100% free, fully open sourced program! \r\n\r\nClick Next to continue."
++  LangString WZWelcomeText ${LANG_ENGLISH} "Welcome to the Warzone 2100 FKmod Portable installer!\r\n\r\nThis wizard will guide you through the installation of the portable version of Warzone 2100 FKmod.\r\n\r\nThis install is fully self-contained and you can uninstall the program at any time by deleting the directory.\r\n\r\nWarzone 2100 FKmod is open source software. \r\n\r\nClick Next to continue."
+ !endif
+   LangString WZ_GPL_NEXT ${LANG_ENGLISH} "Next"
+ 
+ 
+   LangString TEXT_SecBase ${LANG_ENGLISH} "Core files"
+-  LangString DESC_SecBase ${LANG_ENGLISH} "The core files required to run Warzone 2100."
++  LangString DESC_SecBase ${LANG_ENGLISH} "The core files required to run Warzone 2100 FKmod."
+ 
+   LangString TEXT_SecOpenAL ${LANG_ENGLISH} "OpenAL libraries"
+   LangString DESC_SecOpenAL ${LANG_ENGLISH} "Runtime libraries for OpenAL, a free Audio interface. Implementation by Creative Labs."
+@@ -583,12 +583,12 @@ FunctionEnd
+ ;  LangString DESC_SecOriginalMod ${LANG_ENGLISH} "Play the game as it was back in the 1.10 days."
+ 
+   ;Dutch
+-  LangString WZWelcomeText ${LANG_DUTCH} "Deze installatiewizard leidt u door het installatieproces van Warzone 2100.\r\n\r\nHet is aangeraden om alle andere applicaties te sluiten alvorens verder te gaan met deze installatie. Dit maakt het mogelijk om de betreffende systeembestanden te vervangen zonder uw computer opnieuw op te starten"
++  LangString WZWelcomeText ${LANG_DUTCH} "Deze installatiewizard leidt u door het installatieproces van Warzone 2100 FKmod.\r\n\r\nHet is aangeraden om alle andere applicaties te sluiten alvorens verder te gaan met deze installatie. Dit maakt het mogelijk om de betreffende systeembestanden te vervangen zonder uw computer opnieuw op te starten"
+   LangString WZ_GPL_NEXT ${LANG_DUTCH} "volgende"
+ 
+ 
+   LangString TEXT_SecBase ${LANG_DUTCH} "Core files"
+-  LangString DESC_SecBase ${LANG_DUTCH} "The core files required to run Warzone 2100."
++  LangString DESC_SecBase ${LANG_DUTCH} "The core files required to run Warzone 2100 FKmod."
+ 
+   LangString TEXT_SecOpenAL ${LANG_DUTCH} "OpenAL bibliotheken"
+   LangString DESC_SecOpenAL ${LANG_DUTCH} "Vereiste bibliotheken voor OpenAL, een opensource/vrije Audio Bibliotheek."
 @@ -621,15 +621,15 @@ FunctionEnd
  ;  LangString DESC_SecOriginalMod ${LANG_DUTCH} "Speel het spel met de originele 1.10 versie balans stats."
  
    ;German
 -  LangString WZWelcomeText ${LANG_GERMAN} "Dieser Wizard wird Sie durch die Warzone-2100-Installation fьhren.\r\n\r\nEs wird empfohlen sдmtliche anderen Anwendungen zu schlieЯen, bevor Sie das Setup starten. Dies ermцglicht es relevante Systemdateien zu aktualisieren, ohne neustarten zu mьssen.\r\n\r\nWarzone 2100 ist zu 100% kostenlos, falls Sie dafьr gezahlt haben, lassen Sie es uns wissen!\r\n\r\nKlicken Sie auf Weiter, um fortzufahren."
 -  LangString WZ_GPL_NEXT ${LANG_GERMAN} "nдchste"
-+  LangString WZWelcomeText ${LANG_GERMAN} "Dieser Wizard wird Sie durch die Warzone-2100-Installation fГјhren.\r\n\r\nEs wird empfohlen sГ¤mtliche anderen Anwendungen zu schlieГџen, bevor Sie das Setup starten. Dies ermГ¶glicht es relevante Systemdateien zu aktualisieren, ohne neustarten zu mГјssen.\r\n\r\nWarzone 2100 ist zu 100% kostenlos, falls Sie dafГјr gezahlt haben, lassen Sie es uns wissen!\r\n\r\nKlicken Sie auf Weiter, um fortzufahren."
++  LangString WZWelcomeText ${LANG_GERMAN} "Dieser Wizard wird Sie durch die Warzone-2100-FKmod-Installation fГјhren.\r\n\r\nEs wird empfohlen sГ¤mtliche anderen Anwendungen zu schlieГџen, bevor Sie das Setup starten. Dies ermГ¶glicht es relevante Systemdateien zu aktualisieren, ohne neustarten zu mГјssen.\r\n\r\nWarzone 2100 FKmod ist Open-Source-Software\r\n\r\nKlicken Sie auf Weiter, um fortzufahren."
 +  LangString WZ_GPL_NEXT ${LANG_GERMAN} "nГ¤chste"
  
  
    LangString TEXT_SecBase ${LANG_GERMAN} "Core files"
 -  LangString DESC_SecBase ${LANG_GERMAN} "Die Kerndateien, die fьr Warzone 2100 benцtigt werden."
-+  LangString DESC_SecBase ${LANG_GERMAN} "Die Kerndateien, die fГјr Warzone 2100 benГ¶tigt werden."
++  LangString DESC_SecBase ${LANG_GERMAN} "Die Kerndateien, die fГјr Warzone 2100 FKmod benГ¶tigt werden."
  
    LangString TEXT_SecOpenAL ${LANG_GERMAN} "OpenAL Bibliotheken"
 -  LangString DESC_SecOpenAL ${LANG_GERMAN} "Bibliotheken fьr OpenAL, ein freies Audio Interface. Implementation von Creative Labs."
@@ -14129,14 +14185,14 @@ index 12dbdac..7adc0d3 100644
    ;Russian
 -  LangString WZWelcomeText ${LANG_RUSSIAN} "Этот помощник установки поможет вам установить Warzone2100.\r\n\r\nПеред началом рекомендуем закрыть все другие приложения. Это позволит обновить соответствующие системные файлы без перезагрузки системы.\r\n\r\nWarzone2100 100% бесплатный, если вы за него заплатили сообщите нам!\r\n\r\nНажмите Далее для продолжения."
 -  LangString WZ_GPL_NEXT ${LANG_RUSSIAN} "Согласен"
-+  LangString WZWelcomeText ${LANG_RUSSIAN} "Р­С‚РѕС‚ РїРѕРјРѕС‰РЅРёРє СѓСЃС‚Р°РЅРѕРІРєРё РїРѕРјРѕР¶РµС‚ РІР°Рј СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Warzone2100.\r\n\r\nРџРµСЂРµРґ РЅР°С‡Р°Р»РѕРј СЂРµРєРѕРјРµРЅРґСѓРµРј Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ РїСЂРёР»РѕР¶РµРЅРёСЏ. Р­С‚Рѕ РїРѕР·РІРѕР»РёС‚ РѕР±РЅРѕРІРёС‚СЊ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ СЃРёСЃС‚РµРјРЅС‹Рµ С„Р°Р№Р»С‹ Р±РµР· РїРµСЂРµР·Р°РіСЂСѓР·РєРё СЃРёСЃС‚РµРјС‹.\r\n\r\nWarzone2100 100% Р±РµСЃРїР»Р°С‚РЅС‹Р№, РµСЃР»Рё РІС‹ Р·Р° РЅРµРіРѕ Р·Р°РїР»Р°С‚РёР»Рё СЃРѕРѕР±С‰РёС‚Рµ РЅР°Рј!\r\n\r\nРќР°Р¶РјРёС‚Рµ Р”Р°Р»РµРµ РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ."
++  LangString WZWelcomeText ${LANG_RUSSIAN} "Р­С‚РѕС‚ РїРѕРјРѕС‰РЅРёРє СѓСЃС‚Р°РЅРѕРІРєРё РїРѕРјРѕР¶РµС‚ РІР°Рј СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Warzone2100 FKmod.\r\n\r\nРџРµСЂРµРґ РЅР°С‡Р°Р»РѕРј СЂРµРєРѕРјРµРЅРґСѓРµРј Р·Р°РєСЂС‹С‚СЊ РІСЃРµ РґСЂСѓРіРёРµ РїСЂРёР»РѕР¶РµРЅРёСЏ. Р­С‚Рѕ РїРѕР·РІРѕР»РёС‚ РѕР±РЅРѕРІРёС‚СЊ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ СЃРёСЃС‚РµРјРЅС‹Рµ С„Р°Р№Р»С‹ Р±РµР· РїРµСЂРµР·Р°РіСЂСѓР·РєРё СЃРёСЃС‚РµРјС‹.\r\n\r\nWarzone2100 FKmod 100% Р±РµСЃРїР»Р°С‚РЅС‹Р№, РµСЃР»Рё РІС‹ Р·Р° РЅРµРіРѕ Р·Р°РїР»Р°С‚РёР»Рё СЃРѕРѕР±С‰РёС‚Рµ РЅР°Рј!\r\n\r\nРќР°Р¶РјРёС‚Рµ Р”Р°Р»РµРµ РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ."
 +  LangString WZ_GPL_NEXT ${LANG_RUSSIAN} "РЎРѕРіР»Р°СЃРµРЅ"
  
  
 -  LangString TEXT_SecBase ${LANG_RUSSIAN} "Базовые файлы"
 -  LangString DESC_SecBase ${LANG_RUSSIAN} "Файлы требуемые для запуска Warzone 2100."
 +  LangString TEXT_SecBase ${LANG_RUSSIAN} "Р‘Р°Р·РѕРІС‹Рµ С„Р°Р№Р»С‹"
-+  LangString DESC_SecBase ${LANG_RUSSIAN} "Р¤Р°Р№Р»С‹ С‚СЂРµР±СѓРµРјС‹Рµ РґР»СЏ Р·Р°РїСѓСЃРєР° Warzone 2100."
++  LangString DESC_SecBase ${LANG_RUSSIAN} "Р¤Р°Р№Р»С‹ С‚СЂРµР±СѓРµРјС‹Рµ РґР»СЏ Р·Р°РїСѓСЃРєР° Warzone 2100 FKmod."
  
 -  LangString TEXT_SecOpenAL ${LANG_RUSSIAN} "Библиотека OpenAL"
 -  LangString DESC_SecOpenAL ${LANG_RUSSIAN} "Свободно распространяемый аппаратно- программный интерфейс (API) для работы с аудиоданными. Версия от Creative Labs."
@@ -14146,7 +14202,7 @@ index 12dbdac..7adc0d3 100644
 -;  LangString TEXT_SecMods ${LANG_RUSSIAN} "Модификации"
 -;  LangString DESC_SecMods ${LANG_RUSSIAN} "Различные модификации для Warzone 2100."
 +;  LangString TEXT_SecMods ${LANG_RUSSIAN} "РњРѕРґРёС„РёРєР°С†РёРё"
-+;  LangString DESC_SecMods ${LANG_RUSSIAN} "Р Р°Р·Р»РёС‡РЅС‹Рµ РјРѕРґРёС„РёРєР°С†РёРё РґР»СЏ Warzone 2100."
++;  LangString DESC_SecMods ${LANG_RUSSIAN} "Р Р°Р·Р»РёС‡РЅС‹Рµ РјРѕРґРёС„РёРєР°С†РёРё РґР»СЏ Warzone 2100 FKmod."
  
 -  LangString TEXT_SecFMVs ${LANG_RUSSIAN} "Видео"
 -  LangString DESC_SecFMVs ${LANG_RUSSIAN} "Скачать и установить внутриигровые ролики."
@@ -15614,6 +15670,19 @@ index 35bc869..052e1a5 100644
  extern void structureBuild(STRUCTURE *psStructure, DROID *psDroid, int buildPoints, int buildRate = 1);
  extern void structureDemolish(STRUCTURE *psStructure, DROID *psDroid, int buildPoints);
  void structureRepair(STRUCTURE *psStruct, DROID *psDroid, int buildRate);
+diff --git a/src/version.cpp b/src/version.cpp
+index 3d86e8c..0f1b319 100644
+--- a/src/version.cpp
++++ b/src/version.cpp
+@@ -37,7 +37,7 @@ static const char vcs_tag[] = VCS_TAG;
+ */
+ const char *version_getVersionString()
+ {
+-	static const char *version_string = "3.2.3";
++	static const char *version_string = "0.3.0-beta";
+ 
+ 	if (version_string == NULL)
+ 	{
 diff --git a/win32/Makefile.am b/win32/Makefile.am
 index 51d9786..c0c8a4e 100644
 --- a/win32/Makefile.am
@@ -15638,7 +15707,7 @@ index 51d9786..c0c8a4e 100644
  		warzone2100.o
 diff --git a/win32/warzone2100_fkmod_portable.rc b/win32/warzone2100_fkmod_portable.rc
 new file mode 100644
-index 0000000..b3a9682
+index 0000000..41447ac
 --- /dev/null
 +++ b/win32/warzone2100_fkmod_portable.rc
 @@ -0,0 +1,47 @@
@@ -15648,8 +15717,8 @@ index 0000000..b3a9682
 +//
 +
 +1 VERSIONINFO
-+ FILEVERSION 3,2,3,0
-+ PRODUCTVERSION 3,2,3,0
++ FILEVERSION 0,3,0,0
++ PRODUCTVERSION 0,3,0,0
 + FILEFLAGSMASK 0x0L
 +#ifdef _DEBUG
 + FILEFLAGS 0x1L
@@ -15664,14 +15733,14 @@ index 0000000..b3a9682
 +	BEGIN
 +		BLOCK "040904b0"
 +		BEGIN
-+			VALUE "CompanyName", "Warzone 2100 Project"
-+			VALUE "FileDescription", "Warzone 2100 portable"
-+			VALUE "FileVersion", "3.2.3"
-+			VALUE "InternalName", "Warzone 2100"
-+			VALUE "LegalCopyright", "Copyright (C) 2005-2017 Warzone 2100 Project"
-+			VALUE "OriginalFilename", "warzone2100_portable.exe"
-+			VALUE "ProductName", "Warzone 2100 portable"
-+			VALUE "ProductVersion", "3.2.3"
++			VALUE "CompanyName", "FKmod Team"
++			VALUE "FileDescription", "Warzone 2100 FKmod Portable"
++			VALUE "FileVersion", "0.3.0-beta"
++			VALUE "InternalName", "Warzone 2100 FKmod"
++			VALUE "LegalCopyright", "Copyright (C) 2005-2017 Warzone 2100 Project, Fingolfin, Kreuvf"
++			VALUE "OriginalFilename", "warzone2100_fkmod_portable.exe"
++			VALUE "ProductName", "Warzone 2100 FKmod Portable"
++			VALUE "ProductVersion", "0.3.0-beta"
 +		END
 +	END
 +	BLOCK "VarFileInfo"
