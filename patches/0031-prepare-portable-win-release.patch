@@ -5,7 +5,7 @@ index 2a4bb724f..ee2df360e 100644
 @@ -1,5 +1,5 @@
  AC_PREREQ([2.56])
 -AC_INIT([Warzone 2100 FKmod],[0.1.0-beta],[https://github.com/kreuvf/fkmod/issues],[warzone2100_fkmod],[https://github.com/kreuvf/fkmod])
-+AC_INIT([Warzone 2100 FKmod],[0.2.0-beta],[https://github.com/kreuvf/fkmod/issues],[warzone2100_fkmod],[https://github.com/kreuvf/fkmod])
++AC_INIT([Warzone 2100 FKmod],[0.3.0-beta],[https://github.com/kreuvf/fkmod/issues],[warzone2100_fkmod],[https://github.com/kreuvf/fkmod])
  
  AM_INIT_AUTOMAKE([1.11 tar-ustar no-dist-gzip dist-xz])
  
@@ -115,7 +115,7 @@ index 3d86e8cf7..05bbb2f31 100644
  const char *version_getVersionString()
  {
 -	static const char *version_string = "3.2.3";
-+	static const char *version_string = "0.2.0-beta";
++	static const char *version_string = "0.3.0-beta";
  
  	if (version_string == NULL)
  	{
@@ -129,8 +129,8 @@ index b3a96821b..e38d310a6 100644
  1 VERSIONINFO
 - FILEVERSION 3,2,3,0
 - PRODUCTVERSION 3,2,3,0
-+ FILEVERSION 0,2,0,0
-+ PRODUCTVERSION 0,2,0,0
++ FILEVERSION 0,3,0,0
++ PRODUCTVERSION 0,3,0,0
   FILEFLAGSMASK 0x0L
  #ifdef _DEBUG
   FILEFLAGS 0x1L
@@ -148,12 +148,12 @@ index b3a96821b..e38d310a6 100644
 -			VALUE "ProductVersion", "3.2.3"
 +			VALUE "CompanyName", "FKmod Team"
 +			VALUE "FileDescription", "Warzone 2100 FKmod Portable"
-+			VALUE "FileVersion", "0.2.0-beta"
++			VALUE "FileVersion", "0.3.0-beta"
 +			VALUE "InternalName", "Warzone 2100 FKmod"
 +			VALUE "LegalCopyright", "Copyright (C) 2005-2017 Warzone 2100 Project, Fingolfin, Kreuvf"
 +			VALUE "OriginalFilename", "warzone2100_fkmod_portable.exe"
 +			VALUE "ProductName", "Warzone 2100 FKmod Portable"
-+			VALUE "ProductVersion", "0.2.0-beta"
++			VALUE "ProductVersion", "0.3.0-beta"
  		END
  	END
  	BLOCK "VarFileInfo"
