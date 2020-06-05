@@ -1,11 +1,11 @@
 diff --git a/configure.ac b/configure.ac
-index 226b4bf..f9eae69 100644
+index 226b4bf..a743d02 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -1,5 +1,5 @@
  AC_PREREQ([2.56])
 -AC_INIT([Warzone 2100],[3.2.3],[http://wz2100.net/],[warzone2100])
-+AC_INIT([Warzone 2100 FKmod],[0.3.0-beta],[https://github.com/kreuvf/fkmod/issues],[warzone2100_fkmod],[https://github.com/kreuvf/fkmod])
++AC_INIT([Warzone 2100 FKmod],[1.0.0],[https://github.com/kreuvf/fkmod/issues],[warzone2100_fkmod],[https://github.com/kreuvf/fkmod])
  
  AM_INIT_AUTOMAKE([1.11 tar-ustar no-dist-gzip dist-xz])
  
@@ -14057,7 +14057,7 @@ index c3598b4..0000000
 -	/////////////////////////////////////////////////////////////////////
 -}
 diff --git a/pkg/nsis/warzone2100.nsi b/pkg/nsis/warzone2100.nsi
-index 12dbdac..0636ee7 100644
+index 12dbdac..ac0ae48 100644
 --- a/pkg/nsis/warzone2100.nsi
 +++ b/pkg/nsis/warzone2100.nsi
 @@ -49,11 +49,11 @@
@@ -14070,7 +14070,7 @@ index 12dbdac..0636ee7 100644
  VIAddVersionKey "FileVersion"		"${PACKAGE_VERSION}"
  VIAddVersionKey "InternalName"	"${PACKAGE_NAME}"
 -VIAddVersionKey "LegalCopyright"	"Copyright (c) 2006-2013 Warzone 2100 Project"
-+VIAddVersionKey "LegalCopyright"	"Copyright (c) 2005-2017 Warzone 2100 Project, Fingolfin, Kreuvf"
++VIAddVersionKey "LegalCopyright"	"Copyright (c) 2005-2020 Warzone 2100 Project, Fingolfin, Kreuvf"
  VIAddVersionKey "OriginalFilename"	"${PACKAGE}-${PACKAGE_VERSION}.exe"
  VIAddVersionKey "ProductName"	"${PACKAGE_NAME}"
  VIAddVersionKey "ProductVersion"	"${PACKAGE_VERSION}"
@@ -15671,7 +15671,7 @@ index 35bc869..052e1a5 100644
  extern void structureDemolish(STRUCTURE *psStructure, DROID *psDroid, int buildPoints);
  void structureRepair(STRUCTURE *psStruct, DROID *psDroid, int buildRate);
 diff --git a/src/version.cpp b/src/version.cpp
-index 3d86e8c..0f1b319 100644
+index 3d86e8c..909680f 100644
 --- a/src/version.cpp
 +++ b/src/version.cpp
 @@ -37,7 +37,7 @@ static const char vcs_tag[] = VCS_TAG;
@@ -15679,7 +15679,7 @@ index 3d86e8c..0f1b319 100644
  const char *version_getVersionString()
  {
 -	static const char *version_string = "3.2.3";
-+	static const char *version_string = "0.3.0-beta";
++	static const char *version_string = "1.0.0";
  
  	if (version_string == NULL)
  	{
@@ -15707,7 +15707,7 @@ index 51d9786..c0c8a4e 100644
  		warzone2100.o
 diff --git a/win32/warzone2100_fkmod_portable.rc b/win32/warzone2100_fkmod_portable.rc
 new file mode 100644
-index 0000000..41447ac
+index 0000000..10dcbc5
 --- /dev/null
 +++ b/win32/warzone2100_fkmod_portable.rc
 @@ -0,0 +1,47 @@
@@ -15717,8 +15717,8 @@ index 0000000..41447ac
 +//
 +
 +1 VERSIONINFO
-+ FILEVERSION 0,3,0,0
-+ PRODUCTVERSION 0,3,0,0
++ FILEVERSION 1,0,0,0
++ PRODUCTVERSION 1,0,0,0
 + FILEFLAGSMASK 0x0L
 +#ifdef _DEBUG
 + FILEFLAGS 0x1L
@@ -15735,12 +15735,12 @@ index 0000000..41447ac
 +		BEGIN
 +			VALUE "CompanyName", "FKmod Team"
 +			VALUE "FileDescription", "Warzone 2100 FKmod Portable"
-+			VALUE "FileVersion", "0.3.0-beta"
++			VALUE "FileVersion", "1.0.0"
 +			VALUE "InternalName", "Warzone 2100 FKmod"
-+			VALUE "LegalCopyright", "Copyright (C) 2005-2017 Warzone 2100 Project, Fingolfin, Kreuvf"
++			VALUE "LegalCopyright", "Copyright (C) 2005-2020 Warzone 2100 Project, Fingolfin, Kreuvf"
 +			VALUE "OriginalFilename", "warzone2100_fkmod_portable.exe"
 +			VALUE "ProductName", "Warzone 2100 FKmod Portable"
-+			VALUE "ProductVersion", "0.3.0-beta"
++			VALUE "ProductVersion", "1.0.0"
 +		END
 +	END
 +	BLOCK "VarFileInfo"
