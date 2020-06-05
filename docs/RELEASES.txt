@@ -1,6 +1,18 @@
 FKmod Release Notes
 ===================
 
+1.0.0
+-----
+No code changes compared to previous version. There are no plans for the further development of FKmod.
+
+0.3.0-beta
+----------
+Fixed an endless loop bug in FK AI leading to an unresponsive Warzone 2100 application.
+
+0.2.0-beta
+----------
+First release with a working portable Windows installer.
+
 0.1.0-beta
 ----------
 First public release. No pre-built executables/packages.

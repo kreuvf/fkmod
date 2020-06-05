@@ -1,6 +1,6 @@
 # Warzone 2100 FKmod
 
-Version: [[VERSION]]
+Version: 1.0.0
 
 Warzone 2100 FKmod or just "FKmod" for short is a standalone version of Warzone 2100 (https://wz2100.net/) focussing on the multiplayer mode. In brief, expect the following:
 	* Technology tree: new and simple, no complex or unexpected interdependencies anymore
@@ -206,4 +206,10 @@ Lots of testing, adapting of ideas to what the game allows, the decision to add 
 
 2019-12-06, 3c80f6ac3a42bce8f13a2db3c07feb2f795df2b4
 First public release: 0.1.0-beta.
+
+2020-01-31, 2ec0be8d2814d70402ef1cc50fa152d66f536a8a
+Release 0.2.0-beta. First release with portable Windows installer.
+
+2020-03-13, 611d8312978ecbbca65a87b0acf965fc17ffb232
+Release 0.3.0-beta. Fixed one bug.
 
