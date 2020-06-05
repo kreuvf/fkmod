@@ -2,9 +2,7 @@
 
 ## Requirements for Final Version
 ### Pre-Release Polishing
-* Set up build infrastructure for Windows and deb packages
-* Set up default AI
-* Add end user readme
+* Set up build infrastructure for deb packages
 
 ## Nice to Have for Final Version
 ### Code
