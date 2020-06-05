@@ -1,5 +1,6 @@
-Currently, there are no known issues. Items in TODO.txt do not count.
+Items in TODO.txt do not count.
 
+Upstream bug: When playing with Windows 10 and Ubuntu 16.04, the game desyncs when firing certain weapons (rockets, missiles).
 Burn effect stacks: Multiple burn effects stack causing enormous damage per second and almost instantly killing cyborgs
 Upstream bug: Autorepair does not apply to units produced via the debug menu.
 Accuracy research: Due to different base accuracies for Machine Guns, Autocannons and Grenade Launcher the 10% decrease of the current probability to miss the target was calculated for the better of the variants only; this makes the upgrades for the less accurate weapon less effective
